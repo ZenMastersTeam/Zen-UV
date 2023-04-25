@@ -1,0 +1,32 @@
+site_name: Zen UV 3.0 for Blender
+site_description: Zen UV for Blender Documentation
+nav:
+    - Introduction: index.md
+    - Installation and Update: installation.md
+    - Pie Menu: pie-menu.md
+    - Advanced UV Maps: adv_uv-maps.md
+    - Seam Groups: seam_groups.md
+    - Unwrap: unwrap.md
+    - Select: select.md
+    - Pack: pack.md
+    - Checker Map: checker.md
+    - Texel Density: texel_density.md
+    - Transform: transform.md
+    - Stack: stack.md
+    - Sticky UV Editor: sticky_uv_editor.md
+    - Preferences: preferences.md
+    - Addon Preferences: addon_prefs.md
+    - Help: help.md
+    - Downloads: downloads.md
+    - FAQs: troubleshooting.md
+    - Changelog: changelg.md
+    - Credits: credits.md
+    - Our Add-ons: our_addons.md
+docs_dir: mkdocs
+site_dir: docs
+theme: readthedocs
+markdown_extensions:
+    - smarty
+    - admonition
+    - toc:
+        permalink: 
