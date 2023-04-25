@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Transform - Zen UV 4.0 for Blender</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+        <link href="../css/version-select.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Transform";
+        var mkdocs_page_input_path = "transform.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Zen UV 4.0 for Blender
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Introduction</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../zenuv3_to_zenuv4/">Upgrade Zen UV 3 to Zen UV 4 FAQ</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../installation/">Installation and Update</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../pie-menu/">Pie Menu</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../adv_uv-maps/">Advanced UV Maps</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../seam_groups/">Seam Groups</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../unwrap/">Unwrap</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../select/">Select</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../pack/">Pack</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../checker/">Checker Map</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../texel_density/">Texel Density</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="./">Transform</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#independent-transform-operators">Independent Transform Operators:</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#relax">Relax</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#world-orient">World Orient.</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#randomize">Randomize.</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#quadrify-islands">Quadrify Islands</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#reshape-island">Reshape Island</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#unified-transform-system">Unified Transform System:</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#universal-control-panel">Universal Control Panel</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#pivot">Pivot.</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#mode">Mode.</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#transform-types">Transform Types:</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#transform-type-move">Transform type Move.</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#move-increment">Move Increment</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#transform-type-scale">Transform type Scale.</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#scale-mode">Scale Mode:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#mode-axis">Mode - Axis.</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#mode-units">Mode - Units.</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#transform-type-rotate">Transform type Rotate.</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#rotate-increment">Rotate Increment</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#orient-by-selected">Orient by selected</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#transform-type-flip">Transform type Flip.</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#transform-type-fit">Transform type Fit.</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#fill-islands">Fill Islands</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#padding">Padding</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#bounds">Bounds</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#fit-into-region">Fit into Region.</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#transform-type-align">Transform type Align.</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#to-uv-area-bounds">To UV Area Bounds</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#transform-type-distribute">Transform type Distribute.</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#islands-mode">Islands Mode</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#elements-mode">Elements Mode</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../stack/">Stack</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../sticky_uv_editor/">Sticky UV Editor</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../preferences/">Preferences</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../addon_prefs/">Addon Preferences</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../help/">Help</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../downloads/">Downloads</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../troubleshooting/">FAQs</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../changelg/">Changelog</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../credits/">Credits</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../our_addons/">Our Add-ons</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Zen UV 4.0 for Blender</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li><li>Transform</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="transform-system">Transform System<a class="headerlink" href="#transform-system" title="Permanent link"></a></h1>
+<div class="admonition panel">
+<p class="admonition-title">Panel</p>
+<p><img alt="Transform" src="../img/screen/transform/tr_main_panel.png" /></p>
+</div>
+<hr />
+<h2 id="independent-transform-operators">Independent Transform Operators:<a class="headerlink" href="#independent-transform-operators" title="Permanent link"></a></h2>
+<hr />
+<h3 id="relax">Relax <img alt="" src="../img/icons/relax-1_32.png" /><a class="headerlink" href="#relax" title="Permanent link"></a></h3>
+<ul>
+<li>Allows to reduce the stretching the faces of the island. Uses three algorithms.<ul>
+<li><strong>Zen Relax</strong> - The algorithm is most suitable for organic objects.</li>
+<li><strong>Angle Based</strong> - Blender&rsquo;s native algorithm. Most suitable for the hard surfaces objects.</li>
+<li><strong>Conformal</strong> - Blender&rsquo;s native algorithm. Same as <strong>Angle Based</strong>, but much faster. However, can lead to undesired results if the island is complicated.</li>
+</ul>
+</li>
+</ul>
+<p><img alt="" src="../img/screen/transform/relax.png" /></p>
+<hr />
+<h3 id="world-orient">World Orient.<a class="headerlink" href="#world-orient" title="Permanent link"></a></h3>
+<ul>
+<li>Rotate Islands the way they are oriented on the Models. Each method (Organic/Hard Surface) uses a heuristic approach and correctly orients most of the Islands in its area.</li>
+</ul>
+<p><img alt="" src="../img/screen/transform/world_orient_props.png" /></p>
+<ul>
+<li><strong>Method: Hard Surface / Organic</strong> - The orientation method is suitable for geometry types.</li>
+<li><strong>Further orient</strong> - Additional turn. Allows you to turn the island to a horizontal or vertical if the island is located at an angle in the model.</li>
+<li><strong>Flip By Axis</strong> - Allow changing direction of the island after basic orientation. Suitable if needed change orientation from legs to head for example.</li>
+</ul>
+<hr />
+<h3 id="randomize">Randomize.<a class="headerlink" href="#randomize" title="Permanent link"></a></h3>
+<ul>
+<li>Randomize the position, rotation, and scale of the islands or selected vertices.</li>
+</ul>
+<p><img alt="" src="../img/screen/transform/randomize.png" /></p>
+<hr />
+<h3 id="quadrify-islands">Quadrify Islands <img alt="" src="../img/icons/quadrify_32.png" /><a class="headerlink" href="#quadrify-islands" title="Permanent link"></a></h3>
+<p>Straighten rectangular-shaped Islands.</p>
+<p><img alt="Quadrify_Example" src="../img/gifs/trasnform_operators/Quadrify_Example.gif" /></p>
+<div class="admonition preferences">
+<p class="admonition-title">Preferences</p>
+<p><img alt="quadrify_op_props" src="../img/screen/transform/quadrify_op_props.png" /></p>
+<ul>
+<li><strong>By selected Edges</strong> - Selected Edges will be used and marked as Seams during Quadrify Islands operation. Works only in edge selection mode.
+<img alt="Quadrify_SelectedEdge" src="../img/gifs/trasnform_operators/Quadrify_SelectedEdge.gif" /> </li>
+<li><strong>Mark Borders</strong> - Mark borders as seams/sharp after Quadrify Island operation.</li>
+<li><strong>Mark Seams</strong> - Mark seam in case <strong>Mark Borders</strong> is on.</li>
+<li><strong>Mark Sharp</strong> - Mark sharp in case <strong>Mark Borders</strong> is on.</li>
+<li>
+<p><strong>Orient to: </strong> - How to orient Quadrified Islands.
+  <img alt="Quadrify_Orient" src="../img/gifs/trasnform_operators/Quadrify_Orient.gif" /> </p>
+<ul>
+<li><strong>Initial</strong> - Leave orientation as is.</li>
+<li><strong>Vertical</strong> - Set orientation vertical.</li>
+<li><strong>Horizontal</strong> - Set orientation horizontal.</li>
+</ul>
+</li>
+<li>
+<p><strong>Average Texel Density</strong> - Averaging the size for the processed islands.</p>
+</li>
+<li><strong>Pack Quadrified</strong> - Pack Islands after Quadrify Islands operation.</li>
+<li><strong>Pin Quadrified</strong> - Pin Islands after Quadrify Islands operation.
+ <img alt="Quadrify_Pack_Pin" src="../img/gifs/trasnform_operators/Quadrify_Pack_Pin.gif" /></li>
+<li><strong>Tag as Finished</strong> - Tag Quadrified islands as finished.</li>
+</ul>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Tag Quadrified Islands as <a href="https://zen-masters.github.io/Zen-UV/unwrap/#finishing-system"><strong>Finished</strong></a> to preserve them from unwrapping. It&rsquo;s recommended to <a href="https://zen-masters.github.io/Zen-UV/unwrap/#tag-finished"><strong>Tag as Finished</strong></a> all manually changed Islands.
+<img alt="" src="../img/gifs/trasnform_operators/Quadrify_Tag_Finished.gif" /></p>
+</div>
+<hr />
+<h3 id="reshape-island">Reshape Island<a class="headerlink" href="#reshape-island" title="Permanent link"></a></h3>
+<p>Changes the island’s shape depending on the preset. <a href="../operators/reshape_island/">Here is full information</a> about Reshape Island.</p>
+<ul>
+<li><strong>Selected</strong> -  Straighten the selected Edge Loops and relax not selected vertices.</li>
+<li><strong>U Direction / V Direction</strong> - Edges is aligned in the indicated direction.</li>
+<li><strong>Borders</strong> - Straighten the edges of the island in even lines according to the given parameters.</li>
+</ul>
+<p><img alt="" src="../img/screen/transform/reshape_presets_collected.png" /></p>
+<hr />
+<h2 id="unified-transform-system">Unified Transform System:<a class="headerlink" href="#unified-transform-system" title="Permanent link"></a></h2>
+<div class="admonition panel">
+<p class="admonition-title">Panel</p>
+<p><img alt="" src="../img/screen/transform/tr_un_tr_sys.png" /></p>
+</div>
+<h3 id="universal-control-panel">Universal Control Panel<a class="headerlink" href="#universal-control-panel" title="Permanent link"></a></h3>
+<div class="admonition control">
+<p class="admonition-title">Control</p>
+<p><strong>Universal Control Panel</strong></p>
+<p><img alt="Transform" src="../img/screen/transform/UniversalControl.png" /></p>
+<p>The universal control panel has logic and different functions for different types of transformation.</p>
+</div>
+<hr />
+<h3 id="pivot">Pivot.<a class="headerlink" href="#pivot" title="Permanent link"></a></h3>
+<ul>
+<li>The pivot of transformation.</li>
+</ul>
+<p><img alt="" src="../img/screen/transform/tr_un_pivot.png" /></p>
+<h3 id="mode">Mode.<a class="headerlink" href="#mode" title="Permanent link"></a></h3>
+<ul>
+<li>The Mode of transformation. In the Elements mode transformation will be performed over vertices, edges, and faces.</li>
+</ul>
+<p><img alt="" src="../img/screen/transform/tr_un_mode.png" /></p>
+<hr />
+<h2 id="transform-types">Transform Types:<a class="headerlink" href="#transform-types" title="Permanent link"></a></h2>
+<h3 id="transform-type-move">Transform type Move. <img alt="" src="../img/icons/transform-move.png" /><a class="headerlink" href="#transform-type-move" title="Permanent link"></a></h3>
+<p><img alt="Transform" src="../img/screen/transform/MainPanelMove.png" /></p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<ul>
+<li>Buttons of the <a href="#universal-control-panel"><strong>Universal Control Panel</strong></a> in the Transform type <strong>Move</strong> represent the direction of shifting.</li>
+</ul>
+</div>
+<h4 id="move-increment">Move Increment<a class="headerlink" href="#move-increment" title="Permanent link"></a></h4>
+<ul>
+<li>The value on which the island will be shifted.</li>
+</ul>
+<hr />
+<h3 id="transform-type-scale">Transform type Scale. <img alt="" src="../img/icons/transform-scale.png" /><a class="headerlink" href="#transform-type-scale" title="Permanent link"></a></h3>
+<p><img alt="Transform" src="../img/screen/transform/tr_scale.png" /></p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<ul>
+<li>Buttons of the <a href="#universal-control-panel"><strong>Universal Control Panel</strong></a> in the Transform type <strong>Scale</strong> represent Points from where the island will be scaled.</li>
+</ul>
+</div>
+<h4 id="scale-mode">Scale Mode:<a class="headerlink" href="#scale-mode" title="Permanent link"></a></h4>
+<p><img alt="" src="../img/screen/transform/tr_scale_modes.png" /></p>
+<h4 id="mode-axis">Mode - <strong>Axis</strong>.<a class="headerlink" href="#mode-axis" title="Permanent link"></a></h4>
+<p><img alt="" src="../img/screen/transform/tr_scale_mode_axis.png" /></p>
+<ul>
+<li><strong>Scale</strong> - The value of the scale of the island for each of the axes.</li>
+<li><strong>Tuner</strong> - System that helps change values quickly.<ul>
+<li>&ldquo;D&rdquo; - Increase by two times.</li>
+<li>&ldquo;H&rdquo; - Decrease two times.</li>
+<li>&ldquo;R&rdquo; - Reset value to 1.0 .</li>
+<li>Lock. - The Lock mode allows changing values as one.</li>
+</ul>
+</li>
+</ul>
+<h4 id="mode-units">Mode - <strong>Units</strong>.<a class="headerlink" href="#mode-units" title="Permanent link"></a></h4>
+<p><img alt="" src="../img/screen/transform/tr_scale_mode_units.png" /></p>
+<ul>
+<li><strong>UV Size</strong> - The estimated width of the UV area.</li>
+<li><strong>Desired size</strong> - The size of which should be set for selected elements relative to UV area.</li>
+<li><strong>G</strong> - Grab desired size from current selection. Exist only in the 3D Viewort context. Can be used only for 2 vertices or for one edge selection.</li>
+<li><strong>Horizontal / Vertical</strong> - What mean the Desired Size.</li>
+</ul>
+<hr />
+<h3 id="transform-type-rotate">Transform type Rotate. <img alt="" src="../img/icons/transform-rotate.png" /><a class="headerlink" href="#transform-type-rotate" title="Permanent link"></a></h3>
+<p><img alt="Transform" src="../img/screen/transform/Rotate.png" /></p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<ul>
+<li>Buttons of the <a href="#universal-control-panel"><strong>Universal Control Panel</strong></a> in the Transform type <strong>Scale</strong> works as described. Buttons located in the corners rotate the island in the specified direction.
+The central button performs the automatic aligning of the island horizontally or vertically. The buttons at the top and bottom align the island vertically. Buttons on the left and right align the island horizontally.</li>
+</ul>
+</div>
+<h4 id="rotate-increment">Rotate Increment<a class="headerlink" href="#rotate-increment" title="Permanent link"></a></h4>
+<ul>
+<li>The value on which the island will be rotated.</li>
+</ul>
+<h4 id="orient-by-selected">Orient by selected<a class="headerlink" href="#orient-by-selected" title="Permanent link"></a></h4>
+<ul>
+<li>Reorient the island by selected elements (vertices, edges, polygons).</li>
+</ul>
+<hr />
+<h3 id="transform-type-flip">Transform type Flip. <img alt="" src="../img/icons/transform-flip.png" /><a class="headerlink" href="#transform-type-flip" title="Permanent link"></a></h3>
+<p><img alt="Transform" src="../img/screen/transform/Flip.png" /></p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<ul>
+<li>Buttons of the <a href="#universal-control-panel"><strong>Universal Control Panel</strong></a> in the Transform type <strong>Flip</strong> represent flip direction.</li>
+</ul>
+</div>
+<hr />
+<h3 id="transform-type-fit">Transform type Fit. <img alt="" src="../img/icons/transform-fit.png" /><a class="headerlink" href="#transform-type-fit" title="Permanent link"></a></h3>
+<p><img alt="Transform" src="../img/screen/transform/Fit.png" /></p>
+<p>Fit island to UV Square.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<ul>
+<li>Buttons of the <a href="#universal-control-panel"><strong>Universal Control Panel</strong></a> in the Transform type <strong>Fit</strong> represent origins from where <strong>Fit</strong> will be performed.</li>
+</ul>
+</div>
+<h4 id="fill-islands">Fill Islands<a class="headerlink" href="#fill-islands" title="Permanent link"></a></h4>
+<ul>
+<li>Fit Islands from Center without keeping proportions.</li>
+</ul>
+<h4 id="padding">Padding<a class="headerlink" href="#padding" title="Permanent link"></a></h4>
+<ul>
+<li>Clearance between island and UV Square bounds.</li>
+</ul>
+<h4 id="bounds">Bounds<a class="headerlink" href="#bounds" title="Permanent link"></a></h4>
+<ul>
+<li>It makes it possible to fill out not UV Square but any other area.</li>
+</ul>
+<h3 id="fit-into-region">Fit into Region.<a class="headerlink" href="#fit-into-region" title="Permanent link"></a></h3>
+<p><img alt="" src="../img/screen/transform/fit_into_region.png" /></p>
+<ul>
+<li><strong>Grab Region: Selection / Island</strong> - Allow to grab Region size in different manners.</li>
+<li><strong>Bottom Left: Top Right:</strong> - The bounding box of the region.</li>
+<li><strong>Fit into Region</strong> - Fit selected island in to the Region described in the bounding box.</li>
+</ul>
+<hr />
+<h2 id="transform-type-align">Transform type Align. <img alt="" src="../img/icons/transform-orient.png" /><a class="headerlink" href="#transform-type-align" title="Permanent link"></a></h2>
+<p><img alt="Transform" src="../img/screen/transform/Align.png" /></p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<ul>
+<li>Buttons of the <a href="#universal-control-panel"><strong>Universal Control Panel</strong></a> in the Transform type <strong>Align</strong> represent the side by which the islands will be aligned.</li>
+</ul>
+</div>
+<h3 id="to-uv-area-bounds">To UV Area Bounds<a class="headerlink" href="#to-uv-area-bounds" title="Permanent link"></a></h3>
+<ul>
+<li>Allow aligning current selection to the UV Area bounds.</li>
+</ul>
+<hr />
+<h2 id="transform-type-distribute">Transform type Distribute. <img alt="" src="../img/icons/transform-distribute.png" /><a class="headerlink" href="#transform-type-distribute" title="Permanent link"></a></h2>
+<p><img alt="Transform" src="../img/screen/transform/Distribute.png" /></p>
+<h3 id="islands-mode">Islands Mode<a class="headerlink" href="#islands-mode" title="Permanent link"></a></h3>
+<ul>
+<li><strong>Distribute &amp; Sort</strong> - Distributes and Sorts the selected islands.</li>
+<li><strong>Arrange</strong> - Arrange the selected islands.</li>
+</ul>
+<h3 id="elements-mode">Elements Mode<a class="headerlink" href="#elements-mode" title="Permanent link"></a></h3>
+<ul>
+<li><strong>Distribute</strong> - Distribute vertices along the line.</li>
+</ul>
+<hr />
+<h1 id="transform-type-2d-cursor">Transform type 2D Cursor. <img alt="" src="../img/icons/transform-cursor.png" /><a class="headerlink" href="#transform-type-2d-cursor" title="Permanent link"></a></h1>
+<p><img alt="Transform" src="../img/screen/transform/2dCursor.png" /></p>
+<p>Align 2D Cursor over the selected island.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<ul>
+<li>Buttons of the <a href="#universal-control-panel"><strong>Universal Control Panel</strong></a> in the Transform type <strong>2D Cursor</strong> represent sides of the island or selected elements.</li>
+</ul>
+</div>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../texel_density/" class="btn btn-neutral float-left" title="Texel Density"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../stack/" class="btn btn-neutral float-right" title="Stack">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../texel_density/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../stack/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+      <script src="../js/version-select.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
