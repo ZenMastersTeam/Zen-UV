@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Copy / Paste (Stacks) - Zen UV 4.0 for Blender</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Copy / Paste (Stacks)";
+        var mkdocs_page_input_path = "operators\\stack_copy_paste.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Zen UV 4.0 for Blender
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Introduction</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../zenuv3_to_zenuv4/">Upgrade Zen UV 3 to Zen UV 4 FAQ</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../installation/">Installation and Update</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../pie-menu/">Pie Menu</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../adv_uv-maps/">Advanced UV Maps</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../seam_groups/">Seam Groups</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../unwrap/">Unwrap</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../select/">Select</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../pack/">Pack</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../checker/">Checker Map</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../texel_density/">Texel Density</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../transform/">Transform</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../stack/">Stack</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../sticky_uv_editor/">Sticky UV Editor</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../preferences/">Preferences</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../addon_prefs/">Addon Preferences</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../help/">Help</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../downloads/">Downloads</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/">FAQs</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../changelg/">Changelog</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../credits/">Credits</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../our_addons/">Our Add-ons</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Zen UV 4.0 for Blender</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+      <li>Copy / Paste (Stacks)</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="copy-paste-stacks">Copy / Paste (Stacks)<a class="headerlink" href="#copy-paste-stacks" title="Permanent link"></a></h1>
+<p>Allows you to transfer the parameters from one island to another.</p>
+<hr />
+<h2 id="copy">Copy<a class="headerlink" href="#copy" title="Permanent link"></a></h2>
+<ul>
+<li>Copy parameters of selected Islands/Faces and save them.</li>
+</ul>
+<h3 id="copy-operator-options">Copy Operator Options<a class="headerlink" href="#copy-operator-options" title="Permanent link"></a></h3>
+<p><img alt="" src="../../img/screen/stack/stack_copy_op_prefs.png" /></p>
+<ul>
+<li><strong>Island</strong> - Copy and save parameters from the selected island.</li>
+<li><strong>Faces</strong> - Copy and save parameters from the selected faces.</li>
+</ul>
+<hr />
+<h2 id="paste">Paste<a class="headerlink" href="#paste" title="Permanent link"></a></h2>
+<ul>
+<li>Paste the parameters saved earlier by <a href="#copy">Copy</a> to selected Islands/Faces.</li>
+</ul>
+<h3 id="paste-operator-options">Paste Operator Options<a class="headerlink" href="#paste-operator-options" title="Permanent link"></a></h3>
+<p><img alt="" src="../../img/screen/stack/stack_paste_op_prefs.png" /></p>
+<ul>
+<li>
+<p><strong>Type</strong> - Which selection type needs to be processing.</p>
+<ul>
+<li><strong>Island</strong> - Paste parameters to the selected island.</li>
+<li><strong>Faces</strong> - Paste parameters to the selected faces.</li>
+</ul>
+</li>
+<li>
+<p><strong>Mode</strong> - </p>
+<ul>
+<li><strong>Stack</strong> - Perform stacking selection to the copied by <a href="#copy">Copy</a>.</li>
+<li><strong>Transfer</strong> - Transfer paramethers to the selection stored by <a href="#copy">Copy</a>.</li>
+</ul>
+</li>
+</ul>
+<h4 id="stacking-options">Stacking Options:<a class="headerlink" href="#stacking-options" title="Permanent link"></a></h4>
+<p><img alt="" src="../../img/screen/stack/stack_paste_mode_stack_options.png" /></p>
+<ul>
+<li><strong>Stack Offset</strong> - Use the Stack Offset option. Learn More in this article: <a href="../../stack/#stack">Stack</a></li>
+<li><strong>Area Matching</strong> - Set strict requirements for Islands Area Matching when Stacking. Disable this option if the Islands have a slightly different Area.</li>
+</ul>
+<h4 id="transfer-options">Transfer Options:<a class="headerlink" href="#transfer-options" title="Permanent link"></a></h4>
+<p><img alt="" src="../../img/screen/stack/stack_paste_mode_transfer_options.png" /></p>
+<ul>
+<li><strong>Stack Offset</strong> - Use the Stack Offset option. Learn More in this article: <a href="../../stack/#stack">Stack</a></li>
+<li><strong>Position</strong> - Allow transfer position.</li>
+<li><strong>Size</strong> - Allow transfer size.<ul>
+<li><strong>Nothing</strong> - Do not perform the size transferring.</li>
+<li><strong>Size (Fit Islands)</strong> - Transfer the size.<ul>
+<li><strong>Keep Proportion</strong> - Keep the proportion of the selected island.</li>
+<li><strong>Horizontally / Vertically</strong> - Which direction needs to be matched.</li>
+</ul>
+</li>
+<li><strong>Texel Density</strong> - Transfer the Texel Density.</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h2 id="usage-samples">Usage Samples.<a class="headerlink" href="#usage-samples" title="Permanent link"></a></h2>
+<h3 id="paste-mode-stack">Paste: Mode - Stack.<a class="headerlink" href="#paste-mode-stack" title="Permanent link"></a></h3>
+<p><img alt="" src="../../img/gifs/stack_copy_paste/stack_copy_paste_sample.gif" /></p>
+<h3 id="paste-mode-transfer-position">Paste: Mode - Transfer - Position.<a class="headerlink" href="#paste-mode-transfer-position" title="Permanent link"></a></h3>
+<p><img alt="" src="../../img/gifs/stack_copy_paste/stack_c_p_transfer_pos.gif" /></p>
+<h3 id="paste-mode-transfer-size-fit">Paste: Mode - Transfer - Size - Fit.<a class="headerlink" href="#paste-mode-transfer-size-fit" title="Permanent link"></a></h3>
+<p><img alt="" src="../../img/gifs/stack_copy_paste/stack_c_p_transfer_size_fit.gif" /></p>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+  </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme_extra.js" defer></script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
