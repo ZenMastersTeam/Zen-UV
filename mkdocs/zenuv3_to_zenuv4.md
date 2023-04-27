@@ -57,13 +57,13 @@ Keep in mind that discounts will work, only if you are making the purchase using
 #####Blender Market Discount Codes 
 If you want to upgrade from:
 
-- **Zen UV 3 STANDARD License (Single User)** to **Zen UV 4 STANDARD License (SIngle User)** use the discount code **zenuv3to4_std**  when making a purchase – discount will be applied automatically.
+- **Zen UV 3 STANDARD License (Single User)** to **Zen UV 4 STANDARD License (SIngle User)** use the discount code **zenuv3to4std**  when making a purchase – discount will be applied automatically.
 
-- **Zen UV 3 STUDIO License (2-5 users)** to **Zen UV 4 STUDIO License (2-5 users)** use the discount code **zenuv3to4_studio_2_5**  when making a purchase – discount will be applied automatically.
+- **Zen UV 3 STUDIO License (2-5 users)** to **Zen UV 4 STUDIO License (2-5 users)** use the discount code **zenuv3to4studio25**  when making a purchase – discount will be applied automatically.
 
-- **Zen UV 3 STUDIO License (6-14 users)** to **Zen UV 4 STUDIO License (6-14 users)** use the discount code **zenuv3to4_studio_6_14**  when making a purchase – discount will be applied automatically.
+- **Zen UV 3 STUDIO License (6-14 users)** to **Zen UV 4 STUDIO License (6-14 users)** use the discount code **zenuv3to4studio614**  when making a purchase – discount will be applied automatically.
 
-- **Zen UV 3 STUDIO License (15-50 users)** to **Zen UV 4 STUDIO License (15-50 users)** use the discount code **zenuv3to4_studio_15_50**  when making a purchase – discount will be applied automatically.
+- **Zen UV 3 STUDIO License (15-50 users)** to **Zen UV 4 STUDIO License (15-50 users)** use the discount code **zenuv3to4studio1550**  when making a purchase – discount will be applied automatically.
 
 ---
 
