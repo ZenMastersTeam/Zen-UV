@@ -41,10 +41,11 @@ Keep in mind that discounts will work, only if you are making the purchase using
 
 **Gumroad** 
 
-1. Go to the [**Gumroad**](https://gumroad.com/l/ZenUV) and login.
-2. Choose new version **Zen UV 4**
-3. Pay the difference.
-4.  Enjoy the new version!
+Unfortunately Gumroad does not provide an option for a universal discount code. Hence, you need to write to us directly at zenmastershelp@gmail.com in order to get your own code. Make sure you write to us from the email address you used to purchase Zen UV 3.0.
+
+Note that you have to write a message from the actual email address you used to purchase Zen UV 3.0 on Gumroad. Writing from a different email address and providing your Gumroad address in the message body won’t work because the process of generating discount codes is automated.
+
+Also keep in mind that it may take up to 24 hours for our system to send the code back to you. If you don’t see the message in your inbox, check also your spam folder (discount code messages are sometimes classified as spam).
 
 **Blender Market** 
 
