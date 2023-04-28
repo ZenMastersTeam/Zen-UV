@@ -31,7 +31,19 @@ Zen UV 4.0 release is the beginning of the new product cycle. We plan many updat
 
 You will not pay for the same features twice. You need to pay only the difference between the new license price and the price you originally paid.
 
+### Zen UV Bundle owners promo
 **If you got Zen UV 3 from Zen Bundle you’ll get Zen UV 4 absolutely for free!**
+
+### Zen Addons (Zen UV, Zen Sets and Zen BBQ) owners by separate licensies promo
+If you already have all Zen Add-ons (Zen BBQ, Zen Sets and Zen UV 3.1) as a separate products on one market you can get Zen Bundle (with Zen UV 4.0) for free. 
+
+for this you need to write an email to 
+zenmastershelp@gmail.com
+
+with subject line
+**BUNDLE UPGRADE**
+
+Since this program is new and we have a lot of requests for a regular Zen UV 3 to 4 upgrade  these requests can take up to a week to process.
 
 ---
 
