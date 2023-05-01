@@ -29,21 +29,9 @@ Zen UV 4.0 release is the beginning of the new product cycle. We plan many updat
 
 ## What is the price of upgrading from Zen UV 3 to Zen UV 4?
 
-You will not pay for the same features twice. You need to pay only the difference between the new license price and the price you originally paid.
+You will not pay for the same features twice. You need to pay only the difference between the new license price and the old license price. (for example for single user license it will be 34 - 24 = 10$)
 
-### Zen UV Bundle owners promo
 **If you got Zen UV 3 from Zen Bundle you’ll get Zen UV 4 absolutely for free!**
-
-### Zen Addons (Zen UV, Zen Sets and Zen BBQ) owners by separate licensies promo
-If you already have all Zen Add-ons (Zen BBQ, Zen Sets and Zen UV 3.1) as a separate products on one market you can get Zen Bundle (with Zen UV 4.0) for free. 
-
-for this you need to write an email to 
-zenmastershelp@gmail.com
-
-with subject line
-**BUNDLE UPGRADE**
-
-Since this program is new and we have a lot of requests for a regular Zen UV 3 to 4 upgrade  these requests can take up to a week to process.
 
 ---
 
@@ -53,11 +41,7 @@ Keep in mind that discounts will work, only if you are making the purchase using
 
 **Gumroad** 
 
-Unfortunately Gumroad does not provide an option for a universal discount code. Hence, you need to write to us directly at zenmastershelp@gmail.com in order to get your own code. Make sure you write to us from the email address you used to purchase Zen UV 3.0.
-
-Note that you have to write a message from the actual email address you used to purchase Zen UV 3.0 on Gumroad. Writing from a different email address and providing your Gumroad address in the message body won’t work because the process of generating discount codes is automated.
-
-Also keep in mind that it may take up to 24 hours for our system to send the code back to you. If you don’t see the message in your inbox, check also your spam folder (discount code messages are sometimes classified as spam).
+You will automatically receive an email with a unique discount code. All codes will be sent by May 5, 2023. If you haven't received the code by this date, please check your spam folder.
 
 **Blender Market** 
 
@@ -80,6 +64,24 @@ If you want to upgrade from:
 
 ---
 
+## I have bought all Zen Add-ons (Zen UV 3, Zen Sets, Zen BBQ). Can I get Zen Bundle for free with Zen UV 4 inside?
+
+Yes, if you have Zen UV 3, Zen Sets, Zen BBQ on one marketplace. Unfortunately, we cannot provide a free Bundle for those who have all our products but on different marketplaces (for example Zen UV 3, Zen Sets on Gumroad and Zen BBQ on Blendermarket) due to different marketplaces databases.
+
+**Gumroad** 
+
+Gumroad users (who have Zen UV 3, Zen Sets, Zen BBQ) automatically will receive an email with unique code to get Zen Bundle for free. All codes will be sent by May 5, 2023. If you haven't received the code by this date, please check your spam folder.
+
+**Blender Market** 
+
+Blendermarket  users (who have Zen UV 3, Zen Sets, Zen BBQ) must write PM on BlenderMarket to get the unique code to get Zen Bundle for free.
+
+---
+## I have one or two Zen Add-ons. Can I get discount code for Zen Bundle?
+
+At the moment we do not provide discount codes if you have one or two products.
+
+---
 
 ## Do I need to upgrade from Zen UV 3 to Zen UV 4 in order to retain the product support?
 
@@ -89,15 +91,21 @@ Support for new versions of Blender and bug fixes for Zen UV 3 will remain. But 
 
 ---
 
-## I see the Zen UV 4 product in my library on Gumroad and Blender Market but I can only access the Zen UV 3 files. What is the reason?
+## I see the Zen UV 4 product in my library on Blender Market but I can only access the Zen UV 3 files. What is the reason?
 
-Such situation happens, if you purchased Zen UV 3 on Gumroad or Blender Market but you haven’t upgraded it to Zen UV 4 yet. 
+Such situation happens, if you purchased Zen UV 3 on Blender Market but you haven’t upgraded it to Zen UV 4 yet. 
 
-The original  Zen UV 3 product on Gumroad and Blender Market became the Zen UV 4 product when the new update was released (with  Zen UV 4 files added as new product variants). The old Zen UV 3 product variants were unpublished but not removed, so that the users who purchased Zen UV 3 still have access to it.
+The original  Zen UV 3 product on Blender Market became the Zen UV 4 product when the new update was released (with  Zen UV 4 files added as new product variants). The old Zen UV 3 product variants were unpublished but not removed, so that the users who purchased Zen UV 3 still have access to it.
 
 ---
 
 ## What Blender version Zen UV 4 will support?
 
 Zen UV 4 supports Blender 2.93 and higher.
+
+---
+
+## I still having trouble upgrading Zen UV
+
+Please join our [Discord server](https://discord.com/invite/wGpFeME) and write message in **#zenuv-upgrade-3-to-4** channel.
 
