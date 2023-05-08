@@ -1,0 +1,5 @@
+# Trim Sheets
+
+Trim sheets are a common technique to increase your texture quality on 3D assets while at the same time reducing the number of materials/textures on them. Trim sheets are a way to texture many assets with just a single set of textures, allowing for very efficient use of texture memory. Creating them is different from normal texturing. So trying to create assets with as few materials as possible is a great technique for optimisation.
+The Trim Sheet process is basically creating a texture that allows you to apply different details (from the same texture) to a model by unwrapping the model in interesting ways. This texture can be used on multiple objects, or even just one large one, with fantastic quality results. 
+Most AAA games use this technique a lot on environment assets in order to have fantastic quality, save time on development, keep assets together with a set theme, and many other reasons.

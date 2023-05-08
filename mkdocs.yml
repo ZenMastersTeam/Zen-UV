@@ -1,28 +1,32 @@
 site_name: Zen UV 4.0 for Blender
 site_description: Zen UV for Blender Documentation
 nav:
-    - Introduction: index.md
-    - Upgrade Zen UV 3 to Zen UV 4 FAQ: zenuv3_to_zenuv4.md
-    - Installation and Update: installation.md
-    - User Interface: user_interface.md
-    - Advanced UV Maps: adv_uv-maps.md
-    - Seam Groups: seam_groups.md
-    - Unwrap: unwrap.md
-    - Select: select.md
-    - Pack: pack.md
-    - Checker Map: checker.md
-    - Texel Density: texel_density.md
-    - Transform: transform.md
-    - Stack: stack.md
-    - Sticky UV Editor: sticky_uv_editor.md
-    - Preferences: preferences.md
-    - Addon Preferences: addon_prefs.md
-    - Help: help.md
-    - Downloads: downloads.md
-    - FAQs: troubleshooting.md
-    - Changelog: changelg.md
-    - Credits: credits.md
-    - Our Add-ons: our_addons.md
+    - Getting Started:
+        - Introduction: index.md
+        - Upgrade Zen UV 3 to Zen UV 4 FAQ: zenuv3_to_zenuv4.md
+        - Installation and Update: installation.md
+        - User Interface: user_interface.md
+    - Modules:
+        - Advanced UV Maps: adv_uv-maps.md
+        - Seam Groups: seam_groups.md
+        - Unwrap: unwrap.md
+        - Select: select.md
+        - Pack: pack.md
+        - UV Checker: checker.md
+        - Texel Density: texel_density.md
+        - Transform: transform.md
+        - Stack: stack.md
+        - Trim Sheets: trimsheet.md
+        - Sticky UV Editor: sticky_uv_editor.md
+        - Preferences: preferences.md
+    - Additional:
+        - Addon Preferences: addon_prefs.md
+        - Help: help.md
+        - Downloads: downloads.md
+        - FAQs: troubleshooting.md
+        - Changelog: changelg.md
+        - Credits: credits.md
+        - Our Add-ons: our_addons.md
 docs_dir: mkdocs
 site_dir: docs
 theme: readthedocs
