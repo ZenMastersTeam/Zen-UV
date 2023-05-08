@@ -25,6 +25,12 @@
 ---
 
 ## Panels subpanel
-![Preferences](img/screen/preferences/PanelPanels.png)
 
-Allow disabling displaying unused categories.
+Disabling Panels.Use these checkboxes disable some panels if you don't use them.
+![Combo Panel](img/gifs/user_interface/compactui_4.gif)
+
+Floating Panels. If you like old style menu make all the panels Floating.
+![Combo Panel](img/gifs/user_interface/compactui_7.gif)
+
+Panels Icon Style. If you don't see active panel icons with your current Blender color theme you can change the icon style. 
+![Combo Panel](img/gifs/user_interface/compactui_5.gif)

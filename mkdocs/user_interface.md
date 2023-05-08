@@ -1,6 +1,26 @@
 # Combo Panel
 
-![Combo Panel](img/gifs/user_interface/ComboPanel_main.gif)
+Combo Panel is a place where you can find all Zen operators.
+Operators are divided into thematic sections on the left side.
+
+![Combo Panel](img/gifs/user_interface/compactui_1.gif)
+
+You can open multiple panels with `SHIFT + LMB`.
+
+![Combo Panel](img/gifs/user_interface/compactui_2.gif)
+
+You can pin some panesl with `CTRL + LMB`
+
+![Combo Panel](img/gifs/user_interface/compactui_3.gif)
+
+When Zen UV Transform Tool is active you can find Combo Panel in Properties.
+
+![Combo Panel](img/gifs/user_interface/compactui_6.gif)
+
+Combo Panel is the same in N-Panel and Pop-up menu  `Shift + U`.
+You can call this menu anywhere.
+
+![Combo Panel](img/gifs/user_interface/compactui_8.gif)
 
 # Pie Menu
 
@@ -12,11 +32,13 @@
 
 - `Default` — [**Quadrify Islands**](https://zen-masters.github.io/Zen-UV/transform/#quadrify-islands). Straighten rectangular-shaped Islands.
 - `CTRL` — [**Relax**](https://zen-masters.github.io/Zen-UV/transform/#relax). Relax Selected Islands.
+- `SHIFT` — [**Hotspot Mapping**](). Map Islands by matching Islands to predefined Trims from Trimsheet.
   
 ### Zen Unwrap | Pack ![Zen Unwrap](img/icons/zen-unwrap@2x.png)
 
 - `Default` — [**Zen Unwrap**](https://zen-masters.github.io/Zen-UV/unwrap/#zen-unwrap). Unwrap by Marked edges. If you have selected edges or faces they will be Marked as Seams and/or Sharp Edges and Unwrapped after.
 - `ALT` — [**Pack Islands**](https://zen-masters.github.io/Zen-UV/pack/#pack-islands). Pack Islands by chosen Pack Engine.
+- `SHIFT` — [**Zen UV Transform Tool**](). Move, Rotate, Scale, Fit, Align and Flip Islands in 3D View and UV Editor using Zen UV Gizmo.
 
 ### Checker | Finished ![Checker Texture](img/icons/checker_32.png)
 
