@@ -16,7 +16,9 @@ nav:
         - Texel Density: texel_density.md
         - Transform: transform.md
         - Stack: stack.md
-        - Trim Sheets: trimsheet.md
+        - Trim Sheets:
+            - Introduction: trimsheet.md
+            - Creation: trimsheet_creation.md
         - Sticky UV Editor: sticky_uv_editor.md
         - Preferences: preferences.md
     - Additional:

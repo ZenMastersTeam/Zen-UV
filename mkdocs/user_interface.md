@@ -105,6 +105,11 @@ On some operating systems of the **Linux** family, the **Progress Bar** can caus
 
 ![Darken Image](img/gifs/user_interface/DarkenImage_main.gif)
 
-The **Darken Image** operator is designed to adjust the darkening of an Image in the context of the UV Editor. It does not change the texture but uses an overlay to darken it.
+The **Darken Image** operator is designed to adjust the darkening of an Image in the context of the UV Editor. It does not change the texture but uses color management curve to darken it.
 
 ![Darken Image In UI](img/screen/user_interface/DarkenImage.png)
+
+!!! Warning
+  This option affects on current render settings. Do not forget to switch it off before rendering
+
+![](img/screen/user_interface/color_curve.png)
