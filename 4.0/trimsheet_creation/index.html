@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Creation - Zen UV 4.0 for Blender</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+        <link href="../css/version-select.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Creation";
+        var mkdocs_page_input_path = "trimsheet_creation.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Zen UV 4.0 for Blender
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../zenuv3_to_zenuv4/">Upgrade Zen UV 3 to Zen UV 4 FAQ</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../installation/">Installation and Update</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../user_interface/">User Interface</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Modules</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../adv_uv-maps/">Advanced UV Maps</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../seam_groups/">Seam Groups</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../unwrap/">Unwrap</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../select/">Select</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pack/">Pack</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../checker/">UV Checker</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../texel_density/">Texel Density</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../transform/">Transform</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../stack/">Stack</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Trim Sheets</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../trimsheet/">Introduction</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="./">Creation</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#trim-sheet-data-storage-in-blend-file">Trim sheet data storage in blend file</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#active-trim-sheet">Active Trim Sheet</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#trim-sheet-creation">Trim Sheet Creation</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#trims-list">Trims List</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#add">Add</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#remove">Remove</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#menu">Menu</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#move-updown-arrow-icon">Move (up/down arrow icon)</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#delete-all">Delete All</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#trim-sheet-presets">Trim Sheet Presets</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#preset-selector">Preset Selector</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#add_1">Add</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#remove_1">Remove</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#open-presets-folder">Open Presets Folder</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#trim-settings">Trim Settings</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#x">X</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#y">Y</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#w">W</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#h">H</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#fit-axis">Fit Axis</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#inset">Inset</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#keep-proportion">Keep Proportion</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#match-rotation">Match Rotation</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#align-to">Align To</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#tags">Tags</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#how-to-apply-same-settings-to-multiple-trims">How to apply same settings to multiple trims?</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../sticky_uv_editor/">Sticky UV Editor</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../preferences/">Preferences</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Additional</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../addon_prefs/">Addon Preferences</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../help/">Help</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../downloads/">Downloads</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../troubleshooting/">FAQs</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../changelg/">Changelog</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../credits/">Credits</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../our_addons/">Our Add-ons</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Zen UV 4.0 for Blender</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a> &raquo;</li>
+          <li>Modules &raquo;</li>
+          <li>Trim Sheets &raquo;</li>
+      <li>Creation</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="creating-your-trim-sheet-with-zen-uv">Creating your trim sheet with Zen UV<a class="headerlink" href="#creating-your-trim-sheet-with-zen-uv" title="Permanent link"></a></h1>
+<p>Zen UV addon provides all necessary tools to create your trim sections</p>
+<div class="admonition panel">
+<p class="admonition-title">Panel</p>
+<p><img alt="img" src="../img/screen/trimsheet/trimsheet_panel.png" /></p>
+</div>
+<h2 id="trim-sheet-data-storage-in-blend-file">Trim sheet data storage in blend file<a class="headerlink" href="#trim-sheet-data-storage-in-blend-file" title="Permanent link"></a></h2>
+<p>Trim sheet can be stored either in a scene or in an image data-block of blend file</p>
+<table>
+<thead>
+<tr>
+<th><img alt="" src="../img/screen/trimsheet/storage_modes.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data storage modes</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Scene</strong></td>
+<td>Trim sheet is stored in a scene data-block</td>
+</tr>
+<tr>
+<td><strong>Image</strong></td>
+<td>Trim sheet is stored in an image data-block</td>
+</tr>
+</tbody>
+</table>
+<h3 id="active-trim-sheet">Active Trim Sheet<a class="headerlink" href="#active-trim-sheet" title="Permanent link"></a></h3>
+<p>There is exactly one active trim sheet at any time in certain Blender editor (UV Image Editor, 3D Viewport).</p>
+<ul>
+<li><strong>Scene Mode</strong>: never changes for the same scene</li>
+<li>
+<p><strong>Image Mode</strong>: depends on the current editor type</p>
+<ul>
+<li>
+<p><strong>UV Image Editor</strong>: <BR>
+trim sheet data is taken from the active Image Editor image
+<img alt="" src="../img/screen/trimsheet/uv_active_image.png" /></p>
+</li>
+<li>
+<p><strong>3D Viewport</strong>: <BR>
+Trim sheet data is taken either from property trimsheet image of the active material or from the texture connected to the base color</p>
+<ul>
+<li>
+<p>Active Material Trimsheet Image
+<img alt="" src="../img/screen/trimsheet/active_material_image.png" /></p>
+</li>
+<li>
+<p>Active Material Base Color Image
+<img alt="" src="../img/screen/trimsheet/base_color_image.png" /></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="trim-sheet-creation">Trim Sheet Creation<a class="headerlink" href="#trim-sheet-creation" title="Permanent link"></a></h2>
+<h3 id="trims-list">Trims List<a class="headerlink" href="#trims-list" title="Permanent link"></a></h3>
+<p>This control is useful to manage lists of trims. In the center of its area you can select, deselect, rename trims. On the right of the list view are additional buttons and button to call the additional popup menu.</p>
+<p><img alt="" src="../img/screen/trimsheet/trimlist.png" /></p>
+<h4 id="select">Select<a class="headerlink" href="#select" title="Permanent link"></a></h4>
+<p>To select an item, <code>LMB</code> on it.</p>
+<h4 id="rename">Rename<a class="headerlink" href="#rename" title="Permanent link"></a></h4>
+<p>By double-clicking on an item, you can edit its name via a text field. This can also be achieved by pressing <code>Ctrl-LMB</code> over it.</p>
+<h4 id="resize">Resize<a class="headerlink" href="#resize" title="Permanent link"></a></h4>
+<p>The list view can be resized to show more or fewer items. Hover the mouse over the handle <code>(==)</code> then click and drag the handle to expand or shrink the list.</p>
+<h4 id="filter">Filter<a class="headerlink" href="#filter" title="Permanent link"></a></h4>
+<p>Click the Show filtering options button (+) to toggle filter option buttons.</p>
+<ul>
+<li><strong>Search</strong>: <BR>
+Type part of a list item’s name in the filter text field to filter items by part of their name.</li>
+<li><strong>Filter Include</strong>: <BR>
+When the magnifying glass icon has a + sign then only items that match the text will be displayed.</li>
+<li><strong>Filter Exclude</strong>: <BR>
+When the magnifying glass icon has a - sign then only items that do not match text will be displayed.</li>
+<li><strong>Sort</strong>: <BR>
+Sort list items.<ul>
+<li>Alphabetical: <BR>
+This button switches between alphabetical and non-alphabetical ordering.</li>
+<li>Inverse: <BR>
+Sort objects in ascending or descending order. This also applies to alphabetical sorting, if selected.</li>
+</ul>
+</li>
+</ul>
+<h3 id="add">Add<a class="headerlink" href="#add" title="Permanent link"></a></h3>
+<p>Adds a new item.</p>
+<h3 id="remove">Remove<a class="headerlink" href="#remove" title="Permanent link"></a></h3>
+<p>Removes the selected item.</p>
+<h3 id="menu">Menu<a class="headerlink" href="#menu" title="Permanent link"></a></h3>
+<p>A menu with operators e.g. copy paste, or operations on all items.</p>
+<div class="admonition menu">
+<p class="admonition-title">Menu</p>
+<p><img alt="" src="../img/screen/trimsheet/trim_menu.png" /></p>
+</div>
+<h3 id="move-updown-arrow-icon">Move (up/down arrow icon)<a class="headerlink" href="#move-updown-arrow-icon" title="Permanent link"></a></h3>
+<p>Moves the selected item up/down one position.</p>
+<h3 id="delete-all">Delete All<a class="headerlink" href="#delete-all" title="Permanent link"></a></h3>
+<p>Deletes all trims in the trim sheet</p>
+<h2 id="trim-sheet-presets">Trim Sheet Presets<a class="headerlink" href="#trim-sheet-presets" title="Permanent link"></a></h2>
+<div class="admonition presets">
+<p class="admonition-title">Presets</p>
+<p><img alt="" src="../img/screen/trimsheet/trim_presets.png" /></p>
+</div>
+<h3 id="preset-selector">Preset Selector<a class="headerlink" href="#preset-selector" title="Permanent link"></a></h3>
+<p>A list of available presets. A selection will override the included properties.</p>
+<h3 id="add_1">Add<a class="headerlink" href="#add_1" title="Permanent link"></a></h3>
+<p>New presets can be added based on a predefined set of properties, which will be saved for later reuse. A pop-up opens where you can set a name after which you can select it from the list and in some cases additional settings.</p>
+<h3 id="remove_1">Remove<a class="headerlink" href="#remove_1" title="Permanent link"></a></h3>
+<p>Deletes the selected preset.</p>
+<h3 id="open-presets-folder">Open Presets Folder<a class="headerlink" href="#open-presets-folder" title="Permanent link"></a></h3>
+<p>You can override the default presets folder with your own path</p>
+<h2 id="trim-settings">Trim Settings<a class="headerlink" href="#trim-settings" title="Permanent link"></a></h2>
+<p>Trim settings property inspector shows settings of the active trim</p>
+<div class="admonition dimensions">
+<p class="admonition-title">Dimensions</p>
+<p><img alt="" src="../img/screen/trimsheet/trim_axis.png" /></p>
+</div>
+<h3 id="x">X<a class="headerlink" href="#x" title="Permanent link"></a></h3>
+<p>Trim left point</p>
+<h3 id="y">Y<a class="headerlink" href="#y" title="Permanent link"></a></h3>
+<p>Trim bottom point</p>
+<h3 id="w">W<a class="headerlink" href="#w" title="Permanent link"></a></h3>
+<p>Trim width</p>
+<h3 id="h">H<a class="headerlink" href="#h" title="Permanent link"></a></h3>
+<p>Trim height</p>
+<h3 id="fit-axis">Fit Axis<a class="headerlink" href="#fit-axis" title="Permanent link"></a></h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>U</strong></td>
+<td>U axis</td>
+</tr>
+<tr>
+<td><strong>V</strong></td>
+<td>V axis</td>
+</tr>
+<tr>
+<td><strong>Min</strong></td>
+<td>The minimum length axis is automatically determined</td>
+</tr>
+<tr>
+<td><strong>Max</strong></td>
+<td>The maximum length axis is automatically determined</td>
+</tr>
+<tr>
+<td><strong>Automatic</strong></td>
+<td>Automatically detected axis for full dimensional compliance</td>
+</tr>
+</tbody>
+</table>
+<h3 id="inset">Inset<a class="headerlink" href="#inset" title="Permanent link"></a></h3>
+<p>Trim inset</p>
+<h3 id="keep-proportion">Keep Proportion<a class="headerlink" href="#keep-proportion" title="Permanent link"></a></h3>
+<p>Keep trim proportions while transforming</p>
+<h3 id="match-rotation">Match Rotation<a class="headerlink" href="#match-rotation" title="Permanent link"></a></h3>
+<p>Match trim rotation</p>
+<h3 id="align-to">Align To<a class="headerlink" href="#align-to" title="Permanent link"></a></h3>
+<p>Align to remembered directions in Fit, Align operations</p>
+<h3 id="tags">Tags<a class="headerlink" href="#tags" title="Permanent link"></a></h3>
+<p>Trim tags</p>
+<h3 id="how-to-apply-same-settings-to-multiple-trims">How to apply same settings to multiple trims?<a class="headerlink" href="#how-to-apply-same-settings-to-multiple-trims" title="Permanent link"></a></h3>
+<table>
+<thead>
+<tr>
+<th><img alt="" src="../img/screen/trimsheet/trim_group_settings.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Group Apply Button-Indicator</td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>Select 2 or more trims</li>
+<li>Press Apply button</li>
+</ol>
+<h4 id="check-the-equality-of-properties-in-selected-trims">Check the equality of properties in selected trims<a class="headerlink" href="#check-the-equality-of-properties-in-selected-trims" title="Permanent link"></a></h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="" src="../img/screen/trimsheet/trim_prop_not_active.png" /></td>
+<td>Properties are not equal</td>
+</tr>
+<tr>
+<td><img alt="" src="../img/screen/trimsheet/trim_prop_active.png" /></td>
+<td>Properties are equal</td>
+</tr>
+</tbody>
+</table>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../trimsheet/" class="btn btn-neutral float-left" title="Introduction"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../sticky_uv_editor/" class="btn btn-neutral float-right" title="Sticky UV Editor">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../trimsheet/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../sticky_uv_editor/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+      <script src="../js/version-select.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

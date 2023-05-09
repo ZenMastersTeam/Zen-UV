@@ -35,7 +35,7 @@
           <a href=".." class="icon icon-home"> Zen UV 4.0 for Blender
         </a><div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
-      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
   </form>
 </div>
       </div>
@@ -74,7 +74,13 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../stack/">Stack</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../trimsheet/">Trim Sheets</a>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Trim Sheets</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../trimsheet/">Introduction</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../trimsheet_creation/">Creation</a>
+                </li>
+    </ul>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../sticky_uv_editor/">Sticky UV Editor</a>
                   </li>
@@ -111,7 +117,7 @@
       <div class="wy-nav-content">
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
-    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a> &raquo;</li>
           <li>Getting Started &raquo;</li>
       <li>User Interface</li>
     <li class="wy-breadcrumbs-aside">
@@ -205,8 +211,13 @@ On some operating systems of the <strong>Linux</strong> family, the <strong>Prog
 <p><img alt="Progress Bar disable" src="../img/screen/user_interface/ProgressBar_disable.png" /></p>
 <h1 id="darken-image">Darken Image<a class="headerlink" href="#darken-image" title="Permanent link"></a></h1>
 <p><img alt="Darken Image" src="../img/gifs/user_interface/DarkenImage_main.gif" /></p>
-<p>The <strong>Darken Image</strong> operator is designed to adjust the darkening of an Image in the context of the UV Editor. It does not change the texture but uses an overlay to darken it.</p>
+<p>The <strong>Darken Image</strong> operator is designed to adjust the darkening of an Image in the context of the UV Editor. It does not change the texture but uses color management curve to darken it.</p>
 <p><img alt="Darken Image In UI" src="../img/screen/user_interface/DarkenImage.png" /></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+</div>
+<p>This option affects on current render settings. Do not forget to switch it off before rendering</p>
+<p><img alt="" src="../img/screen/user_interface/color_curve.png" /></p>
               
             </div>
           </div><footer>
