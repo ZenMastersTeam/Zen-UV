@@ -60,7 +60,7 @@ Straighten rectangular-shaped Islands.
     - **Tag as Finished** - Tag Quadrified islands as finished.
 
 !!! tip
-    Tag Quadrified Islands as [**Finished**](https://zen-masters.github.io/Zen-UV/unwrap/#finishing-system) to preserve them from unwrapping. It's recommended to [**Tag as Finished**](https://zen-masters.github.io/Zen-UV/unwrap/#tag-finished) all manually changed Islands.
+    Tag Quadrified Islands as [**Finished**](unwrap.md#finishing-system) to preserve them from unwrapping. It's recommended to [**Tag as Finished**](unwrap.md#tag-finished) all manually changed Islands.
     ![](img/gifs/trasnform_operators/Quadrify_Tag_Finished.gif)
 
 ---

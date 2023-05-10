@@ -156,3 +156,67 @@ Trim tags
 | ![](img/screen/trimsheet/trim_prop_not_active.png) | Properties are not equal |
 | ![](img/screen/trimsheet/trim_prop_active.png) | Properties are equal |
 
+## Display Trims
+Trims can be displayed in viewport with special gizmo layer
+
+### Trims Display Overlay in UV Image Editor
+| ![](img/screen/trimsheet/trim_display.png) |
+|---|
+| |
+
+### Trims Display Polygon Overlay in 3D Viewport
+!!! Note
+    Trims display in 3D Viewport is enabled only if Zen UV Tool is active and active object has active polygon
+
+| ![](img/screen/trimsheet/trim_display_3D.png) |
+|---|
+| |
+
+### Trims Display Overlay Widget in 3D Viewport
+Trims can be displayed in overlay widget. To activate it you need to press gizmo button in the right side of 3D viewport
+
+| ![](img/screen/trimsheet/trim_display_widget.png) |
+|---|
+| |
+
+#### Overlay Widget Locking Options
+Trims display overlay widget can be moved by `Shift + Middle Mouse Button` and scaled by `Mouse Wheel Up|Down`. And its position can be locked in the settings
+
+| ![](img/screen/trimsheet/trim_display_widget_locked.png) |
+|---|
+| |
+
+## Transform Trims
+| ![](img/screen/trimsheet/trim_transform.png) |
+|---|
+| |
+
+### Align Trims
+Determines how selected trims will be aligned.
+
+Use Align to align selected trims to the top, bottom, left, or right of an active trim or each other, or UV area bounds.
+
+| ![](img/screen/trimsheet/tr_align.png) |
+|---|
+| |
+
+### Crop Trims
+Use Crop to crop selected trims or all trims by UV area bounds
+
+| ![](img/screen/trimsheet/tr_crop.png) |
+|---|
+| |
+
+### Adjust Trims
+Set the same width or height of the selected trim. You can select to use minimum or maximum value.
+
+| ![](img/screen/trimsheet/tr_adjust.png) |
+|---|
+| |
+
+### Distribute Trims
+Use Distribute to distribute selected trims at equal distances between each other, starting distribution as is or from active trim, or from UV area bounds
+
+| ![](img/screen/trimsheet/tr_distribute.png) |
+|---|
+| |

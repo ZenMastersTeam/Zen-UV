@@ -4,7 +4,7 @@
 
 ### Pack Islands
 
-Pack all Islands using selected [**Pack Engine**](https://zen-masters.github.io/Zen-UV/pack/#pack-engine).
+Pack all Islands using selected [**Pack Engine**](pack.md#pack-engine).
 
 ### Margin
 
@@ -26,7 +26,7 @@ Set space between Islands for Pack Islands operation.
   
 ### UV Coverage
 
-Calculate Islands UV Coverage for active UV map. Increasing UV Coverage value leads to the increasing [Texel Density](https://zen-masters.github.io/Zen-UV/texel_density/) value, this in turn leads to the more efficient UV space usage and you can see more pixels on your model using the same texture.
+Calculate Islands UV Coverage for active UV map. Increasing UV Coverage value leads to the increasing [Texel Density](texel_density.md) value, this in turn leads to the more efficient UV space usage and you can see more pixels on your model using the same texture.
  
 The algorithm calculates total UV Islands area and shows the percentage in relation to the UV space. It can lead to the values more than 100% if you have Stacked Islands.
 
@@ -60,7 +60,7 @@ Below we described General preferences for all Pack Engines. If you want to obta
 
 #### Texture Size
 
-Texture Size preset, works in pair with [**Margin**](https://zen-masters.github.io/Zen-UV/pack/#margin).
+Texture Size preset, works in pair with [**Margin**](pack.md#margin).
 
 #### Average Islands Scale
 

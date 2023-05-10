@@ -55,7 +55,7 @@ Check the state of UVs (FREE).
 
 ![blendermarket icon](img/icons/blendermarket.png)  [**Blender Market**](https://www.blendermarket.com/products/checker)    ![gumroad icon](img/icons/gumroad.png)  [**Gumroad**](https://gumroad.com/l/zenuv_checker)
 
-[**Checker Documentation**](https://zen-masters.github.io/Zen-UV/checker/ )
+[**Checker Documentation**](checker.md)
 
 ---
 

@@ -1,11 +1,11 @@
 # FAQs
 ----
 ### Can I unwrap organic models using Zen UV?
-— Yes, among other tools Zen UV has [**Relax**](https://zen-masters.github.io/Zen-UV/transform/#relax) operator that is well suited for relaxing UV Islands of organic 3D models.
+— Yes, among other tools Zen UV has [**Relax**](transform.md#relax) operator that is well suited for relaxing UV Islands of organic 3D models.
 
 ----
 ### I can't Install or Update Zen UV.
-— Please visit this page [**Installation and update**](https://zen-masters.github.io/Zen-UV/installation/).
+— Please visit this page [**Installation and update**](installation.md).
 <!-- blank line -->
 ----
 ### How can I change default Zen UV shortcuts?

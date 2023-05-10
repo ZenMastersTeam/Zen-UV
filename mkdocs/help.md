@@ -3,9 +3,9 @@
 !!! Panel
     ![Help](img/screen/help/help.png)
 
-## [Documentation](https://zen-masters.github.io/Zen-UV/)
+## [Documentation](index.md)
 
-[Link](https://zen-masters.github.io/Zen-UV/) to the documentation of the current version.
+[Link](index.md) to the documentation of the current version.
 
 ## ![Discord](img/icons/services/discord-16.png) [**Discord**](https://discord.gg/wGpFeME)
 

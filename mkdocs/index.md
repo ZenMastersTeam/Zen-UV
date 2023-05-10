@@ -17,27 +17,27 @@
 <!-- blank line -->
 ## Main Features
 - **Zen UV Transform tool**. Move, Rotate, Scale, Fit, Align and Flip Islands in 3D View and UV Editor using Zen UV Gizmo.
--   [**Stack System.**](https://zen-masters.github.io/Zen-UV/stack/) Stack and Unstack UV Islands automatically and manually. Extremely useful for increasing Texel Density and baking.
--   [**Relax Operator**.](https://zen-masters.github.io/Zen-UV/transform/#relax) This is a new unwrapping method that is well suited for working with organic models.
-- **Trimsheet system**. Create Trimsheets and Move, Rotate, Scale, Fit, Align and Flip Islands inside Trims.
--   [**World Orient**](https://zen-masters.github.io/Zen-UV/transform/#world-orient) operator that rotates UV Islands the way they are oriented in the model.
--   [**Checker Map System**](https://zen-masters.github.io/Zen-UV/checker/) is a node-based system that contains Checker Textures designed specifically for Zen UV. Square and rectangular formats. Check UV's state on the model without ruining existing materials!
--   [**Copy/Paste Operators.**](https://zen-masters.github.io/Zen-UV/stack/#copy-paste-system) Copy/Paste parameters (Structure,TD, Position, Size) between Islands/Faces/Maps.
--   [**Quadrify Islands Operator**](https://zen-masters.github.io/Zen-UV/transform/#quadrify-islands) to straighten rectangular-shaped UV Islands. 
--   [**Full set of Transform operators**.](https://zen-masters.github.io/Zen-UV/transform/) Move, Rotate, Scale, Flip, Fit, Orient, Sort and Align Islands and Elements (vertices, edges, polygons).
+-   [**Stack System.**](stack.md) Stack and Unstack UV Islands automatically and manually. Extremely useful for increasing Texel Density and baking.
+-   [**Relax Operator**.](transform.md#relax) This is a new unwrapping method that is well suited for working with organic models.
+- [**Trimsheet system**](trimsheet.md). [Create Trimsheets](trimsheet_creation.md) and Move, Rotate, Scale, Fit, Align and Flip Islands inside Trims.
+-   [**World Orient**](transform.md#world-orient) operator that rotates UV Islands the way they are oriented in the model.
+-   [**Checker Map System**](checker.md) is a node-based system that contains Checker Textures designed specifically for Zen UV. Square and rectangular formats. Check UV's state on the model without ruining existing materials!
+-   [**Copy/Paste Operators.**](stack.md#copy-paste-system) Copy/Paste parameters (Structure,TD, Position, Size) between Islands/Faces/Maps.
+-   [**Quadrify Islands Operator**](transform.md#quadrify-islands) to straighten rectangular-shaped UV Islands. 
+-   [**Full set of Transform operators**.](transform.md) Move, Rotate, Scale, Flip, Fit, Orient, Sort and Align Islands and Elements (vertices, edges, polygons).
 -   **Display Flipped operator** to display Flipped Islands in UV Editor.
--   [**Finished System.**](https://zen-masters.github.io/Zen-UV/unwrap/#finishing-system) It helps to control and manage the state of unwrapping UV Islands (Finished/Unfinished) by tags and visually.
--   [**Different Pack Engines**.](https://zen-masters.github.io/Zen-UV/operators/#pack-engine) Yes, you can use UVPackmaster 2, 3 and UV-Packer with Zen UV.
--   [**Zen Unwrap Operator**](https://zen-masters.github.io/Zen-UV/unwrap/#zen-unwrap) to mark selected edges/faces as Seams and/or Sharp edges and Unwrap by Marked edges after.
+-   [**Finished System.**](unwrap.md#finishing-system) It helps to control and manage the state of unwrapping UV Islands (Finished/Unfinished) by tags and visually.
+-   [**Different Pack Engines**.](operators.md#pack-engine) Yes, you can use UVPackmaster 2, 3 and UV-Packer with Zen UV.
+-   [**Zen Unwrap Operator**](unwrap.md#zen-unwrap) to mark selected edges/faces as Seams and/or Sharp edges and Unwrap by Marked edges after.
 - **Unwrap Constraint operator** to unwrap Islands along a certain axis.
 - **Match and Stitch operator** to match Islands position, rotation, scale and stitch vertices if it’s possible.
--   [**Marking System**](https://zen-masters.github.io/Zen-UV/unwrap/#mark-system) that helps you to mark Seams and/or Sharp automatically by angle, by existing UV Borders/Sharp Edges, and manually.
--   [**Seam Groups.**](https://zen-masters.github.io/Zen-UV/seam_groups/) Work with more than one Seam set!
--   [**Texel Density.**](https://zen-masters.github.io/Zen-UV/texel_density/) Get, Set, and Check Texel Density of UV Islands.
--   [**Sticky UV Editor**](https://zen-masters.github.io/Zen-UV/sticky_uv_editor/) for quick access to UV Editor.
--   [**Advanced UV Maps**.](https://zen-masters.github.io/Zen-UV/adv_uv-maps/) Duplicate, remove, clean, and rename UV Maps of the selected objects in sync.  
--   [**Hard Ops add-on integration**.](https://zen-masters.github.io/Zen-UV/preferences/#display-subpanel) It allows displaying UV manipulations in 3D View!
--   [**Smooth by Sharp (Toggle).**](https://zen-masters.github.io/Zen-UV/unwrap/#smooth-by-sharp-toggle) Set smoothing for perfect normal map bakes in one click!
+-   [**Marking System**](unwrap.md#mark-system) that helps you to mark Seams and/or Sharp automatically by angle, by existing UV Borders/Sharp Edges, and manually.
+-   [**Seam Groups.**](seam_groups.md) Work with more than one Seam set!
+-   [**Texel Density.**](texel_density.md) Get, Set, and Check Texel Density of UV Islands.
+-   [**Sticky UV Editor**](sticky_uv_editor.md) for quick access to UV Editor.
+-   [**Advanced UV Maps**.](adv_uv-maps.md) Duplicate, remove, clean, and rename UV Maps of the selected objects in sync.  
+-   [**Hard Ops add-on integration**.](preferences.md#display-subpanel) It allows displaying UV manipulations in 3D View!
+-   [**Smooth by Sharp (Toggle).**](unwrap.md#smooth-by-sharp-toggle) Set smoothing for perfect normal map bakes in one click!
 - Quick support on the [**Discord channel**](https://discord.gg/wGpFeME).
 
 ## Default Shortcuts
