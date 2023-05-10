@@ -16,8 +16,20 @@ of recurring elements those are ideal candidates for a trim sheet.
 | ![img](img/screen/trimsheet/coridor_elements.png) |
 |---|
 
-## [Creating your trim sheet with Zen UV](trimsheet_creation.md)
+## [Create your trim sheet with Zen UV](trimsheet_creation.md)
 Zen UV addon provides all necessary tools to create your trim sections
 
 !!! Preview
     ![](img/screen/trimsheet/trimsheet_editor.png)
+
+## Create your trim sheet in any 2D Vector Editor that supports SVG
+We didn't want trim sheets system to be enclosed only in Blender. So we implemented very convinient import-export trim sheets into SVG files and back. If you are a PRO in such vector editor as Inkscape, feel free to create trim sheets in your favourite software and then just export it in SVG and import in Blender.
+
+!!! SVG
+    ![](img/screen/trimsheet/trimsheet_inkscape.png)
+
+## Share your trim sheets as SVG files
+Sometimes sharing trim sheets as blend files is inconvinient, it requires matching Blender versions, cutting all unnecessary information not related to trim sheets, etc. So we implemented easy share trim sheets as SVG files. They can be viewed in any browser and can be edited not only in Blender but in every 2D Vector Editor.
+
+| ![img](img/screen/trimsheet/trim_export.png) |
+|---|

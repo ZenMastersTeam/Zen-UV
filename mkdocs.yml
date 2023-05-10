@@ -19,6 +19,7 @@ nav:
         - Trim Sheets:
             - Introduction: trimsheet.md
             - Creation: trimsheet_creation.md
+            - Operators: trimsheet_operators.md
         - Sticky UV Editor: sticky_uv_editor.md
         - Preferences: preferences.md
     - Additional:
