@@ -138,6 +138,28 @@
     </li>
         </ul>
     </li>
+    <li class="toctree-l3"><a class="reference internal" href="#display-trims">Display Trims</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#trims-display-overlay-in-uv-image-editor">Trims Display Overlay in UV Image Editor</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#trims-display-polygon-overlay-in-3d-viewport">Trims Display Polygon Overlay in 3D Viewport</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#trims-display-overlay-widget-in-3d-viewport">Trims Display Overlay Widget in 3D Viewport</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#transform-trims">Transform Trims</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#align-trims">Align Trims</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#crop-trims">Crop Trims</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#adjust-trims">Adjust Trims</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#distribute-trims">Distribute Trims</a>
+    </li>
+        </ul>
+    </li>
     </ul>
                 </li>
                 <li class="toctree-l2"><a class="reference internal" href="../trimsheet_operators/">Operators</a>
@@ -401,6 +423,136 @@ Sort objects in ascending or descending order. This also applies to alphabetical
 <tr>
 <td><img alt="" src="../img/screen/trimsheet/trim_prop_active.png" /></td>
 <td>Properties are equal</td>
+</tr>
+</tbody>
+</table>
+<h2 id="display-trims">Display Trims<a class="headerlink" href="#display-trims" title="Permanent link"></a></h2>
+<p>Trims can be displayed in viewport with special gizmo layer</p>
+<h3 id="trims-display-overlay-in-uv-image-editor">Trims Display Overlay in UV Image Editor<a class="headerlink" href="#trims-display-overlay-in-uv-image-editor" title="Permanent link"></a></h3>
+<table>
+<thead>
+<tr>
+<th><img alt="" src="../img/screen/trimsheet/trim_display.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="trims-display-polygon-overlay-in-3d-viewport">Trims Display Polygon Overlay in 3D Viewport<a class="headerlink" href="#trims-display-polygon-overlay-in-3d-viewport" title="Permanent link"></a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Trims display in 3D Viewport is enabled only if Zen UV Tool is active and active object has active polygon</p>
+</div>
+<table>
+<thead>
+<tr>
+<th><img alt="" src="../img/screen/trimsheet/trim_display_3D.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="trims-display-overlay-widget-in-3d-viewport">Trims Display Overlay Widget in 3D Viewport<a class="headerlink" href="#trims-display-overlay-widget-in-3d-viewport" title="Permanent link"></a></h3>
+<p>Trims can be displayed in overlay widget. To activate it you need to press gizmo button in the right side of 3D viewport</p>
+<table>
+<thead>
+<tr>
+<th><img alt="" src="../img/screen/trimsheet/trim_display_widget.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="overlay-widget-locking-options">Overlay Widget Locking Options<a class="headerlink" href="#overlay-widget-locking-options" title="Permanent link"></a></h4>
+<p>Trims display overlay widget can be moved by <code>Shift + Middle Mouse Button</code> and scaled by <code>Mouse Wheel Up|Down</code>. And its position can be locked in the settings</p>
+<table>
+<thead>
+<tr>
+<th><img alt="" src="../img/screen/trimsheet/trim_display_widget_locked.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="transform-trims">Transform Trims<a class="headerlink" href="#transform-trims" title="Permanent link"></a></h2>
+<table>
+<thead>
+<tr>
+<th><img alt="" src="../img/screen/trimsheet/trim_transform.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="align-trims">Align Trims<a class="headerlink" href="#align-trims" title="Permanent link"></a></h3>
+<p>Determines how selected trims will be aligned.</p>
+<p>Use Align to align selected trims to the top, bottom, left, or right of an active trim or each other, or UV area bounds.</p>
+<table>
+<thead>
+<tr>
+<th><img alt="" src="../img/screen/trimsheet/tr_align.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="crop-trims">Crop Trims<a class="headerlink" href="#crop-trims" title="Permanent link"></a></h3>
+<p>Use Crop to crop selected trims or all trims by UV area bounds</p>
+<table>
+<thead>
+<tr>
+<th><img alt="" src="../img/screen/trimsheet/tr_crop.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="adjust-trims">Adjust Trims<a class="headerlink" href="#adjust-trims" title="Permanent link"></a></h3>
+<p>Set the same width or height of the selected trim. You can select to use minimum or maximum value.</p>
+<table>
+<thead>
+<tr>
+<th><img alt="" src="../img/screen/trimsheet/tr_adjust.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="distribute-trims">Distribute Trims<a class="headerlink" href="#distribute-trims" title="Permanent link"></a></h3>
+<p>Use Distribute to distribute selected trims at equal distances between each other, starting distribution as is or from active trim, or from UV area bounds</p>
+<table>
+<thead>
+<tr>
+<th><img alt="" src="../img/screen/trimsheet/tr_distribute.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
 </tr>
 </tbody>
 </table>
