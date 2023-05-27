@@ -93,3 +93,27 @@
 2. Delete Zen UV folder manually.
 3. [**Install Zen UV add-on**](installation.md#installation).
 4. Done!
+
+### [Zen Relax Application](transform.md#relax) Validity Check
+The validity and correctness of Zen Relax application data file is essential to be working without errors.
+
+1. Open file `crc.md5` with any text editor
+![](img/screen/installation/relax_crc.png)
+
+2. Pay attention to the present checksum values
+**Example:**
+```
+950a6ed131b4cc48a8978a451a09e13d *ZenRelax_linux_64_v1_0_0
+a3aa5cd73d4f1f7fcd1c62ec9147dc2c *ZenRelax_mac_intel_64_v1_0_0
+f5c0c064ba189f02a05ea62c7e3c04f4 *ZenRelax_mac_silicon_64_v1_0_0
+a195e82d9dbebefa5193d3409ed61cd4 *ZenRelax_win_64_v1_0_0.exe
+```
+
+3. Compare the checksum of Relax application on your system with the checksum given in `crc.md5` file
+
+#### Validation Check (Windows)
+Validate checksum with `certutil` command
+
+```batch
+certutil -hashfile "c:\Users\<UserName>\AppData\Roaming\Blender Foundation\Blender\3.3\scripts\addons\ZenUV\utils\clib\ZenRelax_win_64_v1_0_0.exe" MD5
+```
