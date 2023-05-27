@@ -117,3 +117,5 @@ Validate checksum with `certutil` command
 ```batch
 certutil -hashfile "c:\Users\<UserName>\AppData\Roaming\Blender Foundation\Blender\3.3\scripts\addons\ZenUV\utils\clib\ZenRelax_win_64_v1_0_0.exe" MD5
 ```
+
+![](img/screen/installation/crc_check.png)
