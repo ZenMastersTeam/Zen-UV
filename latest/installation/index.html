@@ -63,6 +63,12 @@
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#still-have-problems-with-update">Still have problems with update?</a>
     </li>
+    <li class="toctree-l3"><a class="reference internal" href="#zen-relax-application-validity-check">Zen Relax Application Validity Check</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#validation-check-windows">Validation Check (Windows)</a>
+    </li>
+        </ul>
+    </li>
         </ul>
     </li>
     </ul>
@@ -239,6 +245,30 @@
 <li><a href="./#installation"><strong>Install Zen UV add-on</strong></a>.</li>
 <li>Done!</li>
 </ol>
+<h3 id="zen-relax-application-validity-check"><a href="../transform/#relax">Zen Relax Application</a> Validity Check<a class="headerlink" href="#zen-relax-application-validity-check" title="Permanent link"></a></h3>
+<p>The validity and correctness of Zen Relax application data file is essential to be working without errors.</p>
+<ol>
+<li>
+<p>Open file <code>crc.md5</code> with any text editor
+<img alt="" src="../img/screen/installation/relax_crc.png" /></p>
+</li>
+<li>
+<p>Pay attention to the present checksum values
+<strong>Example:</strong></p>
+</li>
+</ol>
+<pre><code>950a6ed131b4cc48a8978a451a09e13d *ZenRelax_linux_64_v1_0_0
+a3aa5cd73d4f1f7fcd1c62ec9147dc2c *ZenRelax_mac_intel_64_v1_0_0
+f5c0c064ba189f02a05ea62c7e3c04f4 *ZenRelax_mac_silicon_64_v1_0_0
+a195e82d9dbebefa5193d3409ed61cd4 *ZenRelax_win_64_v1_0_0.exe
+</code></pre>
+<ol>
+<li>Compare the checksum of Relax application on your system with the checksum given in <code>crc.md5</code> file</li>
+</ol>
+<h4 id="validation-check-windows">Validation Check (Windows)<a class="headerlink" href="#validation-check-windows" title="Permanent link"></a></h4>
+<p>Validate checksum with <code>certutil</code> command</p>
+<pre><code class="language-batch">certutil -hashfile &quot;c:\Users\&lt;UserName&gt;\AppData\Roaming\Blender Foundation\Blender\3.3\scripts\addons\ZenUV\utils\clib\ZenRelax_win_64_v1_0_0.exe&quot; MD5
+</code></pre>
               
             </div>
           </div><footer>
