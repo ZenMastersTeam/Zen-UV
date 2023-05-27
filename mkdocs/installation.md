@@ -94,7 +94,7 @@
 3. [**Install Zen UV add-on**](installation.md#installation).
 4. Done!
 
-### [Zen Relax Application](transform.md#relax) Validity Check
+## [Zen Relax Application](transform.md#relax) Validity Check
 The validity and correctness of Zen Relax application data file is essential to be working without errors.
 
 1. Open file `crc.md5` with any text editor
@@ -111,7 +111,7 @@ a195e82d9dbebefa5193d3409ed61cd4 *ZenRelax_win_64_v1_0_0.exe
 
 3. Compare the checksum of Relax application on your system with the checksum given in `crc.md5` file
 
-#### Validation Check (Windows)
+### Validation Check (Windows)
 Validate checksum with `certutil` command
 
 ```batch
