@@ -128,6 +128,11 @@ Trim settings property inspector shows settings of the active trim
 !!! Dimensions
     ![](img/screen/trimsheet/trim_axis.png)
 
+### Trim Units
+By default trim units are in UV points based on values from 0 to 1, but it is possible to switch to image pixels depending on image size
+
+![](img/screen/trimsheet/trim_pixels.gif)
+
 ### X
 Trim left point
 
