@@ -51,7 +51,7 @@ Selected trims are indicated with tickmarks in trim sheet UI list and have a blu
 
 ![](img/screen/trimsheet/selected_trims.png)
 
-#### Select
+#### Select Trim in UI List
 To select an item in trim sheet UI list, `LMB` on it.
 
 #### Select Trim in the Viewport
