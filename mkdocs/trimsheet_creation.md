@@ -46,6 +46,15 @@ There is exactly one active trim in the curent trim sheet. It is highlighted in 
 
 ![](img/screen/trimsheet/active_trim.png)
 
+#### Select Active Trim with Preview Panel
+You can select active trim with preview panel.
+
+1. You need to press `Preview` button and after
+![](img/screen/trimsheet/trim_preview_panel.png)
+
+2. Select a corresponding trim
+![](img/screen/trimsheet/trim_preview_select.png)
+
 ### Selected Trims
 Selected trims are indicated with tickmarks in trim sheet UI list and have a blue shape border in trim editor
 
