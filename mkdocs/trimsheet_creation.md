@@ -41,8 +41,23 @@ This control is useful to manage lists of trims. In the center of its area you c
 
 ![](img/screen/trimsheet/trimlist.png)
 
+### Active Trim
+There is exactly one active trim in the curent trim sheet. It is highlighted in trim sheet UI list and surrounded with handles in trim editor
+
+![](img/screen/trimsheet/active_trim.png)
+
+### Selected Trims
+Selected trims are indicated with tickmarks in trim sheet UI list and have a blue shape border in trim editor
+
+![](img/screen/trimsheet/selected_trims.png)
+
 #### Select
-To select an item, `LMB` on it.
+To select an item in trim sheet UI list, `LMB` on it.
+
+#### Select Trim in the Viewport
+It is also possible to select trim by `LMB` in the viewport by activating selection mode
+
+![](img/screen/trimsheet/trim_select_mode.png)
 
 #### Rename
 By double-clicking on an item, you can edit its name via a text field. This can also be achieved by pressing `Ctrl-LMB` over it.
