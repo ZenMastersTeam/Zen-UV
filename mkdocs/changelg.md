@@ -1,5 +1,6 @@
 # Changelog
 ---
+- [Version 4.1](changelg/release_note_4.1.md)
 - [Version 4.0.1](changelg/release_note_4.0.1.md)
 - [Version 4.0](changelg/release_note_4.0.md)
 - [Version 3.1.0.4](changelg/release_note_3.1.0.4.md)
