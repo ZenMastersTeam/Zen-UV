@@ -1,16 +1,19 @@
 # Version 4.1
 
 <div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%;">
-<iframe src="https://www.youtube.com/embed/JZxBGPZg1ok" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen="" seamless="" frameborder="0"></iframe>
+<iframe src="https://www.youtube.com/embed/jFcVmGnNOho" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen="" seamless="" frameborder="0"></iframe>
 </div>
 <br>
 
 ## General
 - Added **Unwrap in Place** operator.
+- Added **UV Sync Off** operator to Display selected Islands in UV Sync off Mode.
 - Added the ability to **export Trims to bitmap format (PNG, BMP, TGA)**.
 - Added the ability to **import Trimsheet from DECALmachine add-on**.
 - **Switching from BGL module to GPU** due to the transition of Blender developers to GPU.
 - Bugfixes.
+
+## Operators
 
 ### Unwrap
 - Added **Unwrap in Place** operator. (UV Editor mode)
@@ -31,6 +34,7 @@
 - Fixed a bug with **Keep Proportion** option in **Hotspot Mapping** operator.
 
 ### UV Checker
+- Added **UV Sync Off** operator to Display selected Islands in UV Sync off Mode.
 - Added the ability to **Display all Draw Modes** in Display panel.
 - Added **UV Islands Counter** operator to get the number of Islands.
 - Added **Empty Objects** operator to search for objects that do not contain polygons.
