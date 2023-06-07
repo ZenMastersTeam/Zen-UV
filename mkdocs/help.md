@@ -13,9 +13,35 @@
 
 ## Version
 
-Current version of the [Zen UV](https://www.blendermarket.com/products/zen-uv).
-
+Current version of the [**Zen UV**](https://www.blendermarket.com/products/zen-uv).
 
 ## Core
 
-Current version of [Zen UV Core Library](https://sergeytyapkin.gumroad.com/l/ZenUVCore)
+Current version of [**Zen UV Core Library**](https://sergeytyapkin.gumroad.com/l/ZenUVCore)
+If Zen UV Core Library is not installed you need to [**follow this instruction to install it**](installation.md#zen-uv-core-library-installation).
+
+## Examples
+
+The examples contain scenes with examples of models and sites recommended for review.
+Here you can find models from [**Zen UV YouTube Playlist**](https://youtube.com/playlist?list=PLWaOMtLS0nN2ZA_5id0FNbPTu0s_XNT3o).
+
+!!! Subpanel
+     ![Preferences](img/screen/help/help_examples.gif)
+
+### Update
+Update the list of examples.
+
+### Download Example
+Download selected scene.
+
+### Open
+Open selected scene.
+
+### Open Website   
+Open selected website
+
+### Delete
+Delete selected scene.
+
+### More Info
+Open webpage with all the information about example.
