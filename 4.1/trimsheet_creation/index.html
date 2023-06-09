@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>Creation - Zen UV 4.1 for Blender</title>
+    <title>Trim Sheet Creation - Zen UV 4.1 for Blender</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
@@ -13,7 +13,7 @@
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Creation";
+        var mkdocs_page_name = "Trim Sheet Creation";
         var mkdocs_page_input_path = "trimsheet_creation.md";
         var mkdocs_page_url = null;
       </script>
@@ -53,7 +53,7 @@
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Modules</span></p>
-              <ul class="current">
+              <ul>
                   <li class="toctree-l1"><a class="reference internal" href="../adv_uv-maps/">Advanced UV Maps</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../seam_groups/">Seam Groups</a>
@@ -72,109 +72,132 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../stack/">Stack</a>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Trim Sheets</a>
-    <ul class="current">
-                <li class="toctree-l2"><a class="reference internal" href="../trimsheet/">Introduction</a>
-                </li>
-                <li class="toctree-l2 current"><a class="reference internal current" href="./">Creation</a>
-    <ul class="current">
-    <li class="toctree-l3"><a class="reference internal" href="#trim-sheet-data-storage-in-blend-file">Trim sheet data storage in blend file</a>
-        <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#active-trim-sheet">Active Trim Sheet</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#trim-sheet-creation">Trim Sheet Creation</a>
-        <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#trims-list">Trims List</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#active-trim">Active Trim</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#selected-trims">Selected Trims</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#add">Add</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#remove">Remove</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#menu">Menu</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#move-updown-arrow-icon">Move (up/down arrow icon)</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#delete-all">Delete All</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#trim-sheet-presets">Trim Sheet Presets</a>
-        <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#preset-selector">Preset Selector</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#add_1">Add</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#remove_1">Remove</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#open-presets-folder">Open Presets Folder</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#trim-settings">Trim Settings</a>
-        <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#trim-units">Trim Units</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#x">X</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#y">Y</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#w">W</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#h">H</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#fit-axis">Fit Axis</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#inset">Inset</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#keep-proportion">Keep Proportion</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#match-rotation">Match Rotation</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#align-to">Align To</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#tags">Tags</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#how-to-apply-same-settings-to-multiple-trims">How to apply same settings to multiple trims?</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#display-trims">Display Trims</a>
-        <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#trims-display-overlay-in-uv-image-editor">Trims Display Overlay in UV Image Editor</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#trims-display-polygon-overlay-in-3d-viewport">Trims Display Polygon Overlay in 3D Viewport</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#trims-display-overlay-widget-in-3d-viewport">Trims Display Overlay Widget in 3D Viewport</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#transform-trims">Transform Trims</a>
-        <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#align-trims">Align Trims</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#crop-trims">Crop Trims</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#adjust-trims">Adjust Trims</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#distribute-trims">Distribute Trims</a>
-    </li>
-        </ul>
-    </li>
-    </ul>
-                </li>
-                <li class="toctree-l2"><a class="reference internal" href="../trimsheet_operators/">Operators</a>
-                </li>
-    </ul>
-                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../sticky_uv_editor/">Sticky UV Editor</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../preferences/">Preferences</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Trim Sheets</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../trimsheet/">Trim Sheets</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Trim Sheet Creation</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#trim-sheet-data-storage-in-blend-file">Trim sheet data storage in blend file</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#active-trim-sheet">Active Trim Sheet</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#trim-sheet-creation">Trim Sheet Creation</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#trims-list">Trims List</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#active-trim">Active Trim</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#select-active-trim-with-preview-panel">Select Active Trim with Preview Panel</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#selected-trims">Selected Trims</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#select-trim-in-ui-list">Select Trim in UI List</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#select-trim-in-the-viewport">Select Trim in the Viewport</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#rename">Rename</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#resize">Resize</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#filter">Filter</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#add">Add</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#remove">Remove</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#menu">Menu</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#move-updown-arrow-icon">Move (up/down arrow icon)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#delete-all">Delete All</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#trim-sheet-presets">Trim Sheet Presets</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#preset-selector">Preset Selector</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#add_1">Add</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#remove_1">Remove</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#open-presets-folder">Open Presets Folder</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#trim-settings">Trim Settings</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#trim-units">Trim Units</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#x">X</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#y">Y</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#w">W</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#h">H</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#fit-axis">Fit Axis</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#inset">Inset</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#keep-proportion">Keep Proportion</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#match-rotation">Match Rotation</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#align-to">Align To</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#tags">Tags</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#how-to-apply-same-settings-to-multiple-trims">How to apply same settings to multiple trims?</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#check-the-equality-of-properties-in-selected-trims">Check the equality of properties in selected trims</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#display-trims">Display Trims</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#trims-display-overlay-in-uv-image-editor">Trims Display Overlay in UV Image Editor</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#trims-display-polygon-overlay-in-3d-viewport">Trims Display Polygon Overlay in 3D Viewport</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#trims-display-overlay-widget-in-3d-viewport">Trims Display Overlay Widget in 3D Viewport</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#overlay-widget-locking-options">Overlay Widget Locking Options</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#transform-trims">Transform Trims</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#align-trims">Align Trims</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#crop-trims">Crop Trims</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#adjust-trims">Adjust Trims</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#distribute-trims">Distribute Trims</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../trimsheet_operators/">Trim Sheet Operators</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Additional</span></p>
@@ -208,9 +231,8 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href=".." class="icon icon-home" aria-label="Docs"></a> &raquo;</li>
-          <li>Modules &raquo;</li>
           <li>Trim Sheets &raquo;</li>
-      <li>Creation</li>
+      <li>Trim Sheet Creation</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -590,8 +612,8 @@ Sort objects in ascending or descending order. This also applies to alphabetical
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../trimsheet/" class="btn btn-neutral float-left" title="Introduction"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../trimsheet_operators/" class="btn btn-neutral float-right" title="Operators">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../trimsheet/" class="btn btn-neutral float-left" title="Trim Sheets"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../trimsheet_operators/" class="btn btn-neutral float-right" title="Trim Sheet Operators">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
