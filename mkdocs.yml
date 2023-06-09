@@ -16,12 +16,12 @@ nav:
         - Texel Density: texel_density.md
         - Transform: transform.md
         - Stack: stack.md
-        - Trim Sheets:
-            - Introduction: trimsheet.md
-            - Creation: trimsheet_creation.md
-            - Operators: trimsheet_operators.md
         - Sticky UV Editor: sticky_uv_editor.md
         - Preferences: preferences.md
+    - Trim Sheets:
+        - trimsheet.md
+        - Trim Sheet Creation: trimsheet_creation.md
+        - trimsheet_operators.md
     - Additional:
         - Addon Preferences: addon_prefs.md
         - Help: help.md
@@ -32,7 +32,9 @@ nav:
         - Our Add-ons: our_addons.md
 docs_dir: mkdocs
 site_dir: docs
-theme: readthedocs
+theme:
+    name: readthedocs
+    navigation_depth: 8
 markdown_extensions:
     - smarty
     - admonition
