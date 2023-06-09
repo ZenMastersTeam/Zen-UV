@@ -26,7 +26,7 @@ Disable Compact UI.
 Set Active Panels with holding Shift hotkey.
 
 ### **Popup Panel Width** 
-Set Popup menu `Shift + U` width .
+Set Popup menu `Shift + U` width.
 
 ### **Panels Icon Style** 
 Chane Ison Style. If you don't see active panel icons with your current Blender color theme you can change the icon style.
@@ -54,7 +54,13 @@ Show Panel as a separate Panel. If you like old style menu make all the panels F
 Display hints for Pie menu.
 
 ### **Display Progress Bar**
-Display Zen UV Progress Bar.
+
+![Progress Bar](img/screen/preferences/ProgressBar_main.gif)
+
+**Progress Bar** is designed to display the progress of the operator execution process. Not all operators use the **Progress Bar**, only those that require complex calculations.
+On some operating systems of the **Linux** family, the **Progress Bar** can cause Blender to crash. To avoid this situation, you can disable the Progress Bar in **Panel - Preferences - Display Progress Bar.**
+
+![Progress Bar disable](img/screen/preferences/ProgressBar_disable.png)
 
 ### **HOps UV Display**
 Display UV trasnforms in 3D View using Hard Ops addon.
@@ -71,13 +77,13 @@ Automatically Fit and Zoom UV viewport.
 Enable Sticky UV Editor button.
 
 ### **Show Seams**
-Display UV Seams.
+Display UV Seams in 3D Viewport.
 
 ### **Show Sharp Edges**
-Display Sharp edges. It can be overlapped by Seams/Bevel Weights/Crease Edges display.
+Display Sharp edges in 3D Viewport. It can be overlapped by Seams/Bevel Weights/Crease Edges display.
 
 ### **Show Bevel Weights**
-Display Sharp edges. It can be overlapped by Seams/Bevel Weights/Crease Edges display.
+Display Sharp edges in 3D Viewport. It can be overlapped by Seams/Bevel Weights/Crease Edges display.
 
 ### **Show Crease Edges**
-Display crease edges created for the Subdivision modifier. It can be overlapped by Seams/Bevel Weights display.
+Display crease edges created for the Subdivision modifier in 3D Viewport. It can be overlapped by Seams/Bevel Weights display.

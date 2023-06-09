@@ -1,26 +1,42 @@
 # Combo Panel
 
-Combo Panel is a place where you can find all Zen operators.
+Combo Panel is a place where you can find all Zen UV operators.
 Operators are divided into thematic sections on the left side.
+
+The set of operators in the Combo Panel may vary depending on the context. 
+Some operators do not work in UV Editor and present in 3D Viewport only.
+
+It's on the N-Panel and you can [**customize the appearance of panels in Preferences**](preferences.md#panels).
 
 ![Combo Panel](img/gifs/user_interface/compactui_1.gif)
 
-You can open multiple panels with `SHIFT + LMB`.
+## Multiple Panels
+
+Open multiple panels with `SHIFT + LMB`.
 
 ![Combo Panel](img/gifs/user_interface/compactui_2.gif)
 
-You can pin some panesl with `CTRL + LMB`
+## Panels Pinning
+
+Pin some panels with `CTRL + LMB`
 
 ![Combo Panel](img/gifs/user_interface/compactui_3.gif)
+
+## Combo Panel in Properties
 
 When Zen UV Transform Tool is active you can find Combo Panel in Properties.
 
 ![Combo Panel](img/gifs/user_interface/compactui_6.gif)
 
+## Popup Combo Panel
+
 Combo Panel is the same in N-Panel and Pop-up menu  `Shift + U`.
 You can call this menu anywhere.
 
 ![Combo Panel](img/gifs/user_interface/compactui_8.gif)
+
+!!! tip
+    Don't forget to drink some good beer today!
 
 # Pie Menu
 
@@ -80,7 +96,7 @@ You can call this menu anywhere.
 Pie Menu Assist is special help window, which is located below the Pie Menu. There you can find, highlight and execute all the alternative `ALT`, `CTRL`, `SHIFT` Pie Menu commands.
 
 !!! Assist
-    If you want to disable Pie Menu Assist, you can do it here **N-Panel** -> **Zen UV** -> **Preferences** -> **Display** -> **Display Pie Assist**. 
+    If you want to disable Pie Menu Assist, you can do it here **N-Panel** -> **Zen UV** -> **Preferences** -> **Display** -> **Display Pie Assist**.
 
 ## Default Shortcut
   Zen UV Pie Menu ![Zen UV Pie Menu](img/icons/zen-uv@2x.png) --- `Alt + U`
@@ -88,28 +104,25 @@ Pie Menu Assist is special help window, which is located below the Pie Menu. The
 !!! Shortcut
     If you don't like default Pie Menu Shortcut, it can be changed here **Edit** -> **Preferences** -> **Add-ons** -> **Zen UV** -> **Keymap**. Don't forget to change Shortcut for both contexts Mesh and UV Editor.
 
-# Zen Transform Tool
+# Transform Tool
+
+Move, Rotate, Scale, Fit, Align and Flip selected Islands or Faces/Edges/Vertices in 3D Viewport and UV Editor using Zen UV Gizmo.
+
+[**Follow the link**](unwrap.md#transform_tool) to find more information about Transform Tool.
 
 ![Zen Transform Tool](img/gifs/user_interface/ZenTransformTool_main.gif)
 
-# Progress Bar
-
-![Progress Bar](img/gifs/user_interface/ProgressBar_main.gif)
-
-**Progress Bar** is designed to display the progress of the operator execution process. Not all operators use the **Progress Bar**, only those that require complex calculations.
-On some operating systems of the **Linux** family, the **Progress Bar** can cause Blender to crash. To avoid this situation, you can disable the Progress Bar in **Panel - Preferences - Display Progress Bar.**
-
-![Progress Bar disable](img/screen/user_interface/ProgressBar_disable.png)
-
 # Darken Image
+
+**Darken Image** operator is designed to adjust the darkening of an Image in the context of the UV Editor. It does not change the texture but uses color management curve to darken it.
 
 ![Darken Image](img/gifs/user_interface/DarkenImage_main.gif)
 
-The **Darken Image** operator is designed to adjust the darkening of an Image in the context of the UV Editor. It does not change the texture but uses color management curve to darken it.
+You can find this operator in UV Editor Overlay.
 
 ![Darken Image In UI](img/screen/user_interface/DarkenImage.png)
 
-!!! Warning
-  This option affects on current render settings. Do not forget to switch it off before rendering
-
 ![](img/screen/user_interface/color_curve.png)
+
+!!! Warning
+    This option affects on current render settings. Do not forget to switch it off before rendering.
