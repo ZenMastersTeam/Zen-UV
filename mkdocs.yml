@@ -15,6 +15,7 @@ nav:
         - UV Checker: checker.md
         - Texel Density: texel_density.md
         - Transform: transform.md
+        - Transform Tool: transform_tool.md
         - Stack: stack.md
         - Sticky UV Editor: sticky_uv_editor.md
         - Preferences: preferences.md
