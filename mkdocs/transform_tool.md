@@ -2,6 +2,14 @@
 
 Move, Rotate, Orient, Scale, Fit, Align and Flip selected Islands or Faces/Edges/Vertices in 3D Viewport and UV Editor using Zen UV Gizmo.
 
+!!! tip
+    Watch the video explaining how **Transform Tool** works.
+
+    <div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%;">
+    <iframe src="https://www.youtube.com/embed/f9meGzMGx2k?start=275&end=580" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen="" seamless="" frameborder="0"></iframe>
+    </div>
+
+
 You can activate it on the left bottom corner of the Tool panel.
 
 ![Zen Transform Tool](img/screen/transform_tool/tt_icon.gif)

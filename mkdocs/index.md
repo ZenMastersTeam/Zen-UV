@@ -16,10 +16,11 @@
 ----
 <!-- blank line -->
 ## Main Features
-- **Zen UV Transform tool**. Move, Rotate, Scale, Fit, Align and Flip Islands in 3D View and UV Editor using Zen UV Gizmo.
+-   [**Zen UV Transform tool**](transform_tool.md). Move, Rotate, Scale, Fit, Align and Flip Islands in 3D View and UV Editor using Zen UV Gizmo.
 -   [**Stack System.**](stack.md) Stack and Unstack UV Islands automatically and manually. Extremely useful for increasing Texel Density and baking.
 -   [**Relax Operator**.](transform.md#relax) This is a new unwrapping method that is well suited for working with organic models.
-- [**Trimsheet system**](trimsheet.md). [Create Trimsheets](trimsheet_creation.md) and Move, Rotate, Scale, Fit, Align and Flip Islands inside Trims.
+-   [**Trimsheet system**](trimsheet.md). [Create Trimsheets](trimsheet_creation.md) and Move, Rotate, Scale, Fit, Align and Flip Islands inside Trims.
+- [**Hotspot Mapping**.](trimsheet_hotspot.md) Quick UV Mapping method that compares the parameters of Islands and Trims and makes automatic mapping based on the given settings.
 -   [**World Orient**](transform.md#world-orient) operator that rotates UV Islands the way they are oriented in the model.
 -   [**Checker Map System**](checker.md) is a node-based system that contains Checker Textures designed specifically for Zen UV. Square and rectangular formats. Check UV's state on the model without ruining existing materials!
 -   [**Copy/Paste Operators.**](stack.md#copy-paste-system) Copy/Paste parameters (Structure,TD, Position, Size) between Islands/Faces/Maps.

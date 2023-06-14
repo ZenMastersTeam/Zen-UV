@@ -54,7 +54,9 @@ Align islands to active trim
 Scale in active trim. Islands outside active trim will be ignored if **Lock in Trim** option is set
 
 ## Hotspot Mapping
-Map islands by matching them to predefined trims in trim sheet
+Hotspot Mapping is a UV mapping method that compares the parameters of Islands and Trims and makes automatic mapping based on the given settings.
+
+[**Follow the link**](trimsheet_hotspot.md) to find more information about Hotspot Mapping.
 
 ## Select Trim By Face
 Select and activate trim by selected face

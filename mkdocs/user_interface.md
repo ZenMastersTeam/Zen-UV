@@ -8,6 +8,13 @@ Some operators do not work in UV Editor and present in 3D Viewport only.
 
 It's on the N-Panel and you can [**customize the appearance of panels in Preferences**](preferences.md#panels).
 
+!!! tip
+    Watch the video explaining how **Combo Panels** works.
+
+    <div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%;">
+    <iframe src="https://www.youtube.com/embed/f9meGzMGx2k?start=26&end=142" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen="" seamless="" frameborder="0"></iframe>
+    </div>
+
 ![Combo Panel](img/gifs/user_interface/compactui_1.gif)
 
 ## Multiple Panels
