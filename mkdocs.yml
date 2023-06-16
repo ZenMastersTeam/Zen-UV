@@ -23,10 +23,11 @@ nav:
         - trimsheet.md
         - Trim Sheet Creation: trimsheet_creation.md
         - trimsheet_operators.md
+        - trimsheet_hotspot.md
     - Additional:
         - Addon Preferences: addon_prefs.md
         - Help: help.md
-        - Downloads: downloads.md
+#        - Downloads: downloads.md
         - FAQs: troubleshooting.md
         - Changelog: changelg.md
         - Credits: credits.md
