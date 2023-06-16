@@ -27,7 +27,6 @@ nav:
     - Additional:
         - Addon Preferences: addon_prefs.md
         - Help: help.md
-#        - Downloads: downloads.md
         - FAQs: troubleshooting.md
         - Changelog: changelg.md
         - Credits: credits.md
