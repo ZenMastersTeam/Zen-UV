@@ -1,13 +1,18 @@
 # Advanced UV Maps
+Advanced UV Maps section created to have quick access to Object Data Properties — UV Maps.
+It allows to select the active, add, remove, and rename UV Maps from the list.
+
+If more than one object is selected, you can synchronously work with UV maps of the selected objects.
 
 !!! Panel
     ![Advanced UV Map](img/screen/adv_uv_map/adv_uv_map.png)
 
-Advanced UV Maps section created to have quick access to Object Data Properties — UV Maps.
+!!! tip
+    Watch the video explaining how **Advanced UV Maps** works.
 
-It allows to select the active, add, remove, and rename UV Maps from the list.
-
-If more than one object is selected, you can synchronously work with UV maps of the selected objects.
+    <div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%;">
+    <iframe src="https://www.youtube.com/embed/Y7dG2i-FASs?start=541&end=619" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen="" seamless="" frameborder="0"></iframe>
+    </div>
 
 ---
 ## Clean UV Maps

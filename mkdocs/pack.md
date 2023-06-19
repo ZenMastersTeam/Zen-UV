@@ -74,6 +74,16 @@ Allow Pack Engine rotate Islands.
 
 ![Pack_Rotate_Islands](img/gifs/pack_operators/Pack_Rotate_Islands.gif)
 
+#### Pack Selected Islands
+
+Pack only Selected Islands. Doesn't work for UV-Packer Pack Engine.
+
+#### Pack in Trim
+Pack Islands into Trim. Works only for UV Packmaster Pack Engine.
+
+![Pack_In_Trim](img/screen/pack/pack_in_trim.gif)
+
+
 !!! tip
     **UV Packmaster Pack Engine** has super useful option **Lock Overlapping.** It's recommended to be used to Pack Stacked and Overlapping Islands. If you don't have UV Packmaster installed, but still want to Pack Stacked and Overlapping Islands [**watch this video**](https://youtu.be/krsVbEi32DM).
 

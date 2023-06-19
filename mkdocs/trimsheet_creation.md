@@ -1,6 +1,13 @@
 # Creating your trim sheet with Zen UV
 Zen UV addon provides all necessary tools to create your trim sections
 
+!!! tip
+    Watch the video explaining how **Trimsheet Creation** works.
+
+    <div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%;">
+    <iframe src="https://www.youtube.com/embed/f9meGzMGx2k?start=770&end=950" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen="" seamless="" frameborder="0"></iframe>
+    </div>
+
 !!! Panel
     ![img](img/screen/trimsheet/trimsheet_panel.png)
 

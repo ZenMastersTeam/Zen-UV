@@ -3,74 +3,63 @@
 !!! Panel
     ![Select](img/screen/select/select_main_panel.png)
 
+!!! Tip 
+    Select **Seam** and **Sharp** are absent on the panel in **UV Editor**.
+    To use these operators you need to switch to **3D Viewport** context. 
+
+    ![Select](img/screen/select/select_main_panel_uv.png)
 ---
 ### Islands ![](img/icons/select.png)
-
-- Select Islands by selected edge/face of the Islands.
+Select Islands by selected edge/face of the Islands.
 
 ![Select_Islands](img/gifs/select_operators/Select_Islands.gif)
 
----
 ### Int. Loop
-
-- Inter seam loop. Select Edge Loop with respect to Seams. 
+Inter seam loop. Select Edge Loop with respect to Seams. 
 
 ![Select_Int_Loop](img/gifs/select_operators/Select_Int_Loop.gif)
 
----
 ### Overlapped
-
-- Select Overlapped Islands.
+Select Overlapped Islands.
 
 ![Select_Overlapped](img/gifs/select_operators/Select_Overlapped.gif)
 
----
 ### Flipped
-
-- Select Flipped Islands.
+Select Flipped Islands.
 
 ![Select_Flipped](img/gifs/select_operators/Select_Flipped.gif)
 
----
 ### Seam
-
-- Select Edges Marked as Seams.
+Select Edges Marked as Seams.
 
 ![Select_Seam](img/gifs/select_operators/Select_Seam.gif)
 
----
 ### Sharp
-
-- Select Edges Marked as Sharp.
+Select Edges Marked as Sharp.
 
 ![Select_Sharp](img/gifs/select_operators/Select_Sharp.gif)
 
----
 ### Select UV Borders
-
-- Select existing UV Borders.
+Select existing UV Borders.
 
 ![Select_UV_Borders](img/gifs/select_operators/Select_UV_Borders.gif)
 
----
 ### Similar
-
-- Select Islands similar to those selected.
+Select Islands similar to those selected.
 
 ![Select_Similar](img/gifs/select_operators/Select_Similar.gif)
-  
----
-### Select Edges By Direction
 
-- Select edges by direction along U or V axis.
+### Select Edges By Direction
+Select edges by direction along U or V axis.
 
 ![Select_Edges_by_Direction](img/gifs/select_operators/Select_Edges_by_Direction.gif)
 
----
 ### Select by UV Area
+The operator consists of two buttons. Where the first is the main operator and the second is an auxiliary operator. You can use it to get the area of the selection.
+
 ![Select_By_UV_Area](img/screen/select/sel_by_uv_area_buttons.png)
 
-- The operator consists of two buttons. Where the first is the main operator and the second is an auxiliary operator. You can use it to get the area of the selection.
+
 
 ---
 #### Operator Select by UV Area:
@@ -88,8 +77,7 @@
   - **With Threshold** - Calculation threshold.
 
 #### Operator Get Selected Area:
-
-- After you run this operator, the Multiplied Area value goes into the Select by UV Area operator.
+After you run this operator, the Multiplied Area value goes into the Select by UV Area operator.
 
 ![](img/screen/select/get_selected_area_op_prop.png)
 
@@ -99,10 +87,7 @@
   - **Real UV Area** - Same value as Real Area, but in full size.
   - **Multiplied Area** - The same value as the Real Area, but multiplied for easier use.
 
-
----
 ### Isolate Islands (Toggle)
-
-- Isolate Islands (Toggle).
+Isolate Islands (Toggle).
 
 ![Isolate_Islands](img/gifs/select_operators/Isolate_Islands.gif)
