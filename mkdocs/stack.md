@@ -1,6 +1,13 @@
 # Stack
 !!! Panel
-    ![Stack](img/screen/stack/stack.png)
+    ![Stack](img/screen/stack/stack_main_panel.png)
+
+!!! tip
+    Watch the video explaining how **Stack** works.
+
+    <div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%;">
+    <iframe src="https://www.youtube.com/embed/Yj2SecY-c1Y?start=142&end=313" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen="" seamless="" frameborder="0"></iframe>
+    </div>
 
 ## Stack
 
@@ -19,16 +26,19 @@ Collect Similar Islands on Stacks.
 Shift Islands from Stacks in a given direction.
 
 ## Stack Mode
-Mode for Stacking.
 
- ![](img/screen/stack/stack_modes.png)
+!!! Panel
+    ![](img/screen/stack/stack_modes.png)
 
-!!! Properties
-    - **Global Mode** - Collect all Similar Islands on Stacks.
-    - **Selected Mode** - Collect selected Similar Islands on Stacks.
-    - **Simple Mode** - Collect selected islands in the stack, with no respect for their topology.
+    - **Global Mode**. Collect all Similar Islands on Stacks.
+    - **Selected Mode**. Collect selected Similar Islands on Stacks.
+    - **Simple Mode**. Collect selected islands in the stack, with no respect for their topology.
 
-## Stack Display Mode
+## Stacks 
+
+There are 3 different types of Stacked Islands. You can select all of them in this panel.
+
+![](img/screen/stack/stack_types.png)
 
 ### Primaries
 Primaries this is islands which detected as a better instance. The position and the topology from Primaries will be translated to the Replicas. The island is defined as Primary if its position is closer to the center of coordinates, and the distortion of topology is less compared to other similar islands.
@@ -41,23 +51,22 @@ Replicas are islands that have the same topology but were not chosen as Primary.
 
 Singles this is islands that have no similar islands.
 
-!!! Options
-    ![Display](img/screen/stack/stack_display_select_sys.png)
+## Stacks Display
 
-    - **Similar** (Static) - Display all Similar Islands. Static assumes that the displaying will not change along with a mesh change.
-    - **Selected** - Display Similar Islands by Selected.
+![](img/screen/stack/stack_display.png)
 
-    - **Stacked** ![Select](img/icons/select_bl_ico.png) - Display Stacked Islands.
+### Similar
 
-    - **Primaries** ![Select](img/icons/select_bl_ico.png) - Primary Islands. Without Replicated Islands.
+Display all Similar Islands.
 
-    - **Replicas** ![Select](img/icons/select_bl_ico.png) - Islands that can be Stacked. Without Primary Islands.
+### Similar of Selection
 
-    - **Singles** ![Select](img/icons/select_bl_ico.png) - Islands that don't have Similar Islands.
+Display and Select Similar Islands from Selected Islands.
 
-    - ![](img/icons/display.png) **Display**  - Display of stacks.
+### Stacked
 
-    - ![](img/icons/select_bl_ico.png) **Select** - Select Stack Parts. Every operator with this icon perform a selection operation for current types.
+Display and Select Stacked Islands.
+
 
 !!! Options
 
@@ -65,10 +74,10 @@ Singles this is islands that have no similar islands.
 
     ![Display Stacked](img/screen/stack/stack_display_stacked_options.png)
 
-    - **Stacked Color** - Color for displaying Stacked Islands.
-    - **Only UV Area** - Display Stacks only in the UV area.
+    - **Overlay Sync**. Draw is sincronized with Overlay On/Off mode.
+    - **Stacked Color**. Color for displaying Stacked Islands.
+    - **Only UV Area**. Display Stacks only in the UV area.
 
----
 
 ## Copy / Paste System
 
@@ -128,12 +137,9 @@ Collect Islands on Manual Stacks.
 Shift Islands from Manual Stacks in a given direction.
 
 ### Stack Mode
-Mode for Stacking.
 
-!!! Options
-
-    - **Global Mode** - Collect all Similar Islands on Stacks.
-    - **Selected Mode** - Collect selected Similar Islands on Stacks.
+- **Global Mode**. Collect all Similar Islands on Stacks.
+- **Selected Mode**. Collect selected Similar Islands on Stacks.
 
 ### Display Manual Stacks
 
