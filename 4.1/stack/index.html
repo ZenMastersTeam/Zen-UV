@@ -80,13 +80,23 @@
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#stack-mode">Stack Mode</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#stack-display-mode">Stack Display Mode</a>
+    <li class="toctree-l2"><a class="reference internal" href="#stacks">Stacks</a>
         <ul>
     <li class="toctree-l3"><a class="reference internal" href="#primaries">Primaries</a>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#replicas">Replicas</a>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#singles">Singles</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#stacks-display">Stacks Display</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#similar">Similar</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#similar-of-selection">Similar of Selection</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#stacked">Stacked</a>
     </li>
         </ul>
     </li>
@@ -180,7 +190,14 @@
                 <h1 id="stack">Stack<a class="headerlink" href="#stack" title="Permanent link"></a></h1>
 <div class="admonition panel">
 <p class="admonition-title">Panel</p>
-<p><img alt="Stack" src="../img/screen/stack/stack.png" /></p>
+<p><img alt="Stack" src="../img/screen/stack/stack_main_panel.png" /></p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Watch the video explaining how <strong>Stack</strong> works.</p>
+<p><div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%;">
+<iframe src="https://www.youtube.com/embed/Yj2SecY-c1Y?start=142&end=313" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen="" seamless="" frameborder="0"></iframe>
+</div></p>
 </div>
 <h2 id="stack_1">Stack<a class="headerlink" href="#stack_1" title="Permanent link"></a></h2>
 <p>Collect Similar Islands on Stacks.</p>
@@ -196,61 +213,42 @@
 <h2 id="unstack">Unstack<a class="headerlink" href="#unstack" title="Permanent link"></a></h2>
 <p>Shift Islands from Stacks in a given direction.</p>
 <h2 id="stack-mode">Stack Mode<a class="headerlink" href="#stack-mode" title="Permanent link"></a></h2>
-<p>Mode for Stacking.</p>
+<div class="admonition panel">
+<p class="admonition-title">Panel</p>
 <p><img alt="" src="../img/screen/stack/stack_modes.png" /></p>
-<div class="admonition properties">
-<p class="admonition-title">Properties</p>
 <ul>
-<li><strong>Global Mode</strong> - Collect all Similar Islands on Stacks.</li>
-<li><strong>Selected Mode</strong> - Collect selected Similar Islands on Stacks.</li>
-<li><strong>Simple Mode</strong> - Collect selected islands in the stack, with no respect for their topology.</li>
+<li><strong>Global Mode</strong>. Collect all Similar Islands on Stacks.</li>
+<li><strong>Selected Mode</strong>. Collect selected Similar Islands on Stacks.</li>
+<li><strong>Simple Mode</strong>. Collect selected islands in the stack, with no respect for their topology.</li>
 </ul>
 </div>
-<h2 id="stack-display-mode">Stack Display Mode<a class="headerlink" href="#stack-display-mode" title="Permanent link"></a></h2>
+<h2 id="stacks">Stacks<a class="headerlink" href="#stacks" title="Permanent link"></a></h2>
+<p>There are 3 different types of Stacked Islands. You can select all of them in this panel.</p>
+<p><img alt="" src="../img/screen/stack/stack_types.png" /></p>
 <h3 id="primaries">Primaries<a class="headerlink" href="#primaries" title="Permanent link"></a></h3>
 <p>Primaries this is islands which detected as a better instance. The position and the topology from Primaries will be translated to the Replicas. The island is defined as Primary if its position is closer to the center of coordinates, and the distortion of topology is less compared to other similar islands.</p>
 <h3 id="replicas">Replicas<a class="headerlink" href="#replicas" title="Permanent link"></a></h3>
 <p>Replicas are islands that have the same topology but were not chosen as Primary. The position and topology of the Replicas will be changed in the process of Stacking.</p>
 <h3 id="singles">Singles<a class="headerlink" href="#singles" title="Permanent link"></a></h3>
 <p>Singles this is islands that have no similar islands.</p>
-<div class="admonition options">
-<p class="admonition-title">Options</p>
-<p><img alt="Display" src="../img/screen/stack/stack_display_select_sys.png" /></p>
-<ul>
-<li><strong>Similar</strong> (Static) - Display all Similar Islands. Static assumes that the displaying will not change along with a mesh change.</li>
-<li>
-<p><strong>Selected</strong> - Display Similar Islands by Selected.</p>
-</li>
-<li>
-<p><strong>Stacked</strong> <img alt="Select" src="../img/icons/select_bl_ico.png" /> - Display Stacked Islands.</p>
-</li>
-<li>
-<p><strong>Primaries</strong> <img alt="Select" src="../img/icons/select_bl_ico.png" /> - Primary Islands. Without Replicated Islands.</p>
-</li>
-<li>
-<p><strong>Replicas</strong> <img alt="Select" src="../img/icons/select_bl_ico.png" /> - Islands that can be Stacked. Without Primary Islands.</p>
-</li>
-<li>
-<p><strong>Singles</strong> <img alt="Select" src="../img/icons/select_bl_ico.png" /> - Islands that don&rsquo;t have Similar Islands.</p>
-</li>
-<li>
-<p><img alt="" src="../img/icons/display.png" /> <strong>Display</strong>  - Display of stacks.</p>
-</li>
-<li>
-<p><img alt="" src="../img/icons/select_bl_ico.png" /> <strong>Select</strong> - Select Stack Parts. Every operator with this icon perform a selection operation for current types.</p>
-</li>
-</ul>
-</div>
+<h2 id="stacks-display">Stacks Display<a class="headerlink" href="#stacks-display" title="Permanent link"></a></h2>
+<p><img alt="" src="../img/screen/stack/stack_display.png" /></p>
+<h3 id="similar">Similar<a class="headerlink" href="#similar" title="Permanent link"></a></h3>
+<p>Display all Similar Islands.</p>
+<h3 id="similar-of-selection">Similar of Selection<a class="headerlink" href="#similar-of-selection" title="Permanent link"></a></h3>
+<p>Display and Select Similar Islands from Selected Islands.</p>
+<h3 id="stacked">Stacked<a class="headerlink" href="#stacked" title="Permanent link"></a></h3>
+<p>Display and Select Stacked Islands.</p>
 <div class="admonition options">
 <p class="admonition-title">Options</p>
 <p><strong>Options for Stacked Islands</strong></p>
 <p><img alt="Display Stacked" src="../img/screen/stack/stack_display_stacked_options.png" /></p>
 <ul>
-<li><strong>Stacked Color</strong> - Color for displaying Stacked Islands.</li>
-<li><strong>Only UV Area</strong> - Display Stacks only in the UV area.</li>
+<li><strong>Overlay Sync</strong>. Draw is sincronized with Overlay On/Off mode.</li>
+<li><strong>Stacked Color</strong>. Color for displaying Stacked Islands.</li>
+<li><strong>Only UV Area</strong>. Display Stacks only in the UV area.</li>
 </ul>
 </div>
-<hr />
 <h2 id="copy-paste-system">Copy / Paste System<a class="headerlink" href="#copy-paste-system" title="Permanent link"></a></h2>
 <ul>
 <li>
@@ -288,14 +286,10 @@
 <h3 id="unstack_1">Unstack<a class="headerlink" href="#unstack_1" title="Permanent link"></a></h3>
 <p>Shift Islands from Manual Stacks in a given direction.</p>
 <h3 id="stack-mode_1">Stack Mode<a class="headerlink" href="#stack-mode_1" title="Permanent link"></a></h3>
-<p>Mode for Stacking.</p>
-<div class="admonition options">
-<p class="admonition-title">Options</p>
 <ul>
-<li><strong>Global Mode</strong> - Collect all Similar Islands on Stacks.</li>
-<li><strong>Selected Mode</strong> - Collect selected Similar Islands on Stacks.</li>
+<li><strong>Global Mode</strong>. Collect all Similar Islands on Stacks.</li>
+<li><strong>Selected Mode</strong>. Collect selected Similar Islands on Stacks.</li>
 </ul>
-</div>
 <h3 id="display-manual-stacks">Display Manual Stacks<a class="headerlink" href="#display-manual-stacks" title="Permanent link"></a></h3>
 <p>Display Manual Stacks (Static)</p>
               
