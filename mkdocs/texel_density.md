@@ -18,7 +18,7 @@ Zen UV is providing all the tools you need to work with Texel Density.
 !!! Tip
     Read POLYMATTER.XYZ manual about how to choose right TD. [**JPG**](https://drive.google.com/file/d/1hJ1px7BHX7kxDmD1KAXqECNqNXCe6egu/view), [**PDF**](https://drive.google.com/file/d/1J8XA8bnrYgHr4R8PwsbM4ftqjbDZ8whN/view). 
 
-    ![](img/screen/texel_density/Texel-Density-&-Texture-Map-Resolutions_v1-1.jpg)
+    [![](img/screen/texel_density/Texel-Density-&-Texture-Map-Resolutions_v1-1.jpg)](https://drive.google.com/file/d/1hJ1px7BHX7kxDmD1KAXqECNqNXCe6egu/view)
 
 
 ### Texel Density
