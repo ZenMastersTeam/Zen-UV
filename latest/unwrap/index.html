@@ -64,7 +64,7 @@
         <ul>
     <li class="toctree-l3"><a class="reference internal" href="#basic-rules">Basic rules:</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#processing-mode">Processing Mode:</a>
+    <li class="toctree-l3"><a class="reference internal" href="#processing-mode">Processing Mode</a>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#the-behavior-of-the-operator-if-nothing-is-selected">The behavior of the operator if nothing is selected:</a>
     </li>
@@ -78,11 +78,15 @@
     </li>
         </ul>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#settings">Settings:</a>
+    <li class="toctree-l3"><a class="reference internal" href="#settings">Settings</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#additional-options">Additional Options:</a>
+    <li class="toctree-l3"><a class="reference internal" href="#additional-options">Additional Options</a>
     </li>
         </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#unwrap-constraint">Unwrap Constraint</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#unwrap-inplace">Unwrap Inplace</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#mark-system">Mark System</a>
         <ul>
@@ -115,9 +119,9 @@
     <li class="toctree-l2"><a class="reference internal" href="#smooth-by-sharp-toggle">Smooth by Sharp (Toggle)</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#finishing-system">Finishing System</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#sort-islands-by-tags">Sort Islands by Tags</a>
         <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#sort-islands-by-tags">Sort Islands by Tags</a>
+    </li>
     <li class="toctree-l3"><a class="reference internal" href="#tag-finished">Tag Finished</a>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#tag-unfinished">Tag Unfinished</a>
@@ -225,16 +229,16 @@
 </ul>
 </div>
 <hr />
-<h3 id="processing-mode">Processing Mode:<a class="headerlink" href="#processing-mode" title="Permanent link"></a></h3>
+<h3 id="processing-mode">Processing Mode<a class="headerlink" href="#processing-mode" title="Permanent link"></a></h3>
 <p>The main operating mode switch.</p>
 <div class="admonition panel">
 <p class="admonition-title">Panel</p>
 <p><img alt="Processing Mode" src="../img/screen/unwrap/zwrp_processing_mode.png" /></p>
 <ul>
-<li><strong>Whole Mesh</strong> - The processing will be done for the whole mesh. All already unwrapped islands will be re-unwrapped.</li>
-<li><strong>Selected Only</strong> - Processing will only be performed on the mesh selection.</li>
-<li><strong>Seam Switch</strong> - This mode will switch seams with subsequent unwrapping. Only selected edges with seams will be included in the switching process. The seams that are in the selection will be deleted (Unmarked). New seams will be assigned according to the selection mode (Face, Edge).</li>
-<li><strong>Unfold Vertices</strong> - In this case, regardless of the Select Mode, any selection will be treated as vertices. Selected vertices will be relaxed.</li>
+<li><strong>Whole Mesh</strong>. The processing will be done for the whole mesh. All already unwrapped islands will be re-unwrapped.</li>
+<li><strong>Selected Only</strong>. Processing will only be performed on the mesh selection.</li>
+<li><strong>Seam Switch</strong>. This mode will switch seams with subsequent unwrapping. Only selected edges with seams will be included in the switching process. The seams that are in the selection will be deleted (Unmarked). New seams will be assigned according to the selection mode (Face, Edge).</li>
+<li><strong>Unfold Vertices</strong>. In this case, regardless of the Select Mode, any selection will be treated as vertices. Selected vertices will be relaxed.</li>
 </ul>
 </div>
 <hr />
@@ -263,33 +267,92 @@
 <p>Working in <strong>Face</strong> or <strong>Edge</strong> mode makes changes to the selected islands anyway. If you need to unwrap an island without adding seams or splittings it, use <strong>Vertex</strong> selection mode. You can select only one vertex or several. This will tell the operator which island you want to work with. It is most convenient to use this mode together with the <strong>Processing Mode - Selected Only</strong>.</p>
 <p><img alt="Zen Unwrap Vertex Mode" src="../img/gifs/zuwrp_operator/zwrp_vertex_mode.gif" /></p>
 <hr />
-<h3 id="settings">Settings:<a class="headerlink" href="#settings" title="Permanent link"></a></h3>
-<div class="admonition panel">
-<p class="admonition-title">Panel</p>
+<h3 id="settings">Settings<a class="headerlink" href="#settings" title="Permanent link"></a></h3>
+<div class="admonition preferences">
+<p class="admonition-title">Preferences</p>
 <p><img alt="Zen Unwrap Settings" src="../img/screen/unwrap/zwrp_op_prop.png" /></p>
 <ul>
-<li>
-<p><strong>Unwrap Method</strong> - Unwrapping method.</p>
-<ul>
-<li><strong>Conformal</strong> - Fast algorithm that gives good results.</li>
-<li><strong>Angle-Based</strong> - More accurate algorithm, but a bit slower.</li>
+<li><strong>Unwrap Method</strong>. Unwrapping method.<ul>
+<li><strong>Conformal</strong>. Fast algorithm that gives good results.</li>
+<li><strong>Angle-Based</strong>. More accurate algorithm, but a bit slower.</li>
 </ul>
 </li>
-<li>
-<p><strong>Mark Settings</strong> - Operator settings to enable automatic seam marking. See <a href="#mark-by-angle">Mark Settings (Global Mode)</a> for details.</p>
-</li>
-<li><strong>Fill Holes</strong> - Virtual fill holes in mesh before unwrapping, to avoid overlaps and preserve symmetry.</li>
-<li><strong>Averaged Texel Density</strong> - Sets the averaged Texel Density for newly created islands. This keeps all islands about the same size as you work.</li>
-<li><strong>Pack Unwrapped</strong> - After the islands have been created, this option will start the <strong>Packing</strong> process of the islands. The <a href="pack.md/#pack-engine"><strong>Pack Engine</strong></a> specified in the <strong>Pack System</strong> will be used.</li>
-<li><strong>Sort Unwrapped</strong> - After the islands have been created, this option will start the process of <strong>Sorting</strong> the islands by <a href="#finishing-system"><strong>Finished</strong></a> tag.</li>
+<li><strong>Mark Settings</strong>. Operator settings to enable automatic seam marking. See <a href="#mark-by-angle">Mark Settings (Global Mode)</a> for details.</li>
+<li><strong>Fill Holes</strong>. Virtual fill holes in mesh before unwrapping, to avoid overlaps and preserve symmetry.</li>
+<li><strong>Averaged Texel Density</strong>. Sets the averaged Texel Density for newly created islands. This keeps all islands about the same size as you work.</li>
+<li><strong>Pack Unwrapped</strong>. After the islands have been created, this option will start the <strong>Packing</strong> process of the islands. The <a href="pack.md/#pack-engine"><strong>Pack Engine</strong></a> specified in the <strong>Pack System</strong> will be used.</li>
+<li><strong>Sort Unwrapped</strong>. After the islands have been created, this option will start the process of <strong>Sorting</strong> the islands by <a href="#finishing-system"><strong>Finished</strong></a> tag.</li>
 </ul>
 </div>
-<h3 id="additional-options">Additional Options:<a class="headerlink" href="#additional-options" title="Permanent link"></a></h3>
-<p>The operator has one additional option. It has nothing to do with the unfolding process, so it has been put in a separate menu. </p>
+<h3 id="additional-options">Additional Options<a class="headerlink" href="#additional-options" title="Permanent link"></a></h3>
+<p>You can change main Zen Unwrap settings before running the operator.  </p>
+<div class="admonition panel">
+<p class="admonition-title">Panel</p>
 <p><img alt="Auto UV Sync" src="../img/screen/unwrap/zwrp_auto_uv_sync.png" /></p>
 <ul>
-<li><strong>Auto UV Sync</strong> - Automatically enables the <strong>UV Sync Selection</strong> mode every time the operator starts.</li>
+<li><strong>Auto UV Sync</strong>. Automatically enables the <strong>UV Sync Selection</strong> mode every time the operator starts.</li>
+<li><strong>Processing Mode</strong>. The main operating mode switch.</li>
+<li><strong>Averaged Texel Density</strong>. Sets the averaged Texel Density for newly created islands. This keeps all islands about the same size as you work.</li>
+<li><strong>Pack Unwrapped</strong>. After the islands have been created, this option will start the <strong>Packing</strong> process of the islands. The <a href="pack.md/#pack-engine"><strong>Pack Engine</strong></a> specified in the <strong>Pack System</strong> will be used.</li>
+<li><strong>Sort Unwrapped</strong>. After the islands have been created, this option will start the process of <strong>Sorting</strong> the islands by <a href="#finishing-system"><strong>Finished</strong></a> tag.</li>
 </ul>
+</div>
+<hr />
+<h2 id="unwrap-constraint">Unwrap Constraint<a class="headerlink" href="#unwrap-constraint" title="Permanent link"></a></h2>
+<p>This operator unwraps Islands and Faces along selected axis.</p>
+<div class="admonition preferences">
+<p class="admonition-title">Preferences</p>
+<p><img alt="" src="../img/screen/unwrap/unwrap_constraint_settings.png" /></p>
+<ul>
+<li><strong>Mode</strong>. Choose what to unwrap Islands or Faces.<ul>
+<li><strong>Islands</strong>. Affect selected Islands.</li>
+<li><strong>Faces</strong>. Affect selected Faces only.</li>
+</ul>
+</li>
+<li><strong>Method</strong>. Unwrap method.<ul>
+<li><strong>Full Unwrap</strong>. Unwrap Islands but keep it in BBox boundaries.</li>
+<li><strong>Along Axis</strong>. Unwrap Islands along Axis.</li>
+</ul>
+</li>
+<li><strong>Fit Axis</strong>.<ul>
+<li><strong>U</strong>. Unwrap / Fit along U axis.</li>
+<li><strong>V</strong>. Unwrap / Fit along V axis.</li>
+<li><strong>Min</strong>. The minimum length axis will be automatically determined.</li>
+<li><strong>Max</strong>. The maximum length axis will be automatically determined.</li>
+</ul>
+</li>
+<li><strong>Current Axis</strong>. Current Axis.</li>
+<li><strong>Mark Settings</strong>. Mark Settings (Global and Local modes) to Mark Seams and Sharp Edges.</li>
+<li><strong>Fill Holes</strong>. Virtual fill holes in meshes before unwrapping.</li>
+<li><strong>Correct Aspect</strong>. Map UVs taking image aspect ratio into account.</li>
+<li><strong>Use Subsurf Modifier</strong>. Map UVs taking vertex position after subsurf into account.</li>
+</ul>
+</div>
+<h2 id="unwrap-inplace">Unwrap Inplace<a class="headerlink" href="#unwrap-inplace" title="Permanent link"></a></h2>
+<p>Unwrap Islands and Faces keeping their Size, Orientation and Location in UV Space.</p>
+<div class="admonition preferences">
+<p class="admonition-title">Preferences</p>
+<p><img alt="" src="../img/screen/unwrap/unwrap_inplace_settings.png" /></p>
+<ul>
+<li><strong>Mode</strong>. Choose what to unwrap Islands or Faces.<ul>
+<li><strong>Islands</strong>. Affect selected Islands.</li>
+<li><strong>Faces</strong>. Affect selected Faces only.</li>
+</ul>
+</li>
+<li><strong>Location</strong>. Restore Islands Location and gabarit.</li>
+<li><strong>Orientation</strong>. What Orientation to use after unwrapping.<ul>
+<li><strong>Keep</strong>. Use Initial Orientation. </li>
+<li><strong>World Orient</strong>. Use World Orientation for the Islands.</li>
+<li><strong>Skip</strong>. Skip Orientation adjustments.</li>
+</ul>
+</li>
+<li><strong>Size</strong>. Restore Islands Size.</li>
+<li><strong>Ignore Pins</strong>. Ignore Pins.</li>
+<li><strong>Fill Holes</strong>. Virtual fill holes in meshes before unwrapping.</li>
+<li><strong>Correct Aspect</strong>. Map UVs taking image aspect ratio into account.</li>
+<li><strong>Use Subsurf Modifier</strong>. Map UVs taking vertex position after subsurf into account.</li>
+</ul>
+</div>
 <hr />
 <h2 id="mark-system">Mark System<a class="headerlink" href="#mark-system" title="Permanent link"></a></h2>
 <div class="admonition panel">
@@ -297,102 +360,101 @@
 <p><img alt="" src="../img/screen/unwrap/unwrap_mark_section.png" /></p>
 </div>
 <h3 id="mark-by-angle">Mark by Angle<a class="headerlink" href="#mark-by-angle" title="Permanent link"></a></h3>
-<ul>
-<li>Mark edges as Seams and/or Sharp edges by Angle.</li>
-</ul>
-<div class="admonition preferences">
-<p class="admonition-title">Preferences</p>
+<p>Mark edges as Seams and/or Sharp edges by Angle.</p>
+<div class="admonition global mark settings">
+<p class="admonition-title">Global</p>
 <p><img alt="" src="../img/screen/unwrap/mark_by_angle_prefs.png" /></p>
 <ul>
-<li><strong>Use Global Mark Settings</strong> - In this mode, all the operators from the Mark System use the settings below. If off, every operator uses its own settings.</li>
-<li><strong>Mark Seams</strong> - Automatically assign Seams</li>
-<li><strong>Mark Sharp Edges</strong> - Automatically assign Sharp edges</li>
+<li><strong>Use Global Mark Settings</strong>. In this mode, all the operators from the Mark System use the settings below. If off, every operator uses its own settings.</li>
+<li><strong>Mark Seams</strong>. Automatically assign Seams</li>
+<li><strong>Mark Sharp Edges</strong>. Automatically assign Sharp edges</li>
+</ul>
+</div>
+<div class="admonition preferences">
+<p class="admonition-title">Preferences</p>
+<p><img alt="" src="../img/screen/unwrap/mark_by_angle_settings.png" /></p>
+<ul>
+<li><strong>Keep init marks</strong>. Keep the state of intital Seams and Sharp edges.</li>
+<li><strong>Selection Respect</strong>. Mark only within current selection.</li>
+<li><strong>Mark Settings</strong>. Mark Settings (Global and Local modes) to Mark Seams and Sharp Edges.</li>
 </ul>
 </div>
 <h3 id="mark">Mark <img alt="Mark Seams" src="../img/icons/mark-seams%402x.png" /><a class="headerlink" href="#mark" title="Permanent link"></a></h3>
+<p>Mark selected edges or face borders as Seams and/or Sharp edges.</p>
+<div class="admonition preferences">
+<p class="admonition-title">Preferences</p>
+<p><img alt="" src="../img/screen/unwrap/mark_mark_pref.png" /></p>
 <ul>
-<li>Mark selected edges or face borders as Seams and/or Sharp edges.</li>
+<li><strong>Clear</strong>. Clear marking inside of selected Faces.</li>
+<li><strong>Mark Settings</strong>. Mark Settings (Global and Local modes) to Mark Seams and Sharp Edges.</li>
 </ul>
+</div>
 <h3 id="unmark">Unmark <img alt="Unmark Seams" src="../img/icons/unmark-seams%402x.png" /><a class="headerlink" href="#unmark" title="Permanent link"></a></h3>
+<p>Unmark selected edges or face borders as Seams and/or Sharp edges.</p>
+<div class="admonition preferences">
+<p class="admonition-title">Preferences</p>
+<p><img alt="" src="../img/screen/unwrap/mark_unmark_pref.png" /></p>
 <ul>
-<li>Unmark selected edges or face borders as Seams and/or Sharp edges.</li>
+<li><strong>Mark Settings</strong>. Mark Settings (Global and Local modes) to Mark Seams and Sharp Edges.</li>
 </ul>
+</div>
 <h3 id="unmark-all">Unmark All<a class="headerlink" href="#unmark-all" title="Permanent link"></a></h3>
+<p>Remove all the Seams and/or Sharp edges from the mesh.</p>
+<div class="admonition preferences">
+<p class="admonition-title">Preferences</p>
+<p><img alt="" src="../img/screen/unwrap/mark_unmark_all_pref.png" /></p>
 <ul>
-<li>Remove all the Seams and/or Sharp edges from the mesh.</li>
+<li><strong>Clear Pinned</strong>. Clear all the Pins.</li>
+<li><strong>Mark Settings</strong>. Mark Settings (Global and Local modes) to Mark Seams and Sharp Edges.</li>
 </ul>
-<hr />
+</div>
 <h2 id="conversion-system">Conversion System<a class="headerlink" href="#conversion-system" title="Permanent link"></a></h2>
 <div class="admonition panel">
 <p class="admonition-title">Panel</p>
 <p><img alt="" src="../img/screen/unwrap/conversion_system.png" /></p>
 </div>
 <h3 id="seams-by-uv-borders">Seams by UV Borders<a class="headerlink" href="#seams-by-uv-borders" title="Permanent link"></a></h3>
-<ul>
-<li>Mark Seams by existing UV Borders.</li>
-</ul>
+<p>Mark Seams by existing UV Borders.</p>
 <h3 id="sharp-by-uv-borders">Sharp by UV Borders<a class="headerlink" href="#sharp-by-uv-borders" title="Permanent link"></a></h3>
-<ul>
-<li>Mark Sharp by existing UV Borders.</li>
-</ul>
+<p>Mark Sharp by existing UV Borders.</p>
 <h3 id="seams-by-sharp-edges">Seams by Sharp Edges<a class="headerlink" href="#seams-by-sharp-edges" title="Permanent link"></a></h3>
-<ul>
-<li>Mark Seams by existing Sharp edges.</li>
-</ul>
+<p>Mark Seams by existing Sharp edges.</p>
 <h3 id="sharp-edges-by-seams">Sharp Edges by Seams<a class="headerlink" href="#sharp-edges-by-seams" title="Permanent link"></a></h3>
-<ul>
-<li>Mark Sharp edges by existing Seams.</li>
-</ul>
+<p>Mark Sharp edges by existing Seams.</p>
 <h3 id="seams-by-open-edges">Seams by Open Edges<a class="headerlink" href="#seams-by-open-edges" title="Permanent link"></a></h3>
-<ul>
-<li>Mark Seams by Open Edges. The way that looks in the viewport.</li>
-</ul>
-<hr />
+<p>Mark Seams by Open Edges. The way that looks in the viewport.</p>
 <h2 id="mirror-seams">Mirror Seams<a class="headerlink" href="#mirror-seams" title="Permanent link"></a></h2>
-<ul>
-<li>Mirror Seams by axes.</li>
-</ul>
-<hr />
+<p>Mirror Seams by axes.</p>
 <h2 id="smooth-by-sharp-toggle">Smooth by Sharp (Toggle)<a class="headerlink" href="#smooth-by-sharp-toggle" title="Permanent link"></a></h2>
-<ul>
-<li>Toggle between Auto Smooth 180° (with sharp edges) and regular smooth modes.</li>
-</ul>
+<p>Toggle between Auto Smooth 180° (with sharp edges) and regular smooth modes.</p>
 <hr />
 <h2 id="finishing-system">Finishing System<a class="headerlink" href="#finishing-system" title="Permanent link"></a></h2>
+<p>Finishing system helps to Mark, Sort and Display Islands that you have already unwrapped. 
+You can use it to see the progress of unwrapping as well as prevent Finished Islands from accidental unwraping.</p>
 <div class="admonition panel">
 <p class="admonition-title">Panel</p>
 <p><img alt="" src="../img/screen/unwrap/finished_system.png" /></p>
 </div>
-<h2 id="sort-islands-by-tags">Sort Islands by Tags<a class="headerlink" href="#sort-islands-by-tags" title="Permanent link"></a></h2>
-<ul>
-<li>Finished Islands move to the right side from Main UV Tile, Unfinished — to the left.</li>
-</ul>
+<h3 id="sort-islands-by-tags">Sort Islands by Tags<a class="headerlink" href="#sort-islands-by-tags" title="Permanent link"></a></h3>
+<p>Finished Islands move to the right side from Main UV Tile, Unfinished — to the left.</p>
 <div class="admonition preferences">
 <p class="admonition-title">Preferences</p>
 <p><img alt="Unwrap" src="../img/screen/unwrap/finishing_prefs.png" /></p>
 <ul>
-<li><strong>Pin Finished</strong> - Pin Islands after Tag Finished operation.</li>
-<li><strong>Auto Sort Islands</strong> - Automatically Sort Islands by Tags. Finished Islands move to the right side from Main UV Tile, Unfinished — to the left</li>
-<li><strong>Finished Color</strong> - Finished Islands viewport display color.</li>
-<li><strong>Unfinished Color</strong> - Unfinished Islands viewport display color.</li>
+<li><strong>Pin Finished</strong>. Pin Islands after Tag Finished operation.</li>
+<li><strong>Auto Sort Islands</strong>. Automatically Sort Islands by Tags. Finished Islands move to the right side from Main UV Tile, Unfinished — to the left</li>
+<li><strong>Finished Color</strong>. Finished Islands viewport display color.</li>
+<li><strong>Unfinished Color</strong>. Unfinished Islands viewport display color.</li>
 </ul>
 </div>
 <h3 id="tag-finished">Tag Finished<a class="headerlink" href="#tag-finished" title="Permanent link"></a></h3>
-<ul>
-<li>Tag Islands as Finished.</li>
-</ul>
+<p>Tag Islands as Finished. These Islands won&rsquo;t be unwrapped.</p>
 <h3 id="tag-unfinished">Tag Unfinished<a class="headerlink" href="#tag-unfinished" title="Permanent link"></a></h3>
-<ul>
-<li>Tag Islands as Unfinished.</li>
-</ul>
+<p>Tag Islands as Unfinished. </p>
 <h3 id="select-finished">Select Finished<a class="headerlink" href="#select-finished" title="Permanent link"></a></h3>
-<ul>
-<li>Select Islands tagged as Finished.</li>
-</ul>
+<p>Select Islands tagged as Finished.</p>
 <h3 id="display-finished-toggle">Display Finished (Toggle)<a class="headerlink" href="#display-finished-toggle" title="Permanent link"></a></h3>
-<ul>
-<li>Display Finished/Unfinished Islands in the viewport.</li>
-</ul>
+<p>Display Finished/Unfinished Islands in the viewport.</p>
               
             </div>
           </div><footer>

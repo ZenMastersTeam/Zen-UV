@@ -84,7 +84,7 @@
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#texel-density-presets">Texel Density Presets</a>
         <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#generate">Generate</a>
+    <li class="toctree-l3"><a class="reference internal" href="#presets-management">Presets Management</a>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#get">Get</a>
     </li>
@@ -164,50 +164,41 @@
             <div class="section" itemprop="articleBody">
               
                 <h1 id="texel-density">Texel Density<a class="headerlink" href="#texel-density" title="Permanent link"></a></h1>
+<p>Texel Density (TD) refers to the number of texture pixels (texels) per unit of surface area on a 3D model in a video game. It is important for maintaining visual quality and reducing texture stretching or blurring when a model is viewed up close or from different angles. Higher TD means more detail and sharpness on the textures, but can also result in larger file sizes and performance issues.</p>
+<p>Usually it’s measured in pixels per centimeter (2.56px/cm) or pixels per meter (256px/m).</p>
+<p>You can read more information about <a href="https://www.beyondextent.com/deep-dives/deepdive-texeldensity#">What is Texel Density here.</a> </p>
+<hr />
+<p>Zen UV is providing all the tools you need to work with Texel Density.</p>
 <div class="admonition panel">
 <p class="admonition-title">Panel</p>
 <p><img alt="Texel Density" src="../img/screen/texel_density/texel_density_main_panel.png" /></p>
 </div>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<ul>
-<li>Texel Density System uses Vertex Color for displaying some information.
-  Make sure viewport shading is switched to <strong>Solid</strong> mode.</li>
-</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Read POLYMATTER.XYZ manual about how to choose right TD. <a href="https://drive.google.com/file/d/1hJ1px7BHX7kxDmD1KAXqECNqNXCe6egu/view"><strong>JPG</strong></a>, <a href="https://drive.google.com/file/d/1J8XA8bnrYgHr4R8PwsbM4ftqjbDZ8whN/view"><strong>PDF</strong></a>. </p>
+<p><img alt="" src="../img/screen/texel_density/Texel-Density-%26-Texture-Map-Resolutions_v1-1.jpg" /></p>
 </div>
 <h3 id="texel-density_1">Texel Density<a class="headerlink" href="#texel-density_1" title="Permanent link"></a></h3>
-<ul>
-<li>Shows Texel Density value.</li>
-</ul>
+<p>Shows Texel Density value.</p>
 <div class="admonition preferences">
 <p class="admonition-title">Preferences</p>
 <p><img alt="Texel Density" src="../img/screen/texel_density/texel_density_options.png" /></p>
 <ul>
-<li><strong>Units</strong> - Texel density calculation units.</li>
-<li><strong>Texture Size</strong> - Image Size for Texel Density computation.</li>
+<li><strong>Units</strong>. Texel density calculation units.</li>
+<li><strong>Texture Size</strong>. Image Size for Texel Density computation.</li>
 </ul>
 </div>
 <h3 id="get-td">Get TD<a class="headerlink" href="#get-td" title="Permanent link"></a></h3>
-<ul>
-<li>Get Texel Density from selected Islands.</li>
-</ul>
+<p>Get Texel Density from selected Islands.</p>
 <h3 id="set-td">Set TD<a class="headerlink" href="#set-td" title="Permanent link"></a></h3>
-<ul>
-<li>Set Texel Density to selected Islands.</li>
-</ul>
+<p>Set Texel Density to selected Islands.</p>
 <h3 id="set-td-mode">Set TD Mode<a class="headerlink" href="#set-td-mode" title="Permanent link"></a></h3>
-<ul>
-<li>Mode for setting Texel Density.</li>
-</ul>
+<p>Mode for setting Texel Density.</p>
 <div class="admonition options">
 <p class="admonition-title">Options</p>
 <ul>
-<li>
-<p><strong>Overall Mode</strong> - Set Texel Density for all selected Islands together.</p>
-</li>
-<li>
-<p><strong>Island Mode</strong> - Set Texel Density individually for every selected Island.</p>
-</li>
+<li><strong>Overall Mode</strong>. Set Texel Density for all selected Islands together.</li>
+<li><strong>Island Mode</strong>. Set Texel Density individually for every selected Island.</li>
 </ul>
 </div>
 <h3 id="td-checker">TD Checker<a class="headerlink" href="#td-checker" title="Permanent link"></a></h3>
@@ -220,68 +211,59 @@
 <p class="admonition-title">Preferences</p>
 <p><img alt="Texel Density Checker" src="../img/screen/texel_density/texel_density_checker_options.png" /></p>
 <ul>
-<li>
-<p><strong>TD Checker</strong> - Texel Density value used for Show TD operation.</p>
-</li>
-<li>
-<p><strong>Less</strong> - Viewport display color to represent Texel Density less than TD Checker value.</p>
-</li>
-<li>
-<p><strong>Equal</strong> - Viewport display color to represent Texel Density equal to TD Checker value.</p>
-</li>
-<li>
-<p><strong>Over</strong> - Viewport display color to represent Texel Density over than TD Checker value.</p>
-</li>
+<li><strong>TD Checker</strong>. Texel Density value used for Show TD operation.</li>
+<li><strong>Less</strong>. Viewport display color to represent Texel Density less than TD Checker value.</li>
+<li><strong>Equal</strong>. Viewport display color to represent Texel Density equal to TD Checker value.</li>
+<li><strong>Over</strong>. Viewport display color to represent Texel Density over than TD Checker value.</li>
 </ul>
 </div>
 <h3 id="show-td">Show TD<a class="headerlink" href="#show-td" title="Permanent link"></a></h3>
+<p>Display Texel Density in Viewport by chosen TD Checker value and colors.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
 <ul>
-<li>Display Texel Density in Viewport by chosen TD Checker value and colors.</li>
+<li>Texel Density System uses Vertex Color for displaying some information.
+  Make sure viewport shading is switched to <strong>Solid</strong> mode.</li>
 </ul>
+</div>
 <h3 id="hide-td">Hide TD<a class="headerlink" href="#hide-td" title="Permanent link"></a></h3>
-<ul>
-<li>Disable displaying Texel Density in Viewport by chosen TD Checker value and colors.</li>
-</ul>
+<p>Disable displaying Texel Density in Viewport by chosen TD Checker value and colors.</p>
 <hr />
 <h2 id="texel-density-presets">Texel Density Presets<a class="headerlink" href="#texel-density-presets" title="Permanent link"></a></h2>
 <p><img alt="" src="../img/screen/texel_density/td_presets.png" /></p>
-<h3 id="generate">Generate<a class="headerlink" href="#generate" title="Permanent link"></a></h3>
+<h3 id="presets-management">Presets Management<a class="headerlink" href="#presets-management" title="Permanent link"></a></h3>
+<p>You can Save TD Presets for your projects and Share TD Presets with team.</p>
+<div class="admonition panel">
+<p class="admonition-title">Panel</p>
+<p><img alt="" src="../img/screen/texel_density/td_presets_panel.png" /></p>
 <ul>
-<li>Generate most general Presets.</li>
+<li><strong>Load</strong>. Load Preset.</li>
+<li><strong>Add</strong>. Add new Preset.</li>
+<li><strong>Remove</strong>. Remove Preset.</li>
+<li><strong>Open Presets Folder</strong>. Open Presets Folder.</li>
 </ul>
+</div>
 <h3 id="get">Get<a class="headerlink" href="#get" title="Permanent link"></a></h3>
-<ul>
-<li>Get TD from selected Islands to active preset.</li>
-</ul>
+<p>Get TD from selected Islands to active preset.</p>
 <h3 id="clear">Clear<a class="headerlink" href="#clear" title="Permanent link"></a></h3>
-<ul>
-<li>Clear List</li>
-</ul>
+<p>Clear List.</p>
 <h3 id="set-from-preset">Set From Preset<a class="headerlink" href="#set-from-preset" title="Permanent link"></a></h3>
-<ul>
-<li>Set TD from active preset to selected Islands.</li>
-</ul>
+<p>Set TD from active preset to selected Islands.</p>
 <h3 id="select-by-td">Select by TD<a class="headerlink" href="#select-by-td" title="Permanent link"></a></h3>
-<ul>
-<li>Select Islands By Texel Density</li>
-</ul>
-<p><img alt="" src="../img/screen/texel_density/td_presets_select.png" /></p>
+<p>Select Islands By Texel Density.</p>
 <div class="admonition options">
 <p class="admonition-title">Options</p>
+<p><img alt="" src="../img/screen/texel_density/td_presets_select.png" /></p>
 <ul>
-<li><strong>Under Rated</strong> - Select islands which have TD less than minimal in the list.</li>
-<li><strong>Over Rated</strong> - Select islands which have TD bigger than maximal in the list.</li>
-<li><strong>By Value</strong> - Select by active preset value.</li>
+<li><strong>Under Rated</strong>. Select islands which have TD less than minimal in the list.</li>
+<li><strong>Over Rated</strong>. Select islands which have TD bigger than maximal in the list.</li>
+<li><strong>By Value</strong>. Select by active preset value.</li>
 </ul>
 </div>
 <h3 id="show-presets">Show Presets<a class="headerlink" href="#show-presets" title="Permanent link"></a></h3>
-<ul>
-<li>Turn on Presets Displaying.</li>
-</ul>
+<p>Turn on Presets Displaying.</p>
 <h3 id="hide">Hide<a class="headerlink" href="#hide" title="Permanent link"></a></h3>
-<ul>
-<li>Turn off Presets displaying.</li>
-</ul>
+<p>Turn off Presets displaying.</p>
               
             </div>
           </div><footer>
