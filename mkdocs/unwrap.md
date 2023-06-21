@@ -25,16 +25,16 @@ Zen Unwrap is a context-dependent operator. The result of its operation depends 
   
 ---
 
-### Processing Mode:
+### Processing Mode
 The main operating mode switch.
 
 !!!Panel
     ![Processing Mode](img/screen/unwrap/zwrp_processing_mode.png)
 
-    - **Whole Mesh** - The processing will be done for the whole mesh. All already unwrapped islands will be re-unwrapped.
-    - **Selected Only** - Processing will only be performed on the mesh selection.
-    - **Seam Switch** - This mode will switch seams with subsequent unwrapping. Only selected edges with seams will be included in the switching process. The seams that are in the selection will be deleted (Unmarked). New seams will be assigned according to the selection mode (Face, Edge).
-    - **Unfold Vertices** - In this case, regardless of the Select Mode, any selection will be treated as vertices. Selected vertices will be relaxed.
+    - **Whole Mesh**. The processing will be done for the whole mesh. All already unwrapped islands will be re-unwrapped.
+    - **Selected Only**. Processing will only be performed on the mesh selection.
+    - **Seam Switch**. This mode will switch seams with subsequent unwrapping. Only selected edges with seams will be included in the switching process. The seams that are in the selection will be deleted (Unmarked). New seams will be assigned according to the selection mode (Face, Edge).
+    - **Unfold Vertices**. In this case, regardless of the Select Mode, any selection will be treated as vertices. Selected vertices will be relaxed.
 
 ---
 
@@ -79,28 +79,79 @@ Working in **Face** or **Edge** mode makes changes to the selected islands anywa
 
 ---
 
-### Settings:
+### Settings
+
+!!! Preferences
+    ![Zen Unwrap Settings](img/screen/unwrap/zwrp_op_prop.png)
+    
+    - **Unwrap Method**. Unwrapping method.
+        - **Conformal**. Fast algorithm that gives good results.
+        - **Angle-Based**. More accurate algorithm, but a bit slower.
+    - **Mark Settings**. Operator settings to enable automatic seam marking. See [Mark Settings (Global Mode)](#mark-by-angle) for details.
+    - **Fill Holes**. Virtual fill holes in mesh before unwrapping, to avoid overlaps and preserve symmetry.
+    - **Averaged Texel Density**. Sets the averaged Texel Density for newly created islands. This keeps all islands about the same size as you work.
+    - **Pack Unwrapped**. After the islands have been created, this option will start the **Packing** process of the islands. The [**Pack Engine**](pack.md/#pack-engine) specified in the **Pack System** will be used.
+    - **Sort Unwrapped**. After the islands have been created, this option will start the process of **Sorting** the islands by [**Finished**](#finishing-system) tag.
+  
+### Additional Options
+
+You can change main Zen Unwrap settings before running the operator.  
 
 !!!Panel
-    ![Zen Unwrap Settings](img/screen/unwrap/zwrp_op_prop.png)
+    ![Auto UV Sync](img/screen/unwrap/zwrp_auto_uv_sync.png)
 
-    - **Unwrap Method** - Unwrapping method.
-        - **Conformal** - Fast algorithm that gives good results.
-        - **Angle-Based** - More accurate algorithm, but a bit slower.
+    - **Auto UV Sync**. Automatically enables the **UV Sync Selection** mode every time the operator starts.
+    - **Processing Mode**. The main operating mode switch.
+    - **Averaged Texel Density**. Sets the averaged Texel Density for newly created islands. This keeps all islands about the same size as you work.
+    - **Pack Unwrapped**. After the islands have been created, this option will start the **Packing** process of the islands. The [**Pack Engine**](pack.md/#pack-engine) specified in the **Pack System** will be used.
+    - **Sort Unwrapped**. After the islands have been created, this option will start the process of **Sorting** the islands by [**Finished**](#finishing-system) tag.
+---
 
-    - **Mark Settings** - Operator settings to enable automatic seam marking. See [Mark Settings (Global Mode)](#mark-by-angle) for details.
-    - **Fill Holes** - Virtual fill holes in mesh before unwrapping, to avoid overlaps and preserve symmetry.
-    - **Averaged Texel Density** - Sets the averaged Texel Density for newly created islands. This keeps all islands about the same size as you work.
-    - **Pack Unwrapped** - After the islands have been created, this option will start the **Packing** process of the islands. The [**Pack Engine**](pack.md/#pack-engine) specified in the **Pack System** will be used.
-    - **Sort Unwrapped** - After the islands have been created, this option will start the process of **Sorting** the islands by [**Finished**](#finishing-system) tag.
-  
-### Additional Options:
 
-The operator has one additional option. It has nothing to do with the unfolding process, so it has been put in a separate menu. 
+## Unwrap Constraint
 
-![Auto UV Sync](img/screen/unwrap/zwrp_auto_uv_sync.png)
+This operator unwraps Islands and Faces along selected axis.
 
-- **Auto UV Sync** - Automatically enables the **UV Sync Selection** mode every time the operator starts.
+!!! Preferences
+    ![](img/screen/unwrap/unwrap_constraint_settings.png)
+
+    - **Mode**. Choose what to unwrap Islands or Faces.
+         - **Islands**. Affect selected Islands.
+         - **Faces**. Affect selected Faces only.
+    - **Method**. Unwrap method.
+         - **Full Unwrap**. Unwrap Islands but keep it in BBox boundaries.
+         - **Along Axis**. Unwrap Islands along Axis.
+    - **Fit Axis**.
+         - **U**. Unwrap / Fit along U axis.
+         - **V**. Unwrap / Fit along V axis.
+         - **Min**. The minimum length axis will be automatically determined.
+         - **Max**. The maximum length axis will be automatically determined.
+    - **Current Axis**. Current Axis.
+    - **Mark Settings**. Mark Settings (Global and Local modes) to Mark Seams and Sharp Edges.
+    - **Fill Holes**. Virtual fill holes in meshes before unwrapping.
+    - **Correct Aspect**. Map UVs taking image aspect ratio into account.
+    - **Use Subsurf Modifier**. Map UVs taking vertex position after subsurf into account.
+
+## Unwrap Inplace
+
+Unwrap Islands and Faces keeping their Size, Orientation and Location in UV Space.
+
+!!! Preferences
+    ![](img/screen/unwrap/unwrap_inplace_settings.png)
+
+    - **Mode**. Choose what to unwrap Islands or Faces.
+         - **Islands**. Affect selected Islands.
+         - **Faces**. Affect selected Faces only.
+    - **Location**. Restore Islands Location and gabarit.
+    - **Orientation**. What Orientation to use after unwrapping.
+         - **Keep**. Use Initial Orientation. 
+         - **World Orient**. Use World Orientation for the Islands.
+         - **Skip**. Skip Orientation adjustments.
+    - **Size**. Restore Islands Size.
+    - **Ignore Pins**. Ignore Pins.
+    - **Fill Holes**. Virtual fill holes in meshes before unwrapping.
+    - **Correct Aspect**. Map UVs taking image aspect ratio into account.
+    - **Use Subsurf Modifier**. Map UVs taking vertex position after subsurf into account.
 
 ---
 ## Mark System
@@ -109,81 +160,106 @@ The operator has one additional option. It has nothing to do with the unfolding 
 
 ### Mark by Angle
 
-- Mark edges as Seams and/or Sharp edges by Angle.
+Mark edges as Seams and/or Sharp edges by Angle.
+
+!!! Global Mark Settings
+    ![](img/screen/unwrap/mark_by_angle_prefs.png)
+
+    - **Use Global Mark Settings**. In this mode, all the operators from the Mark System use the settings below. If off, every operator uses its own settings.
+    - **Mark Seams**. Automatically assign Seams
+    - **Mark Sharp Edges**. Automatically assign Sharp edges
 
 !!! Preferences
-    ![](img/screen/unwrap/mark_by_angle_prefs.png)
-    
-    - **Use Global Mark Settings** - In this mode, all the operators from the Mark System use the settings below. If off, every operator uses its own settings.
-    - **Mark Seams** - Automatically assign Seams
-    - **Mark Sharp Edges** - Automatically assign Sharp edges
+    ![](img/screen/unwrap/mark_by_angle_settings.png)
+
+    - **Keep init marks**. Keep the state of intital Seams and Sharp edges.
+    - **Selection Respect**. Mark only within current selection.
+    - **Mark Settings**. Mark Settings (Global and Local modes) to Mark Seams and Sharp Edges.
 
 ### Mark ![Mark Seams](img/icons/mark-seams@2x.png)
 
-- Mark selected edges or face borders as Seams and/or Sharp edges.
+Mark selected edges or face borders as Seams and/or Sharp edges.
+
+!!! Preferences
+    ![](img/screen/unwrap/mark_mark_pref.png)
+
+    - **Clear**. Clear marking inside of selected Faces.
+    - **Mark Settings**. Mark Settings (Global and Local modes) to Mark Seams and Sharp Edges.
 
 ### Unmark ![Unmark Seams](img/icons/unmark-seams@2x.png)
 
-- Unmark selected edges or face borders as Seams and/or Sharp edges.
+Unmark selected edges or face borders as Seams and/or Sharp edges.
+
+!!! Preferences
+    ![](img/screen/unwrap/mark_unmark_pref.png)
+
+    - **Mark Settings**. Mark Settings (Global and Local modes) to Mark Seams and Sharp Edges.
 
 ### Unmark All
 
-- Remove all the Seams and/or Sharp edges from the mesh.
+Remove all the Seams and/or Sharp edges from the mesh.
 
----
+!!! Preferences
+    ![](img/screen/unwrap/mark_unmark_all_pref.png)
+
+    - **Clear Pinned**. Clear all the Pins.
+    - **Mark Settings**. Mark Settings (Global and Local modes) to Mark Seams and Sharp Edges.
+
 ## Conversion System
 !!! Panel
     ![](img/screen/unwrap/conversion_system.png)
 
 ### Seams by UV Borders
-- Mark Seams by existing UV Borders.
+Mark Seams by existing UV Borders.
 ### Sharp by UV Borders
-- Mark Sharp by existing UV Borders.
+Mark Sharp by existing UV Borders.
 ### Seams by Sharp Edges
-- Mark Seams by existing Sharp edges.
+Mark Seams by existing Sharp edges.
 ### Sharp Edges by Seams
-- Mark Sharp edges by existing Seams.
+Mark Sharp edges by existing Seams.
 ### Seams by Open Edges
-- Mark Seams by Open Edges. The way that looks in the viewport.
+Mark Seams by Open Edges. The way that looks in the viewport.
 
----
 ## Mirror Seams
 
-- Mirror Seams by axes.
+Mirror Seams by axes.
 
----
 ## Smooth by Sharp (Toggle)
-- Toggle between Auto Smooth 180° (with sharp edges) and regular smooth modes.
+Toggle between Auto Smooth 180° (with sharp edges) and regular smooth modes.
 
----
+--- 
+
 ## Finishing System
+
+Finishing system helps to Mark, Sort and Display Islands that you have already unwrapped. 
+You can use it to see the progress of unwrapping as well as prevent Finished Islands from accidental unwraping.
 
 !!! Panel
     ![](img/screen/unwrap/finished_system.png)
 
-## Sort Islands by Tags
-- Finished Islands move to the right side from Main UV Tile, Unfinished — to the left.
+### Sort Islands by Tags
+Finished Islands move to the right side from Main UV Tile, Unfinished — to the left.
 
 !!! Preferences
     ![Unwrap](img/screen/unwrap/finishing_prefs.png)
 
-    - **Pin Finished** - Pin Islands after Tag Finished operation.
-    - **Auto Sort Islands** - Automatically Sort Islands by Tags. Finished Islands move to the right side from Main UV Tile, Unfinished — to the left
-    - **Finished Color** - Finished Islands viewport display color.
-    - **Unfinished Color** - Unfinished Islands viewport display color.
+    - **Pin Finished**. Pin Islands after Tag Finished operation.
+    - **Auto Sort Islands**. Automatically Sort Islands by Tags. Finished Islands move to the right side from Main UV Tile, Unfinished — to the left
+    - **Finished Color**. Finished Islands viewport display color.
+    - **Unfinished Color**. Unfinished Islands viewport display color.
 
 ### Tag Finished
 
-- Tag Islands as Finished.
+Tag Islands as Finished. These Islands won't be unwrapped.
 
 ### Tag Unfinished
 
-- Tag Islands as Unfinished.
+Tag Islands as Unfinished. 
 
 ### Select Finished
 
-- Select Islands tagged as Finished.
+Select Islands tagged as Finished.
 
 ### Display Finished (Toggle)
 
-- Display Finished/Unfinished Islands in the viewport.
+Display Finished/Unfinished Islands in the viewport.
