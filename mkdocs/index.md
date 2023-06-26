@@ -24,14 +24,15 @@
 -   [**World Orient**](transform.md#world-orient) operator that rotates UV Islands the way they are oriented in the model.
 -   [**Checker Map System**](checker.md) is a node-based system that contains Checker Textures designed specifically for Zen UV. Square and rectangular formats. Check UV's state on the model without ruining existing materials!
 -   [**Copy/Paste Operators.**](stack.md#copy-paste-system) Copy/Paste parameters (Structure,TD, Position, Size) between Islands/Faces/Maps.
--   [**Quadrify Islands Operator**](transform.md#quadrify-islands) to straighten rectangular-shaped UV Islands. 
+-   [**Quadrify Islands Operator**](transform.md#quadrify-islands) to straighten rectangular-shaped UV Islands.
 -   [**Full set of Transform operators**.](transform.md) Move, Rotate, Scale, Flip, Fit, Orient, Sort and Align Islands and Elements (vertices, edges, polygons).
--   **Display Flipped operator** to display Flipped Islands in UV Editor.
+-   [**Display Flipped Operator**](checker.md#flipped) to display Flipped Islands.
+-   [**Display UV no Sync Operator**](checker.md#uv-no-sync) to display in 3D Viewport faces selected in UV Editor when UV Sync is Off.
 -   [**Finished System.**](unwrap.md#finishing-system) It helps to control and manage the state of unwrapping UV Islands (Finished/Unfinished) by tags and visually.
 -   [**Different Pack Engines**.](operators.md#pack-engine) Yes, you can use UVPackmaster 2, 3 and UV-Packer with Zen UV.
 -   [**Zen Unwrap Operator**](unwrap.md#zen-unwrap) to mark selected edges/faces as Seams and/or Sharp edges and Unwrap by Marked edges after.
 - [**Unwrap Constraint operator**](unwrap.md#unwrap-constraint) to unwrap Islands along a certain axis.
-- **Match and Stitch operator** to match Islands position, rotation, scale and stitch vertices if it’s possible.
+- [**Match and Stitch operator**](transform.md#match-and-stitch) to match Islands position, rotation, scale and stitch vertices if it’s possible.
 -   [**Marking System**](unwrap.md#mark-system) that helps you to mark Seams and/or Sharp automatically by angle, by existing UV Borders/Sharp Edges, and manually.
 -   [**Seam Groups.**](seam_groups.md) Work with more than one Seam set!
 -   [**Texel Density.**](texel_density.md) Get, Set, and Check Texel Density of UV Islands.
