@@ -7,7 +7,7 @@
 A team of professionals who make your work with UVs in Blender enjoyable.
 
 - [**Valeriy Yatsenko**](https://github.com/vyworker) - Lead Developer.
-- [**Alex Zhornyak**](https://github.com/alexzhornyak) - Library Developer.
+- [**Alex Zhornyak**](https://github.com/alexzhornyak) - UI and Library Developer.
 - [**Sergey Tyapkin**](https://www.artstation.com/tyapkin) - Project Manager and QA.
 - [**Victor ***[VAN]*** Teplov**](https://www.youtube.com/c/%D0%92%D0%B8%D0%BA%D1%82%D0%BE%D1%80%D0%A2%D0%B5%D0%BF%D0%BB%D0%BE%D0%B2) - Interface and Icon Designer.
 

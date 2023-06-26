@@ -1,40 +1,44 @@
-# Checker Map
+# UV Checker
 
-![Checker Map](img/screen/checker.png)
+This panel contains tools to check the state of UVs on the model, visually and technically.
 
 !!! Panel
     ![Main Panel](img/screen/tex_checker/checker_main_panel.png)
 
-    - The panel in 3D Viewport has a full set of features.
 
-!!! Panel
+!!! Tip
     ![Main Panel](img/screen/tex_checker/checker_uv_panel.png)
 
-    - The panel in the UV Editor has a minimal set of functions. And serves only to change the checker texture. This panel is disabled by default. You can turn it on in the addon settings.
+    Display and Select **Crease**, **Sharp**, **Bevel**, **Seams**, **Stretched** and **UV No Sync** and **Stacks** operators are absent on the panel in UV Editor. To use these operators you need to switch to 3D Viewport context.
 
-### Checker Texture (Toggle) ![Checker Texture](img/icons/checker_32.png)
+    Also, UV Editor panel contains extra Display operator [**Darken Image. Click to read full information**](user_interface.md#darken-image).
 
-Add Checker Texture to the mesh (Toggle).
+### Checker Texture ![Checker Texture](img/icons/checker_32.png) `Alt+T`
+
+Add/Remove Checker Texture to/from the mesh.
+
+![checker texture](img/screen/tex_checker/checker_texture.gif) 
 
 !!! Preferences
     ![Main Panel](img/screen/tex_checker/tex_chk_props.png)
 
-    - **Checker Library Folder** - Checker Library Folder indicates the folder with 
-    which Zen UV Checker will work.
-        All textures in * .JPG, * .PNG formats that are 
-        inside this folder will be collected in 
-        Checker Textures list and can be used to display 
-        on selected models.
-    - **Reset Folder** - Reset Checker Library path to Default State.
-    - **Load Your Texture** - Open File Browser and add the selected texture to the Checker Library.
-    - **Refresh Texture Library** - Refresh Textures from Checker Library Folder.
-    - **Auto Sync Checker** - Automatically sync selected Checker Texture with Viewport.
-    - **Open Shader Editor** - Open Shader Editor with Zen UV Checker Node.
-    - **Reset Checker** - Reset Zen UV Checker to Default state.
+    - **Checker Library Folder**.Checker Library Folder indicates the folder with which Zen UV Checker will work. All textures in * .JPG, * .PNG formats that are inside this folder will be collected in Checker Textures list and can be used to display on selected models.
+    - **Reset Folder**. Reset Checker Library path to Default State.
+    - **Load Your Texture**. Open File Browser and add the selected texture to the Checker Library.
+    - **Refresh Texture Library**. Refresh Textures from Checker Library Folder.
+    - **Auto Sync Checker**. Automatically sync selected Checker Texture with Viewport.
+    - **Open Shader Editor**. Open Shader Editor with Zen UV Checker Node.
+    - **Reset Checker**. Reset Zen UV Checker to Default state.
+
+#### Operator mechanism
+
+Checker Texture Toggle is adding/removing Zen UV Checker Node on/from top of your materials in Shader Editor. Your materials are safe!
+
+![checker texture](img/screen/tex_checker/checker_texture_node.gif)
 
 ### Remove Checker Nodes
 
-- Remove Zen UV Checker Nodes from the scene materials.
+Remove Zen UV Checker Nodes from all the scene materials.
 
 ### Checker Textures Selector
 
@@ -76,11 +80,108 @@ Add Checker Texture to the mesh (Toggle).
   
 ![](img/screen/tex_checker/filter_orient_is_on.png)
 
-### Display Stretch Map
+---
 
-- Display an angle-based stretching map.
+### Display
 
-![](img/screen/tex_checker/stretch_map_sample.png)
+All useful for checking UVs Draw operators and their settings.
 
-  1. Toggle displaying of the stretch map.
-  2. Select stretched faces.
+#### Blender Draw System
+
+!!! Panel 
+    ![](img/screen/tex_checker/checker_display_top.png)
+
+    - **Crease**. Display Creases created for Subdivision Surface modifier. 
+    - **Sharp**. Display Sharp Edges.
+    - **Bevel**. Display Weights created for Bevel modifier.
+    - **Seams**. Display Seams.
+
+!!! Tip 
+    Blender Draw System visually overlap each other that's why it's recommended to use only Display Seams for UV process.
+
+
+#### Zen UV Draw System
+
+##### Finished
+
+Display and Select Finished Islands. You can [read more about Finishing System here](unwrap.md#finishing-system).
+
+
+##### Flipped
+
+Display and Select Flipped Islands.
+
+![](img/screen/tex_checker/checker_display_flipped.gif)
+
+##### Stretched
+Display an angle-based stretching map.
+
+![](img/screen/tex_checker/checker_display_stretched.gif)
+
+!!! Tip
+    To have the display in real time mode (as on the gif) activate **Stretched Dynamic** in Zen UV Draw System Preferences.
+
+##### Excluded
+
+Display and Select Islands Excluded from Packing.
+
+##### UV No Sync
+
+Display in 3D Viewport faces selected in UV Editor when UV Sync is Off. 
+
+![](img/screen/tex_checker/checker_display_nosync.gif)
+
+##### Stacks
+
+!!! Panel 
+    ![](img/screen/tex_checker/checker_display_zenuv_stacks.png)
+
+    Display and Select **Similar**, **Similar of Selection**, **Stacked**, **Manual Stacks**. 
+    You can read full information about [Stacks Display and its settings here](stack.md#stacks-display).
+
+
+
+##### Zen UV Draw System Preferences
+
+!!! Panel 
+    ![](img/screen/tex_checker/checker_display_zenuv_pref.png)
+
+    - **Overlay Sync**. Draw is synchronised with Overlay On-Off settings.
+    - **Finished Color**. Finished Islands Viewport Display color.
+    - **Unfinished Color**. Unfinished Islands Viewport Display color.
+    - **Flipped Color**. Flipped Islands Display color.
+    - **Excluded Color**. Excluded Islands Display color.
+    - **UV No Sync Color**. Display color for selected Islands in UV No Sync mode.
+    - **Font Size**. Font size for Drawing labels.
+    - **Font Color**. Font color for Drawing labels.
+    - **Stretched Dynamic**. Display Stretched in Dynamic (dragging etc.).
+
+---
+
+### Tools
+
+Tools for analyzing and finding Mesh errors that can negatively affect UV operations.
+
+#### Elements by Index
+Select elements by their indices.
+
+#### Zero Area Faces
+Select faces with Zero UV area.
+
+#### Edges Without Faces
+Select edges without faces.
+
+#### Edges with multiple loops
+Select edges with Multiple Loops.
+
+#### UV Islands Counter
+
+Count UV Islands of selected objects and display the result.
+
+ ![](img/screen/tex_checker/checker_tools_counter.gif)
+
+#### Clear Attributes
+
+Clear mesh attributes used in Zen UV. Finished and Excluded.
+
+![](img/screen/tex_checker/checker_tools_clear_attributes.png)
