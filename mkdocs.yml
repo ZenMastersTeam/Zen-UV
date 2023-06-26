@@ -26,6 +26,7 @@ nav:
         - trimsheet_hotspot.md
     - Additional:
         - Addon Preferences: addon_prefs.md
+        - user_script.md
         - Help: help.md
         - FAQs: troubleshooting.md
         - Changelog: changelg.md
