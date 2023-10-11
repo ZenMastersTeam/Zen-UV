@@ -44,14 +44,30 @@ Rotate islands inside active trim
 ## Flip In Trim
 Flip islands relative to the center of active trim
 
+| ![](img/screen/trimsheet/flip_in_trim.gif) |
+|---|
+| |
+
 ## Fit To Trim
 Fit islands into active trim
+
+| ![](img/screen/trimsheet/fit_to_trim.gif) |
+|---|
+| |
 
 ## Align To Trim
 Align islands to active trim
 
+| ![](img/screen/trimsheet/align_to_trim.gif) |
+|---|
+| |
+
 ## Scale In Trim
 Scale in active trim. Islands outside active trim will be ignored if **Lock in Trim** option is set
+
+| ![](img/screen/trimsheet/scale_in_trim.gif) |
+|---|
+| |
 
 ## Hotspot Mapping
 Hotspot Mapping is a UV mapping method that compares the parameters of Islands and Trims and makes automatic mapping based on the given settings.

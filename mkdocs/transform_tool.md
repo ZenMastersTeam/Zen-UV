@@ -97,7 +97,7 @@ Transform Handles provides access to such operators as **Align**, **Rotate**, **
 ### Transform Handles Tools
 
 #### Align `Default`
-Align tool is representing [**Align to Trim**](trimsheet_operators.md/#move-in-trim) operator and align selected Islands or Faces/Edges/Vertices to active Trim.
+Align tool is representing [**Align to Trim**](trimsheet_operators.md/#align-to-trim) operator and align selected Islands or Faces/Edges/Vertices to active Trim.
 
 ![Transform Handles Align](img/screen/transform_tool/tt_transform_handles_align.gif)
 
@@ -112,7 +112,7 @@ Other Points Orients Islands Horizontally, Vertically, Automatically (Central Po
 ![Transform Handles Orient](img/screen/transform_tool/tt_transform_handles_orient.gif)
 
 #### Fit `Shift`
-Fit tool is representing [**Move to Trim**](trimsheet_operators.md/#fit-to-trim) operator and fits selected Islands or Faces/Edges/Vertices into active Trim.
+Fit tool is representing [**Fit to Trim**](trimsheet_operators.md/#fit-to-trim) operator and fits selected Islands or Faces/Edges/Vertices into active Trim.
 
 ![Transform Handles Fit](img/screen/transform_tool/tt_transform_handles_fit.gif)
 
@@ -122,7 +122,7 @@ Using this tool you can Scroll between Trims and Fit your Islands in the same mo
 ![Transform Handles Fit Scroll](img/screen/transform_tool/tt_transform_handles_fit_scroll.gif)
 
 #### Flip `Ctrl + Shift`
-Flip tool is representing [**Flip in Trim**](trimsheet_operators.md/#move-in-trim) operator and flips selected Islands or Faces/Edges/Vertices.
+Flip tool is representing [**Flip in Trim**](trimsheet_operators.md/#flip-in-trim) operator and flips selected Islands or Faces/Edges/Vertices.
 
 ![Transform Handles Flip](img/screen/transform_tool/tt_transform_handles_flip.gif)
 
