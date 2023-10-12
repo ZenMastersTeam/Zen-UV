@@ -65,6 +65,10 @@
                   <li class="toctree-l1 current"><a class="reference internal current" href="./">Advanced UV Maps</a>
     <ul class="current">
     <li class="toctree-l2"><a class="reference internal" href="#advanced-uv-maps-list">Advanced UV Maps List</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#uv-maps-status-detection">UV Maps Status Detection</a>
+    </li>
+        </ul>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#duplicate-active-uv-map">Duplicate active UV Map</a>
     </li>
@@ -79,6 +83,8 @@
     <li class="toctree-l2"><a class="reference internal" href="#sync-uv-maps">Sync UV Maps</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#copy-uv-paste-uv">Copy UV / Paste UV</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#transfer-uv">Transfer UV</a>
     </li>
     </ul>
                   </li>
@@ -298,10 +304,24 @@ It allows to select the active, add, remove, and rename UV Maps from the list.</
 </tr>
 </tbody>
 </table>
+<h3 id="uv-maps-status-detection">UV Maps Status Detection<a class="headerlink" href="#uv-maps-status-detection" title="Permanent link"></a></h3>
+<p>Advanced Maps system detects synchronization status of all UV Maps in the selected objects. It is possible to disable some parameters which are not neccessary for you to detect</p>
+<table>
+<thead>
+<tr>
+<th><img alt="" src="../img/screen/adv_uv_map/uvmaps_status_detection.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
 <hr />
 <h2 id="duplicate-active-uv-map">Duplicate active UV Map <img alt="Add Button" src="../img/icons/plus.png" /><a class="headerlink" href="#duplicate-active-uv-map" title="Permanent link"></a></h2>
-<p>Duplicate the active UV Map or create a new one depending on the operator&rsquo;s properties.
-<img alt="" src="../img/screen/adv_uv_map/duplicate_active_map.png" /></p>
+<p>Duplicate the active UV Map or create a new one depending on the operator&rsquo;s properties.</p>
+<p><img alt="" src="../img/screen/adv_uv_map/duplicate_active_map.png" /></p>
 <h2 id="remove-active-uv-map">Remove active UV Map <img alt="Remove Button" src="../img/icons/minus.png" /><a class="headerlink" href="#remove-active-uv-map" title="Permanent link"></a></h2>
 <p><img alt="" src="../img/screen/adv_uv_map/uvmaps_remove.gif" /></p>
 <hr />
@@ -391,9 +411,59 @@ It allows to select the active, add, remove, and rename UV Maps from the list.</
 <hr />
 <h2 id="copy-uv-paste-uv">Copy UV / Paste UV<a class="headerlink" href="#copy-uv-paste-uv" title="Permanent link"></a></h2>
 <p>Allows transferring the UV coordinates between UV Maps.</p>
-<p><img alt="" src="../img/screen/adv_uv_map/uv_copy_paste.png" /></p>
-<p><strong>Copy UV</strong> - Copy the UV coordinates of the selection.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Available in Edit Mesh mode if geometry of selecting objects is the same</p>
+</div>
+<table>
+<thead>
+<tr>
+<th><img alt="" src="../img/screen/adv_uv_map/copy_paste_UV.gif" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Copy UV</strong> - Copy the UV coordinates of the <strong>selection</strong>.</p>
 <p><strong>Paste UV</strong> - Paste the UV coordinates.</p>
+<h2 id="transfer-uv">Transfer UV<a class="headerlink" href="#transfer-uv" title="Permanent link"></a></h2>
+<table>
+<thead>
+<tr>
+<th><img alt="" src="../img/screen/adv_uv_map/transfer_uv_maps.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Transfer Modes</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Matching geometry</td>
+<td>Objects must be of type mesh and must have a matching topology</td>
+</tr>
+<tr>
+<td>Advanced</td>
+<td>Transfer UV maps by generating an interpolated mapping between source and target mesh elements</td>
+</tr>
+<tr>
+<td>Layout</td>
+<td>Transfer layout of UV maps from active to selected meshes</td>
+</tr>
+</tbody>
+</table>
               
             </div>
           </div><footer>
