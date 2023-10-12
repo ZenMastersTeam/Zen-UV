@@ -53,9 +53,17 @@ The list can work in two modes:
 | ![](img/screen/adv_uv_map/uvmap_active_render.png) | UV Map is active for render |
 | ![](img/screen/adv_uv_map/uvmaps_render_not_active.png) | UV Map is not active for render |
 
+### UV Maps Status Detection
+Advanced Maps system detects synchronization status of all UV Maps in the selected objects. It is possible to disable some parameters which are not neccessary for you to detect
+
+| ![](img/screen/adv_uv_map/uvmaps_status_detection.png) |
+|---|
+| |
+
 ---
 ## Duplicate active UV Map ![Add Button](img/icons/plus.png)
 Duplicate the active UV Map or create a new one depending on the operator's properties.
+
 ![](img/screen/adv_uv_map/duplicate_active_map.png)
 
 ## Remove active UV Map ![Remove Button](img/icons/minus.png)
@@ -101,8 +109,24 @@ If your model requires UV Maps to have the same postion, name, active or render 
 
 Allows transferring the UV coordinates between UV Maps.
 
-![](img/screen/adv_uv_map/uv_copy_paste.png)
+!!! note
+    Available in Edit Mesh mode if geometry of selecting objects is the same
 
-**Copy UV** - Copy the UV coordinates of the selection.
+| ![](img/screen/adv_uv_map/copy_paste_UV.gif) |
+|---|
+| |
+
+**Copy UV** - Copy the UV coordinates of the **selection**.
 
 **Paste UV** - Paste the UV coordinates.
+
+## Transfer UV
+| ![](img/screen/adv_uv_map/transfer_uv_maps.png) |
+|---|
+| |
+
+| Transfer Modes | |
+|---|---|
+| Matching geometry | Objects must be of type mesh and must have a matching topology |
+| Advanced | Transfer UV maps by generating an interpolated mapping between source and target mesh elements |
+| Layout | Transfer layout of UV maps from active to selected meshes |
