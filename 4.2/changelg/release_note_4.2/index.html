@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../../img/favicon.ico" />
-    <title>Release note 2.2.2 - Zen UV 4.2 for Blender</title>
+    <title>Version 4.2.0 - Zen UV 4.2 for Blender</title>
     <link rel="stylesheet" href="../../css/theme.css" />
     <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
@@ -13,8 +13,8 @@
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Release note 2.2.2";
-        var mkdocs_page_input_path = "changelg\\release_note_2.2.2.md";
+        var mkdocs_page_name = "Version 4.2.0";
+        var mkdocs_page_input_path = "changelg\\release_note_4.2.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -128,7 +128,7 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
-      <li class="breadcrumb-item active">Release note 2.2.2</li>
+      <li class="breadcrumb-item active">Version 4.2.0</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -137,25 +137,92 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h2 id="version-222">Version 2.2.2<a class="headerlink" href="#version-222" title="Permanent link"></a></h2>
-<h3 id="general">General<a class="headerlink" href="#general" title="Permanent link"></a></h3>
+                <h1 id="version-420">Version 4.2.0<a class="headerlink" href="#version-420" title="Permanent link"></a></h1>
+<div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%;">
+<iframe src="https://www.youtube.com/embed/iUoGZeMTlYo" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen="" seamless="" frameborder="0"></iframe>
+</div>
+<p><br></p>
+<h3 id="general"><strong>General</strong><a class="headerlink" href="#general" title="Permanent link"></a></h3>
 <ul>
-<li>API Blender v3.0 compatibles.</li>
-<li>Transform System - Orient by Selected. Algorithm optimization.</li>
-<li>Texel Density. Algorithm optimization. Correct work in the presence of modifiers.</li>
-<li>The ability to adjust the position of the Sticky UV editor button horizontally.</li>
-<li>Distribute operator. The algorithm is optimized. Added options for distribution types.</li>
-<li>Pack System. Pack Engine settings in a single panel.</li>
+<li>Redesigned and improved Texel Density system.</li>
+<li>Redesigned and improved Advanced UV Maps system.</li>
+<li>Updated Pack system for Pack operator in Blender 3.6.1 and higher.</li>
+<li>Added Display UVs in Object mode and Display Overlapped Islands operators. </li>
+<li>Added Zen UV Core Library v2.0 for Zen UV 4.2 and higher.</li>
 </ul>
-<h3 id="fixed">Fixed<a class="headerlink" href="#fixed" title="Permanent link"></a></h3>
+<h2 id="operators"><strong>Operators</strong><a class="headerlink" href="#operators" title="Permanent link"></a></h2>
+<h3 id="advanced-uv-maps"><strong>Advanced UV Maps</strong><a class="headerlink" href="#advanced-uv-maps" title="Permanent link"></a></h3>
 <ul>
-<li>Set Texel Density leads to crash in some cases.</li>
-<li>Different values ​​of Texel Density in Object Mode and Edit Mode.</li>
-<li>Sticky UV Editor. Fixed a situation in which many UV editors were opened.</li>
-<li>The potential error of Quadrify when working with several objects.</li>
-<li>An error in Zen Checker when working with user materials not using Nodes.</li>
-<li>Sticky UV Editor. Fixed error arising when working in Blender below V2.9.</li>
-<li>Zen Unwrap. Fixed an error with the output of an empty dialogue in Selected Only mode.</li>
+<li>Updated UV Maps Display and Sync system in multi-object mode.</li>
+<li>Improved Rename operator. Added the ability to rename multiple textures belonging to the same object using a template.</li>
+<li>Added the ability to change the position of the UV Map in all modes including multi-object.</li>
+<li>Added interface for managing native Transfer UV operators (Object mode only).</li>
+</ul>
+<h3 id="unwrap">Unwrap<a class="headerlink" href="#unwrap" title="Permanent link"></a></h3>
+<ul>
+<li>Added Set TD option to Zen Unwrap operator.</li>
+<li>Fixed a bug in Zen Unwrap when the UV Map was not created correctly in vertex mode.</li>
+</ul>
+<h3 id="transform"><strong>Transform</strong><a class="headerlink" href="#transform" title="Permanent link"></a></h3>
+<ul>
+<li>Added Advanced mode for Randomize operator.</li>
+<li>Added Grab Increment operator to Move system.</li>
+<li>Added Set TD option to Quadrify operator.</li>
+<li>Fixed a bug in Align system when vertices of triangular faces were not aligning.</li>
+<li>Fixed a bug in Align to UV Area operator when it aligned islands chaotically in 3D View context.</li>
+</ul>
+<h3 id="trimsheet"><strong>TrimSheet</strong><a class="headerlink" href="#trimsheet" title="Permanent link"></a></h3>
+<ul>
+<li>Added Clean Trimsheet Preview Folder operator to clean Preview images.</li>
+<li>Added an option to disable the Timsheet Presets loading confirmation dialog.</li>
+<li>Fixed a bug in importing Trimsheet from Adobe Illustrator when Trims without colors and names were imported.</li>
+<li>Fixed a bug in Align To Trim operator for the case when there are no Trims in the scene. Alignment is performed by UV Area.</li>
+</ul>
+<h3 id="stack">Stack<a class="headerlink" href="#stack" title="Permanent link"></a></h3>
+<ul>
+<li>Added Zen UV Core Library v2.0 for Zen UV 4.2 and higher.</li>
+<li>Fixed a bug in Select Stacked operator when UV Sync is disabled.</li>
+</ul>
+<h3 id="texel-density"><strong>Texel Density</strong><a class="headerlink" href="#texel-density" title="Permanent link"></a></h3>
+<ul>
+<li>Added the ability to specify Island Pivot when setting TD.</li>
+<li>Added Calculate TD operator which calculates recommended Texture size based on the desired TD and vice versa.</li>
+<li>Updated Display system. Now it works on the Overlay principle.</li>
+<li>Added Gradient Widget to Display the current state of TD.</li>
+<li>Added TD Range operator to calculate the minimum, average, maximum TD values for selected objects or scene.</li>
+<li>Added Island Size system to control Island size in Pixels and Units.</li>
+<li>Added UV World Size system to control texture size in scene units.</li>
+<li>Added an option indicating the accuracy of TD calculations. By decreasing the value you can get faster calculation speed.</li>
+<li>Updated and optimized Select by TD operator.</li>
+</ul>
+<h4 id="td-preset-system"><strong>TD Preset System</strong><a class="headerlink" href="#td-preset-system" title="Permanent link"></a></h4>
+<ul>
+<li>Added the ability to save texture size and units of measurement along with Presets (optional).</li>
+<li>Added Global TD Preset for use in other operators. Unwrap and Quadrify operators can set the TD specified in this preset.</li>
+<li>Added Sort operator for sorting Presets by TD value.</li>
+<li>Added Create Presets operator to create Presets from selected Islands.</li>
+<li>Added Colorize Presets operator for assigning colors to existing Presets according to the color scheme.</li>
+</ul>
+<h3 id="uv-checker"><strong>UV Checker</strong><a class="headerlink" href="#uv-checker" title="Permanent link"></a></h3>
+<ul>
+<li>Added Display UV Object operator to display UVs in Object mode. </li>
+<li>Added Display Overlapped operator to display Overlapped Islands.</li>
+<li></li>
+</ul>
+<h3 id="pack"><strong>Pack</strong><a class="headerlink" href="#pack" title="Permanent link"></a></h3>
+<ul>
+<li>Added <strong>Pack In Trim</strong> option for Blender Pack Engine for Blender 3.6.1 and higher.</li>
+<li>Added the ability to use Excluded system for UV Packer Pack Engine.</li>
+<li>Updated Get UV Coverage operator. Added options for coverage calculation: Generic, Selected, Exclude Stacked.</li>
+<li>Updated Pack system to the new Pack operator for Blender 3.6.1 and higher.</li>
+<li>Fixed functionality of the Pack operator in Sync Off mode.</li>
+<li>Disabled the ability to use Pack operator for Blender 3.6.0. Added Popup with warning.</li>
+</ul>
+<h2 id="other"><strong>Other</strong><a class="headerlink" href="#other" title="Permanent link"></a></h2>
+<ul>
+<li>Added a cancel action button to Progress Bar Widget.</li>
+<li>Fixed a bug where Island received distortion if it overlapped itself.</li>
+<li>Added Update Widget in Viewport to update Draw when Auto Update Draw is disabled.</li>
 </ul>
               
             </div>
