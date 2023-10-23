@@ -25,7 +25,7 @@
 ### Select
 - Optimized and fixed the algorithm for determining Flipped Islands.
 
-### Treemsheet
+### Trimsheet
 
 - Added the ability to **export Trims to bitmap format (PNG, BMP, TGA)**.
 - Added the ability to **import Trimsheet from DECALmachine add-on**.
