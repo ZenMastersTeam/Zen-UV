@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>Transform Tool - Zen UV 4.1 for Blender</title>
+    <title>Transform Tool - Zen UV 4.2 for Blender</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
         <link href="../css/version-select.css" rel="stylesheet" />
     
       <script>
@@ -18,19 +18,18 @@
         var mkdocs_page_url = null;
       </script>
     
-    <script src="../js/jquery-3.6.0.min.js" defer></script>
     <!--[if lt IE 9]>
       <script src="../js/html5shiv.min.js"></script>
     <![endif]-->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
-      <script>hljs.initHighlightingOnLoad();</script> 
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-7XHJ910WF8"></script>
       <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
 
-        gtag('config', 'G-7XHJ910WF8');
+        gtag('config', "G-7XHJ910WF8");
       </script>
 </head>
 
@@ -40,7 +39,7 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
-          <a href=".." class="icon icon-home"> Zen UV 4.1 for Blender
+          <a href=".." class="icon icon-home"> Zen UV 4.2 for Blender
         </a><div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
       <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
@@ -184,15 +183,15 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
       <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="..">Zen UV 4.1 for Blender</a>
+          <a href="..">Zen UV 4.2 for Blender</a>
         
       </nav>
       <div class="wy-nav-content">
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
-    <li><a href=".." class="icon icon-home" aria-label="Docs"></a> &raquo;</li>
-          <li>Modules &raquo;</li>
-      <li>Transform Tool</li>
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Modules</li>
+      <li class="breadcrumb-item active">Transform Tool</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -219,13 +218,13 @@
 <h3 id="tool-modes">Tool Modes<a class="headerlink" href="#tool-modes" title="Permanent link"></a></h3>
 <p>Using different modes you can <strong>Move, Rotate, Scale</strong> selected Islands or Faces/Edges/Vertices in 3D Viewport and UV Editor.</p>
 <h4 id="move-g">Move <code>G</code><a class="headerlink" href="#move-g" title="Permanent link"></a></h4>
-<p>Move Mode is representing <a href="trimsheet_operators.md/#move-in-trim"><strong>Move in Trim</strong></a> operator and moves selected Islands or Faces/Edges/Vertices.</p>
+<p>Move Mode is representing <a href="../trimsheet_operators/#move-in-trim"><strong>Move in Trim</strong></a> operator and moves selected Islands or Faces/Edges/Vertices.</p>
 <p><img alt="Mode Move" src="../img/screen/transform_tool/tt_move.gif" /></p>
 <h4 id="rotate-r">Rotate <code>R</code><a class="headerlink" href="#rotate-r" title="Permanent link"></a></h4>
-<p>Rotate Mode is representing <a href="trimsheet_operators.md/#rotate-in-trim"><strong>Rotate in Trim</strong></a> operator and rotates selected Islands or Faces/Edges/Vertices.</p>
+<p>Rotate Mode is representing <a href="../trimsheet_operators/#rotate-in-trim"><strong>Rotate in Trim</strong></a> operator and rotates selected Islands or Faces/Edges/Vertices.</p>
 <p><img alt="Mode Rotate" src="../img/screen/transform_tool/tt_rotate.gif" /></p>
 <h4 id="scale-s">Scale <code>S</code><a class="headerlink" href="#scale-s" title="Permanent link"></a></h4>
-<p>Scale Mode is representing <a href="trimsheet_operators.md/#scale-in-trim"><strong>Scale in Trim</strong></a> operator and scales selected Islands or Faces/Edges/Vertices.</p>
+<p>Scale Mode is representing <a href="../trimsheet_operators/#scale-in-trim"><strong>Scale in Trim</strong></a> operator and scales selected Islands or Faces/Edges/Vertices.</p>
 <p><img alt="Mode Scale" src="../img/screen/transform_tool/tt_scale.gif" /></p>
 <h3 id="display-trims-d">Display Trims <code>D</code><a class="headerlink" href="#display-trims-d" title="Permanent link"></a></h3>
 <p>Activating Display Trip option in the Top part you activate Trims visibility.
@@ -272,7 +271,7 @@ If you don&rsquo;t have any Trims the UV Space will be counted as one Trim.</p>
 </ul>
 <h3 id="transform-handles-tools">Transform Handles Tools<a class="headerlink" href="#transform-handles-tools" title="Permanent link"></a></h3>
 <h4 id="align-default">Align <code>Default</code><a class="headerlink" href="#align-default" title="Permanent link"></a></h4>
-<p>Align tool is representing <a href="trimsheet_operators.md/#move-in-trim"><strong>Align to Trim</strong></a> operator and align selected Islands or Faces/Edges/Vertices to active Trim.</p>
+<p>Align tool is representing <a href="../trimsheet_operators/#align-to-trim"><strong>Align to Trim</strong></a> operator and align selected Islands or Faces/Edges/Vertices to active Trim.</p>
 <p><img alt="Transform Handles Align" src="../img/screen/transform_tool/tt_transform_handles_align.gif" /></p>
 <h4 id="rotate-90-and-orient-ctrl">Rotate 90&rsquo; and Orient <code>Ctrl</code><a class="headerlink" href="#rotate-90-and-orient-ctrl" title="Permanent link"></a></h4>
 <p>Corner Point rotates Islands + 90&rsquo;(CW). The green corner Point - 90&rsquo;(CCW).</p>
@@ -280,13 +279,13 @@ If you don&rsquo;t have any Trims the UV Space will be counted as one Trim.</p>
 <p>Other Points Orients Islands Horizontally, Vertically, Automatically (Central Point).</p>
 <p><img alt="Transform Handles Orient" src="../img/screen/transform_tool/tt_transform_handles_orient.gif" /></p>
 <h4 id="fit-shift">Fit <code>Shift</code><a class="headerlink" href="#fit-shift" title="Permanent link"></a></h4>
-<p>Fit tool is representing <a href="trimsheet_operators.md/#fit-to-trim"><strong>Move to Trim</strong></a> operator and fits selected Islands or Faces/Edges/Vertices into active Trim.</p>
+<p>Fit tool is representing <a href="../trimsheet_operators/#fit-to-trim"><strong>Fit to Trim</strong></a> operator and fits selected Islands or Faces/Edges/Vertices into active Trim.</p>
 <p><img alt="Transform Handles Fit" src="../img/screen/transform_tool/tt_transform_handles_fit.gif" /></p>
 <h4 id="move-and-fit-ctrl-shift-scroll">Move and Fit <code>Ctrl + Shift + Scroll</code><a class="headerlink" href="#move-and-fit-ctrl-shift-scroll" title="Permanent link"></a></h4>
 <p>Using this tool you can Scroll between Trims and Fit your Islands in the same moment.</p>
 <p><img alt="Transform Handles Fit Scroll" src="../img/screen/transform_tool/tt_transform_handles_fit_scroll.gif" /></p>
 <h4 id="flip-ctrl-shift">Flip <code>Ctrl + Shift</code><a class="headerlink" href="#flip-ctrl-shift" title="Permanent link"></a></h4>
-<p>Flip tool is representing <a href="trimsheet_operators.md/#move-in-trim"><strong>Flip in Trim</strong></a> operator and flips selected Islands or Faces/Edges/Vertices.</p>
+<p>Flip tool is representing <a href="../trimsheet_operators/#flip-in-trim"><strong>Flip in Trim</strong></a> operator and flips selected Islands or Faces/Edges/Vertices.</p>
 <p><img alt="Transform Handles Flip" src="../img/screen/transform_tool/tt_transform_handles_flip.gif" /></p>
 <h4 id="set-pivot-double-click">Set Pivot <code>Double Click</code><a class="headerlink" href="#set-pivot-double-click" title="Permanent link"></a></h4>
 <p>Double click on Transform Handle Point sets Pivot for Transform operations. </p>
@@ -369,15 +368,16 @@ Viewport Screen Selector will be always on top of your scene in 2D form.</p>
     
   </span>
 </div>
-    <script>var base_url = '..';</script>
-    <script src="../js/theme_extra.js" defer></script>
-    <script src="../js/theme.js" defer></script>
-      <script src="../search/main.js" defer></script>
-      <script src="../js/version-select.js" defer></script>
-    <script defer>
-        window.onload = function () {
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+      <script src="../js/version-select.js"></script>
+    <script>
+        jQuery(function () {
             SphinxRtdTheme.Navigation.enable(true);
-        };
+        });
     </script>
 
 </body>

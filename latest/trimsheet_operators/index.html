@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>Trim Sheet Operators - Zen UV 4.1 for Blender</title>
+    <title>Trim Sheet Operators - Zen UV 4.2 for Blender</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
         <link href="../css/version-select.css" rel="stylesheet" />
     
       <script>
@@ -18,19 +18,18 @@
         var mkdocs_page_url = null;
       </script>
     
-    <script src="../js/jquery-3.6.0.min.js" defer></script>
     <!--[if lt IE 9]>
       <script src="../js/html5shiv.min.js"></script>
     <![endif]-->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
-      <script>hljs.initHighlightingOnLoad();</script> 
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-7XHJ910WF8"></script>
       <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
 
-        gtag('config', 'G-7XHJ910WF8');
+        gtag('config', "G-7XHJ910WF8");
       </script>
 </head>
 
@@ -40,7 +39,7 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
-          <a href=".." class="icon icon-home"> Zen UV 4.1 for Blender
+          <a href=".." class="icon icon-home"> Zen UV 4.2 for Blender
         </a><div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
       <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
@@ -158,15 +157,15 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
       <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="..">Zen UV 4.1 for Blender</a>
+          <a href="..">Zen UV 4.2 for Blender</a>
         
       </nav>
       <div class="wy-nav-content">
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
-    <li><a href=".." class="icon icon-home" aria-label="Docs"></a> &raquo;</li>
-          <li>Trim Sheets &raquo;</li>
-      <li>Trim Sheet Operators</li>
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Trim Sheets</li>
+      <li class="breadcrumb-item active">Trim Sheet Operators</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -245,12 +244,60 @@
 <p>Rotate islands inside active trim</p>
 <h2 id="flip-in-trim">Flip In Trim<a class="headerlink" href="#flip-in-trim" title="Permanent link"></a></h2>
 <p>Flip islands relative to the center of active trim</p>
+<table>
+<thead>
+<tr>
+<th><img alt="" src="../img/screen/trimsheet/flip_in_trim.gif" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
 <h2 id="fit-to-trim">Fit To Trim<a class="headerlink" href="#fit-to-trim" title="Permanent link"></a></h2>
 <p>Fit islands into active trim</p>
+<table>
+<thead>
+<tr>
+<th><img alt="" src="../img/screen/trimsheet/fit_to_trim.gif" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
 <h2 id="align-to-trim">Align To Trim<a class="headerlink" href="#align-to-trim" title="Permanent link"></a></h2>
 <p>Align islands to active trim</p>
+<table>
+<thead>
+<tr>
+<th><img alt="" src="../img/screen/trimsheet/align_to_trim.gif" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
 <h2 id="scale-in-trim">Scale In Trim<a class="headerlink" href="#scale-in-trim" title="Permanent link"></a></h2>
 <p>Scale in active trim. Islands outside active trim will be ignored if <strong>Lock in Trim</strong> option is set</p>
+<table>
+<thead>
+<tr>
+<th><img alt="" src="../img/screen/trimsheet/scale_in_trim.gif" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
 <h2 id="hotspot-mapping">Hotspot Mapping<a class="headerlink" href="#hotspot-mapping" title="Permanent link"></a></h2>
 <p>Hotspot Mapping is a UV mapping method that compares the parameters of Islands and Trims and makes automatic mapping based on the given settings.</p>
 <p><a href="../trimsheet_hotspot/"><strong>Follow the link</strong></a> to find more information about Hotspot Mapping.</p>
@@ -293,15 +340,16 @@
     
   </span>
 </div>
-    <script>var base_url = '..';</script>
-    <script src="../js/theme_extra.js" defer></script>
-    <script src="../js/theme.js" defer></script>
-      <script src="../search/main.js" defer></script>
-      <script src="../js/version-select.js" defer></script>
-    <script defer>
-        window.onload = function () {
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+      <script src="../js/version-select.js"></script>
+    <script>
+        jQuery(function () {
             SphinxRtdTheme.Navigation.enable(true);
-        };
+        });
     </script>
 
 </body>
