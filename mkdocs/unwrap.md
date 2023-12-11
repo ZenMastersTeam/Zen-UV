@@ -18,7 +18,7 @@ Zen Unwrap is a context-dependent operator. The result of its operation depends 
 - If the marking is disabled in the operator, the division into islands will still occur. Seams will remain and lead to desync of what is happening in **UV Editor** and **3D Viewport**.
 
 !!! tip
-    Zen Unwrup will ignore existing UV Borders if they are not marked as Seams.
+    Zen Unwrap will ignore existing UV Borders if they are not marked as Seams.
     
     - To mark them use [**Seams by UV Borders**](#seams-by-uv-borders) operator.
     - To save not only UV Borders but Islands [**Tag Finished**](#tag-finished) operator. 
