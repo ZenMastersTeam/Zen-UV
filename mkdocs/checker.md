@@ -158,6 +158,33 @@ Display in 3D Viewport faces selected in UV Editor when UV Sync is Off.
 
 ---
 
+
+### How to set hotkey to specific draw mode
+1. Right click on desired draw mode
+
+| ![](img/screen/tex_checker/RightClick.png) |
+|---|
+| |
+
+2. Assign hotkey
+3. Find hotkey in the list of hotkeys
+4. Copy context attribute path to the clipboard
+
+| ![](img/screen/tex_checker/hotkey_path_copy.png) |
+|---|
+| |
+
+5. Change operator name to `wm.context_toggle_enum`
+6. Paste context attribute from the clipboard
+7. Set 1 enum value to desired mode and set 2 enum value to `NONE`.
+
+| ![](img/screen/tex_checker/change_op_name.png) |
+|---|
+| |
+
+
+---
+
 ### Tools
 
 Tools for analyzing and finding Mesh errors that can negatively affect UV operations.
