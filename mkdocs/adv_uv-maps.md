@@ -4,13 +4,10 @@ It allows to select the active, add, remove, and rename UV Maps from the list.
 
 If more than one object is selected, you can synchronously work with UV maps of the selected objects.
 
-| Edit Mesh |
-|---|
-| ![](img/screen/adv_uv_map/adv_uv_map.png) |
-
-| Object |
-|---|
-| ![](img/screen/adv_uv_map/adv_uv_map__obj.png) |
+!!! Panel
+     | Edit Mode | Object Mode| 
+     |---|---|  
+     | ![](img/screen/adv_uv_map/adv_uv_map.png) |![](img/screen/adv_uv_map/adv_uv_map__obj.png)|  
 
 <!-- !!! tip
     Watch the video explaining how **Advanced UV Maps** works.
@@ -54,7 +51,7 @@ The list can work in two modes:
 | ![](img/screen/adv_uv_map/uvmaps_render_not_active.png) | UV Map is not active for render |
 
 ### UV Maps Status Detection
-Advanced Maps system detects synchronization status of all UV Maps in the selected objects. It is possible to disable some parameters which are not neccessary for you to detect
+Advanced Maps system detects synchronization status of all UV Maps in the selected objects. It is possible to disable some parameters which are not neccessary for you to detect.
 
 | ![](img/screen/adv_uv_map/uvmaps_status_detection.png) |
 |---|
@@ -110,23 +107,106 @@ If your model requires UV Maps to have the same postion, name, active or render 
 Allows transferring the UV coordinates between UV Maps.
 
 !!! note
-    Available in Edit Mesh mode if geometry of selecting objects is the same
+    Available in Edit Mesh mode if geometry of selected objects is the same.
 
 | ![](img/screen/adv_uv_map/copy_paste_UV.gif) |
 |---|
-| |
 
-**Copy UV** - Copy the UV coordinates of the **selection**.
+#### Copy UV 
 
-**Paste UV** - Paste the UV coordinates.
+Copy the UV coordinates of the selection.
+
+#### Paste UV 
+
+Paste the UV coordinates.
+
+---
+
+## Adv UV Maps Tools
+
+#### Clean UV Maps
+
+Remove all inactive UV Maps.
+
+![](img/screen/adv_uv_map/adv_uv_map_clean_inactive.gif)
+
+#### Set UV Map Name by Index
+
+Set UV Map name by its Index in the list.
+
+![](img/screen/adv_uv_map/adv_uv_map_rename_by_index.gif)
+
+---
 
 ## Transfer UV
 | ![](img/screen/adv_uv_map/transfer_uv_maps.png) |
 |---|
-| |
+
+![](img/screen/adv_uv_map/transfer_uv_maps.gif)
 
 | Transfer Modes | |
 |---|---|
 | Matching geometry | Objects must be of type mesh and must have a matching topology |
 | Advanced | Transfer UV maps by generating an interpolated mapping between source and target mesh elements |
 | Layout | Transfer layout of UV maps from active to selected meshes |
+
+---
+
+## UDIM tools
+
+[**UDIM workflow**](https://docs.blender.org/manual/en/latest/modeling/meshes/uv/workflows/udims.html) is a special workflow that allow to spread UV islands across several different textures of the model.
+
+!!! note
+    Available only in UV Editor context in Edit Mode.
+    The image Source must be set to 'UDIM Tiles'.
+
+![](img/screen/adv_uv_map/adv_uv_map_udim.png)
+
+
+#### Fill Tile
+
+Fill the current tile with a generated texture.
+
+#### Add Missed
+
+Create the missing UDIM Tile at the Island location. 
+
+![](img/screen/adv_uv_map/adv_uv_map_udim_add_missed.png)
+
+
+| Options | |
+|---|---|
+| By Selection | Use selection to determine where where UDIM tile will be created|
+| In order | Create all the missing tiles in order until it reaches the last missed tile with the selection |
+| Fill | Fill tile with settings below |
+
+
+#### Set Active 
+
+Set the active UDIM Tile based on the selection. 
+
+![](img/screen/adv_uv_map/adv_uv_map_udim_set_active.gif)  
+
+#### Remove Active
+
+Remove the active UDIM Tile. 
+
+![](img/screen/adv_uv_map/adv_uv_map_udim_remove_active.gif) 
+
+#### Select in Active 
+
+Select Islands in bounding box of active UDIM Tile or UV Area.
+
+![](img/screen/adv_uv_map/adv_uv_map_udim_select_active.gif) 
+
+#### Move to active
+
+Move Islands to active or selected by number UDIM Tile. 
+
+![](img/screen/adv_uv_map/adv_uv_map_udim_move_active.gif) 
+
+#### Set Active
+
+Set active UDIM Tile by eyedropper.
+
+![](img/screen/adv_uv_map/adv_uv_map_udim_set_active_eyedropper.gif)
