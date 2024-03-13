@@ -8,7 +8,7 @@
     <title>Select - Zen UV 4.3 for Blender</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
         <link href="../css/version-select.css" rel="stylesheet" />
     
       <script>
@@ -18,18 +18,19 @@
         var mkdocs_page_url = null;
       </script>
     
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
     <!--[if lt IE 9]>
       <script src="../js/html5shiv.min.js"></script>
     <![endif]-->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
-      <script>hljs.highlightAll();</script> 
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-7XHJ910WF8"></script>
       <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
 
-        gtag('config', "G-7XHJ910WF8");
+        gtag('config', 'G-7XHJ910WF8');
       </script>
 </head>
 
@@ -84,6 +85,10 @@
     <li class="toctree-l2"><a class="reference internal" href="#select-uv-borders">Select UV Borders</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#similar">Similar</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#select-in-tile">Select in Tile</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#select-half">Select Half</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#select-edges-by-direction">Select Edges By Direction</a>
     </li>
@@ -157,9 +162,9 @@
       <div class="wy-nav-content">
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
-    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
-          <li class="breadcrumb-item">Modules</li>
-      <li class="breadcrumb-item active">Select</li>
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a> &raquo;</li>
+          <li>Modules &raquo;</li>
+      <li>Select</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -171,13 +176,25 @@
                 <h1 id="select">Select<a class="headerlink" href="#select" title="Permanent link"></a></h1>
 <div class="admonition panel">
 <p class="admonition-title">Panel</p>
-<p><img alt="Select" src="../img/screen/select/select_main_panel.png" /></p>
+<table>
+<thead>
+<tr>
+<th>3D Viewport</th>
+<th>UV Editor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="" src="../img/screen/select/select_main_panel.png" /></td>
+<td><img alt="" src="../img/screen/select/select_main_panel_uv.png" /></td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>Select <strong>Seam</strong> and <strong>Sharp</strong> are absent on the panel in <strong>UV Editor</strong>.
 To use these operators you need to switch to <strong>3D Viewport</strong> context. </p>
-<p><img alt="Select" src="../img/screen/select/select_main_panel_uv.png" /></p>
 </div>
 <hr />
 <h3 id="islands">Islands <img alt="" src="../img/icons/select.png" /><a class="headerlink" href="#islands" title="Permanent link"></a></h3>
@@ -204,6 +221,13 @@ To use these operators you need to switch to <strong>3D Viewport</strong> contex
 <h3 id="similar">Similar<a class="headerlink" href="#similar" title="Permanent link"></a></h3>
 <p>Select Islands similar to those selected.</p>
 <p><img alt="Select_Similar" src="../img/gifs/select_operators/Select_Similar.gif" /></p>
+<h3 id="select-in-tile">Select in Tile<a class="headerlink" href="#select-in-tile" title="Permanent link"></a></h3>
+<p>Select Islands in bounding box of active UDIM Tile or UV Area.</p>
+<p><img alt="" src="../img/screen/adv_uv_map/adv_uv_map_udim_select_active.gif" /> </p>
+<h3 id="select-half">Select Half<a class="headerlink" href="#select-half" title="Permanent link"></a></h3>
+<p>Select part of the model according to its location relative to the coordinate axis.</p>
+<p><img alt="Select_Half" src="../img/screen/select/select_half.gif" /></p>
+<p><img alt="Select_Half" src="../img/screen/select/select_half_zero.gif" /></p>
 <h3 id="select-edges-by-direction">Select Edges By Direction<a class="headerlink" href="#select-edges-by-direction" title="Permanent link"></a></h3>
 <p>Select edges by direction along U or V axis.</p>
 <p><img alt="Select_Edges_by_Direction" src="../img/gifs/select_operators/Select_Edges_by_Direction.gif" /></p>
@@ -274,16 +298,15 @@ To use these operators you need to switch to <strong>3D Viewport</strong> contex
     
   </span>
 </div>
-    <script src="../js/jquery-3.6.0.min.js"></script>
-    <script>var base_url = "..";</script>
-    <script src="../js/theme_extra.js"></script>
-    <script src="../js/theme.js"></script>
-      <script src="../search/main.js"></script>
-      <script src="../js/version-select.js"></script>
-    <script>
-        jQuery(function () {
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+      <script src="../js/version-select.js" defer></script>
+    <script defer>
+        window.onload = function () {
             SphinxRtdTheme.Navigation.enable(true);
-        });
+        };
     </script>
 
 </body>
