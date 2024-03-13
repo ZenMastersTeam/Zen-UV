@@ -8,7 +8,7 @@
     <title>Advanced UV Maps - Zen UV 4.3 for Blender</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
         <link href="../css/version-select.css" rel="stylesheet" />
     
       <script>
@@ -18,18 +18,19 @@
         var mkdocs_page_url = null;
       </script>
     
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
     <!--[if lt IE 9]>
       <script src="../js/html5shiv.min.js"></script>
     <![endif]-->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
-      <script>hljs.highlightAll();</script> 
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-7XHJ910WF8"></script>
       <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
 
-        gtag('config', "G-7XHJ910WF8");
+        gtag('config', 'G-7XHJ910WF8');
       </script>
 </head>
 
@@ -82,8 +83,40 @@
     <li class="toctree-l2"><a class="reference internal" href="#sync-uv-maps">Sync UV Maps</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#copy-uv-paste-uv">Copy UV / Paste UV</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#copy-uv">Copy UV</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#paste-uv">Paste UV</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#adv-uv-maps-tools">Adv UV Maps Tools</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#clean-uv-maps">Clean UV Maps</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#set-uv-map-name-by-index">Set UV Map Name by Index</a>
+    </li>
+        </ul>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#transfer-uv">Transfer UV</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#udim-tools">UDIM tools</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#fill-tile">Fill Tile</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#add-missed">Add Missed</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#set-active">Set Active</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#remove-active">Remove Active</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#select-in-active">Select in Active</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#move-to-active">Move to active</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#set-active_1">Set Active</a>
+    </li>
+        </ul>
     </li>
     </ul>
                   </li>
@@ -151,9 +184,9 @@
       <div class="wy-nav-content">
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
-    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
-          <li class="breadcrumb-item">Modules</li>
-      <li class="breadcrumb-item active">Advanced UV Maps</li>
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a> &raquo;</li>
+          <li>Modules &raquo;</li>
+      <li>Advanced UV Maps</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -166,30 +199,23 @@
 <p>Advanced UV Maps section created to have quick access to Object Data Properties — UV Maps.
 It allows to select the active, add, remove, and rename UV Maps from the list.</p>
 <p>If more than one object is selected, you can synchronously work with UV maps of the selected objects.</p>
+<div class="admonition panel">
+<p class="admonition-title">Panel</p>
 <table>
 <thead>
 <tr>
-<th>Edit Mesh</th>
+<th>Edit Mode</th>
+<th>Object Mode</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><img alt="" src="../img/screen/adv_uv_map/adv_uv_map.png" /></td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th>Object</th>
-</tr>
-</thead>
-<tbody>
-<tr>
 <td><img alt="" src="../img/screen/adv_uv_map/adv_uv_map__obj.png" /></td>
 </tr>
 </tbody>
 </table>
+</div>
 <!-- !!! tip
     Watch the video explaining how **Advanced UV Maps** works.
 
@@ -304,7 +330,7 @@ It allows to select the active, add, remove, and rename UV Maps from the list.</
 </tbody>
 </table>
 <h3 id="uv-maps-status-detection">UV Maps Status Detection<a class="headerlink" href="#uv-maps-status-detection" title="Permanent link"></a></h3>
-<p>Advanced Maps system detects synchronization status of all UV Maps in the selected objects. It is possible to disable some parameters which are not neccessary for you to detect</p>
+<p>Advanced Maps system detects synchronization status of all UV Maps in the selected objects. It is possible to disable some parameters which are not neccessary for you to detect.</p>
 <table>
 <thead>
 <tr>
@@ -412,7 +438,7 @@ It allows to select the active, add, remove, and rename UV Maps from the list.</
 <p>Allows transferring the UV coordinates between UV Maps.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Available in Edit Mesh mode if geometry of selecting objects is the same</p>
+<p>Available in Edit Mesh mode if geometry of selected objects is the same.</p>
 </div>
 <table>
 <thead>
@@ -426,8 +452,19 @@ It allows to select the active, add, remove, and rename UV Maps from the list.</
 </tr>
 </tbody>
 </table>
-<p><strong>Copy UV</strong> - Copy the UV coordinates of the <strong>selection</strong>.</p>
-<p><strong>Paste UV</strong> - Paste the UV coordinates.</p>
+<h4 id="copy-uv">Copy UV<a class="headerlink" href="#copy-uv" title="Permanent link"></a></h4>
+<p>Copy the UV coordinates of the selection.</p>
+<h4 id="paste-uv">Paste UV<a class="headerlink" href="#paste-uv" title="Permanent link"></a></h4>
+<p>Paste the UV coordinates.</p>
+<hr />
+<h2 id="adv-uv-maps-tools">Adv UV Maps Tools<a class="headerlink" href="#adv-uv-maps-tools" title="Permanent link"></a></h2>
+<h4 id="clean-uv-maps">Clean UV Maps<a class="headerlink" href="#clean-uv-maps" title="Permanent link"></a></h4>
+<p>Remove all inactive UV Maps.</p>
+<p><img alt="" src="../img/screen/adv_uv_map/adv_uv_map_clean_inactive.gif" /></p>
+<h4 id="set-uv-map-name-by-index">Set UV Map Name by Index<a class="headerlink" href="#set-uv-map-name-by-index" title="Permanent link"></a></h4>
+<p>Set UV Map name by its Index in the list.</p>
+<p><img alt="" src="../img/screen/adv_uv_map/adv_uv_map_rename_by_index.gif" /></p>
+<hr />
 <h2 id="transfer-uv">Transfer UV<a class="headerlink" href="#transfer-uv" title="Permanent link"></a></h2>
 <table>
 <thead>
@@ -441,6 +478,7 @@ It allows to select the active, add, remove, and rename UV Maps from the list.</
 </tr>
 </tbody>
 </table>
+<p><img alt="" src="../img/screen/adv_uv_map/transfer_uv_maps.gif" /></p>
 <table>
 <thead>
 <tr>
@@ -463,6 +501,57 @@ It allows to select the active, add, remove, and rename UV Maps from the list.</
 </tr>
 </tbody>
 </table>
+<hr />
+<h2 id="udim-tools">UDIM tools<a class="headerlink" href="#udim-tools" title="Permanent link"></a></h2>
+<p><a href="https://docs.blender.org/manual/en/latest/modeling/meshes/uv/workflows/udims.html"><strong>UDIM workflow</strong></a> is a special workflow that allow to spread UV islands across several different textures of the model.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Available only in UV Editor context in Edit Mode.
+The image Source must be set to &lsquo;UDIM Tiles&rsquo;.</p>
+</div>
+<p><img alt="" src="../img/screen/adv_uv_map/adv_uv_map_udim.png" /></p>
+<h4 id="fill-tile">Fill Tile<a class="headerlink" href="#fill-tile" title="Permanent link"></a></h4>
+<p>Fill the current tile with a generated texture.</p>
+<h4 id="add-missed">Add Missed<a class="headerlink" href="#add-missed" title="Permanent link"></a></h4>
+<p>Create the missing UDIM Tile at the Island location. </p>
+<p><img alt="" src="../img/screen/adv_uv_map/adv_uv_map_udim_add_missed.png" /></p>
+<table>
+<thead>
+<tr>
+<th>Options</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>By Selection</td>
+<td>Use selection to determine where where UDIM tile will be created</td>
+</tr>
+<tr>
+<td>In order</td>
+<td>Create all the missing tiles in order until it reaches the last missed tile with the selection</td>
+</tr>
+<tr>
+<td>Fill</td>
+<td>Fill tile with settings below</td>
+</tr>
+</tbody>
+</table>
+<h4 id="set-active">Set Active<a class="headerlink" href="#set-active" title="Permanent link"></a></h4>
+<p>Set the active UDIM Tile based on the selection. </p>
+<p><img alt="" src="../img/screen/adv_uv_map/adv_uv_map_udim_set_active.gif" />  </p>
+<h4 id="remove-active">Remove Active<a class="headerlink" href="#remove-active" title="Permanent link"></a></h4>
+<p>Remove the active UDIM Tile. </p>
+<p><img alt="" src="../img/screen/adv_uv_map/adv_uv_map_udim_remove_active.gif" /> </p>
+<h4 id="select-in-active">Select in Active<a class="headerlink" href="#select-in-active" title="Permanent link"></a></h4>
+<p>Select Islands in bounding box of active UDIM Tile or UV Area.</p>
+<p><img alt="" src="../img/screen/adv_uv_map/adv_uv_map_udim_select_active.gif" /> </p>
+<h4 id="move-to-active">Move to active<a class="headerlink" href="#move-to-active" title="Permanent link"></a></h4>
+<p>Move Islands to active or selected by number UDIM Tile. </p>
+<p><img alt="" src="../img/screen/adv_uv_map/adv_uv_map_udim_move_active.gif" /> </p>
+<h4 id="set-active_1">Set Active<a class="headerlink" href="#set-active_1" title="Permanent link"></a></h4>
+<p>Set active UDIM Tile by eyedropper.</p>
+<p><img alt="" src="../img/screen/adv_uv_map/adv_uv_map_udim_set_active_eyedropper.gif" /></p>
               
             </div>
           </div><footer>
@@ -498,16 +587,15 @@ It allows to select the active, add, remove, and rename UV Maps from the list.</
     
   </span>
 </div>
-    <script src="../js/jquery-3.6.0.min.js"></script>
-    <script>var base_url = "..";</script>
-    <script src="../js/theme_extra.js"></script>
-    <script src="../js/theme.js"></script>
-      <script src="../search/main.js"></script>
-      <script src="../js/version-select.js"></script>
-    <script>
-        jQuery(function () {
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+      <script src="../js/version-select.js" defer></script>
+    <script defer>
+        window.onload = function () {
             SphinxRtdTheme.Navigation.enable(true);
-        });
+        };
     </script>
 
 </body>
