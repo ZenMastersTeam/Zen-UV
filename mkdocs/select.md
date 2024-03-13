@@ -1,13 +1,14 @@
 # Select
 
 !!! Panel
-    ![Select](img/screen/select/select_main_panel.png)
+    | 3D Viewport | UV Editor| 
+    |---|---|  
+    | ![](img/screen/select/select_main_panel.png) |![](img/screen/select/select_main_panel_uv.png)| 
 
 !!! Tip 
     Select **Seam** and **Sharp** are absent on the panel in **UV Editor**.
     To use these operators you need to switch to **3D Viewport** context. 
 
-    ![Select](img/screen/select/select_main_panel_uv.png)
 ---
 ### Islands ![](img/icons/select.png)
 Select Islands by selected edge/face of the Islands.
@@ -48,6 +49,18 @@ Select existing UV Borders.
 Select Islands similar to those selected.
 
 ![Select_Similar](img/gifs/select_operators/Select_Similar.gif)
+
+### Select in Tile
+Select Islands in bounding box of active UDIM Tile or UV Area.
+
+![](img/screen/adv_uv_map/adv_uv_map_udim_select_active.gif) 
+
+### Select Half
+Select part of the model according to its location relative to the coordinate axis.
+
+![Select_Half](img/screen/select/select_half.gif)
+
+![Select_Half](img/screen/select/select_half_zero.gif)
 
 ### Select Edges By Direction
 Select edges by direction along U or V axis.
