@@ -2,7 +2,10 @@
 
 ## Zen Bundle
 
-All Zen add-ons in one place. Together is cheaper!
+All four Zen add-ons in one place! 
+
+!!! tip
+    By purchasing Zen Bundle you'll save 25%!
 
 ![](img/banners/bmarket-zen-bundle.jpg)
 
@@ -12,50 +15,61 @@ All Zen add-ons in one place. Together is cheaper!
 
 ## Zen UV
 
-Zen UV is not just a set of tools, it is ready to use pipeline for fast creating UV’s in Blender.
-It represents an intuitive system created by professionals and refined in real projects. Enjoy this experience with us!
+Zen UV is not just a set of tools, it is ready to use pipeline for fast creating UV’s in Blender. It represents an intuitive system created by professionals and refined in real projects. Enjoy this experience with us!
 
 ![](img/banners/bmarket-zen-uv.jpg)
 
 ![blendermarket icon](img/icons/blendermarket.png)  [**Blender Market**](https://www.blendermarket.com/products/zen-uv)    ![gumroad icon](img/icons/gumroad.png)  [**Gumroad**](https://gumroad.com/l/ZenUV4)
 
-[**Zen UV Documentation**](https://zen-masters.github.io/Zen-UV/)
+![documentation icon](img/icons/document.png) [**Zen UV Documentation**](https://zen-masters.github.io/Zen-UV/)
 
 ---
 
 ## Zen Sets
 
-Zen Sets is an add-on for creating, managing, and visualizing Collections and Mesh Element Groups. Save the selection of Verts / Edges / Faces / Objects to bring it back whenever you want, modify it, and display it by color in Viewport and UV Editor in a couple of clicks. Meet true Selection Sets for Blender!
+Zen Sets is an add-on for creating, managing, and visualizing native Vertex Groups, Face Maps and custom Zen Sets Groups based on Objects, Collections and Mesh Elements selection. Save the selection of Verts / Edges / Faces and Objects to bring it back whenever you want! Modify and display Groups by color in Viewport and UV Editor in a couple of clicks!
 
 ![](img/banners/bmarket-zen-sets.jpg)
 
 ![blendermarket icon](img/icons/blendermarket.png)  [**Blender Market**](https://www.blendermarket.com/products/zen-sets)    ![gumroad icon](img/icons/gumroad.png)  [**Gumroad**](https://gumroad.com/l/ZenSets)
 
-[**Zen Sets Documentation**](https://zen-masters.github.io/Zen-Sets/)
+![documentation icon](img/icons/document.png) [**Zen Sets Documentation**](https://zen-masters.github.io/Zen-Sets/)
+
+---
+
+## Zen Dock
+
+Zen Dock - window bar add-on for managing Areas in One Click! Add Custom Toggle Buttons with different contexts and directions for opening panels. Minimize, Maximize, Close and Restore Areas wherever you want!
+
+![](img/banners/bmarket-zen-dock.jpg)
+
+![blendermarket icon](img/icons/blendermarket.png)  [**Blender Market**](https://blendermarket.com/products/zen-dock)    ![gumroad icon](img/icons/gumroad.png)  [**Gumroad**](https://gumroad.com/l/zendock)
+
+![documentation icon](img/icons/document.png) [**Zen Dock Documentation**](https://zenmastersteam.github.io/Zen-Dock/)
 
 ---
 
 ## Zen BBQ
 
-Zen BBQ is an add-on for creating, adjusting, and visualizing Bevels in a couple of clicks! Are you tired of preparing geometry for the Subd or Bevel modifiers? Look no further! 
+Zen BBQ is an add-on for creating, adjusting, and visualizing Bevels in a couple of clicks! Are you tired of preparing geometry for the Subd or Bevel modifiers? Look no further!
 
 ![](img/banners/bmarket-zen-bbq.jpg)
 
 ![blendermarket icon](img/icons/blendermarket.png)  [**Blender Market**](https://www.blendermarket.com/products/zen-bbq)    ![gumroad icon](img/icons/gumroad.png)  [**Gumroad**](https://gumroad.com/l/ZenBBQ)
 
-[**Zen BBQ Documentation**](https://zen-masters.github.io/Zen-BBQ/)
+![documentation icon](img/icons/document.png) [**Zen BBQ Documentation**](https://zen-masters.github.io/Zen-BBQ/)
 
 ---
 
 ## Checker
 
-Check the state of UVs (FREE).
+Check the state of UV’s on the model easily with Checker for Blender! **FREE**.
 
 ![](img/banners/bmarket-checker.jpg)
 
 ![blendermarket icon](img/icons/blendermarket.png)  [**Blender Market**](https://www.blendermarket.com/products/checker)    ![gumroad icon](img/icons/gumroad.png)  [**Gumroad**](https://gumroad.com/l/zenuv_checker)
 
-[**Checker Documentation**](checker.md)
+![documentation icon](img/icons/document.png) [**Checker Documentation**](checker.md)
 
 ---
 

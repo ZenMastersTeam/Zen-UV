@@ -1,4 +1,4 @@
-# Sticky UV Editor.
+# Sticky UV Editor
 
 Sticky UV Editor this is a system that allows opening UV Editor on the left or the right from the active 3D Viewport or as a separate window. These actions can be done by shortcuts or using a widget in the 3D Viewport.
 
@@ -8,7 +8,7 @@ Sticky UV Editor this is a system that allows opening UV Editor on the left or t
 
 The side opening UV Editor depends on the on-screen position of the widget.
 
-## Sticky UV Editor Properties.
+## Sticky UV Editor Properties
 
 The properties of the Sticky UV Editor are placed in the addon preferences.
 

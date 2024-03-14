@@ -12,10 +12,6 @@
 — Go to **Edit** -> **Preferences** -> **Add-ons** -> **Zen UV** -> **Keymap**.
 <!-- blank line -->
 ----
-### I can't find the Zen UV panel in the N-panel.
-— Zen UV panel is only present in **Edit Mode.**
-<!-- blank line -->
-----
 <!-- blank line -->
 If you have any questions, please let us know:
 ![Discord](img/icons/services/discord-16.png) [**Discord**](https://discord.gg/wGpFeME)

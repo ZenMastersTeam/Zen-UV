@@ -1,8 +1,7 @@
 # Credits
 
 
-----
-## Zen UV Team
+## [**Zen Masters Team**](https://zenmasters.team/)
 
 A team of professionals who make your work with UVs in Blender enjoyable.
 

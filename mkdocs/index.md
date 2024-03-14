@@ -42,6 +42,9 @@
 -   [**Smooth by Sharp (Toggle).**](unwrap.md#smooth-by-sharp-toggle) Set smoothing for perfect normal map bakes in one click!
 - Quick support on the [**Discord channel**](https://discord.gg/wGpFeME).
 
+!!! Tip
+    [**Watch Learning Videos**](youtube_videos.md) to learn effective Zen UV workflows.
+
 ## Default Shortcuts
 - Zen UV Pie Menu ![Zen UV Pie Menu](img/icons/zen-uv@2x.png) --- `Alt + U`
 - Zen UV Popup Menu --- `Shift + U`

@@ -9,21 +9,28 @@ From a general perspective: you will get a tool which is much more user-friendly
 </div>
 <br>
 
-### New Systems
+<div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%;">
+<iframe src="https://www.youtube.com/embed/jFcVmGnNOho" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen="" seamless="" frameborder="0"></iframe>
+</div>
+<br>
 
-- **Compact UI system**. One panel to rule them all!
-- **Trimsheet system** to speed up the work with Trims. Create Trimsheets and Move, Rotate, Scale, Fit, Align and Flip Islands inside Trims.
-- **Zen UV Transform tool**. Move, Rotate, Scale, Fit, Align and Flip Islands in 3D View and UV Editor using **Zen UV Gizmo**.
+<div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%;">
+<iframe src="https://www.youtube.com/embed/JSPHDl57Fwk" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen="" seamless="" frameborder="0"></iframe>
+</div>
+<br>
 
-### New Operators
+<div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%;">
+<iframe src="https://www.youtube.com/embed/OOMVq53_mP4" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen="" seamless="" frameborder="0"></iframe>
+</div>
+<br>
 
-- **Display Flipped** operator to display Flipped Islands in UV Editor.
-- **Unwrap Constraint** operator to unwrap Islands along a certain axis.
-- **Match and Stitch** operator to match Islands position, rotation, scale and stitch vertices if it’s possible.
+Zen UV 4 provides a lot of new systems and operators!
+To check all the changes go here:
 
-And much more… to check all the changes [**go here**](changelg/release_note_4.0.md).
-
-Zen UV 4.0 release is the beginning of the new product cycle. We plan many updates for this version as well as many new tools. 
+- [**Version 4.0 Changelog**](changelg/release_note_4.0.md)
+- [**Version 4.1 Changelog**](changelg/release_note_4.1.md)
+- [**Version 4.2 Changelog**](changelg/release_note_4.2.md)
+- [**Version 4.3 Changelog**](changelg/release_note_4.3.md)
 
 ---
 
@@ -51,7 +58,7 @@ You will automatically receive an email with a unique discount code. All codes w
 4. Pay the difference.
 5. Enjoy the new version!
 
-#####Blender Market Discount Codes 
+##### Blender Market Discount Codes 
 If you want to upgrade from:
 
 - **Zen UV 3 STANDARD License (Single User)** to **Zen UV 4 STANDARD License (SIngle User)** use the discount code **zenuv3to4std**  when making a purchase – discount will be applied automatically.
@@ -62,11 +69,14 @@ If you want to upgrade from:
 
 - **Zen UV 3 STUDIO License (15-50 users)** to **Zen UV 4 STUDIO License (15-50 users)** use the discount code **zenuv3to4studio1550**  when making a purchase – discount will be applied automatically.
 
+!!! Blendermarket_bug
+    If the code on Blendermarket is marked as invalid, type the code manually.
+
 ---
 
-## I have bought all Zen Add-ons (Zen UV 3, Zen Sets, Zen BBQ). Can I get Zen Bundle for free with Zen UV 4 inside?
+## I have bought all Zen Add-ons (Zen UV 3, Zen Sets, Zen Dock, Zen BBQ). Can I get Zen Bundle for free with Zen UV 4 inside?
 
-Yes, if you have Zen UV 3, Zen Sets, Zen BBQ on one marketplace. Unfortunately, we cannot provide a free Bundle for those who have all our products but on different marketplaces (for example Zen UV 3, Zen Sets on Gumroad and Zen BBQ on Blendermarket) due to different marketplaces databases.
+Yes, if you have Zen UV 3, Zen Sets, Zen Dock, Zen BBQ on one marketplace. Unfortunately, we cannot provide a free Bundle for those who have all our products but on different marketplaces (for example Zen UV 3, Zen Sets on Gumroad and Zen BBQ on Blendermarket) due to different marketplaces databases.
 
 **Gumroad** 
 
@@ -107,5 +117,5 @@ Zen UV 4 supports Blender 2.93 and higher.
 
 ## I still having trouble upgrading Zen UV
 
-Please join our [Discord server](https://discord.com/invite/wGpFeME) and write message in **#zenuv-upgrade-3-to-4** channel.
+Please join our [**Discord server**](https://discord.com/invite/wGpFeME) and write message in **#zenuv-upgrade-3-to-4** channel.
 

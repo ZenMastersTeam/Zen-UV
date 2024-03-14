@@ -4,10 +4,10 @@
      ![Preferences](img/screen/preferences/MainPanel.png)
 
 ### ![](img/icons/zen-uv@2x.png) **Zen UV Keymaps**
-Set Shortcuts for Zen UV Menus.
+Set Shortcuts for Zen UV menus.
 
 ### **Reset Preferences**
-Reset Zen UV Preferences to the Default state.
+Reset Zen UV Preferences to default state.
 
 ---
 
@@ -28,8 +28,12 @@ Set Active Panels with holding Shift hotkey.
 ### **Popup Panel Width** 
 Set Popup menu `Shift + U` width.
 
+### **Selector Orientation**
+Orient Icons vertically or horizontally. 
+ ![Combo Panel](img/screen/preferences/preferences_selector_orientation.gif)
+
 ### **Panels Icon Style** 
-Chane Ison Style. If you don't see active panel icons with your current Blender color theme you can change the icon style.
+Change Icon Style. If you don't see active panel icons with your current Blender color theme you can change the icon style.
 
 ![Combo Panel](img/gifs/user_interface/compactui_5.gif)
 

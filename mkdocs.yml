@@ -3,6 +3,7 @@ site_description: Zen UV for Blender Documentation
 nav:
     - Getting Started:
         - Introduction: index.md
+        - Learning Videos: youtube_videos.md
         - Upgrade Zen UV 3 to Zen UV 4 FAQ: zenuv3_to_zenuv4.md
         - Installation and Update: installation.md
         - User Interface: user_interface.md
@@ -11,14 +12,14 @@ nav:
         - Seam Groups: seam_groups.md
         - Unwrap: unwrap.md
         - Select: select.md
-        - Pack: pack.md
-        - UV Checker: checker.md
-        - Texel Density: texel_density.md
         - Transform: transform.md
-        - Transform Tool: transform_tool.md
         - Stack: stack.md
-        - Sticky UV Editor: sticky_uv_editor.md
+        - Texel Density: texel_density.md
+        - UV Checker: checker.md
+        - Pack: pack.md
         - Preferences: preferences.md
+        - Transform Tool: transform_tool.md
+        - Sticky UV Editor: sticky_uv_editor.md
     - Trim Sheets:
         - trimsheet.md
         - Trim Sheet Creation: trimsheet_creation.md
