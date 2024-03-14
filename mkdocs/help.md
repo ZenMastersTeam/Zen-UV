@@ -3,19 +3,19 @@
 !!! Panel
     ![Help](img/screen/help/help.png)
 
-## [Documentation](index.md)
+### [Documentation](index.md)
 
-[Link](index.md) to the documentation of the current version.
+[**Link**](index.md) to the documentation of the current version.
 
-## ![Discord](img/icons/services/discord-16.png) [**Discord**](https://discord.gg/wGpFeME)
+### ![Discord](img/icons/services/discord-16.png) [**Discord**](https://discord.gg/wGpFeME)
 
-[Discord channel](https://discord.gg/wGpFeME) for user feedback, bug reports, and help with Zen UV.
+[**Discord channel**](https://discord.gg/wGpFeME) for user feedback, bug reports, and help with Zen UV.
 
-## Version
+### Version
 
 Current version of the [**Zen UV**](https://www.blendermarket.com/products/zen-uv).
 
-## Core
+### Core
 
 Current version of [**Zen UV Core Library**](https://sergeytyapkin.gumroad.com/l/ZenUVCore)
 If Zen UV Core Library is not installed you need to [**follow this instruction to install it**](installation.md#zen-uv-core-library-installation).
@@ -28,20 +28,26 @@ Here you can find models from [**Zen UV YouTube Playlist**](https://youtube.com/
 !!! Subpanel
      ![Preferences](img/screen/help/help_examples.gif)
 
+
 ### Update
 Update the list of examples.
 
 ### Download Example
 Download selected scene.
 
+### Open Folder  
+Open folder with downloaded Example scenes.
+
 ### Open
 Open selected scene.
 
 ### Open Website   
-Open selected website
+Open selected website.
 
 ### Delete
 Delete selected scene.
+
+
 
 ### More Info
 Open webpage with all the information about example.
