@@ -47,3 +47,5 @@ markdown_extensions:
     - admonition
     - toc:
         permalink: 
+
+copyright: <p>Copyright &copy; 2024 <a href="https://zenmasters.team/">Zen Masters</a></p>
