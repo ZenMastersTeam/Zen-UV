@@ -1,4 +1,7 @@
 # Pack
+
+This panel contains tools to pack UV Islands in UV Area.
+
 !!! Panel
     ![Pack](img/screen/pack/pack_main_panel.png)
 
@@ -8,7 +11,8 @@ Pack all Islands using selected [**Pack Engine**](pack.md#pack-engine).
 
 ### Margin
 
-Set space between Islands for Pack Islands operation. 
+Set space between Islands for Pack Islands operation.
+If you want to display Margin in UV Editor use **Display UV Borders** operator. 
 
 ![Pack_Margin](img/gifs/pack_operators/Pack_Margin.gif)
 
@@ -26,19 +30,30 @@ Set space between Islands for Pack Islands operation.
   
 ### UV Coverage
 
-Calculate Islands UV Coverage for active UV map. Increasing UV Coverage value leads to the increasing [Texel Density](texel_density.md) value, this in turn leads to the more efficient UV space usage and you can see more pixels on your model using the same texture.
- 
-The algorithm calculates total UV Islands area and shows the percentage in relation to the UV space. It can lead to the values more than 100% if you have Stacked Islands.
+Calculate Islands UV Coverage and Empty space for active UV map. Increasing UV Coverage value leads to the increasing [Texel Density](texel_density.md) value, this in turn leads to the more efficient UV space usage and you can see more pixels on your model using the same texture.
 
-![](img/gifs/pack_operators/Pack_UV_Coverage.gif)
+!!! SubPanel
+    ![](img/screen/pack/pack_coverage.png)
+
+![](img/screen/pack/pack_coverage.gif)
+
+#### Get UV Coverage
+
+Get Islands UV Coverage by given settings.
+
+
+|Options| |
+|---|---|
+| Generic | The size of each Island is calculated and added to the total value |
+| Selected | Show area for selected Islands only |
+| Exclude Stacked | Exclude Stacked Islands from calculations |
 
 !!! tip
     To increase UV Coverage value and achieve efficient UV space usage (80-90% of UV Coverage):
 
     - Cut big Islands into smaller pieces if you have too much empty space. 
     - Upscale small objects on UV map to fill empty space.
-    - Downscale UV Islands that are barely visible on the model (e.g. bottom, back parts, etc.).
-    - Use UVPackmaster Pack Engine with enabled Heuristic option.
+    - Downscale UV Islands that are barely visible on the model (e.g. bottom, back parts, etc.). In this case, don't forget to disable **Average Islands Scale** option when packing.
 
 ## Pack Engine
 
@@ -52,11 +67,23 @@ Zen UV supports three Pack engines:
 - [**UV Packmaster 2, 3**](https://uvpackmaster.com)
 - [**UV Packer**](https://www.uv-packer.com/)
 
+!!! tip
+    If you want to use specific **UV Packmaster Pack Engine** features that are not present in Zen UV interface you can transfer existing settings to UVPackmaster using this **Transfer settings** button.
+
+    ![](img/screen/pack/pack_sync.png)
+
+    Then you can open **UV Packmaster** interface and complete the setup.
+
 ### Pack Engine Preferences
 
 The main preferences of each Pack Engine are placed in Zen UV interface. To use all the preferences please go to the main interface of the engine (UV Packer, UV Packmaster). 
 
-Below we described General preferences for all Pack Engines. If you want to obtain information about Specific preferences for some engine, please refer to the documentation of the corresponding engine.
+Below listed preferences from all Pack Engines. If you want to obtain information about Specific preferences for some engine, please refer to the documentation of the corresponding engine.
+
+!!! SubPanel
+     | Blender|UVPackmaster|UV-Packer| 
+     |---|---|---|    
+     |![](img/screen/pack/pack_engine_blender.png)|![](img/screen/pack/pack_engine_uvpackmaster.png)|![](img/screen/pack/pack_engine_uvpacker.png) |
 
 #### Texture Size
 
@@ -76,63 +103,124 @@ Allow Pack Engine rotate Islands.
 
 #### Pack Selected Islands
 
-Pack only Selected Islands. Doesn't work for UV-Packer Pack Engine.
+Pack only Selected Islands.
+
+#### Fixed Scale
+
+Do not scale Islands during Pack. 
+
+!!! Note
+    Available only for UVPackmaster Pack Engine.
+
+#### Lock Overlapping
+
+Lock overlapping Islands during Pack. 
+UVPackmaster has extra settings:
+
+|Options| |
+|---|---|
+| Disabled | Overlapping Islands won't be locked |
+| Any Part | Islands will be locked together if they overlap by any part |
+| Exact | Islands will be locked together if they have the same area and bounding boxes |
+
+!!! Note
+    Available only for Blender and UVPackmaster Pack Engine.
+
+!!! tip
+    It's recommended to use this option if you have [**Stacked**](stack.md) Islands to save [**Stacks**](stack.md) while packing.
+
+#### Packing Mode
+
+A packing mode determines how UV islands are processed on the general level during packing.
+More information you can find [**here**.](https://uvpackmaster.com/doc3/blender/3.2.1/30-packing-modes/) 
+
+|Options| |
+|---|---|
+| Single Tiles | Overlapping Islands won't be locked |
+| Tile | Islands will be locked together if they overlap by any part |
+| Groups to Tiles | Islands will be locked together if they have the same area and bounding boxes |
+| Groups Together | Islands will be locked together if they have the same area and bounding boxes |
+
+!!! Note
+    Available only for UVPackmaster Pack Engine.
 
 #### Pack in Trim
-Pack Islands into Trim. Works only for UV Packmaster Pack Engine.
+Pack Islands into Trim.
+
+!!! Note
+    Available only for Blender and UVPackmaster Pack Engine.
 
 ![Pack_In_Trim](img/screen/pack/pack_in_trim.gif)
 
+#### Margin Method
 
-!!! tip
-    **UV Packmaster Pack Engine** has super useful option **Lock Overlapping.** It's recommended to be used to Pack Stacked and Overlapping Islands. If you don't have UV Packmaster installed, but still want to Pack Stacked and Overlapping Islands [**watch this video**](https://youtu.be/krsVbEi32DM).
+Choose method to process Margin if UV Islands are scaled.
 
-!!! tip
-    If you want to use specific **UV Packmaster Pack Engine** features that are not present in Zen UV interface do not forget to transfer existing settings using this **Transfer settings** button.
-
-    ![](img/screen/pack/pack_sync.png)
-
-    Then you can open **UV Packmaster** interface and complete the setup.
-
+!!! Note
+    Available only for Blender Pack Engine.
 
 ## Excluded System
 
-- Excluded system for the Pack operator. Mark Islands to exclude them from packing. This works for Blender Pack and UV Packmater Engine.
+System for managing Islands excluded from Pack.
 
 !!! Panel
-    ![](img/screen/pack/excluded_system.png)
+    ![](img/screen/pack/pack_exclude_panel.png)
+
+!!! Note
+    Available only for Blender and UVPackmaster Pack Engine.
 
 ### Offset Excluded
 
-- Move Islands tagged as Excluded from Packing out of UV Area.
+Move Islands tagged as Excluded from Packing out of UV Area.
 
-
-!!! Preferences
-    ![Unwrap](img/screen/pack/excluded_prefs.png)
-
-    - **Excluded Color** - Excluded Islands viewport display color.
+![](img/screen/pack/pack_exluded_offset.gif)
 
 ### Tag Excluded
 
-- Tag Islands as Excluded from Packing.
+Tag Islands as Excluded from Packing.
 
+![](img/screen/pack/pack_exluded_tag.gif)
 
 ### Untag Excluded
 
-- Untag Islands tagged as Excluded from Packing.
+Untag Islands tagged as Excluded from Packing.
+
+![](img/screen/pack/pack_exluded_untag.gif)
+
+### Select
+
+Select Islands tagged as Excluded from Packing.
+
+![](img/screen/pack/pack_exluded_select.gif)
+
+### Deselect
+
+Deselect Islands tagged as Excluded from Packing.
+
+![](img/screen/pack/pack_exluded_deselect.gif)
 
 ### Hide
 
-- Hide Islands tagged as Excluded from Packing.
+Hide Islands tagged as Excluded from Packing.
+
+![](img/screen/pack/pack_exluded_hide.gif)
 
 ### Unhide
 
-- Unhide Islands tagged as Excluded from Packing.
-
-### Select Excluded
-
-- Select Islands tagged as Excluded from Packing.
+Unhide Islands tagged as Excluded from Packing.
 
 ### Display Excluded
 
-- Display Islands tagged as Excluded from Packing.
+Display Islands tagged as Excluded from Packing.
+
+![](img/screen/pack/pack_exluded_display.gif)
+
+#### Display Excluded Preferences
+
+![Unwrap](img/screen/pack/excluded_prefs.png)
+
+|Options||
+|---|---|
+|Auto Update Draw | Update Draw cache every time when mesh is changed |
+| Excluded Color | Excluded Islands viewport display color |
+
