@@ -1,10 +1,13 @@
 # Unwrap
+
 !!! Panel
-    ![Unwrap](img/screen/unwrap/unwrapMainPanel.png)
+     | 3D Viewport | UV Editor| 
+     |---|---|  
+     | ![](img/screen/unwrap/unwrapMainPanel.png) |![](img/screen/unwrap/unwrapMainPanel_uvedtior.png)| 
 
 ## Zen Unwrap ![Zen Unwrap](img/icons/zen-unwrap@2x.png)
 
-Zen Unwrap is a context-dependent operator. The result of its operation depends on what was selected at the time it was run.
+Magic button to Mark (Seams, Sharp), Set TD, Pack and Sort processed Islands. Zen Unwrap is a context-dependent operator and result of its operation depends on what was selected at the time it was run. 
 
 ---
 
@@ -89,7 +92,10 @@ Working in **Face** or **Edge** mode makes changes to the selected islands anywa
         - **Angle-Based**. More accurate algorithm, but a bit slower.
     - **Mark Settings**. Operator settings to enable automatic seam marking. See [Mark Settings (Global Mode)](#mark-by-angle) for details.
     - **Fill Holes**. Virtual fill holes in mesh before unwrapping, to avoid overlaps and preserve symmetry.
-    - **Averaged Texel Density**. Sets the averaged Texel Density for newly created islands. This keeps all islands about the same size as you work.
+    - **Texel Density**. Sets Texel Density. Works only if Pack Unwrapped option is disabled.
+        - **Skip**. Do not make any texel density corrections.
+        - **Global Preset.** Set value described in Texel Density panel as Global TD Preset. 
+        - **Averaged**. Sets the averaged Texel Density for newly created islands. This keeps all islands about the same size as you work. 
     - **Pack Unwrapped**. After the islands have been created, this option will start the **Packing** process of the islands. The [**Pack Engine**](pack.md/#pack-engine) specified in the **Pack System** will be used.
     - **Sort Unwrapped**. After the islands have been created, this option will start the process of **Sorting** the islands by [**Finished**](#finishing-system) tag.
   
@@ -102,7 +108,6 @@ You can change main Zen Unwrap settings before running the operator.
 
     - **Auto UV Sync**. Automatically enables the **UV Sync Selection** mode every time the operator starts.
     - **Processing Mode**. The main operating mode switch.
-    - **Averaged Texel Density**. Sets the averaged Texel Density for newly created islands. This keeps all islands about the same size as you work.
     - **Pack Unwrapped**. After the islands have been created, this option will start the **Packing** process of the islands. The [**Pack Engine**](pack.md/#pack-engine) specified in the **Pack System** will be used.
     - **Sort Unwrapped**. After the islands have been created, this option will start the process of **Sorting** the islands by [**Finished**](#finishing-system) tag.
 ---
@@ -152,6 +157,9 @@ Unwrap Islands and Faces keeping their Size, Orientation and Location in UV Spac
     - **Fill Holes**. Virtual fill holes in meshes before unwrapping.
     - **Correct Aspect**. Map UVs taking image aspect ratio into account.
     - **Use Subsurf Modifier**. Map UVs taking vertex position after subsurf into account.
+
+!!! Note
+    Available only in UV Editor.
 
 ---
 ## Mark System
@@ -222,7 +230,17 @@ Mark Seams by Open Edges. The way that looks in the viewport.
 
 ## Mirror Seams
 
-Mirror Seams by axes.
+Mirror Seams along selected Axis (`X`,`Y`,`Z`) in a given direction (`+` or `-`). 
+
+![](img/screen/unwrap/unwrap_mirror_1.gif)
+
+Instead of **Replacing** existing marked Seams you can **Add** them.
+
+![](img/screen/unwrap/unwrap_mirror_2.gif)
+
+Holding `Shift` you can select both directions and flip Seams along the selected Axis and direction.
+
+![](img/screen/unwrap/unwrap_mirror_3.gif)
 
 ## Smooth by Sharp (Toggle)
 Toggle between Auto Smooth 180° (with sharp edges) and regular smooth modes.
@@ -231,8 +249,7 @@ Toggle between Auto Smooth 180° (with sharp edges) and regular smooth modes.
 
 ## Finishing System
 
-Finishing system helps to Mark, Sort and Display Islands that you have already unwrapped. 
-You can use it to see the progress of unwrapping as well as prevent Finished Islands from accidental unwraping.
+Finishing system helps to Mark, Sort and Display Islands that you have already unwrapped. It can be used to check the progress of unwrapping as well as prevent Finished Islands from accidental Unwraping.
 
 !!! Panel
     ![](img/screen/unwrap/finished_system.png)
@@ -240,26 +257,72 @@ You can use it to see the progress of unwrapping as well as prevent Finished Isl
 ### Sort Islands by Tags
 Finished Islands move to the right side from Main UV Tile, Unfinished — to the left.
 
-!!! Preferences
-    ![Unwrap](img/screen/unwrap/finishing_prefs.png)
-
-    - **Pin Finished**. Pin Islands after Tag Finished operation.
-    - **Auto Sort Islands**. Automatically Sort Islands by Tags. Finished Islands move to the right side from Main UV Tile, Unfinished — to the left
-    - **Finished Color**. Finished Islands viewport display color.
-    - **Unfinished Color**. Unfinished Islands viewport display color.
+![](img/screen/unwrap/unwrap_finished_sort.gif)
 
 ### Tag Finished
 
-Tag Islands as Finished. These Islands won't be unwrapped.
+Tag Islands as Finished and move them to the right sied from main UV Tile. These Islands won't be unwrapped.
+
+![](img/screen/unwrap/unwrap_finished_tag.gif)
+
+![](img/screen/unwrap/unwrap_finished_display_3dview_tag.gif)
+
+
+!!! Warning
+    Islands tagged as Finished are locked for Unwrapping. To unlock them use **Tag Unfinished** operator.
+
+![](img/screen/unwrap/unwrap_finished_lockunwrap.gif)
 
 ### Tag Unfinished
 
-Tag Islands as Unfinished. 
+Tag Islands as Unfinished and move them to the left sied from main UV Tile. 
+
+![](img/screen/unwrap/unwrap_finished_untag.gif)
+
+![](img/screen/unwrap/unwrap_finished_display_3dview_untag.gif)
+
 
 ### Select Finished
 
 Select Islands tagged as Finished.
 
+![](img/screen/unwrap/unwrap_finished_select.gif)
+
+![](img/screen/unwrap/unwrap_finished_display_3dview_select.gif)
+
+### Deselect Finished
+
+Deselect Islands tagged as Finished.
+
+![](img/screen/unwrap/unwrap_finished_deselect.gif)
+
+![](img/screen/unwrap/unwrap_finished_display_3dview_deselect.gif)
+
+### Hide
+
+Hide Islands tagged as Finished.
+
+![](img/screen/unwrap/unwrap_finished_hide.gif)
+
+![](img/screen/unwrap/unwrap_finished_display_3dview_hide.gif)
+
+### Unhide
+
+Unhide Islands tagged as Finished.
+
 ### Display Finished (Toggle)
 
 Display Finished/Unfinished Islands in the viewport.
+
+![](img/screen/unwrap/unwrap_finished_display.gif)
+
+![](img/screen/unwrap/unwrap_finished_display_3dview.gif)
+
+!!! Preferences
+    ![Unwrap](img/screen/unwrap/finishing_prefs.png)
+
+    - **Pin Finished**. Pin Islands after Tag Finished operation.
+    - **Auto Sort Islands**. Automatically Sort Islands by Tags. Finished Islands move to the right side from Main UV Tile, Unfinished — to the left
+    - **Auto Update Draw**. Update draw cache every time when mesh is changed.
+    - **Finished Color**. Finished Islands viewport display color.
+    - **Unfinished Color**. Unfinished Islands viewport display color.
