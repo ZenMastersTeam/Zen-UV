@@ -138,6 +138,12 @@
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#select-finished">Select Finished</a>
     </li>
+    <li class="toctree-l3"><a class="reference internal" href="#deselect-finished">Deselect Finished</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#hide">Hide</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#unhide">Unhide</a>
+    </li>
     <li class="toctree-l3"><a class="reference internal" href="#display-finished-toggle">Display Finished (Toggle)</a>
     </li>
         </ul>
@@ -218,10 +224,23 @@
                 <h1 id="unwrap">Unwrap<a class="headerlink" href="#unwrap" title="Permanent link"></a></h1>
 <div class="admonition panel">
 <p class="admonition-title">Panel</p>
-<p><img alt="Unwrap" src="../img/screen/unwrap/unwrapMainPanel.png" /></p>
+<table>
+<thead>
+<tr>
+<th>3D Viewport</th>
+<th>UV Editor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="" src="../img/screen/unwrap/unwrapMainPanel.png" /></td>
+<td><img alt="" src="../img/screen/unwrap/unwrapMainPanel_uvedtior.png" /></td>
+</tr>
+</tbody>
+</table>
 </div>
 <h2 id="zen-unwrap">Zen Unwrap <img alt="Zen Unwrap" src="../img/icons/zen-unwrap%402x.png" /><a class="headerlink" href="#zen-unwrap" title="Permanent link"></a></h2>
-<p>Zen Unwrap is a context-dependent operator. The result of its operation depends on what was selected at the time it was run.</p>
+<p>Magic button to Mark (Seams, Sharp), Set TD, Pack and Sort processed Islands. Zen Unwrap is a context-dependent operator and result of its operation depends on what was selected at the time it was run. </p>
 <hr />
 <h3 id="basic-rules">Basic rules:<a class="headerlink" href="#basic-rules" title="Permanent link"></a></h3>
 <ul>
@@ -291,7 +310,12 @@
 </li>
 <li><strong>Mark Settings</strong>. Operator settings to enable automatic seam marking. See <a href="#mark-by-angle">Mark Settings (Global Mode)</a> for details.</li>
 <li><strong>Fill Holes</strong>. Virtual fill holes in mesh before unwrapping, to avoid overlaps and preserve symmetry.</li>
-<li><strong>Averaged Texel Density</strong>. Sets the averaged Texel Density for newly created islands. This keeps all islands about the same size as you work.</li>
+<li><strong>Texel Density</strong>. Sets Texel Density. Works only if Pack Unwrapped option is disabled.<ul>
+<li><strong>Skip</strong>. Do not make any texel density corrections.</li>
+<li><strong>Global Preset.</strong> Set value described in Texel Density panel as Global TD Preset. </li>
+<li><strong>Averaged</strong>. Sets the averaged Texel Density for newly created islands. This keeps all islands about the same size as you work. </li>
+</ul>
+</li>
 <li><strong>Pack Unwrapped</strong>. After the islands have been created, this option will start the <strong>Packing</strong> process of the islands. The <a href="pack.md/#pack-engine"><strong>Pack Engine</strong></a> specified in the <strong>Pack System</strong> will be used.</li>
 <li><strong>Sort Unwrapped</strong>. After the islands have been created, this option will start the process of <strong>Sorting</strong> the islands by <a href="#finishing-system"><strong>Finished</strong></a> tag.</li>
 </ul>
@@ -304,7 +328,6 @@
 <ul>
 <li><strong>Auto UV Sync</strong>. Automatically enables the <strong>UV Sync Selection</strong> mode every time the operator starts.</li>
 <li><strong>Processing Mode</strong>. The main operating mode switch.</li>
-<li><strong>Averaged Texel Density</strong>. Sets the averaged Texel Density for newly created islands. This keeps all islands about the same size as you work.</li>
 <li><strong>Pack Unwrapped</strong>. After the islands have been created, this option will start the <strong>Packing</strong> process of the islands. The <a href="pack.md/#pack-engine"><strong>Pack Engine</strong></a> specified in the <strong>Pack System</strong> will be used.</li>
 <li><strong>Sort Unwrapped</strong>. After the islands have been created, this option will start the process of <strong>Sorting</strong> the islands by <a href="#finishing-system"><strong>Finished</strong></a> tag.</li>
 </ul>
@@ -364,6 +387,10 @@
 <li><strong>Correct Aspect</strong>. Map UVs taking image aspect ratio into account.</li>
 <li><strong>Use Subsurf Modifier</strong>. Map UVs taking vertex position after subsurf into account.</li>
 </ul>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Available only in UV Editor.</p>
 </div>
 <hr />
 <h2 id="mark-system">Mark System<a class="headerlink" href="#mark-system" title="Permanent link"></a></h2>
@@ -436,37 +463,66 @@
 <h3 id="seams-by-open-edges">Seams by Open Edges<a class="headerlink" href="#seams-by-open-edges" title="Permanent link"></a></h3>
 <p>Mark Seams by Open Edges. The way that looks in the viewport.</p>
 <h2 id="mirror-seams">Mirror Seams<a class="headerlink" href="#mirror-seams" title="Permanent link"></a></h2>
-<p>Mirror Seams by axes.</p>
+<p>Mirror Seams along selected Axis (<code>X</code>,<code>Y</code>,<code>Z</code>) in a given direction (<code>+</code> or <code>-</code>). </p>
+<p><img alt="" src="../img/screen/unwrap/unwrap_mirror_1.gif" /></p>
+<p>Instead of <strong>Replacing</strong> existing marked Seams you can <strong>Add</strong> them.</p>
+<p><img alt="" src="../img/screen/unwrap/unwrap_mirror_2.gif" /></p>
+<p>Holding <code>Shift</code> you can select both directions and flip Seams along the selected Axis and direction.</p>
+<p><img alt="" src="../img/screen/unwrap/unwrap_mirror_3.gif" /></p>
 <h2 id="smooth-by-sharp-toggle">Smooth by Sharp (Toggle)<a class="headerlink" href="#smooth-by-sharp-toggle" title="Permanent link"></a></h2>
 <p>Toggle between Auto Smooth 180° (with sharp edges) and regular smooth modes.</p>
 <hr />
 <h2 id="finishing-system">Finishing System<a class="headerlink" href="#finishing-system" title="Permanent link"></a></h2>
-<p>Finishing system helps to Mark, Sort and Display Islands that you have already unwrapped. 
-You can use it to see the progress of unwrapping as well as prevent Finished Islands from accidental unwraping.</p>
+<p>Finishing system helps to Mark, Sort and Display Islands that you have already unwrapped. It can be used to check the progress of unwrapping as well as prevent Finished Islands from accidental Unwraping.</p>
 <div class="admonition panel">
 <p class="admonition-title">Panel</p>
 <p><img alt="" src="../img/screen/unwrap/finished_system.png" /></p>
 </div>
 <h3 id="sort-islands-by-tags">Sort Islands by Tags<a class="headerlink" href="#sort-islands-by-tags" title="Permanent link"></a></h3>
 <p>Finished Islands move to the right side from Main UV Tile, Unfinished — to the left.</p>
+<p><img alt="" src="../img/screen/unwrap/unwrap_finished_sort.gif" /></p>
+<h3 id="tag-finished">Tag Finished<a class="headerlink" href="#tag-finished" title="Permanent link"></a></h3>
+<p>Tag Islands as Finished and move them to the right sied from main UV Tile. These Islands won&rsquo;t be unwrapped.</p>
+<p><img alt="" src="../img/screen/unwrap/unwrap_finished_tag.gif" /></p>
+<p><img alt="" src="../img/screen/unwrap/unwrap_finished_display_3dview_tag.gif" /></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Islands tagged as Finished are locked for Unwrapping. To unlock them use <strong>Tag Unfinished</strong> operator.</p>
+</div>
+<p><img alt="" src="../img/screen/unwrap/unwrap_finished_lockunwrap.gif" /></p>
+<h3 id="tag-unfinished">Tag Unfinished<a class="headerlink" href="#tag-unfinished" title="Permanent link"></a></h3>
+<p>Tag Islands as Unfinished and move them to the left sied from main UV Tile. </p>
+<p><img alt="" src="../img/screen/unwrap/unwrap_finished_untag.gif" /></p>
+<p><img alt="" src="../img/screen/unwrap/unwrap_finished_display_3dview_untag.gif" /></p>
+<h3 id="select-finished">Select Finished<a class="headerlink" href="#select-finished" title="Permanent link"></a></h3>
+<p>Select Islands tagged as Finished.</p>
+<p><img alt="" src="../img/screen/unwrap/unwrap_finished_select.gif" /></p>
+<p><img alt="" src="../img/screen/unwrap/unwrap_finished_display_3dview_select.gif" /></p>
+<h3 id="deselect-finished">Deselect Finished<a class="headerlink" href="#deselect-finished" title="Permanent link"></a></h3>
+<p>Deselect Islands tagged as Finished.</p>
+<p><img alt="" src="../img/screen/unwrap/unwrap_finished_deselect.gif" /></p>
+<p><img alt="" src="../img/screen/unwrap/unwrap_finished_display_3dview_deselect.gif" /></p>
+<h3 id="hide">Hide<a class="headerlink" href="#hide" title="Permanent link"></a></h3>
+<p>Hide Islands tagged as Finished.</p>
+<p><img alt="" src="../img/screen/unwrap/unwrap_finished_hide.gif" /></p>
+<p><img alt="" src="../img/screen/unwrap/unwrap_finished_display_3dview_hide.gif" /></p>
+<h3 id="unhide">Unhide<a class="headerlink" href="#unhide" title="Permanent link"></a></h3>
+<p>Unhide Islands tagged as Finished.</p>
+<h3 id="display-finished-toggle">Display Finished (Toggle)<a class="headerlink" href="#display-finished-toggle" title="Permanent link"></a></h3>
+<p>Display Finished/Unfinished Islands in the viewport.</p>
+<p><img alt="" src="../img/screen/unwrap/unwrap_finished_display.gif" /></p>
+<p><img alt="" src="../img/screen/unwrap/unwrap_finished_display_3dview.gif" /></p>
 <div class="admonition preferences">
 <p class="admonition-title">Preferences</p>
 <p><img alt="Unwrap" src="../img/screen/unwrap/finishing_prefs.png" /></p>
 <ul>
 <li><strong>Pin Finished</strong>. Pin Islands after Tag Finished operation.</li>
 <li><strong>Auto Sort Islands</strong>. Automatically Sort Islands by Tags. Finished Islands move to the right side from Main UV Tile, Unfinished — to the left</li>
+<li><strong>Auto Update Draw</strong>. Update draw cache every time when mesh is changed.</li>
 <li><strong>Finished Color</strong>. Finished Islands viewport display color.</li>
 <li><strong>Unfinished Color</strong>. Unfinished Islands viewport display color.</li>
 </ul>
 </div>
-<h3 id="tag-finished">Tag Finished<a class="headerlink" href="#tag-finished" title="Permanent link"></a></h3>
-<p>Tag Islands as Finished. These Islands won&rsquo;t be unwrapped.</p>
-<h3 id="tag-unfinished">Tag Unfinished<a class="headerlink" href="#tag-unfinished" title="Permanent link"></a></h3>
-<p>Tag Islands as Unfinished. </p>
-<h3 id="select-finished">Select Finished<a class="headerlink" href="#select-finished" title="Permanent link"></a></h3>
-<p>Select Islands tagged as Finished.</p>
-<h3 id="display-finished-toggle">Display Finished (Toggle)<a class="headerlink" href="#display-finished-toggle" title="Permanent link"></a></h3>
-<p>Display Finished/Unfinished Islands in the viewport.</p>
               
             </div>
           </div><footer>
