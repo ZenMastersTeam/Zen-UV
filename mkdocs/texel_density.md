@@ -242,10 +242,17 @@ Global project TD Preset value used in [Zen Unwrap](unwrap.md#zen-unwrap) and ot
 
 ## Island Size
 
-his toolset is useful to control Island size in Pixels and Units. When you change texture size it helps to resize Islands keeping the same amount Pixels or Units per Island.
+This toolset is useful to control Island size in Pixels and Units. When you change texture size it helps to resize Islands keeping the same amount Pixels or Units per Island.
 
 !!! Panel 
     ![](img/screen/texel_density/texel_density_subpanel_islandsize.png)
+
+!!! tip
+    Watch the video explaining how **Island Size** works.
+
+    <div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%;">
+    <iframe src="https://www.youtube.com/embed/JSPHDl57Fwk?start=901&end=936" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen="" seamless="" frameborder="0"></iframe>
+    </div>
 
 ### Size
 Represent Size of the Island in Pixel or Units.
@@ -286,6 +293,13 @@ To set UV World Size:
 1.  Сhoose [**UV World Size Image**](texel_density.md#uv-world-size-image) (for example: tiled concrete wall texture),
 2.  Choose [**Size**](texel_density.md#size) (for example: 0.7m)
 3.  Click [**Set**](texel_density.md#set) to set Island UV World Size equal to Real World Size.  
+
+!!! tip
+    Watch the video explaining how **UV World Size** works.
+
+    <div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%;">
+    <iframe src="https://www.youtube.com/embed/JSPHDl57Fwk?start=936&end=1000" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen="" seamless="" frameborder="0"></iframe>
+    </div>
 
 ### UV World Size Image
 Image used for calculation.
