@@ -1,4 +1,4 @@
-# Zen UV v4.3 for Blender.
+# Zen UV v4.4 for Blender.
 <!-- [![Zen UV Introduction](img/cover--eng.png)](https://www.youtube.com/watch?v=ook2eFfH724) -->
 ![stand_with_Ukraine](img/I_stand_with_Ukraine_banner.svg)
 <div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%;">
@@ -51,5 +51,12 @@
 - Checker Texture (Toggle) --- `Alt + T`
 - Sticky UV Editor (Toggle) --- `Shift + T`
 
-## Required Blender version 
-2.93+
+## Required Blender version
+We support Blender versions in the same way as Blender developers do whithin two-years period for LTS and major release versions.
+
+Currently we support Blender 3.3 LTS version and higher official versions.
+
+| Blender Version | Release Date | End of support |
+|---|---|---|
+| 3.3 LTS | September 7, 2022 | September 7, 2024 |
+| 3.6 LTS | June 27, 2023 | June 27, 2025 |
