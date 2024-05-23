@@ -20,6 +20,7 @@ nav:
         - Preferences: preferences.md
         - Transform Tool: transform_tool.md
         - Sticky UV Editor: sticky_uv_editor.md
+        - Favourites: favourites.md
     - Trim Sheets:
         - trimsheet.md
         - Trim Sheet Creation: trimsheet_creation.md

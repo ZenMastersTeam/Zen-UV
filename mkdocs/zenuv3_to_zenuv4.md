@@ -24,6 +24,11 @@ From a general perspective: you will get a tool which is much more user-friendly
 </div>
 <br>
 
+<div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%;">
+<iframe src="https://www.youtube.com/embed/W-m9hAitLQU" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen="" seamless="" frameborder="0"></iframe>
+</div>
+<br>
+
 Zen UV 4 provides a lot of new systems and operators!
 To check all the changes go here:
 
@@ -31,6 +36,7 @@ To check all the changes go here:
 - [**Version 4.1 Changelog**](changelg/release_note_4.1.md)
 - [**Version 4.2 Changelog**](changelg/release_note_4.2.md)
 - [**Version 4.3 Changelog**](changelg/release_note_4.3.md)
+- [**Version 4.4 Changelog**](changelg/release_note_4.4.md)
 
 ---
 
