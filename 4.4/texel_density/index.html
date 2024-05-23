@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Texel Density - Zen UV 4.4 for Blender</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../css/version-select.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Texel Density";
+        var mkdocs_page_input_path = "texel_density.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-7XHJ910WF8"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', "G-7XHJ910WF8");
+      </script>
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Zen UV 4.4 for Blender
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../youtube_videos/">Learning Videos</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../zenuv3_to_zenuv4/">Upgrade Zen UV 3 to Zen UV 4 FAQ</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../installation/">Installation and Update</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../user_interface/">User Interface</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Modules</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../adv_uv-maps/">Advanced UV Maps</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../seam_groups/">Seam Groups</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../unwrap/">Unwrap</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../select/">Select</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../transform/">Transform</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../stack/">Stack</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Texel Density</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#texel-density-value">Texel Density Value</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#td-calc-precision">TD Calc Precision.</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#select-by-td">Select by TD</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#get-td">Get TD</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#set-td">Set TD</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#use-pivot">Use Pivot</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#texture-size">Texture Size</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#td-range">TD Range</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#get-td-range">Get TD Range</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#calculate-td">Calculate TD</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#display-td">Display TD</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#advanced-display-settings">Advanced Display Settings</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#color-scheme">Color Scheme</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#colors">Colors</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#td-color-alpha">TD Color Alpha</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#range-type">Range Type</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#presets-only">Presets Only</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#presets">Presets</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#presets-management">Presets Management</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#get-td_1">Get TD</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#set-td_1">Set TD</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#clear">Clear</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#presets-tools">Presets Tools</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#create-presets">Create Presets</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#colorize-presets">Colorize Presets</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#select-by-td_1">Select by TD</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#global-td-preset">Global TD Preset</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#island-size">Island Size</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#size">Size</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#select-by-size">Select by Size</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#get">Get</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#set">Set</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#island-mode">Island Mode</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#overall-mode">Overall Mode</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#texture-size_1">Texture Size</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#uv-world-size">UV World Size</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#uv-world-size-image">UV World Size Image</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#size_1">Size</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#get_1">Get</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#set_1">Set</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#calculate-world-size">Calculate World Size</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#tools">Tools</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#select-by-td_2">Select by TD</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#bake-td-to-vc">Bake TD to VC</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#clear-vc">Clear VC</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../checker/">UV Checker</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pack/">Pack</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../preferences/">Preferences</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../transform_tool/">Transform Tool</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../sticky_uv_editor/">Sticky UV Editor</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Trim Sheets</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../trimsheet/">Trim Sheets</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../trimsheet_creation/">Trim Sheet Creation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../trimsheet_operators/">Trim Sheet Operators</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../trimsheet_hotspot/">Hotspot Mapping</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Additional</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../addon_prefs/">Addon Preferences</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../user_script/">User Script</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../help/">Help</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../troubleshooting/">FAQs</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../changelg/">Changelog</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../credits/">Credits</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../our_addons/">Our Add-ons</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Zen UV 4.4 for Blender</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Modules</li>
+      <li class="breadcrumb-item active">Texel Density</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="texel-density">Texel Density<a class="headerlink" href="#texel-density" title="Permanent link"></a></h1>
+<p>Texel Density (TD) refers to the number of texture pixels (texels) per unit of surface area on a 3D model in a video game. It is important for maintaining visual quality and reducing texture stretching or blurring when a model is viewed up close or from different angles. Higher TD means more detail and sharpness on the textures, but can also result in larger file sizes and performance issues.</p>
+<p>Usually it’s measured in pixels per centimeter (2.56px/cm) or pixels per meter (256px/m).</p>
+<p>You can read more information about <a href="https://www.beyondextent.com/deep-dives/deepdive-texeldensity#">What is Texel Density here.</a> </p>
+<hr />
+<p>Zen UV is providing all the tools you need to work with Texel Density.</p>
+<div class="admonition panel">
+<p class="admonition-title">Panel</p>
+<p><img alt="Texel Density" src="../img/screen/texel_density/texel_density_main_panel.png" /></p>
+</div>
+<h3 id="texel-density-value">Texel Density Value<a class="headerlink" href="#texel-density-value" title="Permanent link"></a></h3>
+<p>Shows Texel Density value.</p>
+<h4 id="td-calc-precision"><strong>TD Calc Precision</strong>.<a class="headerlink" href="#td-calc-precision" title="Permanent link"></a></h4>
+<p>Specifies how many percents of the Island&rsquo;s polygon will be used to determine Texel Density.</p>
+<div class="admonition preferences">
+<p class="admonition-title">Preferences</p>
+<p><img alt="Texel Density" src="../img/screen/texel_density/texel_density_options.png" /></p>
+</div>
+<h3 id="select-by-td">Select by TD<a class="headerlink" href="#select-by-td" title="Permanent link"></a></h3>
+<p>Select Islands by choosen Texel Density.</p>
+<div class="admonition preferences">
+<p class="admonition-title">Preferences</p>
+<p><img alt="Texel Density" src="../img/screen/texel_density/texel_density_select_td.png" /></p>
+</div>
+<table>
+<thead>
+<tr>
+<th>Preferences</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>⮟ <strong>Influence</strong></td>
+<td>Calculation Mode.</td>
+</tr>
+<tr>
+<td>• Island</td>
+<td>Per each Island.</td>
+</tr>
+<tr>
+<td>• Face</td>
+<td>Per each Face.</td>
+</tr>
+<tr>
+<td><strong>Clear Selection</strong></td>
+<td>Clear initial Selection.</td>
+</tr>
+<tr>
+<td>⮟ <strong>Selection Mode</strong></td>
+<td>Selection Mode.</td>
+</tr>
+<tr>
+<td>• Treshold</td>
+<td>Use TD basic value and Treshold.</td>
+</tr>
+<tr>
+<td>• Range</td>
+<td>Use the range specified by the Minimum and Maximum TD values.</td>
+</tr>
+<tr>
+<td>• Skip</td>
+<td>Do not select Islands by TD values.</td>
+</tr>
+<tr>
+<td><strong>Presets:</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Select Underrated</strong></td>
+<td>Select Islands with TD value less than the smallest TD value in the presets.</td>
+</tr>
+<tr>
+<td><strong>Select Overrated</strong></td>
+<td>Select Islands with TD value less than the highest TD value in the presets.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="get-td">Get TD<a class="headerlink" href="#get-td" title="Permanent link"></a></h3>
+<p>Get Texel Density from selected Islands.</p>
+<p><img alt="Texel Density" src="../img/screen/texel_density/texel_density_getset.gif" /></p>
+<h3 id="set-td">Set TD<a class="headerlink" href="#set-td" title="Permanent link"></a></h3>
+<p>Set Texel Density to selected Islands.</p>
+<table>
+<thead>
+<tr>
+<th>Modes</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Overall Mode</strong></td>
+<td>Set Texel Density for all selected Islands together.</td>
+</tr>
+<tr>
+<td><strong>Island Mode</strong></td>
+<td>Set Texel Density individually for every selected Island.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="use-pivot">Use Pivot<a class="headerlink" href="#use-pivot" title="Permanent link"></a></h3>
+<p>Use Pivot point when Setting Texel Density. 
+From Center or from other 8 directions.</p>
+<div class="admonition subpanel">
+<p class="admonition-title">Subpanel</p>
+<p><img alt="Texel Density" src="../img/screen/texel_density/texel_density_pivot.png" /></p>
+</div>
+<p><img alt="Texel Density" src="../img/screen/texel_density/texel_density_pivot.gif" /></p>
+<h3 id="texture-size">Texture Size<a class="headerlink" href="#texture-size" title="Permanent link"></a></h3>
+<p>Texture Size for TD calculations.</p>
+<h3 id="td-range">TD Range<a class="headerlink" href="#td-range" title="Permanent link"></a></h3>
+<div class="admonition subpanel">
+<p class="admonition-title">Subpanel</p>
+<p><img alt="Texel Density" src="../img/screen/texel_density/texel_density_range.png" /></p>
+</div>
+<h4 id="get-td-range">Get TD Range<a class="headerlink" href="#get-td-range" title="Permanent link"></a></h4>
+<p>Calculates current minimum, average and maximum TD values on the model. By clicking on the number fields you can choose Islands with given TD value.</p>
+<p><img alt="Texel Density" src="../img/screen/texel_density/texel_density_range.gif" /></p>
+<table>
+<thead>
+<tr>
+<th>Modes</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Select objects</strong></td>
+<td>Calculates current minimum and maximum TD values on the selected objects.</td>
+</tr>
+<tr>
+<td><strong>Scene</strong></td>
+<td>Calculates current minimum and maximum TD values in the scene.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="calculate-td">Calculate TD<a class="headerlink" href="#calculate-td" title="Permanent link"></a></h3>
+<p>Calculates optimal Texture Size/TD based on given TD/Texture Size.</p>
+<div class="admonition modes">
+<p class="admonition-title">Modes</p>
+<table>
+<thead>
+<tr>
+<th>Texel Density</th>
+<th>Texture Size</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="" src="../img/screen/texel_density/texel_density_calculator_size.png" /></td>
+<td><img alt="" src="../img/screen/texel_density/texel_density_calculator_td.png" /></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="display-td">Display TD<a class="headerlink" href="#display-td" title="Permanent link"></a></h3>
+<p>Display Texel Density in Viewport by chosen mode and display method.</p>
+<p><img alt="Texel Density" src="../img/screen/texel_density/texel_density_display.gif" /></p>
+<table>
+<thead>
+<tr>
+<th>Calculation Mode</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Island</strong></td>
+<td>Per aach Island.</td>
+</tr>
+<tr>
+<td><strong>Face</strong></td>
+<td>Per each Face.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Display Method</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Balanced</strong></td>
+<td>The value specified in TD Checker will always be in the middle color from the user&rsquo;s preferences. Smaller values - first color. Bigger values - third color.</td>
+</tr>
+<tr>
+<td><strong>Spectrum</strong></td>
+<td>Method for displaying values in specified density range.</td>
+</tr>
+<tr>
+<td><strong>Presets</strong></td>
+<td>Display TD Presets.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Read POLYMATTER.XYZ manual about how to choose right TD. <a href="https://drive.google.com/file/d/1hJ1px7BHX7kxDmD1KAXqECNqNXCe6egu/view"><strong>JPG</strong></a>, <a href="https://drive.google.com/file/d/1J8XA8bnrYgHr4R8PwsbM4ftqjbDZ8whN/view"><strong>PDF</strong></a>. </p>
+<p><a href="https://drive.google.com/file/d/1hJ1px7BHX7kxDmD1KAXqECNqNXCe6egu/view"><img alt="" src="../img/screen/texel_density/Texel-Density-%26-Texture-Map-Resolutions_v1-1.jpg" /></a></p>
+</div>
+<hr />
+<h2 id="advanced-display-settings">Advanced Display Settings<a class="headerlink" href="#advanced-display-settings" title="Permanent link"></a></h2>
+<p>Display TD Settings for all display methods.</p>
+<div class="admonition panel">
+<p class="admonition-title">Panel</p>
+<p><img alt="" src="../img/screen/texel_density/texel_density_subpanel_display.png" /></p>
+</div>
+<p>Settings depends on Display modes.</p>
+<div class="admonition methods">
+<p class="admonition-title">Methods</p>
+<table>
+<thead>
+<tr>
+<th>Balanced</th>
+<th>Spectrum</th>
+<th>Presets</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="" src="../img/screen/texel_density/texel_density_display_balanced.png" /></td>
+<td><img alt="" src="../img/screen/texel_density/texel_density_display_spectrum.png" /></td>
+<td><img alt="" src="../img/screen/texel_density/texel_density_display_presets.png" /></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="color-scheme">Color Scheme<a class="headerlink" href="#color-scheme" title="Permanent link"></a></h3>
+<p>Color Scheme used to Display TD.</p>
+<table>
+<thead>
+<tr>
+<th>Color Schemes</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Three Color</strong></td>
+<td>Three colors based on user preferences.</td>
+</tr>
+<tr>
+<td><strong>Full Spectrum</strong></td>
+<td>Full spectrum of seven primary colors.</td>
+</tr>
+<tr>
+<td><strong>Reversed Spectrum</strong></td>
+<td>Reversed full spectrum of seven primary colors.</td>
+</tr>
+<tr>
+<td><strong>Linear</strong></td>
+<td>Two-color gradient. Colors match first and second color of user preferences.</td>
+</tr>
+<tr>
+<td><strong>Mono</strong></td>
+<td>Monochromatic Scheme.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="colors">Colors<a class="headerlink" href="#colors" title="Permanent link"></a></h3>
+<p>Three colors used to Display TD values for <strong>Three Colors</strong> and <strong>Linear</strong> Color Schemes.</p>
+<table>
+<thead>
+<tr>
+<th>Colors</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>First Color &ldquo;Less&rdquo;</strong></td>
+<td>Viewport display color to represent Texel Density less than TD Value.</td>
+</tr>
+<tr>
+<td><strong>Second Color &ldquo;Equal&rdquo;</strong></td>
+<td>Viewport display color to represent Texel Density equal to TD Value.</td>
+</tr>
+<tr>
+<td><strong>Third Color &ldquo;Over&rdquo;</strong></td>
+<td>Viewport display color to represent Texel Density over than TD Value.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="td-color-alpha">TD Color Alpha<a class="headerlink" href="#td-color-alpha" title="Permanent link"></a></h3>
+<p>TD Color overlay alpha.</p>
+<h3 id="range-type">Range Type<a class="headerlink" href="#range-type" title="Permanent link"></a></h3>
+<p>Set Range type manually or automatically. </p>
+<h3 id="presets-only">Presets Only<a class="headerlink" href="#presets-only" title="Permanent link"></a></h3>
+<p>Display only TD values that exist in Preset list. All other values will be displayed in black.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Available only for <strong>Presets</strong> display method.</p>
+</div>
+<hr />
+<h2 id="presets">Presets<a class="headerlink" href="#presets" title="Permanent link"></a></h2>
+<div class="admonition panel">
+<p class="admonition-title">Panel</p>
+<p><img alt="" src="../img/screen/texel_density/texel_density_subpanel_presets.png" /></p>
+</div>
+<h3 id="presets-management">Presets Management<a class="headerlink" href="#presets-management" title="Permanent link"></a></h3>
+<p>You can Save TD Presets for your projects to and Share TD Presets with team.</p>
+<div class="admonition panel">
+<p class="admonition-title">Panel</p>
+<p><img alt="" src="../img/screen/texel_density/td_presets_panel.png" /></p>
+</div>
+<table>
+<thead>
+<tr>
+<th>Options</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Load</strong></td>
+<td>Load Preset.</td>
+</tr>
+<tr>
+<td><strong>Add</strong></td>
+<td>Add new Preset.</td>
+</tr>
+<tr>
+<td><strong>Remove</strong></td>
+<td>Remove Preset.</td>
+</tr>
+<tr>
+<td><strong>Open Presets Folder</strong></td>
+<td>Open Presets Folder.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="get-td_1">Get TD<a class="headerlink" href="#get-td_1" title="Permanent link"></a></h3>
+<p>Get TD from selected Islands to active Preset.</p>
+<h3 id="set-td_1">Set TD<a class="headerlink" href="#set-td_1" title="Permanent link"></a></h3>
+<p>Set TD from active Preset to selected Islands.</p>
+<p><img alt="" src="../img/screen/texel_density/texel_density_preset_set.gif" /></p>
+<h3 id="clear">Clear<a class="headerlink" href="#clear" title="Permanent link"></a></h3>
+<p>Clear Presets list.</p>
+<h3 id="presets-tools">Presets Tools<a class="headerlink" href="#presets-tools" title="Permanent link"></a></h3>
+<h4 id="create-presets">Create Presets<a class="headerlink" href="#create-presets" title="Permanent link"></a></h4>
+<p>Create Presets from selected Islands.</p>
+<p><img alt="" src="../img/screen/texel_density/texel_density_create_presets.gif" /></p>
+<h4 id="colorize-presets">Colorize Presets<a class="headerlink" href="#colorize-presets" title="Permanent link"></a></h4>
+<p>Create colors for existing Presets.</p>
+<p><img alt="" src="../img/screen/texel_density/texel_density_create_presets_colorize.gif" /></p>
+<h3 id="select-by-td_1">Select by TD<a class="headerlink" href="#select-by-td_1" title="Permanent link"></a></h3>
+<p>Select Islands By Texel Density.</p>
+<div class="admonition options">
+<p class="admonition-title">Options</p>
+<p><img alt="" src="../img/screen/texel_density/texel_density_selecttd.png" /></p>
+</div>
+<table>
+<thead>
+<tr>
+<th>Options</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Under Rated</strong></td>
+<td>Select islands which have TD less than minimal in the list.</td>
+</tr>
+<tr>
+<td><strong>Over Rated</strong></td>
+<td>Select islands which have TD bigger than maximal in the list.</td>
+</tr>
+<tr>
+<td><strong>By Value</strong></td>
+<td>Select by active preset value.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="global-td-preset">Global TD Preset<a class="headerlink" href="#global-td-preset" title="Permanent link"></a></h3>
+<p>Global project TD Preset value used in <a href="../unwrap/#zen-unwrap">Zen Unwrap</a> and other operators. You can chage the value using Settings button.</p>
+<p><img alt="" src="../img/screen/texel_density/texel_density_global_td.png" /></p>
+<hr />
+<h2 id="island-size">Island Size<a class="headerlink" href="#island-size" title="Permanent link"></a></h2>
+<p>This toolset is useful to control Island size in Pixels and Units. When you change texture size it helps to resize Islands keeping the same amount Pixels or Units per Island.</p>
+<div class="admonition panel">
+<p class="admonition-title">Panel</p>
+<p><img alt="" src="../img/screen/texel_density/texel_density_subpanel_islandsize.png" /></p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Watch the video explaining how <strong>Island Size</strong> works.</p>
+<p><div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%;">
+<iframe src="https://www.youtube.com/embed/JSPHDl57Fwk?start=901&end=936" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen="" seamless="" frameborder="0"></iframe>
+</div></p>
+</div>
+<h3 id="size">Size<a class="headerlink" href="#size" title="Permanent link"></a></h3>
+<p>Represent Size of the Island in Pixel or Units.</p>
+<h3 id="select-by-size">Select by Size<a class="headerlink" href="#select-by-size" title="Permanent link"></a></h3>
+<p>Select Island by Size.</p>
+<h3 id="get">Get<a class="headerlink" href="#get" title="Permanent link"></a></h3>
+<p>Get Island Size in Pixels or Units. </p>
+<h3 id="set">Set<a class="headerlink" href="#set" title="Permanent link"></a></h3>
+<p>Set Island Size in Pixels or Units.</p>
+<table>
+<thead>
+<tr>
+<th>Modes</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Overall Mode</strong></td>
+<td>Set size for all selected Islands together.</td>
+</tr>
+<tr>
+<td><strong>Island Mode</strong></td>
+<td>Set size individually for every selected Island.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="island-mode">Island Mode<a class="headerlink" href="#island-mode" title="Permanent link"></a></h4>
+<p>Set Island Size in Pixels or Units. </p>
+<h4 id="overall-mode">Overall Mode<a class="headerlink" href="#overall-mode" title="Permanent link"></a></h4>
+<p>Set Island Size in Pixels or Units. </p>
+<h3 id="texture-size_1">Texture Size<a class="headerlink" href="#texture-size_1" title="Permanent link"></a></h3>
+<p>Select Texture Size for Island Size calculations.</p>
+<hr />
+<h2 id="uv-world-size">UV World Size<a class="headerlink" href="#uv-world-size" title="Permanent link"></a></h2>
+<p>This toolset is useful if you don&rsquo;t know TD that you need to apply to the Island, but you have texture (no matter what is the size in pixels) and know what is the real size the texture (for example: tiled concrete wall 0.7m).</p>
+<div class="admonition panel">
+<p class="admonition-title">Panel</p>
+<p><img alt="" src="../img/screen/texel_density/texel_density_subpanel_uvworldsize.png" /></p>
+</div>
+<p>To set UV World Size:</p>
+<ol>
+<li>Сhoose <a href="./#uv-world-size-image"><strong>UV World Size Image</strong></a> (for example: tiled concrete wall texture),</li>
+<li>Choose <a href="./#size"><strong>Size</strong></a> (for example: 0.7m)</li>
+<li>Click <a href="./#set"><strong>Set</strong></a> to set Island UV World Size equal to Real World Size.  </li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Watch the video explaining how <strong>UV World Size</strong> works.</p>
+<p><div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%;">
+<iframe src="https://www.youtube.com/embed/JSPHDl57Fwk?start=936&end=1000" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen="" seamless="" frameborder="0"></iframe>
+</div></p>
+</div>
+<h3 id="uv-world-size-image">UV World Size Image<a class="headerlink" href="#uv-world-size-image" title="Permanent link"></a></h3>
+<p>Image used for calculation.</p>
+<h3 id="size_1">Size<a class="headerlink" href="#size_1" title="Permanent link"></a></h3>
+<p>Set UV World Size value and units. </p>
+<h3 id="get_1">Get<a class="headerlink" href="#get_1" title="Permanent link"></a></h3>
+<p>Get the texture size in real units <strong>with</strong> changing UV World Size value.</p>
+<h3 id="set_1">Set<a class="headerlink" href="#set_1" title="Permanent link"></a></h3>
+<p>Set the size of the Island so that the texture of this island in the scene fills the size specified in the Size field.</p>
+<h3 id="calculate-world-size">Calculate World Size<a class="headerlink" href="#calculate-world-size" title="Permanent link"></a></h3>
+<p>Get the texture size in real units <strong>without</strong> changing UV World Size value.</p>
+<hr />
+<h2 id="tools">Tools<a class="headerlink" href="#tools" title="Permanent link"></a></h2>
+<p>Extra TD tools.</p>
+<div class="admonition panel">
+<p class="admonition-title">Panel</p>
+<p><img alt="" src="../img/screen/texel_density/texel_density_subpanel_tools.png" /></p>
+</div>
+<h3 id="select-by-td_2">Select by TD<a class="headerlink" href="#select-by-td_2" title="Permanent link"></a></h3>
+<p>Select Islands By choosen Texel Density. More information <a href="./#select-by-td">here</a>.</p>
+<h3 id="bake-td-to-vc">Bake TD to VC<a class="headerlink" href="#bake-td-to-vc" title="Permanent link"></a></h3>
+<p>Bake TD to the object Vertex Color.</p>
+<h3 id="clear-vc">Clear VC<a class="headerlink" href="#clear-vc" title="Permanent link"></a></h3>
+<p>Remove TD Vertex Color layer from the object.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../stack/" class="btn btn-neutral float-left" title="Stack"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../checker/" class="btn btn-neutral float-right" title="UV Checker">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p><p>Copyright &copy; 2024 <a href="https://zenmasters.team/">Zen Masters</a></p></p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../stack/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../checker/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+      <script src="../js/version-select.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

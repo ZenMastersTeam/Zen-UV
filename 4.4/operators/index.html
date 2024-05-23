@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Operators - Zen UV 4.4 for Blender</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../css/version-select.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Operators";
+        var mkdocs_page_input_path = "operators.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-7XHJ910WF8"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', "G-7XHJ910WF8");
+      </script>
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Zen UV 4.4 for Blender
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../youtube_videos/">Learning Videos</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../zenuv3_to_zenuv4/">Upgrade Zen UV 3 to Zen UV 4 FAQ</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../installation/">Installation and Update</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../user_interface/">User Interface</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Modules</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../adv_uv-maps/">Advanced UV Maps</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../seam_groups/">Seam Groups</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../unwrap/">Unwrap</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../select/">Select</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../transform/">Transform</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../stack/">Stack</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../texel_density/">Texel Density</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../checker/">UV Checker</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pack/">Pack</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../preferences/">Preferences</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../transform_tool/">Transform Tool</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../sticky_uv_editor/">Sticky UV Editor</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Trim Sheets</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../trimsheet/">Trim Sheets</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../trimsheet_creation/">Trim Sheet Creation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../trimsheet_operators/">Trim Sheet Operators</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../trimsheet_hotspot/">Hotspot Mapping</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Additional</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../addon_prefs/">Addon Preferences</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../user_script/">User Script</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../help/">Help</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../troubleshooting/">FAQs</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../changelg/">Changelog</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../credits/">Credits</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../our_addons/">Our Add-ons</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Zen UV 4.4 for Blender</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Operators</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="operators">Operators<a class="headerlink" href="#operators" title="Permanent link"></a></h1>
+<h2 id="zen-unwrap">Zen Unwrap <img alt="Zen Unwrap" src="../img/icons/zen-unwrap%402x.png" /><a class="headerlink" href="#zen-unwrap" title="Permanent link"></a></h2>
+<p>Unwrap by Marked edges and Pack after. Also, you can select edges/faces and do Zen Unwrap. All selected edges/faces will be Marked as Seams and/or Sharp edges and unwrapped after.</p>
+<div class="admonition preferences">
+<p class="admonition-title">Preferences</p>
+<h4 id="auto-mark-with-zen-unwrap">Auto Mark with Zen Unwrap<a class="headerlink" href="#auto-mark-with-zen-unwrap" title="Permanent link"></a></h4>
+<ul>
+<li>Automatically Mark edges by angle for Zen Unwrap.</li>
+</ul>
+<h4 id="selected-only">Selected Only<a class="headerlink" href="#selected-only" title="Permanent link"></a></h4>
+<ul>
+<li>Separate workflow where only Selected Faces will be Unwrapped and Packed. It includes warnings and Unwrapping options if nothing is selected.</li>
+</ul>
+<h4 id="islands-offset">Islands Offset<a class="headerlink" href="#islands-offset" title="Permanent link"></a></h4>
+<ul>
+<li>Offset Islands after Zen Unwrap. (Experimental).</li>
+</ul>
+</div>
+<h2 id="auto-mark">Auto Mark<a class="headerlink" href="#auto-mark" title="Permanent link"></a></h2>
+<p>Automatically Mark edges as Seams and/or Sharp edges.</p>
+<h2 id="mark">Mark <img alt="Mark" src="../img/icons/mark-seams%402x.png" /><a class="headerlink" href="#mark" title="Permanent link"></a></h2>
+<p>Mark selected edges or face borders as Seams and/or Sharp edges.</p>
+<h2 id="unmark">Unmark <img alt="Unmark" src="../img/icons/unmark-seams%402x.png" /><a class="headerlink" href="#unmark" title="Permanent link"></a></h2>
+<p>Unmark selected edges or face borders as Seams and/or Sharp edges.</p>
+<h2 id="unmark-all">Unmark All<a class="headerlink" href="#unmark-all" title="Permanent link"></a></h2>
+<p>Remove all the Seams and/or Sharp edges from the mesh.</p>
+<div class="admonition preferences">
+<p class="admonition-title">Preferences</p>
+<h4 id="mark-seams">Mark Seams<a class="headerlink" href="#mark-seams" title="Permanent link"></a></h4>
+<ul>
+<li>Automatically assign Seams.</li>
+</ul>
+<h4 id="mark-sharp-edges">Mark Sharp Edges<a class="headerlink" href="#mark-sharp-edges" title="Permanent link"></a></h4>
+<ul>
+<li>Automatically assign Sharp edges.</li>
+</ul>
+</div>
+<h2 id="mark-seams-by-uv-borders">Mark Seams by UV Borders<a class="headerlink" href="#mark-seams-by-uv-borders" title="Permanent link"></a></h2>
+<p>Mark Seams by existing UV Borders.</p>
+<h2 id="mark-seams-by-sharp-edges">Mark Seams by Sharp Edges<a class="headerlink" href="#mark-seams-by-sharp-edges" title="Permanent link"></a></h2>
+<p>Mark Seams by existing Sharp edges.</p>
+<h2 id="mark-sharp-edges-by-seams">Mark Sharp Edges by Seams<a class="headerlink" href="#mark-sharp-edges-by-seams" title="Permanent link"></a></h2>
+<p>Mark Sharp edges by existing Seams.</p>
+<h2 id="quadrify-islands">Quadrify Islands<a class="headerlink" href="#quadrify-islands" title="Permanent link"></a></h2>
+<p>Straighten rectangular-shaped UV Islands.</p>
+<p><em>The addon is using the <a href="https://github.com/Radivarig/UvSquares">quadrification algorithm</a> by Radivarig.</em></p>
+<div class="admonition preferences">
+<p class="admonition-title">Preferences</p>
+<h4 id="auto-pin-quadrified">Auto Pin Quadrified<a class="headerlink" href="#auto-pin-quadrified" title="Permanent link"></a></h4>
+<ul>
+<li>Automatically Pin Islands after Quadrify Islands operation.</li>
+</ul>
+<h4 id="pack-after-quadrify">Pack After Quadrify<a class="headerlink" href="#pack-after-quadrify" title="Permanent link"></a></h4>
+<ul>
+<li>Automatically Pack Islands after Quadrify Islands operation.</li>
+</ul>
+</div>
+<h2 id="pack-islands">Pack Islands<a class="headerlink" href="#pack-islands" title="Permanent link"></a></h2>
+<p>Pack all Islands.</p>
+<div class="admonition preferences">
+<p class="admonition-title">Preferences</p>
+<h4 id="margin">Margin<a class="headerlink" href="#margin" title="Permanent link"></a></h4>
+<ul>
+<li>Set space between Islands for Pack Islands operation.</li>
+</ul>
+<h4 id="average-islands-scale">Average Islands Scale<a class="headerlink" href="#average-islands-scale" title="Permanent link"></a></h4>
+<ul>
+<li>Average Islands scale before Pack Islands operation.</li>
+</ul>
+<h4 id="pack-engine">Pack Engine<a class="headerlink" href="#pack-engine" title="Permanent link"></a></h4>
+<ul>
+<li>Select Pack Engine for Pack Islands operation.</li>
+</ul>
+<p><em>The add-on is using the Blender Pack algorithm or <a href="https://gumroad.com/l/uvpackmaster2">UVPackmaster 2 Engine</a> by glukoz.</em></p>
+</div>
+<h2 id="select-islands">Select Islands<a class="headerlink" href="#select-islands" title="Permanent link"></a></h2>
+<p>Select UV Islands. </p>
+<p><em>Select at least one edge/face of the Island(s).</em></p>
+<h2 id="isolate-islands-toggle">Isolate Islands (Toggle)<a class="headerlink" href="#isolate-islands-toggle" title="Permanent link"></a></h2>
+<p>Isolate UV Islands (Toggle). </p>
+<p><em>Select at least one edge/face of the Island(s).</em></p>
+<h2 id="select-overlapped-islands">Select Overlapped Islands<a class="headerlink" href="#select-overlapped-islands" title="Permanent link"></a></h2>
+<p>Select Overlapped Islands.</p>
+<p><em>Works in Blender 2.81 and above.</em></p>
+<h2 id="select-edge-loop">Select Edge Loop<a class="headerlink" href="#select-edge-loop" title="Permanent link"></a></h2>
+<p>Select edge loops with Seams respect.</p>
+<h2 id="pin-uv-island">Pin UV Island<a class="headerlink" href="#pin-uv-island" title="Permanent link"></a></h2>
+<p>Pin UV Island. </p>
+<p><em>Select at least one edge/face of the Island(s).</em></p>
+<h2 id="unpin-uv-island">Unpin UV Island<a class="headerlink" href="#unpin-uv-island" title="Permanent link"></a></h2>
+<p>Unpin UV Island. </p>
+<p><em>Select at least one edge/face of the Island(s).</em></p>
+<h2 id="show-pinned-islands-toggle">Show Pinned Islands (Toggle)<a class="headerlink" href="#show-pinned-islands-toggle" title="Permanent link"></a></h2>
+<p>Show Pinned Islands (Toggle).</p>
+<h2 id="checker-texture-toggle">Checker Texture (Toggle)<a class="headerlink" href="#checker-texture-toggle" title="Permanent link"></a></h2>
+<p>Add Checker Texture to the mesh (Toggle).</p>
+<h2 id="smooth-mode-toggle">Smooth Mode (Toggle)<a class="headerlink" href="#smooth-mode-toggle" title="Permanent link"></a></h2>
+<p>Toggle between Auto Smooth 180° (with sharp edges) and regular smooth modes.</p>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p><p>Copyright &copy; 2024 <a href="https://zenmasters.team/">Zen Masters</a></p></p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+      <script src="../js/version-select.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
