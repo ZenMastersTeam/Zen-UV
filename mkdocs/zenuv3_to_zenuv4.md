@@ -36,7 +36,7 @@ To check all the changes go here:
 - [**Version 4.1 Changelog**](changelg/release_note_4.1.md)
 - [**Version 4.2 Changelog**](changelg/release_note_4.2.md)
 - [**Version 4.3 Changelog**](changelg/release_note_4.3.md)
-- [**Version 4.4 Changelog**](changelg/release_note_4.4.md)
+- [**Version 4.4 Changelog**](changelg/release_note_4.4.0.md)
 
 ---
 
