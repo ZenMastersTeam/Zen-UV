@@ -22,10 +22,17 @@
 2. Find installed and enabled Zen UV add-on.
 3. Go to **Modules**.
 4. Press [**Download Zen UV Core Library (FREE)**](https://gumroad.com/l/ZenUVCore) if you don't have it.
-5. Press **Install Zen UV Core Library**.
-6. Select Zen UV Core Library file.
-7. Press **Install Zen UV Core Library**.
-8. Done! Now the add-on is fully installed and you can use all the features!
+![gumroad](img/screen/installation/gumroad_page.png)
+5. Register on the **gumroad.com** website
+6. Enter the amount in the price field:
+- 0 - if you want to get it completely free
+- 1+ - if you want to donate to the development of ZenUV
+7. Press **I want this!** button
+8. Unpack downloaded archive in any location on your drive
+9. Press **Install Zen UV Core Library**.
+10. Select Zen UV Core Library file.
+11. Press **Install Zen UV Core Library**.
+12. Done! Now the add-on is fully installed and you can use all the features!
 
 ![](img/screen/installation/installation_zen_core.png)
 ![](img/screen/installation/installation_zen_core_done.png)
