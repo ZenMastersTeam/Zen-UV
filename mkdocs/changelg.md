@@ -1,28 +1,29 @@
 # Changelog
 ---
-- [Version 4.4.1](changelg/release_note_4.4.1.md)
-- [Version 4.4](changelg/release_note_4.4.0.md)
-- [Version 4.3](changelg/release_note_4.3.md)
-- [Version 4.2.1](changelg/release_note_4.2.1.md)
-- [Version 4.2](changelg/release_note_4.2.md)
-- [Version 4.1](changelg/release_note_4.1.md)
-- [Version 4.0.1](changelg/release_note_4.0.1.md)
-- [Version 4.0](changelg/release_note_4.0.md)
-- [Version 3.1.0.4](changelg/release_note_3.1.0.4.md)
-- [Version 3.1.0.2](changelg/release_note_3.1.0.2.md)
-- [Version 3.0.1](changelg/release_note_3.0.1.md)
-- [Version 3.0](changelg/release_note_3.0.md)
-- [Version 2.2.3](changelg/release_note_2.2.3.md)
-- [Version 2.2.2](changelg/release_note_2.2.2.md)
-- [Version 2.2.1](changelg/release_note_2.2.1.md)
-- [Version 2.2](changelg/release_note_2.2.md)
-- [Version 2.1.3](changelg/release_note_2.1.3.md)
-- [Version 2.1 (Stacks)](changelg/release_note_2.1.md)
-- [Version 2.0 (Transform)](changelg/release_note_2.0.md)
-- [Version 1.92 (Texel Density)](changelg/release_note_1.92.md)
-- [Version 1.9 (Texture Checker)](changelg/release_note_1.9.md)
-- [Version 1.8](changelg/release_note_1.8.md)
-- [Version 1.7](changelg/release_note_1.7.md)
+- [Version 4.4.1](changelg/release_note_4.4.1.md) *Jun 27, 2024*
+- [Version 4.4](changelg/release_note_4.4.0.md) *Jun 7, 2024*
+- [Version 4.3](changelg/release_note_4.3.md) *Feb 15, 2024*
+- [Version 4.2.1](changelg/release_note_4.2.1.md) *Nov 10, 2023*
+- [Version 4.2](changelg/release_note_4.2.md) *Nov 3, 2023*
+- [Version 4.1](changelg/release_note_4.1.md) *Jun 5, 2023*
+- [Version 4.0.1](changelg/release_note_4.0.1.md) *May 2, 2023*
+- [Version 4.0](changelg/release_note_4.0.md) *Apr 28, 2023*
+- [Version 3.1.0.4](changelg/release_note_3.1.1.0.md) *Nov 22, 2022*
+- [Version 3.1.0.2](changelg/release_note_3.1.0.2.md) *Oct 14, 2022*
+- [Version 3.0.2](changelg/release_note_3.0.2.md) *Aug 1, 2022*
+- [Version 3.0.1](changelg/release_note_3.0.1.md) *Jul 16, 2022*
+- [Version 3.0](changelg/release_note_3.0.md) *Jul 14, 2022*
+- [Version 2.2.3](changelg/release_note_2.2.3.md) *Feb 2, 2022*
+- [Version 2.2.2](changelg/release_note_2.2.2.md) *Dec 14, 2021*
+- [Version 2.2.1](changelg/release_note_2.2.1.md) *Oct 21, 2021*
+- [Version 2.2](changelg/release_note_2.2.md) *Sep 7, 2021*
+- [Version 2.1.3](changelg/release_note_2.1.3.md) *Jul 9, 2021*
+- [Version 2.1 (Stacks)](changelg/release_note_2.1.md) *Jun 22, 2021*
+- [Version 2.0 (Transform)](changelg/release_note_2.0.md) *Mar 2, 2021*
+- [Version 1.92 (Texel Density)](changelg/release_note_1.92.md) *Jan 6, 2021*
+- [Version 1.9 (Texture Checker)](changelg/release_note_1.9.md) *Nov 3, 2020*
+- [Version 1.8](changelg/release_note_1.8.md) *Jun 3, 2020*
+- [Version 1.7](changelg/release_note_1.7.md) *May 28, 2020*
 - 1.65
     - Start!
 - 1.64
