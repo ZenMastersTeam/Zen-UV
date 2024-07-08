@@ -76,7 +76,7 @@ if __name__ == "__main__":
                 for row in reshaped_array:
                     t_elements = [
                         (
-                            f" <details><summary>{item.name}</summary>{item.description}</details> "
+                            f" [{item.name}]({item.blendermarket_url}) "
                             if item.name else "")
                         for item in row]
                     out.write(f"| {'|'.join(t_elements)} |\n")
@@ -87,3 +87,10 @@ if __name__ == "__main__":
                             if item.name else "")
                         for item in row]
                     out.write(f"| {'|'.join(t_icons)} |\n")
+
+                    t_descs = [
+                        (
+                            f" {item.description} "
+                            if item.name else "")
+                        for item in row]
+                    out.write(f"| {'|'.join(t_descs)} |\n")
