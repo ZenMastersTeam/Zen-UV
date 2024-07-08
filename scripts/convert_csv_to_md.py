@@ -51,11 +51,11 @@ if __name__ == "__main__":
 
             for row in reader:
                 item = Item(
-                    name=row[4],
-                    category=row[5],
-                    description=row[8],
-                    image_url=row[7],
-                    blendermarket_url=row[6]
+                    name=row[4].strip(),
+                    category=row[5].strip(),
+                    description=row[8].strip(),
+                    image_url=row[7].strip(),
+                    blendermarket_url=row[6].strip()
                 )
 
                 if item.category and "http" in item.blendermarket_url:
