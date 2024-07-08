@@ -76,21 +76,14 @@ if __name__ == "__main__":
                 for row in reshaped_array:
                     t_elements = [
                         (
-                            f" [{item.name}]({item.blendermarket_url}) "
+                            f' [{item.name}]({item.blendermarket_url} "{item.description}") '
                             if item.name else "")
                         for item in row]
                     out.write(f"| {'|'.join(t_elements)} |\n")
 
                     t_icons = [
                         (
-                            f" [![]({item.image_url})]({item.blendermarket_url}) "
+                            f' [![]({item.image_url})]({item.blendermarket_url} "{item.description}") '
                             if item.name else "")
                         for item in row]
                     out.write(f"| {'|'.join(t_icons)} |\n")
-
-                    t_descs = [
-                        (
-                            f" {item.description} "
-                            if item.name else "")
-                        for item in row]
-                    out.write(f"| {'|'.join(t_descs)} |\n")
