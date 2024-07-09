@@ -23,7 +23,6 @@ from dataclasses import dataclass
 from collections import defaultdict
 import numpy as np
 import os
-import sys
 
 
 @dataclass
@@ -39,7 +38,7 @@ if __name__ == "__main__":
     base_dir = os.path.dirname(__file__)
     s_out = os.path.join(base_dir, "../mkdocs/recommended_addons.md")
 
-    s_in = sys.argv[1]
+    s_in = os.path.join(base_dir, "recommended_addons.csv")
 
     with open(s_out, 'w') as out:
         out.write("# Recommended Add-ons")
@@ -51,18 +50,17 @@ if __name__ == "__main__":
 
             for row in reader:
                 item = Item(
-                    name=row[4].strip(),
-                    category=row[5].strip(),
-                    description=row[8].strip(),
-                    image_url=row[7].strip(),
-                    blendermarket_url=row[6].strip()
+                    name=row[0].strip(),
+                    category=row[1].strip(),
+                    description=row[4].strip(),
+                    image_url=row[3].strip(),
+                    blendermarket_url=row[2].strip()
                 )
 
                 if item.category and "http" in item.blendermarket_url:
                     t_addons[item.category].append(item)
 
-            for cat in sorted(t_addons.keys()):
-                items = t_addons[cat]
+            for cat, items in t_addons.items():
                 remainder = len(items) % 3
                 padding_needed = (3 - remainder) % 3
                 padded_list = items + [Item()] * padding_needed
