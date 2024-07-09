@@ -34,7 +34,7 @@ nav:
         - Changelog: changelg.md
         - Credits: credits.md
         - Our Add-ons: our_addons.md
-        - Recommended: recommended_addons.md
+        - Recommended Add-ons: recommended_addons.md
 docs_dir: mkdocs
 site_dir: docs
 
