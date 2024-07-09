@@ -58,6 +58,12 @@ if __name__ == "__main__":
                 )
 
                 if item.category and "http" in item.blendermarket_url:
+                    # NOTE: remove expired timestamp
+
+                    idx_expire = item.image_url.find("?Expires=")
+                    if idx_expire != -1:
+                        item.image_url = item.image_url[:idx_expire]
+
                     t_addons[item.category].append(item)
 
             for cat, items in t_addons.items():
