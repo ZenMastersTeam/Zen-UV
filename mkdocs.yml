@@ -47,6 +47,7 @@ theme:
 markdown_extensions:
     - smarty
     - admonition
+    - attr_list
     - toc:
         permalink: 
 

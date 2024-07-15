@@ -96,9 +96,10 @@ if __name__ == "__main__":
                         for item in row]
                     out.write(f"| {'|'.join(t_elements)} |\n")
 
+                    s_image_style = '{: style="width:200px"}'
                     t_icons = [
                         (
-                            f' [<img src="{item.image_url}" width="200px"/>]({item.blendermarket_url} "{item.description}") '
+                            f' [![]({item.image_url}){s_image_style}]({item.blendermarket_url} "{item.description}") '
                             if item.name else "")
                         for item in row]
                     out.write(f"| {'|'.join(t_icons)} |\n")
