@@ -23,6 +23,10 @@ from dataclasses import dataclass
 from collections import defaultdict
 import numpy as np
 import os
+import urllib.request
+from urllib.parse import urlparse, unquote
+from pathlib import Path
+import re
 
 
 @dataclass
@@ -39,6 +43,8 @@ if __name__ == "__main__":
     s_out = os.path.join(base_dir, "../mkdocs/recommended_addons.md")
 
     s_in = os.path.join(base_dir, "recommended_addons.csv")
+
+    s_addon_images = os.path.join(base_dir, "../mkdocs/img/addon_images")
 
     with open(s_out, 'w') as out:
         out.write("# Recommended Add-ons")
@@ -58,11 +64,16 @@ if __name__ == "__main__":
                 )
 
                 if item.category and "http" in item.blendermarket_url:
-                    # NOTE: remove expired timestamp
+                    parsed = urlparse(item.image_url)
+                    p_path = Path(unquote(parsed.path))
 
-                    idx_expire = item.image_url.find("?Expires=")
-                    if idx_expire != -1:
-                        item.image_url = item.image_url[:idx_expire]
+                    s_url_name = re.sub(r'\W', "_", item.name) + p_path.suffix
+
+                    save_path = os.path.join(s_addon_images, s_url_name)
+
+                    urllib.request.urlretrieve(item.image_url, save_path)
+
+                    item.image_url = "img/addon_images/" + s_url_name
 
                     t_addons[item.category].append(item)
 
