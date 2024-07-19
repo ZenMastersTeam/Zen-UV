@@ -1,5 +1,6 @@
 # Changelog
 ---
+- [Version 4.4.2](changelg/release_note_4.4.1.md) *Jul, 2024*
 - [Version 4.4.1](changelg/release_note_4.4.1.md) *Jun 27, 2024*
 - [Version 4.4](changelg/release_note_4.4.0.md) *Jun 7, 2024*
 - [Version 4.3](changelg/release_note_4.3.md) *Feb 15, 2024*
