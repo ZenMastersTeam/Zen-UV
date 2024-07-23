@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../../img/favicon.ico" />
-    <title>Release note 2.2.2 - Zen UV 4.4 for Blender</title>
+    <title>Version 4.4.2 - Zen UV 4.4 for Blender</title>
     <link rel="stylesheet" href="../../css/theme.css" />
     <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
@@ -13,8 +13,8 @@
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Release note 2.2.2";
-        var mkdocs_page_input_path = "changelg\\release_note_2.2.2.md";
+        var mkdocs_page_name = "Version 4.4.2";
+        var mkdocs_page_input_path = "changelg\\release_note_4.4.2.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -134,7 +134,7 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
-      <li class="breadcrumb-item active">Release note 2.2.2</li>
+      <li class="breadcrumb-item active">Version 4.4.2</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -143,25 +143,43 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h2 id="version-222">Version 2.2.2<a class="headerlink" href="#version-222" title="Permanent link"></a></h2>
-<h3 id="general">General<a class="headerlink" href="#general" title="Permanent link"></a></h3>
+                <h1 id="version-442">Version 4.4.2<a class="headerlink" href="#version-442" title="Permanent link"></a></h1>
+<h2 id="general"><strong>General</strong><a class="headerlink" href="#general" title="Permanent link"></a></h2>
 <ul>
-<li>API Blender v3.0 compatibles.</li>
-<li>Transform System - Orient by Selected. Algorithm optimization.</li>
-<li>Texel Density. Algorithm optimization. Correct work in the presence of modifiers.</li>
-<li>The ability to adjust the position of the Sticky UV editor button horizontally.</li>
-<li>Distribute operator. The algorithm is optimized. Added options for distribution types.</li>
-<li>Pack System. Pack Engine settings in a single panel.</li>
+<li>Added Blender v4.2 support.</li>
+<li>Added <strong>Recommended Addons</strong> button to the Help panel.</li>
+<li>Added <strong>Priority - World Size</strong> algorithm for <strong>Hotspot</strong> operator.</li>
 </ul>
-<h3 id="fixed">Fixed<a class="headerlink" href="#fixed" title="Permanent link"></a></h3>
+<h2 id="operators"><strong>Operators</strong><a class="headerlink" href="#operators" title="Permanent link"></a></h2>
+<h3 id="advanced-uv-maps"><strong>Advanced UV Maps</strong><a class="headerlink" href="#advanced-uv-maps" title="Permanent link"></a></h3>
 <ul>
-<li>Set Texel Density leads to crash in some cases.</li>
-<li>Different values ​​of Texel Density in Object Mode and Edit Mode.</li>
-<li>Sticky UV Editor. Fixed a situation in which many UV editors were opened.</li>
-<li>The potential error of Quadrify when working with several objects.</li>
-<li>An error in Zen Checker when working with user materials not using Nodes.</li>
-<li>Sticky UV Editor. Fixed error arising when working in Blender below V2.9.</li>
-<li>Zen Unwrap. Fixed an error with the output of an empty dialogue in Selected Only mode.</li>
+<li>Optimized UI to support Blender 4.2.</li>
+</ul>
+<h3 id="seam-groups"><strong>Seam Groups</strong><a class="headerlink" href="#seam-groups" title="Permanent link"></a></h3>
+<ul>
+<li>Fixed a bug when assigning a selection to a group in vertex mode.</li>
+</ul>
+<h3 id="transform"><strong>Transform</strong><a class="headerlink" href="#transform" title="Permanent link"></a></h3>
+<ul>
+<li>Increased accuracy of calculations for <strong>Quadrify</strong> operator.</li>
+<li>Increased accuracy of calculations for big islands for <strong>Fit</strong> operator.</li>
+</ul>
+<h3 id="trimsheet"><strong>Trimsheet</strong><a class="headerlink" href="#trimsheet" title="Permanent link"></a></h3>
+<ul>
+<li>Added <strong>Priority - World Size</strong> algorithm for <strong>Hotspot</strong> operator.</li>
+<li>Added an ability to set Flip option for Randomization for <strong>Hotspot</strong> operator.</li>
+<li>Added an operator to set <strong>World Size</strong> for trim based on <strong>World Size</strong> texture.</li>
+<li>Improved interaction with Snap Point when changing Trim size.</li>
+<li>Optimized Tag management for Trims.</li>
+</ul>
+<h3 id="select"><strong>Select</strong><a class="headerlink" href="#select" title="Permanent link"></a></h3>
+<ul>
+<li>Added <strong>Select Islands by Direction</strong> operator to select islands by type. Horizontal, vertical, radial.</li>
+</ul>
+<h3 id="uv-checker"><strong>UV Checker</strong><a class="headerlink" href="#uv-checker" title="Permanent link"></a></h3>
+<ul>
+<li>Added <strong>Free Vertices</strong> operator to select free vertices (Vertices that do not have adjacent edges).</li>
+<li>Fixed a bug in <strong>Reset Checker</strong> operator.</li>
 </ul>
               
             </div>

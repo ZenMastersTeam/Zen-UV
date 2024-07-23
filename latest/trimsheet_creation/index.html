@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>Trim Sheet Creation - Zen UV 4.4 for Blender</title>
+    <title>Trim Sheet Management - Zen UV 4.4 for Blender</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
@@ -13,7 +13,7 @@
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Trim Sheet Creation";
+        var mkdocs_page_name = "Trim Sheet Management";
         var mkdocs_page_input_path = "trimsheet_creation.md";
         var mkdocs_page_url = null;
       </script>
@@ -94,7 +94,7 @@
               <ul class="current">
                   <li class="toctree-l1"><a class="reference internal" href="../trimsheet/">Trim Sheets</a>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Trim Sheet Creation</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Trim Sheet Management</a>
     <ul class="current">
     <li class="toctree-l2"><a class="reference internal" href="#trim-sheet-data-storage-in-blend-file">Trim sheet data storage in blend file</a>
         <ul>
@@ -104,6 +104,10 @@
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#trim-sheet-creation">Trim Sheet Creation</a>
         <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#draw-trim-in-uv-editor">Draw Trim in UV Editor</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#trims-snapping-for-creation-and-resizing">Trims Snapping for Creation and Resizing</a>
+    </li>
     <li class="toctree-l3"><a class="reference internal" href="#trims-list">Trims List</a>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#active-trim">Active Trim</a>
@@ -130,7 +134,27 @@
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#remove">Remove</a>
     </li>
+    <li class="toctree-l3"><a class="reference internal" href="#duplicate">Duplicate</a>
+    </li>
     <li class="toctree-l3"><a class="reference internal" href="#menu">Menu</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#copy-trims-to-clipboard">Copy Trims to Clipboard</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#paste-trims-from-clipboard">Paste Trims from Clipboard</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#batch-rename">Batch Rename</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#add-trim-grid">Add Trim Grid</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#add-trim-udim">Add Trim UDIM</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#set-trim-world-size">Set Trim World Size</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#frame-trim">Frame Trim</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#clear-trimshet-preview-folder">Clear Trimshet Preview Folder</a>
+    </li>
+        </ul>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#move-updown-arrow-icon">Move (up/down arrow icon)</a>
     </li>
@@ -171,6 +195,10 @@
     <li class="toctree-l3"><a class="reference internal" href="#match-rotation">Match Rotation</a>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#align-to">Align To</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#world-size">World Size</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#units">Units</a>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#tags">Tags</a>
     </li>
@@ -249,7 +277,7 @@
   <ul class="wy-breadcrumbs">
     <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
           <li class="breadcrumb-item">Trim Sheets</li>
-      <li class="breadcrumb-item active">Trim Sheet Creation</li>
+      <li class="breadcrumb-item active">Trim Sheet Management</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -333,6 +361,86 @@ Trim sheet data is taken either from property trimsheet image of the active mate
 </li>
 </ul>
 <h2 id="trim-sheet-creation">Trim Sheet Creation<a class="headerlink" href="#trim-sheet-creation" title="Permanent link"></a></h2>
+<p>Use ZenUV tool to create trims in UV Editor</p>
+<table>
+<thead>
+<tr>
+<th><img alt="" src="../img/screen/trimsheet/trimsheet_tool_create.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="draw-trim-in-uv-editor">Draw Trim in UV Editor<a class="headerlink" href="#draw-trim-in-uv-editor" title="Permanent link"></a></h3>
+<p>There is an option to draw a trim using mouse:</p>
+<ol>
+<li>Activate ZenUV tool</li>
+<li>Select tool category &ldquo;Trims&rdquo;</li>
+<li>Select tool mode &ldquo;Create&rdquo;</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th><img alt="" src="../img/screen/trimsheet/create_trims.gif" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="trims-snapping-for-creation-and-resizing">Trims Snapping for Creation and Resizing<a class="headerlink" href="#trims-snapping-for-creation-and-resizing" title="Permanent link"></a></h3>
+<p>Snapping lets you easily align trims. It can be toggled by clicking the magnet icon in the ZenUV tool header</p>
+<table>
+<thead>
+<tr>
+<th><img alt="" src="../img/screen/trimsheet/trims_snapping.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Snap Mode</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pixels</td>
+<td>Trim is snapped to image pixels if image is active in UV Editor</td>
+</tr>
+<tr>
+<td>Grid</td>
+<td>Trim is snapped to UV Grid</td>
+</tr>
+<tr>
+<td>Trims</td>
+<td>Trim is snapped to other trim borders</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><img alt="" src="../img/screen/trimsheet/trims_snapping.gif" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
 <h3 id="trims-list">Trims List<a class="headerlink" href="#trims-list" title="Permanent link"></a></h3>
 <p>This control is useful to manage lists of trims. In the center of its area you can select, deselect, rename trims. On the right of the list view are additional buttons and button to call the additional popup menu.</p>
 <p><img alt="" src="../img/screen/trimsheet/trimlist.png" /></p>
@@ -385,12 +493,70 @@ Sort objects in ascending or descending order. This also applies to alphabetical
 <p>Adds a new item.</p>
 <h3 id="remove">Remove<a class="headerlink" href="#remove" title="Permanent link"></a></h3>
 <p>Removes the selected item.</p>
+<h3 id="duplicate">Duplicate<a class="headerlink" href="#duplicate" title="Permanent link"></a></h3>
+<p>Duplicates active or selected trim</p>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Descripton</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ignore Color</td>
+<td>Does not duplicate trim color settings</td>
+</tr>
+<tr>
+<td>Clear Selection</td>
+<td>Clear selection from source trims after duplicating</td>
+</tr>
+</tbody>
+</table>
 <h3 id="menu">Menu<a class="headerlink" href="#menu" title="Permanent link"></a></h3>
 <p>A menu with operators e.g. copy paste, or operations on all items.</p>
 <div class="admonition menu">
 <p class="admonition-title">Menu</p>
 <p><img alt="" src="../img/screen/trimsheet/trim_menu.png" /></p>
 </div>
+<h4 id="copy-trims-to-clipboard">Copy Trims to Clipboard<a class="headerlink" href="#copy-trims-to-clipboard" title="Permanent link"></a></h4>
+<p>Copy <a href="#active-trim">active</a>, <a href="#selected-trims">selected</a> or <a href="#trims-list">all trims</a> to clipboard</p>
+<h4 id="paste-trims-from-clipboard">Paste Trims from Clipboard<a class="headerlink" href="#paste-trims-from-clipboard" title="Permanent link"></a></h4>
+<table>
+<thead>
+<tr>
+<th>Mode</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Clear</td>
+<td>Clear all trims before paste operation</td>
+</tr>
+<tr>
+<td>Add</td>
+<td>Add trims to the end of trim sheet</td>
+</tr>
+<tr>
+<td>Replace</td>
+<td>Add new trims and replace trims with the same name</td>
+</tr>
+</tbody>
+</table>
+<h4 id="batch-rename">Batch Rename<a class="headerlink" href="#batch-rename" title="Permanent link"></a></h4>
+<p>Can rename many trims at once. This uses a pop-up dialog with operations and their options to change the name. These actions are applied in order, from first to last in a trim sheet.</p>
+<p><img alt="" src="../img/screen/trimsheet/trim_batch_rename.png" /></p>
+<h4 id="add-trim-grid">Add Trim Grid<a class="headerlink" href="#add-trim-grid" title="Permanent link"></a></h4>
+<p>Create grid of trims inside active, selected trims, from zero coordinates or 2D cursor position</p>
+<h4 id="add-trim-udim">Add Trim UDIM<a class="headerlink" href="#add-trim-udim" title="Permanent link"></a></h4>
+<p>Creates trims in positions and with UDIM tile sizes</p>
+<h4 id="set-trim-world-size">Set Trim World Size<a class="headerlink" href="#set-trim-world-size" title="Permanent link"></a></h4>
+<p>Set trim &lsquo;World Size&rsquo; property based on texture size. Works on selected trims</p>
+<h4 id="frame-trim">Frame Trim<a class="headerlink" href="#frame-trim" title="Permanent link"></a></h4>
+<p>Moves view to active or selected trims center in UV editor</p>
+<h4 id="clear-trimshet-preview-folder">Clear Trimshet Preview Folder<a class="headerlink" href="#clear-trimshet-preview-folder" title="Permanent link"></a></h4>
+<p>Clear folder where trimsheet preview temporary icons are stored</p>
 <h3 id="move-updown-arrow-icon">Move (up/down arrow icon)<a class="headerlink" href="#move-updown-arrow-icon" title="Permanent link"></a></h3>
 <p>Moves the selected item up/down one position.</p>
 <h3 id="delete-all">Delete All<a class="headerlink" href="#delete-all" title="Permanent link"></a></h3>
@@ -464,6 +630,10 @@ Sort objects in ascending or descending order. This also applies to alphabetical
 <p>Match trim rotation</p>
 <h3 id="align-to">Align To<a class="headerlink" href="#align-to" title="Permanent link"></a></h3>
 <p>Align to remembered directions in Fit, Align operations</p>
+<h3 id="world-size">World Size<a class="headerlink" href="#world-size" title="Permanent link"></a></h3>
+<p>Width and height of trim in <a href="#units">UV world size calculation units</a></p>
+<h3 id="units">Units<a class="headerlink" href="#units" title="Permanent link"></a></h3>
+<p>UV world size calculation units</p>
 <h3 id="tags">Tags<a class="headerlink" href="#tags" title="Permanent link"></a></h3>
 <p>Trim tags</p>
 <h3 id="how-to-apply-same-settings-to-multiple-trims">How to apply same settings to multiple trims?<a class="headerlink" href="#how-to-apply-same-settings-to-multiple-trims" title="Permanent link"></a></h3>
