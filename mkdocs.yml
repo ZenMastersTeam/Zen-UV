@@ -23,7 +23,7 @@ nav:
         - Favourites: favourites.md
     - Trim Sheets:
         - trimsheet.md
-        - Trim Sheet Creation: trimsheet_creation.md
+        - Trim Sheet Management: trimsheet_creation.md
         - trimsheet_operators.md
         - trimsheet_hotspot.md
     - Additional:

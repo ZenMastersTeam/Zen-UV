@@ -151,8 +151,8 @@ Limit transforms by active Trim.
 
 ![Transform Lock](img/screen/transform_tool/tt_transform_lock.gif)
 
-### Drug
-Choose the tool when Drug.
+### Drag
+Choose the tool when Drag.
 
 - **Active Tool**. Use Active tool.
 - **Tweak**. Use Tweak tool.

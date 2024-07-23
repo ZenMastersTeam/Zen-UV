@@ -42,6 +42,39 @@ There is exactly one active trim sheet at any time in certain Blender editor (UV
         ![](img/screen/trimsheet/base_color_image.png)
 
 ## Trim Sheet Creation
+Use ZenUV tool to create trims in UV Editor
+
+| ![](img/screen/trimsheet/trimsheet_tool_create.png) |
+|---|
+| |
+
+### Draw Trim in UV Editor
+There is an option to draw a trim using mouse:
+
+1. Activate ZenUV tool
+2. Select tool category "Trims"
+3. Select tool mode "Create"
+
+| ![](img/screen/trimsheet/create_trims.gif) |
+|---|
+| |
+
+### Trims Snapping for Creation and Resizing
+Snapping lets you easily align trims. It can be toggled by clicking the magnet icon in the ZenUV tool header
+
+| ![](img/screen/trimsheet/trims_snapping.png) |
+|---|
+| |
+
+| Snap Mode | Description |
+|---|---|
+| Pixels | Trim is snapped to image pixels if image is active in UV Editor |
+| Grid | Trim is snapped to UV Grid |
+| Trims | Trim is snapped to other trim borders |
+
+| ![](img/screen/trimsheet/trims_snapping.gif) |
+|---|
+| |
 
 ### Trims List
 This control is useful to manage lists of trims. In the center of its area you can select, deselect, rename trims. On the right of the list view are additional buttons and button to call the additional popup menu.
@@ -101,11 +134,49 @@ Adds a new item.
 ### Remove
 Removes the selected item.
 
+### Duplicate
+Duplicates active or selected trim
+
+| Option | Descripton |
+|---|---|
+| Ignore Color | Does not duplicate trim color settings |
+| Clear Selection | Clear selection from source trims after duplicating |
+
 ### Menu
 A menu with operators e.g. copy paste, or operations on all items.
 
 !!! Menu
     ![](img/screen/trimsheet/trim_menu.png)
+
+#### Copy Trims to Clipboard
+Copy [active](#active-trim), [selected](#selected-trims) or [all trims](#trims-list) to clipboard
+
+#### Paste Trims from Clipboard
+| Mode | Description |
+|---|---|
+| Clear | Clear all trims before paste operation |
+| Add | Add trims to the end of trim sheet |
+| Replace | Add new trims and replace trims with the same name |
+
+#### Batch Rename
+Can rename many trims at once. This uses a pop-up dialog with operations and their options to change the name. These actions are applied in order, from first to last in a trim sheet.
+
+![](img/screen/trimsheet/trim_batch_rename.png)
+
+#### Add Trim Grid
+Create grid of trims inside active, selected trims, from zero coordinates or 2D cursor position
+
+#### Add Trim UDIM
+Creates trims in positions and with UDIM tile sizes
+
+#### Set Trim World Size
+Set trim 'World Size' property based on texture size. Works on selected trims
+
+#### Frame Trim
+Moves view to active or selected trims center in UV editor
+
+#### Clear Trimshet Preview Folder
+Clear folder where trimsheet preview temporary icons are stored
 
 ### Move (up/down arrow icon)
 Moves the selected item up/down one position.
@@ -173,6 +244,12 @@ Match trim rotation
 
 ### Align To
 Align to remembered directions in Fit, Align operations
+
+### World Size
+Width and height of trim in [UV world size calculation units](#units)
+
+### Units
+UV world size calculation units
 
 ### Tags
 Trim tags
