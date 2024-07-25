@@ -112,9 +112,9 @@
     </li>
         </ul>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#select-face-to-loops">Select Face to Loops</a>
+    <li class="toctree-l2"><a class="reference internal" href="#convert-face-to-loops">Convert Face to Loops</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#select-edges-to-loops">Select Edges to Loops</a>
+    <li class="toctree-l2"><a class="reference internal" href="#convert-edges-to-loops">Convert Edges to Loops</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#convert-loops-to-face">Convert Loops to Face</a>
     </li>
@@ -228,31 +228,31 @@
 </thead>
 <tbody>
 <tr>
-<td align="center"><a href="#islands">Islands</a></td>
-<td align="center"><a href="#int-loop">Int. Loop</a></td>
+<td align="center"><a href="#select-islands">Islands</a></td>
+<td align="center"><a href="#select-int-loop">Int. Loop</a></td>
 <td align="center"><a href="#select-cylinder-edges-splits">Cylinder Edges (Splits)</a></td>
-<td align="center"><a href="#select-edges-to-loops">Edges To Loops</a></td>
+<td align="center"><a href="#convert-edges-to-loops">Edges To Loops</a></td>
 </tr>
 <tr>
-<td align="center"><a href="#overlapped">Overlapped</a></td>
-<td align="center"><a href="#flipped">Flipped</a></td>
+<td align="center"><a href="#select-overlapped">Overlapped</a></td>
+<td align="center"><a href="#select-flipped">Flipped</a></td>
 <td align="center"><a href="#select-edges-by-condition">Edges by Condition</a></td>
 <td align="center"><a href="#convert-loops-to-face">Loop to Face</a></td>
 </tr>
 <tr>
-<td align="center"><a href="#seam">Seam</a></td>
-<td align="center"><a href="#sharp">Sharp</a></td>
+<td align="center"><a href="#select-seam">Seam</a></td>
+<td align="center"><a href="#select-sharp">Sharp</a></td>
 <td align="center"><a href="#select-edges-by-direction">Edges by Direction</a></td>
 <td align="center"><a href="#convert-loop-to-edge">Loop to Edge</a></td>
 </tr>
 <tr>
 <td align="center"><a href="#select-uv-borders">Borders</a></td>
-<td align="center"><a href="#open-edges">Open Edges</a></td>
+<td align="center"><a href="#select-open-edges">Open Edges</a></td>
 <td align="center"><a href="#select-islands-by-direction">Island by Direction</a></td>
 <td align="center"><a href="#select-linked-loops">Select Linked Loops</a></td>
 </tr>
 <tr>
-<td align="center"><a href="#similar">Similar</a></td>
+<td align="center"><a href="#select-similar">Similar</a></td>
 <td align="center"><a href="#select-in-tile">Select in Tile</a></td>
 <td align="center"><a href="#select-by-uv-area">Select by UV Area</a></td>
 <td align="center"><a href="#isolate-islands-toggle">Isolate Islands (Toggle)</a></td>
@@ -260,17 +260,26 @@
 <tr>
 <td align="center"><a href="#select-half">Half</a></td>
 <td align="center"><a href="#select-quaded-islands">Quaded Islands</a></td>
-<td align="center"><a href="#select-face-to-loops">Face To Loops</a></td>
+<td align="center"><a href="#convert-face-to-loops">Face To Loops</a></td>
 <td align="center"></td>
 </tr>
 </tbody>
 </table>
 <hr />
 <h3 id="select-islands">Select Islands<a class="headerlink" href="#select-islands" title="Permanent link"></a></h3>
-<p>Select Islands by selected edge/face of the Islands. <img alt="Islands" src="../img/icons/select.png" /> 
-| <img alt="Select_Islands" src="../img/gifs/select_operators/Select_Islands.gif" /> |
-| &mdash; |
-| Select islands |</p>
+<p>Select Islands by selected edge/face of the Islands. <img alt="Islands" src="../img/icons/select.png" /></p>
+<table>
+<thead>
+<tr>
+<th><img alt="Select_Islands" src="../img/gifs/select_operators/Select_Islands.gif" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Select islands</td>
+</tr>
+</tbody>
+</table>
 <hr />
 <h3 id="select-int-loop">Select Int. Loop<a class="headerlink" href="#select-int-loop" title="Permanent link"></a></h3>
 <p>Inter seam loop. Select Edge Loop with respect to Seams. </p>
@@ -363,10 +372,19 @@
 </table>
 <hr />
 <h3 id="select-open-edges">Select Open Edges<a class="headerlink" href="#select-open-edges" title="Permanent link"></a></h3>
-<p>Select open edges the way that looks in the 3D viewport. Including the open edges that appeared after the faces were hidden.
-| <img alt="Select_Open_Edges" src="../img/gifs/select_operators/Select_Open_Edges.gif" /> |
-| &mdash; |
-| Select open edges |</p>
+<p>Select open edges the way that looks in the 3D viewport. Including the open edges that appeared after the faces were hidden.</p>
+<table>
+<thead>
+<tr>
+<th><img alt="Select_Open_Edges" src="../img/gifs/select_operators/Select_Open_Edges.gif" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Select open edges</td>
+</tr>
+</tbody>
+</table>
 <hr />
 <h3 id="select-similar">Select Similar<a class="headerlink" href="#select-similar" title="Permanent link"></a></h3>
 <p>Select Islands similar to those selected.</p>
@@ -440,6 +458,7 @@
 </tbody>
 </table>
 <h3 id="select-cylinder-edges-splits">Select Cylinder Edges (Splits)<a class="headerlink" href="#select-cylinder-edges-splits" title="Permanent link"></a></h3>
+<p>Select island edges that belong to the same mesh edge and split the island by itself.</p>
 <table>
 <thead>
 <tr>
@@ -453,6 +472,7 @@
 </tbody>
 </table>
 <h3 id="select-edges-by-condition">Select Edges by Condition<a class="headerlink" href="#select-edges-by-condition" title="Permanent link"></a></h3>
+<p>Select edges based on various conditions and logic operations with NOT support.</p>
 <table>
 <thead>
 <tr>
@@ -511,6 +531,7 @@
 </table>
 <hr />
 <h4 id="select-by-uv-area_1">Select by UV Area:<a class="headerlink" href="#select-by-uv-area_1" title="Permanent link"></a></h4>
+<p>Select faces by their UV area.</p>
 <table>
 <thead>
 <tr>
@@ -559,35 +580,80 @@
 <li><strong>Multiplied Area</strong> - The same value as the Real Area, but multiplied for easier use.</li>
 </ul>
 <hr />
-<h3 id="select-face-to-loops">Select Face to Loops<a class="headerlink" href="#select-face-to-loops" title="Permanent link"></a></h3>
-<p>Convert selected mesh faces to UV loops.
-| <img alt="Select Face to Loops" src="../img/gifs/select_operators/Select_Face_to_Loops.gif" /> |
-| &mdash; |
-| Select Face to Loops |</p>
+<h3 id="convert-face-to-loops">Convert Face to Loops<a class="headerlink" href="#convert-face-to-loops" title="Permanent link"></a></h3>
+<p>Convert selected mesh faces to UV loops.</p>
+<table>
+<thead>
+<tr>
+<th><img alt="Select Face to Loops" src="../img/gifs/select_operators/Select_Face_to_Loops.gif" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Select Face to Loops</td>
+</tr>
+</tbody>
+</table>
 <hr />
-<h3 id="select-edges-to-loops">Select Edges to Loops<a class="headerlink" href="#select-edges-to-loops" title="Permanent link"></a></h3>
-<p>Convert selected mesh edges to UV loops.
-| <img alt="Select Edges to Loops" src="../img/gifs/select_operators/Select_Edges_to_Loops.gif" /> |
-| &mdash; |
-| Select Edges to Loops |</p>
+<h3 id="convert-edges-to-loops">Convert Edges to Loops<a class="headerlink" href="#convert-edges-to-loops" title="Permanent link"></a></h3>
+<p>Convert selected mesh edges to UV loops.</p>
+<table>
+<thead>
+<tr>
+<th><img alt="Select Edges to Loops" src="../img/gifs/select_operators/Select_Edges_to_Loops.gif" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Select Edges to Loops</td>
+</tr>
+</tbody>
+</table>
 <hr />
 <h3 id="convert-loops-to-face">Convert Loops to Face<a class="headerlink" href="#convert-loops-to-face" title="Permanent link"></a></h3>
-<p>Only for UV Sync Selection - off. Convert selected UV loops to mesh face selection.
-| <img alt="Convert Loops to Face" src="../img/gifs/select_operators/Select_Loops_to_Face.gif" /> |
-| &mdash; |
-| Convert Loops to Face |</p>
+<p>Only for UV Sync Selection - off. Convert selected UV loops to mesh face selection.</p>
+<table>
+<thead>
+<tr>
+<th><img alt="Convert Loops to Face" src="../img/gifs/select_operators/Select_Loops_to_Face.gif" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Convert Loops to Face</td>
+</tr>
+</tbody>
+</table>
 <hr />
 <h3 id="convert-loop-to-edge">Convert Loop to Edge<a class="headerlink" href="#convert-loop-to-edge" title="Permanent link"></a></h3>
-<p>Only for UV Sync Selection - off. Convert selected UV loop to mesh edge selection.
-| <img alt="Convert Loop to Edge" src="../img/gifs/select_operators/Select_Loop_to_Edge.gif" /> |
-| &mdash; |
-| Convert Loop to Edge |</p>
+<p>Only for UV Sync Selection - off. Convert selected UV loop to mesh edge selection.</p>
+<table>
+<thead>
+<tr>
+<th><img alt="Convert Loop to Edge" src="../img/gifs/select_operators/Select_Loop_to_Edge.gif" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Convert Loop to Edge</td>
+</tr>
+</tbody>
+</table>
 <hr />
 <h3 id="select-linked-loops">Select Linked Loops<a class="headerlink" href="#select-linked-loops" title="Permanent link"></a></h3>
-<p>Only for UV Sync Selection - off. Selects all loops belonging to the mesh vertex based on any already selected loop.
-| <img alt="Select Linked Loops" src="../img/gifs/select_operators/Select_Linked_Loops.gif" /> |
-| &mdash; |
-| Select Linked Loops |</p>
+<p>Only for UV Sync Selection - off. Selects all loops belonging to the mesh vertex based on any already selected loop.</p>
+<table>
+<thead>
+<tr>
+<th><img alt="Select Linked Loops" src="../img/gifs/select_operators/Select_Linked_Loops.gif" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Select Linked Loops</td>
+</tr>
+</tbody>
+</table>
 <h3 id="isolate-islands-toggle">Isolate Islands (Toggle)<a class="headerlink" href="#isolate-islands-toggle" title="Permanent link"></a></h3>
 <p>Isolate Islands (Toggle).</p>
 <table>
