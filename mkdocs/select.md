@@ -20,7 +20,7 @@
 ### Select Islands
 Select Islands by selected edge/face of the Islands. ![Islands](img/icons/select.png)
 
-| ![Select_Islands](img/gifs/select_operators/Select_Islands.gif) |
+| [![Select_Islands](img/gifs/select_operators/Select_Islands.gif)](img/gifs/select_operators/Select_Islands.gif) |
 | --- |
 | Select islands |
 
@@ -28,7 +28,7 @@ Select Islands by selected edge/face of the Islands. ![Islands](img/icons/select
 ### Select Int. Loop
 Inter seam loop. Select Edge Loop with respect to Seams. 
 
-| ![Select_Int_Loop](img/gifs/select_operators/Select_Int_Loop.gif) |
+| [![Select_Int_Loop](img/gifs/select_operators/Select_Int_Loop.gif)](img/gifs/select_operators/Select_Int_Loop.gif) |
 | --- |
 | Select inter seam loop |
 
@@ -36,7 +36,7 @@ Inter seam loop. Select Edge Loop with respect to Seams.
 ### Select Overlapped
 Select Overlapped Islands.
 
-| ![Select_Overlapped](img/gifs/select_operators/Select_Overlapped.gif) |
+| [![Select_Overlapped](img/gifs/select_operators/Select_Overlapped.gif)](img/gifs/select_operators/Select_Overlapped.gif) |
 | --- |
 | Select overlapped |
 
@@ -44,7 +44,7 @@ Select Overlapped Islands.
 ### Select Flipped
 Select Flipped Islands.
 
-| ![Select_Flipped](img/gifs/select_operators/Select_Flipped.gif) |
+| [![Select_Flipped](img/gifs/select_operators/Select_Flipped.gif)](img/gifs/select_operators/Select_Flipped.gif) |
 | --- |
 | Select flipped |
 
@@ -52,7 +52,7 @@ Select Flipped Islands.
 ### Select Seam
 Select Edges Marked as Seams.
 
-| ![Select_Seam](img/gifs/select_operators/Select_Seam.gif) |
+| [![Select_Seam](img/gifs/select_operators/Select_Seam.gif)](img/gifs/select_operators/Select_Seam.gif) |
 | --- |
 | Select Seam |
 
@@ -60,7 +60,7 @@ Select Edges Marked as Seams.
 ### Select Sharp
 Select Edges Marked as Sharp.
 
-| ![Select_Sharp](img/gifs/select_operators/Select_Sharp.gif) |
+| [![Select_Sharp](img/gifs/select_operators/Select_Sharp.gif)](img/gifs/select_operators/Select_Sharp.gif) |
 | --- |
 | Select sharp |
 
@@ -68,7 +68,7 @@ Select Edges Marked as Sharp.
 ### Select UV Borders
 Select existing UV Borders.
 
-| ![Select_UV_Borders](img/gifs/select_operators/Select_UV_Borders.gif) |
+| [![Select_UV_Borders](img/gifs/select_operators/Select_UV_Borders.gif)](img/gifs/select_operators/Select_UV_Borders.gif) |
 | --- |
 | Select UV Borders |
 
@@ -76,7 +76,7 @@ Select existing UV Borders.
 ### Select Open Edges
 Select open edges the way that looks in the 3D viewport. Including the open edges that appeared after the faces were hidden.
 
-| ![Select_Open_Edges](img\gifs\select_operators\Select_Open_Edges.gif) |
+| [![Select_Open_Edges](img\gifs\select_operators\Select_Open_Edges.gif)](img\gifs\select_operators\Select_Open_Edges.gif) |
 | --- |
 | Select open edges |
 
@@ -84,7 +84,7 @@ Select open edges the way that looks in the 3D viewport. Including the open edge
 ### Select Similar
 Select Islands similar to those selected.
 
-| ![Select_Similar](img/gifs/select_operators/Select_Similar.gif) |
+| [![Select_Similar](img/gifs/select_operators/Select_Similar.gif)](img/gifs/select_operators/Select_Similar.gif) |
 | --- |
 | Select similar |
 
@@ -92,7 +92,7 @@ Select Islands similar to those selected.
 ### Select in Tile
 Select Islands in bounding box of active UDIM Tile or UV Area.
 
-| ![](img/screen/adv_uv_map/adv_uv_map_udim_select_active.gif) |
+| [![Select_In_Tile](img/screen/adv_uv_map/adv_uv_map_udim_select_active.gif)](img/screen/adv_uv_map/adv_uv_map_udim_select_active.gif) |
 | --- |
 | Select in tile |
 
@@ -100,11 +100,11 @@ Select Islands in bounding box of active UDIM Tile or UV Area.
 ### Select Half
 Select part of the model according to its location relative to the coordinate axis.
 
-| ![Select_Half](img/screen/select/select_half.gif) |
+| [![Select_Half](img/screen/select/select_half.gif)](img/screen/select/select_half.gif) |
 | --- |
 | Select half |
 
-| ![Select_Half](img/screen/select/select_half_zero.gif) |
+| [![Select_Half](img/screen/select/select_half_zero.gif)](img/screen/select/select_half_zero.gif) |
 | --- |
 | Select half. Include Zero option|
 
@@ -112,21 +112,21 @@ Select part of the model according to its location relative to the coordinate ax
 ### Select Quaded Islands
 Select islands that consist only of quads.
 
-| ![Select_Quaded_Islands](img\gifs\select_operators\Select_Quaded_Islands.gif) |
+| [![Select_Quaded_Islands](img\gifs\select_operators\Select_Quaded_Islands.gif)](img\gifs\select_operators\Select_Quaded_Islands.gif) |
 | --- |
 | Select quaded islands |
 
 ### Select Cylinder Edges (Splits)
 Select island edges that belong to the same mesh edge and split the island by itself.
 
-|![Cylinder Edges](img\gifs\select_operators\Select_Splits.gif)|
+| [![Cylinder Edges](img\gifs\select_operators\Select_Splits.gif)](img\gifs\select_operators\Select_Splits.gif) |
 | --- |
 | Select splits |
 
 ### Select Edges by Condition
 Select edges based on various conditions and logic operations with NOT support.
 
-|![Edges by Condition](img\gifs\select_operators\Select_Edges_by_Condition.gif))|
+| [![Edges by Condition](img\gifs\select_operators\Select_Edges_by_Condition.gif)](img\gifs\select_operators\Select_Edges_by_Condition.gif) |
 | --- |
 | Select edges by condition |
 
@@ -134,7 +134,7 @@ Select edges based on various conditions and logic operations with NOT support.
 ### Select Edges By Direction
 Select edges by direction along U or V axis.
 
-| ![Select_Edges_by_Direction](img/gifs/select_operators/Select_Edges_by_Direction.gif) |
+| [![Select_Edges_by_Direction](img/gifs/select_operators/Select_Edges_by_Direction.gif)](img/gifs/select_operators/Select_Edges_by_Direction.gif) |
 | --- |
 | Select edges by direction |
 
@@ -142,7 +142,7 @@ Select edges by direction along U or V axis.
 ### Select Islands By Direction
 Select island by direction.
 
-| ![Select Island by Direction](img/gifs/select_operators/Select_Island_by_Direction.gif) |
+| [![Select Island by Direction](img/gifs/select_operators/Select_Island_by_Direction.gif)](img/gifs/select_operators/Select_Island_by_Direction.gif) |
 | --- |
 | Select island by direction |
 
@@ -189,7 +189,7 @@ After you run this operator, the Multiplied Area value goes into the Select by U
 ### Convert Face to Loops
 Convert selected mesh faces to UV loops.
 
-| ![Select Face to Loops](img/gifs/select_operators/Select_Face_to_Loops.gif) |
+| [![Select Face to Loops](img/gifs/select_operators/Select_Face_to_Loops.gif)](img/gifs/select_operators/Select_Face_to_Loops.gif) |
 | --- |
 | Select Face to Loops |
 
@@ -197,7 +197,7 @@ Convert selected mesh faces to UV loops.
 ### Convert Edges to Loops
 Convert selected mesh edges to UV loops.
 
-| ![Select Edges to Loops](img/gifs/select_operators/Select_Edges_to_Loops.gif) |
+| [![Select Edges to Loops](img/gifs/select_operators/Select_Edges_to_Loops.gif)](img/gifs/select_operators/Select_Edges_to_Loops.gif) |
 | --- |
 | Select Edges to Loops |
 
@@ -205,7 +205,7 @@ Convert selected mesh edges to UV loops.
 ### Convert Loops to Face
 Only for UV Sync Selection - off. Convert selected UV loops to mesh face selection.
 
-| ![Convert Loops to Face](img/gifs/select_operators/Select_Loops_to_Face.gif) |
+| [![Convert Loops to Face](img/gifs/select_operators/Select_Loops_to_Face.gif)](img/gifs/select_operators/Select_Loops_to_Face.gif) |
 | --- |
 | Convert Loops to Face |
 
@@ -213,7 +213,7 @@ Only for UV Sync Selection - off. Convert selected UV loops to mesh face selecti
 ### Convert Loop to Edge
 Only for UV Sync Selection - off. Convert selected UV loop to mesh edge selection.
 
-| ![Convert Loop to Edge](img/gifs/select_operators/Select_Loop_to_Edge.gif) |
+| [![Convert Loop to Edge](img/gifs/select_operators/Select_Loop_to_Edge.gif)](img/gifs/select_operators/Select_Loop_to_Edge.gif) |
 | --- |
 | Convert Loop to Edge |
 
@@ -221,14 +221,14 @@ Only for UV Sync Selection - off. Convert selected UV loop to mesh edge selectio
 ### Select Linked Loops
 Only for UV Sync Selection - off. Selects all loops belonging to the mesh vertex based on any already selected loop.
 
-| ![Select Linked Loops](img/gifs/select_operators/Select_Linked_Loops.gif) |
+| [![Select Linked Loops](img/gifs/select_operators/Select_Linked_Loops.gif)](img/gifs/select_operators/Select_Linked_Loops.gif) |
 | --- |
 | Select Linked Loops |
 
 ### Isolate Islands (Toggle)
 Isolate Islands (Toggle).
 
-| ![Isolate_Islands](img/gifs/select_operators/Isolate_Islands.gif) |
+| [![Isolate_Islands](img/gifs/select_operators/Isolate_Islands.gif)](img/gifs/select_operators/Isolate_Islands.gif) |
 | --- |
 | Isolate islands |
 
