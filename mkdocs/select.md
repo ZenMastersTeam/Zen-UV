@@ -8,17 +8,18 @@
 
 | Operator | Operator | Operator | Operator |
 |   :---:  |   :---:  |  :---:   |  :---:   |
-| [Islands](#islands)    | [Int. Loop](#int-loop) | [Cylinder Edges (Splits)](#select-cylinder-edges-splits) | [Edges To Loops](#select-edges-to-loops) |
-| [Overlapped](#overlapped) | [Flipped](#flipped)   | [Edges by Condition](#select-edges-by-condition) | [Loop to Face](#convert-loops-to-face) |
-| [Seam](#seam) | [Sharp](#sharp) | [Edges by Direction](#select-edges-by-direction) | [Loop to Edge](#convert-loop-to-edge) |
-| [Borders](#select-uv-borders) | [Open Edges](#open-edges) | [Island by Direction](#select-islands-by-direction) | [Select Linked Loops](#select-linked-loops) |
-| [Similar](#similar) | [Select in Tile](#select-in-tile) | [Select by UV Area](#select-by-uv-area) | [Isolate Islands (Toggle)](#isolate-islands-toggle)|
-| [Half](#select-half) | [Quaded Islands](#select-quaded-islands) | [Face To Loops](#select-face-to-loops) ||
+| [Islands](#select-islands)    | [Int. Loop](#select-int-loop) | [Cylinder Edges (Splits)](#select-cylinder-edges-splits) | [Edges To Loops](#convert-edges-to-loops) |
+| [Overlapped](#select-overlapped) | [Flipped](#select-flipped)   | [Edges by Condition](#select-edges-by-condition) | [Loop to Face](#convert-loops-to-face) |
+| [Seam](#select-seam) | [Sharp](#select-sharp) | [Edges by Direction](#select-edges-by-direction) | [Loop to Edge](#convert-loop-to-edge) |
+| [Borders](#select-uv-borders) | [Open Edges](#select-open-edges) | [Island by Direction](#select-islands-by-direction) | [Select Linked Loops](#select-linked-loops) |
+| [Similar](#select-similar) | [Select in Tile](#select-in-tile) | [Select by UV Area](#select-by-uv-area) | [Isolate Islands (Toggle)](#isolate-islands-toggle)|
+| [Half](#select-half) | [Quaded Islands](#select-quaded-islands) | [Face To Loops](#convert-face-to-loops) ||
 
 
 ---
 ### Select Islands
-Select Islands by selected edge/face of the Islands. ![Islands](img/icons/select.png) 
+Select Islands by selected edge/face of the Islands. ![Islands](img/icons/select.png)
+
 | ![Select_Islands](img/gifs/select_operators/Select_Islands.gif) |
 | --- |
 | Select islands |
@@ -74,6 +75,7 @@ Select existing UV Borders.
 ---
 ### Select Open Edges
 Select open edges the way that looks in the 3D viewport. Including the open edges that appeared after the faces were hidden.
+
 | ![Select_Open_Edges](img\gifs\select_operators\Select_Open_Edges.gif) |
 | --- |
 | Select open edges |
@@ -115,11 +117,15 @@ Select islands that consist only of quads.
 | Select quaded islands |
 
 ### Select Cylinder Edges (Splits)
+Select island edges that belong to the same mesh edge and split the island by itself.
+
 |![Cylinder Edges](img\gifs\select_operators\Select_Splits.gif)|
 | --- |
 | Select splits |
 
 ### Select Edges by Condition
+Select edges based on various conditions and logic operations with NOT support.
+
 |![Edges by Condition](img\gifs\select_operators\Select_Edges_by_Condition.gif))|
 | --- |
 | Select edges by condition |
@@ -149,6 +155,7 @@ The operator consists of two buttons. Where the first is the main operator and t
 
 ---
 #### Select by UV Area:
+Select faces by their UV area.
 
 ![](img/screen/select/select_by_uv_area_op_prop.png) |
 | --- |
@@ -179,15 +186,17 @@ After you run this operator, the Multiplied Area value goes into the Select by U
   - **Multiplied Area** - The same value as the Real Area, but multiplied for easier use.
 
 ---
-### Select Face to Loops
+### Convert Face to Loops
 Convert selected mesh faces to UV loops.
+
 | ![Select Face to Loops](img/gifs/select_operators/Select_Face_to_Loops.gif) |
 | --- |
 | Select Face to Loops |
 
 ---
-### Select Edges to Loops
+### Convert Edges to Loops
 Convert selected mesh edges to UV loops.
+
 | ![Select Edges to Loops](img/gifs/select_operators/Select_Edges_to_Loops.gif) |
 | --- |
 | Select Edges to Loops |
@@ -195,6 +204,7 @@ Convert selected mesh edges to UV loops.
 ---
 ### Convert Loops to Face
 Only for UV Sync Selection - off. Convert selected UV loops to mesh face selection.
+
 | ![Convert Loops to Face](img/gifs/select_operators/Select_Loops_to_Face.gif) |
 | --- |
 | Convert Loops to Face |
@@ -202,6 +212,7 @@ Only for UV Sync Selection - off. Convert selected UV loops to mesh face selecti
 ---
 ### Convert Loop to Edge
 Only for UV Sync Selection - off. Convert selected UV loop to mesh edge selection.
+
 | ![Convert Loop to Edge](img/gifs/select_operators/Select_Loop_to_Edge.gif) |
 | --- |
 | Convert Loop to Edge |
@@ -209,6 +220,7 @@ Only for UV Sync Selection - off. Convert selected UV loop to mesh edge selectio
 ---
 ### Select Linked Loops
 Only for UV Sync Selection - off. Selects all loops belonging to the mesh vertex based on any already selected loop.
+
 | ![Select Linked Loops](img/gifs/select_operators/Select_Linked_Loops.gif) |
 | --- |
 | Select Linked Loops |
