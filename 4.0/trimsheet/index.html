@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>Introduction - Zen UV 4.0 for Blender</title>
+    <title>Trim Sheets - Zen UV 4.4 for Blender</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
@@ -13,7 +13,7 @@
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Introduction";
+        var mkdocs_page_name = "Trim Sheets";
         var mkdocs_page_input_path = "trimsheet.md";
         var mkdocs_page_url = null;
       </script>
@@ -24,6 +24,14 @@
     <![endif]-->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
       <script>hljs.initHighlightingOnLoad();</script> 
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-7XHJ910WF8"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-7XHJ910WF8');
+      </script>
 </head>
 
 <body class="wy-body-for-nav" role="document">
@@ -32,10 +40,10 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
-          <a href=".." class="icon icon-home"> Zen UV 4.0 for Blender
+          <a href=".." class="icon icon-home"> Zen UV 4.4 for Blender
         </a><div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
-      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
   </form>
 </div>
       </div>
@@ -45,6 +53,8 @@
               <ul>
                   <li class="toctree-l1"><a class="reference internal" href="..">Introduction</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../youtube_videos/">Learning Videos</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../zenuv3_to_zenuv4/">Upgrade Zen UV 3 to Zen UV 4 FAQ</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../installation/">Installation and Update</a>
@@ -53,7 +63,7 @@
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Modules</span></p>
-              <ul class="current">
+              <ul>
                   <li class="toctree-l1"><a class="reference internal" href="../adv_uv-maps/">Advanced UV Maps</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../seam_groups/">Seam Groups</a>
@@ -62,50 +72,59 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../select/">Select</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../pack/">Pack</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../checker/">UV Checker</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../texel_density/">Texel Density</a>
-                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../transform/">Transform</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../stack/">Stack</a>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Trim Sheets</a>
-    <ul class="current">
-                <li class="toctree-l2 current"><a class="reference internal current" href="./">Introduction</a>
-    <ul class="current">
-    <li class="toctree-l3"><a class="reference internal" href="#what-is-a-trim-sheet">What is a trim sheet?</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#why-would-you-use-a-trim-sheet">Why would you use a trim sheet?</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#create-your-trim-sheet-with-zen-uv">Create your trim sheet with Zen UV</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#create-your-trim-sheet-in-any-2d-vector-editor-that-supports-svg">Create your trim sheet in any 2D Vector Editor that supports SVG</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#share-your-trim-sheets-as-svg-files">Share your trim sheets as SVG files</a>
-    </li>
-    </ul>
-                </li>
-                <li class="toctree-l2"><a class="reference internal" href="../trimsheet_creation/">Creation</a>
-                </li>
-                <li class="toctree-l2"><a class="reference internal" href="../trimsheet_operators/">Operators</a>
-                </li>
-    </ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../texel_density/">Texel Density</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../checker/">UV Checker</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pack/">Pack</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../preferences/">Preferences</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../transform_tool/">Transform Tool</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../sticky_uv_editor/">Sticky UV Editor</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../preferences/">Preferences</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../favourites/">Favourites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Trim Sheets</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Trim Sheets</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#what-is-a-trim-sheet">What is a trim sheet?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#why-would-you-use-a-trim-sheet">Why would you use a trim sheet?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#create-your-trim-sheet-with-zen-uv">Create your trim sheet with Zen UV</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#create-your-trim-sheet-in-any-2d-vector-editor-that-supports-svg">Create your trim sheet in any 2D Vector Editor that supports SVG</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#share-your-trim-sheets-as-svg-files">Share your trim sheets as SVG files</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#export-trim-sheets-to-substance-3d-designer">Export trim sheets to Substance 3D Designer</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#import-trim-sheets-from-decal-machine-add-on">Import trim sheets from DECAL Machine add-on</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../trimsheet_creation/">Trim Sheet Management</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../trimsheet_operators/">Trim Sheet Operators</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../trimsheet_hotspot/">Hotspot Mapping</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Additional</span></p>
               <ul>
                   <li class="toctree-l1"><a class="reference internal" href="../addon_prefs/">Addon Preferences</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../help/">Help</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../user_script/">User Script</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../downloads/">Downloads</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../help/">Help</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../troubleshooting/">FAQs</a>
                   </li>
@@ -115,6 +134,8 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../our_addons/">Our Add-ons</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../recommended_addons/">Recommended Add-ons</a>
+                  </li>
               </ul>
       </div>
     </div>
@@ -123,16 +144,15 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
       <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="..">Zen UV 4.0 for Blender</a>
+          <a href="..">Zen UV 4.4 for Blender</a>
         
       </nav>
       <div class="wy-nav-content">
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
-    <li><a href=".." class="icon icon-home" aria-label="Docs"></a> &raquo;</li>
-          <li>Modules &raquo;</li>
+    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
           <li>Trim Sheets &raquo;</li>
-      <li>Introduction</li>
+      <li>Trim Sheets</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -180,13 +200,13 @@ of recurring elements those are ideal candidates for a trim sheet.</p>
 <p><img alt="" src="../img/screen/trimsheet/trimsheet_editor.png" /></p>
 </div>
 <h2 id="create-your-trim-sheet-in-any-2d-vector-editor-that-supports-svg">Create your trim sheet in any 2D Vector Editor that supports SVG<a class="headerlink" href="#create-your-trim-sheet-in-any-2d-vector-editor-that-supports-svg" title="Permanent link"></a></h2>
-<p>We didn&rsquo;t want trim sheets system to be enclosed only in Blender. So we implemented very convinient import-export trim sheets into SVG files and back. If you are a PRO in such vector editor as Inkscape, feel free to create trim sheets in your favourite software and then just export it in SVG and import in Blender.</p>
+<p>We didn&rsquo;t want trim sheets system to be enclosed only in Blender. So we implemented very convenient import-export trim sheets into SVG files and back. If you are a PRO in such vector editor as Inkscape, feel free to create trim sheets in your favourite software and then just export it in SVG and import in Blender.</p>
 <div class="admonition svg">
 <p class="admonition-title">Svg</p>
 <p><img alt="" src="../img/screen/trimsheet/trimsheet_inkscape.png" /></p>
 </div>
 <h2 id="share-your-trim-sheets-as-svg-files">Share your trim sheets as SVG files<a class="headerlink" href="#share-your-trim-sheets-as-svg-files" title="Permanent link"></a></h2>
-<p>Sometimes sharing trim sheets as blend files is inconvinient, it requires matching Blender versions, cutting all unnecessary information not related to trim sheets, etc. So we implemented easy share trim sheets as SVG files. They can be viewed in any browser and can be edited not only in Blender but in every 2D Vector Editor.</p>
+<p>Sometimes sharing trim sheets as blend files is inconvenient, it requires matching Blender versions, cutting all unnecessary information not related to trim sheets, etc. So we implemented easy share trim sheets as SVG files. They can be viewed in any browser and can be edited not only in Blender but in every 2D Vector Editor.</p>
 <table>
 <thead>
 <tr>
@@ -199,18 +219,39 @@ of recurring elements those are ideal candidates for a trim sheet.</p>
 </tr>
 </tbody>
 </table>
+<h2 id="export-trim-sheets-to-substance-3d-designer">Export trim sheets to Substance 3D Designer<a class="headerlink" href="#export-trim-sheets-to-substance-3d-designer" title="Permanent link"></a></h2>
+<p>Substance 3D Designer is the industry standard for procedural textures creation.
+You can create Trim textures in this software using masks from Zen UV add-on. </p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Watch the video explaining <strong>How to export Trim sheets to Substance 3D Designer</strong>.</p>
+<p><div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%;">
+<iframe src="https://www.youtube.com/embed/jFcVmGnNOho?start=127&end=193" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen="" seamless="" frameborder="0"></iframe>
+</div></p>
+</div>
+<h2 id="import-trim-sheets-from-decal-machine-add-on">Import trim sheets from DECAL Machine add-on<a class="headerlink" href="#import-trim-sheets-from-decal-machine-add-on" title="Permanent link"></a></h2>
+<p>DECAL Machine is Blender add-on for Decal and Trim sheets creation.
+You can import textures and Trim layout from DECAL Machine and use them with Zen UV Trim sheet system.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Watch the video explaining <strong>How to import trim sheets from DECAL Machine add-on</strong>.</p>
+<p><div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%;">
+<iframe src="https://www.youtube.com/embed/jFcVmGnNOho?start=66&end=124" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen="" seamless="" frameborder="0"></iframe>
+</div></p>
+</div>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../stack/" class="btn btn-neutral float-left" title="Stack"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../trimsheet_creation/" class="btn btn-neutral float-right" title="Creation">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../favourites/" class="btn btn-neutral float-left" title="Favourites"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../trimsheet_creation/" class="btn btn-neutral float-right" title="Trim Sheet Management">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
     <!-- Copyright etc -->
+      <p><p>Copyright &copy; 2024 <a href="https://zenmasters.team/">Zen Masters</a></p></p>
   </div>
 
   Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
@@ -227,7 +268,7 @@ of recurring elements those are ideal candidates for a trim sheet.</p>
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../stack/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../favourites/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
       <span><a href="../trimsheet_creation/" style="color: #fcfcfc">Next &raquo;</a></span>

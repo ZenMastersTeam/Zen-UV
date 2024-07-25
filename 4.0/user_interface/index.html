@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>User Interface - Zen UV 4.0 for Blender</title>
+    <title>User Interface - Zen UV 4.4 for Blender</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
@@ -24,6 +24,14 @@
     <![endif]-->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
       <script>hljs.initHighlightingOnLoad();</script> 
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-7XHJ910WF8"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-7XHJ910WF8');
+      </script>
 </head>
 
 <body class="wy-body-for-nav" role="document">
@@ -32,10 +40,10 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
-          <a href=".." class="icon icon-home"> Zen UV 4.0 for Blender
+          <a href=".." class="icon icon-home"> Zen UV 4.4 for Blender
         </a><div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
-      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
   </form>
 </div>
       </div>
@@ -45,12 +53,22 @@
               <ul class="current">
                   <li class="toctree-l1"><a class="reference internal" href="..">Introduction</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../youtube_videos/">Learning Videos</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../zenuv3_to_zenuv4/">Upgrade Zen UV 3 to Zen UV 4 FAQ</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../installation/">Installation and Update</a>
                   </li>
                   <li class="toctree-l1 current"><a class="reference internal current" href="./">User Interface</a>
     <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#multiple-panels">Multiple Panels</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#panels-pinning">Panels Pinning</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#combo-panel-in-properties">Combo Panel in Properties</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#popup-combo-panel">Popup Combo Panel</a>
+    </li>
     </ul>
                   </li>
               </ul>
@@ -64,38 +82,43 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../select/">Select</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../pack/">Pack</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../checker/">UV Checker</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../texel_density/">Texel Density</a>
-                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../transform/">Transform</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../stack/">Stack</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="#">Trim Sheets</a>
-    <ul>
-                <li class="toctree-l2"><a class="reference internal" href="../trimsheet/">Introduction</a>
-                </li>
-                <li class="toctree-l2"><a class="reference internal" href="../trimsheet_creation/">Creation</a>
-                </li>
-                <li class="toctree-l2"><a class="reference internal" href="../trimsheet_operators/">Operators</a>
-                </li>
-    </ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../texel_density/">Texel Density</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../checker/">UV Checker</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pack/">Pack</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../preferences/">Preferences</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../transform_tool/">Transform Tool</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../sticky_uv_editor/">Sticky UV Editor</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../preferences/">Preferences</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../favourites/">Favourites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Trim Sheets</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../trimsheet/">Trim Sheets</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../trimsheet_creation/">Trim Sheet Management</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../trimsheet_operators/">Trim Sheet Operators</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../trimsheet_hotspot/">Hotspot Mapping</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Additional</span></p>
               <ul>
                   <li class="toctree-l1"><a class="reference internal" href="../addon_prefs/">Addon Preferences</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../help/">Help</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../user_script/">User Script</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../downloads/">Downloads</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../help/">Help</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../troubleshooting/">FAQs</a>
                   </li>
@@ -105,6 +128,8 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../our_addons/">Our Add-ons</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../recommended_addons/">Recommended Add-ons</a>
+                  </li>
               </ul>
       </div>
     </div>
@@ -113,13 +138,13 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
       <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="..">Zen UV 4.0 for Blender</a>
+          <a href="..">Zen UV 4.4 for Blender</a>
         
       </nav>
       <div class="wy-nav-content">
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
-    <li><a href=".." class="icon icon-home" aria-label="Docs"></a> &raquo;</li>
+    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
           <li>Getting Started &raquo;</li>
       <li>User Interface</li>
     <li class="wy-breadcrumbs-aside">
@@ -131,18 +156,36 @@
             <div class="section" itemprop="articleBody">
               
                 <h1 id="combo-panel">Combo Panel<a class="headerlink" href="#combo-panel" title="Permanent link"></a></h1>
-<p>Combo Panel is a place where you can find all Zen operators.
+<p>Combo Panel is a place where you can find all Zen UV operators.
 Operators are divided into thematic sections on the left side.</p>
+<p>The set of operators in the Combo Panel may vary depending on the context. 
+Some operators do not work in UV Editor and present in 3D Viewport only.</p>
+<p>It&rsquo;s on the N-Panel and you can <a href="../preferences/#panels"><strong>customize the appearance of panels in Preferences</strong></a>.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Watch the video explaining how <strong>Combo Panels</strong> works.</p>
+<p><div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%;">
+<iframe src="https://www.youtube.com/embed/f9meGzMGx2k?start=26&end=142" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen="" seamless="" frameborder="0"></iframe>
+</div></p>
+</div>
 <p><img alt="Combo Panel" src="../img/gifs/user_interface/compactui_1.gif" /></p>
-<p>You can open multiple panels with <code>SHIFT + LMB</code>.</p>
+<h2 id="multiple-panels">Multiple Panels<a class="headerlink" href="#multiple-panels" title="Permanent link"></a></h2>
+<p>Open multiple panels with <code>SHIFT + LMB</code>.</p>
 <p><img alt="Combo Panel" src="../img/gifs/user_interface/compactui_2.gif" /></p>
-<p>You can pin some panesl with <code>CTRL + LMB</code></p>
+<h2 id="panels-pinning">Panels Pinning<a class="headerlink" href="#panels-pinning" title="Permanent link"></a></h2>
+<p>Pin some panels with <code>CTRL + LMB</code></p>
 <p><img alt="Combo Panel" src="../img/gifs/user_interface/compactui_3.gif" /></p>
+<h2 id="combo-panel-in-properties">Combo Panel in Properties<a class="headerlink" href="#combo-panel-in-properties" title="Permanent link"></a></h2>
 <p>When Zen UV Transform Tool is active you can find Combo Panel in Properties.</p>
 <p><img alt="Combo Panel" src="../img/gifs/user_interface/compactui_6.gif" /></p>
+<h2 id="popup-combo-panel">Popup Combo Panel<a class="headerlink" href="#popup-combo-panel" title="Permanent link"></a></h2>
 <p>Combo Panel is the same in N-Panel and Pop-up menu  <code>Shift + U</code>.
 You can call this menu anywhere.</p>
 <p><img alt="Combo Panel" src="../img/gifs/user_interface/compactui_8.gif" /></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Don&rsquo;t forget to drink some good beer today!</p>
+</div>
 <h1 id="pie-menu">Pie Menu<a class="headerlink" href="#pie-menu" title="Permanent link"></a></h1>
 <p><img alt="Pie Menu" src="../img/gifs/user_interface/pie_menu.gif" /></p>
 <h2 id="operators">Operators<a class="headerlink" href="#operators" title="Permanent link"></a></h2>
@@ -196,7 +239,7 @@ You can call this menu anywhere.</p>
 <p>Pie Menu Assist is special help window, which is located below the Pie Menu. There you can find, highlight and execute all the alternative <code>ALT</code>, <code>CTRL</code>, <code>SHIFT</code> Pie Menu commands.</p>
 <div class="admonition assist">
 <p class="admonition-title">Assist</p>
-<p>If you want to disable Pie Menu Assist, you can do it here <strong>N-Panel</strong> -&gt; <strong>Zen UV</strong> -&gt; <strong>Preferences</strong> -&gt; <strong>Display</strong> -&gt; <strong>Display Pie Assist</strong>. </p>
+<p>If you want to disable Pie Menu Assist, you can do it here <strong>N-Panel</strong> -&gt; <strong>Zen UV</strong> -&gt; <strong>Preferences</strong> -&gt; <strong>Display</strong> -&gt; <strong>Display Pie Assist</strong>.</p>
 </div>
 <h2 id="default-shortcut">Default Shortcut<a class="headerlink" href="#default-shortcut" title="Permanent link"></a></h2>
 <p>Zen UV Pie Menu <img alt="Zen UV Pie Menu" src="../img/icons/zen-uv%402x.png" /> &mdash; <code>Alt + U</code></p>
@@ -204,22 +247,27 @@ You can call this menu anywhere.</p>
 <p class="admonition-title">Shortcut</p>
 <p>If you don&rsquo;t like default Pie Menu Shortcut, it can be changed here <strong>Edit</strong> -&gt; <strong>Preferences</strong> -&gt; <strong>Add-ons</strong> -&gt; <strong>Zen UV</strong> -&gt; <strong>Keymap</strong>. Don&rsquo;t forget to change Shortcut for both contexts Mesh and UV Editor.</p>
 </div>
-<h1 id="zen-transform-tool">Zen Transform Tool<a class="headerlink" href="#zen-transform-tool" title="Permanent link"></a></h1>
+<h1 id="transform-tool">Transform Tool<a class="headerlink" href="#transform-tool" title="Permanent link"></a></h1>
+<p>Move, Rotate, Scale, Fit, Align and Flip selected Islands or Faces/Edges/Vertices in 3D Viewport and UV Editor using Zen UV Gizmo.</p>
+<p><a href="../unwrap/#transform_tool"><strong>Follow the link</strong></a> to find more information about Transform Tool.</p>
 <p><img alt="Zen Transform Tool" src="../img/gifs/user_interface/ZenTransformTool_main.gif" /></p>
-<h1 id="progress-bar">Progress Bar<a class="headerlink" href="#progress-bar" title="Permanent link"></a></h1>
-<p><img alt="Progress Bar" src="../img/gifs/user_interface/ProgressBar_main.gif" /></p>
-<p><strong>Progress Bar</strong> is designed to display the progress of the operator execution process. Not all operators use the <strong>Progress Bar</strong>, only those that require complex calculations.
-On some operating systems of the <strong>Linux</strong> family, the <strong>Progress Bar</strong> can cause Blender to crash. To avoid this situation, you can disable the Progress Bar in <strong>Panel - Preferences - Display Progress Bar.</strong></p>
-<p><img alt="Progress Bar disable" src="../img/screen/user_interface/ProgressBar_disable.png" /></p>
 <h1 id="darken-image">Darken Image<a class="headerlink" href="#darken-image" title="Permanent link"></a></h1>
+<p><strong>Darken Image</strong> operator is designed to adjust the darkening of an Image in the context of the UV Editor. It does not change the texture but uses color management curve to darken it.</p>
 <p><img alt="Darken Image" src="../img/gifs/user_interface/DarkenImage_main.gif" /></p>
-<p>The <strong>Darken Image</strong> operator is designed to adjust the darkening of an Image in the context of the UV Editor. It does not change the texture but uses color management curve to darken it.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Watch the video explaining how <strong>Darken Image</strong> works.</p>
+<p><div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%;">
+<iframe src="https://www.youtube.com/embed/f9meGzMGx2k?start=156&end=180" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen="" seamless="" frameborder="0"></iframe>
+</div></p>
+</div>
+<p>You can find this operator in UV Editor Overlay.</p>
 <p><img alt="Darken Image In UI" src="../img/screen/user_interface/DarkenImage.png" /></p>
+<p><img alt="" src="../img/screen/user_interface/color_curve.png" /></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
+<p>This option affects on current render settings. Do not forget to switch it off before rendering.</p>
 </div>
-<p>This option affects on current render settings. Do not forget to switch it off before rendering</p>
-<p><img alt="" src="../img/screen/user_interface/color_curve.png" /></p>
               
             </div>
           </div><footer>
@@ -232,6 +280,7 @@ On some operating systems of the <strong>Linux</strong> family, the <strong>Prog
 
   <div role="contentinfo">
     <!-- Copyright etc -->
+      <p><p>Copyright &copy; 2024 <a href="https://zenmasters.team/">Zen Masters</a></p></p>
   </div>
 
   Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
