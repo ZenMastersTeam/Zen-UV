@@ -8,7 +8,7 @@
     <title>Select - Zen UV 4.4 for Blender</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
         <link href="../css/version-select.css" rel="stylesheet" />
     
       <script>
@@ -18,19 +18,18 @@
         var mkdocs_page_url = null;
       </script>
     
-    <script src="../js/jquery-3.6.0.min.js" defer></script>
     <!--[if lt IE 9]>
       <script src="../js/html5shiv.min.js"></script>
     <![endif]-->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
-      <script>hljs.initHighlightingOnLoad();</script> 
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-7XHJ910WF8"></script>
       <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
 
-        gtag('config', 'G-7XHJ910WF8');
+        gtag('config', "G-7XHJ910WF8");
       </script>
 </head>
 
@@ -43,7 +42,7 @@
           <a href=".." class="icon icon-home"> Zen UV 4.4 for Blender
         </a><div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
-      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
   </form>
 </div>
       </div>
@@ -70,7 +69,7 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../unwrap/">Unwrap</a>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Select</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Select</a>
     <ul class="current">
     <li class="toctree-l2"><a class="reference internal" href="#select-islands">Select Islands</a>
     </li>
@@ -188,9 +187,9 @@
       <div class="wy-nav-content">
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
-    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
-          <li>Modules &raquo;</li>
-      <li>Select</li>
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Modules</li>
+      <li class="breadcrumb-item active">Select</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -220,48 +219,48 @@
 <table>
 <thead>
 <tr>
-<th align="center">Operator</th>
-<th align="center">Operator</th>
-<th align="center">Operator</th>
-<th align="center">Operator</th>
+<th style="text-align: center;">Operator</th>
+<th style="text-align: center;">Operator</th>
+<th style="text-align: center;">Operator</th>
+<th style="text-align: center;">Operator</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="center"><a href="#select-islands">Islands</a></td>
-<td align="center"><a href="#select-int-loop">Int. Loop</a></td>
-<td align="center"><a href="#select-cylinder-edges-splits">Cylinder Edges (Splits)</a></td>
-<td align="center"><a href="#convert-edges-to-loops">Edges To Loops</a></td>
+<td style="text-align: center;"><a href="#select-islands">Islands</a></td>
+<td style="text-align: center;"><a href="#select-int-loop">Int. Loop</a></td>
+<td style="text-align: center;"><a href="#select-cylinder-edges-splits">Cylinder Edges (Splits)</a></td>
+<td style="text-align: center;"><a href="#convert-edges-to-loops">Edges To Loops</a></td>
 </tr>
 <tr>
-<td align="center"><a href="#select-overlapped">Overlapped</a></td>
-<td align="center"><a href="#select-flipped">Flipped</a></td>
-<td align="center"><a href="#select-edges-by-condition">Edges by Condition</a></td>
-<td align="center"><a href="#convert-loops-to-face">Loop to Face</a></td>
+<td style="text-align: center;"><a href="#select-overlapped">Overlapped</a></td>
+<td style="text-align: center;"><a href="#select-flipped">Flipped</a></td>
+<td style="text-align: center;"><a href="#select-edges-by-condition">Edges by Condition</a></td>
+<td style="text-align: center;"><a href="#convert-loops-to-face">Loop to Face</a></td>
 </tr>
 <tr>
-<td align="center"><a href="#select-seam">Seam</a></td>
-<td align="center"><a href="#select-sharp">Sharp</a></td>
-<td align="center"><a href="#select-edges-by-direction">Edges by Direction</a></td>
-<td align="center"><a href="#convert-loop-to-edge">Loop to Edge</a></td>
+<td style="text-align: center;"><a href="#select-seam">Seam</a></td>
+<td style="text-align: center;"><a href="#select-sharp">Sharp</a></td>
+<td style="text-align: center;"><a href="#select-edges-by-direction">Edges by Direction</a></td>
+<td style="text-align: center;"><a href="#convert-loop-to-edge">Loop to Edge</a></td>
 </tr>
 <tr>
-<td align="center"><a href="#select-uv-borders">Borders</a></td>
-<td align="center"><a href="#select-open-edges">Open Edges</a></td>
-<td align="center"><a href="#select-islands-by-direction">Island by Direction</a></td>
-<td align="center"><a href="#select-linked-loops">Select Linked Loops</a></td>
+<td style="text-align: center;"><a href="#select-uv-borders">Borders</a></td>
+<td style="text-align: center;"><a href="#select-open-edges">Open Edges</a></td>
+<td style="text-align: center;"><a href="#select-islands-by-direction">Island by Direction</a></td>
+<td style="text-align: center;"><a href="#select-linked-loops">Select Linked Loops</a></td>
 </tr>
 <tr>
-<td align="center"><a href="#select-similar">Similar</a></td>
-<td align="center"><a href="#select-in-tile">Select in Tile</a></td>
-<td align="center"><a href="#select-by-uv-area">Select by UV Area</a></td>
-<td align="center"><a href="#isolate-islands-toggle">Isolate Islands (Toggle)</a></td>
+<td style="text-align: center;"><a href="#select-similar">Similar</a></td>
+<td style="text-align: center;"><a href="#select-in-tile">Select in Tile</a></td>
+<td style="text-align: center;"><a href="#select-by-uv-area">Select by UV Area</a></td>
+<td style="text-align: center;"><a href="#isolate-islands-toggle">Isolate Islands (Toggle)</a></td>
 </tr>
 <tr>
-<td align="center"><a href="#select-half">Half</a></td>
-<td align="center"><a href="#select-quaded-islands">Quaded Islands</a></td>
-<td align="center"><a href="#convert-face-to-loops">Face To Loops</a></td>
-<td align="center"></td>
+<td style="text-align: center;"><a href="#select-half">Half</a></td>
+<td style="text-align: center;"><a href="#select-quaded-islands">Quaded Islands</a></td>
+<td style="text-align: center;"><a href="#convert-face-to-loops">Face To Loops</a></td>
+<td style="text-align: center;"></td>
 </tr>
 </tbody>
 </table>
@@ -705,15 +704,16 @@
     
   </span>
 </div>
-    <script>var base_url = '..';</script>
-    <script src="../js/theme_extra.js" defer></script>
-    <script src="../js/theme.js" defer></script>
-      <script src="../search/main.js" defer></script>
-      <script src="../js/version-select.js" defer></script>
-    <script defer>
-        window.onload = function () {
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+      <script src="../js/version-select.js"></script>
+    <script>
+        jQuery(function () {
             SphinxRtdTheme.Navigation.enable(true);
-        };
+        });
     </script>
 
 </body>

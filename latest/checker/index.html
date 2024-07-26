@@ -8,7 +8,7 @@
     <title>UV Checker - Zen UV 4.4 for Blender</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
         <link href="../css/version-select.css" rel="stylesheet" />
     
       <script>
@@ -18,19 +18,18 @@
         var mkdocs_page_url = null;
       </script>
     
-    <script src="../js/jquery-3.6.0.min.js" defer></script>
     <!--[if lt IE 9]>
       <script src="../js/html5shiv.min.js"></script>
     <![endif]-->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
-      <script>hljs.initHighlightingOnLoad();</script> 
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-7XHJ910WF8"></script>
       <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
 
-        gtag('config', 'G-7XHJ910WF8');
+        gtag('config', "G-7XHJ910WF8");
       </script>
 </head>
 
@@ -43,7 +42,7 @@
           <a href=".." class="icon icon-home"> Zen UV 4.4 for Blender
         </a><div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
-      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
   </form>
 </div>
       </div>
@@ -78,9 +77,9 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../texel_density/">Texel Density</a>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="./">UV Checker</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">UV Checker</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#checker-texture-altt">Checker Texture  Alt+T</a>
+    <li class="toctree-l2"><a class="reference internal" href="#checker-texture">Checker Texture</a>
         <ul>
     <li class="toctree-l3"><a class="reference internal" href="#checker-preferences">Checker Preferences</a>
     </li>
@@ -212,9 +211,9 @@
       <div class="wy-nav-content">
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
-    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
-          <li>Modules &raquo;</li>
-      <li>UV Checker</li>
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Modules</li>
+      <li class="breadcrumb-item active">UV Checker</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -247,8 +246,8 @@
 <p>Display and Select <strong>Crease</strong>, <strong>Sharp</strong>, <strong>Bevel</strong>, <strong>Seams</strong>, <strong>Stretched</strong> and <strong>UV No Sync</strong> operators are absent on the panel in UV Editor. To use these operators you need to switch to 3D Viewport context.</p>
 <p>Also, UV Editor panel contains extra Display operator <a href="../user_interface/#darken-image"><strong>Darken Image. Click to read full information</strong></a>.</p>
 </div>
-<h3 id="checker-texture-altt">Checker Texture <img alt="Checker Texture" src="../img/icons/checker_32.png" /> <code>Alt+T</code><a class="headerlink" href="#checker-texture-altt" title="Permanent link"></a></h3>
-<p>Add/Remove Checker Texture to/from the mesh.</p>
+<h3 id="checker-texture">Checker Texture<a class="headerlink" href="#checker-texture" title="Permanent link"></a></h3>
+<p>Add/Remove Checker Texture to/from the mesh. <img alt="Checker Texture" src="../img/icons/checker_32.png" /> <code>Alt+T</code></p>
 <p><img alt="checker texture" src="../img/screen/tex_checker/checker_texture.gif" /> </p>
 <h4 id="checker-preferences">Checker Preferences<a class="headerlink" href="#checker-preferences" title="Permanent link"></a></h4>
 <p><img alt="Main Panel" src="../img/screen/tex_checker/tex_chk_props.png" /></p>
@@ -687,15 +686,16 @@ You can read full information about <a href="../stack/#stacks-display">Stacks Di
     
   </span>
 </div>
-    <script>var base_url = '..';</script>
-    <script src="../js/theme_extra.js" defer></script>
-    <script src="../js/theme.js" defer></script>
-      <script src="../search/main.js" defer></script>
-      <script src="../js/version-select.js" defer></script>
-    <script defer>
-        window.onload = function () {
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+      <script src="../js/version-select.js"></script>
+    <script>
+        jQuery(function () {
             SphinxRtdTheme.Navigation.enable(true);
-        };
+        });
     </script>
 
 </body>
