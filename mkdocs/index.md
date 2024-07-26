@@ -60,3 +60,4 @@ Currently we support Blender 3.3 LTS version and higher official versions.
 |---|---|---|
 | 3.3 LTS | September 7, 2022 | September 7, 2024 |
 | 3.6 LTS | June 27, 2023 | June 27, 2025 |
+| 4.2 LTS | July 16, 2024 | July 16, 2026 |
