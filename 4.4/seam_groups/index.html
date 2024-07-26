@@ -31,7 +31,11 @@
 
         gtag('config', "G-7XHJ910WF8");
       </script>
-</head>
+ <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }</style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
 
 <body class="wy-body-for-nav" role="document">
 
@@ -162,7 +166,7 @@
 <p>Seam Group operators allow to operate on more than one Seam Group.</p>
 <div class="admonition panel">
 <p class="admonition-title">Panel</p>
-<p><img alt="SeamGroups" src="../img/screen/seam_groups/seams_groups_panel.png" /></p>
+<p><a class="glightbox" href="../img/screen/seam_groups/seams_groups_panel.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="SeamGroups" src="../img/screen/seam_groups/seams_groups_panel.png" /></a></p>
 </div>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
@@ -171,18 +175,18 @@ To set Seams from active Seam Group click <strong>Activate</strong>. </p>
 </div>
 <h3 id="assign">Assign<a class="headerlink" href="#assign" title="Permanent link"></a></h3>
 <p>Assign Seams to selected Seam Group.</p>
-<p><img alt="SeamGroups" src="../img/screen/seam_groups/seams_groups_assign_activate.gif" /></p>
+<p><a class="glightbox" href="../img/screen/seam_groups/seams_groups_assign_activate.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="SeamGroups" src="../img/screen/seam_groups/seams_groups_assign_activate.gif" /></a></p>
 <h3 id="activate">Activate<a class="headerlink" href="#activate" title="Permanent link"></a></h3>
 <p>Set Seams from selected Seam Group to selected mesh.</p>
 <h3 id="assign-selection">Assign Selection<a class="headerlink" href="#assign-selection" title="Permanent link"></a></h3>
 <p>Mark Selection with Seams and Assign to active Seam Group.</p>
-<p><img alt="SeamGroups" src="../img/screen/seam_groups/seams_groups_selection.gif" /></p>
+<p><a class="glightbox" href="../img/screen/seam_groups/seams_groups_selection.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="SeamGroups" src="../img/screen/seam_groups/seams_groups_selection.gif" /></a></p>
 <h3 id="remove-selection">Remove Selection<a class="headerlink" href="#remove-selection" title="Permanent link"></a></h3>
 <p>Remove Selection from active Seam Group.</p>
-<h3 id="add">Add <img alt="Add" src="../img/icons/plus.png" /><a class="headerlink" href="#add" title="Permanent link"></a></h3>
+<h3 id="add">Add <a class="glightbox" href="../img/icons/plus.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Add" src="../img/icons/plus.png" /></a><a class="headerlink" href="#add" title="Permanent link"></a></h3>
 <p>Add a new Seam Group to the list.</p>
-<p><img alt="SeamGroups" src="../img/screen/seam_groups/seams_groups_add_remove.gif" /></p>
-<h3 id="delete">Delete <img alt="Delete" src="../img/icons/minus.png" /><a class="headerlink" href="#delete" title="Permanent link"></a></h3>
+<p><a class="glightbox" href="../img/screen/seam_groups/seams_groups_add_remove.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="SeamGroups" src="../img/screen/seam_groups/seams_groups_add_remove.gif" /></a></p>
+<h3 id="delete">Delete <a class="glightbox" href="../img/icons/minus.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Delete" src="../img/icons/minus.png" /></a><a class="headerlink" href="#delete" title="Permanent link"></a></h3>
 <p>Delete the selected Seam Group from the list.</p>
               
             </div>
@@ -232,5 +236,6 @@ To set Seams from active Seam Group click <strong>Activate</strong>. </p>
         });
     </script>
 
-</body>
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+</script></body>
 </html>

@@ -31,7 +31,11 @@
 
         gtag('config', "G-7XHJ910WF8");
       </script>
-</head>
+ <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }</style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
 
 <body class="wy-body-for-nav" role="document">
 
@@ -145,9 +149,9 @@
               
                 <h1 id="downloads">Downloads<a class="headerlink" href="#downloads" title="Permanent link"></a></h1>
 <h3 id="zina">Zina<a class="headerlink" href="#zina" title="Permanent link"></a></h3>
-<p><img alt="Zina" src="../img/screen/zina.png" /></p>
+<p><a class="glightbox" href="../img/screen/zina.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Zina" src="../img/screen/zina.png" /></a></p>
 <h3 id="zenerator">Zenerator<a class="headerlink" href="#zenerator" title="Permanent link"></a></h3>
-<p><img alt="Zina" src="../img/screen/zenerator.png" /></p>
+<p><a class="glightbox" href="../img/screen/zenerator.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Zina" src="../img/screen/zenerator.png" /></a></p>
 <p>Both models can be downloaded from <a href="https://github.com/zen-masters/Zen-UV/blob/master/mkdocs/repository/ZenUV_Models.zip">here</a>.</p>
               
             </div>
@@ -189,5 +193,6 @@
         });
     </script>
 
-</body>
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+</script></body>
 </html>
