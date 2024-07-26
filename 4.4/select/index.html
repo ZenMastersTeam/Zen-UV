@@ -69,37 +69,57 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../unwrap/">Unwrap</a>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Select</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Select</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#islands">Islands</a>
+    <li class="toctree-l2"><a class="reference internal" href="#select-islands">Select Islands</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#int-loop">Int. Loop</a>
+    <li class="toctree-l2"><a class="reference internal" href="#select-int-loop">Select Int. Loop</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#overlapped">Overlapped</a>
+    <li class="toctree-l2"><a class="reference internal" href="#select-overlapped">Select Overlapped</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#flipped">Flipped</a>
+    <li class="toctree-l2"><a class="reference internal" href="#select-flipped">Select Flipped</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#seam">Seam</a>
+    <li class="toctree-l2"><a class="reference internal" href="#select-seam">Select Seam</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#sharp">Sharp</a>
+    <li class="toctree-l2"><a class="reference internal" href="#select-sharp">Select Sharp</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#select-uv-borders">Select UV Borders</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#similar">Similar</a>
+    <li class="toctree-l2"><a class="reference internal" href="#select-open-edges">Select Open Edges</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#select-similar">Select Similar</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#select-in-tile">Select in Tile</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#select-half">Select Half</a>
     </li>
+    <li class="toctree-l2"><a class="reference internal" href="#select-quaded-islands">Select Quaded Islands</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#select-cylinder-edges-splits">Select Cylinder Edges (Splits)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#select-edges-by-condition">Select Edges by Condition</a>
+    </li>
     <li class="toctree-l2"><a class="reference internal" href="#select-edges-by-direction">Select Edges By Direction</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#select-islands-by-direction">Select Islands By Direction</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#select-by-uv-area">Select by UV Area</a>
         <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#operator-select-by-uv-area">Operator Select by UV Area:</a>
+    <li class="toctree-l3"><a class="reference internal" href="#select-by-uv-area_1">Select by UV Area:</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#operator-get-selected-area">Operator Get Selected Area:</a>
+    <li class="toctree-l3"><a class="reference internal" href="#get-selected-area">Get Selected Area:</a>
     </li>
         </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#convert-face-to-loops">Convert Face to Loops</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#convert-edges-to-loops">Convert Edges to Loops</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#convert-loops-to-face">Convert Loops to Face</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#convert-loop-to-edge">Convert Loop to Edge</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#select-linked-loops">Select Linked Loops</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#isolate-islands-toggle">Isolate Islands (Toggle)</a>
     </li>
@@ -196,52 +216,333 @@
 </tbody>
 </table>
 </div>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>Select <strong>Seam</strong> and <strong>Sharp</strong> are absent on the panel in <strong>UV Editor</strong>.
-To use these operators you need to switch to <strong>3D Viewport</strong> context. </p>
-</div>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Operator</th>
+<th style="text-align: center;">Operator</th>
+<th style="text-align: center;">Operator</th>
+<th style="text-align: center;">Operator</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><a href="#select-islands">Islands</a></td>
+<td style="text-align: center;"><a href="#select-int-loop">Int. Loop</a></td>
+<td style="text-align: center;"><a href="#select-cylinder-edges-splits">Cylinder Edges (Splits)</a></td>
+<td style="text-align: center;"><a href="#convert-edges-to-loops">Edges To Loops</a></td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="#select-overlapped">Overlapped</a></td>
+<td style="text-align: center;"><a href="#select-flipped">Flipped</a></td>
+<td style="text-align: center;"><a href="#select-edges-by-condition">Edges by Condition</a></td>
+<td style="text-align: center;"><a href="#convert-loops-to-face">Loop to Face</a></td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="#select-seam">Seam</a></td>
+<td style="text-align: center;"><a href="#select-sharp">Sharp</a></td>
+<td style="text-align: center;"><a href="#select-edges-by-direction">Edges by Direction</a></td>
+<td style="text-align: center;"><a href="#convert-loop-to-edge">Loop to Edge</a></td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="#select-uv-borders">Borders</a></td>
+<td style="text-align: center;"><a href="#select-open-edges">Open Edges</a></td>
+<td style="text-align: center;"><a href="#select-islands-by-direction">Island by Direction</a></td>
+<td style="text-align: center;"><a href="#select-linked-loops">Select Linked Loops</a></td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="#select-similar">Similar</a></td>
+<td style="text-align: center;"><a href="#select-in-tile">Select in Tile</a></td>
+<td style="text-align: center;"><a href="#select-by-uv-area">Select by UV Area</a></td>
+<td style="text-align: center;"><a href="#isolate-islands-toggle">Isolate Islands (Toggle)</a></td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="#select-half">Half</a></td>
+<td style="text-align: center;"><a href="#select-quaded-islands">Quaded Islands</a></td>
+<td style="text-align: center;"><a href="#convert-face-to-loops">Face To Loops</a></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
 <hr />
-<h3 id="islands">Islands <img alt="" src="../img/icons/select.png" /><a class="headerlink" href="#islands" title="Permanent link"></a></h3>
-<p>Select Islands by selected edge/face of the Islands.</p>
-<p><img alt="Select_Islands" src="../img/gifs/select_operators/Select_Islands.gif" /></p>
-<h3 id="int-loop">Int. Loop<a class="headerlink" href="#int-loop" title="Permanent link"></a></h3>
+<h3 id="select-islands">Select Islands<a class="headerlink" href="#select-islands" title="Permanent link"></a></h3>
+<p>Select Islands by selected edge/face of the Islands. <img alt="Islands" src="../img/icons/select.png" /></p>
+<table>
+<thead>
+<tr>
+<th><a href="../img/gifs/select_operators/Select_Islands.gif"><img alt="Select_Islands" src="../img/gifs/select_operators/Select_Islands.gif" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Select islands</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="select-int-loop">Select Int. Loop<a class="headerlink" href="#select-int-loop" title="Permanent link"></a></h3>
 <p>Inter seam loop. Select Edge Loop with respect to Seams. </p>
-<p><img alt="Select_Int_Loop" src="../img/gifs/select_operators/Select_Int_Loop.gif" /></p>
-<h3 id="overlapped">Overlapped<a class="headerlink" href="#overlapped" title="Permanent link"></a></h3>
+<table>
+<thead>
+<tr>
+<th><a href="../img/gifs/select_operators/Select_Int_Loop.gif"><img alt="Select_Int_Loop" src="../img/gifs/select_operators/Select_Int_Loop.gif" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Select inter seam loop</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="select-overlapped">Select Overlapped<a class="headerlink" href="#select-overlapped" title="Permanent link"></a></h3>
 <p>Select Overlapped Islands.</p>
-<p><img alt="Select_Overlapped" src="../img/gifs/select_operators/Select_Overlapped.gif" /></p>
-<h3 id="flipped">Flipped<a class="headerlink" href="#flipped" title="Permanent link"></a></h3>
+<table>
+<thead>
+<tr>
+<th><a href="../img/gifs/select_operators/Select_Overlapped.gif"><img alt="Select_Overlapped" src="../img/gifs/select_operators/Select_Overlapped.gif" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Select overlapped</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="select-flipped">Select Flipped<a class="headerlink" href="#select-flipped" title="Permanent link"></a></h3>
 <p>Select Flipped Islands.</p>
-<p><img alt="Select_Flipped" src="../img/gifs/select_operators/Select_Flipped.gif" /></p>
-<h3 id="seam">Seam<a class="headerlink" href="#seam" title="Permanent link"></a></h3>
+<table>
+<thead>
+<tr>
+<th><a href="../img/gifs/select_operators/Select_Flipped.gif"><img alt="Select_Flipped" src="../img/gifs/select_operators/Select_Flipped.gif" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Select flipped</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="select-seam">Select Seam<a class="headerlink" href="#select-seam" title="Permanent link"></a></h3>
 <p>Select Edges Marked as Seams.</p>
-<p><img alt="Select_Seam" src="../img/gifs/select_operators/Select_Seam.gif" /></p>
-<h3 id="sharp">Sharp<a class="headerlink" href="#sharp" title="Permanent link"></a></h3>
+<table>
+<thead>
+<tr>
+<th><a href="../img/gifs/select_operators/Select_Seam.gif"><img alt="Select_Seam" src="../img/gifs/select_operators/Select_Seam.gif" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Select Seam</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="select-sharp">Select Sharp<a class="headerlink" href="#select-sharp" title="Permanent link"></a></h3>
 <p>Select Edges Marked as Sharp.</p>
-<p><img alt="Select_Sharp" src="../img/gifs/select_operators/Select_Sharp.gif" /></p>
+<table>
+<thead>
+<tr>
+<th><a href="../img/gifs/select_operators/Select_Sharp.gif"><img alt="Select_Sharp" src="../img/gifs/select_operators/Select_Sharp.gif" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Select sharp</td>
+</tr>
+</tbody>
+</table>
+<hr />
 <h3 id="select-uv-borders">Select UV Borders<a class="headerlink" href="#select-uv-borders" title="Permanent link"></a></h3>
 <p>Select existing UV Borders.</p>
-<p><img alt="Select_UV_Borders" src="../img/gifs/select_operators/Select_UV_Borders.gif" /></p>
-<h3 id="similar">Similar<a class="headerlink" href="#similar" title="Permanent link"></a></h3>
+<table>
+<thead>
+<tr>
+<th><a href="../img/gifs/select_operators/Select_UV_Borders.gif"><img alt="Select_UV_Borders" src="../img/gifs/select_operators/Select_UV_Borders.gif" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Select UV Borders</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="select-open-edges">Select Open Edges<a class="headerlink" href="#select-open-edges" title="Permanent link"></a></h3>
+<p>Select open edges the way that looks in the 3D viewport. Including the open edges that appeared after the faces were hidden.</p>
+<table>
+<thead>
+<tr>
+<th><a href="../img/gifs/select_operators/Select_Open_Edges.gif"><img alt="Select_Open_Edges" src="../img/gifs/select_operators/Select_Open_Edges.gif" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Select open edges</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="select-similar">Select Similar<a class="headerlink" href="#select-similar" title="Permanent link"></a></h3>
 <p>Select Islands similar to those selected.</p>
-<p><img alt="Select_Similar" src="../img/gifs/select_operators/Select_Similar.gif" /></p>
+<table>
+<thead>
+<tr>
+<th><a href="../img/gifs/select_operators/Select_Similar.gif"><img alt="Select_Similar" src="../img/gifs/select_operators/Select_Similar.gif" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Select similar</td>
+</tr>
+</tbody>
+</table>
+<hr />
 <h3 id="select-in-tile">Select in Tile<a class="headerlink" href="#select-in-tile" title="Permanent link"></a></h3>
 <p>Select Islands in bounding box of active UDIM Tile or UV Area.</p>
-<p><img alt="" src="../img/screen/adv_uv_map/adv_uv_map_udim_select_active.gif" /> </p>
+<table>
+<thead>
+<tr>
+<th><a href="../img/screen/adv_uv_map/adv_uv_map_udim_select_active.gif"><img alt="Select_In_Tile" src="../img/screen/adv_uv_map/adv_uv_map_udim_select_active.gif" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Select in tile</td>
+</tr>
+</tbody>
+</table>
+<hr />
 <h3 id="select-half">Select Half<a class="headerlink" href="#select-half" title="Permanent link"></a></h3>
 <p>Select part of the model according to its location relative to the coordinate axis.</p>
-<p><img alt="Select_Half" src="../img/screen/select/select_half.gif" /></p>
-<p><img alt="Select_Half" src="../img/screen/select/select_half_zero.gif" /></p>
+<table>
+<thead>
+<tr>
+<th><a href="../img/screen/select/select_half.gif"><img alt="Select_Half" src="../img/screen/select/select_half.gif" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Select half</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><a href="../img/screen/select/select_half_zero.gif"><img alt="Select_Half" src="../img/screen/select/select_half_zero.gif" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Select half. Include Zero option</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="select-quaded-islands">Select Quaded Islands<a class="headerlink" href="#select-quaded-islands" title="Permanent link"></a></h3>
+<p>Select islands that consist only of quads.</p>
+<table>
+<thead>
+<tr>
+<th><a href="../img/gifs/select_operators/Select_Quaded_Islands.gif"><img alt="Select_Quaded_Islands" src="../img/gifs/select_operators/Select_Quaded_Islands.gif" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Select quaded islands</td>
+</tr>
+</tbody>
+</table>
+<h3 id="select-cylinder-edges-splits">Select Cylinder Edges (Splits)<a class="headerlink" href="#select-cylinder-edges-splits" title="Permanent link"></a></h3>
+<p>Select island edges that belong to the same mesh edge and split the island by itself.</p>
+<table>
+<thead>
+<tr>
+<th><a href="../img/gifs/select_operators/Select_Splits.gif"><img alt="Cylinder Edges" src="../img/gifs/select_operators/Select_Splits.gif" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Select splits</td>
+</tr>
+</tbody>
+</table>
+<h3 id="select-edges-by-condition">Select Edges by Condition<a class="headerlink" href="#select-edges-by-condition" title="Permanent link"></a></h3>
+<p>Select edges based on various conditions and logic operations with NOT support.</p>
+<table>
+<thead>
+<tr>
+<th><a href="../img/gifs/select_operators/Select_Edges_by_Condition.gif"><img alt="Edges by Condition" src="../img/gifs/select_operators/Select_Edges_by_Condition.gif" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Select edges by condition</td>
+</tr>
+</tbody>
+</table>
+<hr />
 <h3 id="select-edges-by-direction">Select Edges By Direction<a class="headerlink" href="#select-edges-by-direction" title="Permanent link"></a></h3>
 <p>Select edges by direction along U or V axis.</p>
-<p><img alt="Select_Edges_by_Direction" src="../img/gifs/select_operators/Select_Edges_by_Direction.gif" /></p>
+<table>
+<thead>
+<tr>
+<th><a href="../img/gifs/select_operators/Select_Edges_by_Direction.gif"><img alt="Select_Edges_by_Direction" src="../img/gifs/select_operators/Select_Edges_by_Direction.gif" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Select edges by direction</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="select-islands-by-direction">Select Islands By Direction<a class="headerlink" href="#select-islands-by-direction" title="Permanent link"></a></h3>
+<p>Select island by direction.</p>
+<table>
+<thead>
+<tr>
+<th><a href="../img/gifs/select_operators/Select_Island_by_Direction.gif"><img alt="Select Island by Direction" src="../img/gifs/select_operators/Select_Island_by_Direction.gif" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Select island by direction</td>
+</tr>
+</tbody>
+</table>
 <h3 id="select-by-uv-area">Select by UV Area<a class="headerlink" href="#select-by-uv-area" title="Permanent link"></a></h3>
 <p>The operator consists of two buttons. Where the first is the main operator and the second is an auxiliary operator. You can use it to get the area of the selection.</p>
-<p><img alt="Select_By_UV_Area" src="../img/screen/select/sel_by_uv_area_buttons.png" /></p>
+<table>
+<thead>
+<tr>
+<th><img alt="Select_By_UV_Area" src="../img/screen/select/sel_by_uv_area_buttons.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Select by UV area</td>
+</tr>
+</tbody>
+</table>
 <hr />
-<h4 id="operator-select-by-uv-area">Operator Select by UV Area:<a class="headerlink" href="#operator-select-by-uv-area" title="Permanent link"></a></h4>
-<p><img alt="" src="../img/screen/select/select_by_uv_area_op_prop.png" /></p>
+<h4 id="select-by-uv-area_1">Select by UV Area:<a class="headerlink" href="#select-by-uv-area_1" title="Permanent link"></a></h4>
+<p>Select faces by their UV area.</p>
+<table>
+<thead>
+<tr>
+<th><img alt="" src="../img/screen/select/select_by_uv_area_op_prop.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Operator settings</td>
+</tr>
+</tbody>
+</table>
 <ul>
 <li><strong>Mode</strong> - What should be selected? Islands or faces.</li>
 <li><strong>Clear selection</strong> - Clear the previous selection.</li>
@@ -255,9 +556,21 @@ To use these operators you need to switch to <strong>3D Viewport</strong> contex
 </li>
 <li><strong>With Threshold</strong> - Calculation threshold.</li>
 </ul>
-<h4 id="operator-get-selected-area">Operator Get Selected Area:<a class="headerlink" href="#operator-get-selected-area" title="Permanent link"></a></h4>
+<hr />
+<h4 id="get-selected-area">Get Selected Area:<a class="headerlink" href="#get-selected-area" title="Permanent link"></a></h4>
 <p>After you run this operator, the Multiplied Area value goes into the Select by UV Area operator.</p>
-<p><img alt="" src="../img/screen/select/get_selected_area_op_prop.png" /></p>
+<table>
+<thead>
+<tr>
+<th><img alt="" src="../img/screen/select/get_selected_area_op_prop.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Operator settings</td>
+</tr>
+</tbody>
+</table>
 <ul>
 <li><strong>Mode</strong> - The area of what should be obtained? Islands or faces.</li>
 <li><strong>Average</strong> - Averaging.</li>
@@ -265,9 +578,96 @@ To use these operators you need to switch to <strong>3D Viewport</strong> contex
 <li><strong>Real UV Area</strong> - Same value as Real Area, but in full size.</li>
 <li><strong>Multiplied Area</strong> - The same value as the Real Area, but multiplied for easier use.</li>
 </ul>
+<hr />
+<h3 id="convert-face-to-loops">Convert Face to Loops<a class="headerlink" href="#convert-face-to-loops" title="Permanent link"></a></h3>
+<p>Convert selected mesh faces to UV loops.</p>
+<table>
+<thead>
+<tr>
+<th><a href="../img/gifs/select_operators/Select_Face_to_Loops.gif"><img alt="Select Face to Loops" src="../img/gifs/select_operators/Select_Face_to_Loops.gif" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Select Face to Loops</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="convert-edges-to-loops">Convert Edges to Loops<a class="headerlink" href="#convert-edges-to-loops" title="Permanent link"></a></h3>
+<p>Convert selected mesh edges to UV loops.</p>
+<table>
+<thead>
+<tr>
+<th><a href="../img/gifs/select_operators/Select_Edges_to_Loops.gif"><img alt="Select Edges to Loops" src="../img/gifs/select_operators/Select_Edges_to_Loops.gif" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Select Edges to Loops</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="convert-loops-to-face">Convert Loops to Face<a class="headerlink" href="#convert-loops-to-face" title="Permanent link"></a></h3>
+<p>Only for UV Sync Selection - off. Convert selected UV loops to mesh face selection.</p>
+<table>
+<thead>
+<tr>
+<th><a href="../img/gifs/select_operators/Select_Loops_to_Face.gif"><img alt="Convert Loops to Face" src="../img/gifs/select_operators/Select_Loops_to_Face.gif" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Convert Loops to Face</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="convert-loop-to-edge">Convert Loop to Edge<a class="headerlink" href="#convert-loop-to-edge" title="Permanent link"></a></h3>
+<p>Only for UV Sync Selection - off. Convert selected UV loop to mesh edge selection.</p>
+<table>
+<thead>
+<tr>
+<th><a href="../img/gifs/select_operators/Select_Loop_to_Edge.gif"><img alt="Convert Loop to Edge" src="../img/gifs/select_operators/Select_Loop_to_Edge.gif" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Convert Loop to Edge</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="select-linked-loops">Select Linked Loops<a class="headerlink" href="#select-linked-loops" title="Permanent link"></a></h3>
+<p>Only for UV Sync Selection - off. Selects all loops belonging to the mesh vertex based on any already selected loop.</p>
+<table>
+<thead>
+<tr>
+<th><a href="../img/gifs/select_operators/Select_Linked_Loops.gif"><img alt="Select Linked Loops" src="../img/gifs/select_operators/Select_Linked_Loops.gif" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Select Linked Loops</td>
+</tr>
+</tbody>
+</table>
 <h3 id="isolate-islands-toggle">Isolate Islands (Toggle)<a class="headerlink" href="#isolate-islands-toggle" title="Permanent link"></a></h3>
 <p>Isolate Islands (Toggle).</p>
-<p><img alt="Isolate_Islands" src="../img/gifs/select_operators/Isolate_Islands.gif" /></p>
+<table>
+<thead>
+<tr>
+<th><a href="../img/gifs/select_operators/Isolate_Islands.gif"><img alt="Isolate_Islands" src="../img/gifs/select_operators/Isolate_Islands.gif" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Isolate islands</td>
+</tr>
+</tbody>
+</table>
+<hr />
               
             </div>
           </div><footer>
