@@ -44,6 +44,10 @@ theme:
     analytics:
         gtag: 'G-7XHJ910WF8'
 
+plugins:
+   - glightbox
+   - search
+
 markdown_extensions:
     - smarty
     - admonition
