@@ -38,7 +38,7 @@
 -   [**Texel Density.**](texel_density.md) Get, Set, and Check Texel Density of UV Islands.
 -   [**Sticky UV Editor**](sticky_uv_editor.md) for quick access to UV Editor.
 -   [**Advanced UV Maps**.](adv_uv-maps.md) Duplicate, remove, clean, and rename UV Maps of the selected objects in sync.  
--   [**Hard Ops add-on integration**.](preferences.md#display-subpanel) It allows displaying UV manipulations in 3D View!
+-   [**Hard Ops add-on integration**.](preferences.md#hops-uv-display) It allows displaying UV manipulations in 3D View!
 -   [**Smooth by Sharp (Toggle).**](unwrap.md#smooth-by-sharp-toggle) Set smoothing for perfect normal map bakes in one click!
 - Quick support on the [**Discord channel**](https://discord.gg/wGpFeME).
 

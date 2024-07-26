@@ -65,8 +65,8 @@ You can call this menu anywhere.
 
 ### Checker | Finished ![Checker Texture](img/icons/checker_32.png)
 
-- `Default` — [**Checker Texture (Toggle)**](checker.md#checker-texture-toggle). Add/Remove Checker Texture to/from the mesh.
-- `ALT` — [**Display Stretch Map**](checker.md#display-stretch-map). Display an angle-based stretching map.
+- `Default` — [**Checker Texture (Toggle)**](checker.md#checker-texture). Add/Remove Checker Texture to/from the mesh.
+- `ALT` — [**Display Stretch Map**](checker.md#stretched). Display an angle-based stretching map.
 - `CTRL` — [**Display Finished**](unwrap.md#display-finished-toggle). Display Finished Islands (Toggle).
 
 ### Unmark | Tag Unfinished ![Unmark Seams](img/icons/unmark-seams@2x.png)
@@ -82,10 +82,10 @@ You can call this menu anywhere.
 
 ### Select: Islands | Overlapped ![](img/icons/select.png)
 
-- `Default` — [**Select Islands**](select.md#islands). Select Islands by selected edge/face of the Islands.
-- `ALT` — [**Select Overlapped Islands**](select.md#overlapped).
-- `CTRL` — [**Select Flipped Islands**](select.md#flipped).
-- `SHIFT` — [**Select Similar Islands**](select.md#similar).
+- `Default` — [**Select Islands**](select.md#select-islands). Select Islands by selected edge/face of the Islands.
+- `ALT` — [**Select Overlapped Islands**](select.md#select-overlapped).
+- `CTRL` — [**Select Flipped Islands**](select.md#select-flipped).
+- `SHIFT` — [**Select Similar Islands**](select.md#select-similar).
 
 ### Isolate Islands (Toggle)
 
@@ -115,7 +115,7 @@ Pie Menu Assist is special help window, which is located below the Pie Menu. The
 
 Move, Rotate, Scale, Fit, Align and Flip selected Islands or Faces/Edges/Vertices in 3D Viewport and UV Editor using Zen UV Gizmo.
 
-[**Follow the link**](unwrap.md#transform_tool) to find more information about Transform Tool.
+[**Follow the link**](transform_tool.md#transform-tool) to find more information about Transform Tool.
 
 ![Zen Transform Tool](img/gifs/user_interface/ZenTransformTool_main.gif)
 

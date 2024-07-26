@@ -12,9 +12,9 @@ This panel contains tools to check the state of UVs on the model, visually and t
 
     Also, UV Editor panel contains extra Display operator [**Darken Image. Click to read full information**](user_interface.md#darken-image).
 
-### Checker Texture ![Checker Texture](img/icons/checker_32.png) `Alt+T`
+### Checker Texture
 
-Add/Remove Checker Texture to/from the mesh.
+Add/Remove Checker Texture to/from the mesh. ![Checker Texture](img/icons/checker_32.png) `Alt+T`
 
 ![checker texture](img/screen/tex_checker/checker_texture.gif) 
 

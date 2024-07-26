@@ -19,6 +19,6 @@ But we can't help but highlight some of them for their contributions.
 
 - [**Oleg Stepanov ***DotBow*** **](https://github.com/DotBow) - Original idea and development of [**Sticky UV Editor**](sticky_uv_editor.md) and [**Adv. UV Maps**](adv_uv-maps.md).
 - [***glukoz***](https://blendermarket.com/products/uvpackmaster) - UVPackmaster integration into Zen UV [**Pack Engines**](operators.md#pack-engine).
-- [***AR/MX***](https://blendermarket.com/products/hardopsofficial) - Zen UV support for [**HOps UV Display**](preferences.md#display-subpanel) option.
+- [***AR/MX***](https://blendermarket.com/products/hardopsofficial) - Zen UV support for [**HOps UV Display**](preferences.md#hops-uv-display) option.
 - [**Jesse ***#2000*** **](https://discord.com/invite/wGpFeME) - Zen UV Expert on [**Discord Support Server**](https://discord.com/invite/wGpFeME).
 - [**NightVision ***#3261*** **](https://discord.com/invite/wGpFeME) - Zen UV Expert on [**Discord Support Server**](https://discord.com/invite/wGpFeME).
