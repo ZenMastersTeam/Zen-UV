@@ -31,7 +31,11 @@
 
         gtag('config', "G-7XHJ910WF8");
       </script>
-</head>
+ <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }</style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
 
 <body class="wy-body-for-nav" role="document">
 
@@ -168,7 +172,7 @@ Most AAA games use this technique a lot on environment assets in order to have f
 <table>
 <thead>
 <tr>
-<th><img alt="img" src="../img/screen/trimsheet/intro.png" /></th>
+<th><a class="glightbox" href="../img/screen/trimsheet/intro.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="img" src="../img/screen/trimsheet/intro.png" /></a></th>
 </tr>
 </thead>
 <tbody>
@@ -183,7 +187,7 @@ of recurring elements those are ideal candidates for a trim sheet.</p>
 <table>
 <thead>
 <tr>
-<th><img alt="img" src="../img/screen/trimsheet/coridor_elements.png" /></th>
+<th><a class="glightbox" href="../img/screen/trimsheet/coridor_elements.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="img" src="../img/screen/trimsheet/coridor_elements.png" /></a></th>
 </tr>
 </thead>
 <tbody>
@@ -196,20 +200,20 @@ of recurring elements those are ideal candidates for a trim sheet.</p>
 <p>Zen UV addon provides all necessary tools to create your trim sections</p>
 <div class="admonition preview">
 <p class="admonition-title">Preview</p>
-<p><img alt="" src="../img/screen/trimsheet/trimsheet_editor.png" /></p>
+<p><a class="glightbox" href="../img/screen/trimsheet/trimsheet_editor.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/trimsheet/trimsheet_editor.png" /></a></p>
 </div>
 <h2 id="create-your-trim-sheet-in-any-2d-vector-editor-that-supports-svg">Create your trim sheet in any 2D Vector Editor that supports SVG<a class="headerlink" href="#create-your-trim-sheet-in-any-2d-vector-editor-that-supports-svg" title="Permanent link"></a></h2>
 <p>We didn&rsquo;t want trim sheets system to be enclosed only in Blender. So we implemented very convenient import-export trim sheets into SVG files and back. If you are a PRO in such vector editor as Inkscape, feel free to create trim sheets in your favourite software and then just export it in SVG and import in Blender.</p>
 <div class="admonition svg">
 <p class="admonition-title">Svg</p>
-<p><img alt="" src="../img/screen/trimsheet/trimsheet_inkscape.png" /></p>
+<p><a class="glightbox" href="../img/screen/trimsheet/trimsheet_inkscape.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/trimsheet/trimsheet_inkscape.png" /></a></p>
 </div>
 <h2 id="share-your-trim-sheets-as-svg-files">Share your trim sheets as SVG files<a class="headerlink" href="#share-your-trim-sheets-as-svg-files" title="Permanent link"></a></h2>
 <p>Sometimes sharing trim sheets as blend files is inconvenient, it requires matching Blender versions, cutting all unnecessary information not related to trim sheets, etc. So we implemented easy share trim sheets as SVG files. They can be viewed in any browser and can be edited not only in Blender but in every 2D Vector Editor.</p>
 <table>
 <thead>
 <tr>
-<th><img alt="img" src="../img/screen/trimsheet/trim_export.png" /></th>
+<th><a class="glightbox" href="../img/screen/trimsheet/trim_export.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="img" src="../img/screen/trimsheet/trim_export.png" /></a></th>
 </tr>
 </thead>
 <tbody>
@@ -286,5 +290,6 @@ You can import textures and Trim layout from DECAL Machine and use them with Zen
         });
     </script>
 
-</body>
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+</script></body>
 </html>

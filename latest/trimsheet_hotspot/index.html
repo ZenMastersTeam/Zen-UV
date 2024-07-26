@@ -31,7 +31,11 @@
 
         gtag('config', "G-7XHJ910WF8");
       </script>
-</head>
+ <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }</style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
 
 <body class="wy-body-for-nav" role="document">
 
@@ -179,7 +183,7 @@
             <div class="section" itemprop="articleBody">
               
                 <h1 id="hotspot-mapping">Hotspot Mapping<a class="headerlink" href="#hotspot-mapping" title="Permanent link"></a></h1>
-<p><img alt="hotspot_preview" src="../img/screen/trimsheet/hotspot_preview.gif" /></p>
+<p><a class="glightbox" href="../img/screen/trimsheet/hotspot_preview.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="hotspot_preview" src="../img/screen/trimsheet/hotspot_preview.gif" /></a></p>
 <p>Hotspot Mapping is a UV mapping method that compares the parameters of Islands and Trims and makes automatic mapping based on the given settings. <a href="https://developer.valvesoftware.com/wiki/Half-Life:_Alyx_Workshop_Tools/Level_Design/Hotspot_Texturing">The original idea belongs to VALVE.</a></p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
@@ -189,20 +193,20 @@
 </div></p>
 </div>
 <p>To activate Hotspot Mapping you need to use button from <strong>Trim Operators</strong> (Trimsheet Panel) or from Pie Menu <code>Shift+U</code> on the <strong>Sector 1</strong> with holding <code>Shift</code>.</p>
-<p><img alt="hotspot_activationl" src="../img/screen/trimsheet/hotspot_activation.png" /></p>
+<p><a class="glightbox" href="../img/screen/trimsheet/hotspot_activation.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="hotspot_activationl" src="../img/screen/trimsheet/hotspot_activation.png" /></a></p>
 <div class="admonition hotspot scene example">
 <p class="admonition-title">Hotspot</p>
 <p>You can test Hotspot Mapping feature here.</p>
-<p><img alt="example_scene" src="../img/screen/trimsheet/hotspot_example_scene.png" /></p>
+<p><a class="glightbox" href="../img/screen/trimsheet/hotspot_example_scene.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="example_scene" src="../img/screen/trimsheet/hotspot_example_scene.png" /></a></p>
 </div>
 <h2 id="hotspot-mapping-settings-panel">Hotspot Mapping Settings Panel<a class="headerlink" href="#hotspot-mapping-settings-panel" title="Permanent link"></a></h2>
 <div class="admonition hotspot mapping settings panel">
 <p class="admonition-title">Hotspot</p>
-<p><img alt="hotspot_panel" src="../img/screen/trimsheet/hotspot_panel.png" /></p>
+<p><a class="glightbox" href="../img/screen/trimsheet/hotspot_panel.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="hotspot_panel" src="../img/screen/trimsheet/hotspot_panel.png" /></a></p>
 </div>
 <h3 id="preprocess">Preprocess<a class="headerlink" href="#preprocess" title="Permanent link"></a></h3>
 <h4 id="mode">Mode<a class="headerlink" href="#mode" title="Permanent link"></a></h4>
-<p><img alt="hotspot_mode" src="../img/screen/trimsheet/hotspot_mode.gif" /></p>
+<p><a class="glightbox" href="../img/screen/trimsheet/hotspot_mode.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="hotspot_mode" src="../img/screen/trimsheet/hotspot_mode.gif" /></a></p>
 <ul>
 <li><strong>All Trims</strong>. Map in All Trims.</li>
 <li><strong>Selected Trims</strong>. Map only in selected Trims (Blue Frames).</li>
@@ -217,17 +221,17 @@
 <ul>
 <li><strong>Aspect</strong>. Priority to Aspect Ratio (Height to Width) matching. Good option if you don&rsquo;t care about different TD between Islands.</li>
 </ul>
-<p><img alt="hotspot_priority_aspect.png" src="../img/screen/trimsheet/hotspot_priority_aspect.png.png" /></p>
+<p><a class="glightbox" href="../img/screen/trimsheet/hotspot_priority_aspect.png.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="hotspot_priority_aspect.png" src="../img/screen/trimsheet/hotspot_priority_aspect.png.png" /></a></p>
 <ul>
 <li><strong>Area</strong>. Priority to Area matching, good for saving approximate TD.</li>
 </ul>
-<p><img alt="hotspot_priority_area" src="../img/screen/trimsheet/hotspot_priority_area.png" /></p>
+<p><a class="glightbox" href="../img/screen/trimsheet/hotspot_priority_area.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="hotspot_priority_area" src="../img/screen/trimsheet/hotspot_priority_area.png" /></a></p>
 <hr />
 <h3 id="settings">Settings<a class="headerlink" href="#settings" title="Permanent link"></a></h3>
 <h4 id="allow-rotation">Allow Rotation<a class="headerlink" href="#allow-rotation" title="Permanent link"></a></h4>
 <p>Allow Islands rotation 90&rsquo; to achieve the best results.</p>
 <h4 id="keep-proportions">Keep Proportions<a class="headerlink" href="#keep-proportions" title="Permanent link"></a></h4>
-<p><img alt="hotspot_proportions" src="../img/screen/trimsheet/hotspot_proportions.gif" /></p>
+<p><a class="glightbox" href="../img/screen/trimsheet/hotspot_proportions.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="hotspot_proportions" src="../img/screen/trimsheet/hotspot_proportions.gif" /></a></p>
 <ul>
 <li><strong>Yes</strong>. Keep Islands Proportions.</li>
 <li>
@@ -238,20 +242,20 @@
 </li>
 </ul>
 <h4 id="fit-axis">Fit Axis<a class="headerlink" href="#fit-axis" title="Permanent link"></a></h4>
-<p><img alt="hotspot_fit_trim" src="../img/screen/trimsheet/hotspot_fit_trim.gif" /></p>
+<p><a class="glightbox" href="../img/screen/trimsheet/hotspot_fit_trim.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="hotspot_fit_trim" src="../img/screen/trimsheet/hotspot_fit_trim.gif" /></a></p>
 <ul>
 <li><strong>Automatic</strong>. Automatically detect axis.</li>
 <li>
 <p><strong>Trim Settings</strong>. Use particular Trim properties from <strong>Trim Settings - Advanced Settings</strong> panel.</p>
 <div class="admonition trim settings for the example above">
 <p class="admonition-title">Trim</p>
-<p><img alt="hotspot_fit_trim_example" src="../img/screen/trimsheet/hotspot_fit_trim_example.png" /></p>
+<p><a class="glightbox" href="../img/screen/trimsheet/hotspot_fit_trim_example.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="hotspot_fit_trim_example" src="../img/screen/trimsheet/hotspot_fit_trim_example.png" /></a></p>
 </div>
 </li>
 </ul>
 <hr />
 <h3 id="area-matching">Area Matching<a class="headerlink" href="#area-matching" title="Permanent link"></a></h3>
-<p><img alt="hotspot_area_matching" src="../img/screen/trimsheet/hotspot_area_matching.gif" /></p>
+<p><a class="glightbox" href="../img/screen/trimsheet/hotspot_area_matching.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="hotspot_area_matching" src="../img/screen/trimsheet/hotspot_area_matching.gif" /></a></p>
 <ul>
 <li><strong>As is</strong>. Islands will be located in Trim with the closest area. </li>
 <li><strong>Max</strong>. Islands will be located in Trim with the largest area. The highest possible TD.</li>
@@ -269,14 +273,14 @@ Value 1 is equivalent to <strong>As is</strong> settings of <strong>Area Matchin
 <li><strong>Allow Location Variation</strong>. Allow Islands to be placed in other Trims with similar parameters.</li>
 <li>
 <p><strong>Variation Offset</strong>. Perform Islands Offset in the Trim if it&rsquo;s possible.</p>
-<p><img alt="hotspot_variation_offset" src="../img/screen/trimsheet/hotspot_variation_offset.gif" /></p>
+<p><a class="glightbox" href="../img/screen/trimsheet/hotspot_variation_offset.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="hotspot_variation_offset" src="../img/screen/trimsheet/hotspot_variation_offset.gif" /></a></p>
 </li>
 <li>
 <p><strong>Detect Radial</strong>. Detect Radial Islands and map them in Trims with Tag &lsquo;HOTSPOT Radial&rsquo;. Non-Radial Islands won&rsquo;t be mapped to Radial Trims.</p>
-<p><img alt="hotspot_radial" src="../img/screen/trimsheet/hotspot_radial.gif" /></p>
+<p><a class="glightbox" href="../img/screen/trimsheet/hotspot_radial.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="hotspot_radial" src="../img/screen/trimsheet/hotspot_radial.gif" /></a></p>
 <div class="admonition tag trim radial">
 <p class="admonition-title">Tag</p>
-<p><img alt="hotspot_tagged_radial" src="../img/screen/trimsheet/hotspot_tagged_radial.png" /></p>
+<p><a class="glightbox" href="../img/screen/trimsheet/hotspot_tagged_radial.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="hotspot_tagged_radial" src="../img/screen/trimsheet/hotspot_tagged_radial.png" /></a></p>
 </div>
 </li>
 <li>
@@ -284,7 +288,7 @@ Value 1 is equivalent to <strong>As is</strong> settings of <strong>Area Matchin
 </li>
 <li>
 <p><strong>Seed</strong>. Islands Variability Seed.</p>
-<p><img alt="hotspot_seed" src="../img/screen/trimsheet/hotspot_seed.gif" /></p>
+<p><a class="glightbox" href="../img/screen/trimsheet/hotspot_seed.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="hotspot_seed" src="../img/screen/trimsheet/hotspot_seed.gif" /></a></p>
 </li>
 <li>
 <p><strong>Aspect Influence</strong>. Aspect Influence for calculating the correspondence proportions between Trims and Islands.</p>
@@ -338,5 +342,6 @@ Value 1 is equivalent to <strong>As is</strong> settings of <strong>Area Matchin
         });
     </script>
 
-</body>
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+</script></body>
 </html>

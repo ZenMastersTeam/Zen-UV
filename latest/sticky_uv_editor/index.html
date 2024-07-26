@@ -31,7 +31,11 @@
 
         gtag('config', "G-7XHJ910WF8");
       </script>
-</head>
+ <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }</style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
 
 <body class="wy-body-for-nav" role="document">
 
@@ -160,12 +164,12 @@
               
                 <h1 id="sticky-uv-editor">Sticky UV Editor<a class="headerlink" href="#sticky-uv-editor" title="Permanent link"></a></h1>
 <p>Sticky UV Editor this is a system that allows opening UV Editor on the left or the right from the active 3D Viewport or as a separate window. These actions can be done by shortcuts or using a widget in the 3D Viewport.</p>
-<p><img alt="" src="../img/screen/sticky_uv_editor/sticky_uv_editor_preview.gif" /></p>
-<p><img alt="" src="../img/screen/sticky_uv_editor/stk_widget.png" /></p>
+<p><a class="glightbox" href="../img/screen/sticky_uv_editor/sticky_uv_editor_preview.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/sticky_uv_editor/sticky_uv_editor_preview.gif" /></a></p>
+<p><a class="glightbox" href="../img/screen/sticky_uv_editor/stk_widget.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/sticky_uv_editor/stk_widget.png" /></a></p>
 <p>The side opening UV Editor depends on the on-screen position of the widget.</p>
 <h2 id="sticky-uv-editor-properties">Sticky UV Editor Properties<a class="headerlink" href="#sticky-uv-editor-properties" title="Permanent link"></a></h2>
 <p>The properties of the Sticky UV Editor are placed in the addon preferences.</p>
-<p><img alt="" src="../img/screen/sticky_uv_editor/stk_uv_ed_prefs.png" /></p>
+<p><a class="glightbox" href="../img/screen/sticky_uv_editor/stk_uv_ed_prefs.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/sticky_uv_editor/stk_uv_ed_prefs.png" /></a></p>
 <h3 id="general">General<a class="headerlink" href="#general" title="Permanent link"></a></h3>
 <ul>
 <li><strong>UV Editor Side</strong> - The side where the UV Editor will be shown.</li>
@@ -227,5 +231,6 @@ So, here is the <a href="https://github.com/DotBow/Blender-Sticky-UV-Editor-Add-
         });
     </script>
 
-</body>
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+</script></body>
 </html>

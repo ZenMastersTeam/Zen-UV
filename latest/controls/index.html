@@ -31,7 +31,11 @@
 
         gtag('config', "G-7XHJ910WF8");
       </script>
-</head>
+ <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }</style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
 
 <body class="wy-body-for-nav" role="document">
 
@@ -144,7 +148,7 @@
             <div class="section" itemprop="articleBody">
               
                 <h1 id="controls">Controls<a class="headerlink" href="#controls" title="Permanent link"></a></h1>
-<h2 id="zen-uv-pie-menu">Zen UV Pie Menu <img alt="Zen UV Pie Menu" src="../img/icons/zen-uv%402x.png" /><a class="headerlink" href="#zen-uv-pie-menu" title="Permanent link"></a></h2>
+<h2 id="zen-uv-pie-menu">Zen UV Pie Menu <a class="glightbox" href="../img/icons/zen-uv%402x.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Zen UV Pie Menu" src="../img/icons/zen-uv%402x.png" /></a><a class="headerlink" href="#zen-uv-pie-menu" title="Permanent link"></a></h2>
 <p>Call Zen UV Pie menu.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
@@ -196,5 +200,6 @@
         });
     </script>
 
-</body>
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+</script></body>
 </html>

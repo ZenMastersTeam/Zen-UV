@@ -31,7 +31,11 @@
 
         gtag('config', "G-7XHJ910WF8");
       </script>
-</head>
+ <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }</style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
 
 <body class="wy-body-for-nav" role="document">
 
@@ -160,7 +164,7 @@
 <table>
 <thead>
 <tr>
-<th><img alt="" src="../img/screen/addon_prefs/user_script_auto_mark.png" /></th>
+<th><a class="glightbox" href="../img/screen/addon_prefs/user_script_auto_mark.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/addon_prefs/user_script_auto_mark.png" /></a></th>
 </tr>
 </thead>
 <tbody>
@@ -175,7 +179,7 @@
 <table>
 <thead>
 <tr>
-<th><img alt="" src="../img/screen/addon_prefs/user_script_structure.png" /></th>
+<th><a class="glightbox" href="../img/screen/addon_prefs/user_script_structure.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/addon_prefs/user_script_structure.png" /></a></th>
 </tr>
 </thead>
 <tbody>
@@ -193,7 +197,7 @@
 <table>
 <thead>
 <tr>
-<th><img alt="" src="../img/screen/addon_prefs/user_script_declaration.png" /></th>
+<th><a class="glightbox" href="../img/screen/addon_prefs/user_script_declaration.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/addon_prefs/user_script_declaration.png" /></a></th>
 </tr>
 </thead>
 <tbody>
@@ -210,7 +214,7 @@
 <table>
 <thead>
 <tr>
-<th><img alt="" src="../img/screen/addon_prefs/user_script_creation.png" /></th>
+<th><a class="glightbox" href="../img/screen/addon_prefs/user_script_creation.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/addon_prefs/user_script_creation.png" /></a></th>
 </tr>
 </thead>
 <tbody>
@@ -225,7 +229,7 @@
 <table>
 <thead>
 <tr>
-<th><img alt="" src="../img/screen/addon_prefs/user_script_creation_2.png" /></th>
+<th><a class="glightbox" href="../img/screen/addon_prefs/user_script_creation_2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/addon_prefs/user_script_creation_2.png" /></a></th>
 </tr>
 </thead>
 <tbody>
@@ -285,5 +289,6 @@
         });
     </script>
 
-</body>
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+</script></body>
 </html>
