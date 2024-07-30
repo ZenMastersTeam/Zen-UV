@@ -109,9 +109,7 @@
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#select-by-uv-area">Select by UV Area</a>
         <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#select-by-uv-area_1">Select by UV Area:</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#get-selected-area">Get Selected Area:</a>
+    <li class="toctree-l3"><a class="reference internal" href="#get-selected-area">Get Selected Area</a>
     </li>
         </ul>
     </li>
@@ -231,37 +229,38 @@
 <td style="text-align: center;"><a href="#select-islands">Islands</a></td>
 <td style="text-align: center;"><a href="#select-int-loop">Int. Loop</a></td>
 <td style="text-align: center;"><a href="#select-cylinder-edges-splits">Cylinder Edges (Splits)</a></td>
-<td style="text-align: center;"><a href="#convert-edges-to-loops">Edges To Loops</a></td>
+<td style="text-align: center;"><a href="#convert-face-to-loops">Face To Loops</a></td>
+
 </tr>
 <tr>
 <td style="text-align: center;"><a href="#select-overlapped">Overlapped</a></td>
 <td style="text-align: center;"><a href="#select-flipped">Flipped</a></td>
 <td style="text-align: center;"><a href="#select-edges-by-condition">Edges by Condition</a></td>
-<td style="text-align: center;"><a href="#convert-loops-to-face">Loop to Face</a></td>
+<td style="text-align: center;"><a href="#convert-edges-to-loops">Edges To Loops</a></td>
 </tr>
 <tr>
 <td style="text-align: center;"><a href="#select-seam">Seam</a></td>
 <td style="text-align: center;"><a href="#select-sharp">Sharp</a></td>
 <td style="text-align: center;"><a href="#select-edges-by-direction">Edges by Direction</a></td>
-<td style="text-align: center;"><a href="#convert-loop-to-edge">Loop to Edge</a></td>
+<td style="text-align: center;"><a href="#convert-loops-to-face">Loop to Face</a></td>
 </tr>
 <tr>
 <td style="text-align: center;"><a href="#select-uv-borders">Borders</a></td>
 <td style="text-align: center;"><a href="#select-open-edges">Open Edges</a></td>
 <td style="text-align: center;"><a href="#select-islands-by-direction">Island by Direction</a></td>
-<td style="text-align: center;"><a href="#select-linked-loops">Select Linked Loops</a></td>
+<td style="text-align: center;"><a href="#convert-loop-to-edge">Loop to Edge</a></td>
 </tr>
 <tr>
 <td style="text-align: center;"><a href="#select-similar">Similar</a></td>
 <td style="text-align: center;"><a href="#select-in-tile">Select in Tile</a></td>
 <td style="text-align: center;"><a href="#select-by-uv-area">Select by UV Area</a></td>
-<td style="text-align: center;"><a href="#isolate-islands-toggle">Isolate Islands (Toggle)</a></td>
+<td style="text-align: center;"><a href="#select-linked-loops">Select Linked Loops</a></td>
 </tr>
 <tr>
 <td style="text-align: center;"><a href="#select-half">Half</a></td>
 <td style="text-align: center;"><a href="#select-quaded-islands">Quaded Islands</a></td>
-<td style="text-align: center;"><a href="#convert-face-to-loops">Face To Loops</a></td>
-<td style="text-align: center;"></td>
+<td style="text-align: center;"><a href="#get-selected-area">Get Selected Area</a></td>
+<td style="text-align: center;"><a href="#isolate-islands-toggle">Isolate Islands (Toggle)</a></td>
 </tr>
 </tbody>
 </table>
@@ -341,6 +340,18 @@
 </tr>
 </tbody>
 </table>
+<div class="admonition preferences">
+<p class="admonition-title">Preferences</p>
+<p><a class="glightbox" href="../img/screen/select/SelectSeamProps.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Select Seam Props" src="../img/screen/select/SelectSeamProps.png" /></a></p>
+</div>
+<ul>
+<li><strong>Clear Selection</strong> - Clear initial selection</li>
+<li><strong>Mode</strong> - Selection type<ul>
+<li><em>Select</em> - Select edges</li>
+<li><em>Deselect</em> - Deselect edges</li>
+</ul>
+</li>
+</ul>
 <hr />
 <h3 id="select-sharp">Select Sharp<a class="headerlink" href="#select-sharp" title="Permanent link"></a></h3>
 <p>Select Edges Marked as Sharp.</p>
@@ -356,6 +367,18 @@
 </tr>
 </tbody>
 </table>
+<div class="admonition preferences">
+<p class="admonition-title">Preferences</p>
+<p><a class="glightbox" href="../img/screen/select/SelectSharpProps.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Select Sharp Props" src="../img/screen/select/SelectSharpProps.png" /></a></p>
+</div>
+<ul>
+<li><strong>Clear Selection</strong> - Clear initial selection</li>
+<li><strong>Mode</strong> - Selection type<ul>
+<li><em>Select</em> - Select edges</li>
+<li><em>Deselect</em> - Deselect edges</li>
+</ul>
+</li>
+</ul>
 <hr />
 <h3 id="select-uv-borders">Select UV Borders<a class="headerlink" href="#select-uv-borders" title="Permanent link"></a></h3>
 <p>Select existing UV Borders.</p>
@@ -371,6 +394,19 @@
 </tr>
 </tbody>
 </table>
+<div class="admonition preferences">
+<p class="admonition-title">Preferences</p>
+<p><a class="glightbox" href="../img/screen/select/SelectUVBordersProperties.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Select Sharp Props" src="../img/screen/select/SelectUVBordersProperties.png" /></a></p>
+</div>
+<ul>
+<li><strong>Clear Selection</strong> - Clear initial selection</li>
+<li><strong>Mode</strong> - Selection type<ul>
+<li><em>All borders</em> - All UV border edges</li>
+<li><em>By Island</em> - By selected island</li>
+<li><em>By Faces</em> - By selected faces</li>
+</ul>
+</li>
+</ul>
 <hr />
 <h3 id="select-open-edges">Select Open Edges<a class="headerlink" href="#select-open-edges" title="Permanent link"></a></h3>
 <p>Select open edges the way that looks in the 3D viewport. Including the open edges that appeared after the faces were hidden.</p>
@@ -386,6 +422,18 @@
 </tr>
 </tbody>
 </table>
+<div class="admonition preferences">
+<p class="admonition-title">Preferences</p>
+<p><a class="glightbox" href="../img/screen/select/SelectOpenEdgesProperties.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Select Open Edges Props Props" src="../img/screen/select/SelectOpenEdgesProperties.png" /></a></p>
+</div>
+<ul>
+<li><strong>Clear Selection</strong> - Clear initial selection</li>
+<li><strong>Mode</strong> - Selection type<ul>
+<li><em>Select</em> - Select edges</li>
+<li><em>Deselect</em> - Deselect edges</li>
+</ul>
+</li>
+</ul>
 <hr />
 <h3 id="select-similar">Select Similar<a class="headerlink" href="#select-similar" title="Permanent link"></a></h3>
 <p>Select Islands similar to those selected.</p>
@@ -401,6 +449,15 @@
 </tr>
 </tbody>
 </table>
+<div class="admonition preferences">
+<p class="admonition-title">Preferences</p>
+<p><a class="glightbox" href="../img/screen/select/SelectSimilarIslandsProperties.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Select Similar Islands" src="../img/screen/select/SelectSimilarIslandsProperties.png" /></a></p>
+</div>
+<ul>
+<li><strong>Area Matching</strong> - Set strict requirements to Islands Area Matching when Stacking. Disable this option if the Islands have a slightly different Area</li>
+<li><strong>Select Primary</strong> - Select Primary Island</li>
+<li><strong>Select Similar</strong> - Select Similar Islands</li>
+</ul>
 <hr />
 <h3 id="select-in-tile">Select in Tile<a class="headerlink" href="#select-in-tile" title="Permanent link"></a></h3>
 <p>Select Islands in bounding box of active UDIM Tile or UV Area.</p>
@@ -416,6 +473,27 @@
 </tr>
 </tbody>
 </table>
+<div class="admonition preferences">
+<p class="admonition-title">Preferences</p>
+<p><a class="glightbox" href="../img/screen/select/SelectInTileProperties.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Select In Tile" src="../img/screen/select/SelectInTileProperties.png" /></a></p>
+</div>
+<ul>
+<li><strong>Clear Selection</strong> - Clear initial selection</li>
+<li><strong>Base</strong> - What to select relative to:<ul>
+<li><em>UV Area</em> - UV Area square</li>
+<li><em>UDIM tile number</em> - UDIM tile number</li>
+<li><em>Active UDIM</em> - Active UDIM tile</li>
+<li><em>Any UDIM</em> - Any UDIM tile</li>
+</ul>
+</li>
+<li><strong>Location</strong><ul>
+<li><em>Inside</em> - Inside of UV Area</li>
+<li><em>Outside</em> - Outside of UV Area</li>
+<li><em>Cross</em> - Crossing of UV Area borders</li>
+</ul>
+</li>
+<li><strong>Tile Number</strong> - Number of UDIM tile</li>
+</ul>
 <hr />
 <h3 id="select-half">Select Half<a class="headerlink" href="#select-half" title="Permanent link"></a></h3>
 <p>Select part of the model according to its location relative to the coordinate axis.</p>
@@ -443,6 +521,25 @@
 </tr>
 </tbody>
 </table>
+<div class="admonition preferences">
+<p class="admonition-title">Preferences</p>
+<p><a class="glightbox" href="../img/screen/select/SelectHalfProperties.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Select Half" src="../img/screen/select/SelectHalfProperties.png" /></a></p>
+</div>
+<ul>
+<li><strong>Clear Selection</strong> - Clear initial selection</li>
+<li><strong>Axis Direction</strong> - Axis direction<ul>
+<li><em>&rdquo;+&rdquo;</em> - Positive</li>
+<li><em>&rdquo;-&ldquo;</em> - Negative</li>
+</ul>
+</li>
+<li><strong>Mesh Axis</strong> - The axis along which the selection is made<ul>
+<li><em>X</em> - X Axis</li>
+<li><em>Y</em> - Y Axis</li>
+<li><em>Z</em> - Z Axis</li>
+</ul>
+</li>
+<li><strong>Include Zero</strong> - Including zero coordinates</li>
+</ul>
 <hr />
 <h3 id="select-quaded-islands">Select Quaded Islands<a class="headerlink" href="#select-quaded-islands" title="Permanent link"></a></h3>
 <p>Select islands that consist only of quads.</p>
@@ -458,6 +555,18 @@
 </tr>
 </tbody>
 </table>
+<div class="admonition preferences">
+<p class="admonition-title">Preferences</p>
+<p><a class="glightbox" href="../img/screen/select/SelectQuadedIslandsProperties.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Select Sharp Props" src="../img/screen/select/SelectQuadedIslandsProperties.png" /></a></p>
+</div>
+<ul>
+<li><strong>Clear Selection</strong> - Clear initial selection</li>
+<li><strong>Mode</strong> - Selection type<ul>
+<li><em>Select</em> - Select edges</li>
+<li><em>Deselect</em> - Deselect edges</li>
+</ul>
+</li>
+</ul>
 <h3 id="select-cylinder-edges-splits">Select Cylinder Edges (Splits)<a class="headerlink" href="#select-cylinder-edges-splits" title="Permanent link"></a></h3>
 <p>Select island edges that belong to the same mesh edge and split the island by itself.</p>
 <table>
@@ -472,6 +581,18 @@
 </tr>
 </tbody>
 </table>
+<div class="admonition preferences">
+<p class="admonition-title">Preferences</p>
+<p><a class="glightbox" href="../img/screen/select/SelectSplitsProperties.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Select Splits Poperties" src="../img/screen/select/SelectSplitsProperties.png" /></a></p>
+</div>
+<ul>
+<li><strong>Clear Selection</strong> - Clear initial selection</li>
+<li><strong>Mode</strong> - Selection type<ul>
+<li><em>Select</em> - Select edges</li>
+<li><em>Deselect</em> - Deselect edges</li>
+</ul>
+</li>
+</ul>
 <h3 id="select-edges-by-condition">Select Edges by Condition<a class="headerlink" href="#select-edges-by-condition" title="Permanent link"></a></h3>
 <p>Select edges based on various conditions and logic operations with NOT support.</p>
 <table>
@@ -486,6 +607,38 @@
 </tr>
 </tbody>
 </table>
+<div class="admonition preferences">
+<p class="admonition-title">Preferences</p>
+<p><a class="glightbox" href="../img/screen/select/SelectEdgesByConditionProperties.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Select Edges by Condition" src="../img/screen/select/SelectEdgesByConditionProperties.png" /></a></p>
+</div>
+<ul>
+<li><strong>Clear Selection</strong> - Clear initial selection</li>
+<li><strong>Edge Is</strong> - Select first condition<ul>
+<li><em>Sharp</em> - Select edges that are markerd sharp</li>
+<li><em>Seam</em> - Select edges that are markerd seam</li>
+<li><em>Splits</em> - Selects edges that belong to the same mesh edge and split the island by itself</li>
+<li><em>Borders</em> - Select edges that are UV borders</li>
+<li><em>Open</em> - Select edges that are open. Including those adjacent to hidden faces</li>
+</ul>
+</li>
+<li><strong>Second Condition</strong> - Apply second condition (Entering this parameter is optional)</li>
+<li><strong>Boolean Operation</strong> - boolean logic operator<ul>
+<li><em>And</em></li>
+<li><em>Or</em></li>
+<li><em>Xor</em></li>
+<li><em>Nor</em></li>
+</ul>
+</li>
+<li><strong>Apply Not</strong> - Append logical &ldquo;Not&rdquo;</li>
+<li><strong>Edge Is</strong> - Select second condition<ul>
+<li><em>Sharp</em> - Select edges that are markerd sharp</li>
+<li><em>Seam</em> - Select edges that are markerd seam</li>
+<li><em>Splits</em> - Selects edges that belong to the same mesh edge and split the island by itself</li>
+<li><em>Borders</em> - Select edges that are UV borders</li>
+<li><em>Open</em> - Select edges that are open. Including those adjacent to hidden faces</li>
+</ul>
+</li>
+</ul>
 <hr />
 <h3 id="select-edges-by-direction">Select Edges By Direction<a class="headerlink" href="#select-edges-by-direction" title="Permanent link"></a></h3>
 <p>Select edges by direction along U or V axis.</p>
@@ -516,65 +669,62 @@
 </tr>
 </tbody>
 </table>
-<h3 id="select-by-uv-area">Select by UV Area<a class="headerlink" href="#select-by-uv-area" title="Permanent link"></a></h3>
-<p>The operator consists of two buttons. Where the first is the main operator and the second is an auxiliary operator. You can use it to get the area of the selection.</p>
-<table>
-<thead>
-<tr>
-<th><a class="glightbox" href="../img/screen/select/sel_by_uv_area_buttons.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Select_By_UV_Area" src="../img/screen/select/sel_by_uv_area_buttons.png" /></a></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Select by UV area</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h4 id="select-by-uv-area_1">Select by UV Area:<a class="headerlink" href="#select-by-uv-area_1" title="Permanent link"></a></h4>
-<p>Select faces by their UV area.</p>
-<table>
-<thead>
-<tr>
-<th><a class="glightbox" href="../img/screen/select/select_by_uv_area_op_prop.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/select/select_by_uv_area_op_prop.png" /></a></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Operator settings</td>
-</tr>
-</tbody>
-</table>
+<div class="admonition properties">
+<p class="admonition-title">Properties</p>
+<p><a class="glightbox" href="../img/screen/select/SelectIslandByDirection.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="select Island by Direction" src="../img/screen/select/SelectIslandByDirection.png" /></a></p>
+</div>
 <ul>
-<li><strong>Mode</strong> - What should be selected? Islands or faces.</li>
+<li><strong>Clear Selection</strong> - Clear initial selection</li>
+<li><strong>Type</strong> - What type of islands will be selected<ul>
+<li><em>Horizontal</em> - Horizontally oriented islands</li>
+<li><em>Vertical</em> - Vertically oriented islands</li>
+<li><em>Radial</em> - Islands that are shaped like a circle</li>
+<li><em>Not Aligned</em> - Islands that are not aligned with the axes</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h3 id="select-by-uv-area">Select by UV Area<a class="headerlink" href="#select-by-uv-area" title="Permanent link"></a></h3>
+<p>Select faces by their UV area.
+The operator consists of two buttons. Where the first is the main operator and the second is an auxiliary operator. You can use it to get the area of the selection.</p>
+<div class="admonition panel">
+<p class="admonition-title">Panel</p>
+<p><a class="glightbox" href="../img/screen/select/sel_by_uv_area_buttons.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Select_By_UV_Area" src="../img/screen/select/sel_by_uv_area_buttons.png" /></a></p>
+</div>
+<div class="admonition preferences">
+<p class="admonition-title">Preferences</p>
+<p><a class="glightbox" href="../img/screen/select/select_by_uv_area_op_prop.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/select/select_by_uv_area_op_prop.png" /></a></p>
+</div>
+<ul>
+<li><strong>Mode</strong> - What should be selected? Islands or faces.<ul>
+<li><em>Island</em> - Island selection mode</li>
+<li><em>Faces</em> - Faces selection mode</li>
+</ul>
+</li>
 <li><strong>Clear selection</strong> - Clear the previous selection.</li>
 <li><strong>Condition</strong> - The conditions under which the selection will be made.<ul>
-<li><strong>Zero Area</strong> - Elements with zero area value.</li>
-<li><strong>Within range</strong> - Elements, the area of which is within a specified range.</li>
-<li><strong>More than</strong> - Elements with an area greater than the specified value.</li>
-<li><strong>Equal to</strong> - Elements, the area of which is equal to a specified value.</li>
-<li><strong>Less than</strong> - Elements with an area smaller than the specified value.</li>
+<li><em>Zero Area</em> - Elements with zero area value.</li>
+<li><em>Within range</em> - Elements, the area of which is within a specified range.</li>
+<li><em>More than</em> - Elements with an area greater than the specified value.</li>
+<li><em>Equal to</em> - Elements, the area of which is equal to a specified value.</li>
+<li><em>Less than</em> - Elements with an area smaller than the specified value.</li>
 </ul>
 </li>
 <li><strong>With Threshold</strong> - Calculation threshold.</li>
 </ul>
 <hr />
-<h4 id="get-selected-area">Get Selected Area:<a class="headerlink" href="#get-selected-area" title="Permanent link"></a></h4>
+<h4 id="get-selected-area">Get Selected Area<a class="headerlink" href="#get-selected-area" title="Permanent link"></a></h4>
 <p>After you run this operator, the Multiplied Area value goes into the Select by UV Area operator.</p>
-<table>
-<thead>
-<tr>
-<th><a class="glightbox" href="../img/screen/select/get_selected_area_op_prop.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/select/get_selected_area_op_prop.png" /></a></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Operator settings</td>
-</tr>
-</tbody>
-</table>
+<div class="admonition properties">
+<p class="admonition-title">Properties</p>
+<p><a class="glightbox" href="../img/screen/select/get_selected_area_op_prop.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/select/get_selected_area_op_prop.png" /></a></p>
+</div>
 <ul>
-<li><strong>Mode</strong> - The area of what should be obtained? Islands or faces.</li>
+<li><strong>Mode</strong> - The area of what should be obtained? Islands or faces.<ul>
+<li><em>Island</em> - Island selection mode</li>
+<li><em>Faces</em> - Faces selection mode</li>
+</ul>
+</li>
 <li><strong>Average</strong> - Averaging.</li>
 <li><strong>Real Area</strong> - The area within the UV Editor is very small. This value shows the real area.</li>
 <li><strong>Real UV Area</strong> - Same value as Real Area, but in full size.</li>
