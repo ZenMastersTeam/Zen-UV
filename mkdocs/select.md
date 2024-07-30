@@ -93,6 +93,14 @@ Select Edges Marked as Seams.
 | --- |
 | Select Seam |
 
+!!! Preferences
+      ![Select Seam Props](img/screen/select/SelectSeamProps.png)
+
+ - **Clear Selection** - Clear initial selection
+ - **Mode** - Selection type
+    - *Select* - Select edges
+    - *Deselect* - Deselect edges
+
 ---
 ### Select Sharp
 Select Edges Marked as Sharp.
@@ -100,6 +108,14 @@ Select Edges Marked as Sharp.
 | ![Select_Sharp](img/gifs/select_operators/Select_Sharp.gif) |
 | --- |
 | Select sharp |
+
+!!! Preferences
+      ![Select Sharp Props](img/screen/select/SelectSharpProps.png)
+
+ - **Clear Selection** - Clear initial selection
+ - **Mode** - Selection type
+    - *Select* - Select edges
+    - *Deselect* - Deselect edges
 
 ---
 ### Select UV Borders
@@ -109,6 +125,16 @@ Select existing UV Borders.
 | --- |
 | Select UV Borders |
 
+!!! Preferences
+      ![Select Sharp Props](img/screen/select/SelectUVBordersProperties.png)
+
+
+- **Clear Selection** - Clear initial selection
+- **Mode** - Selection type
+    - *All borders* - All UV border edges
+    - *By Island* - By selected island
+    - *By Faces* - By selected faces
+
 ---
 ### Select Open Edges
 Select open edges the way that looks in the 3D viewport. Including the open edges that appeared after the faces were hidden.
@@ -116,6 +142,14 @@ Select open edges the way that looks in the 3D viewport. Including the open edge
 | ![Select_Open_Edges](img\gifs\select_operators\Select_Open_Edges.gif) |
 | --- |
 | Select open edges |
+
+!!! Preferences
+      ![Select Open Edges Props Props](img/screen/select/SelectOpenEdgesProperties.png)
+
+ - **Clear Selection** - Clear initial selection
+ - **Mode** - Selection type
+    - *Select* - Select edges
+    - *Deselect* - Deselect edges
 
 ---
 ### Select Similar
@@ -125,6 +159,13 @@ Select Islands similar to those selected.
 | --- |
 | Select similar |
 
+!!! Preferences
+      ![Select Similar Islands](img/screen/select/SelectSimilarIslandsProperties.png)
+
+- **Area Matching** - Set strict requirements to Islands Area Matching when Stacking. Disable this option if the Islands have a slightly different Area
+- **Select Primary** - Select Primary Island
+- **Select Similar** - Select Similar Islands
+
 ---
 ### Select in Tile
 Select Islands in bounding box of active UDIM Tile or UV Area.
@@ -132,6 +173,21 @@ Select Islands in bounding box of active UDIM Tile or UV Area.
 | ![Select_In_Tile](img/screen/adv_uv_map/adv_uv_map_udim_select_active.gif) |
 | --- |
 | Select in tile |
+
+!!! Preferences
+      ![Select In Tile](img/screen/select/SelectInTileProperties.png)
+
+- **Clear Selection** - Clear initial selection
+- **Base** - What to select relative to:
+    - *UV Area* - UV Area square
+    - *UDIM tile number* - UDIM tile number
+    - *Active UDIM* - Active UDIM tile
+    - *Any UDIM* - Any UDIM tile
+- **Location**
+    - *Inside* - Inside of UV Area
+    - *Outside* - Outside of UV Area
+    - *Cross* - Crossing of UV Area borders
+- **Tile Number** - Number of UDIM tile
 
 ---
 ### Select Half
@@ -145,6 +201,19 @@ Select part of the model according to its location relative to the coordinate ax
 | --- |
 | Select half. Include Zero option|
 
+!!! Preferences
+      ![Select Half](img/screen/select/SelectHalfProperties.png)
+
+- **Clear Selection** - Clear initial selection
+- **Axis Direction** - Axis direction
+    - *"+"* - Positive
+    - *"-"* - Negative
+- **Mesh Axis** - The axis along which the selection is made
+    - *X* - X Axis
+    - *Y* - Y Axis
+    - *Z* - Z Axis
+- **Include Zero** - Including zero coordinates
+
 ---
 ### Select Quaded Islands
 Select islands that consist only of quads.
@@ -153,6 +222,14 @@ Select islands that consist only of quads.
 | --- |
 | Select quaded islands |
 
+!!! Preferences
+      ![Select Sharp Props](img/screen/select/SelectQuadedIslandsProperties.png)
+
+ - **Clear Selection** - Clear initial selection
+ - **Mode** - Selection type
+    - *Select* - Select edges
+    - *Deselect* - Deselect edges
+
 ### Select Cylinder Edges (Splits)
 Select island edges that belong to the same mesh edge and split the island by itself.
 
@@ -160,12 +237,45 @@ Select island edges that belong to the same mesh edge and split the island by it
 | --- |
 | Select splits |
 
+!!! Preferences
+      ![Select Splits Poperties](img/screen/select/SelectSplitsProperties.png)
+
+ - **Clear Selection** - Clear initial selection
+ - **Mode** - Selection type
+    - *Select* - Select edges
+    - *Deselect* - Deselect edges
+
 ### Select Edges by Condition
 Select edges based on various conditions and logic operations with NOT support.
 
 | ![Edges by Condition](img\gifs\select_operators\Select_Edges_by_Condition.gif) |
 | --- |
 | Select edges by condition |
+
+!!! Preferences
+      ![Select Edges by Condition](img/screen/select/SelectEdgesByConditionProperties.png)
+
+- **Clear Selection** - Clear initial selection
+- **Edge Is** - Select first condition
+    - *Sharp* - Select edges that are markerd sharp
+    - *Seam* - Select edges that are markerd seam
+    - *Splits* - Selects edges that belong to the same mesh edge and split the island by itself
+    - *Borders* - Select edges that are UV borders
+    - *Open* - Select edges that are open. Including those adjacent to hidden faces
+- **Second Condition** - Apply second condition (Entering this parameter is optional)
+- **Boolean Operation** - boolean logic operator
+    - *And*
+    - *Or*
+    - *Xor*
+    - *Nor*
+- **Apply Not** - Append logical "Not"
+- **Edge Is** - Select second condition
+    - *Sharp* - Select edges that are markerd sharp
+    - *Seam* - Select edges that are markerd seam
+    - *Splits* - Selects edges that belong to the same mesh edge and split the island by itself
+    - *Borders* - Select edges that are UV borders
+    - *Open* - Select edges that are open. Including those adjacent to hidden faces
+
 
 ---
 ### Select Edges By Direction
@@ -183,40 +293,50 @@ Select island by direction.
 | --- |
 | Select island by direction |
 
-### Select by UV Area
-The operator consists of two buttons. Where the first is the main operator and the second is an auxiliary operator. You can use it to get the area of the selection.
+!!! Properties
+    ![select Island by Direction](img/screen/select/SelectIslandByDirection.png)
 
-| ![Select_By_UV_Area](img/screen/select/sel_by_uv_area_buttons.png) |
-| --- |
-| Select by UV area |
+- **Clear Selection** - Clear initial selection
+- **Type** - What type of islands will be selected
+    - *Horizontal* - Horizontally oriented islands
+    - *Vertical* - Vertically oriented islands
+    - *Radial* - Islands that are shaped like a circle
+    - *Not Aligned* - Islands that are not aligned with the axes
 
 ---
-#### Select by UV Area:
+### Select by UV Area
 Select faces by their UV area.
+The operator consists of two buttons. Where the first is the main operator and the second is an auxiliary operator. You can use it to get the area of the selection.
 
-| ![](img/screen/select/select_by_uv_area_op_prop.png) |
-| --- |
-| Operator settings |
+!!! Panel
+    ![Select_By_UV_Area](img/screen/select/sel_by_uv_area_buttons.png)
+
+!!! Preferences
+    ![](img/screen/select/select_by_uv_area_op_prop.png)
 
   - **Mode** - What should be selected? Islands or faces.
+    - *Island* - Island selection mode
+    - *Faces* - Faces selection mode
   - **Clear selection** - Clear the previous selection.
   - **Condition** - The conditions under which the selection will be made.
-    - **Zero Area** - Elements with zero area value.
-    - **Within range** - Elements, the area of which is within a specified range.
-    - **More than** - Elements with an area greater than the specified value.
-    - **Equal to** - Elements, the area of which is equal to a specified value.
-    - **Less than** - Elements with an area smaller than the specified value.
+    - *Zero Area* - Elements with zero area value.
+    - *Within range* - Elements, the area of which is within a specified range.
+    - *More than* - Elements with an area greater than the specified value.
+    - *Equal to* - Elements, the area of which is equal to a specified value.
+    - *Less than* - Elements with an area smaller than the specified value.
   - **With Threshold** - Calculation threshold.
 
 ---
 #### Get Selected Area:
 After you run this operator, the Multiplied Area value goes into the Select by UV Area operator.
 
-| ![](img/screen/select/get_selected_area_op_prop.png) |
-| --- |
-| Operator settings |
+!!! Prperties
+    ![](img/screen/select/get_selected_area_op_prop.png)
+
 
   - **Mode** - The area of what should be obtained? Islands or faces.
+    - *Island* - Island selection mode
+    - *Faces* - Faces selection mode
   - **Average** - Averaging.
   - **Real Area** - The area within the UV Editor is very small. This value shows the real area.
   - **Real UV Area** - Same value as Real Area, but in full size.
