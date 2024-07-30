@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>Unwrap - Zen UV 4.4 for Blender</title>
+    <title>Unwrap - Zen UV 4.0 for Blender</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
@@ -24,14 +24,6 @@
     <![endif]-->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
       <script>hljs.initHighlightingOnLoad();</script> 
-      <script async src="https://www.googletagmanager.com/gtag/js?id=G-7XHJ910WF8"></script>
-      <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-7XHJ910WF8');
-      </script>
 </head>
 
 <body class="wy-body-for-nav" role="document">
@@ -40,10 +32,10 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
-          <a href=".." class="icon icon-home"> Zen UV 4.4 for Blender
+          <a href=".." class="icon icon-home"> Zen UV 4.0 for Blender
         </a><div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
-      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
   </form>
 </div>
       </div>
@@ -52,8 +44,6 @@
               <p class="caption"><span class="caption-text">Getting Started</span></p>
               <ul>
                   <li class="toctree-l1"><a class="reference internal" href="..">Introduction</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../youtube_videos/">Learning Videos</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../zenuv3_to_zenuv4/">Upgrade Zen UV 3 to Zen UV 4 FAQ</a>
                   </li>
@@ -74,7 +64,7 @@
         <ul>
     <li class="toctree-l3"><a class="reference internal" href="#basic-rules">Basic rules:</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#processing-mode">Processing Mode</a>
+    <li class="toctree-l3"><a class="reference internal" href="#processing-mode">Processing Mode:</a>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#the-behavior-of-the-operator-if-nothing-is-selected">The behavior of the operator if nothing is selected:</a>
     </li>
@@ -88,15 +78,11 @@
     </li>
         </ul>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#settings">Settings</a>
+    <li class="toctree-l3"><a class="reference internal" href="#settings">Settings:</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#additional-options">Additional Options</a>
+    <li class="toctree-l3"><a class="reference internal" href="#additional-options">Additional Options:</a>
     </li>
         </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#unwrap-constraint">Unwrap Constraint</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#unwrap-inplace">Unwrap Inplace</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#mark-system">Mark System</a>
         <ul>
@@ -129,20 +115,14 @@
     <li class="toctree-l2"><a class="reference internal" href="#smooth-by-sharp-toggle">Smooth by Sharp (Toggle)</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#finishing-system">Finishing System</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#sort-islands-by-tags">Sort Islands by Tags</a>
     </li>
+    <li class="toctree-l2"><a class="reference internal" href="#sort-islands-by-tags">Sort Islands by Tags</a>
+        <ul>
     <li class="toctree-l3"><a class="reference internal" href="#tag-finished">Tag Finished</a>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#tag-unfinished">Tag Unfinished</a>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#select-finished">Select Finished</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#deselect-finished">Deselect Finished</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#hide">Hide</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#unhide">Unhide</a>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#display-finished-toggle">Display Finished (Toggle)</a>
     </li>
@@ -152,43 +132,38 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../select/">Select</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pack/">Pack</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../checker/">UV Checker</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../texel_density/">Texel Density</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../transform/">Transform</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../stack/">Stack</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../texel_density/">Texel Density</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../checker/">UV Checker</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../pack/">Pack</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../preferences/">Preferences</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../transform_tool/">Transform Tool</a>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Trim Sheets</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../trimsheet/">Introduction</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../trimsheet_creation/">Creation</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../trimsheet_operators/">Operators</a>
+                </li>
+    </ul>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../sticky_uv_editor/">Sticky UV Editor</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../favourites/">Favourites</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">Trim Sheets</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../trimsheet/">Trim Sheets</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../trimsheet_creation/">Trim Sheet Management</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../trimsheet_operators/">Trim Sheet Operators</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../trimsheet_hotspot/">Hotspot Mapping</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../preferences/">Preferences</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Additional</span></p>
               <ul>
                   <li class="toctree-l1"><a class="reference internal" href="../addon_prefs/">Addon Preferences</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../user_script/">User Script</a>
-                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../help/">Help</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../downloads/">Downloads</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../troubleshooting/">FAQs</a>
                   </li>
@@ -198,8 +173,6 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../our_addons/">Our Add-ons</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../recommended_addons/">Recommended Add-ons</a>
-                  </li>
               </ul>
       </div>
     </div>
@@ -208,13 +181,13 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
       <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="..">Zen UV 4.4 for Blender</a>
+          <a href="..">Zen UV 4.0 for Blender</a>
         
       </nav>
       <div class="wy-nav-content">
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
-    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a> &raquo;</li>
           <li>Modules &raquo;</li>
       <li>Unwrap</li>
     <li class="wy-breadcrumbs-aside">
@@ -228,23 +201,10 @@
                 <h1 id="unwrap">Unwrap<a class="headerlink" href="#unwrap" title="Permanent link"></a></h1>
 <div class="admonition panel">
 <p class="admonition-title">Panel</p>
-<table>
-<thead>
-<tr>
-<th>3D Viewport</th>
-<th>UV Editor</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><img alt="" src="../img/screen/unwrap/unwrapMainPanel.png" /></td>
-<td><img alt="" src="../img/screen/unwrap/unwrapMainPanel_uvedtior.png" /></td>
-</tr>
-</tbody>
-</table>
+<p><img alt="Unwrap" src="../img/screen/unwrap/unwrapMainPanel.png" /></p>
 </div>
 <h2 id="zen-unwrap">Zen Unwrap <img alt="Zen Unwrap" src="../img/icons/zen-unwrap%402x.png" /><a class="headerlink" href="#zen-unwrap" title="Permanent link"></a></h2>
-<p>Magic button to Mark (Seams, Sharp), Set TD, Pack and Sort processed Islands. Zen Unwrap is a context-dependent operator and result of its operation depends on what was selected at the time it was run. </p>
+<p>Zen Unwrap is a context-dependent operator. The result of its operation depends on what was selected at the time it was run.</p>
 <hr />
 <h3 id="basic-rules">Basic rules:<a class="headerlink" href="#basic-rules" title="Permanent link"></a></h3>
 <ul>
@@ -257,23 +217,23 @@
 </ul>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>Zen Unwrap will ignore existing UV Borders if they are not marked as Seams.</p>
+<p>Zen Unwrup will ignore existing UV Borders if they are not marked as Seams.</p>
 <ul>
 <li>To mark them use <a href="#seams-by-uv-borders"><strong>Seams by UV Borders</strong></a> operator.</li>
 <li>To save not only UV Borders but Islands <a href="#tag-finished"><strong>Tag Finished</strong></a> operator. </li>
 </ul>
 </div>
 <hr />
-<h3 id="processing-mode">Processing Mode<a class="headerlink" href="#processing-mode" title="Permanent link"></a></h3>
+<h3 id="processing-mode">Processing Mode:<a class="headerlink" href="#processing-mode" title="Permanent link"></a></h3>
 <p>The main operating mode switch.</p>
 <div class="admonition panel">
 <p class="admonition-title">Panel</p>
 <p><img alt="Processing Mode" src="../img/screen/unwrap/zwrp_processing_mode.png" /></p>
 <ul>
-<li><strong>Whole Mesh</strong>. The processing will be done for the whole mesh. All already unwrapped islands will be re-unwrapped.</li>
-<li><strong>Selected Only</strong>. Processing will only be performed on the mesh selection.</li>
-<li><strong>Seam Switch</strong>. This mode will switch seams with subsequent unwrapping. Only selected edges with seams will be included in the switching process. The seams that are in the selection will be deleted (Unmarked). New seams will be assigned according to the selection mode (Face, Edge).</li>
-<li><strong>Unfold Vertices</strong>. In this case, regardless of the Select Mode, any selection will be treated as vertices. Selected vertices will be relaxed.</li>
+<li><strong>Whole Mesh</strong> - The processing will be done for the whole mesh. All already unwrapped islands will be re-unwrapped.</li>
+<li><strong>Selected Only</strong> - Processing will only be performed on the mesh selection.</li>
+<li><strong>Seam Switch</strong> - This mode will switch seams with subsequent unwrapping. Only selected edges with seams will be included in the switching process. The seams that are in the selection will be deleted (Unmarked). New seams will be assigned according to the selection mode (Face, Edge).</li>
+<li><strong>Unfold Vertices</strong> - In this case, regardless of the Select Mode, any selection will be treated as vertices. Selected vertices will be relaxed.</li>
 </ul>
 </div>
 <hr />
@@ -302,100 +262,33 @@
 <p>Working in <strong>Face</strong> or <strong>Edge</strong> mode makes changes to the selected islands anyway. If you need to unwrap an island without adding seams or splittings it, use <strong>Vertex</strong> selection mode. You can select only one vertex or several. This will tell the operator which island you want to work with. It is most convenient to use this mode together with the <strong>Processing Mode - Selected Only</strong>.</p>
 <p><img alt="Zen Unwrap Vertex Mode" src="../img/gifs/zuwrp_operator/zwrp_vertex_mode.gif" /></p>
 <hr />
-<h3 id="settings">Settings<a class="headerlink" href="#settings" title="Permanent link"></a></h3>
-<div class="admonition preferences">
-<p class="admonition-title">Preferences</p>
-<p><img alt="Zen Unwrap Settings" src="../img/screen/unwrap/zwrp_op_prop.png" /></p>
-<ul>
-<li><strong>Unwrap Method</strong>. Unwrapping method.<ul>
-<li><strong>Conformal</strong>. Fast algorithm that gives good results.</li>
-<li><strong>Angle-Based</strong>. More accurate algorithm, but a bit slower.</li>
-</ul>
-</li>
-<li><strong>Mark Settings</strong>. Operator settings to enable automatic seam marking. See <a href="#mark-by-angle">Mark Settings (Global Mode)</a> for details.</li>
-<li><strong>Fill Holes</strong>. Virtual fill holes in mesh before unwrapping, to avoid overlaps and preserve symmetry.</li>
-<li><strong>Texel Density</strong>. Sets Texel Density. Works only if Pack Unwrapped option is disabled.<ul>
-<li><strong>Skip</strong>. Do not make any texel density corrections.</li>
-<li><strong>Global Preset.</strong> Set value described in Texel Density panel as Global TD Preset. </li>
-<li><strong>Averaged</strong>. Sets the averaged Texel Density for newly created islands. This keeps all islands about the same size as you work. </li>
-</ul>
-</li>
-<li><strong>Pack Unwrapped</strong>. After the islands have been created, this option will start the <strong>Packing</strong> process of the islands. The <a href="pack.md/#pack-engine"><strong>Pack Engine</strong></a> specified in the <strong>Pack System</strong> will be used.</li>
-<li><strong>Sort Unwrapped</strong>. After the islands have been created, this option will start the process of <strong>Sorting</strong> the islands by <a href="#finishing-system"><strong>Finished</strong></a> tag.</li>
-</ul>
-</div>
-<h3 id="additional-options">Additional Options<a class="headerlink" href="#additional-options" title="Permanent link"></a></h3>
-<p>You can change main Zen Unwrap settings before running the operator.  </p>
+<h3 id="settings">Settings:<a class="headerlink" href="#settings" title="Permanent link"></a></h3>
 <div class="admonition panel">
 <p class="admonition-title">Panel</p>
+<p><img alt="Zen Unwrap Settings" src="../img/screen/unwrap/zwrp_op_prop.png" /></p>
+<ul>
+<li>
+<p><strong>Unwrap Method</strong> - Unwrapping method.</p>
+<ul>
+<li><strong>Conformal</strong> - Fast algorithm that gives good results.</li>
+<li><strong>Angle-Based</strong> - More accurate algorithm, but a bit slower.</li>
+</ul>
+</li>
+<li>
+<p><strong>Mark Settings</strong> - Operator settings to enable automatic seam marking. See <a href="#mark-by-angle">Mark Settings (Global Mode)</a> for details.</p>
+</li>
+<li><strong>Fill Holes</strong> - Virtual fill holes in mesh before unwrapping, to avoid overlaps and preserve symmetry.</li>
+<li><strong>Averaged Texel Density</strong> - Sets the averaged Texel Density for newly created islands. This keeps all islands about the same size as you work.</li>
+<li><strong>Pack Unwrapped</strong> - After the islands have been created, this option will start the <strong>Packing</strong> process of the islands. The <a href="pack.md/#pack-engine"><strong>Pack Engine</strong></a> specified in the <strong>Pack System</strong> will be used.</li>
+<li><strong>Sort Unwrapped</strong> - After the islands have been created, this option will start the process of <strong>Sorting</strong> the islands by <a href="#finishing-system"><strong>Finished</strong></a> tag.</li>
+</ul>
+</div>
+<h3 id="additional-options">Additional Options:<a class="headerlink" href="#additional-options" title="Permanent link"></a></h3>
+<p>The operator has one additional option. It has nothing to do with the unfolding process, so it has been put in a separate menu. </p>
 <p><img alt="Auto UV Sync" src="../img/screen/unwrap/zwrp_auto_uv_sync.png" /></p>
 <ul>
-<li><strong>Auto UV Sync</strong>. Automatically enables the <strong>UV Sync Selection</strong> mode every time the operator starts.</li>
-<li><strong>Processing Mode</strong>. The main operating mode switch.</li>
-<li><strong>Pack Unwrapped</strong>. After the islands have been created, this option will start the <strong>Packing</strong> process of the islands. The <a href="pack.md/#pack-engine"><strong>Pack Engine</strong></a> specified in the <strong>Pack System</strong> will be used.</li>
-<li><strong>Sort Unwrapped</strong>. After the islands have been created, this option will start the process of <strong>Sorting</strong> the islands by <a href="#finishing-system"><strong>Finished</strong></a> tag.</li>
+<li><strong>Auto UV Sync</strong> - Automatically enables the <strong>UV Sync Selection</strong> mode every time the operator starts.</li>
 </ul>
-</div>
-<hr />
-<h2 id="unwrap-constraint">Unwrap Constraint<a class="headerlink" href="#unwrap-constraint" title="Permanent link"></a></h2>
-<p>This operator unwraps Islands and Faces along selected axis.</p>
-<div class="admonition preferences">
-<p class="admonition-title">Preferences</p>
-<p><img alt="" src="../img/screen/unwrap/unwrap_constraint_settings.png" /></p>
-<ul>
-<li><strong>Mode</strong>. Choose what to unwrap Islands or Faces.<ul>
-<li><strong>Islands</strong>. Affect selected Islands.</li>
-<li><strong>Faces</strong>. Affect selected Faces only.</li>
-</ul>
-</li>
-<li><strong>Method</strong>. Unwrap method.<ul>
-<li><strong>Full Unwrap</strong>. Unwrap Islands but keep it in BBox boundaries.</li>
-<li><strong>Along Axis</strong>. Unwrap Islands along Axis.</li>
-</ul>
-</li>
-<li><strong>Fit Axis</strong>.<ul>
-<li><strong>U</strong>. Unwrap / Fit along U axis.</li>
-<li><strong>V</strong>. Unwrap / Fit along V axis.</li>
-<li><strong>Min</strong>. The minimum length axis will be automatically determined.</li>
-<li><strong>Max</strong>. The maximum length axis will be automatically determined.</li>
-</ul>
-</li>
-<li><strong>Current Axis</strong>. Current Axis.</li>
-<li><strong>Mark Settings</strong>. Mark Settings (Global and Local modes) to Mark Seams and Sharp Edges.</li>
-<li><strong>Fill Holes</strong>. Virtual fill holes in meshes before unwrapping.</li>
-<li><strong>Correct Aspect</strong>. Map UVs taking image aspect ratio into account.</li>
-<li><strong>Use Subsurf Modifier</strong>. Map UVs taking vertex position after subsurf into account.</li>
-</ul>
-</div>
-<h2 id="unwrap-inplace">Unwrap Inplace<a class="headerlink" href="#unwrap-inplace" title="Permanent link"></a></h2>
-<p>Unwrap Islands and Faces keeping their Size, Orientation and Location in UV Space.</p>
-<div class="admonition preferences">
-<p class="admonition-title">Preferences</p>
-<p><img alt="" src="../img/screen/unwrap/unwrap_inplace_settings.png" /></p>
-<ul>
-<li><strong>Mode</strong>. Choose what to unwrap Islands or Faces.<ul>
-<li><strong>Islands</strong>. Affect selected Islands.</li>
-<li><strong>Faces</strong>. Affect selected Faces only.</li>
-</ul>
-</li>
-<li><strong>Location</strong>. Restore Islands Location and gabarit.</li>
-<li><strong>Orientation</strong>. What Orientation to use after unwrapping.<ul>
-<li><strong>Keep</strong>. Use Initial Orientation. </li>
-<li><strong>World Orient</strong>. Use World Orientation for the Islands.</li>
-<li><strong>Skip</strong>. Skip Orientation adjustments.</li>
-</ul>
-</li>
-<li><strong>Size</strong>. Restore Islands Size.</li>
-<li><strong>Ignore Pins</strong>. Ignore Pins.</li>
-<li><strong>Fill Holes</strong>. Virtual fill holes in meshes before unwrapping.</li>
-<li><strong>Correct Aspect</strong>. Map UVs taking image aspect ratio into account.</li>
-<li><strong>Use Subsurf Modifier</strong>. Map UVs taking vertex position after subsurf into account.</li>
-</ul>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Available only in UV Editor.</p>
-</div>
 <hr />
 <h2 id="mark-system">Mark System<a class="headerlink" href="#mark-system" title="Permanent link"></a></h2>
 <div class="admonition panel">
@@ -403,130 +296,102 @@
 <p><img alt="" src="../img/screen/unwrap/unwrap_mark_section.png" /></p>
 </div>
 <h3 id="mark-by-angle">Mark by Angle<a class="headerlink" href="#mark-by-angle" title="Permanent link"></a></h3>
-<p>Mark edges as Seams and/or Sharp edges by Angle.</p>
-<div class="admonition global mark settings">
-<p class="admonition-title">Global</p>
-<p><img alt="" src="../img/screen/unwrap/mark_by_angle_prefs.png" /></p>
 <ul>
-<li><strong>Use Global Mark Settings</strong>. In this mode, all the operators from the Mark System use the settings below. If off, every operator uses its own settings.</li>
-<li><strong>Mark Seams</strong>. Automatically assign Seams</li>
-<li><strong>Mark Sharp Edges</strong>. Automatically assign Sharp edges</li>
+<li>Mark edges as Seams and/or Sharp edges by Angle.</li>
 </ul>
-</div>
 <div class="admonition preferences">
 <p class="admonition-title">Preferences</p>
-<p><img alt="" src="../img/screen/unwrap/mark_by_angle_settings.png" /></p>
+<p><img alt="" src="../img/screen/unwrap/mark_by_angle_prefs.png" /></p>
 <ul>
-<li><strong>Keep init marks</strong>. Keep the state of intital Seams and Sharp edges.</li>
-<li><strong>Selection Respect</strong>. Mark only within current selection.</li>
-<li><strong>Mark Settings</strong>. Mark Settings (Global and Local modes) to Mark Seams and Sharp Edges.</li>
+<li><strong>Use Global Mark Settings</strong> - In this mode, all the operators from the Mark System use the settings below. If off, every operator uses its own settings.</li>
+<li><strong>Mark Seams</strong> - Automatically assign Seams</li>
+<li><strong>Mark Sharp Edges</strong> - Automatically assign Sharp edges</li>
 </ul>
 </div>
 <h3 id="mark">Mark <img alt="Mark Seams" src="../img/icons/mark-seams%402x.png" /><a class="headerlink" href="#mark" title="Permanent link"></a></h3>
-<p>Mark selected edges or face borders as Seams and/or Sharp edges.</p>
-<div class="admonition preferences">
-<p class="admonition-title">Preferences</p>
-<p><img alt="" src="../img/screen/unwrap/mark_mark_pref.png" /></p>
 <ul>
-<li><strong>Clear</strong>. Clear marking inside of selected Faces.</li>
-<li><strong>Mark Settings</strong>. Mark Settings (Global and Local modes) to Mark Seams and Sharp Edges.</li>
+<li>Mark selected edges or face borders as Seams and/or Sharp edges.</li>
 </ul>
-</div>
 <h3 id="unmark">Unmark <img alt="Unmark Seams" src="../img/icons/unmark-seams%402x.png" /><a class="headerlink" href="#unmark" title="Permanent link"></a></h3>
-<p>Unmark selected edges or face borders as Seams and/or Sharp edges.</p>
-<div class="admonition preferences">
-<p class="admonition-title">Preferences</p>
-<p><img alt="" src="../img/screen/unwrap/mark_unmark_pref.png" /></p>
 <ul>
-<li><strong>Mark Settings</strong>. Mark Settings (Global and Local modes) to Mark Seams and Sharp Edges.</li>
+<li>Unmark selected edges or face borders as Seams and/or Sharp edges.</li>
 </ul>
-</div>
 <h3 id="unmark-all">Unmark All<a class="headerlink" href="#unmark-all" title="Permanent link"></a></h3>
-<p>Remove all the Seams and/or Sharp edges from the mesh.</p>
-<div class="admonition preferences">
-<p class="admonition-title">Preferences</p>
-<p><img alt="" src="../img/screen/unwrap/mark_unmark_all_pref.png" /></p>
 <ul>
-<li><strong>Clear Pinned</strong>. Clear all the Pins.</li>
-<li><strong>Mark Settings</strong>. Mark Settings (Global and Local modes) to Mark Seams and Sharp Edges.</li>
+<li>Remove all the Seams and/or Sharp edges from the mesh.</li>
 </ul>
-</div>
+<hr />
 <h2 id="conversion-system">Conversion System<a class="headerlink" href="#conversion-system" title="Permanent link"></a></h2>
 <div class="admonition panel">
 <p class="admonition-title">Panel</p>
 <p><img alt="" src="../img/screen/unwrap/conversion_system.png" /></p>
 </div>
 <h3 id="seams-by-uv-borders">Seams by UV Borders<a class="headerlink" href="#seams-by-uv-borders" title="Permanent link"></a></h3>
-<p>Mark Seams by existing UV Borders.</p>
+<ul>
+<li>Mark Seams by existing UV Borders.</li>
+</ul>
 <h3 id="sharp-by-uv-borders">Sharp by UV Borders<a class="headerlink" href="#sharp-by-uv-borders" title="Permanent link"></a></h3>
-<p>Mark Sharp by existing UV Borders.</p>
+<ul>
+<li>Mark Sharp by existing UV Borders.</li>
+</ul>
 <h3 id="seams-by-sharp-edges">Seams by Sharp Edges<a class="headerlink" href="#seams-by-sharp-edges" title="Permanent link"></a></h3>
-<p>Mark Seams by existing Sharp edges.</p>
+<ul>
+<li>Mark Seams by existing Sharp edges.</li>
+</ul>
 <h3 id="sharp-edges-by-seams">Sharp Edges by Seams<a class="headerlink" href="#sharp-edges-by-seams" title="Permanent link"></a></h3>
-<p>Mark Sharp edges by existing Seams.</p>
+<ul>
+<li>Mark Sharp edges by existing Seams.</li>
+</ul>
 <h3 id="seams-by-open-edges">Seams by Open Edges<a class="headerlink" href="#seams-by-open-edges" title="Permanent link"></a></h3>
-<p>Mark Seams by Open Edges. The way that looks in the viewport.</p>
+<ul>
+<li>Mark Seams by Open Edges. The way that looks in the viewport.</li>
+</ul>
+<hr />
 <h2 id="mirror-seams">Mirror Seams<a class="headerlink" href="#mirror-seams" title="Permanent link"></a></h2>
-<p>Mirror Seams along selected Axis (<code>X</code>,<code>Y</code>,<code>Z</code>) in a given direction (<code>+</code> or <code>-</code>). </p>
-<p><img alt="" src="../img/screen/unwrap/unwrap_mirror_1.gif" /></p>
-<p>Instead of <strong>Replacing</strong> existing marked Seams you can <strong>Add</strong> them.</p>
-<p><img alt="" src="../img/screen/unwrap/unwrap_mirror_2.gif" /></p>
-<p>Holding <code>Shift</code> you can select both directions and flip Seams along the selected Axis and direction.</p>
-<p><img alt="" src="../img/screen/unwrap/unwrap_mirror_3.gif" /></p>
+<ul>
+<li>Mirror Seams by axes.</li>
+</ul>
+<hr />
 <h2 id="smooth-by-sharp-toggle">Smooth by Sharp (Toggle)<a class="headerlink" href="#smooth-by-sharp-toggle" title="Permanent link"></a></h2>
-<p>Toggle between Auto Smooth 180° (with sharp edges) and regular smooth modes.</p>
+<ul>
+<li>Toggle between Auto Smooth 180° (with sharp edges) and regular smooth modes.</li>
+</ul>
 <hr />
 <h2 id="finishing-system">Finishing System<a class="headerlink" href="#finishing-system" title="Permanent link"></a></h2>
-<p>Finishing system helps to Mark, Sort and Display Islands that you have already unwrapped. It can be used to check the progress of unwrapping as well as prevent Finished Islands from accidental Unwraping.</p>
 <div class="admonition panel">
 <p class="admonition-title">Panel</p>
 <p><img alt="" src="../img/screen/unwrap/finished_system.png" /></p>
 </div>
-<h3 id="sort-islands-by-tags">Sort Islands by Tags<a class="headerlink" href="#sort-islands-by-tags" title="Permanent link"></a></h3>
-<p>Finished Islands move to the right side from Main UV Tile, Unfinished — to the left.</p>
-<p><img alt="" src="../img/screen/unwrap/unwrap_finished_sort.gif" /></p>
-<h3 id="tag-finished">Tag Finished<a class="headerlink" href="#tag-finished" title="Permanent link"></a></h3>
-<p>Tag Islands as Finished and move them to the right sied from main UV Tile. These Islands won&rsquo;t be unwrapped.</p>
-<p><img alt="" src="../img/screen/unwrap/unwrap_finished_tag.gif" /></p>
-<p><img alt="" src="../img/screen/unwrap/unwrap_finished_display_3dview_tag.gif" /></p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Islands tagged as Finished are locked for Unwrapping. To unlock them use <strong>Tag Unfinished</strong> operator.</p>
-</div>
-<p><img alt="" src="../img/screen/unwrap/unwrap_finished_lockunwrap.gif" /></p>
-<h3 id="tag-unfinished">Tag Unfinished<a class="headerlink" href="#tag-unfinished" title="Permanent link"></a></h3>
-<p>Tag Islands as Unfinished and move them to the left sied from main UV Tile. </p>
-<p><img alt="" src="../img/screen/unwrap/unwrap_finished_untag.gif" /></p>
-<p><img alt="" src="../img/screen/unwrap/unwrap_finished_display_3dview_untag.gif" /></p>
-<h3 id="select-finished">Select Finished<a class="headerlink" href="#select-finished" title="Permanent link"></a></h3>
-<p>Select Islands tagged as Finished.</p>
-<p><img alt="" src="../img/screen/unwrap/unwrap_finished_select.gif" /></p>
-<p><img alt="" src="../img/screen/unwrap/unwrap_finished_display_3dview_select.gif" /></p>
-<h3 id="deselect-finished">Deselect Finished<a class="headerlink" href="#deselect-finished" title="Permanent link"></a></h3>
-<p>Deselect Islands tagged as Finished.</p>
-<p><img alt="" src="../img/screen/unwrap/unwrap_finished_deselect.gif" /></p>
-<p><img alt="" src="../img/screen/unwrap/unwrap_finished_display_3dview_deselect.gif" /></p>
-<h3 id="hide">Hide<a class="headerlink" href="#hide" title="Permanent link"></a></h3>
-<p>Hide Islands tagged as Finished.</p>
-<p><img alt="" src="../img/screen/unwrap/unwrap_finished_hide.gif" /></p>
-<p><img alt="" src="../img/screen/unwrap/unwrap_finished_display_3dview_hide.gif" /></p>
-<h3 id="unhide">Unhide<a class="headerlink" href="#unhide" title="Permanent link"></a></h3>
-<p>Unhide Islands tagged as Finished.</p>
-<h3 id="display-finished-toggle">Display Finished (Toggle)<a class="headerlink" href="#display-finished-toggle" title="Permanent link"></a></h3>
-<p>Display Finished/Unfinished Islands in the viewport.</p>
-<p><img alt="" src="../img/screen/unwrap/unwrap_finished_display.gif" /></p>
-<p><img alt="" src="../img/screen/unwrap/unwrap_finished_display_3dview.gif" /></p>
+<h2 id="sort-islands-by-tags">Sort Islands by Tags<a class="headerlink" href="#sort-islands-by-tags" title="Permanent link"></a></h2>
+<ul>
+<li>Finished Islands move to the right side from Main UV Tile, Unfinished — to the left.</li>
+</ul>
 <div class="admonition preferences">
 <p class="admonition-title">Preferences</p>
 <p><img alt="Unwrap" src="../img/screen/unwrap/finishing_prefs.png" /></p>
 <ul>
-<li><strong>Pin Finished</strong>. Pin Islands after Tag Finished operation.</li>
-<li><strong>Auto Sort Islands</strong>. Automatically Sort Islands by Tags. Finished Islands move to the right side from Main UV Tile, Unfinished — to the left</li>
-<li><strong>Auto Update Draw</strong>. Update draw cache every time when mesh is changed.</li>
-<li><strong>Finished Color</strong>. Finished Islands viewport display color.</li>
-<li><strong>Unfinished Color</strong>. Unfinished Islands viewport display color.</li>
+<li><strong>Pin Finished</strong> - Pin Islands after Tag Finished operation.</li>
+<li><strong>Auto Sort Islands</strong> - Automatically Sort Islands by Tags. Finished Islands move to the right side from Main UV Tile, Unfinished — to the left</li>
+<li><strong>Finished Color</strong> - Finished Islands viewport display color.</li>
+<li><strong>Unfinished Color</strong> - Unfinished Islands viewport display color.</li>
 </ul>
 </div>
+<h3 id="tag-finished">Tag Finished<a class="headerlink" href="#tag-finished" title="Permanent link"></a></h3>
+<ul>
+<li>Tag Islands as Finished.</li>
+</ul>
+<h3 id="tag-unfinished">Tag Unfinished<a class="headerlink" href="#tag-unfinished" title="Permanent link"></a></h3>
+<ul>
+<li>Tag Islands as Unfinished.</li>
+</ul>
+<h3 id="select-finished">Select Finished<a class="headerlink" href="#select-finished" title="Permanent link"></a></h3>
+<ul>
+<li>Select Islands tagged as Finished.</li>
+</ul>
+<h3 id="display-finished-toggle">Display Finished (Toggle)<a class="headerlink" href="#display-finished-toggle" title="Permanent link"></a></h3>
+<ul>
+<li>Display Finished/Unfinished Islands in the viewport.</li>
+</ul>
               
             </div>
           </div><footer>
@@ -539,7 +404,6 @@
 
   <div role="contentinfo">
     <!-- Copyright etc -->
-      <p><p>Copyright &copy; 2024 <a href="https://zenmasters.team/">Zen Masters</a></p></p>
   </div>
 
   Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.

@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>Pack - Zen UV 4.4 for Blender</title>
+    <title>Pack - Zen UV 4.0 for Blender</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
@@ -24,14 +24,6 @@
     <![endif]-->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
       <script>hljs.initHighlightingOnLoad();</script> 
-      <script async src="https://www.googletagmanager.com/gtag/js?id=G-7XHJ910WF8"></script>
-      <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-7XHJ910WF8');
-      </script>
 </head>
 
 <body class="wy-body-for-nav" role="document">
@@ -40,10 +32,10 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
-          <a href=".." class="icon icon-home"> Zen UV 4.4 for Blender
+          <a href=".." class="icon icon-home"> Zen UV 4.0 for Blender
         </a><div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
-      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
   </form>
 </div>
       </div>
@@ -52,8 +44,6 @@
               <p class="caption"><span class="caption-text">Getting Started</span></p>
               <ul>
                   <li class="toctree-l1"><a class="reference internal" href="..">Introduction</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../youtube_videos/">Learning Videos</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../zenuv3_to_zenuv4/">Upgrade Zen UV 3 to Zen UV 4 FAQ</a>
                   </li>
@@ -72,14 +62,6 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../select/">Select</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../transform/">Transform</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../stack/">Stack</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../texel_density/">Texel Density</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../checker/">UV Checker</a>
-                  </li>
                   <li class="toctree-l1 current"><a class="reference internal current" href="./">Pack</a>
     <ul class="current">
     <li class="toctree-l2"><a class="reference internal" href="#pack-islands">Pack Islands</a>
@@ -87,10 +69,6 @@
     <li class="toctree-l2"><a class="reference internal" href="#margin">Margin</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#uv-coverage">UV Coverage</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#get-uv-coverage">Get UV Coverage</a>
-    </li>
-        </ul>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#pack-engine">Pack Engine</a>
         <ul>
@@ -104,18 +82,6 @@
     </li>
     <li class="toctree-l4"><a class="reference internal" href="#rotate-islands">Rotate Islands</a>
     </li>
-    <li class="toctree-l4"><a class="reference internal" href="#pack-selected-islands">Pack Selected Islands</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#fixed-scale">Fixed Scale</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#lock-overlapping">Lock Overlapping</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#packing-mode">Packing Mode</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#pack-in-trim">Pack in Trim</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#margin-method">Margin Method</a>
-    </li>
         </ul>
     </li>
         </ul>
@@ -128,51 +94,48 @@
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#untag-excluded">Untag Excluded</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#select">Select</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#deselect">Deselect</a>
-    </li>
     <li class="toctree-l3"><a class="reference internal" href="#hide">Hide</a>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#unhide">Unhide</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#display-excluded">Display Excluded</a>
-        <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#display-excluded-preferences">Display Excluded Preferences</a>
+    <li class="toctree-l3"><a class="reference internal" href="#select-excluded">Select Excluded</a>
     </li>
-        </ul>
+    <li class="toctree-l3"><a class="reference internal" href="#display-excluded">Display Excluded</a>
     </li>
         </ul>
     </li>
     </ul>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../preferences/">Preferences</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../checker/">UV Checker</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../transform_tool/">Transform Tool</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../texel_density/">Texel Density</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../transform/">Transform</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../stack/">Stack</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Trim Sheets</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../trimsheet/">Introduction</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../trimsheet_creation/">Creation</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../trimsheet_operators/">Operators</a>
+                </li>
+    </ul>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../sticky_uv_editor/">Sticky UV Editor</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../favourites/">Favourites</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">Trim Sheets</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../trimsheet/">Trim Sheets</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../trimsheet_creation/">Trim Sheet Management</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../trimsheet_operators/">Trim Sheet Operators</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../trimsheet_hotspot/">Hotspot Mapping</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../preferences/">Preferences</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Additional</span></p>
               <ul>
                   <li class="toctree-l1"><a class="reference internal" href="../addon_prefs/">Addon Preferences</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../user_script/">User Script</a>
-                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../help/">Help</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../downloads/">Downloads</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../troubleshooting/">FAQs</a>
                   </li>
@@ -182,8 +145,6 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../our_addons/">Our Add-ons</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../recommended_addons/">Recommended Add-ons</a>
-                  </li>
               </ul>
       </div>
     </div>
@@ -192,13 +153,13 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
       <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="..">Zen UV 4.4 for Blender</a>
+          <a href="..">Zen UV 4.0 for Blender</a>
         
       </nav>
       <div class="wy-nav-content">
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
-    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a> &raquo;</li>
           <li>Modules &raquo;</li>
       <li>Pack</li>
     <li class="wy-breadcrumbs-aside">
@@ -210,7 +171,6 @@
             <div class="section" itemprop="articleBody">
               
                 <h1 id="pack">Pack<a class="headerlink" href="#pack" title="Permanent link"></a></h1>
-<p>This panel contains tools to pack UV Islands in UV Area.</p>
 <div class="admonition panel">
 <p class="admonition-title">Panel</p>
 <p><img alt="Pack" src="../img/screen/pack/pack_main_panel.png" /></p>
@@ -218,8 +178,7 @@
 <h3 id="pack-islands">Pack Islands<a class="headerlink" href="#pack-islands" title="Permanent link"></a></h3>
 <p>Pack all Islands using selected <a href="./#pack-engine"><strong>Pack Engine</strong></a>.</p>
 <h3 id="margin">Margin<a class="headerlink" href="#margin" title="Permanent link"></a></h3>
-<p>Set space between Islands for Pack Islands operation.
-If you want to display Margin in UV Editor use <strong>Display UV Borders</strong> operator. </p>
+<p>Set space between Islands for Pack Islands operation. </p>
 <p><img alt="Pack_Margin" src="../img/gifs/pack_operators/Pack_Margin.gif" /></p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
@@ -235,43 +194,17 @@ If you want to display Margin in UV Editor use <strong>Display UV Borders</stron
 </ul>
 </div>
 <h3 id="uv-coverage">UV Coverage<a class="headerlink" href="#uv-coverage" title="Permanent link"></a></h3>
-<p>Calculate Islands UV Coverage and Empty space for active UV map. Increasing UV Coverage value leads to the increasing <a href="../texel_density/">Texel Density</a> value, this in turn leads to the more efficient UV space usage and you can see more pixels on your model using the same texture.</p>
-<div class="admonition subpanel">
-<p class="admonition-title">Subpanel</p>
-<p><img alt="" src="../img/screen/pack/pack_coverage.png" /></p>
-</div>
-<p><img alt="" src="../img/screen/pack/pack_coverage.gif" /></p>
-<h4 id="get-uv-coverage">Get UV Coverage<a class="headerlink" href="#get-uv-coverage" title="Permanent link"></a></h4>
-<p>Get Islands UV Coverage by given settings.</p>
-<table>
-<thead>
-<tr>
-<th>Options</th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Generic</td>
-<td>The size of each Island is calculated and added to the total value</td>
-</tr>
-<tr>
-<td>Selected</td>
-<td>Show area for selected Islands only</td>
-</tr>
-<tr>
-<td>Exclude Stacked</td>
-<td>Exclude Stacked Islands from calculations</td>
-</tr>
-</tbody>
-</table>
+<p>Calculate Islands UV Coverage for active UV map. Increasing UV Coverage value leads to the increasing <a href="../texel_density/">Texel Density</a> value, this in turn leads to the more efficient UV space usage and you can see more pixels on your model using the same texture.</p>
+<p>The algorithm calculates total UV Islands area and shows the percentage in relation to the UV space. It can lead to the values more than 100% if you have Stacked Islands.</p>
+<p><img alt="" src="../img/gifs/pack_operators/Pack_UV_Coverage.gif" /></p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>To increase UV Coverage value and achieve efficient UV space usage (80-90% of UV Coverage):</p>
 <ul>
 <li>Cut big Islands into smaller pieces if you have too much empty space. </li>
 <li>Upscale small objects on UV map to fill empty space.</li>
-<li>Downscale UV Islands that are barely visible on the model (e.g. bottom, back parts, etc.). In this case, don&rsquo;t forget to disable <strong>Average Islands Scale</strong> option when packing.</li>
+<li>Downscale UV Islands that are barely visible on the model (e.g. bottom, back parts, etc.).</li>
+<li>Use UVPackmaster Pack Engine with enabled Heuristic option.</li>
 </ul>
 </div>
 <h2 id="pack-engine">Pack Engine<a class="headerlink" href="#pack-engine" title="Permanent link"></a></h2>
@@ -286,34 +219,9 @@ If you want to display Margin in UV Editor use <strong>Display UV Borders</stron
 <li><a href="https://uvpackmaster.com"><strong>UV Packmaster 2, 3</strong></a></li>
 <li><a href="https://www.uv-packer.com/"><strong>UV Packer</strong></a></li>
 </ul>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>If you want to use specific <strong>UV Packmaster Pack Engine</strong> features that are not present in Zen UV interface you can transfer existing settings to UVPackmaster using this <strong>Transfer settings</strong> button.</p>
-<p><img alt="" src="../img/screen/pack/pack_sync.png" /></p>
-<p>Then you can open <strong>UV Packmaster</strong> interface and complete the setup.</p>
-</div>
 <h3 id="pack-engine-preferences">Pack Engine Preferences<a class="headerlink" href="#pack-engine-preferences" title="Permanent link"></a></h3>
 <p>The main preferences of each Pack Engine are placed in Zen UV interface. To use all the preferences please go to the main interface of the engine (UV Packer, UV Packmaster). </p>
-<p>Below listed preferences from all Pack Engines. If you want to obtain information about Specific preferences for some engine, please refer to the documentation of the corresponding engine.</p>
-<div class="admonition subpanel">
-<p class="admonition-title">Subpanel</p>
-<table>
-<thead>
-<tr>
-<th>Blender</th>
-<th>UVPackmaster</th>
-<th>UV-Packer</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><img alt="" src="../img/screen/pack/pack_engine_blender.png" /></td>
-<td><img alt="" src="../img/screen/pack/pack_engine_uvpackmaster.png" /></td>
-<td><img alt="" src="../img/screen/pack/pack_engine_uvpacker.png" /></td>
-</tr>
-</tbody>
-</table>
-</div>
+<p>Below we described General preferences for all Pack Engines. If you want to obtain information about Specific preferences for some engine, please refer to the documentation of the corresponding engine.</p>
 <h4 id="texture-size">Texture Size<a class="headerlink" href="#texture-size" title="Permanent link"></a></h4>
 <p>Texture Size preset, works in pair with <a href="./#margin"><strong>Margin</strong></a>.</p>
 <h4 id="average-islands-scale">Average Islands Scale<a class="headerlink" href="#average-islands-scale" title="Permanent link"></a></h4>
@@ -322,159 +230,71 @@ If you want to display Margin in UV Editor use <strong>Display UV Borders</stron
 <h4 id="rotate-islands">Rotate Islands<a class="headerlink" href="#rotate-islands" title="Permanent link"></a></h4>
 <p>Allow Pack Engine rotate Islands.</p>
 <p><img alt="Pack_Rotate_Islands" src="../img/gifs/pack_operators/Pack_Rotate_Islands.gif" /></p>
-<h4 id="pack-selected-islands">Pack Selected Islands<a class="headerlink" href="#pack-selected-islands" title="Permanent link"></a></h4>
-<p>Pack only Selected Islands.</p>
-<h4 id="fixed-scale">Fixed Scale<a class="headerlink" href="#fixed-scale" title="Permanent link"></a></h4>
-<p>Do not scale Islands during Pack. </p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Available only for UVPackmaster Pack Engine.</p>
-</div>
-<h4 id="lock-overlapping">Lock Overlapping<a class="headerlink" href="#lock-overlapping" title="Permanent link"></a></h4>
-<p>Lock overlapping Islands during Pack. 
-UVPackmaster has extra settings:</p>
-<table>
-<thead>
-<tr>
-<th>Options</th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Disabled</td>
-<td>Overlapping Islands won&rsquo;t be locked</td>
-</tr>
-<tr>
-<td>Any Part</td>
-<td>Islands will be locked together if they overlap by any part</td>
-</tr>
-<tr>
-<td>Exact</td>
-<td>Islands will be locked together if they have the same area and bounding boxes</td>
-</tr>
-</tbody>
-</table>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Available only for Blender and UVPackmaster Pack Engine.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p><strong>UV Packmaster Pack Engine</strong> has super useful option <strong>Lock Overlapping.</strong> It&rsquo;s recommended to be used to Pack Stacked and Overlapping Islands. If you don&rsquo;t have UV Packmaster installed, but still want to Pack Stacked and Overlapping Islands <a href="https://youtu.be/krsVbEi32DM"><strong>watch this video</strong></a>.</p>
 </div>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>It&rsquo;s recommended to use this option if you have <a href="../stack/"><strong>Stacked</strong></a> Islands to save <a href="../stack/"><strong>Stacks</strong></a> while packing.</p>
-</div>
-<h4 id="packing-mode">Packing Mode<a class="headerlink" href="#packing-mode" title="Permanent link"></a></h4>
-<p>A packing mode determines how UV islands are processed on the general level during packing.
-More information you can find <a href="https://uvpackmaster.com/doc3/blender/3.2.1/30-packing-modes/"><strong>here</strong>.</a> </p>
-<table>
-<thead>
-<tr>
-<th>Options</th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Single Tiles</td>
-<td>Overlapping Islands won&rsquo;t be locked</td>
-</tr>
-<tr>
-<td>Tile</td>
-<td>Islands will be locked together if they overlap by any part</td>
-</tr>
-<tr>
-<td>Groups to Tiles</td>
-<td>Islands will be locked together if they have the same area and bounding boxes</td>
-</tr>
-<tr>
-<td>Groups Together</td>
-<td>Islands will be locked together if they have the same area and bounding boxes</td>
-</tr>
-</tbody>
-</table>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Available only for UVPackmaster Pack Engine.</p>
-</div>
-<h4 id="pack-in-trim">Pack in Trim<a class="headerlink" href="#pack-in-trim" title="Permanent link"></a></h4>
-<p>Pack Islands into Trim.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Available only for Blender and UVPackmaster Pack Engine.</p>
-</div>
-<p><img alt="Pack_In_Trim" src="../img/screen/pack/pack_in_trim.gif" /></p>
-<h4 id="margin-method">Margin Method<a class="headerlink" href="#margin-method" title="Permanent link"></a></h4>
-<p>Choose method to process Margin if UV Islands are scaled.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Available only for Blender Pack Engine.</p>
+<p>If you want to use specific <strong>UV Packmaster Pack Engine</strong> features that are not present in Zen UV interface do not forget to transfer existing settings using this <strong>Transfer settings</strong> button.</p>
+<p><img alt="" src="../img/screen/pack/pack_sync.png" /></p>
+<p>Then you can open <strong>UV Packmaster</strong> interface and complete the setup.</p>
 </div>
 <h2 id="excluded-system">Excluded System<a class="headerlink" href="#excluded-system" title="Permanent link"></a></h2>
-<p>System for managing Islands excluded from Pack.</p>
+<ul>
+<li>Excluded system for the Pack operator. Mark Islands to exclude them from packing. This works for Blender Pack and UV Packmater Engine.</li>
+</ul>
 <div class="admonition panel">
 <p class="admonition-title">Panel</p>
-<p><img alt="" src="../img/screen/pack/pack_exclude_panel.png" /></p>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Available only for Blender and UVPackmaster Pack Engine.</p>
+<p><img alt="" src="../img/screen/pack/excluded_system.png" /></p>
 </div>
 <h3 id="offset-excluded">Offset Excluded<a class="headerlink" href="#offset-excluded" title="Permanent link"></a></h3>
-<p>Move Islands tagged as Excluded from Packing out of UV Area.</p>
-<p><img alt="" src="../img/screen/pack/pack_exluded_offset.gif" /></p>
-<h3 id="tag-excluded">Tag Excluded<a class="headerlink" href="#tag-excluded" title="Permanent link"></a></h3>
-<p>Tag Islands as Excluded from Packing.</p>
-<p><img alt="" src="../img/screen/pack/pack_exluded_tag.gif" /></p>
-<h3 id="untag-excluded">Untag Excluded<a class="headerlink" href="#untag-excluded" title="Permanent link"></a></h3>
-<p>Untag Islands tagged as Excluded from Packing.</p>
-<p><img alt="" src="../img/screen/pack/pack_exluded_untag.gif" /></p>
-<h3 id="select">Select<a class="headerlink" href="#select" title="Permanent link"></a></h3>
-<p>Select Islands tagged as Excluded from Packing.</p>
-<p><img alt="" src="../img/screen/pack/pack_exluded_select.gif" /></p>
-<h3 id="deselect">Deselect<a class="headerlink" href="#deselect" title="Permanent link"></a></h3>
-<p>Deselect Islands tagged as Excluded from Packing.</p>
-<p><img alt="" src="../img/screen/pack/pack_exluded_deselect.gif" /></p>
-<h3 id="hide">Hide<a class="headerlink" href="#hide" title="Permanent link"></a></h3>
-<p>Hide Islands tagged as Excluded from Packing.</p>
-<p><img alt="" src="../img/screen/pack/pack_exluded_hide.gif" /></p>
-<h3 id="unhide">Unhide<a class="headerlink" href="#unhide" title="Permanent link"></a></h3>
-<p>Unhide Islands tagged as Excluded from Packing.</p>
-<h3 id="display-excluded">Display Excluded<a class="headerlink" href="#display-excluded" title="Permanent link"></a></h3>
-<p>Display Islands tagged as Excluded from Packing.</p>
-<p><img alt="" src="../img/screen/pack/pack_exluded_display.gif" /></p>
-<h4 id="display-excluded-preferences">Display Excluded Preferences<a class="headerlink" href="#display-excluded-preferences" title="Permanent link"></a></h4>
+<ul>
+<li>Move Islands tagged as Excluded from Packing out of UV Area.</li>
+</ul>
+<div class="admonition preferences">
+<p class="admonition-title">Preferences</p>
 <p><img alt="Unwrap" src="../img/screen/pack/excluded_prefs.png" /></p>
-<table>
-<thead>
-<tr>
-<th>Options</th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Auto Update Draw</td>
-<td>Update Draw cache every time when mesh is changed</td>
-</tr>
-<tr>
-<td>Excluded Color</td>
-<td>Excluded Islands viewport display color</td>
-</tr>
-</tbody>
-</table>
+<ul>
+<li><strong>Excluded Color</strong> - Excluded Islands viewport display color.</li>
+</ul>
+</div>
+<h3 id="tag-excluded">Tag Excluded<a class="headerlink" href="#tag-excluded" title="Permanent link"></a></h3>
+<ul>
+<li>Tag Islands as Excluded from Packing.</li>
+</ul>
+<h3 id="untag-excluded">Untag Excluded<a class="headerlink" href="#untag-excluded" title="Permanent link"></a></h3>
+<ul>
+<li>Untag Islands tagged as Excluded from Packing.</li>
+</ul>
+<h3 id="hide">Hide<a class="headerlink" href="#hide" title="Permanent link"></a></h3>
+<ul>
+<li>Hide Islands tagged as Excluded from Packing.</li>
+</ul>
+<h3 id="unhide">Unhide<a class="headerlink" href="#unhide" title="Permanent link"></a></h3>
+<ul>
+<li>Unhide Islands tagged as Excluded from Packing.</li>
+</ul>
+<h3 id="select-excluded">Select Excluded<a class="headerlink" href="#select-excluded" title="Permanent link"></a></h3>
+<ul>
+<li>Select Islands tagged as Excluded from Packing.</li>
+</ul>
+<h3 id="display-excluded">Display Excluded<a class="headerlink" href="#display-excluded" title="Permanent link"></a></h3>
+<ul>
+<li>Display Islands tagged as Excluded from Packing.</li>
+</ul>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../checker/" class="btn btn-neutral float-left" title="UV Checker"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../preferences/" class="btn btn-neutral float-right" title="Preferences">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../select/" class="btn btn-neutral float-left" title="Select"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../checker/" class="btn btn-neutral float-right" title="UV Checker">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
     <!-- Copyright etc -->
-      <p><p>Copyright &copy; 2024 <a href="https://zenmasters.team/">Zen Masters</a></p></p>
   </div>
 
   Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
@@ -491,10 +311,10 @@ More information you can find <a href="https://uvpackmaster.com/doc3/blender/3.2
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../checker/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../select/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../preferences/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../checker/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>Preferences - Zen UV 4.4 for Blender</title>
+    <title>Preferences - Zen UV 4.0 for Blender</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
@@ -24,14 +24,6 @@
     <![endif]-->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
       <script>hljs.initHighlightingOnLoad();</script> 
-      <script async src="https://www.googletagmanager.com/gtag/js?id=G-7XHJ910WF8"></script>
-      <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-7XHJ910WF8');
-      </script>
 </head>
 
 <body class="wy-body-for-nav" role="document">
@@ -40,10 +32,10 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
-          <a href=".." class="icon icon-home"> Zen UV 4.4 for Blender
+          <a href=".." class="icon icon-home"> Zen UV 4.0 for Blender
         </a><div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
-      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
   </form>
 </div>
       </div>
@@ -52,8 +44,6 @@
               <p class="caption"><span class="caption-text">Getting Started</span></p>
               <ul>
                   <li class="toctree-l1"><a class="reference internal" href="..">Introduction</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../youtube_videos/">Learning Videos</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../zenuv3_to_zenuv4/">Upgrade Zen UV 3 to Zen UV 4 FAQ</a>
                   </li>
@@ -72,91 +62,46 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../select/">Select</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pack/">Pack</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../checker/">UV Checker</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../texel_density/">Texel Density</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../transform/">Transform</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../stack/">Stack</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../texel_density/">Texel Density</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../checker/">UV Checker</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../pack/">Pack</a>
-                  </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Preferences</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#zen-uv-keymaps">Zen UV Keymaps</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#reset-preferences">Reset Preferences</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#panels">Panels</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#disable-docked-view3d-panel">Disable Docked View3D Panel</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#multiselect-with-shift">Multiselect With Shift</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#popup-panel-width">Popup Panel Width</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#selector-orientation">Selector Orientation</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#panels-icon-style">Panels Icon Style</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#disabling-panels">Disabling Panels</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#floating-panels">Floating Panels</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#display">Display</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#display-pie-assist">Display Pie Assist</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#display-progress-bar">Display Progress Bar</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#hops-uv-display">HOps UV Display</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#context-sensitive">Context-sensitive</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#auto-fit-uv-view">Auto Fit UV View</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#sticky-uv-editor-button">Sticky UV Editor Button</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#show-seams">Show Seams</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#show-sharp-edges">Show Sharp Edges</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#show-bevel-weights">Show Bevel Weights</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#show-crease-edges">Show Crease Edges</a>
-    </li>
-        </ul>
-    </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Trim Sheets</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../trimsheet/">Introduction</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../trimsheet_creation/">Creation</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../trimsheet_operators/">Operators</a>
+                </li>
     </ul>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../transform_tool/">Transform Tool</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../sticky_uv_editor/">Sticky UV Editor</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../favourites/">Favourites</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">Trim Sheets</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../trimsheet/">Trim Sheets</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../trimsheet_creation/">Trim Sheet Management</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../trimsheet_operators/">Trim Sheet Operators</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../trimsheet_hotspot/">Hotspot Mapping</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Preferences</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#preferences-subpanel">Preferences subpanel</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#display-subpanel">Display subpanel</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#panels-subpanel">Panels subpanel</a>
+    </li>
+    </ul>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Additional</span></p>
               <ul>
                   <li class="toctree-l1"><a class="reference internal" href="../addon_prefs/">Addon Preferences</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../user_script/">User Script</a>
-                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../help/">Help</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../downloads/">Downloads</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../troubleshooting/">FAQs</a>
                   </li>
@@ -166,8 +111,6 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../our_addons/">Our Add-ons</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../recommended_addons/">Recommended Add-ons</a>
-                  </li>
               </ul>
       </div>
     </div>
@@ -176,13 +119,13 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
       <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="..">Zen UV 4.4 for Blender</a>
+          <a href="..">Zen UV 4.0 for Blender</a>
         
       </nav>
       <div class="wy-nav-content">
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
-    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a> &raquo;</li>
           <li>Modules &raquo;</li>
       <li>Preferences</li>
     <li class="wy-breadcrumbs-aside">
@@ -193,83 +136,49 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="preferences">Preferences<a class="headerlink" href="#preferences" title="Permanent link"></a></h1>
+                <h1 id="preferences-system">Preferences System<a class="headerlink" href="#preferences-system" title="Permanent link"></a></h1>
+<hr />
+<h2 id="preferences-subpanel">Preferences subpanel<a class="headerlink" href="#preferences-subpanel" title="Permanent link"></a></h2>
 <div class="admonition panel">
 <p class="admonition-title">Panel</p>
-<p><img alt="Preferences" src="../img/screen/preferences/MainPanel.png" /></p>
+<p><img alt="Preferences" src="../img/screen/preferences/MainPanel_2_1_3.png" /></p>
 </div>
-<h3 id="zen-uv-keymaps"><img alt="" src="../img/icons/zen-uv%402x.png" /> <strong>Zen UV Keymaps</strong><a class="headerlink" href="#zen-uv-keymaps" title="Permanent link"></a></h3>
-<p>Set Shortcuts for Zen UV menus.</p>
-<h3 id="reset-preferences"><strong>Reset Preferences</strong><a class="headerlink" href="#reset-preferences" title="Permanent link"></a></h3>
-<p>Reset Zen UV Preferences to default state.</p>
+<ul>
+<li><img alt="" src="../img/icons/zen-uv%402x.png" /> <strong>Zen UV Keymaps</strong> - Set Shortcuts for Zen UV Menus.</li>
+<li><strong>Reset Preferences</strong> - Reset Zen UV preferences to the Default state.</li>
+</ul>
 <hr />
-<h2 id="panels">Panels<a class="headerlink" href="#panels" title="Permanent link"></a></h2>
-<div class="admonition subpanel">
-<p class="admonition-title">Subpanel</p>
-<p><img alt="Preferences" src="../img/screen/preferences/PanelPanels.png" /></p>
-</div>
-<h3 id="disable-docked-view3d-panel"><strong>Disable Docked View3D Panel</strong><a class="headerlink" href="#disable-docked-view3d-panel" title="Permanent link"></a></h3>
-<p>Disable Compact UI.</p>
-<p><img alt="Combo Panel" src="../img/screen/preferences/Disable_CompactUI.gif" /></p>
-<h3 id="multiselect-with-shift"><strong>Multiselect With Shift</strong><a class="headerlink" href="#multiselect-with-shift" title="Permanent link"></a></h3>
-<p>Set Active Panels with holding Shift hotkey.</p>
-<h3 id="popup-panel-width"><strong>Popup Panel Width</strong><a class="headerlink" href="#popup-panel-width" title="Permanent link"></a></h3>
-<p>Set Popup menu <code>Shift + U</code> width.</p>
-<h3 id="selector-orientation"><strong>Selector Orientation</strong><a class="headerlink" href="#selector-orientation" title="Permanent link"></a></h3>
-<p>Orient Icons vertically or horizontally. 
- <img alt="Combo Panel" src="../img/screen/preferences/preferences_selector_orientation.gif" /></p>
-<h3 id="panels-icon-style"><strong>Panels Icon Style</strong><a class="headerlink" href="#panels-icon-style" title="Permanent link"></a></h3>
-<p>Change Icon Style. If you don&rsquo;t see active panel icons with your current Blender color theme you can change the icon style.</p>
-<p><img alt="Combo Panel" src="../img/gifs/user_interface/compactui_5.gif" /></p>
-<h3 id="disabling-panels"><strong>Disabling Panels</strong><a class="headerlink" href="#disabling-panels" title="Permanent link"></a></h3>
-<p>Enable Add-on Panels. You can use these checkboxes disable some panels if you don&rsquo;t use them.</p>
-<p><img alt="Combo Panel" src="../img/gifs/user_interface/compactui_4.gif" /></p>
-<h3 id="floating-panels"><strong>Floating Panels</strong><a class="headerlink" href="#floating-panels" title="Permanent link"></a></h3>
-<p>Show Panel as a separate Panel. If you like old style menu make all the panels Floating.</p>
-<p><img alt="Combo Panel" src="../img/gifs/user_interface/compactui_7.gif" /></p>
-<hr />
-<h2 id="display">Display<a class="headerlink" href="#display" title="Permanent link"></a></h2>
-<div class="admonition subpanel">
-<p class="admonition-title">Subpanel</p>
+<h2 id="display-subpanel">Display subpanel<a class="headerlink" href="#display-subpanel" title="Permanent link"></a></h2>
 <p><img alt="Preferences" src="../img/screen/preferences/PanelDisplay.png" /></p>
-</div>
-<h3 id="display-pie-assist"><strong>Display Pie Assist</strong><a class="headerlink" href="#display-pie-assist" title="Permanent link"></a></h3>
-<p>Display hints for Pie menu.</p>
-<h3 id="display-progress-bar"><strong>Display Progress Bar</strong><a class="headerlink" href="#display-progress-bar" title="Permanent link"></a></h3>
-<p><img alt="Progress Bar" src="../img/screen/preferences/ProgressBar_main.gif" /></p>
-<p><strong>Progress Bar</strong> is designed to display the progress of the operator execution process. Not all operators use the <strong>Progress Bar</strong>, only those that require complex calculations.
-On some operating systems of the <strong>Linux</strong> family, the <strong>Progress Bar</strong> can cause Blender to crash. To avoid this situation, you can disable the Progress Bar in <strong>Panel - Preferences - Display Progress Bar.</strong></p>
-<p><img alt="Progress Bar disable" src="../img/screen/preferences/ProgressBar_disable.png" /></p>
-<h3 id="hops-uv-display"><strong>HOps UV Display</strong><a class="headerlink" href="#hops-uv-display" title="Permanent link"></a></h3>
-<p>Display UV trasnforms in 3D View using Hard Ops addon.</p>
-<p><img alt="HardOps_Displayl" src="../img/screen/preferences/HardOps_Display.gif" />  </p>
-<h3 id="context-sensitive"><strong>Context-sensitive</strong><a class="headerlink" href="#context-sensitive" title="Permanent link"></a></h3>
-<p>Enable HOps UV Display if UV Editor is open.</p>
-<h3 id="auto-fit-uv-view"><strong>Auto Fit UV View</strong><a class="headerlink" href="#auto-fit-uv-view" title="Permanent link"></a></h3>
-<p>Automatically Fit and Zoom UV viewport.</p>
-<h3 id="sticky-uv-editor-button"><strong>Sticky UV Editor Button</strong><a class="headerlink" href="#sticky-uv-editor-button" title="Permanent link"></a></h3>
-<p>Enable Sticky UV Editor button.</p>
-<h3 id="show-seams"><strong>Show Seams</strong><a class="headerlink" href="#show-seams" title="Permanent link"></a></h3>
-<p>Display UV Seams in 3D Viewport.</p>
-<h3 id="show-sharp-edges"><strong>Show Sharp Edges</strong><a class="headerlink" href="#show-sharp-edges" title="Permanent link"></a></h3>
-<p>Display Sharp edges in 3D Viewport. It can be overlapped by Seams/Bevel Weights/Crease Edges display.</p>
-<h3 id="show-bevel-weights"><strong>Show Bevel Weights</strong><a class="headerlink" href="#show-bevel-weights" title="Permanent link"></a></h3>
-<p>Display Sharp edges in 3D Viewport. It can be overlapped by Seams/Bevel Weights/Crease Edges display.</p>
-<h3 id="show-crease-edges"><strong>Show Crease Edges</strong><a class="headerlink" href="#show-crease-edges" title="Permanent link"></a></h3>
-<p>Display crease edges created for the Subdivision modifier in 3D Viewport. It can be overlapped by Seams/Bevel Weights display.</p>
+<ul>
+<li><strong>HOps UV Display</strong> - Display UV in 3D View using Hard Ops addon.</li>
+<li><strong>Context-sensitive</strong> - Enable HOps UV Display if UV Editor is open.</li>
+<li><strong>Auto Fit UV View</strong> - Automatically Fit and Zoom UV viewport.</li>
+<li><strong>Show Seams</strong> - Display UV Seams.</li>
+<li><strong>Show Sharp Edges</strong> - Display Sharp edges. It can be overlapped by Seams/Bevel Weights/Crease Edges display.</li>
+<li><strong>Show Bevel Weights</strong> - Display Sharp edges. It can be overlapped by Seams/Bevel Weights/Crease Edges display.</li>
+<li><strong>Show Crease Edges</strong> - Display crease edges created for the Subdivision modifier. It can be overlapped by Seams/Bevel Weights display.</li>
+</ul>
+<hr />
+<h2 id="panels-subpanel">Panels subpanel<a class="headerlink" href="#panels-subpanel" title="Permanent link"></a></h2>
+<p>Disabling Panels.Use these checkboxes disable some panels if you don&rsquo;t use them.
+<img alt="Combo Panel" src="../img/gifs/user_interface/compactui_4.gif" /></p>
+<p>Floating Panels. If you like old style menu make all the panels Floating.
+<img alt="Combo Panel" src="../img/gifs/user_interface/compactui_7.gif" /></p>
+<p>Panels Icon Style. If you don&rsquo;t see active panel icons with your current Blender color theme you can change the icon style. 
+<img alt="Combo Panel" src="../img/gifs/user_interface/compactui_5.gif" /></p>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../pack/" class="btn btn-neutral float-left" title="Pack"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../transform_tool/" class="btn btn-neutral float-right" title="Transform Tool">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../sticky_uv_editor/" class="btn btn-neutral float-left" title="Sticky UV Editor"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../addon_prefs/" class="btn btn-neutral float-right" title="Addon Preferences">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
     <!-- Copyright etc -->
-      <p><p>Copyright &copy; 2024 <a href="https://zenmasters.team/">Zen Masters</a></p></p>
   </div>
 
   Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
@@ -286,10 +195,10 @@ On some operating systems of the <strong>Linux</strong> family, the <strong>Prog
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../pack/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../sticky_uv_editor/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../transform_tool/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../addon_prefs/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>Upgrade Zen UV 3 to Zen UV 4 FAQ - Zen UV 4.4 for Blender</title>
+    <title>Upgrade Zen UV 3 to Zen UV 4 FAQ - Zen UV 4.0 for Blender</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
@@ -24,14 +24,6 @@
     <![endif]-->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
       <script>hljs.initHighlightingOnLoad();</script> 
-      <script async src="https://www.googletagmanager.com/gtag/js?id=G-7XHJ910WF8"></script>
-      <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-7XHJ910WF8');
-      </script>
 </head>
 
 <body class="wy-body-for-nav" role="document">
@@ -40,10 +32,10 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
-          <a href=".." class="icon icon-home"> Zen UV 4.4 for Blender
+          <a href=".." class="icon icon-home"> Zen UV 4.0 for Blender
         </a><div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
-      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
   </form>
 </div>
       </div>
@@ -53,11 +45,15 @@
               <ul class="current">
                   <li class="toctree-l1"><a class="reference internal" href="..">Introduction</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../youtube_videos/">Learning Videos</a>
-                  </li>
                   <li class="toctree-l1 current"><a class="reference internal current" href="./">Upgrade Zen UV 3 to Zen UV 4 FAQ</a>
     <ul class="current">
     <li class="toctree-l2"><a class="reference internal" href="#what-will-i-get-after-upgrading-from-zen-uv-3-to-zen-uv-4">What will I get after upgrading from Zen UV 3 to Zen UV 4?</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#new-systems">New Systems</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#new-operators">New Operators</a>
+    </li>
+        </ul>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#what-is-the-price-of-upgrading-from-zen-uv-3-to-zen-uv-4">What is the price of upgrading from Zen UV 3 to Zen UV 4?</a>
     </li>
@@ -67,7 +63,7 @@
     </li>
         </ul>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#i-have-bought-all-zen-add-ons-zen-uv-3-zen-sets-zen-dock-zen-bbq-can-i-get-zen-bundle-for-free-with-zen-uv-4-inside">I have bought all Zen Add-ons (Zen UV 3, Zen Sets, Zen Dock, Zen BBQ). Can I get Zen Bundle for free with Zen UV 4 inside?</a>
+    <li class="toctree-l2"><a class="reference internal" href="#i-have-bought-all-zen-add-ons-zen-uv-3-zen-sets-zen-bbq-can-i-get-zen-bundle-for-free-with-zen-uv-4-inside">I have bought all Zen Add-ons (Zen UV 3, Zen Sets, Zen BBQ). Can I get Zen Bundle for free with Zen UV 4 inside?</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#i-have-one-or-two-zen-add-ons-can-i-get-discount-code-for-zen-bundle">I have one or two Zen Add-ons. Can I get discount code for Zen Bundle?</a>
     </li>
@@ -96,43 +92,38 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../select/">Select</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pack/">Pack</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../checker/">UV Checker</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../texel_density/">Texel Density</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../transform/">Transform</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../stack/">Stack</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../texel_density/">Texel Density</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../checker/">UV Checker</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../pack/">Pack</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../preferences/">Preferences</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../transform_tool/">Transform Tool</a>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Trim Sheets</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../trimsheet/">Introduction</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../trimsheet_creation/">Creation</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../trimsheet_operators/">Operators</a>
+                </li>
+    </ul>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../sticky_uv_editor/">Sticky UV Editor</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../favourites/">Favourites</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">Trim Sheets</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../trimsheet/">Trim Sheets</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../trimsheet_creation/">Trim Sheet Management</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../trimsheet_operators/">Trim Sheet Operators</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../trimsheet_hotspot/">Hotspot Mapping</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../preferences/">Preferences</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Additional</span></p>
               <ul>
                   <li class="toctree-l1"><a class="reference internal" href="../addon_prefs/">Addon Preferences</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../user_script/">User Script</a>
-                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../help/">Help</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../downloads/">Downloads</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../troubleshooting/">FAQs</a>
                   </li>
@@ -142,8 +133,6 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../our_addons/">Our Add-ons</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../recommended_addons/">Recommended Add-ons</a>
-                  </li>
               </ul>
       </div>
     </div>
@@ -152,13 +141,13 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
       <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="..">Zen UV 4.4 for Blender</a>
+          <a href="..">Zen UV 4.0 for Blender</a>
         
       </nav>
       <div class="wy-nav-content">
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
-    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a> &raquo;</li>
           <li>Getting Started &raquo;</li>
       <li>Upgrade Zen UV 3 to Zen UV 4 FAQ</li>
     <li class="wy-breadcrumbs-aside">
@@ -176,27 +165,20 @@
 <iframe src="https://www.youtube.com/embed/f9meGzMGx2k" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen="" seamless="" frameborder="0"></iframe>
 </div>
 <p><br></p>
-<div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%;">
-<iframe src="https://www.youtube.com/embed/jFcVmGnNOho" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen="" seamless="" frameborder="0"></iframe>
-</div>
-<p><br></p>
-<div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%;">
-<iframe src="https://www.youtube.com/embed/JSPHDl57Fwk" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen="" seamless="" frameborder="0"></iframe>
-</div>
-<p><br></p>
-<div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%;">
-<iframe src="https://www.youtube.com/embed/OOMVq53_mP4" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen="" seamless="" frameborder="0"></iframe>
-</div>
-<p><br></p>
-<div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%;">
-<iframe src="https://www.youtube.com/embed/W-m9hAitLQU" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen="" seamless="" frameborder="0"></iframe>
-</div>
-<p><br></p>
-<p>Zen UV 4 provides a lot of new systems and operators!
-To check all the changes go here:</p>
+<h3 id="new-systems">New Systems<a class="headerlink" href="#new-systems" title="Permanent link"></a></h3>
 <ul>
-<li><a href="../changelg/"><strong>Changelog</strong></a></li>
+<li><strong>Compact UI system</strong>. One panel to rule them all!</li>
+<li><strong>Trimsheet system</strong> to speed up the work with Trims. Create Trimsheets and Move, Rotate, Scale, Fit, Align and Flip Islands inside Trims.</li>
+<li><strong>Zen UV Transform tool</strong>. Move, Rotate, Scale, Fit, Align and Flip Islands in 3D View and UV Editor using <strong>Zen UV Gizmo</strong>.</li>
 </ul>
+<h3 id="new-operators">New Operators<a class="headerlink" href="#new-operators" title="Permanent link"></a></h3>
+<ul>
+<li><strong>Display Flipped</strong> operator to display Flipped Islands in UV Editor.</li>
+<li><strong>Unwrap Constraint</strong> operator to unwrap Islands along a certain axis.</li>
+<li><strong>Match and Stitch</strong> operator to match Islands position, rotation, scale and stitch vertices if it’s possible.</li>
+</ul>
+<p>And much more… to check all the changes <a href="../changelg/release_note_4.0/"><strong>go here</strong></a>.</p>
+<p>Zen UV 4.0 release is the beginning of the new product cycle. We plan many updates for this version as well as many new tools. </p>
 <hr />
 <h2 id="what-is-the-price-of-upgrading-from-zen-uv-3-to-zen-uv-4">What is the price of upgrading from Zen UV 3 to Zen UV 4?<a class="headerlink" href="#what-is-the-price-of-upgrading-from-zen-uv-3-to-zen-uv-4" title="Permanent link"></a></h2>
 <p>You will not pay for the same features twice. You need to pay only the difference between the new license price and the old license price. (for example for single user license it will be 34 - 24 = 10$)</p>
@@ -230,13 +212,9 @@ To check all the changes go here:</p>
 <p><strong>Zen UV 3 STUDIO License (15-50 users)</strong> to <strong>Zen UV 4 STUDIO License (15-50 users)</strong> use the discount code <strong>zenuv3to4studio1550</strong>  when making a purchase – discount will be applied automatically.</p>
 </li>
 </ul>
-<div class="admonition blendermarket_bug">
-<p class="admonition-title">Blendermarket_bug</p>
-<p>If the code on Blendermarket is marked as invalid, type the code manually.</p>
-</div>
 <hr />
-<h2 id="i-have-bought-all-zen-add-ons-zen-uv-3-zen-sets-zen-dock-zen-bbq-can-i-get-zen-bundle-for-free-with-zen-uv-4-inside">I have bought all Zen Add-ons (Zen UV 3, Zen Sets, Zen Dock, Zen BBQ). Can I get Zen Bundle for free with Zen UV 4 inside?<a class="headerlink" href="#i-have-bought-all-zen-add-ons-zen-uv-3-zen-sets-zen-dock-zen-bbq-can-i-get-zen-bundle-for-free-with-zen-uv-4-inside" title="Permanent link"></a></h2>
-<p>Yes, if you have Zen UV 3, Zen Sets, Zen Dock, Zen BBQ on one marketplace. Unfortunately, we cannot provide a free Bundle for those who have all our products but on different marketplaces (for example Zen UV 3, Zen Sets on Gumroad and Zen BBQ on Blendermarket) due to different marketplaces databases.</p>
+<h2 id="i-have-bought-all-zen-add-ons-zen-uv-3-zen-sets-zen-bbq-can-i-get-zen-bundle-for-free-with-zen-uv-4-inside">I have bought all Zen Add-ons (Zen UV 3, Zen Sets, Zen BBQ). Can I get Zen Bundle for free with Zen UV 4 inside?<a class="headerlink" href="#i-have-bought-all-zen-add-ons-zen-uv-3-zen-sets-zen-bbq-can-i-get-zen-bundle-for-free-with-zen-uv-4-inside" title="Permanent link"></a></h2>
+<p>Yes, if you have Zen UV 3, Zen Sets, Zen BBQ on one marketplace. Unfortunately, we cannot provide a free Bundle for those who have all our products but on different marketplaces (for example Zen UV 3, Zen Sets on Gumroad and Zen BBQ on Blendermarket) due to different marketplaces databases.</p>
 <p><strong>Gumroad</strong> </p>
 <p>Gumroad users (who have Zen UV 3, Zen Sets, Zen BBQ) automatically will receive an email with unique code to get Zen Bundle for free. All codes will be sent by May 5, 2023. If you haven&rsquo;t received the code by this date, please check your spam folder.</p>
 <p><strong>Blender Market</strong> </p>
@@ -257,12 +235,12 @@ To check all the changes go here:</p>
 <p>Zen UV 4 supports Blender 2.93 and higher.</p>
 <hr />
 <h2 id="i-still-having-trouble-upgrading-zen-uv">I still having trouble upgrading Zen UV<a class="headerlink" href="#i-still-having-trouble-upgrading-zen-uv" title="Permanent link"></a></h2>
-<p>Please join our <a href="https://discord.com/invite/wGpFeME"><strong>Discord server</strong></a> and write message in <strong>#zenuv-upgrade-3-to-4</strong> channel.</p>
+<p>Please join our <a href="https://discord.com/invite/wGpFeME">Discord server</a> and write message in <strong>#zenuv-upgrade-3-to-4</strong> channel.</p>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../youtube_videos/" class="btn btn-neutral float-left" title="Learning Videos"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href=".." class="btn btn-neutral float-left" title="Introduction"><span class="icon icon-circle-arrow-left"></span> Previous</a>
         <a href="../installation/" class="btn btn-neutral float-right" title="Installation and Update">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
@@ -270,7 +248,6 @@ To check all the changes go here:</p>
 
   <div role="contentinfo">
     <!-- Copyright etc -->
-      <p><p>Copyright &copy; 2024 <a href="https://zenmasters.team/">Zen Masters</a></p></p>
   </div>
 
   Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
@@ -287,7 +264,7 @@ To check all the changes go here:</p>
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../youtube_videos/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href=".." style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
       <span><a href="../installation/" style="color: #fcfcfc">Next &raquo;</a></span>
