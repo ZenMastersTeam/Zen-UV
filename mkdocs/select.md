@@ -94,7 +94,7 @@ Select Edges Marked as Seams.
 | --- |
 | Select Seam |
 
-!!! Preferences
+!!! Properties
       ![Select Seam Props](img/screen/select/SelectSeamProps.png)
 
  - **Clear Selection** - Clear initial selection
@@ -110,7 +110,7 @@ Select Edges Marked as Sharp.
 | --- |
 | Select sharp |
 
-!!! Preferences
+!!! Properties
       ![Select Sharp Props](img/screen/select/SelectSharpProps.png)
 
  - **Clear Selection** - Clear initial selection
@@ -126,7 +126,7 @@ Select existing UV Borders.
 | --- |
 | Select UV Borders |
 
-!!! Preferences
+!!! Properties
       ![Select Sharp Props](img/screen/select/SelectUVBordersProperties.png)
 
 
@@ -144,7 +144,7 @@ Select open edges the way that looks in the 3D viewport. Including the open edge
 | --- |
 | Select open edges |
 
-!!! Preferences
+!!! Properties
       ![Select Open Edges Props Props](img/screen/select/SelectOpenEdgesProperties.png)
 
  - **Clear Selection** - Clear initial selection
@@ -160,7 +160,7 @@ Select Islands similar to those selected.
 | --- |
 | Select similar |
 
-!!! Preferences
+!!! Properties
       ![Select Similar Islands](img/screen/select/SelectSimilarIslandsProperties.png)
 
 - **Area Matching** - Set strict requirements to Islands Area Matching when Stacking. Disable this option if the Islands have a slightly different Area
@@ -175,7 +175,7 @@ Select Islands in bounding box of active UDIM Tile or UV Area.
 | --- |
 | Select in tile |
 
-!!! Preferences
+!!! Properties
       ![Select In Tile](img/screen/select/SelectInTileProperties.png)
 
 - **Clear Selection** - Clear initial selection
@@ -202,7 +202,7 @@ Select part of the model according to its location relative to the coordinate ax
 | --- |
 | Select half. Include Zero option|
 
-!!! Preferences
+!!! Properties
       ![Select Half](img/screen/select/SelectHalfProperties.png)
 
 - **Clear Selection** - Clear initial selection
@@ -223,7 +223,7 @@ Select islands that consist only of quads.
 | --- |
 | Select quaded islands |
 
-!!! Preferences
+!!! Properties
       ![Select Sharp Props](img/screen/select/SelectQuadedIslandsProperties.png)
 
  - **Clear Selection** - Clear initial selection
@@ -238,7 +238,7 @@ Select island edges that belong to the same mesh edge and split the island by it
 | --- |
 | Select splits |
 
-!!! Preferences
+!!! Properties
       ![Select Splits Poperties](img/screen/select/SelectSplitsProperties.png)
 
  - **Clear Selection** - Clear initial selection
@@ -253,7 +253,7 @@ Select edges based on various conditions and logic operations with NOT support.
 | --- |
 | Select edges by condition |
 
-!!! Preferences
+!!! Properties
       ![Select Edges by Condition](img/screen/select/SelectEdgesByConditionProperties.png)
 
 - **Clear Selection** - Clear initial selection
@@ -312,7 +312,7 @@ The operator consists of two buttons. Where the first is the main operator and t
 !!! Panel
     ![Select_By_UV_Area](img/screen/select/sel_by_uv_area_buttons.png)
 
-!!! Preferences
+!!! Properties
     ![](img/screen/select/select_by_uv_area_op_prop.png)
 
   - **Mode** - What should be selected? Islands or faces.
