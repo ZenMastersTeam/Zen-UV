@@ -132,6 +132,7 @@ Rotate Islands the way they are oriented on the Models. Each method (Organic/Har
 
 !!! tip
     The Quadrify operator works only with quad faces. All other types of faces are ignored.
+    ![](img/screen/transform/Quad_Poly.png)
 
 !!! tip
     If you work with high-poly meshes, you can customize the operator before it is launched. Use the gear button to the right of the operator in the main panel.
