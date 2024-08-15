@@ -8,53 +8,59 @@ Changes the island’s shape depending on the preset.
   
   ![](../img/screen/transform/reshape_preset_selected.png)
 
-!!! Properties
-    - **Orient loop along** - How to orient the selected loops.
-        - **Auto** - Automatic finding loop orientation.
-        - **U Axis** - Along the U axis.
-        - **V Axis** - Along the V axis.
-        - **In Place** - The beginning and end of the loop will remain such as before the operator runs.
-    - **Reverse Direction** - Change the direction of the loop to the opposite.
-    - **Spacing** - How to set the distances between the points of the loop.
-        - **UV** - As in the UV Map.
-        - **Geometry** - As in the mesh.
-        - **Evenly** - Distribute at an equal distance.
+
+- **Orient loop along** - How to orient the selected loops.
+    - *Auto* - Automatic finding loop orientation.
+    - *U Axis* - Along the U axis.
+    - *V Axis* - Along the V axis.
+    - *In Place* - The beginning and end of the loop will remain such as before the operator runs.
+- **Reverse Direction** - Change the direction of the loop to the opposite.
+- **Spacing** - How to set the distances between the points of the loop.
+    - *UV* - As in the UV Map.
+    - *Geometry* - As in the mesh.
+    - *Evenly* - Distribute at an equal distance.
 
 ### Orient Along Sample:
 
- ![](../img/gifs/reshape_island/orient_along_sample.gif)
+|![orient loop along](../img/gifs/reshape_island/orient_along_sample.gif)|
+|---|
+|Loops orientation|
 
 ### Spacing Sample:
 
- ![](../img/gifs/reshape_island/spacing_sample.gif)
+|![](../img/gifs/reshape_island/spacing_sample.gif)|
+|---|
+|Set spacing|
 
 
 ## Advanced Properties:
 
  - The properties of the operator for aligning the loops relative to each other.
 
-!!! Properties
-    - **Start Position:** - How to set the beginning of the loop.
-        - **As is** - Leave in place.
-        - **Max** - Set to the maximal position of the loops.
-        - **Averaged** - Set to the averaged position of the loops.
-        - **Min** - Set to the minimal position of the loops.
-    - **Lock** - Lock Start Position and the End Position.
-    - **End Position:** - How to set the ending of the loop.
-        - **As is** - Leave in place.
-        - **Max** - Set to the maximal position of the loops.
-        - **Averaged** - Set to the averaged position of the loops.
-        - **Min** - Set to the minimal position of the loops.
-    - **Offset** - Indicates the offset of each next loop relative to the previous. Sorting begins on the left bottom. The red color indicates that the value is not zero.
+- **Start Position:** - How to set the beginning of the loop.
+    - *As is* - Leave in place.
+    - *Max* - Set to the maximal position of the loops.
+    - *Averaged* - Set to the averaged position of the loops.
+    - *Min* - Set to the minimal position of the loops.
+- **Lock** - Lock Start Position and the End Position.
+- **End Position:** - How to set the ending of the loop.
+    - *As is* - Leave in place.
+    - *Max* - Set to the maximal position of the loops.
+    - *Averaged* - Set to the averaged position of the loops.
+    - *Min* - Set to the minimal position of the loops.
+- **Offset** - Indicates the offset of each next loop relative to the previous. Sorting begins on the left bottom. The red color indicates that the value is not zero.
 
 ### Start / End Position Sample:
 
-  ![](../img/gifs/reshape_island/start_positions_sample.gif)
+|![start end position](../img/gifs/reshape_island/start_positions_sample.gif)|
+|---|
+|Set Start / End position|
 
 ### Offset Sample:
 
-  ![](../img/gifs/reshape_island/offset_sample.gif)
-
+|![offset](../img/gifs/reshape_island/offset_sample.gif)|
+|---|
+|Offset|
 ---
 ## Preset U/V Direction:
 
@@ -84,7 +90,7 @@ Changes the island’s shape depending on the preset.
       - **UV** - As a sum of UV edges length.
       - **Geometry** - As a sum of mesh edge length.
       - **Short** - As a distance from the first point to the last point of the edge loop.
-  - **Border Offset** - Offset all the vertices use the first point as a pivot. This leads to island scaling.
+  - **Border Offset** - Offset all the vertices using the first point as a pivot. This leads to island scaling.
   
 ### Corner Sample:
 
