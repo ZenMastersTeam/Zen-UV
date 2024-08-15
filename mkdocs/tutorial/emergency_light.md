@@ -119,7 +119,7 @@ The example is maked as step-by-step guide to cover the basics of Zen UV
 
 6. Pack islands and tag as finished
 
-    ![](../img/tutorial/emergency_light/pack_tag_finished.gif)
+    ![](../img/tutorial/emergency_light/small_parts_pack_and_finished.gif
 
 ## Unwrap Wires
 1. Select and isolate islands
