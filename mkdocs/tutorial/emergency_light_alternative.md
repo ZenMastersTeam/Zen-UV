@@ -11,7 +11,7 @@ The example is maked as step-by-step guide to cover the basics of Zen UV
     ![](../img/tutorial/emergency_light/open_and_edit_mode.gif)
 
 ## Reset UV Maps and Unmark All
-1. По замовчуванню Zen UV використовує [систему глобального маркування](../unwrap.md#mark-by-angle). Зробимо налаштування так, щоб Seam та Sharp маркувалися одлночасно. Перейдіть на вкладку [Unwrap](../unwrap.md). Налаштування знаходяться в меню на кнопці з шестернею справа від кнопки Mark by Angle. Відкрийте меню та активуйте опцію Mark Sharp Edges
+1. По замовчуванню Zen UV використовує [систему глобального маркування](../unwrap.md#mark-by-angle). Зробимо налаштування так, щоб Seam та Sharp маркувалися одночасно. Перейдіть на вкладку [Unwrap](../unwrap.md). Налаштування знаходяться в меню на кнопці з шестернею справа від кнопки Mark by Angle. Відкрийте меню та активуйте опцію Mark Sharp Edges
 2. Для того щоб стерти всі наявні Seams та Sharp, у вкладці [Unwrap](../unwrap.md) натисніть кнопку [Unmark all](../unwrap.md#unmark-all)
 3. Перевіримо чи немає островів що теговані як Finished. Система Finished служить для візуального контролю за станом островів (закінчені/не закінчені) та не дозволяє оператору Zen Unwrap розгортати острови якщо вони теговані як Finished.
 Виділіть всі полігони у моделі. У вкладці [Unwrap](../unwrap.md) розгорніть панель з назвою Finished та натисніть кнопку Tag Uninished.
@@ -20,20 +20,17 @@ The example is maked as step-by-step guide to cover the basics of Zen UV
     ![](../img/tutorial/emergency_light/reset_uvs.gif)
 
 ## Initial Unwrap
-1. Deselect all
-2. Call [Zen Unwrap](../unwrap.md#zen-unwrap-zen-unwrap)
-3. Set 'Mark by angle & Unwrap'
+1. Зараз, коли все підготовлено, ми можемо починати робити розгортку. Етап перший це розділення моделі на UV острови. На цьому етапі не має значення наскільки ці острови коректно розгорнуті. Ми тільки розділяємо. Зробимо розмітку швів в залежності від гостори edge. Більш гострі edges будуть помічені як шви і тим самим зададуть місця де модель буде розділена. То ж у вкладці [Unwrap](../unwrap.md) натисніть кнопку Mark By Angle.
+2. Ми створили шви в залежності від гостроти edge але ще не розділили модель на острови. Для розділення використаємо оператор [Zen Unwrap](../unwrap.md#zen-unwrap-zen-unwrap) який працює в залежності від того, що виділено. То ж на даному етапі переконайтеся що нічого не виділено. В режимі коли нічого не виділено [Zen Unwrap](../unwrap.md#zen-unwrap-zen-unwrap) просто розділяє модель на UV острови по існуючим seams. Якщо щось виділено, результат буде інакшим. Якщо все вірно, натисніть [Zen Unwrap](../unwrap.md#zen-unwrap-zen-unwrap) з панелі [Unwrap](../unwrap.md). Інші режими робти [Zen Unwrap](../unwrap.md#zen-unwrap-zen-unwrap) ми розглянемо в продовж цього туторіалу.
 
     ![](../img/tutorial/emergency_light/initial_unwrap.gif)
 
-!!! NOTE
-    If you didn't see 'Mark by Angle' menu then it was probably something selected in the mesh or mesh was not unmarked properly
 
 ## Switch on Checker Texture
-1. [Switch on checker texture](../checker.md#checker-texture)
-2. [Select 'zen-mono-2048x2048' texture image](../checker.md#checker-textures-selector)
-3. [Set only Seams to be displayed in the viewport](../checker.md#blender-draw-system)
-4. [Open UV Editor area](../sticky_uv_editor.md#sticky-uv-editor)
+1. На цьому етапі ми маємо базове розділення моделі на острови але цього не достатньо. Потрібно візуально перевірити модель, створити додаткові острови, та в процесі розправити вже існуючі острови якщо це необхідно. На цьому етапі важливо покращити сприйняття атрефактів для того щоб виконати роботу якнайшвидше. Одним з самих дієвих методів є призначення спеціальної текстури що складається з квадратів. Якщо ви бачите на моделі не квадрат а щось інше, значить в цьому місці є проблеми з розглажуванням острову. Накладемо цю спеціальну текстуру використовуючи [Zen UV Checkr](../checker.md) на панелі [UV Checker](../checker.md) натисніть кнопку Checker Texture.
+2. Кольорові текстури створені також і для визначення місця положення острову на текстурі. Але для нашого випадку це не має значення. То ж перемкнем текстуру на монохромну. Це зменшить кількість інформації для сприйтяття а отже зменшить втому від роботи. Відкрийте drop-down меню нижче кнопки "Checker Texture" та виберіть текстуру з назвою ['zen-mono-2048x2048' texture image](../checker.md#checker-textures-selector)
+3. Наступний крок не важливий для цієї моделі, але може знадобиться в майбутньому. Вимкнемо відображення всіх типів edges крім seam. Це копії нативної системи відображення але тепер вони в близькому доступі на панелі UV Checker. Пам'ятаємо про втому від збитку інформації.[Set only Seams to be displayed in the viewport](../checker.md#blender-draw-system)
+4. Майже всі операції в Zen UV можуть бути виконані у 3D View але нема більш комфортного способу взємодіяти з UV Maps ніж використати UV Editor. Для того щоб швидко відкрити UV Editor, натисніть на кнопку розміщену зліва по центру 3D View viewport з літерою "T". У випадку якщо UV Editor уже відкритий, після натискання на цю кнопку він закриється. [Open UV Editor area](../sticky_uv_editor.md#sticky-uv-editor)
 
     ![](../img/tutorial/emergency_light/switch_on_checker.gif)
 
