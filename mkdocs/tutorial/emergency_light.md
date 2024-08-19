@@ -19,7 +19,7 @@ The example is maked as step-by-step guide to cover the basics of Zen UV
 
 ## Initial Unwrap
 1. Deselect all
-2. Call [Zen Unwrap](../unwrap.md#zen-unwrap-zen-unwrap)
+2. Call [Zen Unwrap](../unwrap.md#zen-unwrap)
 3. Set 'Mark by angle & Unwrap'
 
     ![](../img/tutorial/emergency_light/initial_unwrap.gif)
