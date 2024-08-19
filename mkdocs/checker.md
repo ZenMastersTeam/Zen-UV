@@ -10,8 +10,6 @@ This panel contains tools to check the state of UVs on the model, visually and t
 !!! Tip
     Display and Select **Crease**, **Sharp**, **Bevel**, **Seams**, **Stretched** and **UV No Sync** operators are absent on the panel in UV Editor. To use these operators you need to switch to 3D Viewport context.
 
-    Also, UV Editor panel contains extra Display operator [**Darken Image. Click to read full information**](user_interface.md#darken-image).
-
 ### Checker Texture
 
 Add/Remove Checker Texture to/from the mesh. ![Checker Texture](img/icons/checker_32.png) `Alt+T`
@@ -81,6 +79,12 @@ Includes an "O" button for activating Orient Checker texture.
 Screenshot when Orient filtering is on.
   
 ![](img/screen/tex_checker/filter_orient_is_on.png)
+
+---
+
+### Darken Image
+
+UV Editor panel contains an extra Display operator designed to adjust the darkening of an Image in the context of the UV Editor. [**Darken Image. Click to read the full information**](user_interface.md#darken-image).
 
 ---
 
