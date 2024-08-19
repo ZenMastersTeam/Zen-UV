@@ -318,6 +318,8 @@ Display Finished/Unfinished Islands in the viewport.
 
 ![](img/screen/unwrap/unwrap_finished_display_3dview.gif)
 
+### Finished preferences
+
 !!! Preferences
     ![Unwrap](img/screen/unwrap/finishing_prefs.png)
 
