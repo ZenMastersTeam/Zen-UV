@@ -23,7 +23,7 @@ The example is maked as step-by-step guide to cover the basics of Zen UV
 
 2. Press [Unmark all](../unwrap.md#unmark-all) button in [Unwrap](../unwrap.md) tab to clear all existing Seams and Sharp edges.
 
-3. Let's check than there are no islands marked as [Finished](../unwrap.md#finishing-system). [Finished](../unwrap.md#finishing-system) tags helps to visually control islands state (finished/not finished) and prevents Zen Unwrap operator to unwrap[Finished](../unwrap.md#tag-finished) islands.
+3. Let's check than there are no islands marked as [Finished](../unwrap.md#finishing-system). [Finished](../unwrap.md#finishing-system) tags helps to visually control islands state (finished/not finished) and prevents Zen Unwrap operator to unwrap [Finished](../unwrap.md#tag-finished) islands.
     - Select all polygons.
     - Expand [Finished](../unwrap.md#finishing-system) panel in [Unwrap](../unwrap.md) tab and press [Tag Unfinished](../unwrap.md#tag-unfinished).
 
@@ -38,9 +38,10 @@ The example is maked as step-by-step guide to cover the basics of Zen UV
 ![](../img/tutorial/emergency_light/reset_uvs.gif)
 
 ### Initial unwrap
+
 1. When everything is prepared we are starting from splitting 3D model into UV islands. Initial unwrap will split aproximately, so do not check the correctness, later we will adjust it. Let's make seams by edge sharpness. 3D Model will be splitted by the most sharp edges.
     - Press "Mark By Angle" in [Unwrap](../unwrap.md) tab.
-2. When seams are created we are ready to split int UV islands by using [Zen Unwrap](../unwrap.md#zen-unwrap) operator. It depends on selection. If nothing is selected [Zen Unwrap](../unwrap.md#zen-unwrap) it simply splits by existing seams. If anything is selected the behaviour will be different
+2. When seams are created we are ready to split into UV islands by using [Zen Unwrap](../unwrap.md#zen-unwrap) operator. It depends on selection. If nothing is selected [Zen Unwrap](../unwrap.md#zen-unwrap) it simply splits by existing seams. If anything is selected the behaviour will be different
     - Deselect all.
     - Press [Zen Unwrap](../unwrap.md#zen-unwrap) button from [Unwrap](../unwrap.md) tab.
 
@@ -100,10 +101,11 @@ Zen Unwrap tracks three main selection modes.
 
 - Faces
 - Edges
-- Verices.
+- Verices
 
-2. If **Blender** is in **Faces** selection mode, a new island will be created from the selected polygons, and the edges along the edge of the selected polygons will be marked as **seams**. Let's use this to create the first island.
-    - Select cap and press [Zen Unwrap](../unwrap.md#zen-unwrap) in [Unwrap](../unwrap.md) tab
+If **Blender** is in **Faces** selection mode, a new island will be created from the selected polygons, and the edges along the edge of the selected polygons will be marked as **seams**. Let's use this to create the first island.
+
+- Select cap and press [Zen Unwrap](../unwrap.md#zen-unwrap) in [Unwrap](../unwrap.md) tab
 
 ![](../img/tutorial/emergency_light/unwrap_cap_1.gif)
 
@@ -129,7 +131,7 @@ As you can see, [Zen Unwrap](../unwrap.md#zen-unwrap) follows your instructions 
 
 ![](../img/tutorial/emergency_light/unwrap_cap2.gif)
 
-5. When using **Mark by Angle**, unwanted **seams** were created, which divided the model into more islands than necessary. To fix this, use the [Zen Unwrap] operator again(../unwrap.md#zen-unwrap).
+5. When using **Mark by Angle**, unwanted **seams** were created, which divided the model into more islands than necessary. To fix this, use the [Zen Unwrap](../unwrap.md#zen-unwrap) operator again.
     - Select all the polygons of the largest cylinder and press [Zen Unwrap](../unwrap.md#zen-unwrap).
 As a result, all the selected islands are merged into one, and the edge of the selected polygons are marked as **seams**.
 
@@ -140,13 +142,14 @@ As a result, all the selected islands are merged into one, and the edge of the s
     - Select one vertical edge, and click the [Quadrify](../transform.md#quadrify-islands) button in the [Transform](../transform.md) panel.
 
 Let's change some operator properties.
-    - Open the operator properties panel.
-    - Activate the **Use Selected Edges** option. This will tell the operator to split the island along the selected edge.
-    - Do the same for all remaining islands.
+
+- Open the operator properties panel.
+- Activate the **Use Selected Edges** option. This will tell the operator to split the island along the selected edge.
+- Do the same for all remaining islands.
 
 ![](../img/tutorial/emergency_light/quadrify_1.gif)
 
-7. Now some islands in the UV Editor may overlap others. In order to make sure that each island is deployed correctly, we will perform a packing. This will improve the visual representation of all the islands.
+7. Now some islands in the UV Editor may overlap others. In order to make sure that each island is unwrapped correctly, we will perform a packing. This will improve the visual representation of all the islands.
     - Click the [Pack Islands](../pack.md#pack-islands) button from the [Pack](../pack.md#pack) panel.
 
 8. We will continue working on other details soon, but first we will use the [Finished] system(../unwrap.md#finishing-system). This will make it possible to visually control which islands have already been unwrapped and protect finished islands from being unwrapped again.
@@ -164,7 +167,7 @@ Let's change some operator properties.
 ### Unwrap external part
 
 1. Go to the next detail. To do this, you need to show all the details of the model.
-    - Click [Isolate Island](../select.md#isolate-islands-toggle) from the [Select](../select.md) panel
+    - Click [Isolate Island](../select.md#isolate-islands-toggle) from the [Select](../select.md) panel.
     - Select the part of the model that looks like the outer shell.
     - Click [Isolate Island](../select.md#isolate-islands-toggle) again. Now we have only the part we need visible. The other parts are hidden and will not get in the way.
 
