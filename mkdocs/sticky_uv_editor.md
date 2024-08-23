@@ -2,7 +2,6 @@
 
 Sticky UV Editor this is a system that allows opening UV Editor on the left or the right from the active 3D Viewport or as a separate window. These actions can be done by shortcuts or using a widget in the 3D Viewport.
 
-<video src="../img/screen/sticky_uv_editor/sticky_uv_editor_preview.mp4" width="600" type="video/mp4" controls />
 ![](img/screen/sticky_uv_editor/sticky_uv_editor_preview.gif)
 
 ![](img/screen/sticky_uv_editor/stk_widget.png)
