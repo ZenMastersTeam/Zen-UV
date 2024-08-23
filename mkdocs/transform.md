@@ -546,7 +546,7 @@ Switch between Islands and Texure-based transforms in 3D View.
 
 #### Distribute And Sort
 
-Distributes and sorts the selected islands
+Distributes and sorts selected islands
 
 !!! Properties
     ![distribute and sort properties](img/screen/transform/distribute_and_sort_properties.png)
@@ -665,9 +665,32 @@ Recommended to use if you want to add shortcuts for transform operations.
 - **Move 2D Cursor To** - Move 2D Cursor to selection
 - **Move To UV Area** - Move the center of the selected islands to the UV Area using the mouse position
 - **Move To UV Position** - Move the center of the selected islands to the UV coordinates defined by the mouse
+
+#### Move island
+
+Move island to the defined position
+
+!!! Properties
+    ![move island properties](img/screen/transform/move_properties.png)
+
+- **Mode** - Transform Mode
+    - *Islands* - Transform islands
+    - *Selection* - Transform selection
+- **Order** - Processing order
+    - *Overall* - Handle everything as one
+    - *One by One* - Handle one by one
+- **Move** - Transform Mode
+    - *By Increment* - Move the island by a specified amount
+    - *To Position* - Move the island to the specified position
+    - *To 2D Cursor* - Move the island to the 2D Cursor position
+    - *To Active Trim Center* - Move the island to the position of the active trim center
+    - *To Mouse Cursor* - Move the island to the position of the mouse cursor
+- **Position** - Position specified by coordinates to which the movement will be performed
+- **Island Pivot** - The pivot of the transformed unit
+
 ---
 
-### Scale
+### Scale operators
 
  ![](img/icons/transform-scale.png)
 
@@ -676,7 +699,8 @@ Recommended to use if you want to add shortcuts for transform operations.
 
 ---
 
-### Rotate
+### Rotate operators
+
 ![](img/icons/transform-rotate.png)
 
 - **By Angle** - Rotate Islands by Angle
@@ -684,27 +708,117 @@ Recommended to use if you want to add shortcuts for transform operations.
 - **Orient by Bounding Box** - Orient Islands to Bounding Box
 - **Orient by Selection** - Orient Islands by Selection
 
+#### Rotate Island
+
+Rotate selected islands or selection
+
+!!! Properties
+    ![rotate island properties](img/screen/transform/rotate_island_properties.png)
+
+- **Mode** - Transform Mode
+    - *Islands* - Transform islands
+    - *Selection* - Transform selection
+- **Order** - Processing order
+    - *Overall* - Handle everything as one
+    - *One by One* - Handle one by one
+- **Mode** - Rotation mode
+    - *By Angle* - Turn to the specified angle
+    - *By Direction* - Rotate by a specified angle in a specified direction
+- **Direction** - Direction of rotation
+- **Rotation Increment** - Island rotation angle
+- **Island Pivot** - The pivot of the transformed unit
+
+#### Orient Island
+
+Orient Island
+
+!!! Properties
+    ![orient island properties](img/screen/transform/orient_island_properties.png)
+
+- **Order** - Processing order
+    - *Overall* - Handle everything as one
+    - *One by One* - Handle one by one
+- **Orient by** - Orient Mode
+    - *Bounding Box* - Orient by bounding box
+    - *Selection* - Orient by selection
+- **Direction** - Orientation in the direction of
+    - *Horizontal* - Horizontal orientation
+    - *Vertical* - Vertical orientation
+    - *Auto* - Auto detect orientation
+- **Rotation** - Direction of rotation
+
+
 ---
 
-### Flip
+### Flip operators
 
 ![](img/icons/transform-flip.png)
 
 - **Horizontal** - Flip Islands Horizontally
 - **Vertical** - Flip Islands Vertically
 
+#### Flip Island
+
+Flip selected Islands or Selection
+
+!!! Properties
+    ![flip island properties](img/screen/transform/flip_island_properties.png)
+
+- **Mode** - Transform Mode
+    - *Islands* - Transform islands
+    - *Selection* - Transform selection
+- **Order** - Processing order
+    - *Overall* - Handle everything as one
+    - *One by One* - Handle one by one
+- **Direction** - Direction of flipping
+    - *Horizontal* - Horizontal
+    - *Vertical* - Vertical
+    - *Island Pivot* - By pivot of the island
+- **Island Pivot** - The pivot of the transformed unit
+
 ---
 
-### Fit
+### Fit operators
 
 ![](img/icons/transform-fit.png)
 
 - **To UV Area** - Fit Islands to UV Area
 - **To Region** - Fit Islands to Region
 
+#### Fit Island
+
+Fit island into defined region
+
+!!! Properties
+    ![fit island properties](img/screen/transform/fit_island_properties.png)
+
+- **Mode** - Transform Mode
+    - *Islands*
+    - *Selection*
+    - *Faces*
+- **Order** - Processing order
+    - *Overall* - Handle everything as one
+    - *One by One* - Handle one by one
+- **Fit** - Transform Mode
+    - *To UV Area* - Fit selection to the UV Area bounds
+    - *To Region* - Fit selection to the defined region
+    - *Fill Islands* - Fit islands to the UV Area, but not keep the proportions
+- **Fit Axis** - Active Axis
+    - *U* - U axis
+    - *V* - V axis
+    - *Min* - The minimum length axis is automatically determined
+    - *Max* - The maximum length axis is automatically determined
+    - *Automatic* - Automatically detected axis for full dimensional compliance
+- **Inset** - The amount by which the islands should be reduced relative to the edges of the region
+- **Keep proportion** - Do not change the proportions of the selected island
+- **Match Rotation** - Match the rotation of the island to the rotation of the region (for rectangular regions)
+- **Region** - Region in which the selected island will be fitted
+- **Align To** - The region point to which the island will be adjusted
+
+
 ---
 
-### Align
+### Align operators
 
 ![](img/icons/transform-orient.png)
 
@@ -713,3 +827,39 @@ Recommended to use if you want to add shortcuts for transform operations.
 - **To 2D Cursor** - Align Islands to 2D Cursor
 - **To UV Area** - Align Islands to UV Area
 - **To Active Component** - Align Islands to Active Component
+
+
+#### Align Islands
+
+Align selected islands or selection
+
+!!! Properties
+    ![align island properties](img/screen/transform/align_properties.png)
+
+- **Mode** - Transform Mode
+    - *Islands*
+    - *Selection*
+    - *Vertices*
+- **Order** - Processing order
+    - *Overall* - Handle everything as one
+    - *One by One* - Handle one by one
+- **Align** - Transform Mode
+    - *To Selection Bounding Box* - To the bounding box of the selection
+    - *To Position* - To the defined position
+    - *To 2D Cursor* - To the 2D cursor
+    - *To UV Area Bounding Box* - To the bounding box of the UV Area
+    - *To Active Component* - To the active component (vertex, edge, face)
+- **Position** - Position specified by coordinates to which the alignment will be performed
+- **Align Direction** - The point of the bounding box to which align will be performed
+- **As Direction** - Set the island pivot to be the same as the alignment direction
+- **Island Pivot** - The point of the island which will be aligned
+
+---
+
+### Distribute operators
+
+![](img/icons/transform-distribute.png)
+
+- [**Distribute and Sort**](#distribute-and-sort) - Distributes and sorts selected islands
+- [**Arrange**](#arrange) - Arrange selected islands
+- [**Distribute Vertices**](#distribute) - Distribute vertices along the line
