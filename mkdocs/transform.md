@@ -616,7 +616,7 @@ Arrange selected islands
 
 - **Mode** - Input mode
     - *Advanced*
-    - *Simpified*
+    - *Simplified*
 - **Quant U** - Divider for UV Area in U direction
 - **Quant V** - Divider for UV Area in V direction
 - **Limit** - Distribution limit
@@ -862,4 +862,4 @@ Align selected islands or selection
 
 - [**Distribute and Sort**](#distribute-and-sort) - Distributes and sorts selected islands
 - [**Arrange**](#arrange) - Arrange selected islands
-- [**Distribute Vertices**](#distribute) - Distribute vertices along the line
+- [**Distribute Vertices**](#distribute-vertices) - Distribute vertices along the line
