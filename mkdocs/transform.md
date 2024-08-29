@@ -652,7 +652,7 @@ Recommended to use if you want to add shortcuts for transform operations.
 !!! Panel
     ![Advanced Transforms](img/screen/transform/tr_advanced_transforms.png)
 
-### Move
+### Move operators
 
 ![](img/icons/transform-move.png)
 
@@ -665,6 +665,8 @@ Recommended to use if you want to add shortcuts for transform operations.
 - **Move 2D Cursor To** - Move 2D Cursor to selection
 - **Move To UV Area** - Move the center of the selected islands to the UV Area using the mouse position
 - **Move To UV Position** - Move the center of the selected islands to the UV coordinates defined by the mouse
+
+---
 
 #### Move island
 
@@ -687,6 +689,75 @@ Move island to the defined position
     - *To Mouse Cursor* - Move the island to the position of the mouse cursor
 - **Position** - Position specified by coordinates to which the movement will be performed
 - **Island Pivot** - The pivot of the transformed unit
+
+---
+
+#### Move to UV Area
+
+Move islands to UV area, active UDIM tile, or UDIM tile defined by number
+
+!!! Properties
+    ![move to uv area](img/screen/adv_uv_map/udim_move_to_uv_area.png)
+
+- **Move to** - Transform Mode
+    - *UV Area* - Move selection to the UV Area
+    - *Active UDIM Tile* - Move selection to the active UDIM tile
+    - *Tile Number* - Move selection to the tile with the specified number
+
+|![](img/screen/adv_uv_map/adv_uv_map_udim_move_active.gif)|
+|---|
+|Move to active UDIM tile|
+
+---
+
+#### Move 2D Cursor To
+
+Move 2D cursor to the defined position
+
+!!! Properties
+    ![move 2d cursor to properties](img/screen/transform/move_2d_cursot_to_properties.png)
+
+- **Influence** - How to set the 2D Cursor position
+    - *Selection* - By selection
+    - *Islands* - By islands
+    - *UV Area* - By UV Area
+- **Island Pivot** - Selection pivot
+
+|![move 2d cursor to](img/gifs/trasnform_operators/Move2dCursorTo_Example.gif)|
+|---|
+|"**Move 2D Cursor to**" running from main panel|
+
+|![move 2d cursor to](img/gifs/trasnform_operators/Move2dCursorTo_Example_02.gif)|
+|---|
+|"**Move 2D Cursor to**" running from RMB menu|
+
+---
+
+#### Move To UV Area (eyedropper)
+
+Move center of the selected Islands to the UV Area using mouse position
+
+!!! Properties
+    This operator has no properties
+
+The islands are moved to the same coordinates, only to the specified tile. So the texture on your object will not be changed
+
+|![move islands to the uv area](img/gifs/trasnform_operators/MoveIslandsToUVarea_Example.gif)|
+|---|
+|Move to UV area example|
+
+---
+
+#### Move to UV position (eyedropper)
+
+Move center of the selected Islands to the UV coordinates defined by mouse
+
+!!! Properties
+    This operator has no properties
+
+|![move islands to the position](img/gifs/trasnform_operators/MoveIslandsToPosition_Example.gif)|
+|---|
+|Move the islands to the position. Example|
 
 ---
 

@@ -18,6 +18,7 @@ If more than one object is selected, you can synchronously work with UV maps of 
 
 ## Advanced UV Maps List
 The list can work in two modes:
+
 - Multi object mode
 - Single object mode
 
@@ -67,33 +68,44 @@ Duplicate the active UV Map or create a new one depending on the operator's prop
 ![](img/screen/adv_uv_map/uvmaps_remove.gif)
 
 ---
+
 ## Rename UV Maps
-![](img/screen/adv_uv_map/rename_bake.gif)
 
-| Rename Settings |
+Rename UV maps of selected objects
+
+!!! Properties
+    ![](img/screen/adv_uv_map/uvmaps_rename_preview.png)
+
+- **UV Maps source** - Rename UV maps mode
+    - *Selected* - Operates on the currently selected UV Map items in the list
+    - *All* - Operates on all UV Map items in the list
+- *Find* - The text to search for in names
+    - _1) if text is empty then all name will be renamed_
+    - _2) if 'Use Regex' is set then text must be a valid regular expression_
+- **Replace** - The text to replace for in matching names found from the 'Find' text
+- **Show Replace Templates Settings** - Show list of template names to rename UV maps
+- **Match Case** - Search results must exactly match the case of the 'Find' text
+- **Use Regex** - Replace by regular expression in the 'Find' text
+- **Generate Template Names** - Rename UV maps from replace preset templates
+- **Counter** - Integer value will be added to the end of the name
+- **Start from** - If Counter property is used, integer value will be started from this value
+- **Preview** - Preview the generated name
+
+
+| ![](img/screen/adv_uv_map/rename_bake.gif) |
 |---|
-| ![](img/screen/adv_uv_map/uvmaps_rename_preview.png) |
+|Rename UV Maps|
 
-| UV Maps source | |
-|---|---|
-| Selected | Operates on the currently selected UV Map items in the list |
-| All | Operates on all UV Map items in the list |
-
-| Options | |
-|---|---|
-| Find | The text to search for in names |
-| | _1) if text is empty then all name will be renamed_ |
-| | _2) if 'Use Regex' is set then text must be a valid regular expression_ |
-| Replace | The text to replace for in matching names found from the 'Find' text |
-| Match Case | Search results must exactly match the case of the 'Find' text |
-| Use Regex | Replace by regular expression in the 'Find' text |
 
 ### Generate UV Map names from template
+
 If you have naming convension for UV Maps in your projects, you can create template preset and quickly rename all UV Maps in one click
 
 | UV Map naming preset |
 |---|
 | ![](img/screen/adv_uv_map/rename_template.gif) |
+
+---
 
 ## Sync UV Maps ![Sync Button](img/icons/adv_uv_sync.png)
 If your model requires UV Maps to have the same postion, name, active or render status you can synchronize them
@@ -130,6 +142,8 @@ Remove all inactive UV Maps.
 
 ![](img/screen/adv_uv_map/adv_uv_map_clean_inactive.gif)
 
+---
+
 #### Set UV Map Name by Index
 
 Set UV Map name by its Index in the list.
@@ -162,51 +176,101 @@ Set UV Map name by its Index in the list.
 
 ![](img/screen/adv_uv_map/adv_uv_map_udim.png)
 
+---
 
 #### Fill Tile
 
-Fill the current tile with a generated texture.
+Fill active UDIM tile with a generated image
+
+!!! Properties
+    ![fill udim tile properties](img/screen/adv_uv_map/udm_fill_tile_properties.png)
+
+- **Color** - Default fill color
+- **Width** - Image width
+- **Height** - Image height
+- **Alpha** - Create an image with an alpha channel
+- **Generated Type** - Fill the image with a grid for UV map testing
+    - *Blank* - Generate a blank image
+    - *UV Grid* - Generated grid to test UV mappings
+    - *Color Grid* - Generated Improved UV grid to test UV mappings
+- **32-bit Float** - Create image with 32-bit floating-point bit depth
+
+---
 
 #### Add Missed
 
 Create the missing UDIM Tile at the Island location. 
 
-![](img/screen/adv_uv_map/adv_uv_map_udim_add_missed.png)
+!!! Properties
+    ![](img/screen/adv_uv_map/adv_uv_map_udim_add_missed.png)
 
 
-| Options | |
-|---|---|
-| By Selection | Use selection to determine where where UDIM tile will be created|
-| In order | Create all the missing tiles in order until it reaches the last missed tile with the selection |
-| Fill | Fill tile with settings below |
+- **By Selection** - Use selection to determine where where UDIM tile will be created
+- **In order** - Create all the missing tiles in order until it reaches the last missed tile with the selection
+- **Fill** - Fill tile with settings below
 
+- **Color** - New tile color
+- **Width** - Tile width
+- **Height** - tile height
+- **Alpha** - Create an image with an alpha channel
+- **Generated Type** - Fill the image with a grid for UV map testing
+    - *Blank* - Generate a blank image
+    - *UV Grid* - Generated grid to test UV mappings
+    - *Color Grid* - Generated Improved UV grid to test UV mappings
+- **32-bit Float** - Create image with 32-bit floating-point bit depth
+
+---
 
 #### Set Active 
 
-Set the active UDIM Tile based on the selection. 
+Set the active UDIM Tile based on the selection.
+
+!!! Properties
+    This operator has no properties
 
 ![](img/screen/adv_uv_map/adv_uv_map_udim_set_active.gif)  
 
+---
+
 #### Remove Active
 
-Remove the active UDIM Tile. 
+Remove the active UDIM Tile
 
-![](img/screen/adv_uv_map/adv_uv_map_udim_remove_active.gif) 
+!!! Properties
+    This operator has no properties
+
+![](img/screen/adv_uv_map/adv_uv_map_udim_remove_active.gif)
+
+---
 
 #### Select in Active 
 
-Select Islands in bounding box of active UDIM Tile or UV Area.
+Select Islands in bounding box of active UDIM Tile or UV Area
 
-![](img/screen/adv_uv_map/adv_uv_map_udim_select_active.gif) 
+!!! Properties
+    This operator has no properties
+
+![](img/screen/adv_uv_map/adv_uv_map_udim_select_active.gif)
+
+---
 
 #### Move to active
 
-Move Islands to active or selected by number UDIM Tile. 
+Move islands to active, or UDIM Tile defined by number
 
-![](img/screen/adv_uv_map/adv_uv_map_udim_move_active.gif) 
+[Read the full description of the operator in the Transform article](transform.md#move-to-uv-area)
 
-#### Set Active
+|![](img/screen/adv_uv_map/adv_uv_map_udim_move_active.gif)|
+|---|
+|Move to active UDIM tile|
 
-Set active UDIM Tile by eyedropper.
+---
+
+#### Set Active (eyedropper)
+
+Set active UDIM Tile by eyedropper
+
+!!! Properties
+    This operator has no properties
 
 ![](img/screen/adv_uv_map/adv_uv_map_udim_set_active_eyedropper.gif)
