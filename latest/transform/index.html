@@ -147,9 +147,17 @@
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#advanced-transforms">Advanced Transforms</a>
         <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#move_1">Move</a>
+    <li class="toctree-l3"><a class="reference internal" href="#move-operators">Move operators</a>
         <ul>
     <li class="toctree-l4"><a class="reference internal" href="#move-island">Move island</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#move-to-uv-area">Move to UV Area</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#move-2d-cursor-to">Move 2D Cursor To</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#move-to-uv-area-eyedropper">Move To UV Area (eyedropper)</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#move-to-uv-position-eyedropper">Move to UV position (eyedropper)</a>
     </li>
         </ul>
     </li>
@@ -1054,7 +1062,7 @@ First, you need to select a part of the mesh with the correct coordinates. The o
 <ul>
 <li><strong>Mode</strong> - Input mode<ul>
 <li><em>Advanced</em></li>
-<li><em>Simpified</em></li>
+<li><em>Simplified</em></li>
 </ul>
 </li>
 <li><strong>Quant U</strong> - Divider for UV Area in U direction</li>
@@ -1096,7 +1104,7 @@ Recommended to use if you want to add shortcuts for transform operations. </p>
 <p class="admonition-title">Panel</p>
 <p><a class="glightbox" href="../img/screen/transform/tr_advanced_transforms.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Advanced Transforms" src="../img/screen/transform/tr_advanced_transforms.png" /></a></p>
 </div>
-<h3 id="move_1">Move<a class="headerlink" href="#move_1" title="Permanent link"></a></h3>
+<h3 id="move-operators">Move operators<a class="headerlink" href="#move-operators" title="Permanent link"></a></h3>
 <p><a class="glightbox" href="../img/icons/transform-move.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/icons/transform-move.png" /></a></p>
 <ul>
 <li><strong>By Increment</strong> - Move Islands by Increment.</li>
@@ -1109,6 +1117,7 @@ Recommended to use if you want to add shortcuts for transform operations. </p>
 <li><strong>Move To UV Area</strong> - Move the center of the selected islands to the UV Area using the mouse position</li>
 <li><strong>Move To UV Position</strong> - Move the center of the selected islands to the UV coordinates defined by the mouse</li>
 </ul>
+<hr />
 <h4 id="move-island">Move island<a class="headerlink" href="#move-island" title="Permanent link"></a></h4>
 <p>Move island to the defined position</p>
 <div class="admonition properties">
@@ -1137,6 +1146,112 @@ Recommended to use if you want to add shortcuts for transform operations. </p>
 <li><strong>Position</strong> - Position specified by coordinates to which the movement will be performed</li>
 <li><strong>Island Pivot</strong> - The pivot of the transformed unit</li>
 </ul>
+<hr />
+<h4 id="move-to-uv-area">Move to UV Area<a class="headerlink" href="#move-to-uv-area" title="Permanent link"></a></h4>
+<p>Move islands to UV area, active UDIM tile, or UDIM tile defined by number</p>
+<div class="admonition properties">
+<p class="admonition-title">Properties</p>
+<p><a class="glightbox" href="../img/screen/adv_uv_map/udim_move_to_uv_area.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="move to uv area" src="../img/screen/adv_uv_map/udim_move_to_uv_area.png" /></a></p>
+</div>
+<ul>
+<li><strong>Move to</strong> - Transform Mode<ul>
+<li><em>UV Area</em> - Move selection to the UV Area</li>
+<li><em>Active UDIM Tile</em> - Move selection to the active UDIM tile</li>
+<li><em>Tile Number</em> - Move selection to the tile with the specified number</li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><a class="glightbox" href="../img/screen/adv_uv_map/adv_uv_map_udim_move_active.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/adv_uv_map/adv_uv_map_udim_move_active.gif" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Move to active UDIM tile</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="move-2d-cursor-to">Move 2D Cursor To<a class="headerlink" href="#move-2d-cursor-to" title="Permanent link"></a></h4>
+<p>Move 2D cursor to the defined position</p>
+<div class="admonition properties">
+<p class="admonition-title">Properties</p>
+<p><a class="glightbox" href="../img/screen/transform/move_2d_cursot_to_properties.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="move 2d cursor to properties" src="../img/screen/transform/move_2d_cursot_to_properties.png" /></a></p>
+</div>
+<ul>
+<li><strong>Influence</strong> - How to set the 2D Cursor position<ul>
+<li><em>Selection</em> - By selection</li>
+<li><em>Islands</em> - By islands</li>
+<li><em>UV Area</em> - By UV Area</li>
+</ul>
+</li>
+<li><strong>Island Pivot</strong> - Selection pivot</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><a class="glightbox" href="../img/gifs/trasnform_operators/Move2dCursorTo_Example.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="move 2d cursor to" src="../img/gifs/trasnform_operators/Move2dCursorTo_Example.gif" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&ldquo;<strong>Move 2D Cursor to</strong>&rdquo; running from main panel</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><a class="glightbox" href="../img/gifs/trasnform_operators/Move2dCursorTo_Example_02.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="move 2d cursor to" src="../img/gifs/trasnform_operators/Move2dCursorTo_Example_02.gif" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&ldquo;<strong>Move 2D Cursor to</strong>&rdquo; running from RMB menu</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="move-to-uv-area-eyedropper">Move To UV Area (eyedropper)<a class="headerlink" href="#move-to-uv-area-eyedropper" title="Permanent link"></a></h4>
+<p>Move center of the selected Islands to the UV Area using mouse position</p>
+<div class="admonition properties">
+<p class="admonition-title">Properties</p>
+<p>This operator has no properties</p>
+</div>
+<p>The islands are moved to the same coordinates, only to the specified tile. So the texture on your object will not be changed</p>
+<table>
+<thead>
+<tr>
+<th><a class="glightbox" href="../img/gifs/trasnform_operators/MoveIslandsToUVarea_Example.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="move islands to the uv area" src="../img/gifs/trasnform_operators/MoveIslandsToUVarea_Example.gif" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Move to UV area example</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="move-to-uv-position-eyedropper">Move to UV position (eyedropper)<a class="headerlink" href="#move-to-uv-position-eyedropper" title="Permanent link"></a></h4>
+<p>Move center of the selected Islands to the UV coordinates defined by mouse</p>
+<div class="admonition properties">
+<p class="admonition-title">Properties</p>
+<p>This operator has no properties</p>
+</div>
+<table>
+<thead>
+<tr>
+<th><a class="glightbox" href="../img/gifs/trasnform_operators/MoveIslandsToPosition_Example.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="move islands to the position" src="../img/gifs/trasnform_operators/MoveIslandsToPosition_Example.gif" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Move the islands to the position. Example</td>
+</tr>
+</tbody>
+</table>
 <hr />
 <h3 id="scale-operators">Scale operators<a class="headerlink" href="#scale-operators" title="Permanent link"></a></h3>
 <p><a class="glightbox" href="../img/icons/transform-scale.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/icons/transform-scale.png" /></a></p>
@@ -1328,7 +1443,7 @@ Recommended to use if you want to add shortcuts for transform operations. </p>
 <ul>
 <li><a href="#distribute-and-sort"><strong>Distribute and Sort</strong></a> - Distributes and sorts selected islands</li>
 <li><a href="#arrange"><strong>Arrange</strong></a> - Arrange selected islands</li>
-<li><a href="#distribute"><strong>Distribute Vertices</strong></a> - Distribute vertices along the line</li>
+<li><a href="#distribute-vertices"><strong>Distribute Vertices</strong></a> - Distribute vertices along the line</li>
 </ul>
               
             </div>

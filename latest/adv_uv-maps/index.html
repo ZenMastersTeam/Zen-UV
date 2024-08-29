@@ -119,7 +119,7 @@
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#move-to-active">Move to active</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#set-active_1">Set Active</a>
+    <li class="toctree-l3"><a class="reference internal" href="#set-active-eyedropper">Set Active (eyedropper)</a>
     </li>
         </ul>
     </li>
@@ -233,9 +233,11 @@ It allows to select the active, add, remove, and rename UV Maps from the list.</
     </div> -->
 
 <h2 id="advanced-uv-maps-list">Advanced UV Maps List<a class="headerlink" href="#advanced-uv-maps-list" title="Permanent link"></a></h2>
-<p>The list can work in two modes:
-- Multi object mode
-- Single object mode</p>
+<p>The list can work in two modes:</p>
+<ul>
+<li>Multi object mode</li>
+<li>Single object mode</li>
+</ul>
 <table>
 <thead>
 <tr>
@@ -360,68 +362,40 @@ It allows to select the active, add, remove, and rename UV Maps from the list.</
 <p><a class="glightbox" href="../img/screen/adv_uv_map/uvmaps_remove.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/adv_uv_map/uvmaps_remove.gif" /></a></p>
 <hr />
 <h2 id="rename-uv-maps">Rename UV Maps<a class="headerlink" href="#rename-uv-maps" title="Permanent link"></a></h2>
-<p><a class="glightbox" href="../img/screen/adv_uv_map/rename_bake.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/adv_uv_map/rename_bake.gif" /></a></p>
+<p>Rename UV maps of selected objects</p>
+<div class="admonition properties">
+<p class="admonition-title">Properties</p>
+<p><a class="glightbox" href="../img/screen/adv_uv_map/uvmaps_rename_preview.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/adv_uv_map/uvmaps_rename_preview.png" /></a></p>
+</div>
+<ul>
+<li><strong>UV Maps source</strong> - Rename UV maps mode<ul>
+<li><em>Selected</em> - Operates on the currently selected UV Map items in the list</li>
+<li><em>All</em> - Operates on all UV Map items in the list</li>
+</ul>
+</li>
+<li><em>Find</em> - The text to search for in names<ul>
+<li><em>1) if text is empty then all name will be renamed</em></li>
+<li><em>2) if &lsquo;Use Regex&rsquo; is set then text must be a valid regular expression</em></li>
+</ul>
+</li>
+<li><strong>Replace</strong> - The text to replace for in matching names found from the &lsquo;Find&rsquo; text</li>
+<li><strong>Show Replace Templates Settings</strong> - Show list of template names to rename UV maps</li>
+<li><strong>Match Case</strong> - Search results must exactly match the case of the &lsquo;Find&rsquo; text</li>
+<li><strong>Use Regex</strong> - Replace by regular expression in the &lsquo;Find&rsquo; text</li>
+<li><strong>Generate Template Names</strong> - Rename UV maps from replace preset templates</li>
+<li><strong>Counter</strong> - Integer value will be added to the end of the name</li>
+<li><strong>Start from</strong> - If Counter property is used, integer value will be started from this value</li>
+<li><strong>Preview</strong> - Preview the generated name</li>
+</ul>
 <table>
 <thead>
 <tr>
-<th>Rename Settings</th>
+<th><a class="glightbox" href="../img/screen/adv_uv_map/rename_bake.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/adv_uv_map/rename_bake.gif" /></a></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><a class="glightbox" href="../img/screen/adv_uv_map/uvmaps_rename_preview.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/adv_uv_map/uvmaps_rename_preview.png" /></a></td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th>UV Maps source</th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Selected</td>
-<td>Operates on the currently selected UV Map items in the list</td>
-</tr>
-<tr>
-<td>All</td>
-<td>Operates on all UV Map items in the list</td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th>Options</th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Find</td>
-<td>The text to search for in names</td>
-</tr>
-<tr>
-<td></td>
-<td><em>1) if text is empty then all name will be renamed</em></td>
-</tr>
-<tr>
-<td></td>
-<td><em>2) if &lsquo;Use Regex&rsquo; is set then text must be a valid regular expression</em></td>
-</tr>
-<tr>
-<td>Replace</td>
-<td>The text to replace for in matching names found from the &lsquo;Find&rsquo; text</td>
-</tr>
-<tr>
-<td>Match Case</td>
-<td>Search results must exactly match the case of the &lsquo;Find&rsquo; text</td>
-</tr>
-<tr>
-<td>Use Regex</td>
-<td>Replace by regular expression in the &lsquo;Find&rsquo; text</td>
+<td>Rename UV Maps</td>
 </tr>
 </tbody>
 </table>
@@ -439,6 +413,7 @@ It allows to select the active, add, remove, and rename UV Maps from the list.</
 </tr>
 </tbody>
 </table>
+<hr />
 <h2 id="sync-uv-maps">Sync UV Maps <a class="glightbox" href="../img/icons/adv_uv_sync.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Sync Button" src="../img/icons/adv_uv_sync.png" /></a><a class="headerlink" href="#sync-uv-maps" title="Permanent link"></a></h2>
 <p>If your model requires UV Maps to have the same postion, name, active or render status you can synchronize them</p>
 <p><a class="glightbox" href="../img/screen/adv_uv_map/uvmaps_sync.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/adv_uv_map/uvmaps_sync.png" /></a></p>
@@ -470,6 +445,7 @@ It allows to select the active, add, remove, and rename UV Maps from the list.</
 <h4 id="clean-uv-maps">Clean UV Maps<a class="headerlink" href="#clean-uv-maps" title="Permanent link"></a></h4>
 <p>Remove all inactive UV Maps.</p>
 <p><a class="glightbox" href="../img/screen/adv_uv_map/adv_uv_map_clean_inactive.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/adv_uv_map/adv_uv_map_clean_inactive.gif" /></a></p>
+<hr />
 <h4 id="set-uv-map-name-by-index">Set UV Map Name by Index<a class="headerlink" href="#set-uv-map-name-by-index" title="Permanent link"></a></h4>
 <p>Set UV Map name by its Index in the list.</p>
 <p><a class="glightbox" href="../img/screen/adv_uv_map/adv_uv_map_rename_by_index.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/adv_uv_map/adv_uv_map_rename_by_index.gif" /></a></p>
@@ -519,47 +495,100 @@ It allows to select the active, add, remove, and rename UV Maps from the list.</
 The image Source must be set to &lsquo;UDIM Tiles&rsquo;.</p>
 </div>
 <p><a class="glightbox" href="../img/screen/adv_uv_map/adv_uv_map_udim.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/adv_uv_map/adv_uv_map_udim.png" /></a></p>
+<hr />
 <h4 id="fill-tile">Fill Tile<a class="headerlink" href="#fill-tile" title="Permanent link"></a></h4>
-<p>Fill the current tile with a generated texture.</p>
+<p>Fill active UDIM tile with a generated image</p>
+<div class="admonition properties">
+<p class="admonition-title">Properties</p>
+<p><a class="glightbox" href="../img/screen/adv_uv_map/udm_fill_tile_properties.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="fill udim tile properties" src="../img/screen/adv_uv_map/udm_fill_tile_properties.png" /></a></p>
+</div>
+<ul>
+<li><strong>Color</strong> - Default fill color</li>
+<li><strong>Width</strong> - Image width</li>
+<li><strong>Height</strong> - Image height</li>
+<li><strong>Alpha</strong> - Create an image with an alpha channel</li>
+<li><strong>Generated Type</strong> - Fill the image with a grid for UV map testing<ul>
+<li><em>Blank</em> - Generate a blank image</li>
+<li><em>UV Grid</em> - Generated grid to test UV mappings</li>
+<li><em>Color Grid</em> - Generated Improved UV grid to test UV mappings</li>
+</ul>
+</li>
+<li><strong>32-bit Float</strong> - Create image with 32-bit floating-point bit depth</li>
+</ul>
+<hr />
 <h4 id="add-missed">Add Missed<a class="headerlink" href="#add-missed" title="Permanent link"></a></h4>
 <p>Create the missing UDIM Tile at the Island location. </p>
+<div class="admonition properties">
+<p class="admonition-title">Properties</p>
 <p><a class="glightbox" href="../img/screen/adv_uv_map/adv_uv_map_udim_add_missed.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/adv_uv_map/adv_uv_map_udim_add_missed.png" /></a></p>
+</div>
+<ul>
+<li><strong>By Selection</strong> - Use selection to determine where where UDIM tile will be created</li>
+<li><strong>In order</strong> - Create all the missing tiles in order until it reaches the last missed tile with the selection</li>
+<li>
+<p><strong>Fill</strong> - Fill tile with settings below</p>
+</li>
+<li>
+<p><strong>Color</strong> - New tile color</p>
+</li>
+<li><strong>Width</strong> - Tile width</li>
+<li><strong>Height</strong> - tile height</li>
+<li><strong>Alpha</strong> - Create an image with an alpha channel</li>
+<li><strong>Generated Type</strong> - Fill the image with a grid for UV map testing<ul>
+<li><em>Blank</em> - Generate a blank image</li>
+<li><em>UV Grid</em> - Generated grid to test UV mappings</li>
+<li><em>Color Grid</em> - Generated Improved UV grid to test UV mappings</li>
+</ul>
+</li>
+<li><strong>32-bit Float</strong> - Create image with 32-bit floating-point bit depth</li>
+</ul>
+<hr />
+<h4 id="set-active">Set Active<a class="headerlink" href="#set-active" title="Permanent link"></a></h4>
+<p>Set the active UDIM Tile based on the selection.</p>
+<div class="admonition properties">
+<p class="admonition-title">Properties</p>
+<p>This operator has no properties</p>
+</div>
+<p><a class="glightbox" href="../img/screen/adv_uv_map/adv_uv_map_udim_set_active.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/adv_uv_map/adv_uv_map_udim_set_active.gif" /></a>  </p>
+<hr />
+<h4 id="remove-active">Remove Active<a class="headerlink" href="#remove-active" title="Permanent link"></a></h4>
+<p>Remove the active UDIM Tile</p>
+<div class="admonition properties">
+<p class="admonition-title">Properties</p>
+<p>This operator has no properties</p>
+</div>
+<p><a class="glightbox" href="../img/screen/adv_uv_map/adv_uv_map_udim_remove_active.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/adv_uv_map/adv_uv_map_udim_remove_active.gif" /></a></p>
+<hr />
+<h4 id="select-in-active">Select in Active<a class="headerlink" href="#select-in-active" title="Permanent link"></a></h4>
+<p>Select Islands in bounding box of active UDIM Tile or UV Area</p>
+<div class="admonition properties">
+<p class="admonition-title">Properties</p>
+<p>This operator has no properties</p>
+</div>
+<p><a class="glightbox" href="../img/screen/adv_uv_map/adv_uv_map_udim_select_active.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/adv_uv_map/adv_uv_map_udim_select_active.gif" /></a></p>
+<hr />
+<h4 id="move-to-active">Move to active<a class="headerlink" href="#move-to-active" title="Permanent link"></a></h4>
+<p>Move islands to active, or UDIM Tile defined by number</p>
+<p><a href="../transform/#move-to-uv-area">Read the full description of the operator in the Transform article</a></p>
 <table>
 <thead>
 <tr>
-<th>Options</th>
-<th></th>
+<th><a class="glightbox" href="../img/screen/adv_uv_map/adv_uv_map_udim_move_active.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/adv_uv_map/adv_uv_map_udim_move_active.gif" /></a></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>By Selection</td>
-<td>Use selection to determine where where UDIM tile will be created</td>
-</tr>
-<tr>
-<td>In order</td>
-<td>Create all the missing tiles in order until it reaches the last missed tile with the selection</td>
-</tr>
-<tr>
-<td>Fill</td>
-<td>Fill tile with settings below</td>
+<td>Move to active UDIM tile</td>
 </tr>
 </tbody>
 </table>
-<h4 id="set-active">Set Active<a class="headerlink" href="#set-active" title="Permanent link"></a></h4>
-<p>Set the active UDIM Tile based on the selection. </p>
-<p><a class="glightbox" href="../img/screen/adv_uv_map/adv_uv_map_udim_set_active.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/adv_uv_map/adv_uv_map_udim_set_active.gif" /></a>  </p>
-<h4 id="remove-active">Remove Active<a class="headerlink" href="#remove-active" title="Permanent link"></a></h4>
-<p>Remove the active UDIM Tile. </p>
-<p><a class="glightbox" href="../img/screen/adv_uv_map/adv_uv_map_udim_remove_active.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/adv_uv_map/adv_uv_map_udim_remove_active.gif" /></a> </p>
-<h4 id="select-in-active">Select in Active<a class="headerlink" href="#select-in-active" title="Permanent link"></a></h4>
-<p>Select Islands in bounding box of active UDIM Tile or UV Area.</p>
-<p><a class="glightbox" href="../img/screen/adv_uv_map/adv_uv_map_udim_select_active.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/adv_uv_map/adv_uv_map_udim_select_active.gif" /></a> </p>
-<h4 id="move-to-active">Move to active<a class="headerlink" href="#move-to-active" title="Permanent link"></a></h4>
-<p>Move Islands to active or selected by number UDIM Tile. </p>
-<p><a class="glightbox" href="../img/screen/adv_uv_map/adv_uv_map_udim_move_active.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/adv_uv_map/adv_uv_map_udim_move_active.gif" /></a> </p>
-<h4 id="set-active_1">Set Active<a class="headerlink" href="#set-active_1" title="Permanent link"></a></h4>
-<p>Set active UDIM Tile by eyedropper.</p>
+<hr />
+<h4 id="set-active-eyedropper">Set Active (eyedropper)<a class="headerlink" href="#set-active-eyedropper" title="Permanent link"></a></h4>
+<p>Set active UDIM Tile by eyedropper</p>
+<div class="admonition properties">
+<p class="admonition-title">Properties</p>
+<p>This operator has no properties</p>
+</div>
 <p><a class="glightbox" href="../img/screen/adv_uv_map/adv_uv_map_udim_set_active_eyedropper.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/adv_uv_map/adv_uv_map_udim_set_active_eyedropper.gif" /></a></p>
               
             </div>
