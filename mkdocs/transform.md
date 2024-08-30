@@ -768,6 +768,43 @@ Move center of the selected Islands to the UV coordinates defined by mouse
 - **By Axis** - Scale Islands by Axis
 - **By Units** - Scale Islands by Units
 
+#### Scale Island
+
+!!! Properties in Axis mode
+    ![scale island properties](img/screen/transform/scale_island_properties.png)
+
+- **Mode** - Transform Mode
+    - *Islands* - Transform islands
+    - *Selection* - Transform selection
+- **Order** - Processing order
+    - *Overall* - Handle everything as one
+    - *One by One* - Handle one by one
+- **Mode** - Transform Mode
+    - *By Axis* - The mode in which scaling is indicated by the scaling factor for each of the axes
+    - *By Units* - The mode in which the size is specified relative to the size of the UV Area
+- **X** - X axis scaling size
+- **Y** - Y axis scaling size
+- **Island Pivot** - Transformation pivot
+- **2D Cursor as Pivot** - Use 2D cursor as island pivot
+
+!!! Properties in Units mode
+    ![scale island properties](img/screen/transform/scale_island_units_mode_properties.png)
+
+- **Mode** - Transform Mode
+    - *Islands* - Transform islands
+    - *Selection* - Transform selection
+- **Order** - Processing order
+    - *Overall* - Handle everything as one
+    - *One by One* - Handle one by one
+- **Mode** - Transform Mode
+    - *By Axis* - The mode in which scaling is indicated by the scaling factor for each of the axes
+    - *By Units* - The mode in which the size is specified relative to the size of the UV Area
+- **UV size** - The estimated width of the UV area
+- **Desired size** - The size of which should be set for selected elements relative to UV area
+- **Calcutate** - What mean the **Desired Size**
+- **Island Pivot** - Transformation pivot
+- **2D Cursor as Pivot** - Use 2D cursor as island pivot
+
 ---
 
 ### Rotate operators
