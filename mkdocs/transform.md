@@ -255,6 +255,7 @@ Matching the position, rotation, and scale of Islands. Stitch the vertices toget
 
 It is recommended that we always make the settings in sequence.
 First, Match, and if we are satisfied, then turn on Stitch. Stitch can't fix mistakes made in Match. The algorithm works as follows:
+
 - First, find the endpoints of both selections. In the picture, we got 2 groups marked as green lines:
     - 1 (AB)
     - 2 (CD)
