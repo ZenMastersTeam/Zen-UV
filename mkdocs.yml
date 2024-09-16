@@ -7,6 +7,11 @@ nav:
         - Upgrade Zen UV 3 to Zen UV 4 FAQ: zenuv3_to_zenuv4.md
         - Installation and Update: installation.md
         - User Interface: user_interface.md
+        - Tutorial:
+            - tutorial.md
+            - Emergency Light:
+                - Emergency Light (EN): tutorial/emergency_light/emergency_light_eng.md
+                - Emergency Light (UA): tutorial/emergency_light/emergency_light_ukr.md
     - Modules:
         - Advanced UV Maps: adv_uv-maps.md
         - Seam Groups: seam_groups.md

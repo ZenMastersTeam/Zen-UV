@@ -7,9 +7,9 @@ The example is maked as step-by-step guide to cover the basics of Zen UV
 
 ### Download example
 
-1. Переконайтеся, що у Блендері увімкнено підключення до Інтернету (ця опція доступна починаючи з версії Блендера 4.2).
-    - Натисніть на іконку «Підключення до Інтернету».
-    - Дозвольте доступ до інтернету.
+1. Check that internet connection is enabled in Blender (this option is available since Blender 4.2).
+    - Click on "Internet Connection" icon.
+    - Enable internet access.
 
     ![](../../img/tutorial/emergency_light/check_internet_connection.gif)
 
