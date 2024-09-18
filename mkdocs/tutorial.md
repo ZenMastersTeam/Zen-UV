@@ -8,3 +8,4 @@ The example is maked to cover the basics of Zen UV.
 |---|
 | [Ukrainian version](tutorial/emergency_light/emergency_light_ukr.md) |
 | [English version](tutorial/emergency_light/emergency_light_eng.md) |
+| [Russian version](tutorial/emergency_light/emergency_light_rus.md) |

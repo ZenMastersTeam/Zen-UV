@@ -1,5 +1,9 @@
 # Upgrade Zen UV 3 to Zen UV 4 FAQ
 
+## Important information
+
+The ability to upgrade from version 3 to version 4 is limited to the end of 2024. If you have not managed to upgrade your version 3 before the end of 2024, then unfortunately we will not be able to provide you with a discount. However, you will still have access to version 3, which you can continue to use.
+
 ## What will I get after upgrading from Zen UV 3 to Zen UV 4?
 
 From a general perspective: you will get a tool which is much more user-friendly and is providing more efficient work with UVs.
