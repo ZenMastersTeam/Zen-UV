@@ -1,4 +1,12 @@
 # Emergency Light
+
+<table>
+<tr>
+    <td><strong>English</strong></td>
+    <td><a href="../emergency_light_ukr/">Українська</a></td>
+</tr>
+</table>
+
 ![](../../img/tutorial/emergency_light/preview.jpg)
 
 The example is maked as step-by-step guide to cover the basics of Zen UV

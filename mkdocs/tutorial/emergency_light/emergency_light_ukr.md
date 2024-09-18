@@ -1,4 +1,12 @@
-# Emergency Light
+# Ліхтар аварійного освітлення
+
+<table>
+<tr>
+    <td><strong>Українська</strong></td>
+    <td><a href="../emergency_light_eng/">English</a></td>
+</tr>
+</table>
+
 ![](../../img/tutorial/emergency_light/preview.jpg)
 
 Покроковий туторіал для вивчення основ Zen UV.
