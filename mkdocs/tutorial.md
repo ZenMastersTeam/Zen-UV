@@ -4,8 +4,8 @@ A step-by-step guide is a structured set of instructions designed to lead users 
 ## 1. Emergency Light
 The example is maked to cover the basics of Zen UV.
 
-
-| ![](img/tutorial/emergency_light/preview.jpg) {:colspan=2}|
+| ![](img/tutorial/emergency_light/preview.jpg) {:colspan=3}|
 |:---:|
-| [English](tutorial/emergency_light/emergency_light_eng.md) {:rowspan=2}|
+| [English](tutorial/emergency_light/emergency_light_eng.md) {:rowspan=3}|
 | [Ukrainian](tutorial/emergency_light/emergency_light_ukr.md) |
+| [Russian version](tutorial/emergency_light/emergency_light_rus.md) |

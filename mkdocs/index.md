@@ -40,13 +40,14 @@
 - [**Display UV Islands.**](checker.md#zen-uv-draw-system) Display Overlapped, Stacked, Flipped, Stretched and Excluded UV Islands in 3D View and UV Editor.
 - [**Display UV Borders.**](checker.md#uv-borders) Display UV Islands Margin (Padding) in 3D View and UV Editor.
 - [**Display UV No Sync.**](checker.md#uv-no-sync) Display in 3D View Faces selected in UV Editor when UV Sync is Off.
-- [**Favorites.**](favourites.md) Create your own quick access panel consisting of the most used operators, scripts and panels.
 - [**UDIM Tools.**](adv_uv-maps.md#udim-tools) Tools for creating and managing UDIM tiles.
+- [**Favorites.**](favourites.md) Create your own quick access panel consisting of the most used operators, scripts and panels.
+
 
 
 
 !!! Tip
-    [**Watch Learning Videos**](youtube_videos.md) to learn effective Zen UV workflows.
+    [**Follow Step-by-step tutorial**](tutorial.md) to learn effective Zen UV workflows.
 
 ## Default Shortcuts
 - Zen UV Pie Menu ![Zen UV Pie Menu](img/icons/zen-uv@2x.png) --- `Alt + U`
