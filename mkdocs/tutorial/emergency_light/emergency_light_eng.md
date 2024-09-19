@@ -2,8 +2,9 @@
 
 <table>
 <tr>
-    <td><strong>English</strong></td>
-    <td><a href="../emergency_light_ukr/">Українська</a></td>
+    <td><strong>EN</strong></td>
+    <td><a href="../emergency_light_ukr/">UA</a></td>
+    <td><a href="../emergency_light_rus/">RU</a></td>
 </tr>
 </table>
 

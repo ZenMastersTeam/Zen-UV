@@ -12,7 +12,7 @@ nav:
             - Emergency Light:
                 - Emergency Light (EN): tutorial/emergency_light/emergency_light_eng.md
                 - Emergency Light (UA): tutorial/emergency_light/emergency_light_ukr.md
-                - Emergency Light (RUS): tutorial/emergency_light/emergency_light_rus.md
+                - Emergency Light (RU): tutorial/emergency_light/emergency_light_rus.md
     - Modules:
         - Advanced UV Maps: adv_uv-maps.md
         - Seam Groups: seam_groups.md
