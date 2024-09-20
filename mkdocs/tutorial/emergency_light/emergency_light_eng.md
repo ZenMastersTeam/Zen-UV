@@ -12,7 +12,7 @@
 
 The example is maked as step-by-step guide to cover the basics of Zen UV
 
-## Prepare
+## Prepare scene
 
 ### Download example
 
@@ -34,7 +34,7 @@ The example is maked as step-by-step guide to cover the basics of Zen UV
 
     ![](../../img/tutorial/emergency_light/select_and_switch_to_edit.gif)
 
-### Delete UV Maps and clear edge properties
+### Prepare model
 
 1. Zen UV uses [**global mark system**](../../unwrap.md#mark-by-angle) by default. Let's change mark settings to mark Seam and Sharp at the same time.
     - Select [**Unwrap**](../../unwrap.md) tab and find "Properties" button placed to the right of "Mark by Angle" button.
@@ -59,8 +59,18 @@ The example is maked as step-by-step guide to cover the basics of Zen UV
 
     ![](../../img/tutorial/emergency_light/delete_all_uv_maps.gif)
 
-!!! tip
-    Zen UV automatically control UV Maps and will create new one if there are no, so there is no necesserity to create UV Map manually.
+    !!! tip
+        Zen UV automatically control UV Maps and will create new one if there are no, so there is no necesserity to create UV Map manually.
+
+5. An important part of the prepare is to check the scale of the objects for which UV coordinates will be created. The scale of each object should be equal to (1.00, 1.00, 1.00), as it can affect the work of the unwrap operators. Also, an incorrect scale can affect the relative size of islands when [packing](../../pack.md) and when setting [textel density](../../texel_density.md) ([Texel Density](../../texel_density.md)). Editing the scale of objects is performed in Object Mode.
+    - Turn on Object Mode.
+    - In the 3D View main menu, click **Object - Apply - Apply Object Transform**.
+    - Make sure that the object scale is (1.00, 1.00, 1.00).
+
+    ![](../../img/tutorial/emergency_light/check_scale.gif)
+
+    !!! tip
+        Scaling and other object transformations are used primarily for animation and other purposes. If you're working with objects that have animations or form a hierarchy, performing **Object - Apply - Apply Object Transform** is dangerous because it will distort the animation and destroy the hierarchy.
 
 ### Initial unwrap
 
@@ -423,8 +433,29 @@ The packing and stacking is completed. There are only a few final steps left to 
 
     ![](../../img/tutorial/emergency_light/sharp_by_uv_borders_unmark.gif)
 
-    - Click the [**Smooth by Sharp**](../../unwrap.md#smooth-by-sharp-toggle) button. This will set all polygon smoothing to match the sharp edges.
+2. There are two ways to set the edge sharpness in Blender.
+
+    - By setting the polygon property to Shade Smooth / Shade Sharp.
+    - By using the Sharp edge property.
+
+    Both methods can work simultaneously, which often leads to artifacts when using the normal map.
+    Since we have already set the sharp edges as we need them using the Sharp edge property, let's exclude the possibility of the Smooth/Sharp polygon property affecting the sharpness of the edges. In Zen UV, there is a [Smooth by Sharp](../../unwrap.md#smooth-by-sharp-toggle) operator.
+
+    - Click the [Smooth by Sharp](../../unwrap.md#smooth-by-sharp-toggle) button. This will set all polygon smoothing to match sharp edges.
 
     ![](../../img/tutorial/emergency_light/smooth_by_sharp.gif)
 
-Now the **Emergency light** model has correct and optimized **UV** coordinates and is ready for baking maps and texturing.
+Now the **Emergency light** model has correct and optimized UV coordinates and is ready for texture creation and normal map baking.
+
+!!! tip
+    You can manually adjust the correct display of **Sharp Edges**. To do this, follow the steps described below.
+
+    - In Blender since version 4.1:
+        - Switch to Object Mode.
+        - From the 3D View main menu, select **Object - Shade Smooth**.
+
+    - In Blender versions before 4.1:
+        - Switch to Object Mode.
+        - From the 3D View main menu, select **Object - Shade Auto Smooth**.
+        - In the operator settings, turn on the “Auto Smooth” option.
+        - Set the Angle parameter to 180 degrees.
