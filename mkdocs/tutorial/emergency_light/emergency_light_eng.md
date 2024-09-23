@@ -62,7 +62,7 @@ The example is maked as step-by-step guide to cover the basics of Zen UV
     !!! tip
         Zen UV automatically control UV Maps and will create new one if there are no, so there is no necesserity to create UV Map manually.
 
-5. An important part of the prepare is to check the scale of the objects for which UV coordinates will be created. The scale of each object should be equal to (1.00, 1.00, 1.00), as it can affect the work of the unwrap operators. Also, an incorrect scale can affect the relative size of islands when [packing](../../pack.md) and when setting [textel density](../../texel_density.md) ([Texel Density](../../texel_density.md)). Editing the scale of objects is performed in Object Mode.
+5. An important part of the prepare is to check the scale of the objects for which UV coordinates will be created. The scale of each object should be equal to (1.00, 1.00, 1.00), as it can affect the work of the unwrap operators. Also, an incorrect scale can affect the relative size of islands when [packing](../../pack.md) and when setting [textel density](../../texel_density.md). Editing the scale of objects is performed in Object Mode.
     - Turn on Object Mode.
     - In the 3D View main menu, click **Object - Apply - Apply Object Transform**.
     - Make sure that the object scale is (1.00, 1.00, 1.00).
@@ -75,6 +75,7 @@ The example is maked as step-by-step guide to cover the basics of Zen UV
 ### Initial unwrap
 
 1. Now when everything is ready, we can start unwrapping. The first step is to split the model into UV islands. At this stage, it doesn't matter how well these islands are unwrapped. We just separate them. We will mark the seams depending on the edge angle. Sharper edges will be marked as seams and thus define the places where the model will be split.
+    - Turn on Edit Mode
     - Press "Mark By Angle" in [**Unwrap**](../../unwrap.md) tab.
 
     ![](../../img/tutorial/emergency_light/mark_by_angle.gif)
