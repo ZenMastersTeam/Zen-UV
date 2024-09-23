@@ -76,37 +76,37 @@
                 </li>
                 <li class="toctree-l3 current"><a class="reference internal current" href="#">Emergency Light (RU)</a>
     <ul class="current">
-    <li class="toctree-l4"><a class="reference internal" href="#_2">Подготовка</a>
+    <li class="toctree-l4"><a class="reference internal" href="#_2">Подготовка сцены</a>
         <ul>
     <li class="toctree-l5"><a class="reference internal" href="#_3">Загрузка примера</a>
     </li>
-    <li class="toctree-l5"><a class="reference internal" href="#uv">Удаление текущих UV карт и очистка свойств ребер</a>
+    <li class="toctree-l5"><a class="reference internal" href="#_4">Подготовка модели</a>
     </li>
-    <li class="toctree-l5"><a class="reference internal" href="#_4">Начальная развёртка</a>
+    <li class="toctree-l5"><a class="reference internal" href="#_5">Начальная развёртка</a>
     </li>
-    <li class="toctree-l5"><a class="reference internal" href="#_5">Включаем текстуру для проверки</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#_6">Развёртка</a>
-        <ul>
-    <li class="toctree-l5"><a class="reference internal" href="#_7">Развёртка внутренней цилиндрической части</a>
-    </li>
-    <li class="toctree-l5"><a class="reference internal" href="#_8">Развёртка внешней части</a>
-    </li>
-    <li class="toctree-l5"><a class="reference internal" href="#_9">Развертка мелких частей</a>
-    </li>
-    <li class="toctree-l5"><a class="reference internal" href="#_10">Развёртка проводов</a>
-    </li>
-    <li class="toctree-l5"><a class="reference internal" href="#_11">Развёртка резинового крепления</a>
+    <li class="toctree-l5"><a class="reference internal" href="#_6">Включаем текстуру для проверки</a>
     </li>
         </ul>
     </li>
-    <li class="toctree-l4"><a class="reference internal" href="#_12">Паковка</a>
+    <li class="toctree-l4"><a class="reference internal" href="#_7">Развёртка</a>
         <ul>
-    <li class="toctree-l5"><a class="reference internal" href="#_13">Финальная паковка</a>
+    <li class="toctree-l5"><a class="reference internal" href="#_8">Развёртка внутренней цилиндрической части</a>
     </li>
-    <li class="toctree-l5"><a class="reference internal" href="#_14">Уменьшение свободного места с помощью стаков (оверлапов)</a>
+    <li class="toctree-l5"><a class="reference internal" href="#_9">Развёртка внешней части</a>
+    </li>
+    <li class="toctree-l5"><a class="reference internal" href="#_10">Развертка мелких частей</a>
+    </li>
+    <li class="toctree-l5"><a class="reference internal" href="#_11">Развёртка проводов</a>
+    </li>
+    <li class="toctree-l5"><a class="reference internal" href="#_12">Развёртка резинового крепления</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#_13">Паковка</a>
+        <ul>
+    <li class="toctree-l5"><a class="reference internal" href="#_14">Финальная паковка</a>
+    </li>
+    <li class="toctree-l5"><a class="reference internal" href="#_15">Уменьшение свободного места с помощью стаков (оверлапов)</a>
     </li>
         </ul>
     </li>
@@ -215,7 +215,7 @@
 
 <p><a class="glightbox" href="../../../img/tutorial/emergency_light/preview.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/preview.jpg" /></a></p>
 <p>Учебное пособие по изучению основ Zen UV.</p>
-<h2 id="_2">Подготовка<a class="headerlink" href="#_2" title="Permanent link"></a></h2>
+<h2 id="_2">Подготовка сцены<a class="headerlink" href="#_2" title="Permanent link"></a></h2>
 <h3 id="_3">Загрузка примера<a class="headerlink" href="#_3" title="Permanent link"></a></h3>
 <ol>
 <li>
@@ -239,7 +239,7 @@
 <p><a class="glightbox" href="../../../img/tutorial/emergency_light/select_and_switch_to_edit.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/select_and_switch_to_edit.gif" /></a></p>
 </li>
 </ol>
-<h3 id="uv">Удаление текущих UV карт и очистка свойств ребер<a class="headerlink" href="#uv" title="Permanent link"></a></h3>
+<h3 id="_4">Подготовка модели<a class="headerlink" href="#_4" title="Permanent link"></a></h3>
 <ol>
 <li>
 <p>По умолчанию Zen UV использует <a href="../../../unwrap/#mark-by-angle">систему глобальной маркировки</a>. Настроим так, чтобы Seam и Sharp маркировались одновременно.</p>
@@ -262,7 +262,7 @@
 <p><a class="glightbox" href="../../../img/tutorial/emergency_light/unfinished_all.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/unfinished_all.gif" /></a></p>
 </li>
 <li>
-<p>Сотрите возможные имеющиеся UV координаты.</p>
+<p>Удалите возможные имеющиеся UV координаты.</p>
 <ul>
 <li>Перейдите во вкладку <a href="../../../adv_uv-maps/">Advanced UV Maps</a>.</li>
 <li>Выделите все возможные UV карты.</li>
@@ -275,11 +275,27 @@
 <p class="admonition-title">Tip</p>
 <p>Нет необходимости создавать новую UV Map. Zen UV работает с UV координатами, следит за тем, чтобы были имеющиеся UV Maps. Если таковых нет, то они будут созданы автоматически.</p>
 </div>
-<h3 id="_4">Начальная развёртка<a class="headerlink" href="#_4" title="Permanent link"></a></h3>
+<ol>
+<li>
+<p>Важной частью подготовки является проверка масштаба объектов, для которых будут создаваться UV координаты. Масштаб каждого объекта должен быть равным (1.00, 1.00, 1.00, 1.00), поскольку он может влиять на работу операторов развертки. Также некорректный масштаб может влиять на относительный размер островов при <a href="../../../pack/">паковке</a> и при установке <a href="../../../texel_density/">плотности текселя</a> (<a href="../../../texel_density/">Texel Density</a>). Редактирование масштаба объектов выполняется в режиме Object Mode.</p>
+<ul>
+<li>Включите Object Mode.</li>
+<li>В главном меню 3D View нажмите <strong>Object - Apply - Apply Object Transform</strong>.</li>
+<li>Убедитесь что масштаб объекта составляет (1.00, 1.00, 1.00).</li>
+</ul>
+<p><a class="glightbox" href="../../../img/tutorial/emergency_light/check_scale.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/check_scale.gif" /></a></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Масштабирование и другие трансформации объектов используются в основном для создания анимации и в других целях. Если вы работаете с объектами, которые имеют анимацию или образуют иерархию, выполнять <strong>Object - Apply - Apply Object Transform</strong> опасно, поскольку это приведет к искажению анимации и нарушению иерархии.</p>
+</div>
+</li>
+</ol>
+<h3 id="_5">Начальная развёртка<a class="headerlink" href="#_5" title="Permanent link"></a></h3>
 <ol>
 <li>
 <p>Сейчас, когда все подготовлено, мы можем начинать развертку. Этап первый – это разделение модели на UV острова. На этом этапе не имеет значения, насколько эти острова корректно развернуты. Мы только разделяем. Произведем разметку швов в зависимости от остроты рёбер. Более острые edges будут отмечены как швы и тем самым определят места где модель будет разделена.</p>
 <ul>
+<li>Включите Edit Mode.</li>
 <li>Во вкладке <a href="../../../unwrap/">Unwrap</a> нажмите кнопку Mark By Angle.</li>
 </ul>
 <p><a class="glightbox" href="../../../img/tutorial/emergency_light/mark_by_angle.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/mark_by_angle.gif" /></a></p>
@@ -305,7 +321,7 @@
 </li>
 </ol>
 <p>Другие режимы работы <a href="../../../unwrap/#zen-unwrap">Zen Unwrap</a> мы рассмотрим в течение этого туториала.</p>
-<h3 id="_5">Включаем текстуру для проверки<a class="headerlink" href="#_5" title="Permanent link"></a></h3>
+<h3 id="_6">Включаем текстуру для проверки<a class="headerlink" href="#_6" title="Permanent link"></a></h3>
 <ol>
 <li>
 <p>На этом этапе мы имеем базовое разделение модели на острова, но этого недостаточно. Нужно визуально проверить модель, создать дополнительные острова и в процессе расправить уже существующие острова, если это необходимо. На этом этапе важно улучшить восприятие атрефактов для того, чтобы выполнить работу как можно быстрее. Одним из самых действенных методов является назначение специальной текстуры, состоящей из квадратов. Если вы видите на модели искривленный квадрат, значит, в этом месте есть проблемы с разглаживанием острова. Наложим эту специальную текстуру используя <a href="../../../checker/">Zen UV Checker</a>.</p>
@@ -347,10 +363,10 @@
 </li>
 </ol>
 <p><a class="glightbox" href="../../../img/tutorial/emergency_light/switch_on_checker.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/switch_on_checker.gif" /></a></p>
-<h2 id="_6">Развёртка<a class="headerlink" href="#_6" title="Permanent link"></a></h2>
+<h2 id="_7">Развёртка<a class="headerlink" href="#_7" title="Permanent link"></a></h2>
 <p>Предварительный этап подготовки завершен. Переходим к развертке модели.
 Работу над чем-либо удобно разделять на части. Наша модель состоит из нескольких деталей. Так что условно разделим на этапы соответствующие каждой детали.</p>
-<h3 id="_7">Развёртка внутренней цилиндрической части<a class="headerlink" href="#_7" title="Permanent link"></a></h3>
+<h3 id="_8">Развёртка внутренней цилиндрической части<a class="headerlink" href="#_8" title="Permanent link"></a></h3>
 <ol>
 <li>
 <p>Начнём с цилиндрической детали. </p>
@@ -458,7 +474,7 @@
 <p class="admonition-title">Tip</p>
 <p>Острова тегирующиеся <strong>Finished</strong> сортируются и перемещаются правее <strong>UV Area</strong>. Это поведение по умолчанию, но это можно отключить если отключить опцию <strong>Auto Sort Islands</strong> находящуюся правее оператора <strong>Sort Islands by Tags</strong> в диалоге с <a href="../../../unwrap/#finished-preferences">кнопкой с шестерней</a>.</p>
 </div>
-<h3 id="_8">Развёртка внешней части<a class="headerlink" href="#_8" title="Permanent link"></a></h3>
+<h3 id="_9">Развёртка внешней части<a class="headerlink" href="#_9" title="Permanent link"></a></h3>
 <ol>
 <li>
 <p>Переходим к следующей детали. Для этого необходимо показать все детали модели.</p>
@@ -515,7 +531,7 @@
 <p>Нажмите <a href="../../../select/#isolate-islands-toggle">Isolate Island</a>, чтобы показать все детали и подготовиться к следующему этапу туториала.</p>
 </li>
 </ol>
-<h3 id="_9">Развертка мелких частей<a class="headerlink" href="#_9" title="Permanent link"></a></h3>
+<h3 id="_10">Развертка мелких частей<a class="headerlink" href="#_10" title="Permanent link"></a></h3>
 <ol>
 <li>
 <p>Изолируем мелкие детали для более комфортной работы.</p>
@@ -568,7 +584,7 @@
 <p>Нажмите <a href="../../../select/#isolate-islands-toggle">Isolate Island</a>, чтобы показать все детали и подготовиться к следующему этапу туториала.</p>
 </li>
 </ol>
-<h3 id="_10">Развёртка проводов<a class="headerlink" href="#_10" title="Permanent link"></a></h3>
+<h3 id="_11">Развёртка проводов<a class="headerlink" href="#_11" title="Permanent link"></a></h3>
 <ol>
 <li>
 <p>Изолируем провода для более комфортной работы.</p>
@@ -606,7 +622,7 @@
 <p>Нажмите <a href="../../../select/#isolate-islands-toggle">Isolate Island</a>, чтобы показать все детали и подготовиться к следующему этапу туториала.</p>
 </li>
 </ol>
-<h3 id="_11">Развёртка резинового крепления<a class="headerlink" href="#_11" title="Permanent link"></a></h3>
+<h3 id="_12">Развёртка резинового крепления<a class="headerlink" href="#_12" title="Permanent link"></a></h3>
 <ol>
 <li>
 <p>Изолируем крепления для более удобной работы. Давайте используем кое-что из <a href="../../../unwrap/#finishing-system">Finished</a> системы.</p>
@@ -655,9 +671,9 @@
 <p>Нажмите <a href="../../../select/#isolate-islands-toggle">Isolate Island</a>, чтобы показать все детали и подготовиться к следующему этапу туториала.</p>
 </li>
 </ol>
-<h2 id="_12">Паковка<a class="headerlink" href="#_12" title="Permanent link"></a></h2>
+<h2 id="_13">Паковка<a class="headerlink" href="#_13" title="Permanent link"></a></h2>
 <p>Предварительный этап создания островов и развертки завершен. Пришло время разместить острова на текстуре таким образом, чтобы осталось как можно меньше свободного места. Все свободное место на текстуре – это нерациональное использование ресурсов.</p>
-<h3 id="_13">Финальная паковка<a class="headerlink" href="#_13" title="Permanent link"></a></h3>
+<h3 id="_14">Финальная паковка<a class="headerlink" href="#_14" title="Permanent link"></a></h3>
 <ol>
 <li>
 <p>Убедитесь, что не осталось скрытых деталей. И выполните паковку.</p>
@@ -668,7 +684,7 @@
 <p><a class="glightbox" href="../../../img/tutorial/emergency_light/final_pack.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/final_pack.gif" /></a></p>
 </li>
 </ol>
-<h3 id="_14">Уменьшение свободного места с помощью стаков (оверлапов)<a class="headerlink" href="#_14" title="Permanent link"></a></h3>
+<h3 id="_15">Уменьшение свободного места с помощью стаков (оверлапов)<a class="headerlink" href="#_15" title="Permanent link"></a></h3>
 <ol>
 <li>
 <p>На этом этапе есть плотно упакованные детали и работу можно считать завершенной. Но если проанализировать конструкцию модели, можно заметить, что некоторые острова выглядят похоже и даже являются копией друг друга. Например, вырезы под болты, сами болты, некоторые мелкие детали и т.д. Для экономии места на текстуре одинаковые острова можно сложить один на другой. С точки зрения создания UV координат этот процесс называется <strong>Stacking</strong>.</p>
@@ -722,13 +738,44 @@
 <li>В настройках оператора включите <strong>Unmark sharp</strong>. Это сотрет все предварительно установленные sharp edges.</li>
 </ul>
 <p><a class="glightbox" href="../../../img/tutorial/emergency_light/sharp_by_uv_borders_unmark.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/sharp_by_uv_borders_unmark.gif" /></a></p>
+</li>
+<li>
+<p>В Blender острота ребер может быть установлена двумя путями.</p>
 <ul>
-<li>Нажмите кнопку <a href="../../../unwrap/#smooth-by-sharp-toggle">Smooth by Sharp</a>. Это установит сглаживания полигонов в соответствии с sharp edges.</li>
+<li>Как результат установки свойства полигона Shade Smooth / Shade Sharp.</li>
+<li>С помощью свойства ребра Sharp.</li>
+</ul>
+<p>Оба способа могут действовать одновременно, что часто приводит к артефактам при использовании карты нормалей (normal map).
+Поскольку мы уже установили sharp edges так как нам нужно с помощью свойства ребер Sharp, исключим возможность влияния свойства полигонов Smooth/Sharp на остроту ребер. В Zen UV для этого существует оператор <a href="../../../unwrap/#smooth-by-sharp-toggle">Smooth by Sharp</a>.</p>
+<ul>
+<li>Нажмите кнопку <a href="../../../unwrap/#smooth-by-sharp-toggle">Smooth by Sharp</a>. Это установит все сглаживания полигонов в соответствие с sharp edges.</li>
 </ul>
 <p><a class="glightbox" href="../../../img/tutorial/emergency_light/smooth_by_sharp.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/smooth_by_sharp.gif" /></a></p>
 </li>
 </ol>
-<p>Теперь модель <strong>Emergency light</strong> имеет корректные и оптимизированные <strong>UV</strong> координаты и полностью готова для создания текстуры и запекания <strong>normal map</strong>.</p>
+<p>Теперь модель <strong>Emergency light</strong> имеет корректные и оптимизированные UV координаты и полностью готова для создания текстуры и запекания normal map.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Настройку корректного отображения <strong>Sharp Edges</strong> можно выполнить вручную. Для этого выполните шаги описанные ниже.</p>
+<ul>
+<li>
+<p>В Blender начиная с версии 4.1:</p>
+<ul>
+<li>Перейдите в режим Object Mode.</li>
+<li>В главном меню 3D View выполните оператор <strong>Object - Shade Smooth</strong>.</li>
+</ul>
+</li>
+<li>
+<p>В версиях Blender до 4.1:</p>
+<ul>
+<li>Перейдите в режим Object Mode.</li>
+<li>В главном меню 3D View выполните оператор <strong>Object - Shade Auto Smooth</strong>.</li>
+<li>В настройках оператора включите опцию «Auto Smooth».</li>
+<li>Установите параметр Angle равным 180 градусов.</li>
+</ul>
+</li>
+</ul>
+</div>
               
             </div>
           </div><footer>
