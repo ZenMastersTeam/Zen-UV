@@ -1,7 +1,3 @@
-# Emergency Light
-
-A step-by-step beginner tutorial designed to learn the basics of creating UV coordinates using the Zen UV addon for models intended for use in game engines.
-
 <table>
 <tr>
     <td><strong>EN</strong></td>
@@ -10,15 +6,17 @@ A step-by-step beginner tutorial designed to learn the basics of creating UV coo
 </tr>
 </table>
 
+# Emergency Light
+
 ![](../../img/tutorial/emergency_light/preview.jpg)
 
-In this tutorial, you will learn the basic rules of creating UV unwraps and how to use the Zen UV tools for quick and comfortable work. You will receive basic information about the rules and recommendations for creating UV coordinates for game engines.
+A step-by-step beginner tutorial designed to learn the basics of creating UV coordinates using the Zen UV addon. In this tutorial, you will learn the basic rules of creating UV unwraps and how to use the Zen UV tools for quick and comfortable work. You will receive basic information about the rules and recommendations for creating UV coordinates for game engines.
 
 The tutorial covers the main stages that are optimal steps for processing any model:
 
 - Model preparation
 - Initial unwrap
-- Checking the initial unwrap
+- Analyze the initial unwrap
 - Step-by-step unwrapping of parts
 - Packing
 - Optimization
