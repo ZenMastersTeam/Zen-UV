@@ -94,7 +94,7 @@
     </li>
     <li class="toctree-l5"><a class="reference internal" href="#_9">Развёртка внешней части</a>
     </li>
-    <li class="toctree-l5"><a class="reference internal" href="#_10">Развертка мелких частей</a>
+    <li class="toctree-l5"><a class="reference internal" href="#_10">развёртка мелких частей</a>
     </li>
     <li class="toctree-l5"><a class="reference internal" href="#_11">Развёртка проводов</a>
     </li>
@@ -204,8 +204,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="_1">Фонарь аварийного освещения<a class="headerlink" href="#_1" title="Permanent link"></a></h1>
-<table>
+                <table>
 <tr>
     <td><strong>RU</strong></td>
     <td><a href="../emergency_light_eng/">EN</a></td>
@@ -213,16 +212,26 @@
 </tr>
 </table>
 
+<h1 id="_1">Фонарь аварийного освещения<a class="headerlink" href="#_1" title="Permanent link"></a></h1>
 <p><a class="glightbox" href="../../../img/tutorial/emergency_light/preview.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/preview.jpg" /></a></p>
-<p>Учебное пособие по изучению основ Zen UV.</p>
+<p>Пошаговый туториал базового уровня, предназначенный для изучения основ создания UV-координат с помощью аддона Zen UV для моделей, в ходе которого вы узнаете основные правила создания развертки и научитесь использовать инструменты Zen UV для быстрой и комфортной работы. Вы получите базовую информацию о правилах и рекомендациях по созданию UV-координат для игровых движков.</p>
+<p>В туториале рассмотрены основные этапы, которые являются оптимальными шагами для обработки любой модели:</p>
+<ul>
+<li>Подготовка модели</li>
+<li>Начальная развертка</li>
+<li>Анализ начальной развертки</li>
+<li>Пошаговая развертка частей</li>
+<li>Упаковка</li>
+<li>Оптимизация</li>
+</ul>
 <h2 id="_2">Подготовка сцены<a class="headerlink" href="#_2" title="Permanent link"></a></h2>
 <h3 id="_3">Загрузка примера<a class="headerlink" href="#_3" title="Permanent link"></a></h3>
 <ol>
 <li>
 <p>Убедитесь, что подключение к Интернету включено в Blender (эта опция доступна, начиная с версии Blender 4.2).</p>
 <ul>
-<li>Нажмите на значок подключения к Интернету.</li>
-<li>Разрешите доступ к Интернету.</li>
+<li>Нажмите на иконку подключения к Интернету. Если иконка отсутствует, значит доступ к интернету уже активирован.</li>
+<li>Разрешите доступ к интернету активацией опции <strong>Allow Online Access</strong>.</li>
 </ul>
 <p><a class="glightbox" href="../../../img/tutorial/emergency_light/check_internet_connection.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/check_internet_connection.gif" /></a></p>
 </li>
@@ -254,7 +263,7 @@
 <p><a class="glightbox" href="../../../img/tutorial/emergency_light/unmark_all.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/unmark_all.gif" /></a></p>
 </li>
 <li>
-<p>Проверим нет ли островов тегированных как <a href="../../../unwrap/#finishing-system">Finished</a>. Система <a href="../../../unwrap/#finishing-system">Finished</a> служит для визуального контроля за состоянием островов (окончены/не закончены) и не позволяет оператору Zen Unwrap развертывать острова если они тегированы как <a href="../../../unwrap/#tag-finished">Finished</a>.</p>
+<p>Проверим нет ли островов тегированных как <a href="../../../unwrap/#finishing-system">Finished</a>. Система <a href="../../../unwrap/#finishing-system">Finished</a> служит для визуального контроля за состоянием островов (закончены/не закончены) и не позволяет оператору Zen Unwrap развертывать острова если они тегированы как <a href="../../../unwrap/#tag-finished">Finished</a>.</p>
 <ul>
 <li>Выделите все полигоны в модели.</li>
 <li>На вкладке <a href="../../../unwrap/">Unwrap</a> откройте панель <a href="../../../unwrap/#finishing-system">Finished</a> и нажмите кнопку <a href="../../../unwrap/#tag-unfinished">Tag Unfinished</a>.</li>
@@ -262,10 +271,10 @@
 <p><a class="glightbox" href="../../../img/tutorial/emergency_light/unfinished_all.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/unfinished_all.gif" /></a></p>
 </li>
 <li>
-<p>Удалите возможные имеющиеся UV координаты.</p>
+<p>Удалите все имеющиеся UV координаты.</p>
 <ul>
 <li>Перейдите во вкладку <a href="../../../adv_uv-maps/">Advanced UV Maps</a>.</li>
-<li>Выделите все возможные UV карты.</li>
+<li>Выделите все имеющиеся UV карты.</li>
 <li>Нажмите кнопку &ldquo;-&ldquo;.</li>
 </ul>
 <p><a class="glightbox" href="../../../img/tutorial/emergency_light/delete_all_uv_maps.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/delete_all_uv_maps.gif" /></a></p>
@@ -273,11 +282,11 @@
 </ol>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>Нет необходимости создавать новую UV Map. Zen UV работает с UV координатами, следит за тем, чтобы были имеющиеся UV Maps. Если таковых нет, то они будут созданы автоматически.</p>
+<p>Нет необходимости создавать новую UV Map. Zen UV работает с UV координатами и следит за тем, чтобы были текущие UV Maps. Если таковых нет, то они будут созданы автоматически.</p>
 </div>
 <ol>
 <li>
-<p>Важной частью подготовки является проверка масштаба объектов, для которых будут создаваться UV координаты. Масштаб каждого объекта должен быть равным (1.00, 1.00, 1.00, 1.00), поскольку он может влиять на работу операторов развертки. Также некорректный масштаб может влиять на относительный размер островов при <a href="../../../pack/">паковке</a> и при установке <a href="../../../texel_density/">плотности текселя</a> (<a href="../../../texel_density/">Texel Density</a>). Редактирование масштаба объектов выполняется в режиме Object Mode.</p>
+<p>Важной частью подготовки является проверка масштаба объектов, для которых будут создаваться UV координаты. Масштаб каждого объекта должен быть равным (1.00, 1.00, 1.00, 1.00), поскольку он может влиять на работу операторов развёртки. Также некорректный масштаб может влиять на относительный размер островов при <a href="../../../pack/">паковке</a> и при установке <a href="../../../texel_density/">плотности текселя</a> (<a href="../../../texel_density/">Texel Density</a>). Редактирование масштаба объектов выполняется в режиме Object Mode.</p>
 <ul>
 <li>Включите Object Mode.</li>
 <li>В главном меню 3D View нажмите <strong>Object - Apply - Apply Object Transform</strong>.</li>
@@ -293,7 +302,7 @@
 <h3 id="_5">Начальная развёртка<a class="headerlink" href="#_5" title="Permanent link"></a></h3>
 <ol>
 <li>
-<p>Сейчас, когда все подготовлено, мы можем начинать развертку. Этап первый – это разделение модели на UV острова. На этом этапе не имеет значения, насколько эти острова корректно развернуты. Мы только разделяем. Произведем разметку швов в зависимости от остроты рёбер. Более острые edges будут отмечены как швы и тем самым определят места где модель будет разделена.</p>
+<p>Сейчас, когда все подготовлено, мы можем начинать развёртку. Этап первый – это разделение модели на UV острова. На этом этапе не имеет значения, насколько эти острова корректно развернуты. Мы только разделяем. Произведем разметку швов в зависимости от остроты рёбер. Более острые рёбра будут отмечены как швы и тем самым определят места где будет разделена модель.</p>
 <ul>
 <li>Включите Edit Mode.</li>
 <li>Во вкладке <a href="../../../unwrap/">Unwrap</a> нажмите кнопку Mark By Angle.</li>
@@ -301,26 +310,22 @@
 <p><a class="glightbox" href="../../../img/tutorial/emergency_light/mark_by_angle.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/mark_by_angle.gif" /></a></p>
 </li>
 <li>
-<p>Почти все операции в <strong>Zen UV</strong> могут быть выполнены в 3D View<strong>, но нет более комфортного способа взаимодействовать с UV Maps чем использовать UV Editor</strong>. Для того чтобы быстро открыть <strong>UV Editor</strong>, воспользуйтесь виджетом в <strong>3D View</strong>.</p>
+<p>Почти все операции в Zen UV могут быть выполнены в 3D View, но нет более комфортного способа взаимодействовать с UV Maps чем использовать UV Editor. Для того чтобы быстро открыть UV Editor, воспользуйтесь виджетом в 3D View.</p>
 <ul>
-<li>Нажмите кнопку расположенную слева по центру <strong>3D View</strong> viewport с буквой &ldquo;T&rdquo;. В случае если <strong>UV Editor</strong> уже открыт, по нажатию на эту кнопку он закроется. <a href="../../../sticky_uv_editor/#sticky-uv-editor">Open UV Editor area</a></li>
+<li>Нажмите кнопку  с буквой &ldquo;T&rdquo; расположенную слева по центру 3D View viewport. В случае если UV Editor уже открыт, по нажатию на эту кнопку он закроется. <a href="../../../sticky_uv_editor/#sticky-uv-editor">Open UV Editor area</a></li>
 </ul>
 <p><a class="glightbox" href="../../../img/tutorial/emergency_light/uv_editor.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/uv_editor.gif" /></a></p>
 </li>
 <li>
-<p>Мы создали швы в зависимости от остроты рёбер (edges), но еще не разделили модель на острова. Для разделения используем оператор <a href="../../../unwrap/#zen-unwrap">Zen Unwrap</a> работающий в зависимости от того, что выделено. Так что на данном этапе убедитесь, что ничего не выделено. В режиме когда ничего не выделено <a href="../../../unwrap/#zen-unwrap">Zen Unwrap</a> просто разделяет модель на UV острова по существующим seams. Если что-то выделено, результат будет иным.</p>
+<p>Мы создали швы в зависимости от остроты рёбер (edges), но еще не разделили модель на острова. Для разделения используем оператор <a href="../../../unwrap/#zen-unwrap">Zen Unwrap</a> работающий в зависимости от того, что выделено. На данном этапе убедитесь, что ничего не выделено. В режиме когда ничего не выделено <a href="../../../unwrap/#zen-unwrap">Zen Unwrap</a> просто разделяет модель на UV острова по существующим seams. Если что-то выделено, результат будет другим.</p>
 <ul>
-<li>
-<p>Убедитесь, что ничего не выделено.</p>
-</li>
-<li>
-<p>Нажмите <a href="../../../unwrap/#zen-unwrap">Zen Unwrap</a> в панели <a href="../../../unwrap/">Unwrap</a>.</p>
-</li>
+<li>Убедитесь, что ничего не выделено.</li>
+<li>Нажмите <a href="../../../unwrap/#zen-unwrap">Zen Unwrap</a> в панели <a href="../../../unwrap/">Unwrap</a>.</li>
 </ul>
 <p><a class="glightbox" href="../../../img/tutorial/emergency_light/initial_unwrap.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/initial_unwrap.gif" /></a></p>
 </li>
 </ol>
-<p>Другие режимы работы <a href="../../../unwrap/#zen-unwrap">Zen Unwrap</a> мы рассмотрим в течение этого туториала.</p>
+<p>Другие режимы работы <a href="../../../unwrap/#zen-unwrap">Zen Unwrap</a> мы рассмотрим в ходе этого туториала.</p>
 <h3 id="_6">Включаем текстуру для проверки<a class="headerlink" href="#_6" title="Permanent link"></a></h3>
 <ol>
 <li>
@@ -331,7 +336,7 @@
 <p><a class="glightbox" href="../../../img/tutorial/emergency_light/press_checker.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/press_checker.gif" /></a></p>
 </li>
 <li>
-<p>Цветные текстуры созданы также и для определения места положения острова на текстуре. Но для нашего случая это не суть важно. Так переключим текстуру на монохромную. Это уменьшит количество информации для восприятия, а значит уменьшит усталость от работы..</p>
+<p>Цветные текстуры также используются для определения положения острова на текстуре. Однако в нашем случае это не имеет значения, поэтому переключим текстуру на монохромную. Это уменьшит количество визуальной информации, что снизит нагрузку на восприятие и уменьшит усталость от работы.</p>
 <ul>
 <li>Откройте drop-down меню ниже кнопки Checker Texture и выберите текстуру с названием <a href="../../../checker/#checker-textures-selector">&lsquo;zen-mono-2048x2048&rsquo; texture image</a></li>
 </ul>
@@ -345,9 +350,9 @@
 <p><a class="glightbox" href="../../../img/tutorial/emergency_light/disable_crease_sharp_bevel.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/disable_crease_sharp_bevel.gif" /></a></p>
 </li>
 <li>
-<p>Текстуры для проверки обычно выглядят довольно агрессивно и мешают восприятию островов в <strong>UV Editor</strong>. <strong>Zen UV</strong> имеет возможность затемнить текущую текстуру для комфортного восприятия. </p>
+<p>Текстуры для проверки обычно выглядят довольно агрессивно и мешают восприятию островов в UV Editor. Zen UV имеет возможность затемнить текущую текстуру для комфортного восприятия. </p>
 <ul>
-<li>Используйте оператор <a href="../../../checker/#darken-image">Darken Image</a> находящуюся в панели <a href="../../../checker/">UV Checker</a> основной панели аддона в <strong>UV Editor</strong>.</li>
+<li>Используйте оператор <a href="../../../checker/#darken-image">Darken Image</a> находящийся в панели <a href="../../../checker/">UV Checker</a> основной панели аддона в UV Editor.</li>
 </ul>
 <p><a class="glightbox" href="../../../img/tutorial/emergency_light/darken_image.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/darken_image.gif" /></a></p>
 <div class="admonition tip">
@@ -356,16 +361,15 @@
 </div>
 </li>
 <li>
-<p>Для этого туториала можно просто удалить текстуру из <strong>UV Editor</strong>, поскольку в данном случае она не имеет практического назначения.. </p>
+<p>Для этого туториала можно просто удалить текстуру из UV Editor, поскольку в данном случае она не имеет практического применения. </p>
 <ul>
-<li>Найдите строчку с названием текстуры сверху рабочей зоны <strong>UV Editor</strong> и нажмите кнопку с крестиком.</li>
+<li>Найдите строчку с названием текстуры сверху рабочей зоны UV Editor и нажмите кнопку с крестиком.</li>
 </ul>
 </li>
 </ol>
 <p><a class="glightbox" href="../../../img/tutorial/emergency_light/switch_on_checker.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/switch_on_checker.gif" /></a></p>
 <h2 id="_7">Развёртка<a class="headerlink" href="#_7" title="Permanent link"></a></h2>
-<p>Предварительный этап подготовки завершен. Переходим к развертке модели.
-Работу над чем-либо удобно разделять на части. Наша модель состоит из нескольких деталей. Так что условно разделим на этапы соответствующие каждой детали.</p>
+<p>Предварительный этап подготовки завершен, и мы переходим к развёртке модели. Чтобы упростить процесс, удобно разделить работу на части. Наша модель состоит из нескольких деталей, поэтому условно разделим её на этапы, соответствующие каждой из них.</p>
 <h3 id="_8">Развёртка внутренней цилиндрической части<a class="headerlink" href="#_8" title="Permanent link"></a></h3>
 <ol>
 <li>
@@ -377,7 +381,7 @@
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 </div>
-<p>Этот оператор работает как переключатель. Это значит что если нажать его сейчас еще раз, то все скрывшееся появится снова. Он функционирует одинаково как для 3D View, так и для UV Editor.</p>
+<p>Этот оператор работает как переключатель: если нажать его еще раз, все, что было скрыто, снова станет видимым. Он одинаково функционирует как в 3D View, так и в UV Editor.</p>
 <p><a class="glightbox" href="../../../img/tutorial/emergency_light/isolate_cylinder.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/isolate_cylinder.gif" /></a></p>
 <p>Основной оператор для создания островов в аддоне Zen UV это Zen Unwrap. Это многофункциональный контекстный оператор. Он выполняет разные задачи в зависимости от следующего:</p>
 <ul>
@@ -391,9 +395,9 @@
 <li>Edges</li>
 <li>Verices</li>
 </ul>
-<p>В случае если <strong>Blender</strong> находится в режиме выделения <strong>Faces</strong>, будет создан новый остров из выделенных полигонов, а ребра по краю выделенных полигонов будут маркированы как <strong>seams</strong>.</p>
+<p>В случае если Blender находится в режиме выделения <strong>Faces</strong>, будет создан новый остров из выделенных полигонов, а ребра по краю выделенных полигонов будут маркированы как seams.</p>
 <ul>
-<li>Выделите торец и нажмите кнопку <a href="../../../unwrap/#zen-unwrap">Zen Unwrap</a> из палитры <a href="../../../unwrap/">Unwrap</a></li>
+<li>Выделите торец и нажмите кнопку <a href="../../../unwrap/#zen-unwrap">Zen Unwrap</a> из панели <a href="../../../unwrap/">Unwrap</a></li>
 </ul>
 <p><a class="glightbox" href="../../../img/tutorial/emergency_light/unwrap_cap_1.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/unwrap_cap_1.gif" /></a></p>
 <p>В процессе будет создано еще несколько островов. Они могут быть не корректными или не такими как в представленном видео, но сейчас это не важно.</p>
@@ -401,43 +405,43 @@
 <li>
 <p>Используем режим выделения <strong>Edges</strong> для развертывания следующего острова.</p>
 <ul>
-<li>Переключите <strong>Blender</strong> в режим выделения <strong>Edges</strong>. В этом режиме <a href="../../../unwrap/#zen-unwrap">Zen Unwrap</a> создаст <strong>seams</strong> для выделенных ребер и выполнит развертку.</li>
+<li>Переключите Blender в режим выделения <strong>Edges</strong>. В этом режиме <a href="../../../unwrap/#zen-unwrap">Zen Unwrap</a> создаст seams для выделенных рёбер и выполнит развёртку.</li>
 <li>Выделите одно ребро на длинном цилиндре и нажмите <a href="../../../unwrap/#zen-unwrap">Zen Unwrap</a>.</li>
 </ul>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>Места в которых будут созданы <strong>seams</strong>, обычно могут быть слишком заметны на текстуре и потребуют дополнительной маскировки. Чтобы не тратить это время, старайтесь создавать разрывы в мало заметных местах. Поэтому в нашем случае рекомендуется выделить какое-то из нижних ребер, поскольку оно точно будет закрыто внешней частью модели.</p>
+<p>Места, где будут созданы швы (seams), обычно могут быть слишком заметны на текстуре и потребуют дополнительной маскировки. Чтобы сэкономить время, старайтесь создавать разрывы в менее заметных областях. В нашем случае рекомендуется выделить одно из нижних рёбер, так как оно будет закрыто внешней частью модели.</p>
 </div>
 <p><a class="glightbox" href="../../../img/tutorial/emergency_light/unwrap_tube.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/unwrap_tube.gif" /></a></p>
-<p>Как видите <a href="../../../unwrap/#zen-unwrap">Zen Unwrap</a> точно придерживается ваших указаний и делает развертку островов несмотря на то что мы изменяем тип выделения. Для этого даже не нужно открывать его настройки. В результате мы получили корректно развернутый самый большой остров этой детали..</p>
+<p>Как видите <a href="../../../unwrap/#zen-unwrap">Zen Unwrap</a> точно придерживается ваших указаний и делает развёртку островов несмотря на то что мы изменяем тип выделения. Для этого даже не нужно открывать его настройки. В результате мы получили корректно развернутый самый большой остров этой детали..</p>
 </li>
 <li>
 <p>Развернем второй торец детали. </p>
 <ul>
-<li>Переключите режим выделения <strong>Blender</strong> в <strong>faces</strong>.</li>
+<li>Переключите режим выделения Blender в <strong>Faces</strong>.</li>
 <li>Выделите торец.</li>
 <li>Нажмите <a href="../../../unwrap/#zen-unwrap">Zen Unwrap</a>.</li>
 </ul>
 <p><a class="glightbox" href="../../../img/tutorial/emergency_light/cylindrical_second_cap.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/cylindrical_second_cap.gif" /></a></p>
 </li>
 <li>
-<p>При использовании <strong>Mark by Angle</strong> были созданы нежелательные <strong>seams</strong> что разделило модель на большее количество островов, чем нужно. Чтобы исправить это снова воспользуемся оператором <a href="../../../unwrap/#zen-unwrap">Zen Unwrap</a>.</p>
+<p>При использовании Mark by Angle были созданы нежелательные seams, что разделило модель на большее количество островов, чем необходимо. Чтобы исправить это, снова воспользуемся оператором <a href="../../../unwrap/#zen-unwrap">Zen Unwrap</a>.</p>
 <ul>
-<li>Виділіть всі полігони найбільшого циліндра та натисніть <a href="../../../unwrap/#zen-unwrap">Zen Unwrap</a>.
-Як результат всі виділені острови об&rsquo;єдналися в один, і край виділених полігонів був маркований як <strong>seams</strong>.</li>
+<li>Выделите все полигоны самого большого цилиндра и нажмите <a href="../../../unwrap/#zen-unwrap">Zen Unwrap</a>.
+В результате все выделенные острова объединились в один, и край выделенных полигонов был помечен как seams.</li>
 </ul>
 <p><a class="glightbox" href="../../../img/tutorial/emergency_light/merge_islands.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/merge_islands.gif" /></a></p>
 </li>
 <li>
-<p>На этом этапе мы закончили создание островов, но многие острова остались деформированными. Можно переключиться в режим выделения <strong>edges</strong> и выполнить те же действия как для самого большого цилиндра, но острова, имеющие несколько более сложную форму, останутся недостаточно разровненными. Используем оператор <a href="../../../transform/#quadrify-islands">Quadrify</a> выравнивающий в ровную решетку острова созданные из квадов.</p>
+<p>На этом этапе мы завершили создание островов, но многие из них остались деформированными. Можно переключиться в режим выделения <strong>Edges</strong> и выполнить те же действия, что и для самого большого цилиндра, однако острова с более сложной формой все равно останутся недостаточно выровненными. Используем оператор <a href="../../../transform/#quadrify-islands">Quadrify</a> выравнивающий в ровную решетку острова созданные из квадов.</p>
 <ul>
-<li>Переключиться в режим выделения <strong>edges</strong>.</li>
-<li>Выделите один продольный edge и нажмите кнопку <a href="../../../transform/#quadrify-islands">Quadrify</a> в палитре <a href="../../../transform/">Transform</a>.</li>
+<li>Переключитесь в режим выделения <strong>Edges</strong>.</li>
+<li>Выделите одно продольное ребро и нажмите кнопку <a href="../../../transform/#quadrify-islands">Quadrify</a> в панели <a href="../../../transform/">Transform</a>.</li>
 </ul>
 <p><a class="glightbox" href="../../../img/tutorial/emergency_light/cylindrical_quadrify_vert.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/cylindrical_quadrify_vert.gif" /></a></p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>Подобное использование оператора Quadrify является самым быстрым, но не всегда оптимальным. Если не указать оператору, где именно нужно сделать разрыв, место разрыва острова будет создано автоматически и, возможно, не в оптимальном месте. Для полного контроля создания разрыва используйте опцию <strong>Use Selected Edges</strong>. Также вы можете создать разрыв к использованию Quadrify, используя другие методы.</p>
+<p>Такое использование оператора Quadrify является самым быстрым, но не всегда оптимальным. Если не указать, где именно нужно сделать разрыв, он будет создан автоматически, и, возможно, не в самом удачном месте. Для полного контроля используйте опцию <strong>Use Selected Edges</strong>. Также вы можете предварительно создать разрыв перед применением Quadrify, используя другие методы</p>
 </div>
 </li>
 <li>
@@ -453,7 +457,7 @@
 <p><a class="glightbox" href="../../../img/tutorial/emergency_light/cylindrical_other_islands.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/cylindrical_other_islands.gif" /></a></p>
 </li>
 <li>
-<p>Сейчас некоторые острова в UV Editorе могут перекрывать другие. Для того чтобы убедиться в корректном развертывании каждого острова, выполним упаковку. Это улучшит визуальное восприятие всех островов..</p>
+<p>Сейчас некоторые острова в UV Editorе могут перекрывать другие. Для того чтобы убедиться в корректном развертывании каждого острова, выполним упаковку. Это улучшит общее визуальное восприятие всех островов.</p>
 <ul>
 <li>Нажмите кнопку <a href="../../../pack/#pack-islands">Pack Islands</a> с панели <a href="../../../pack/#pack">Pack</a>.</li>
 </ul>
@@ -463,23 +467,23 @@
 <p>Вскоре мы продолжим работать над другими деталями, но сперва используем систему <a href="../../../unwrap/#finishing-system">Finished</a>. Это сделает возможным визуально контролировать, какие острова уже развернуты, и защитит готовые острова от повторного развертывания.</p>
 <ul>
 <li>Перейдите на вкладку <a href="../../../unwrap/">Unwrap</a>.</li>
-<li>Разверните панель, которая называется Finished. </li>
+<li>Разверните панель которая называется Finished. </li>
 <li>Выделите все острова.</li>
-<li>Нажмите кнопку <a href="../../../unwrap/#tag-finished">Tag as finished</a> с панели <a href="../../../unwrap/#finishing-system">Finished</a></li>
+<li>Нажмите кнопку <a href="../../../unwrap/#tag-finished">Tag as finished</a> из панели <a href="../../../unwrap/#finishing-system">Finished</a></li>
 </ul>
 <p><a class="glightbox" href="../../../img/tutorial/emergency_light/cylindrical_tag_finished.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/cylindrical_tag_finished.gif" /></a></p>
 </li>
 </ol>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>Острова тегирующиеся <strong>Finished</strong> сортируются и перемещаются правее <strong>UV Area</strong>. Это поведение по умолчанию, но это можно отключить если отключить опцию <strong>Auto Sort Islands</strong> находящуюся правее оператора <strong>Sort Islands by Tags</strong> в диалоге с <a href="../../../unwrap/#finished-preferences">кнопкой с шестерней</a>.</p>
+<p>Острова, помеченные тегом Finished, сортируются и перемещаются правее UV Area. Это поведение по умолчанию, но его можно отключить, если деактивировать опцию Auto Sort Islands, находящуюся правее оператора Sort Islands by Tags в диалоговом окне с <a href="../../../unwrap/#finished-preferences">кнопкой-шестерней</a>.</p>
 </div>
 <h3 id="_9">Развёртка внешней части<a class="headerlink" href="#_9" title="Permanent link"></a></h3>
 <ol>
 <li>
 <p>Переходим к следующей детали. Для этого необходимо показать все детали модели.</p>
 <ul>
-<li>Нажмите кнопку <a href="../../../select/#isolate-islands-toggle">Isolate Island</a> с панели <a href="../../../select/">Select</a></li>
+<li>Нажмите кнопку <a href="../../../select/#isolate-islands-toggle">Isolate Island</a> из панели <a href="../../../select/">Select</a></li>
 </ul>
 <p><a class="glightbox" href="../../../img/tutorial/emergency_light/external_isolate.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/external_isolate.gif" /></a></p>
 <ul>
@@ -487,20 +491,20 @@
 </ul>
 <p><a class="glightbox" href="../../../img/tutorial/emergency_light/external_select_linked.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/external_select_linked.gif" /></a></p>
 <ul>
-<li>Нажмите кнопку <a href="../../../select/#isolate-islands-toggle">Isolate Island</a> снова. Теперь мы видим видимую только нужную нам деталь. Остальные детали спрятаны и они не будут мешать.</li>
+<li>Нажмите кнопку <a href="../../../select/#isolate-islands-toggle">Isolate Island</a> снова. Теперь мы видим только нужную нам деталь. Остальные детали спрятаны и они не будут мешать.</li>
 </ul>
 <p><a class="glightbox" href="../../../img/tutorial/emergency_light/external_isolate_final.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/external_isolate_final.gif" /></a></p>
 </li>
 <li>
-<p>Эта деталь имеет четкие контуры, корректные <strong>seams</strong>, но некоторые острова можно сделать лучше. Внутренняя часть представляет собой цилиндр, который может быть представлен одним островом вместо нескольких. Создадим один остров из внутренней части.</p>
+<p>Эта деталь имеет четкие контуры и корректные швы, но некоторые острова можно улучшить. Внутренняя часть представляет собой цилиндр, который можно объединить в один остров вместо нескольких. Давайте создадим один остров для внутренней части.</p>
 <ul>
-<li>Выделите всю внутреннюю часть кроме острова, который представляет собой многогранный полигон.</li>
+<li>Выделите всю внутреннюю часть кроме острова, который представляет собой многоугольник.</li>
 <li>Нажмите <a href="../../../unwrap/#zen-unwrap">Zen Unwrap</a>.</li>
 </ul>
 <p><a class="glightbox" href="../../../img/tutorial/emergency_light/external_select_internal_part.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/external_select_internal_part.gif" /></a></p>
 </li>
 <li>
-<p>Созданный остров может выглядеть лучше если выровнять его в ровную решетку. Используйте оператор <a href="../../../transform/#quadrify-islands">Quadrify</a>. Обратите внимание. Если у вас активирована опция <strong>Use Selected Edges</strong>, то лучше перейти в режим выделения faces. Ведь в режиме выделения edges оператор <strong>Quadrify</strong> разорвет остров по выделенным edges. Также обратите внимание на то, что Zen UV все время пытается вам помочь и для того, чтобы указать оператору с каким островом вы хотите работать, не обязательно выделять весь остров. Достаточно выделить один или несколько полигонов.</p>
+<p>Созданный остров может выглядеть лучше если выровнять его в ровную решетку. Используйте оператор <a href="../../../transform/#quadrify-islands">Quadrify</a>. Обратите внимание. Если у вас активирована опция <strong>Use Selected Edges</strong>, то лучше перейти в режим выделения <strong>Faces</strong>. Ведь в режиме выделения edges оператор Quadrify разорвёт остров по выделенным edges. Также обратите внимание на то, что Zen UV все время пытается вам помочь и для того, чтобы указать оператору с каким островом вы хотите работать, не обязательно выделять весь остров. Достаточно выделить один или несколько полигонов.</p>
 <ul>
 <li>Выделите один или несколько полигонов в острове внутренней части текущей детали и нажмите <a href="../../../transform/#quadrify-islands">Quadrify</a>.</li>
 </ul>
@@ -509,13 +513,13 @@
 <li>
 <p>Следующий остров слишком велик, замкнут и вывернут. Для того чтобы избавиться от этих недостатков, разделите его на несколько островов меньшего размера.</p>
 <ul>
-<li>Выделите боковые ребра.</li>
+<li>Выделите боковые рёбра.</li>
 <li>Нажмите <a href="../../../unwrap/#zen-unwrap">Zen Unwrap</a>.</li>
 </ul>
 <p><a class="glightbox" href="../../../img/tutorial/emergency_light/unwrap_by_side_cuts.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/unwrap_by_side_cuts.gif" /></a></p>
 </li>
 <li>
-<p>Остров представляющий верхний торец разложен корректно, но можем сделать его более компактным. Также мы должны следить за тем, чтобы граничные edges любого острова были максимально выровнены по осям. Это сделает разрывы на текстуре гораздо менее заметными.</p>
+<p>Остров, представляющий верхний торец, разложен корректно, но его можно сделать более компактным. Также необходимо следить за тем, чтобы граничные ребра любого острова были максимально выровнены по осям. Это сделает разрывы на текстуре менее заметными.</p>
 <ul>
 <li>Выделите один или несколько faces верхнего острова.</li>
 <li>Нажмите <a href="../../../select/#select-islands">Select Island</a> с панели <a href="../../../select/">Select</a>.</li>
@@ -531,25 +535,25 @@
 <p>Нажмите <a href="../../../select/#isolate-islands-toggle">Isolate Island</a>, чтобы показать все детали и подготовиться к следующему этапу туториала.</p>
 </li>
 </ol>
-<h3 id="_10">Развертка мелких частей<a class="headerlink" href="#_10" title="Permanent link"></a></h3>
+<h3 id="_10">развёртка мелких частей<a class="headerlink" href="#_10" title="Permanent link"></a></h3>
 <ol>
 <li>
 <p>Изолируем мелкие детали для более комфортной работы.</p>
 <ul>
 <li>Выделите все мелкие детали.</li>
-<li>Нажмите кнопку <a href="../../../select/#isolate-islands-toggle">Isolate Island</a></li>
+<li>Нажмите кнопку <a href="../../../select/#isolate-islands-toggle">Isolate Island</a>.</li>
 </ul>
 <p><a class="glightbox" href="../../../img/tutorial/emergency_light/small_parts_isolate.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/small_parts_isolate.gif" /></a></p>
 </li>
 <li>
-<p>На всех мелких деталях оператор <a href="../../../unwrap/#mark-by-angle">Mark by Ange</a> сработал корректно, кроме цилиндрических деталей. Давайте исправим это.</p>
+<p>На всех мелких деталях, кроме цилиндрических, оператор <a href="../../../unwrap/#mark-by-angle">Mark by Ange</a> сработал корректно. Давайте исправим это.</p>
 <ul>
 <li>Выделите по одному ребру на каждом из цилиндров и нажмите <a href="../../../unwrap/#zen-unwrap">Zen Unwrap</a>.</li>
 </ul>
 <p><a class="glightbox" href="../../../img/tutorial/emergency_light/small_parts_unwrap_cuts.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/small_parts_unwrap_cuts.gif" /></a></p>
 </li>
 <li>
-<p>Перейдите к детали скрепляющей провода. Она была разделена на несколько частей, что не является оптимальной разверткой. Достаточно отделить торцы, а остальное оставить одним островом..</p>
+<p>Перейдите к детали скрепляющей провода. Она была разделена на несколько частей, что не является оптимальной развёрткой. Достаточно отделить торцы, а остальное оставить одним островом.</p>
 <ul>
 <li>Выделите всю деталь.</li>
 <li>Снимите выделение с торцов.</li>
@@ -558,15 +562,15 @@
 <p><a class="glightbox" href="../../../img/tutorial/emergency_light/small_parts_unwrap_by_polygons.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/small_parts_unwrap_by_polygons.gif" /></a></p>
 </li>
 <li>
-<p>Мы создали сплошной остров, но его развертка не корректная. Нужно разорвать и разровнять радиальный остров.</p>
+<p>Мы создали единый остров, но его развёртка не корректная. Нужно разорвать и разровнять радиальный остров.</p>
 <ul>
-<li>Выделите пару ребер, где нужно разделить.</li>
+<li>Выделите пару рёбер, где нужно разделить.</li>
 <li>Нажмите <a href="../../../unwrap/#zen-unwrap">Zen Unwrap</a>.</li>
 </ul>
 <p><a class="glightbox" href="../../../img/tutorial/emergency_light/small_parts_unwrap_to_get_quad.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/small_parts_unwrap_to_get_quad.gif" /></a></p>
 </li>
 <li>
-<p>На этом этапе мы получили корректное деление на острова, но некоторые острова имеют растяжение. Некоторые другие острова имеют не оптимальную форму. Нужно выделить и выровнять все состоящие из квадов острова.</p>
+<p>На этом этапе мы получили корректное разделение на острова, но некоторые из них имеют растяжения, а другие — не оптимальную форму. Необходимо выделить и выровнять все острова, состоящие из квадов.</p>
 <ul>
 <li>Используйте оператор <a href="../../../select/#select-quaded-islands">Select Quaded Islands</a> с панели <a href="../../../select/">Select</a>.</li>
 </ul>
@@ -577,7 +581,7 @@
 <p><a class="glightbox" href="../../../img/tutorial/emergency_light/small_parts_quadrify_2.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/small_parts_quadrify_2.gif" /></a></p>
 </li>
 <li>
-<p>Выполните <a href="../../../pack/#pack">Pack</a> и <a href="../../../unwrap/#tag-finished">Tag Finished</a> для завершения развертки мелких деталей.</p>
+<p>Выполните <a href="../../../pack/#pack">Pack</a> и <a href="../../../unwrap/#tag-finished">Tag Finished</a> для завершения развёртки мелких деталей.</p>
 <p><a class="glightbox" href="../../../img/tutorial/emergency_light/small_parts_pack_and_finished.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/small_parts_pack_and_finished.gif" /></a></p>
 </li>
 <li>
@@ -595,23 +599,26 @@
 <p><a class="glightbox" href="../../../img/tutorial/emergency_light/wires_isolate.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/wires_isolate.gif" /></a></p>
 </li>
 <li>
-<p>Видно что сейчас каждый провод разделен на несколько островов. Сделаем так, чтобы каждый провод был представлен ​​одним островом. Выделите все полигоны и нажмите <a href="../../../unwrap/#zen-unwrap">Zen Unwrap</a>.</p>
+<p>Видно что сейчас каждый провод разделен на несколько островов. Сделаем так, чтобы каждый провод был представлен ​​одним островом. </p>
+<ul>
+<li>Выделите все полигоны и нажмите <a href="../../../unwrap/#zen-unwrap">Zen Unwrap</a>.</li>
+</ul>
 <p><a class="glightbox" href="../../../img/tutorial/emergency_light/wires_unwrap.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/wires_unwrap.gif" /></a></p>
 </li>
 <li>
-<p>Мы получили разделение где каждый провод один остров, но развертывание не корректное. Давайте развернем провода самым быстрым способом.</p>
+<p>Мы получили разделение, при котором каждый провод представлен отдельным островом, но развёртка выполнена некорректно. Давайте развернем провода самым быстрым способом.</p>
 <ul>
-<li>Убедитесь, что выделены все острова.</li>
+<li>Убедитесь, что все острова выделены.</li>
 <li>Используйте оператор <a href="../../../transform/#quadrify-islands">Quadrify</a> чтобы выровнять каждый остров в ровную решетку.</li>
 </ul>
 <p><a class="glightbox" href="../../../img/tutorial/emergency_light/wires_quadrify.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/wires_quadrify.gif" /></a></p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>В случае развертки проводов или других подобных моделей очень удобно пользоваться опцией <strong>Use Selected Edges</strong> оператора <strong>Quadrify</strong>, которую мы рассматривали ранее. Таким образом мы получим разрывы именно там, где нужно с первой попытки.</p>
+<p>В случае развёртки проводов или других подобных моделей очень удобно пользоваться опцией <strong>Use Selected Edges</strong> оператора Quadrify, которую мы рассматривали ранее. Таким образом мы получим разрывы именно там, где нужно с первой попытки.</p>
 </div>
 </li>
 <li>
-<p>В завершение упаковаем для лучшего визуального контроля и маркируем острова как завершенные (Finished).</p>
+<p>В завершение упакуем острова для лучшего визуального контроля и пометим их как завершенные (Finished).</p>
 <ul>
 <li>Выполните <a href="../../../pack/#pack">Pack</a>.</li>
 <li>Выполните <a href="../../../unwrap/#tag-finished">Tag Finished</a> для завершения развертывания проводов.</li>
@@ -636,34 +643,34 @@
 <li>
 <p>Эта деталь состоит из нескольких островов, что не является оптимальным решением. Давайте создадим один остров вместо нескольких.</p>
 <ul>
-<li>Выделите все принадлежащие креплению острова.</li>
+<li>Выделите все острова принадлежащие креплению.</li>
 <li>Снимите выделения с торцов, которые выглядят как шестиугольники.</li>
 <li>Нажмите <a href="../../../unwrap/#zen-unwrap">Zen Unwrap</a>.</li>
 </ul>
 <p><a class="glightbox" href="../../../img/tutorial/emergency_light/handle_create_one_island.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/handle_create_one_island.gif" /></a></p>
 </li>
 <li>
-<p>Остров создан в результате последних действий, имеет не корректную развертку. Давайте исправим это.</p>
+<p>Остров созданный в результате последних действий имеет не корректную развёртку. Давайте исправим это.</p>
 <ul>
-<li>Выделите edges принадлежащих отверстию и edges принадлежащих внутреннему краю крепления.</li>
-<li>Нажмите <a href="../../../unwrap/#zen-unwrap">Zen Unwrap</a></li>
+<li>Выделите рёбра принадлежащие отверстию и ребра принадлежащие внутреннему краю крепления.</li>
+<li>Нажмите <a href="../../../unwrap/#zen-unwrap">Zen Unwrap</a>.</li>
 </ul>
 <p><a class="glightbox" href="../../../img/tutorial/emergency_light/handle_create_cuts.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/handle_create_cuts.gif" /></a></p>
 </li>
 <li>
-<p>Теперь у нас есть развернутый остров. Присутствие в нем треугольных faces не позволяет использовать оператор <strong>Quadrify</strong> для максимальной разглаживания. Рассмотрим на примере этого острова работу оператора <a href="../../../transform/#reshape-island">Reshape Island</a>. Суть работы <a href="../../../transform/#reshape-island">Reshape Island</a> заключается в том, что он разравнивает выделенные лупы ребер в ровную линию, а остальные вершины расслабляет.</p>
+<p>Теперь у нас есть развёрнутый остров. Присутствие в нем треугольных faces не позволяет использовать оператор Quadrify для максимального разглаживания. Рассмотрим на примере этого острова работу оператора <a href="../../../transform/#reshape-island">Reshape Island</a>. Суть работы <a href="../../../transform/#reshape-island">Reshape Island</a> заключается в том, что он разравнивает выделенные лупы рёбер в ровную линию, а остальные вершины расслабляет.</p>
 <ul>
-<li>Выделите полностью ребра проходящие продольно через центр острова.</li>
+<li>Полностью выделите ребра, проходящие вдоль центра острова.</li>
 <li>Нажмите <a href="../../../transform/#reshape-island">Reshape Island</a> для выравнивания острова.</li>
 </ul>
 <p><a class="glightbox" href="../../../img/tutorial/emergency_light/reshape_island.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/reshape_island.gif" /></a></p>
 </li>
 <li>
-<p>На этом развертку острова можно считать завершенную. Давайте маркируем его как завершенный. </p>
+<p>На этом развёртку детали можно считать оконченой. Давайте маркируем её острова как завершённые. </p>
 <ul>
 <li>Нажмите <a href="../../../pack/#pack">Pack</a>.</li>
 <li>Выделите все острова.</li>
-<li>Маркируйте с помощью <a href="../../../unwrap/#tag-finished">Tag Finished</a> для завершения развертки крепления.</li>
+<li>Маркируйте с помощью <a href="../../../unwrap/#tag-finished">Tag Finished</a> для завершения развёртки крепления.</li>
 </ul>
 <p><a class="glightbox" href="../../../img/tutorial/emergency_light/handle_tag_finished.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/handle_tag_finished.gif" /></a></p>
 </li>
@@ -672,14 +679,14 @@
 </li>
 </ol>
 <h2 id="_13">Паковка<a class="headerlink" href="#_13" title="Permanent link"></a></h2>
-<p>Предварительный этап создания островов и развертки завершен. Пришло время разместить острова на текстуре таким образом, чтобы осталось как можно меньше свободного места. Все свободное место на текстуре – это нерациональное использование ресурсов.</p>
+<p>Предварительный этап создания островов и развёртки завершен. Пришло время разместить острова на текстуре таким образом, чтобы осталось как можно меньше свободного места. Все свободное место на текстуре – это нерациональное использование ресурсов.</p>
 <h3 id="_14">Финальная паковка<a class="headerlink" href="#_14" title="Permanent link"></a></h3>
 <ol>
 <li>
 <p>Убедитесь, что не осталось скрытых деталей. И выполните паковку.</p>
 <ul>
 <li>В <strong>3D View</strong> в главном меню нажмите <strong>Mesh - Show/Hide - Reveal Hidden</strong>.</li>
-<li>Выполните упаковку используя оператор <a href="../../../pack/#pack-islands">Pack</a>.</li>
+<li>Выполните паковку используя оператор <a href="../../../pack/#pack-islands">Pack</a>.</li>
 </ul>
 <p><a class="glightbox" href="../../../img/tutorial/emergency_light/final_pack.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/final_pack.gif" /></a></p>
 </li>
@@ -687,7 +694,7 @@
 <h3 id="_15">Уменьшение свободного места с помощью стаков (оверлапов)<a class="headerlink" href="#_15" title="Permanent link"></a></h3>
 <ol>
 <li>
-<p>На этом этапе есть плотно упакованные детали и работу можно считать завершенной. Но если проанализировать конструкцию модели, можно заметить, что некоторые острова выглядят похоже и даже являются копией друг друга. Например, вырезы под болты, сами болты, некоторые мелкие детали и т.д. Для экономии места на текстуре одинаковые острова можно сложить один на другой. С точки зрения создания UV координат этот процесс называется <strong>Stacking</strong>.</p>
+<p>На этом этапе имеем плотно упакованные детали и работу можно считать завершенной. Но если проанализировать конструкцию модели, можно заметить, что некоторые острова выглядят похоже и даже являются копией друг друга. Например, вырезы под болты, сами болты, некоторые мелкие детали и т.д. Для экономии места на текстуре одинаковые острова можно сложить один на другой. С точки зрения создания UV координат этот процесс называется <strong>Stacking</strong>.</p>
 <ul>
 <li>Перейдите на вкладку <a href="../../../stack/">Stack</a>.</li>
 <li>Нажмите кнопку <a href="../../../stack/#replicas">Replicas</a>. Теперь есть выделенные острова, которые имеют копии. Эти острова называются <strong>Replicas</strong>. Причем, их прототипы остались не выделенными.</li>
@@ -709,7 +716,7 @@
 </ul>
 <p><a class="glightbox" href="../../../img/tutorial/emergency_light/stack_set_texture.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/stack_set_texture.gif" /></a></p>
 <ul>
-<li>Установите необходимую величину <a href="../../../pack/#margin">Margin</a> что обеспечит корректный вид текстуры при отдалении камеры.</li>
+<li>Установите необходимую величину <a href="../../../pack/#margin">Margin</a>, что обеспечит корректный вид текстуры при отдалении камеры.</li>
 </ul>
 <p><a class="glightbox" href="../../../img/tutorial/emergency_light/stack_set_margin.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/stack_set_margin.gif" /></a></p>
 <ul>
@@ -718,7 +725,7 @@
 <p><a class="glightbox" href="../../../img/tutorial/emergency_light/stack_pack_islands.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/stack_pack_islands.gif" /></a></p>
 <ul>
 <li>В панели <a href="../../../stack/">Stack</a> переключите систему в режим <strong>Selected</strong>.</li>
-<li>Для того чтобы показать скрытые <strong>Replicas</strong> в <strong>3D View</strong> в главном меню нажмите <strong>Mesh - Show/Hide - Reveal Hidden</strong>.</li>
+<li>Для того чтобы показать скрытые <strong>Replicas</strong> в 3D View в главном меню нажмите <strong>Mesh - Show/Hide - Reveal Hidden</strong>.</li>
 <li>Выделите всё кроме <strong>Replicas</strong>.</li>
 <li>Нажмите <a href="../../../stack/#stack">Stack</a> для того, чтобы стаковать не выделенные <strong>Replicas</strong> на места выделенных <strong>Primaries</strong>.</li>
 </ul>
@@ -731,22 +738,22 @@
 <li>
 <p>Корректно установленные sharp edges это не только залог хорошего внешнего вида модели, но также залог запекания <strong>normal map</strong> без ошибок.</p>
 <ul>
-<li>Используйте оператор <a href="../../../unwrap/#sharp-by-uv-borders">Sharp by UV Borders</a>. Этот оператор маркирует ребра, которые являются граничными ребрами островов как <strong>sharp</strong>.</li>
+<li>Используйте оператор <a href="../../../unwrap/#sharp-by-uv-borders">Sharp by UV Borders</a>. Этот оператор помечает ребра, являющиеся граничными для островов, как sharp.</li>
 </ul>
 <p><a class="glightbox" href="../../../img/tutorial/emergency_light/sharp_by_uv_borders.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/sharp_by_uv_borders.gif" /></a></p>
 <ul>
-<li>В настройках оператора включите <strong>Unmark sharp</strong>. Это сотрет все предварительно установленные sharp edges.</li>
+<li>В настройках оператора включите <strong>Unmark sharp</strong>. Это сотрёт все предварительно установленные sharp edges.</li>
 </ul>
 <p><a class="glightbox" href="../../../img/tutorial/emergency_light/sharp_by_uv_borders_unmark.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/sharp_by_uv_borders_unmark.gif" /></a></p>
 </li>
 <li>
-<p>В Blender острота ребер может быть установлена двумя путями.</p>
+<p>В Blender острота рёбер может быть установлена двумя путями.</p>
 <ul>
 <li>Как результат установки свойства полигона Shade Smooth / Shade Sharp.</li>
 <li>С помощью свойства ребра Sharp.</li>
 </ul>
 <p>Оба способа могут действовать одновременно, что часто приводит к артефактам при использовании карты нормалей (normal map).
-Поскольку мы уже установили sharp edges так как нам нужно с помощью свойства ребер Sharp, исключим возможность влияния свойства полигонов Smooth/Sharp на остроту ребер. В Zen UV для этого существует оператор <a href="../../../unwrap/#smooth-by-sharp-toggle">Smooth by Sharp</a>.</p>
+Поскольку мы уже установили sharp edges так как нам нужно с помощью свойства рёбер Sharp, исключим возможность влияния свойства полигонов Smooth/Sharp на остроту рёбер. В Zen UV для этого существует оператор <a href="../../../unwrap/#smooth-by-sharp-toggle">Smooth by Sharp</a>.</p>
 <ul>
 <li>Нажмите кнопку <a href="../../../unwrap/#smooth-by-sharp-toggle">Smooth by Sharp</a>. Это установит все сглаживания полигонов в соответствие с sharp edges.</li>
 </ul>
