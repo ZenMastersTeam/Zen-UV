@@ -222,7 +222,7 @@ It is convenient to divide this process into steps. Our model consists of severa
     - Go to the [**Unwrap**](../../unwrap.md) tab.
     - Expand the panel called Finished. 
     - Select all the islands.
-    - Click the [**Tag as finished**](../../unwrap.md#tag-finished) button from the [**Finished**](../../unwrap.md#finishing-system) panel.
+    - Click the [**Tag Finished**](../../unwrap.md#tag-finished) button from the [**Finished**](../../unwrap.md#finishing-system) panel.
 
     ![](../../img/tutorial/emergency_light/cylindrical_tag_finished.gif)
 

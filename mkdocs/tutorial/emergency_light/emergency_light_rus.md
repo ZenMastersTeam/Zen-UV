@@ -220,7 +220,7 @@
     - Перейдите на вкладку [Unwrap](../../unwrap.md).
     - Разверните панель которая называется Finished. 
     - Выделите все острова.
-    - Нажмите кнопку [Tag as finished](../../unwrap.md#tag-finished) из панели [Finished](../../unwrap.md#finishing-system)
+    - Нажмите кнопку [Tag Finished](../../unwrap.md#tag-finished) из панели [Finished](../../unwrap.md#finishing-system)
 
     ![](../../img/tutorial/emergency_light/cylindrical_tag_finished.gif)
 
