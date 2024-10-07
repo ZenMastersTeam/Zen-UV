@@ -59,12 +59,22 @@ Advanced Maps system detects synchronization status of all UV Maps in the select
 | |
 
 ---
-## Duplicate active UV Map ![Add Button](img/icons/plus.png)
+## Duplicate active UV Map
+
+!!! Button
+    ![Add Button](img/icons/plus.png)
+
 Duplicate the active UV Map or create a new one depending on the operator's properties.
 
 ![](img/screen/adv_uv_map/duplicate_active_map.png)
 
-## Remove active UV Map ![Remove Button](img/icons/minus.png)
+## Remove active UV Map
+
+!!! Button
+    ![Remove Button](img/icons/minus.png)
+
+!!! Warning
+    Zen UV monitors the state of objects. If you delete all UV maps, all [Finished](unwrap.md#finishing-system) and [Excluded](pack.md#excluded-system) tags will also be removed.
 ![](img/screen/adv_uv_map/uvmaps_remove.gif)
 
 ---
@@ -163,6 +173,9 @@ Set UV Map name by its Index in the list.
 | Matching geometry | Objects must be of type mesh and must have a matching topology |
 | Advanced | Transfer UV maps by generating an interpolated mapping between source and target mesh elements |
 | Layout | Transfer layout of UV maps from active to selected meshes |
+
+!!! Warning
+    Using the eyedropper tool assigns multi-user data to the object. You can disable this functionality in the [Addon Preferences](addon_prefs.md#adv-uv-maps)
 
 ---
 

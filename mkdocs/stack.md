@@ -1,4 +1,7 @@
 # Stack
+
+This panel contains tools for grouping similar islands into stacks.
+
 !!! Panel
     ![Stack](img/screen/stack/stack_main_panel.png)
 
@@ -9,30 +12,42 @@
     <iframe src="https://www.youtube.com/embed/Yj2SecY-c1Y?start=142&end=313" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen="" seamless="" frameborder="0"></iframe>
     </div>
 
-## Stack
-
-Collect Similar Islands on Stacks.
+## Stack operator
 
 !!! Properties
     ![Stack](img/screen/stack/stack_options.png)
 
-    - **Move Only** - Don't fit Islands. Just move to the same position.
-    - **Stack Offset** - The offset value. Can be used for preventing auto merging the UV vertices.
-    - **Unstack Direction** - The Direction where the island will be shifted.
+- **Move Only** - Don't fit Islands. Just move to the same position.
+- **Stack Offset** - The offset value. Can be used for preventing auto merging the UV vertices.
+- **Unstack Direction** - The Direction where the island will be shifted.
 
-
-## Unstack
+## Unstack operator
 
 Shift Islands from Stacks in a given direction.
+
+!!! Properties
+    ![unstack properties](img/screen/stack/unstack_properties.png)
+
+- **Mode** - Mode to Unstack Islands
+    - *Global* - Unstack all Similar Islands
+    - *Stacked* - Unstack Stacked Islands
+    - *Overlapped* - Unstack Overlapped Islands
+    - *Selected* - Unstack Selected Islands
+- **Only UV Area** - Unstack islands located in the UV Area only
+- **Iterative Unstack** - Unstack Islands iteratively with moving in given direction
+- **Use Seams** - Use seams as an island separator to prevent stacked islands from self-welding
+- **Direction** - The unstack direction
+- **Break Stacks** - Shift Islands from Stacks by given increment until all of them will be individually placed
+- **Unstack Increment** -  Is a value that gradually separates stacked elements in incremental steps.
 
 ## Stack Mode
 
 !!! Panel
     ![](img/screen/stack/stack_modes.png)
 
-    - **Global Mode**. Collect all Similar Islands on Stacks.
-    - **Selected Mode**. Collect selected Similar Islands on Stacks.
-    - **Simple Mode**. Collect selected islands in the stack, with no respect for their topology.
+- **Global Mode** - Collect all Similar Islands on Stacks.
+- **Selected Mode** - Collect selected Similar Islands on Stacks.
+- **Simple Mode** - Collect selected islands in the stack, with no respect for their topology.
 
 ## Stacks 
 
@@ -74,10 +89,19 @@ Display and Select Stacked Islands.
 
     ![Display Stacked](img/screen/stack/stack_display_stacked_options.png)
 
-    - **Overlay Sync**. Draw is sincronized with Overlay On/Off mode.
-    - **Stacked Color**. Color for displaying Stacked Islands.
-    - **Only UV Area**. Display Stacks only in the UV area.
+- **Overlay Sync** - Draw is sincronized with Overlay On/Off mode.
+- **Stacked Color** - Color for displaying Stacked Islands.
+- **Only UV Area** - Display Stacks only in the UV area.
 
+---
+
+### UV Island Counter
+
+Count UV islands in selected objects and display the result. With this operator, you can easily find out how many islands are in the stack.
+
+Here you will find [full information](checker.md#uv-islands-counter) about this operator.
+
+---
 
 ## Copy / Paste System
 

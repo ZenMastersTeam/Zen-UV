@@ -294,7 +294,15 @@ Select vertices that have the same coordinates.
 
 Count UV Islands of selected objects and display the result.
 
- ![](img/screen/tex_checker/checker_tools_counter.gif)
+![Islands counter](img/screen/tex_checker/tools_islands_counter.png)
+
+More detailed information can be obtained by opening the system console. For Windows, go to the main menu of the Blender **Window** -> **Toggle System Console**.
+
+In the example below, you can see information on all selected objects.
+
+Object name | total UV islands in the object | number of visible islands | number of selected islands | number of hidden islands.
+
+![island counter console](img/screen/tex_checker/tools_islands_counter_full_info.png)
 
 #### Clear Attributes
 

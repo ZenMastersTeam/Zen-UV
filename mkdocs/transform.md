@@ -526,6 +526,8 @@ Switch between Islands and Texure-based transforms in 3D View.
     - *Position*
     - *2D Cursor*
     - *To Active Component*
+    - *Active UDIM tile* - To active UDIM tile
+    - *Tile Number* - To UDIM tile with the specified number
 
 ---
 
@@ -722,6 +724,8 @@ Move 2D cursor to the defined position
     - *Selection* - By selection
     - *Islands* - By islands
     - *UV Area* - By UV Area
+    - *Active UDIM tile* - To active UDIM tile
+    - *Tile Number* - To UDIM tile with the specified number
 - **Island Pivot** - Selection pivot
 
 |![move 2d cursor to](img/gifs/trasnform_operators/Move2dCursorTo_Example.gif)|
@@ -893,6 +897,8 @@ Flip selected Islands or Selection
 
 - **To UV Area** - Fit Islands to UV Area
 - **To Region** - Fit Islands to Region
+- **Active UDIM tile** - To active UDIM tile
+- **Tile Number** - To UDIM tile with the specified number
 
 #### Fit Island
 
@@ -911,6 +917,8 @@ Fit island into defined region
 - **Fit** - Transform Mode
     - *To UV Area* - Fit selection to the UV Area bounds
     - *To Region* - Fit selection to the defined region
+    - *Active UDIM tile* - To active UDIM tile
+    - *Tile Number* - To UDIM tile with the specified number
     - *Fill Islands* - Fit islands to the UV Area, but not keep the proportions
 - **Fit Axis** - Active Axis
     - *U* - U axis
@@ -936,6 +944,8 @@ Fit island into defined region
 - **To 2D Cursor** - Align Islands to 2D Cursor
 - **To UV Area** - Align Islands to UV Area
 - **To Active Component** - Align Islands to Active Component
+- **Active UDIM tile** - To active UDIM tile
+- **Tile Number** - To UDIM tile with the specified number
 
 
 #### Align Islands
@@ -958,6 +968,8 @@ Align selected islands or selection
     - *To 2D Cursor* - To the 2D cursor
     - *To UV Area Bounding Box* - To the bounding box of the UV Area
     - *To Active Component* - To the active component (vertex, edge, face)
+    - *Active UDIM tile* - To active UDIM tile
+    - *Tile Number* - To UDIM tile with the specified number
 - **Position** - Position specified by coordinates to which the alignment will be performed
 - **Align Direction** - The point of the bounding box to which align will be performed
 - **As Direction** - Set the island pivot to be the same as the alignment direction

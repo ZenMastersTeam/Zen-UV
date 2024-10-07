@@ -45,9 +45,27 @@ You can call this menu anywhere.
 !!! tip
     Don't forget to drink some good beer today!
 
+## Update reminder
+
+Reminds you that a new version has been released and you can update the addon.
+
+![update reminder](img/screen/user_interface/update_reminder.png)
+
 # Pie Menu
 
 ![Pie Menu](img/gifs/user_interface/pie_menu.gif)
+
+## Pie Menu interaction
+
+To use alternative commands in the Pie Menu, use a quick keypress. Avoid holding the Pie Menu hotkey for too long. Follow these steps:
+
+Quick keypress:
+
+- Press and immediately release the hotkey to open the Pie Menu.
+- The Pie Menu will stay on the screen, and you can perform alternate actions using modifier keys (Ctrl, Alt, Shift).
+- To do this, press a modifier key and then click the desired option in the Pie Menu.
+
+If you press and hold the hotkey for just over 1 second, the Pie Menu will automatically close once you release it, unless you hover over a section.
 
 ## Operators
 
@@ -66,14 +84,14 @@ You can call this menu anywhere.
 ### Checker | Finished ![Checker Texture](img/icons/checker_32.png)
 
 - `Default` — [**Checker Texture (Toggle)**](checker.md#checker-texture). Add/Remove Checker Texture to/from the mesh.
-- `ALT` — [**Display Stretch Map**](checker.md#stretched). Display an angle-based stretching map.
 - `CTRL` — [**Display Finished**](unwrap.md#display-finished-toggle). Display Finished Islands (Toggle).
+- `ALT` — [**Display Stretch Map**](checker.md#stretched). Display an angle-based stretching map.
 
 ### Unmark | Tag Unfinished ![Unmark Seams](img/icons/unmark-seams@2x.png)
 
 - `Default` — [**Unmark**](unwrap.md#unmark). Unmark selected edges or face borders as Seams and/or Sharp edges.
-- `ALT` — [**Unmark All**](unwrap.md#unmark-all). Remove all Seams and/or Sharp edges from the mesh.
 - `CTRL` — [**Tag Unfinished**](unwrap.md#tag-unfinished). Tag selected Islands as Unfinished.
+- `ALT` — [**Unmark All**](unwrap.md#unmark-all). Remove all Seams and/or Sharp edges from the mesh.
 
 ### Mark | Tag Finished ![Mark Seams](img/icons/mark-seams@2x.png)
 
@@ -83,13 +101,14 @@ You can call this menu anywhere.
 ### Select: Islands | Overlapped ![](img/icons/select.png)
 
 - `Default` — [**Select Islands**](select.md#select-islands). Select Islands by selected edge/face of the Islands.
-- `ALT` — [**Select Overlapped Islands**](select.md#select-overlapped).
 - `CTRL` — [**Select Flipped Islands**](select.md#select-flipped).
+- `ALT` — [**Select Overlapped Islands**](select.md#select-overlapped).
 - `SHIFT` — [**Select Similar Islands**](select.md#select-similar).
 
 ### Isolate Islands (Toggle)
 
-- `Default` — [**Isolate Islands (Toggle)**](select.md#isolate-islands-toggle). Isolate Islands by selected edge/face of the Islands.
+- `Default` — [**Isolate Island (Toggle)**](select.md#isolate-islands-toggle). Isolate Islands by selected edge/face of the Islands.
+- `CTRL` - [**Isolate Part (Toggle)**](select.md#isolate-part-toggle). Isolate mesh part by selected edge/face of the mesh.
 
 ### Mark by Angle
 
@@ -104,6 +123,7 @@ Pie Menu Assist is special help window, which is located below the Pie Menu. The
 
 !!! Assist
     If you want to disable Pie Menu Assist, you can do it here **N-Panel** -> **Zen UV** -> **Preferences** -> **Display** -> **Display Pie Assist**.
+    Or in the **Addon Preferences** -> **UI tab**.
 
 ## Default Shortcut
   Zen UV Pie Menu ![Zen UV Pie Menu](img/icons/zen-uv@2x.png) --- `Alt + U`

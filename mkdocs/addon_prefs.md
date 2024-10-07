@@ -16,6 +16,8 @@ Here you can find information about available new versions and update Zen UV usi
 
 ![](img/screen//addon_prefs/addon_prefs_update.png)
 
+---
+
 ## Keymap
 
 Configure shortcuts on some important operators of the addon.
@@ -30,23 +32,97 @@ Some systems, for example, [**Advanced UV Maps**](adv_uv-maps.md), involve the u
 
 ![](img/screen//addon_prefs/zen_modifier_key.png)
 
+---
+
+## UI
+
+Settings related to the user interface, including the Zen UV combo panel and other UI elements.
+
+![preferences ui](img/screen//addon_prefs/addon_prefs_ui.png)
+
+### Addon N-Panel Name
+
+![tab name](img/screen/addon_prefs/addon_prefs_tab_name.png)
+
+The name of the addon tab in the N-Panel. You can choose from two options:
+
+ - Zen
+ - Zen UV
+
+If you own any addon developed by [zenmasters](https://zenmasters.team), selecting 'Zen' will group all addons under one tab. You only need to switch the name to 'Zen' in all addons and restart Blender.
+
+Here's an example of how to group all addons under one tab in Blender:
+
+  - Open the addon settings (Edit > Preferences > Add-ons).
+  - For each addon you want to group, find the tab name field.
+  - Change the tab name to "Zen" for all addons.
+  - After changing the name in all addons, restart Blender.
+
+This will group all the addons under a single "Zen" tab in the N-Panel.
+
+| ![change panel name](img/gifs/addon_preferences/zen_n_panel.gif) |
+| --- |
+| An example of how to group all Zen addons under one tab in Blender |
+
+### Pie Menu
+
+[<u>The Pie Menu article</u>](user_interface.md#pie-menu)
+
+![pie menu](img/screen/addon_prefs/addon_prefs_pie_menu.png)
+
+- **Display Pie Assist** - Display Pie Help Assist Panel
+- **Pie Assist Font Size** - Pie Assist Font Size
+
+### Right menu
+
+![right menu](img/screen/addon_prefs/addon_prefs_right_menu_assist_option.png)
+
+- **Right Menu Assist** - Enables or disables the 'Add to ZenUV Favorites' option in the right-click menu.
+
+|![right menu](img/screen/addon_prefs/addon_prefs_right_menu_assist.png)|
+|---|
+|Right Menu Assist|
+
+### Adv UV Maps
+
+Enables or disables the use of an eyedropper in the object selection tool in the panel [Adv UV Maps](adv_uv-maps.md#transfer-uv).
+
+![disable eyedropper](img/screen/addon_prefs/addon_prefs_adv_uv_maps_eyedropper.png)
+
+- **Enable Object Eye Dropper** - Warning! If enabled active object becomes multi-user
+
+### Combo Panel subpanels setup
+
+This menu allows you to enable, disable, or toggle subpanels for Zen UV tools into a floating state. Since the addon uses different panels with different functions for various contexts, the settings are displayed separately for the UV Editor (on the left) and the 3D Viewport (on the right). You can adjust the same settings in the [Preferences](preferences.md#panels) panel.
+
+![combo panel setup](img/screen/addon_prefs/combo_panel_subpanels_setup.png)
+
+---
+
 ## Modules
 
 Panel for managing [**Zen UV Core Library**](installation.md) and **Zen UV Relax Application**.
 
 ![](img/screen/addon_prefs/addon_prefs_modules.png)
 
+- **Call Relax Application in Shell** - Relax application is invoked via the shell and is platform-dependent
+NOTE: Use this method if application can not be started via Blender
+
 Also here you can set your custom [**User Script**](user_script.md).
+
+---
 
 ## Sticky UV Editor
 
-Sticky UV Editor is a system that allows opening UV Editor on the left or the right from the active 3D Viewport or as a separate window. Information about Sticky UV preferences you can find [**here**.](https://zenmastersteam.github.io/Zen-UV/latest/sticky_uv_editor/#sticky-uv-editor-properties)
+Sticky UV Editor is a system that allows opening UV Editor on the left or the right from the active 3D Viewport or as a separate window. Information about Sticky UV you can find in the [**Sticky UV Editor**](sticky_uv_editor.md#sticky-uv-editor) article.
 
 
 ![](img/screen/addon_prefs/addon_prefs_sticky.png)
 
+---
+
 ## Help
 
-Here you can find buttons with links to [**Documentation**](index.md), [**Discord**](https://discord.gg/wGpFeME) and subpanel [**Examples**](help.md).
+A section where you can find links to this [**Documentation**](index.md), support via [**Discord**](https://discord.gg/wGpFeME), and download examples for learning and testing. You can find a copy of this section in the [**Help**](help.md) subpanel of the addon's main panel.
 
 ![](img/screen/addon_prefs/addon_prefs_help.png)

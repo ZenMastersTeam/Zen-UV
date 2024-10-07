@@ -121,6 +121,10 @@ Using this tool you can Scroll between Trims and Fit your Islands in the same mo
 
 ![Transform Handles Fit Scroll](img/screen/transform_tool/tt_transform_handles_fit_scroll.gif)
 
+If you use names that divide trims into categories, you can enable an option that will limit trim changes to the selected category only.
+
+![scroll in categories](img/screen/trimsheet/scroll_fit_to_trim_categories.png)
+
 #### Flip `Ctrl + Shift`
 Flip tool is representing [**Flip in Trim**](trimsheet_operators.md/#flip-in-trim) operator and flips selected Islands or Faces/Edges/Vertices.
 

@@ -390,4 +390,10 @@ Isolate Islands (Toggle).
 | --- |
 | Isolate islands |
 
+### Isolate Part (Toggle)
+Isolate Part (Toggle).
+
+| ![Isolate Part](img/gifs/select_operators/Isolate_Part.gif) |
+| --- |
+| Isolate mesh part |
 ---

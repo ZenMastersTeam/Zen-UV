@@ -20,13 +20,13 @@ Shows Texel Density value.
 #### **TD Calc Precision**. 
 Specifies how many percents of the Island's polygon will be used to determine Texel Density.
 
-!!! Preferences
+!!! Properties
     ![Texel Density](img/screen/texel_density/texel_density_options.png)
 
 ### Select by TD
 Select Islands by choosen Texel Density.
 
-!!! Preferences
+!!! Properties
     ![Texel Density](img/screen/texel_density/texel_density_select_td.png)
 
 | Preferences | |

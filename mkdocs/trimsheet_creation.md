@@ -86,14 +86,27 @@ There is exactly one active trim in the curent trim sheet. It is highlighted in 
 
 ![](img/screen/trimsheet/active_trim.png)
 
+---
+
 #### Select Active Trim with Preview Panel
 You can select active trim with preview panel.
 
-1. You need to press `Preview` button and after
+1. Open **Trim Preview** subpanel and press on the picture.
+
 ![](img/screen/trimsheet/trim_preview_panel.png)
 
 2. Select a corresponding trim
+
 ![](img/screen/trimsheet/trim_preview_select.png)
+
+- **Auto Fit** - Execute fit to trim operation after trim is selected in preview. As a result, you can texture the selected island simply by choosing the appropriate image.
+- **Update Trim Preview** - Rebuild trim preview icons
+
+|![trim preview auto fit](img/screen/trimsheet/trim_preview_auto_fit.gif)|
+|---|
+|Trim Preview and **Auto Fit** option|
+
+---
 
 ### Selected Trims
 Selected trims are indicated with tickmarks in trim sheet UI list and have a blue shape border in trim editor
@@ -168,6 +181,9 @@ Create grid of trims inside active, selected trims, from zero coordinates or 2D 
 
 #### Add Trim UDIM
 Creates trims in positions and with UDIM tile sizes
+
+#### Add Trims From Zen Sets
+Create trims from Zen Sets groups mesh elements with keeping its names
 
 #### Set Trim World Size
 Set trim 'World Size' property based on texture size. Works on selected trims

@@ -454,9 +454,9 @@
     - За допомогою властивості ребра Sharp.
 
     Обидва способи можуть діяти одночасно, що часто приводить до артефактів при використанні карти нормалей (normal map).
-    Оскільки ми вже встановили sharp edges так як нам потрібно за допомогою властивості ребер Sharp, виключимо можливість впливу властивості полігонів Smooth/Sharp на гостроту ребер. В Zen UV для цього існує оператор [Smooth by Sharp](../../unwrap.md#smooth-by-sharp-toggle).
+    Оскільки ми вже встановили sharp edges так як нам потрібно за допомогою властивості ребер Sharp, виключимо можливість впливу властивості полігонів Smooth/Sharp на гостроту ребер. В Zen UV для цього існує оператор [Smooth by Sharp](../../unwrap.md#smooth-by-sharp).
 
-    - Натисніть кнопку [Smooth by Sharp](../../unwrap.md#smooth-by-sharp-toggle). Це встановить всі згладжування полігонів у відповідність до sharp edges.
+    - Натисніть кнопку [Smooth by Sharp](../../unwrap.md#smooth-by-sharp). Це встановить всі згладжування полігонів у відповідність до sharp edges.
 
     ![](../../img/tutorial/emergency_light/smooth_by_sharp.gif)
 

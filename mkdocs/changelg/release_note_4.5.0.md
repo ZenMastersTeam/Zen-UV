@@ -8,7 +8,7 @@
 
 ## **UI**
 
-- Added option to disable the entire addon panel from N-panel.
+- Added user script to disable the entire addon panel from N-panel.
 - Added the ability to select the name of the addon's N-panel tab (Zen or ZenUV).
 
 ## **Operators**
@@ -55,7 +55,7 @@
 
 - Added Islands Counter operator to Stack panel.
 
-### **Favorites**
+### **Favourites**
 
 - Added the ability to not display a category.
 - Added functionality for creating a control in the control properties, where only the options specified by the user are included.

@@ -1,7 +1,7 @@
 # Help
 
 !!! Panel
-    ![Help](img/screen/help/help.png)
+    ![Help](img/screen/help/help_panel.png)
 
 ### [Documentation](index.md)
 
@@ -10,6 +10,10 @@
 ### ![Discord](img/icons/services/discord-16.png) [**Discord**](https://discord.gg/wGpFeME)
 
 [**Discord channel**](https://discord.gg/wGpFeME) for user feedback, bug reports, and help with Zen UV.
+
+### Recommended Addons
+
+Links to addons that [zenmasters](https://zenmasters.team) recommends for use.
 
 ### Version
 
@@ -28,6 +32,9 @@ Here you can find models from [**Zen UV YouTube Playlist**](https://youtube.com/
 !!! Subpanel
      ![Preferences](img/screen/help/help_examples.gif)
 
+Starting from Blender version 4.2.1, internet access is disabled by default. In this case, Zen UV cannot retrieve examples stored online. If access is deactivated, you'll see a button that opens Blender's settings, where you need to enable the Allow Online Access option.
+
+![online access](img/screen/help/examples_online_acces_disabled.png)
 
 ### Update
 Update the list of examples.
@@ -46,8 +53,6 @@ Open selected website.
 
 ### Delete
 Delete selected scene.
-
-
 
 ### More Info
 Open webpage with all the information about example.

@@ -449,9 +449,9 @@ The packing and stacking is completed. There are only a few final steps left to 
     - By using the Sharp edge property.
 
     Both methods can work simultaneously, which often leads to artifacts when using the normal map.
-    Since we have already set the sharp edges as we need them using the Sharp edge property, let's exclude the possibility of the Smooth/Sharp polygon property affecting the sharpness of the edges. In Zen UV, there is a [Smooth by Sharp](../../unwrap.md#smooth-by-sharp-toggle) operator.
+    Since we have already set the sharp edges as we need them using the Sharp edge property, let's exclude the possibility of the Smooth/Sharp polygon property affecting the sharpness of the edges. In Zen UV, there is a [Smooth by Sharp](../../unwrap.md#smooth-by-sharp) operator.
 
-    - Click the [Smooth by Sharp](../../unwrap.md#smooth-by-sharp-toggle) button. This will set all polygon smoothing to match sharp edges.
+    - Click the [Smooth by Sharp](../../unwrap.md#smooth-by-sharp) button. This will set all polygon smoothing to match sharp edges.
 
     ![](../../img/tutorial/emergency_light/smooth_by_sharp.gif)
 
