@@ -107,13 +107,11 @@
                   </li>
                   <li class="toctree-l1 current"><a class="reference internal current" href="#">Sticky UV Editor</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#sticky-uv-editor-properties">Sticky UV Editor Properties</a>
+    <li class="toctree-l2"><a class="reference internal" href="#sticky-uv-editor-preferences">Sticky UV Editor Preferences</a>
         <ul>
     <li class="toctree-l3"><a class="reference internal" href="#general">General</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#overlay">Overlay</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#view">View</a>
+    <li class="toctree-l3"><a class="reference internal" href="#save-and-restore">Save and Restore</a>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#about">About</a>
     </li>
@@ -183,19 +181,34 @@
 <p><a class="glightbox" href="../img/screen/sticky_uv_editor/sticky_uv_editor_preview.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/sticky_uv_editor/sticky_uv_editor_preview.gif" /></a> </p>
 <p><a class="glightbox" href="../img/screen/sticky_uv_editor/stk_widget.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/sticky_uv_editor/stk_widget.png" /></a></p>
 <p>The side opening UV Editor depends on the on-screen position of the widget.</p>
-<h2 id="sticky-uv-editor-properties">Sticky UV Editor Properties<a class="headerlink" href="#sticky-uv-editor-properties" title="Permanent link"></a></h2>
-<p>The properties of the Sticky UV Editor are placed in the addon preferences.</p>
-<p><a class="glightbox" href="../img/screen/sticky_uv_editor/stk_uv_ed_prefs.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/sticky_uv_editor/stk_uv_ed_prefs.png" /></a></p>
+<h2 id="sticky-uv-editor-preferences">Sticky UV Editor Preferences<a class="headerlink" href="#sticky-uv-editor-preferences" title="Permanent link"></a></h2>
+<p>The properties of the Sticky UV Editor are placed in the <a href="../addon_prefs/#sticky-uv-editor">addon preferences</a>.</p>
+<p>To quickly open the Sticky UV Editor settings, press Ctrl + Shift + LMB (Left Mouse Button) on the widget located in the 3D Viewport.</p>
+<div class="admonition panel">
+<p class="admonition-title">Panel</p>
+<p><a class="glightbox" href="../img/screen/sticky_uv_editor/stk_uv_ed_prefs.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Stk UV Editor General tab" src="../img/screen/sticky_uv_editor/stk_uv_ed_prefs.png" /></a></p>
+</div>
 <h3 id="general">General<a class="headerlink" href="#general" title="Permanent link"></a></h3>
 <ul>
 <li><strong>UV Editor Side</strong> - The side where the UV Editor will be shown.</li>
-<li><strong>Show Operate Button</strong> - The visibility of the on-screen widget. Next on the checkbox is the field for the position of the widget.</li>
-<li><strong>Remember UV Editor Settings</strong> - Every time UV Editor is opened, all the options activated in the previous session will be remembered and restored to the current session.</li>
+<li><strong>Show Overlay Button</strong> - The visibility of the on-screen widget.</li>
+<li><strong>Button Position Mode</strong> - The position of the on-screen widget.<ul>
+<li><em>Percentage</em> - Horizontal and vertical positions in percents</li>
+<li><em>Gizmo Column</em> - Button will be placed in viewport gizmo group column.</li>
 </ul>
-<h3 id="overlay">Overlay<a class="headerlink" href="#overlay" title="Permanent link"></a></h3>
-<p>The Overlay tab is the copy of the Blender&rsquo;s UV Editor Overlay popup. Once usage of the <strong>Remember UV Editor Settings</strong> is not needed, all the settings from the Overlay tab will be used for every creation of the UV Editor until the user changes the options manually.</p>
-<h3 id="view">View<a class="headerlink" href="#view" title="Permanent link"></a></h3>
-<p>The View tab has the same purposes as the <strong>Overlay</strong> tab. Except of controls. It tune the state of the panels in the UV Editor.</p>
+</li>
+<li><strong>Vertical Position, %</strong> - The vertical position of the button in percentages.</li>
+<li><strong>Horizontal Position, %</strong> - The horizontal position of the button in percentages.</li>
+</ul>
+<h3 id="save-and-restore">Save and Restore<a class="headerlink" href="#save-and-restore" title="Permanent link"></a></h3>
+<p>The Save and Restore tab is the copy of the Blender&rsquo;s UV Editor Overlay popup. Once usage of the <strong>Remember UV Editor Settings</strong> is not needed, all the settings from the Overlay tab will be used for every creation of the UV Editor until the user changes the options manually.</p>
+<div class="admonition panel">
+<p class="admonition-title">Panel</p>
+<p><a class="glightbox" href="../img/screen/sticky_uv_editor/sticky_uv_editor_save_restore_tab.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Stk UV Editor Save and Restore tab" src="../img/screen/sticky_uv_editor/sticky_uv_editor_save_restore_tab.png" /></a></p>
+</div>
+<ul>
+<li><strong>Remember UV Editor Settings</strong> - Remember changes made in UV Editor on area close event</li>
+</ul>
 <h3 id="about">About<a class="headerlink" href="#about" title="Permanent link"></a></h3>
 <p>The original idea and the development of the Sticky UV Editor belong to Oleg Stepanov (DotBow).
 So, here is the <a href="https://github.com/DotBow/Blender-Sticky-UV-Editor-Add-on">link</a> to the page with an original addon.</p>

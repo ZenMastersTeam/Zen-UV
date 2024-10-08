@@ -168,6 +168,8 @@
     </li>
     <li class="toctree-l4"><a class="reference internal" href="#add-trim-udim">Add Trim UDIM</a>
     </li>
+    <li class="toctree-l4"><a class="reference internal" href="#add-trims-from-zen-sets">Add Trims From Zen Sets</a>
+    </li>
     <li class="toctree-l4"><a class="reference internal" href="#set-trim-world-size">Set Trim World Size</a>
     </li>
     <li class="toctree-l4"><a class="reference internal" href="#frame-trim">Frame Trim</a>
@@ -467,18 +469,34 @@ Trim sheet data is taken either from property trimsheet image of the active mate
 <h3 id="active-trim">Active Trim<a class="headerlink" href="#active-trim" title="Permanent link"></a></h3>
 <p>There is exactly one active trim in the curent trim sheet. It is highlighted in trim sheet UI list and surrounded with handles in trim editor</p>
 <p><a class="glightbox" href="../img/screen/trimsheet/active_trim.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/trimsheet/active_trim.png" /></a></p>
+<hr />
 <h4 id="select-active-trim-with-preview-panel">Select Active Trim with Preview Panel<a class="headerlink" href="#select-active-trim-with-preview-panel" title="Permanent link"></a></h4>
 <p>You can select active trim with preview panel.</p>
 <ol>
-<li>
-<p>You need to press <code>Preview</code> button and after
-<a class="glightbox" href="../img/screen/trimsheet/trim_preview_panel.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/trimsheet/trim_preview_panel.png" /></a></p>
-</li>
-<li>
-<p>Select a corresponding trim
-<a class="glightbox" href="../img/screen/trimsheet/trim_preview_select.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/trimsheet/trim_preview_select.png" /></a></p>
-</li>
+<li>Open <strong>Trim Preview</strong> subpanel and press on the picture.</li>
 </ol>
+<p><a class="glightbox" href="../img/screen/trimsheet/trim_preview_panel.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/trimsheet/trim_preview_panel.png" /></a></p>
+<ol>
+<li>Select a corresponding trim</li>
+</ol>
+<p><a class="glightbox" href="../img/screen/trimsheet/trim_preview_select.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/trimsheet/trim_preview_select.png" /></a></p>
+<ul>
+<li><strong>Auto Fit</strong> - Execute fit to trim operation after trim is selected in preview. As a result, you can texture the selected island simply by choosing the appropriate image.</li>
+<li><strong>Update Trim Preview</strong> - Rebuild trim preview icons</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><a class="glightbox" href="../img/screen/trimsheet/trim_preview_auto_fit.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="trim preview auto fit" src="../img/screen/trimsheet/trim_preview_auto_fit.gif" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Trim Preview and <strong>Auto Fit</strong> option</td>
+</tr>
+</tbody>
+</table>
+<hr />
 <h3 id="selected-trims">Selected Trims<a class="headerlink" href="#selected-trims" title="Permanent link"></a></h3>
 <p>Selected trims are indicated with tickmarks in trim sheet UI list and have a blue shape border in trim editor</p>
 <p><a class="glightbox" href="../img/screen/trimsheet/selected_trims.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/trimsheet/selected_trims.png" /></a></p>
@@ -571,6 +589,8 @@ Sort objects in ascending or descending order. This also applies to alphabetical
 <p>Create grid of trims inside active, selected trims, from zero coordinates or 2D cursor position</p>
 <h4 id="add-trim-udim">Add Trim UDIM<a class="headerlink" href="#add-trim-udim" title="Permanent link"></a></h4>
 <p>Creates trims in positions and with UDIM tile sizes</p>
+<h4 id="add-trims-from-zen-sets">Add Trims From Zen Sets<a class="headerlink" href="#add-trims-from-zen-sets" title="Permanent link"></a></h4>
+<p>Create trims from Zen Sets groups mesh elements with keeping its names</p>
 <h4 id="set-trim-world-size">Set Trim World Size<a class="headerlink" href="#set-trim-world-size" title="Permanent link"></a></h4>
 <p>Set trim &lsquo;World Size&rsquo; property based on texture size. Works on selected trims</p>
 <h4 id="frame-trim">Frame Trim<a class="headerlink" href="#frame-trim" title="Permanent link"></a></h4>

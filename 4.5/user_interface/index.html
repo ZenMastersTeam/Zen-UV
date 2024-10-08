@@ -72,6 +72,8 @@
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#popup-combo-panel">Popup Combo Panel</a>
     </li>
+    <li class="toctree-l2"><a class="reference internal" href="#update-reminder">Update reminder</a>
+    </li>
     </ul>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" >Tutorial</a>
@@ -205,8 +207,20 @@ You can call this menu anywhere.</p>
 <p class="admonition-title">Tip</p>
 <p>Don&rsquo;t forget to drink some good beer today!</p>
 </div>
+<h2 id="update-reminder">Update reminder<a class="headerlink" href="#update-reminder" title="Permanent link"></a></h2>
+<p>Reminds you that a new version has been released and you can update the addon.</p>
+<p><a class="glightbox" href="../img/screen/user_interface/update_reminder.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="update reminder" src="../img/screen/user_interface/update_reminder.png" /></a></p>
 <h1 id="pie-menu">Pie Menu<a class="headerlink" href="#pie-menu" title="Permanent link"></a></h1>
 <p><a class="glightbox" href="../img/gifs/user_interface/pie_menu.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Pie Menu" src="../img/gifs/user_interface/pie_menu.gif" /></a></p>
+<h2 id="pie-menu-interaction">Pie Menu interaction<a class="headerlink" href="#pie-menu-interaction" title="Permanent link"></a></h2>
+<p>To use alternative commands in the Pie Menu, use a quick keypress. Avoid holding the Pie Menu hotkey for too long. Follow these steps:</p>
+<p>Quick keypress:</p>
+<ul>
+<li>Press and immediately release the hotkey to open the Pie Menu.</li>
+<li>The Pie Menu will stay on the screen, and you can perform alternate actions using modifier keys (Ctrl, Alt, Shift).</li>
+<li>To do this, press a modifier key and then click the desired option in the Pie Menu.</li>
+</ul>
+<p>If you press and hold the hotkey for just over 1 second, the Pie Menu will automatically close once you release it, unless you hover over a section.</p>
 <h2 id="operators">Operators<a class="headerlink" href="#operators" title="Permanent link"></a></h2>
 <h3 id="quadrify-relax">Quadrify | Relax <a class="glightbox" href="../img/icons/quadrify_32.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Quadrify Islands" src="../img/icons/quadrify_32.png" /></a><a class="headerlink" href="#quadrify-relax" title="Permanent link"></a></h3>
 <ul>
@@ -223,14 +237,14 @@ You can call this menu anywhere.</p>
 <h3 id="checker-finished">Checker | Finished <a class="glightbox" href="../img/icons/checker_32.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Checker Texture" src="../img/icons/checker_32.png" /></a><a class="headerlink" href="#checker-finished" title="Permanent link"></a></h3>
 <ul>
 <li><code>Default</code> — <a href="../checker/#checker-texture"><strong>Checker Texture (Toggle)</strong></a>. Add/Remove Checker Texture to/from the mesh.</li>
-<li><code>ALT</code> — <a href="../checker/#stretched"><strong>Display Stretch Map</strong></a>. Display an angle-based stretching map.</li>
 <li><code>CTRL</code> — <a href="../unwrap/#display-finished-toggle"><strong>Display Finished</strong></a>. Display Finished Islands (Toggle).</li>
+<li><code>ALT</code> — <a href="../checker/#stretched"><strong>Display Stretch Map</strong></a>. Display an angle-based stretching map.</li>
 </ul>
 <h3 id="unmark-tag-unfinished">Unmark | Tag Unfinished <a class="glightbox" href="../img/icons/unmark-seams%402x.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Unmark Seams" src="../img/icons/unmark-seams%402x.png" /></a><a class="headerlink" href="#unmark-tag-unfinished" title="Permanent link"></a></h3>
 <ul>
 <li><code>Default</code> — <a href="../unwrap/#unmark"><strong>Unmark</strong></a>. Unmark selected edges or face borders as Seams and/or Sharp edges.</li>
-<li><code>ALT</code> — <a href="../unwrap/#unmark-all"><strong>Unmark All</strong></a>. Remove all Seams and/or Sharp edges from the mesh.</li>
 <li><code>CTRL</code> — <a href="../unwrap/#tag-unfinished"><strong>Tag Unfinished</strong></a>. Tag selected Islands as Unfinished.</li>
+<li><code>ALT</code> — <a href="../unwrap/#unmark-all"><strong>Unmark All</strong></a>. Remove all Seams and/or Sharp edges from the mesh.</li>
 </ul>
 <h3 id="mark-tag-finished">Mark | Tag Finished <a class="glightbox" href="../img/icons/mark-seams%402x.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Mark Seams" src="../img/icons/mark-seams%402x.png" /></a><a class="headerlink" href="#mark-tag-finished" title="Permanent link"></a></h3>
 <ul>
@@ -240,13 +254,14 @@ You can call this menu anywhere.</p>
 <h3 id="select-islands-overlapped">Select: Islands | Overlapped <a class="glightbox" href="../img/icons/select.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/icons/select.png" /></a><a class="headerlink" href="#select-islands-overlapped" title="Permanent link"></a></h3>
 <ul>
 <li><code>Default</code> — <a href="../select/#select-islands"><strong>Select Islands</strong></a>. Select Islands by selected edge/face of the Islands.</li>
-<li><code>ALT</code> — <a href="../select/#select-overlapped"><strong>Select Overlapped Islands</strong></a>.</li>
 <li><code>CTRL</code> — <a href="../select/#select-flipped"><strong>Select Flipped Islands</strong></a>.</li>
+<li><code>ALT</code> — <a href="../select/#select-overlapped"><strong>Select Overlapped Islands</strong></a>.</li>
 <li><code>SHIFT</code> — <a href="../select/#select-similar"><strong>Select Similar Islands</strong></a>.</li>
 </ul>
 <h3 id="isolate-islands-toggle">Isolate Islands (Toggle)<a class="headerlink" href="#isolate-islands-toggle" title="Permanent link"></a></h3>
 <ul>
-<li><code>Default</code> — <a href="../select/#isolate-islands-toggle"><strong>Isolate Islands (Toggle)</strong></a>. Isolate Islands by selected edge/face of the Islands.</li>
+<li><code>Default</code> — <a href="../select/#isolate-islands-toggle"><strong>Isolate Island (Toggle)</strong></a>. Isolate Islands by selected edge/face of the Islands.</li>
+<li><code>CTRL</code> - <a href="../select/#isolate-part-toggle"><strong>Isolate Part (Toggle)</strong></a>. Isolate mesh part by selected edge/face of the mesh.</li>
 </ul>
 <h3 id="mark-by-angle">Mark by Angle<a class="headerlink" href="#mark-by-angle" title="Permanent link"></a></h3>
 <ul>
@@ -258,7 +273,8 @@ You can call this menu anywhere.</p>
 <p>Pie Menu Assist is special help window, which is located below the Pie Menu. There you can find, highlight and execute all the alternative <code>ALT</code>, <code>CTRL</code>, <code>SHIFT</code> Pie Menu commands.</p>
 <div class="admonition assist">
 <p class="admonition-title">Assist</p>
-<p>If you want to disable Pie Menu Assist, you can do it here <strong>N-Panel</strong> -&gt; <strong>Zen UV</strong> -&gt; <strong>Preferences</strong> -&gt; <strong>Display</strong> -&gt; <strong>Display Pie Assist</strong>.</p>
+<p>If you want to disable Pie Menu Assist, you can do it here <strong>N-Panel</strong> -&gt; <strong>Zen UV</strong> -&gt; <strong>Preferences</strong> -&gt; <strong>Display</strong> -&gt; <strong>Display Pie Assist</strong>.
+Or in the <strong>Addon Preferences</strong> -&gt; <strong>UI tab</strong>.</p>
 </div>
 <h2 id="default-shortcut">Default Shortcut<a class="headerlink" href="#default-shortcut" title="Permanent link"></a></h2>
 <p>Zen UV Pie Menu <a class="glightbox" href="../img/icons/zen-uv%402x.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Zen UV Pie Menu" src="../img/icons/zen-uv%402x.png" /></a> &mdash; <code>Alt + U</code></p>
