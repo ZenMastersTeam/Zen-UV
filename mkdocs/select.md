@@ -50,6 +50,12 @@
 <td style="text-align: center;"><a href="#get-selected-area">Get Selected Area</a></td>
 <td style="text-align: center;"><a href="#isolate-islands-toggle">Isolate Islands (Toggle)</a></td>
 </tr>
+<tr>
+<td style="text-align: center;"><a href="#select-holed-islands">Holed Islands</a></td>
+<td style="text-align: center;"><a href="#select-zero-area-faces">Zero Area Faces</a></td>
+<td style="text-align: center;"><a href="#select-faces-less-than-one-pixel">Faces Less than Pixel</a></td>
+<td style="text-align: center;"><a href="#isolate-part-toggle">Isolate Part (Toggle)</a></td>
+</tr>
 </tbody>
 </table>
 
@@ -188,6 +194,7 @@ Select Islands in bounding box of active UDIM Tile or UV Area.
     - *Inside* - Inside of UV Area
     - *Outside* - Outside of UV Area
     - *Cross* - Crossing of UV Area borders
+    - *Check Margin* - Select islands where the margin between islands within the defined area and the area itself are less than the specified value.
 - **Tile Number** - Number of UDIM tile
 
 ---
@@ -230,6 +237,24 @@ Select islands that consist only of quads.
  - **Mode** - Selection type
     - *Select* - Select edges
     - *Deselect* - Deselect edges
+
+---
+### Select Holed Islands
+Selects islands that have holes within their geometry.
+
+| ![Select_Holed_Islands](img\gifs\select_operators\Select_Holed_Islands.gif) |
+| --- |
+| Select holed islands |
+
+!!! Properties
+      ![Select Holed Islands Props](img/screen/select/select_holed_islands_op_prop.png)
+
+- **Clear Selection** - Clear initial selection
+
+!!! Tip
+    In most cases, this operator is convenient for identifying islands that can be processed with the Quadrify operator.
+
+---
 
 ### Select Cylinder Edges (Splits)
 Select island edges that belong to the same mesh edge and split the island by itself.
@@ -336,16 +361,45 @@ After you run this operator, the Multiplied Area value goes into the Select by U
 
 
   - **Mode** - The area of what should be obtained? Islands or faces.
-    - *Island* - Island selection mode
-    - *Faces* - Faces selection mode
+    - *Island* - Island selection mode.
+    - *Faces* - Faces selection mode.
   - **Average** - Averaging.
   - **Real Area** - The area within the UV Editor is very small. This value shows the real area.
   - **Real UV Area** - Same value as Real Area, but in full size.
   - **Multiplied Area** - The same value as the Real Area, but multiplied for easier use.
 
 ---
+### Select Zero Area Faces
+Selects islands with zero area.
+
+This is the [Select by UV Area](#select-by-uv-area) operator with **Condition - Zero Area** and **Threshold - 0.0 (zero)** activated. You can adjust its settings after execution through the operator properties.
+
+| ![Select Zero Area Faces](img/screen/select/sel_by_uv_area_zero_preset.png) |
+| --- |
+| Activated preset "select zero area faces" with zero threshold. |
+
+---
+### Select Faces Less than Pixel
+Selects faces with an area less than the specified number of pixels.
+
+!!! Properties
+    ![Select Zero Area Faces](img/screen/select/sel_faces_less_than_pixel_op_prop.png)
+
+- **Clear Selection** - Clear initial selection.
+- **Pixel Count** - Number of pixels for the calculation.
+- **Area Threshold** - Tolerance level for face area selection.
+
+!!! Warning
+    This operator works only in the UV Editor context and requires an active texture in the UV Editor.
+
+---
 ### Convert Face to Loops
 Convert selected mesh faces to UV loops.
+
+!!! Properties
+    ![Convert Face To Loops](img/screen/select/sel_faces_to_loops_op_prop.png)
+
+- **Toggle UV Sync** - Toggle UV Sync Selection
 
 | ![Select Face to Loops](img/gifs/select_operators/Select_Face_to_Loops.gif) |
 | --- |
@@ -355,6 +409,11 @@ Convert selected mesh faces to UV loops.
 ### Convert Edges to Loops
 Convert selected mesh edges to UV loops.
 
+!!! Properties
+    ![Convert Face To Loops](img/screen/select/sel_edges_to_loops_op_prop.png)
+
+- **Toggle UV Sync** - Toggle UV Sync Selection
+
 | ![Select Edges to Loops](img/gifs/select_operators/Select_Edges_to_Loops.gif) |
 | --- |
 | Select Edges to Loops |
@@ -363,6 +422,11 @@ Convert selected mesh edges to UV loops.
 ### Convert Loops to Face
 Only for UV Sync Selection - off. Convert selected UV loops to mesh face selection.
 
+!!! Properties
+    ![Convert Face To Loops](img/screen/select/sel_faces_to_loops_op_prop.png)
+
+- **Toggle UV Sync** - Toggle UV Sync Selection
+
 | ![Convert Loops to Face](img/gifs/select_operators/Select_Loops_to_Face.gif) |
 | --- |
 | Convert Loops to Face |
@@ -370,6 +434,11 @@ Only for UV Sync Selection - off. Convert selected UV loops to mesh face selecti
 ---
 ### Convert Loop to Edge
 Only for UV Sync Selection - off. Convert selected UV loop to mesh edge selection.
+
+!!! Properties
+    ![Convert Face To Loops](img/screen/select/sel_edges_to_loops_op_prop.png)
+
+- **Toggle UV Sync** - Toggle UV Sync Selection
 
 | ![Convert Loop to Edge](img/gifs/select_operators/Select_Loop_to_Edge.gif) |
 | --- |

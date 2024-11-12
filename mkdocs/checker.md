@@ -304,6 +304,18 @@ Object name | total UV islands in the object | number of visible islands | numbe
 
 ![island counter console](img/screen/tex_checker/tools_islands_counter_full_info.png)
 
+#### Calc UV Edges Length
+Calculates the lengths of the selected edges.
+
+The operator has no properties. Instead, it displays information in the status bar, popup window, and system console. The pixels size calculates from the active image in the UV Editor.
+![Calc UV Edges Length](img/screen/tex_checker/calc_uv_edges_length.png)
+
+|![](img/screen/tex_checker/calc_uv_edges_length_console.png)|
+|---|
+|*Calc UV Edges Length* console output example|
+
+
+
 #### Clear Attributes
 
 Clear mesh attributes used in Zen UV. Finished and Excluded.

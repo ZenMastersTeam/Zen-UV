@@ -131,6 +131,12 @@ Pie Menu Assist is special help window, which is located below the Pie Menu. The
 !!! Shortcut
     If you don't like default Pie Menu Shortcut, it can be changed here **Edit** -> **Preferences** -> **Add-ons** -> **Zen UV** -> **Keymap**. Don't forget to change Shortcut for both contexts Mesh and UV Editor.
 
+# Progress Bar
+
+**Progress Bar** is designed to display the progress of the operator execution process. Not all operators use the **Progress Bar**, only those that require complex calculations. On some operating systems of the **Linux** family, the **Progress Bar** can cause Blender to crash. To avoid this situation, you can disable the Progress Bar in [**Panel - Preferences - Display Progress Bar.**](preferences.md/#display)
+
+![Progress Bar](img/screen/preferences/ProgressBar_main.gif)
+
 # Transform Tool
 
 Move, Rotate, Scale, Fit, Align and Flip selected Islands or Faces/Edges/Vertices in 3D Viewport and UV Editor using Zen UV Gizmo.
@@ -160,3 +166,11 @@ You can find this operator in UV Editor Overlay.
 
 !!! Warning
     This option affects on current render settings. Do not forget to switch it off before rendering.
+
+### Right menu assist
+
+- **Right Menu Assist** - Enables or disables the 'Add to ZenUV Favorites' option in the right-click menu.
+
+|![right menu](img/screen/addon_prefs/addon_prefs_right_menu_assist.png)|
+|---|
+|Right Menu Assist|

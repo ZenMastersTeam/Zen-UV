@@ -59,6 +59,14 @@ Advanced Maps system detects synchronization status of all UV Maps in the select
 | |
 
 ---
+## Sync Seams by UV Islands
+When changing the UV Map, seams are updated according to the UV islands present in the map.
+
+!!! Panel
+    ![Sync Seams](img/screen/adv_uv_map/sync_seam_button.png)
+
+
+---
 ## Duplicate active UV Map
 
 !!! Button

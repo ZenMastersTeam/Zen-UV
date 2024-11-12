@@ -77,11 +77,7 @@ This will group all the addons under a single "Zen" tab in the N-Panel.
 
 ![right menu](img/screen/addon_prefs/addon_prefs_right_menu_assist_option.png)
 
-- **Right Menu Assist** - Enables or disables the 'Add to ZenUV Favorites' option in the right-click menu.
-
-|![right menu](img/screen/addon_prefs/addon_prefs_right_menu_assist.png)|
-|---|
-|Right Menu Assist|
+- **Right Menu Assist** - Enables or disables the 'Add to ZenUV Favorites' option in the right-click menu. More info in the article [User Interface](user_interface.md/#right-menu-assist)
 
 ### Adv UV Maps
 
