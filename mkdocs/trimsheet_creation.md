@@ -207,6 +207,9 @@ Deletes all trims in the trim sheet
 ### Preset Selector
 A list of available presets. A selection will override the included properties.
 
+!!! Notice
+    If name in preset selector is marked with asterix then it shows name of category and active preset is not selected
+
 ### Add
 New presets can be added based on a predefined set of properties, which will be saved for later reuse. A pop-up opens where you can set a name after which you can select it from the list and in some cases additional settings.
 
