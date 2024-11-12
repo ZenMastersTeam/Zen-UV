@@ -104,7 +104,7 @@ Rename UV maps of selected objects
 - **UV Maps source** - Rename UV maps mode
     - *Selected* - Operates on the currently selected UV Map items in the list
     - *All* - Operates on all UV Map items in the list
-- *Find* - The text to search for in names
+- **Find** - The text to search for in names
     - _1) if text is empty then all name will be renamed_
     - _2) if 'Use Regex' is set then text must be a valid regular expression_
 - **Replace** - The text to replace for in matching names found from the 'Find' text
@@ -119,16 +119,16 @@ Rename UV maps of selected objects
 
 | ![](img/screen/adv_uv_map/rename_bake.gif) |
 |---|
-|Rename UV Maps|
+| Rename UV Maps |
 
 
 ### Generate UV Map names from template
 
 If you have naming convension for UV Maps in your projects, you can create template preset and quickly rename all UV Maps in one click
 
-| UV Map naming preset |
-|---|
 | ![](img/screen/adv_uv_map/rename_template.gif) |
+|---|
+| UV Map naming preset |
 
 ---
 
@@ -148,6 +148,7 @@ Allows transferring the UV coordinates between UV Maps.
 
 | ![](img/screen/adv_uv_map/copy_paste_UV.gif) |
 |---|
+| Example showing how to copy and paste UVs |
 
 #### Copy UV 
 
@@ -165,7 +166,9 @@ Paste the UV coordinates.
 
 Remove all inactive UV Maps.
 
-![](img/screen/adv_uv_map/adv_uv_map_clean_inactive.gif)
+| ![](img/screen/adv_uv_map/adv_uv_map_clean_inactive.gif) |
+|---|
+| Clean UV Maps |
 
 ---
 
@@ -173,15 +176,20 @@ Remove all inactive UV Maps.
 
 Set UV Map name by its Index in the list.
 
-![](img/screen/adv_uv_map/adv_uv_map_rename_by_index.gif)
+| ![](img/screen/adv_uv_map/adv_uv_map_rename_by_index.gif) |
+|---|
+| Set UV Map name by index |
 
 ---
 
 ## Transfer UV
 | ![](img/screen/adv_uv_map/transfer_uv_maps.png) |
 |---|
+| Transfer UV panel |
 
-![](img/screen/adv_uv_map/transfer_uv_maps.gif)
+| ![](img/screen/adv_uv_map/transfer_uv_maps.gif) |
+|---|
+| Example showing how to transfer UVs |
 
 | Transfer Modes | |
 |---|---|
