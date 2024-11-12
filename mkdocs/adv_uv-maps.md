@@ -58,8 +58,23 @@ Advanced Maps system detects synchronization status of all UV Maps in the select
 |---|
 | |
 
+### Set Active UV Map
+Active UV Map can be changed either by clicking in the [list](#advanced-uv-maps-list) or by assigning hotkey which will change active UV Map according to its index in the [list](#advanced-uv-maps-list).
+
+!!! Notice
+    It is recommended to [synchronize](#sync-uv-maps-sync-button) all UV Maps in all objects if you are planning to switch advanced UV Maps by hotkeys
+
+| ![](img/screen/adv_uv_map/set_adv_maps_index.gif) |
+|---|
+| Setting active UV Map by hotkey |
+
+!!! Warning
+    Operator property flag **Used in UI** must be unset in keymap properties
+
+    ![](img/screen/adv_uv_map/hotkey_flag_used_in_ui.png)
+
 ---
-## Duplicate active UV Map
+## Duplicate Active UV Map
 
 !!! Button
     ![Add Button](img/icons/plus.png)
