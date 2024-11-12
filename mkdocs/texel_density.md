@@ -187,6 +187,8 @@ You can Save TD Presets for your projects to and Share TD Presets with team.
 | **Remove** | Remove Preset.|
 | **Open Presets Folder** | Open Presets Folder.|
 
+!!! Notice
+    If name in preset selector is marked with asterix then it shows name of category and active preset is not selected
 
 ### Get TD
 
