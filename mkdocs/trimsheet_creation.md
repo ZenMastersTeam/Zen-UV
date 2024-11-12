@@ -121,39 +121,22 @@ It is also possible to select trim by `LMB` in the viewport by activating select
 
 ![](img/screen/trimsheet/trim_select_mode.png)
 
-#### Rename
-By double-clicking on an item, you can edit its name via a text field. This can also be achieved by pressing `Ctrl-LMB` over it.
-#### Resize
-The list view can be resized to show more or fewer items. Hover the mouse over the handle `(==)` then click and drag the handle to expand or shrink the list.
-#### Filter
-Click the Show filtering options button (+) to toggle filter option buttons.
+- **Rename** - By double-clicking on an item, you can edit its name via a text field. This can also be achieved by pressing `Ctrl-LMB` over it.
+- **Resize** - The list view can be resized to show more or fewer items. Hover the mouse over the handle `(==)` then click and drag the handle to expand or shrink the list.
+- **Filter** - Click the Show filtering options button (+) to toggle filter option buttons.
 
-- **Search**: <BR>
-Type part of a list item’s name in the filter text field to filter items by part of their name.
-- **Filter Include**: <BR>
-When the magnifying glass icon has a + sign then only items that match the text will be displayed.
-- **Filter Exclude**: <BR>
-When the magnifying glass icon has a - sign then only items that do not match text will be displayed.
-- **Sort**: <BR>
-Sort list items.
-    - Alphabetical: <BR>
-This button switches between alphabetical and non-alphabetical ordering.
-    - Inverse: <BR>
-Sort objects in ascending or descending order. This also applies to alphabetical sorting, if selected.
+- **Search** - Type part of a list item’s name in the filter text field to filter items by part of their name.
+- **Filter Include** - When the magnifying glass icon has a + sign then only items that match the text will be displayed.
+- **Filter Exclude** - When the magnifying glass icon has a - sign then only items that do not match text will be displayed.
+- **Sort** - Sort list items.
+    - *Alphabetical* - This button switches between alphabetical and non-alphabetical ordering.
+    - *Inverse* - Sort objects in ascending or descending order. This also applies to alphabetical sorting, if selected.
 
-### Add
-Adds a new item.
-
-### Remove
-Removes the selected item.
-
-### Duplicate
-Duplicates active or selected trim
-
-| Option | Descripton |
-|---|---|
-| Ignore Color | Does not duplicate trim color settings |
-| Clear Selection | Clear selection from source trims after duplicating |
+- **Add** - Adds a new item.
+- **Remove** - Removes the selected item.
+- **Duplicate** - Duplicates active or selected trim.
+    - *Ignore Color* - Does not duplicate trim color settings
+    - *Clear Selection* - Clear selection from source trims after duplicating
 
 ### Menu
 A menu with operators e.g. copy paste, or operations on all items.
@@ -161,44 +144,36 @@ A menu with operators e.g. copy paste, or operations on all items.
 !!! Menu
     ![](img/screen/trimsheet/trim_menu.png)
 
-#### Copy Trims to Clipboard
-Copy [active](#active-trim), [selected](#selected-trims) or [all trims](#trims-list) to clipboard
+- **Copy Trims to Clipboard** - Copy [active](#active-trim), [selected](#selected-trims) or [all trims](#trims-list) to clipboard
+    - *Active* - Copy active trim.
+    - *Selected* - Copy selected trims.
+    - *All* - Copy all trims in the trimsheet.
 
-#### Paste Trims from Clipboard
-| Mode | Description |
-|---|---|
-| Clear | Clear all trims before paste operation |
-| Add | Add trims to the end of trim sheet |
-| Replace | Add new trims and replace trims with the same name |
+- **Paste Trims from Clipboard** - Paste copied trims from clipboard
+    - *Clear* - Clear all trims before paste operation
+    - *Add* - Add trims to the end of trim sheet
+    - *Replace* - Add new trims and replace trims with the same name
 
-#### Batch Rename
-Can rename many trims at once. This uses a pop-up dialog with operations and their options to change the name. These actions are applied in order, from first to last in a trim sheet.
+- **Batch Rename** - Can rename many trims at once. This uses a pop-up dialog with operations and their options to change the name. These actions are applied in order, from first to last in a trim sheet.
 
-![](img/screen/trimsheet/trim_batch_rename.png)
+    ![](img/screen/trimsheet/trim_batch_rename.png)
 
-#### Add Trim Grid
-Create grid of trims inside active, selected trims, from zero coordinates or 2D cursor position
+- **Add Trim Grid** - Create grid of trims inside active, selected trims, from zero coordinates or 2D cursor position
 
-#### Add Trim UDIM
-Creates trims in positions and with UDIM tile sizes
+- **Add Trim UDIM** - Creates trims in positions and with UDIM tile sizes
+- **Add Trims From Color Masks** - Create trims from a defined image containing color mask data.
+![](img/screen/trimsheet/add_trims_from_color_mask_op_prop.png)
+- **Add Trims From Zen Sets** - Create trims from Zen Sets groups mesh elements with keeping its names. Available only if Zen Sets is installed.
 
-#### Add Trims From Zen Sets
-Create trims from Zen Sets groups mesh elements with keeping its names
+- **Set Trim World Size** - Set trim 'World Size' property based on texture size. Works on selected trims
 
-#### Set Trim World Size
-Set trim 'World Size' property based on texture size. Works on selected trims
+- **Frame Trim** - Moves view to active or selected trims center in UV editor
 
-#### Frame Trim
-Moves view to active or selected trims center in UV editor
+- **Clear Trimshet Preview Folder** - Clear folder where trimsheet preview temporary icons are stored
 
-#### Clear Trimshet Preview Folder
-Clear folder where trimsheet preview temporary icons are stored
+- **Move** (up/down arrow icon) - Moves the selected item up/down one position.
 
-### Move (up/down arrow icon)
-Moves the selected item up/down one position.
-
-### Delete All
-Deletes all trims in the trim sheet
+- **Delete All** - Deletes all trims in the trim sheet
 
 ## Trim Sheet Presets
 !!! Presets
@@ -230,27 +205,18 @@ By default trim units are in UV points based on values from 0 to 1, but it is po
 
 ![](img/screen/trimsheet/trim_pixels.gif)
 
-### X
-Trim left point
-
-### Y
-Trim bottom point
-
-### W
-Trim width
-
-### H
-Trim height
+- **X** - Trim left point
+- **Y** - Trim bottom point
+- **W** - Trim width
+- **H** - Trim height
 
 ### Fit Axis
 
-| | |
-|---|---|
-| **U** | U axis |
-| **V** | V axis |
-| **Min** | The minimum length axis is automatically determined |
-| **Max** | The maximum length axis is automatically determined |
-| **Automatic** | Automatically detected axis for full dimensional compliance |
+- **U** - U axis
+- **V** - V axis
+- **Min** - The minimum length axis is automatically determined
+- **Max** - The maximum length axis is automatically determined
+- **Automatic** - Automatically detected axis for full dimensional compliance
 
 ### Inset
 Trim inset

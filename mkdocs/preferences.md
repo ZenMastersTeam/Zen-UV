@@ -1,13 +1,11 @@
 # Preferences
 
-!!! Panel
-     ![Preferences](img/screen/preferences/MainPanel.png)
+|UV Editor|3D View|
+|---|---|  
+|![Preferences](img/screen/preferences/MainPanelUv.png)|![Preferences](img/screen/preferences/MainPanel3d.png)|
 
-### ![](img/icons/zen-uv@2x.png) **Zen UV Keymaps**
-Set Shortcuts for Zen UV menus.
-
-### **Reset Preferences**
-Reset Zen UV Preferences to default state.
+- **Zen UV Keymaps** - Set Shortcuts for Zen UV menus.
+- **Reset Preferences** - Reset Zen UV Preferences to default state.
 
 ---
 
@@ -16,78 +14,59 @@ Reset Zen UV Preferences to default state.
 !!! Subpanel
      ![Preferences](img/screen/preferences/PanelPanels.png)
 
-### **Disable Docked View3D Panel**
-Disable Compact UI.
+- **Disable Docked View3D Panel** - Disable Compact UI.
 
 ![Combo Panel](img/screen/preferences/Disable_CompactUI.gif)
 
 
-### **Multiselect With Shift**  
-Set Active Panels with holding Shift hotkey.
+- **Multiselect With Shift** - Set Active Panels with holding Shift hotkey.
+- **Popup Panel Width** - Set Popup menu `Shift + U` width.
 
-### **Popup Panel Width** 
-Set Popup menu `Shift + U` width.
-
-### **Selector Orientation**
-Orient Icons vertically or horizontally. 
+- **Selector Orientation** - Orient Icons vertically or horizontally. 
  ![Combo Panel](img/screen/preferences/preferences_selector_orientation.gif)
 
-### **Panels Icon Style** 
-Change Icon Style. If you don't see active panel icons with your current Blender color theme you can change the icon style.
-
+- **Panels Icon Style** - Change Icon Style. If you don't see active panel icons with your current Blender color theme you can change the icon style.
 ![Combo Panel](img/gifs/user_interface/compactui_5.gif)
 
-### **Disabling Panels**
-Enable Add-on Panels. You can use these checkboxes disable some panels if you don't use them.
-
+- **Disabling Panels** - Enable Add-on Panels. You can use these checkboxes disable some panels if you don't use them.
 ![Combo Panel](img/gifs/user_interface/compactui_4.gif)
 
-### **Floating Panels**
-Show Panel as a separate Panel. If you like old style menu make all the panels Floating.
-  
+- **Floating Panels** - Show Panel as a separate Panel. If you like old style menu make all the panels Floating.
 ![Combo Panel](img/gifs/user_interface/compactui_7.gif)
 
 ---
 
 ## Display
 
+The Display panel allows you to switch certain display features used across different parts of the UI.
+
 !!! Subpanel
     ![Preferences](img/screen/preferences/PanelDisplay.png)
+---
+- **Addon N-Panel Name** - Name of the addon tab in N-Panel. You can set it to Zen to combine all Zen addons in one tab. Requires Blender restart. More info in the article [Addon Preferences](addon_prefs.md/#addon-n-panel-name)
+---
+- **Display Pie Assist** - Display hints for Pie menu. More info in the article [Pie Menu Assist](user_interface.md/#pie-menu-assist)
 
-### **Display Pie Assist** 
-Display hints for Pie menu.
+- **Display Progress Bar** - Display the progress of the operator execution process/ More info in the article [User Interface](user_interface.md/#progress-bar).
 
-### **Display Progress Bar**
+- **Sticky UV Editor Button** - Enable Sticky UV Editor button. More info in the article [Sticky UV Editor](sticky_uv_editor.md/#about)
 
-![Progress Bar](img/screen/preferences/ProgressBar_main.gif)
-
-**Progress Bar** is designed to display the progress of the operator execution process. Not all operators use the **Progress Bar**, only those that require complex calculations.
-On some operating systems of the **Linux** family, the **Progress Bar** can cause Blender to crash. To avoid this situation, you can disable the Progress Bar in **Panel - Preferences - Display Progress Bar.**
-
-![Progress Bar disable](img/screen/preferences/ProgressBar_disable.png)
-
-### **HOps UV Display**
-Display UV trasnforms in 3D View using Hard Ops addon.
+- **Right Menu Assist** - Context assistance by right menu click. More info in the article [User Interface](user_interface.md/#right-menu-assist)
+---
+### HOps UV Display
+- **HOps UV Display** - Display UV trasnforms in 3D View using Hard Ops addon.
+- **Context-sensitive** - Enable HOps UV Display only if UV Editor is open.
  
 ![HardOps_Displayl](img/screen/preferences/HardOps_Display.gif)  
 
-### **Context-sensitive**
-Enable HOps UV Display if UV Editor is open.
+---
+- **Auto Fit UV View** - Automatically Fit and Zoom UV viewport.
+---
+- **Show Annotations** - Show operator data using Blender annotations.
+---
+## Favourites
 
-### **Auto Fit UV View**
-Automatically Fit and Zoom UV viewport.
+The Favourites panel allows you to create custom panels with toolsets that are convenient or necessary for your current tasks. The ability to quickly switch panels using the preset system and the ease of creating these panels significantly speeds up daily tasks. In the Favourites panel, you can add not only operators and properties from the addon but also any Blender operators. More info in the article [Favourites](favourites.md).
 
-### **Sticky UV Editor Button**
-Enable Sticky UV Editor button.
-
-### **Show Seams**
-Display UV Seams in 3D Viewport.
-
-### **Show Sharp Edges**
-Display Sharp edges in 3D Viewport. It can be overlapped by Seams/Bevel Weights/Crease Edges display.
-
-### **Show Bevel Weights**
-Display Sharp edges in 3D Viewport. It can be overlapped by Seams/Bevel Weights/Crease Edges display.
-
-### **Show Crease Edges**
-Display crease edges created for the Subdivision modifier in 3D Viewport. It can be overlapped by Seams/Bevel Weights display.
+!!! Subpanel
+    ![Preferences](img/screen/preferences/PanelFavourites.png)

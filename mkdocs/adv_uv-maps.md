@@ -74,6 +74,14 @@ Active UV Map can be changed either by clicking in the [list](#advanced-uv-maps-
     ![](img/screen/adv_uv_map/hotkey_flag_used_in_ui.png)
 
 ---
+## Sync Seams by UV Islands
+When changing the UV Map, seams are updated according to the UV islands present in the map.
+
+!!! Panel
+    ![Sync Seams](img/screen/adv_uv_map/sync_seam_button.png)
+
+
+---
 ## Duplicate Active UV Map
 
 !!! Button
