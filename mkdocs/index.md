@@ -25,7 +25,7 @@
 - [**World Orient.**](transform.md#world-orient) Rotate UV Islands according to the model's position in World Space.
 - [**Quadrify.**](transform.md#quadrify-islands) Straighten UV Islands and selected Faces consisting of quads.
 - [**Randomize.**](transform.md#randomize) Randomize Position, Rotation, Scale of UV Islands and Vertices.
-- [**Symmetrize.**](transform.md#symmetrize-uv) Symmetrize UVs for mirrored models. Mirror Seams on the model.
+- [**Mirror.**](transform.md#mirror-uv) Mirroring UVs for mirrored models. Mirror Seams on the model.
 - [**Match and Stitch.**](transform.md#match-and-stitch) Match UV Islands Position, Rotation, Scale and Stitch Vertices if it’s possible.
 - [**Reshape Island.**](transform.md#reshape-island) Straighten selected Edge loops and relax connected Vertices.
 - [**Advanced UV Maps.**](adv_uv-maps.md) Sync, Clean and Rename UV Maps for multiple selected models.

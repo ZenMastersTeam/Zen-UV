@@ -23,7 +23,7 @@ Magic button to Mark (Seams, Sharp), Set TD, Pack and Sort processed Islands. Ze
 !!! tip
     Zen Unwrap will ignore existing UV Borders if they are not marked as Seams.
     
-    - To mark them use [**Seams by UV Borders**](#seams-by-uv-borders) operator.
+    - To mark them use [**Seams by UV Borders**](#conversion-system) operator.
     - To save not only UV Borders but Islands [**Tag Finished**](#tag-finished) operator. 
   
 ---
@@ -137,6 +137,8 @@ This operator unwraps Islands and Faces along selected axis.
 - **Correct Aspect** - Map UVs taking image aspect ratio into account.
 - **Use Subsurf Modifier** - Map UVs taking vertex position after subsurf into account.
 
+---
+
 ## Unwrap Inplace
 
 Unwrap Islands and Faces keeping their Size, Orientation and Location in UV Space.
@@ -166,6 +168,7 @@ Unwrap Islands and Faces keeping their Size, Orientation and Location in UV Spac
 !!! Panel
     ![](img/screen/unwrap/unwrap_mark_section.png)
 
+---
 ### Mark by Angle
 
 Mark edges as Seams and/or Sharp edges by Angle.
@@ -183,7 +186,7 @@ Mark edges as Seams and/or Sharp edges by Angle.
 - **Keep init marks** - Keep the state of intital Seams and Sharp edges.
 - **Selection Respect** - Mark only within current selection.
 - **Mark Settings** - Mark Settings (Global and Local modes) to Mark Seams and Sharp Edges.
-
+---
 ### Mark ![Mark Seams](img/icons/mark-seams@2x.png)
 
 Mark selected edges or face borders as Seams and/or Sharp edges.
@@ -194,6 +197,7 @@ Mark selected edges or face borders as Seams and/or Sharp edges.
 - **Clear** - Clear marking inside of selected Faces.
 - **Mark Settings** - Mark Settings (Global and Local modes) to Mark Seams and Sharp Edges.
 
+---
 ### Unmark ![Unmark Seams](img/icons/unmark-seams@2x.png)
 
 Unmark selected edges or face borders as Seams and/or Sharp edges.
@@ -203,6 +207,7 @@ Unmark selected edges or face borders as Seams and/or Sharp edges.
 
 - **Mark Settings** - Mark Settings (Global and Local modes) to Mark Seams and Sharp Edges.
 
+---
 ### Unmark All
 
 Remove all the Seams and/or Sharp edges from the mesh.
@@ -213,24 +218,21 @@ Remove all the Seams and/or Sharp edges from the mesh.
 - **Clear Pinned** - Clear all the Pins.
 - **Mark Settings** - Mark Settings (Global and Local modes) to Mark Seams and Sharp Edges.
 
+---
 ## Conversion System
 !!! Panel
     ![](img/screen/unwrap/conversion_system.png)
 
-### Seams by UV Borders
-Mark Seams by existing UV Borders.
-### Sharp by UV Borders
-Mark Sharp by existing UV Borders.
-### Seams by Sharp Edges
-Mark Seams by existing Sharp edges.
-### Sharp Edges by Seams
-Mark Sharp edges by existing Seams.
-### Seams by Open Edges
-Mark Seams by Open Edges. The way that looks in the viewport.
+- **Seams by UV Borders** - Mark Seams by existing UV Borders.
+- **Sharp by UV Borders** - Mark Sharp by existing UV Borders.
+- **Seams by Sharp Edges** - Mark Seams by existing Sharp edges.
+- **Sharp Edges by Seams** - Mark Sharp edges by existing Seams.
+- **Seams by Open Edges** - Mark Seams by Open Edges. The way that looks in the viewport.
 
+---
 ## Mirror Seams
 
-Mirror Seams along selected Axis (`X`,`Y`,`Z`) in a given direction (`+` or `-`). 
+Mirror Seams along selected Axis (`X`,`Y`,`Z`) in a given direction (`+` or `-`). If the source side has no seams, the operator will halt without performing any actions to prevent the loss of adjusted seams.
 
 ![](img/screen/unwrap/unwrap_mirror_1.gif)
 
@@ -242,6 +244,7 @@ Holding `Shift` you can select both directions and flip Seams along the selected
 
 ![](img/screen/unwrap/unwrap_mirror_3.gif)
 
+---
 ## Smooth by Sharp
 Before Blender v 4.1.0 - Toggle between Auto Smooth 180° (with sharp edges) and regular smooth modes
 
@@ -259,6 +262,7 @@ Finishing system helps to Mark, Sort and Display Islands that you have already u
 !!! Panel
     ![](img/screen/unwrap/finished_system.png)
 
+---
 ### Sort Islands by Tags
 
 Finished Islands move to the right side from Main UV Tile, Unfinished — to the left.
@@ -273,6 +277,7 @@ Finished Islands move to the right side from Main UV Tile, Unfinished — to the
 |---|
 |Sot Islands by Tags|
 
+---
 ### Tag Finished
 
 Tag Islands as Finished and move them to the right sied from main UV Tile. These Islands won't be unwrapped.
@@ -287,6 +292,7 @@ Tag Islands as Finished and move them to the right sied from main UV Tile. These
 
 ![](img/screen/unwrap/unwrap_finished_lockunwrap.gif)
 
+---
 ### Tag Unfinished
 
 Tag Islands as Unfinished and move them to the left sied from main UV Tile. 
@@ -295,7 +301,7 @@ Tag Islands as Unfinished and move them to the left sied from main UV Tile.
 
 ![](img/screen/unwrap/unwrap_finished_display_3dview_untag.gif)
 
-
+---
 ### Select Finished
 
 Select Islands tagged as Finished.
@@ -304,6 +310,7 @@ Select Islands tagged as Finished.
 
 ![](img/screen/unwrap/unwrap_finished_display_3dview_select.gif)
 
+---
 ### Deselect Finished
 
 Deselect Islands tagged as Finished.
@@ -312,6 +319,7 @@ Deselect Islands tagged as Finished.
 
 ![](img/screen/unwrap/unwrap_finished_display_3dview_deselect.gif)
 
+---
 ### Hide
 
 Hide Islands tagged as Finished.
@@ -320,10 +328,12 @@ Hide Islands tagged as Finished.
 
 ![](img/screen/unwrap/unwrap_finished_display_3dview_hide.gif)
 
+---
 ### Unhide
 
 Unhide Islands tagged as Finished.
 
+---
 ### Display Finished (Toggle)
 
 Display Finished/Unfinished Islands in the viewport.
@@ -332,6 +342,7 @@ Display Finished/Unfinished Islands in the viewport.
 
 ![](img/screen/unwrap/unwrap_finished_display_3dview.gif)
 
+---
 ### Finished preferences
 
 !!! Properties

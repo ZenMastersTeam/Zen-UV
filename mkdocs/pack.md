@@ -5,10 +5,12 @@ This panel contains tools to pack UV Islands in UV Area.
 !!! Panel
     ![Pack](img/screen/pack/pack_main_panel.png)
 
+---
 ### Pack Islands
 
 Pack all Islands using selected [**Pack Engine**](pack.md#pack-engine).
 
+---
 ### Margin
 
 Set space between Islands for Pack Islands operation.
@@ -27,7 +29,23 @@ If you want to display Margin in UV Editor use **Display UV Borders** operator.
     - 2048 - 16px
     - 4096 - 32px
     - 8192 - 64px
-  
+
+---
+### Calculate Recommended Margin
+Calculates suggested margin based on the image size.
+
+!!! Properties
+    ![Calc Margin](img/screen/pack/calc_margin_op_prop.png)
+
+- **Image Source** - Choose the source for image dimensions.
+    - *Custom Image Size* - Use custom width and height.
+    - *Active Image in UV Editor* - Use active image in the UV Editor.
+- **Custom Width** - Width of the custom image in pixels.
+- **Custom Height** - Height of the custom image in pixels.
+- **Recommended Margin (Pixels)** - Suggested UV margin based on the image size.
+- **Recommended Margin (Units)** - Suggested UV margin in UV units based on the image size.
+
+---
 ### UV Coverage
 
 Calculate Islands UV Coverage and Empty space for active UV map. Increasing UV Coverage value leads to the increasing [Texel Density](texel_density.md) value, this in turn leads to the more efficient UV space usage and you can see more pixels on your model using the same texture.
@@ -74,6 +92,10 @@ Zen UV supports three Pack engines:
 
     Then you can open **UV Packmaster** interface and complete the setup.
 
+!!! Warning
+    Due to changes starting with Blender 4.1, the native Pack operator may not perform any action when called from a script. Therefore, a pre-check for action execution has been introduced. If no action was executed, the Pack operator will be called using the Invoke dialog, which unlocks further operation. So, if you see a packing settings window, simply confirm by clicking the **Pack** button.
+
+---
 ### Pack Engine Preferences
 
 The main preferences of each Pack Engine are placed in Zen UV interface. To use all the preferences please go to the main interface of the engine (UV Packer, UV Packmaster). 
@@ -144,6 +166,7 @@ More information you can find [**here**.](https://uvpackmaster.com/doc3/blender/
 !!! Note
     Available only for UVPackmaster Pack Engine.
 
+---
 #### Pack in Trim
 Pack Islands into Trim.
 
@@ -152,6 +175,7 @@ Pack Islands into Trim.
 
 ![Pack_In_Trim](img/screen/pack/pack_in_trim.gif)
 
+---
 #### Margin Method
 
 Choose method to process Margin if UV Islands are scaled.

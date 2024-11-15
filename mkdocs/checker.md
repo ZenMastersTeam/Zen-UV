@@ -16,26 +16,27 @@ Add/Remove Checker Texture to/from the mesh. ![Checker Texture](img/icons/checke
 
 ![checker texture](img/screen/tex_checker/checker_texture.gif) 
 
+---
 #### Checker Preferences
 
 ![Main Panel](img/screen/tex_checker/tex_chk_props.png)
 
-|Preferences| |
-|---|---|
-| Checker Library Folder | Checker Library Folder indicates the folder with which Zen UV Checker will work. All textures in * .JPG, * .PNG formats that are inside this folder will be collected in Checker Textures list and can be used to display on selected models. |
-| Reset Folder | Reset Checker Library path to Default State. |
-| Load Your Texture | Open File Browser and add the selected texture to the Checker Library. |
-| Refresh Texture Library | Refresh Textures from Checker Library Folder. |
-| Auto Sync Checker | Automatically sync selected Checker Texture with Viewport. |
-| Open Shader Editor | Open Shader Editor with Zen UV Checker Node. |
-| Reset Checker | Reset Zen UV Checker to Default state. |
+- **Checker Library Folder** - Checker Library Folder indicates the folder with which Zen UV Checker will work. All textures in * .JPG, * .PNG formats that are inside this folder will be collected in Checker Textures list and can be used to display on selected models.
+- **Reset Folder** - Reset Checker Library path to Default State.
+- **Load Your Texture** - Open File Browser and add the selected texture to the Checker Library.
+- **Refresh Texture Library** - Refresh Textures from Checker Library Folder.
+- **Auto Sync Checker** - Automatically sync selected Checker Texture with Viewport.
+- **Open Shader Editor** - Open Shader Editor with Zen UV Checker Node.
+- **Reset Checker** - Reset Zen UV Checker to Default state.
 
+---
 #### Operator mechanism
 
 Checker Texture Toggle is adding/removing Zen UV Checker Node on/from top of your materials in Shader Editor. Your materials are safe!
 
 ![checker texture](img/screen/tex_checker/checker_texture_node.gif)
 
+---
 ### Remove Checker Nodes
 
 Remove Zen UV Checker Nodes from all the scene materials.
@@ -84,7 +85,7 @@ Screenshot when Orient filtering is on.
 
 ### Darken Image
 
-UV Editor panel contains an extra Display operator designed to adjust the darkening of an Image in the context of the UV Editor. [**Darken Image. Click to read the full information**](user_interface.md#darken-image).
+UV Editor panel contains an extra Display operator designed to adjust the darkening of an Image in the context of the UV Editor. More info in the [**Darken Image**](user_interface.md#darken-image) article.
 
 ---
 
@@ -92,23 +93,22 @@ UV Editor panel contains an extra Display operator designed to adjust the darken
 
 All useful for checking UVs Draw operators and their settings.
 
+---
 #### Blender Draw System
 
 !!! SubPanel 
     ![](img/screen/tex_checker/checker_display_top.png)
 
 
-|Display| |
-|---|---|
-| Crease | Display Creases created for Subdivision Surface modifier. |
-| Sharp | Display Sharp Edges. |
-| Bevel | Display Weights created for Bevel modifier. |
-| Seams | Display Seams. |
+- **Crease** - Display Creases created for Subdivision Surface modifier.
+- **Sharp** - Display Sharp Edges.
+- **Bevel** - Display Weights created for Bevel modifier.
+- **Seams** - Display Seams.
 
 !!! Tip 
     Blender Draw System visually overlap each other that's why it's recommended to use only Display Seams for UV process.
 
-
+---
 #### Zen UV Draw System
 
 ##### Finished
@@ -179,7 +179,7 @@ Display UVs in Object mode without entering Edit mode.
     ![](img/screen/tex_checker/checker_display_zenuv_stacks.png)
 
     Display and Select **Similar**, **Similar of Selection**, **Stacked**, **Manual Stacks**. 
-    You can read full information about [Stacks Display and its settings here](stack.md#stacks-display).
+    You can read full information about [Stacks Display and its settings here](stack.md#stacks-display-and-select).
 
 
 
@@ -188,53 +188,53 @@ Display UVs in Object mode without entering Edit mode.
 !!! Panel 
     ![](img/screen/tex_checker/checker_display_zenuv_pref.png)
 
+- **Overlay Sync** - Draw is synchronised with Overlay On-Off settings.
+- **Auto Update Draw** - Update draw cache every time when mesh is changed.
+- **Auto Disable Draw** - Switch draw system off when object mode (Edit, Object) is changed.
+- **Scale Points on Zoom** - Scale Points when zoom is changed.
+<br>
+- **Scale Points Ratio** - Scale ratio when Point size is changed in UV Area.
+- **Finished Color** - Finished Islands Viewport Display color.
+- **Unfinished Color** - Unfinished Islands Viewport Display color.
+- **Flipped Color** - Flipped Islands Display color.
+- **Excluded Color** - Excluded Islands Display color.
+- **Overlapped Color** - Overlapped Islands Display color.
+- **UV No Sync Color** - Display color for selected Islands in UV No Sync mode.
+- **Font Size** - Font size for Drawing labels.
+- **Font Color** - Font color for Drawing labels.
+<br>
+- **TD Gradient Width** - TD Gradient widget Width.
+- **TD Gradient Height** - TD Gradient widget Height.
+- **TD Color Alpha** - TD Color widget Alpha.
+- **Draw TD Mode** - Draw TD Mode, combination of gradient and viewport.
 
-|Options| |
-|---|---|
-| Overlay Sync |  Draw is synchronised with Overlay On-Off settings. |
-| Auto Update Draw|  Update draw cache every time when mesh is changed. |
-| Auto Disable Draw|  Switch draw system off when object mode (Edit, Object) is changed. |
-| Scale Points on Zoom|  Scale Points when zoom is changed. |
-|  | --- |
-| Scale Points Ratio|  Scale ratio when Point size is changed in UV Area. |
-| Finished Color | Finished Islands Viewport Display color. |
-| Unfinished Color | Unfinished Islands Viewport Display color. |
-| Flipped Color | Flipped Islands Display color. |
-| Excluded Color | Excluded Islands Display color. |
-| Overlapped Color | Overlapped Islands Display color. |
-| UV No Sync Color | Display color for selected Islands in UV No Sync mode. |
-| Font Size| Font size for Drawing labels. |
-| Font Color | Font color for Drawing labels. |
-|  | --- |
-| TD Gradient Width | TD Gradient widget Width. |
-| TD Gradient Height | TD Gradient widget Height. |
-| TD Color Alpha | TD Color widget Alpha. |
-| Draw TD Mode | Draw TD Mode, combination of gradient and viewport. |
-|  | --- |
-| UV Borders Color | UV Borders Display color. |
-| UV Borders Mode | Modes of UV Borders Display color. |
+- **UV Borders Color** - UV Borders Display color.
+- **UV Borders Mode** - Modes of UV Borders Display color.
 
+---
 ##### Zen UV Draw System Preferences (Object Mode)
 
 !!! Panel 
     ![](img/screen/tex_checker/checker_display_zenuv_pref_object.png)
 
-|Options| |
-|---|---|
-| Overlay Sync |  Draw is synchronised with Overlay On-Off settings. |
-| Auto Update Draw|  Update draw cache every time when mesh is changed. |
-| Auto Disable Draw|  Switch draw system off when object mode (Edit, Object) is changed. |
-| Scale Points on Zoom|  Scale Points when zoom is changed. |
-| Scale Points Ratio|  Scale ratio when Point size is changed in UV Area. |
-| Display UV Object Vertices | Show vertices in UV Object mode. |
-|| **UV Object Active**|
-| Fill Color | Active object UVs fill color. |
-| Vertex Color | Active object UVs vertex color. |
-|| **UV Object Inctive**|
-| Fill Color | Selected object UVs fill color |
-| Vertex Color | Selected object UVs vertex color. |
-| Font Size| Font size for Drawing labels. |
-| Font Color | Font color for Drawing labels. |
+- **Overlay Sync** - Draw is synchronised with Overlay On-Off settings.
+- **Auto Update Draw** - Update draw cache every time when mesh is changed.
+- **Auto Disable Draw** - Switch draw system off when object mode (Edit, Object) is changed.
+- **Scale Points on Zoom** - Scale Points when zoom is changed.
+- **Scale Points Ratio** - Scale ratio when Point size is changed in UV Area.
+- **Display UV Object Vertices** - Show vertices in UV Object mode.
+
+**UV Object Active**
+
+- **Fill Color** - Active object UVs fill color.
+- **Vertex Color** - Active object UVs vertex color.
+
+**UV Object Inctive**
+
+- **Fill Color** - Selected object UVs fill color.
+- **Vertex Color** - Selected object UVs vertex color.
+- **Font Size** - Font size for Drawing labels.
+- **Font Color** - Font color for Drawing labels.
 
 ---
 
@@ -314,8 +314,38 @@ The operator has no properties. Instead, it displays information in the status b
 |---|
 |*Calc UV Edges Length* console output example|
 
+---
+#### Calculate UV Pixel Size
+Calculates the size of a specified number of pixels in UV units and as a percentage.
 
+!!! Properties
+    ![Calculate UV Pixel Size](img/screen/tex_checker/calc_pixel_size_op_prop.png)
 
+- **Pixel Count** - Number of pixels for the calculation.
+- **Image Source** - Choose the source for image dimensions.
+    - *Custom Image Size* - Use custom width and height.
+    - *Active Image in UV Editor* - Use active image in the UV Editor.
+- **Custom Width** - Width of the custom image in pixels.
+- **Custom Height** - Height of the custom image in pixels.
+- **UV Pixel Width (Units)** - Width of the specified pixels in UV space.
+- **UV Pixel Height (Units)** - Height of the specified pixels in UV space.
+- **UV Pixel Width (%)** - Width of the specified pixels as a percentage of the UV space.
+- **UV Pixel Height (%)** - Height of the specified pixels as a percentage of the UV space.
+
+---
+### Set Viewport Display Mode
+Set viewport display mode for all selected objects.
+
+!!! Properties
+    ![Set Viewport Display Mode](img/screen/tex_checker/set_wiewport_display_mode_op_prop.png)
+
+- **Display as** - Selection of the display type to be set.
+    - *Bounds* - Display the bounds of the object
+    - *Wire* - Display the object as a wireframe
+    - *Solid* - Display the object as a solid (if solid drawing is enabled in the viewport)
+    - *Textured* - Display the object with textures (if textures are enabled in the viewport)
+
+---
 #### Clear Attributes
 
 Clear mesh attributes used in Zen UV. Finished and Excluded.

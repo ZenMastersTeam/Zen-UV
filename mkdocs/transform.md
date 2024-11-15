@@ -318,13 +318,13 @@ Merge UV vertices belonging to the same mesh vertex
 
 ---
 
-### Symmetrize UV
+### Mirror UV
 
-Symmetrize UV coordinates in a mirrored mesh
+Mirroring UV coordinates in a mirrored mesh
 First, you need to select a part of the mesh with the correct coordinates. The operator will find the corresponding symmetrical part by itself
 
 !!! Properties
-    ![](img/screen/transform/symmetrize_properties.png)
+    ![](img/screen/transform/mirror_uv_properties.png)
 
 - **Mesh Mirror Axis** - How the mirroring is represented in the object
 - **UV Symmetry Axis** - UV Symmetry axis
@@ -342,13 +342,13 @@ First, you need to select a part of the mesh with the correct coordinates. The o
 - **Symmetry Direction** - Bounding box symmetry direction. Active only if "Axis Position" is "Bounding Box"
 
 !!! tip
-    ![symmetrize uv assistant operator](img/screen/transform/symmetrize_assistant_operator.png)
+    ![mirror uv assistant operator](img/screen/transform/mirror_uv_assistant_operator.png)
 
     Assistant operator - [**Select Half** - Selects a part of the model according to its location relative to the coordinate axis](./select.md#select-half)
 
-|![symmetrize UV example](img/gifs/trasnform_operators/symmetrize_example.gif)|
+|![mirror UV example](img/gifs/trasnform_operators/mirror_uv_example.gif)|
 |-|
-|Symmetrize UV Example|
+|Mirroring UV Example|
 
 ---
 

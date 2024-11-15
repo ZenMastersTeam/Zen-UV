@@ -7,7 +7,7 @@ If more than one object is selected, you can synchronously work with UV maps of 
 !!! Panel
      | Edit Mode | Object Mode| 
      |---|---|  
-     | ![](img/screen/adv_uv_map/adv_uv_map.png) |![](img/screen/adv_uv_map/adv_uv_map__obj.png)|  
+     | ![](img/screen/adv_uv_map/adv_uv_map.png) |![](img/screen/adv_uv_map/adv_uv_map_obj.png)|  
 
 <!-- !!! tip
     Watch the video explaining how **Advanced UV Maps** works.

@@ -144,37 +144,107 @@ A menu with operators e.g. copy paste, or operations on all items.
 !!! Menu
     ![](img/screen/trimsheet/trim_menu.png)
 
-- **Copy Trims to Clipboard** - Copy [active](#active-trim), [selected](#selected-trims) or [all trims](#trims-list) to clipboard
-    - *Active* - Copy active trim.
-    - *Selected* - Copy selected trims.
-    - *All* - Copy all trims in the trimsheet.
+#### Copy Trims to Clipboard
 
-- **Paste Trims from Clipboard** - Paste copied trims from clipboard
-    - *Clear* - Clear all trims before paste operation
-    - *Add* - Add trims to the end of trim sheet
-    - *Replace* - Add new trims and replace trims with the same name
+Copy [active](#active-trim), [selected](#selected-trims) or [all trims](#trims-list) to clipboard
 
-- **Batch Rename** - Can rename many trims at once. This uses a pop-up dialog with operations and their options to change the name. These actions are applied in order, from first to last in a trim sheet.
+!!! Properties
+    ![](img/screen/trimsheet/copy_trims_op_prop.png)
 
+- *Active* - Copy active trim.
+- *Selected* - Copy selected trims.
+- *All* - Copy all trims in the trimsheet.
+
+#### Paste Trims from Clipboard
+Paste copied trims from clipboard.
+
+!!! Properties
+    ![](img/screen/trimsheet/paste_trims_op_prop.png)
+
+- *Clear* - Clear all trims before paste operation
+- *Add* - Add trims to the end of trim sheet
+- *Replace* - Add new trims and replace trims with the same name
+
+#### Batch Rename
+Can rename many trims at once. This uses a pop-up dialog with operations and their options to change the name. These actions are applied in order, from first to last in a trim sheet.
+
+!!! Properties
     ![](img/screen/trimsheet/trim_batch_rename.png)
 
-- **Add Trim Grid** - Create grid of trims inside active, selected trims, from zero coordinates or 2D cursor position
+- **Mode** - Trim batch rename mode.
+    - *Selected* - Rename only selected trims.
+    - *All* - Rename all trims.
+- **Find** - The text to search for in names.
+- **Replace** - The text to replace for in matching names found from the Find text.
+- **Match Case** - Search results must exactly match the case of the Find text.
+- **Use Regex** - Use Replace by Regular Expression.
+- **Counter** - Integer value will be added to the end of the name.
+- **Start from** - If Counter property is used, integer value will be started from this value.
 
-- **Add Trim UDIM** - Creates trims in positions and with UDIM tile sizes
-- **Add Trims From Color Masks** - Create trims from a defined image containing color mask data.
-![](img/screen/trimsheet/add_trims_from_color_mask_op_prop.png)
-- **Add Trims From Zen Sets** - Create trims from Zen Sets groups mesh elements with keeping its names. Available only if Zen Sets is installed.
 
-- **Set Trim World Size** - Set trim 'World Size' property based on texture size. Works on selected trims
+#### Add Trim Grid
+Create grid of trims inside active, selected trims, from zero coordinates or 2D cursor position.
 
-- **Frame Trim** - Moves view to active or selected trims center in UV editor
+!!! Properties
+    ![](img/screen/trimsheet/add_trim_grid_op_prop.png)
 
-- **Clear Trimshet Preview Folder** - Clear folder where trimsheet preview temporary icons are stored
+- **Start Position** - The starting position for creating trims.
+    - *Zero Coordinates* - Start from zero coordinates x=0, y=0"),
+    - *2D Cursor* - Start from 2D Cursor"),
+    - *Inside of active Trim* - Creates a grid of Trims within the active Trim"),
+    - *Inside of selected Trims* - Creates a grid of Trims within the selected Trims bounding box")
+- **Trim Count Limit** - Limit the number of trims. A large number of trims may cause Blender to freeze. This sets the threshold at which processing will stop.
+- **Trims Count U** - Trims count Horizontal.
+- **Trims Count V** - Trims count Horizontal.
+- **Grid Size** - Size of the grid.
+- **Margin** - The gap between Trims.
+- **Remove Template** - Delete the Trim that served as a template.
 
-- **Move** (up/down arrow icon) - Moves the selected item up/down one position.
+#### Add Trim UDIM
+Creates trims in positions and with UDIM tile sizes.
 
-- **Delete All** - Deletes all trims in the trim sheet
+!!! Properties
+    ![](img/screen/trimsheet/add_trim_udim_op_prop.png)
 
+- **Mode** - Trims creation mode.
+    - *Single* - Create a single trim by number.
+    - *Range* - Create multiple trims in a given range.
+- **Udim number** - UDIM number in single creation mode.
+- **Udims start** - Udims range start.
+- **Udims End** - Udims range end.
+- **Trim Count Limit** - Limit the number of trims.
+
+#### Add Trims From Color Masks
+Create trims from a defined image containing color mask data.
+
+!!! Properties
+    ![](img/screen/trimsheet/add_trims_from_color_mask_op_prop.png)
+
+- **Image Name** - Source image name, which will be used for texture size.
+- **Mode** - Image masking mode.
+    - *Unique Color* - Image contains only one mask with given color.
+    - *Multicolor* - Image contains multiple masks with the same color.
+- **Color Masks Limit** - How many unique colors could be processed in image.
+
+#### Add Trims From Zen Sets
+Create trims from Zen Sets groups mesh elements with keeping its names. Available only if Zen Sets is installed.
+
+#### Set Trim World Size
+Set trim 'World Size' property based on texture size. Works on selected trims.
+
+#### Frame Trim
+Moves view to active or selected trims center in UV editor.
+
+#### Clear Trimshet Preview Folder
+Clear folder where trimsheet preview temporary icons are stored.
+
+#### Move
+Moves the selected item up/down one position. (up/down arrow icon).
+
+#### Delete All
+Deletes all trims in the trim sheet.
+
+---
 ## Trim Sheet Presets
 !!! Presets
     ![](img/screen/trimsheet/trim_presets.png)

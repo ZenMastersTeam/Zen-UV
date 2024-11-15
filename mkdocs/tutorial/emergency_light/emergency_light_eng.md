@@ -435,7 +435,7 @@ The packing and stacking is completed. There are only a few final steps left to 
 ## Set sharp edges
 
 1. Correctly set sharp edges are not only a guarantee of a good appearance of the model, but also a guarantee of baking **normal map** without errors.
-    - Use the [**Sharp by UV Borders**](../../unwrap.md#sharp-by-uv-borders) operator. This operator marks the edges that are the boundary edges of the islands as **sharp**.
+    - Use the [**Sharp by UV Borders**](../../unwrap.md#conversion-system) operator. This operator marks the edges that are the boundary edges of the islands as **sharp**.
 
     ![](../../img/tutorial/emergency_light/sharp_by_uv_borders.gif)
 
@@ -456,6 +456,9 @@ The packing and stacking is completed. There are only a few final steps left to 
     ![](../../img/tutorial/emergency_light/smooth_by_sharp.gif)
 
 Now the **Emergency light** model has correct and optimized UV coordinates and is ready for texture creation and normal map baking.
+
+!!! Warning
+    For correct baking, the UV area should not contain any stacks or overlaps. Only [Singles](../../stack.md/#singles) and [Primaries](../../stack.md/#primaries) should remain. All [Replicas](../../stack.md/#replicas) should be offset by 1.0. The [Unstack](../../stack.md/#unstack-operator) operator is a convenient way to do this. However, this process is not part of this tutorial, and this notice is simply a reminder.
 
 !!! tip
     You can manually adjust the correct display of **Sharp Edges**. To do this, follow the steps described below.

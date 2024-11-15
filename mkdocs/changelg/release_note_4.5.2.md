@@ -36,6 +36,7 @@
 - Fixed bug with incorrect result **Quadrify** when area of base polygon and polygons in face loop is zero.
 - Fixed a bug in **Relax** operator when transitioning objects to **Edit Mode**.
 - Fixed a bug in **Annotation** and **Math Visualizer module** due to migration to **Blender 4.3**.
+- The name of the **Symmetrize** operator was changed to **Mirror UV** to clarify that the operator mirrors UV coordinates.
 
 ### **Trimsheet**
 
