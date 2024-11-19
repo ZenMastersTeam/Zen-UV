@@ -37,6 +37,7 @@
 - Fixed a bug in **Relax** operator when transitioning objects to **Edit Mode**.
 - Fixed a bug in **Annotation** and **Math Visualizer module** due to migration to **Blender 4.3**.
 - The name of the **Symmetrize** operator was changed to **Mirror UV** to clarify that the operator mirrors UV coordinates.
+- A potential issue in the **Randomize** operator where data about selected objects might be lost.
 
 ### **Trimsheet**
 
@@ -45,6 +46,8 @@
 - Fixed a bug in **Select In Tile** operator when the selection was not updated in **Any Cross** mode.
 - Fixed a bug in **Trimsheet Export** when source texture proportions were not taken into account.
 - Fixed a bug in **Scroll Fit To Trim** where you can't undo a filter by name if there are no filter matches.
+- In the **Hotspot Mapping** operator, the behavior of **Allow Location Variation** and **Variation Offset** has been changed. They are now separated and function independently.
+- Added the ability to work with **Trimsheets** from materials linked from another scene.
 
 ### **Stack**
 
@@ -74,3 +77,4 @@
 
 - Optimized **Display** panel and added also in **UV Editor** context.
 - Fixed a bug in saving **Addon Preferences** due to a bug in Blender where 2nd and subsequent level variables are not saved.
+- Added functionality in **Keymaps** to track and notify about collisions in assigned hotkeys.
