@@ -20,9 +20,13 @@ To activate Hotspot Mapping you need to use button from **Trim Operators** (Trim
 
     ![example_scene](img/screen/trimsheet/hotspot_example_scene.png)
 
-## Hotspot Mapping Settings Panel
+---
+
+## Hotspot Mapping Operator
 !!! Properties
     ![hotspot properties](img/screen/trimsheet/hotspot_op_prop.png)
+
+---
 
 ### Preprocess
 
@@ -76,6 +80,8 @@ Determines the criterion that takes effect first.
 
 ---
 
+### Area Matching
+
 - **Area Matching** - How to match Trim area with Island area.
     - *As is* - Islands will be located in Trim with the closest area. 
     - **Max** - Islands will be located in Trim with the largest area. The highest possible TD.
@@ -84,10 +90,11 @@ Determines the criterion that takes effect first.
 
 ![hotspot_area_matching](img/screen/trimsheet/hotspot_area_matching.gif)
 
-
 - **Matching Scale** - The value for manually adjusting the area matching scale. Adjust Scale for **Manual** settings of **Area Matching Conditions**. Value 1 is equivalent to **As is** settings of **Area Matching Conditions**.
 
 ---
+
+### Variability
 
 - **Allow Variability** - Variability options to make mapping more unique and less repetetive.
 
