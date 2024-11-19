@@ -21,95 +21,99 @@ To activate Hotspot Mapping you need to use button from **Trim Operators** (Trim
     ![example_scene](img/screen/trimsheet/hotspot_example_scene.png)
 
 ## Hotspot Mapping Settings Panel
-!!! Hotspot Mapping Settings Panel
-    ![hotspot_panel](img/screen/trimsheet/hotspot_panel.png)
+!!! Properties
+    ![hotspot properties](img/screen/trimsheet/hotspot_op_prop.png)
 
 ### Preprocess
 
-#### Mode
+- **Mode** - Use all trims or selected trims to map islands.
+    - *All Trims* - Map in all trims.
+    - *Selected Trims* - Map only in selected trims (Blue Frames).
 
 ![hotspot_mode](img/screen/trimsheet/hotspot_mode.gif)
 
-- **All Trims**. Map in All Trims.
-- **Selected Trims**. Map only in selected Trims (Blue Frames).
+- **Orient** - Perform some Island rotation before Hotspotting
+    - *As is* - No rotation at all. 
+    - *Orient to World* - Orient islands to world.
+    - *Orient to Axis* - Orient islands to nearest axis.
 
-#### Orient
-- **As is**. No rotation at all. 
-- **Orient to World**. Orient Islands to World.
-- **Orient to axis**. Orient Islands to nearest axis.
+- **Priority** - Prioritizing the similarities between the Trim and the Island.
+Determines the criterion that takes effect first.
+    - *Aspect* - Priority to Aspect Ratio (Height to Width) matching. Good option if you don't care about different TD between Islands.
+    - *Area* - Priority to Area matching, good for saving approximate TD.
+    - *World Size* - Based on the **World Size** trim property.
 
-#### Priority
-- **Aspect**. Priority to Aspect Ratio (Height to Width) matching. Good option if you don't care about different TD between Islands.
-  
-![hotspot_priority_aspect.png](img/screen/trimsheet/hotspot_priority_aspect.png.png)
+|![hotspot_priority_aspect.png](img/screen/trimsheet/hotspot_priority_aspect.png.png)|
+|---|
+|Hotspot Priority **Aspect**|
 
-- **Area**. Priority to Area matching, good for saving approximate TD.
-
-![hotspot_priority_area](img/screen/trimsheet/hotspot_priority_area.png)
+|![hotspot_priority_area](img/screen/trimsheet/hotspot_priority_area.png)|
+|---|
+|Hotspot Priority **Area**|
 
 ---
 
 ### Settings
 
-#### Allow Rotation
-Allow Islands rotation 90' to achieve the best results.
+- **Allow Rotation** - Allow Islands rotation 90' to achieve the best results.
+- **Keep Proportions** - Ensures that the proportions of the UV island remain unchanged when it is moved into a trim.
+    - *Yes* - Keep Islands Proportions.
+    - *No* - Don't keep Islands Proportions.
+    - *Trim Settings* - Use particular trim properties from **Trim Settings - Advanced Settings** panel.
 
-#### Keep Proportions
+|![hotspot_proportions](img/screen/trimsheet/hotspot_proportions.gif)|
+|---|
+|Hotspot **Keep Proportions**|
 
-![hotspot_proportions](img/screen/trimsheet/hotspot_proportions.gif)
-
-- **Yes**. Keep Islands Proportions.
-- **No**. Don't keep Islands Proportions.
-
-- **Trim Settings**. Use particular Trim properties from **Trim Settings - Advanced Settings** panel.
-
-#### Fit Axis
+- **Fit Axis** - Where to get the Fit Axis parameter.
+    - *Automatic* - Automatically detect axis.
+    - *Trim Settings* - Use particular Trim properties from **Trim Settings - Advanced Settings** panel.
 
 ![hotspot_fit_trim](img/screen/trimsheet/hotspot_fit_trim.gif)
 
-- **Automatic**. Automatically detect axis.
-- **Trim Settings**. Use particular Trim properties from **Trim Settings - Advanced Settings** panel.
-
-    !!! Trim Settings for the example above
-        ![hotspot_fit_trim_example](img/screen/trimsheet/hotspot_fit_trim_example.png)
+!!! Trim Settings for the example above
+    ![hotspot_fit_trim_example](img/screen/trimsheet/hotspot_fit_trim_example.png)
 
 ---
 
-### Area Matching
+- **Area Matching** - How to match Trim area with Island area.
+    - *As is* - Islands will be located in Trim with the closest area. 
+    - **Max** - Islands will be located in Trim with the largest area. The highest possible TD.
+    - **Min** - Islands will be located in Trim with the lowest area. The lowest possible TD.
+    - **Manual** - Custom Scale.
 
 ![hotspot_area_matching](img/screen/trimsheet/hotspot_area_matching.gif)
 
-- **As is**. Islands will be located in Trim with the closest area. 
-- **Max**. Islands will be located in Trim with the largest area. The highest possible TD.
-- **Min**. Islands will be located in Trim with the lowest area. The lowest possible TD.
-- **Manual**. Custom Scale.
 
-#### Matching Scale
-
-Adjust Scale for **Manual** settings of **Area Matching Conditions**.
-Value 1 is equivalent to **As is** settings of **Area Matching Conditions**.
+- **Matching Scale** - The value for manually adjusting the area matching scale. Adjust Scale for **Manual** settings of **Area Matching Conditions**. Value 1 is equivalent to **As is** settings of **Area Matching Conditions**.
 
 ---
 
-### Allow Variability
-Variability options to make mapping more unique and less repetetive.
+- **Allow Variability** - Variability options to make mapping more unique and less repetetive.
 
-- **Allow Rotation Variation**. Allow Islands random rotation 180' degrees to increase Variability.
-- **Allow Location Variation**. Allow Islands to be placed in other Trims with similar parameters.
-- **Variation Offset**. Perform Islands Offset in the Trim if it's possible.
+- **Allow Rotation Variation** - Allow Islands random rotation 180' degrees to increase Variability.
+- **Allow Location Variation** - Allows islands to be placed in other trims with similar parameters. Requires two or more identical trims.
+- **Allow Offset Variation** - Allows islands to be shifted within the trim if the trim settings permit it. This works only if the Fit Axis option is set to Trim Settings.
+- **Variation Offset** - The amount by which the shift will be performed, if possible.
 
-    ![hotspot_variation_offset](img/screen/trimsheet/hotspot_variation_offset.gif)
+|![hotspot_variation_offset](img/screen/trimsheet/hotspot_variation_offset.gif)|
+|---|
+|Hotspot **Variation Offset**|
 
-- **Detect Radial**. Detect Radial Islands and map them in Trims with Tag 'HOTSPOT Radial'. Non-Radial Islands won't be mapped to Radial Trims.
+- **Detect Radial** - Detect Radial Islands and map them in Trims with Tag 'HOTSPOT Radial'. Non-Radial Islands won't be mapped to Radial Trims.
   
-    ![hotspot_radial](img/screen/trimsheet/hotspot_radial.gif)
+|![hotspot_radial](img/screen/trimsheet/hotspot_radial.gif)|
+|---|
+|Hotspot **Detect Radial**|
     
-    !!! Tag Trim Radial
-        ![hotspot_tagged_radial](img/screen/trimsheet/hotspot_tagged_radial.png)
+!!! Tag Trim Radial
+    ![hotspot_tagged_radial](img/screen/trimsheet/hotspot_tagged_radial.png)
 
-- **Select Radials**. Select Radial Islands.
-- **Seed**. Islands Variability Seed.
+- **Select Radials** - Select radial islands.
+- **Seed** - Islands variability seed.
 
-    ![hotspot_seed](img/screen/trimsheet/hotspot_seed.gif)
+|![hotspot_seed](img/screen/trimsheet/hotspot_seed.gif)|
+|---|
+|Hotspot **Seed**|
 
-- **Aspect Influence**. Aspect Influence for calculating the correspondence proportions between Trims and Islands.
+- **Aspect Influence** - Aspect influence for calculating the correspondence proportions between Trims and Islands.
