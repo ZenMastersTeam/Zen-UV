@@ -92,12 +92,58 @@ Is used to define UI element in favourites panel.
 | Favourite item and the corresponding UI element |
 
 ### Name
-Is used to display text in UI and is an identifier in the [list](#favourite-items-list-view)
+Is used to display text in UI and is an identifier in the [list](#favourite-items-list-view).
 
 #### Display Name Option
-You can disable name by unchecking tickmark at the right corner in the name property field
+You can disable name by unchecking tickmark at the right corner in the name property field.
 
 | ![](img/screen/favourites/name_display_setting.png) | ![](img/screen/favourites/name_display_setting_not.png) |
 |---|---|
 | ![](img/screen/favourites/name_display.png) | ![](img/screen/favourites/name_display_not.png) |
 | Display name enabled | Display name disabled |
+
+### Category
+If you want to group items in collapsible panel, you can mark them with the same category and they automatically will be groupped.
+
+| ![](img/screen/favourites/fav_category.png) |
+|---|
+| Category example |
+
+### Command and Mode
+These two options depends on each other and are the main instrument to draw favourite item in the UI.
+
+#### Mode
+- **Operator** - Displays an [operator button](https://docs.blender.org/manual/en/4.2/interface/controls/buttons/buttons.html#operator-buttons) in UI
+
+!!! Command
+    | ![](img/screen/favourites/fav_operator_command.png) |
+    |---|
+    | Command interface in **Operator** mode |
+
+    **Python Command** - is a text field where operator identifier or operator identifier with properties (optionally) should be set
+    
+        `uv.unwrap`
+        `uv.unwrap(fill_holes=True)`
+    
+    **Operator Properties** - is a popup window to edit operator properties without necesserity to write them manually
+
+    | ![](img/screen/favourites/fav_operator_prop_edit.png) |
+    |---|
+    | Operator properties editor |
+
+    **Operator Selector** - wizzard to define operator identifier in different ways
+
+    - **Select Operator** - Select operator which will be added to the favourites
+
+    | ![](img/screen/favourites/fav_operator_list.png) |
+    |---|
+    | Select operator from list of available operators |
+    
+    - **Select Script** - Select user script which will be loaded and executed
+    - **Select Text Block** - Select user text datablock which will be loaded and executed
+
+
+- **Panel** - Displays a [panel](https://docs.blender.org/manual/en/4.2/interface/window_system/tabs_panels.html#panels) in UI
+- **Property** - Displays a [property field](https://docs.blender.org/manual/en/4.2/interface/controls/buttons/fields.html#fields) in UI
+- **Label** - Displays a text string in UI
+- **Script** - Displays a UI block defined as python script
