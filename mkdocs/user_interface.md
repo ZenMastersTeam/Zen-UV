@@ -45,12 +45,14 @@ You can call this menu anywhere.
 !!! tip
     Don't forget to drink some good beer today!
 
+---
 ## Update reminder
 
 Reminds you that a new version has been released and you can update the addon.
 
 ![update reminder](img/screen/user_interface/update_reminder.png)
 
+---
 # Pie Menu
 
 ![Pie Menu](img/gifs/user_interface/pie_menu.gif)
@@ -125,18 +127,21 @@ Pie Menu Assist is special help window, which is located below the Pie Menu. The
     If you want to disable Pie Menu Assist, you can do it here **N-Panel** -> **Zen UV** -> **Preferences** -> **Display** -> **Display Pie Assist**.
     Or in the **Addon Preferences** -> **UI tab**.
 
+---
 ## Default Shortcut
   Zen UV Pie Menu ![Zen UV Pie Menu](img/icons/zen-uv@2x.png) --- `Alt + U`
 
 !!! Shortcut
     If you don't like default Pie Menu Shortcut, it can be changed here **Edit** -> **Preferences** -> **Add-ons** -> **Zen UV** -> **Keymap**. Don't forget to change Shortcut for both contexts Mesh and UV Editor.
 
+---
 # Progress Bar
 
 **Progress Bar** is designed to display the progress of the operator execution process. Not all operators use the **Progress Bar**, only those that require complex calculations. On some operating systems of the **Linux** family, the **Progress Bar** can cause Blender to crash. To avoid this situation, you can disable the Progress Bar in [**Panel - Preferences - Display Progress Bar.**](preferences.md/#display)
 
 ![Progress Bar](img/screen/preferences/ProgressBar_main.gif)
 
+---
 # Transform Tool
 
 Move, Rotate, Scale, Fit, Align and Flip selected Islands or Faces/Edges/Vertices in 3D Viewport and UV Editor using Zen UV Gizmo.
@@ -145,6 +150,7 @@ Move, Rotate, Scale, Fit, Align and Flip selected Islands or Faces/Edges/Vertice
 
 ![Zen Transform Tool](img/gifs/user_interface/ZenTransformTool_main.gif)
 
+---
 # Darken Image
 
 **Darken Image** operator is designed to adjust the darkening of an Image in the context of the UV Editor. It does not change the texture but uses color management curve to darken it.
@@ -167,6 +173,7 @@ You can find this operator in UV Editor Overlay.
 !!! Warning
     This option affects on current render settings. Do not forget to switch it off before rendering.
 
+---
 ### Right menu assist
 
 - **Right Menu Assist** - Enables or disables the 'Add to ZenUV Favorites' option in the right-click menu.
@@ -174,3 +181,38 @@ You can find this operator in UV Editor Overlay.
 |![right menu](img/screen/addon_prefs/addon_prefs_right_menu_assist.png)|
 |---|
 |Right Menu Assist|
+
+---
+### Save As Default Operator Properties
+
+Starting from **Zen UV 4.5.2**, the ability to save default properties for certain operators has been introduced. This feature allows you to customize operators to your preferences and eliminates the need to adjust them every time you restart **Blender**.
+
+|Operators that support saving default properties|  
+|---|  
+|[Zen Unwrap](unwrap.md/#zen-unwrap)|  
+|[Quadrify](transform.md/#quadrify-islands)|  
+
+**How to Set Default Properties**
+
+1. Run the operator normally.
+2. Locate the property you want to save as default.
+3. Adjust the property to the desired value.
+4. Hover the mouse over the property.
+5. Right-click on the property.
+6. From the context menu, select **Save As Default**.  
+   ![Save As Default](./img/screen/user_interface/save_default_op_prop_rkm_menu.png)
+7. In the confirmation dialog that appears, click **OK**.
+8. Restart Blender to apply the saved default settings.
+
+
+!!! Properties
+    ![Save As Deafault Properties](./img/screen/user_interface/save_default_prop_op_prop.png)
+
+- **Mode** - Defines what to save.
+    - **Property** - Save only active property.
+    - **Active Operator** - Save all properties of the active operator.
+    - **All Operators** - Save default values of all available operators.
+- **Revert** - Revert to the initial state as it was deployed with the addon.
+
+
+

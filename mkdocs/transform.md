@@ -130,6 +130,9 @@ Rotate Islands the way they are oriented on the Models. Each method (Organic/Har
 
 ![](img/icons/quadrify_32.png) Straighten rectangular-shaped Islands
 
+!!! Tip
+    This operator supports the ability to [save default properties](user_interface.md/#save-as-default-operator-properties).
+
 !!! tip
     The Quadrify operator works only with quad faces. All other types of faces are ignored.
     ![](img/screen/transform/Quad_Poly.png)

@@ -5,9 +5,13 @@
      |---|---|  
      | ![](img/screen/unwrap/unwrapMainPanel.png) |![](img/screen/unwrap/unwrapMainPanel_uvedtior.png)| 
 
-## Zen Unwrap ![Zen Unwrap](img/icons/zen-unwrap@2x.png)
+## Zen Unwrap
+![Zen Unwrap](img/icons/zen-unwrap@2x.png)
 
-Magic button to Mark (Seams, Sharp), Set TD, Pack and Sort processed Islands. Zen Unwrap is a context-dependent operator and result of its operation depends on what was selected at the time it was run. 
+Magic button to Mark (Seams, Sharp), Set TD, Pack and Sort processed Islands. Zen Unwrap is a context-dependent operator and result of its operation depends on what was selected at the time it was run.
+
+!!! Tip
+    This operator supports the ability to [save default properties](user_interface.md/#save-as-default-operator-properties).
 
 ---
 
