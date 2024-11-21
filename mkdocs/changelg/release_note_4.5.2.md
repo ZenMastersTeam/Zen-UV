@@ -5,6 +5,8 @@
 - Added support for **Blender 4.3**.
 - Added **Color Id Mask** operator to import **Trims** from a bitmap image.
 - Added the ability to switch **Seams** sets along with switching the active **UV Map**.
+- Added the ability to save some operators settings as default for use across **Blender** sessions.
+- Added functionality in **Keymaps** to track and notify about collisions in assigned hotkeys.
 - Fixed bugs.
 
 ## **Operators**
@@ -18,6 +20,7 @@
 
 - Updated **Mirror Seams** operator, eliminating the possibility of erasing seams on the model if the source side does not contain seams.
 - Added ability to ignore geometry in hidden state for Mirror Seams operator.
+- Added the ability to save **Zen Unwrap** operator settings as default for use across **Blender** sessions.
 - Fixed a bug in **Relax** in multi-object mode when non-active objects did not receive a status update.
 
 ### **Select**
@@ -32,6 +35,8 @@
 
 ### **Transform**
 
+- Added the ability to save **Quadrify** operator settings as default for use across **Blender** sessions.
+- Fixed the behavior of **Zen Tool** to align with changes in **Blender 4.3**.
 - Fixed a bug in **Quadrify** where when the **Skip Non Quads** option was enabled, islands of any type were ignored.
 - Fixed bug with incorrect result **Quadrify** when area of base polygon and polygons in face loop is zero.
 - Fixed a bug in **Relax** operator when transitioning objects to **Edit Mode**.
@@ -72,9 +77,17 @@
 - Since the name of the preset type and its name are displayed in the same field, the preset type is now marked with an asterisk to visually distinguish it from the name.
 - Fixed a bug in **Favorites** where Blender native operators cannot be selected in the **Favorites** operator selection menu.
 - Fixed a bug in **Favorites** when after loading a preset at startup, the name is not set active in the list.
+- Fixed an issue in **Favourites** where the operator properties edit button was displayed in modes like Panel, Script, etc.  
+- Resolved the inability to add the native UV Maps panel to the **Favourites**.
+
 
 ### **Preferences**
 
 - Optimized **Display** panel and added also in **UV Editor** context.
 - Fixed a bug in saving **Addon Preferences** due to a bug in Blender where 2nd and subsequent level variables are not saved.
 - Added functionality in **Keymaps** to track and notify about collisions in assigned hotkeys.
+
+### **Stability**
+
+- Fixed an issue with `depsgraph_update` during texture baking to ensure compatibility with third-party addons.
+
