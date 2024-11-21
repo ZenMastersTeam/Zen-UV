@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>Select - Zen UV 4.5.1 for Blender</title>
+    <title>Select - Zen UV 4.5.2 for Blender</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
@@ -43,7 +43,7 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
-          <a href=".." class="icon icon-home"> Zen UV 4.5.1 for Blender
+          <a href=".." class="icon icon-home"> Zen UV 4.5.2 for Blender
         </a><div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
       <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
@@ -115,6 +115,8 @@
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#select-quaded-islands">Select Quaded Islands</a>
     </li>
+    <li class="toctree-l2"><a class="reference internal" href="#select-holed-islands">Select Holed Islands</a>
+    </li>
     <li class="toctree-l2"><a class="reference internal" href="#select-cylinder-edges-splits">Select Cylinder Edges (Splits)</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#select-edges-by-condition">Select Edges by Condition</a>
@@ -128,6 +130,10 @@
     <li class="toctree-l3"><a class="reference internal" href="#get-selected-area">Get Selected Area</a>
     </li>
         </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#select-zero-area-faces">Select Zero Area Faces</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#select-faces-less-than-pixel">Select Faces Less than Pixel</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#convert-face-to-loops">Convert Face to Loops</a>
     </li>
@@ -201,7 +207,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
       <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="..">Zen UV 4.5.1 for Blender</a>
+          <a href="..">Zen UV 4.5.2 for Blender</a>
         
       </nav>
       <div class="wy-nav-content">
@@ -279,6 +285,12 @@
 <td style="text-align: center;"><a href="#select-quaded-islands">Quaded Islands</a></td>
 <td style="text-align: center;"><a href="#get-selected-area">Get Selected Area</a></td>
 <td style="text-align: center;"><a href="#isolate-islands-toggle">Isolate Islands (Toggle)</a></td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="#select-holed-islands">Holed Islands</a></td>
+<td style="text-align: center;"><a href="#select-zero-area-faces">Zero Area Faces</a></td>
+<td style="text-align: center;"><a href="#select-faces-less-than-one-pixel">Faces Less than Pixel</a></td>
+<td style="text-align: center;"><a href="#isolate-part-toggle">Isolate Part (Toggle)</a></td>
 </tr>
 </tbody>
 </table>
@@ -508,6 +520,7 @@
 <li><em>Inside</em> - Inside of UV Area</li>
 <li><em>Outside</em> - Outside of UV Area</li>
 <li><em>Cross</em> - Crossing of UV Area borders</li>
+<li><em>Check Margin</em> - Select islands where the margin between islands within the defined area and the area itself are less than the specified value.</li>
 </ul>
 </li>
 <li><strong>Tile Number</strong> - Number of UDIM tile</li>
@@ -585,6 +598,33 @@
 </ul>
 </li>
 </ul>
+<hr />
+<h3 id="select-holed-islands">Select Holed Islands<a class="headerlink" href="#select-holed-islands" title="Permanent link"></a></h3>
+<p>Selects islands that have holes within their geometry.</p>
+<table>
+<thead>
+<tr>
+<th><a class="glightbox" href="../img/gifs/select_operators/Select_Holed_Islands.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Select_Holed_Islands" src="../img/gifs/select_operators/Select_Holed_Islands.gif" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Select holed islands</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition properties">
+<p class="admonition-title">Properties</p>
+<p><a class="glightbox" href="../img/screen/select/select_holed_islands_op_prop.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Select Holed Islands Props" src="../img/screen/select/select_holed_islands_op_prop.png" /></a></p>
+</div>
+<ul>
+<li><strong>Clear Selection</strong> - Clear initial selection</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>In most cases, this operator is convenient for identifying islands that can be processed with the Quadrify operator.</p>
+</div>
+<hr />
 <h3 id="select-cylinder-edges-splits">Select Cylinder Edges (Splits)<a class="headerlink" href="#select-cylinder-edges-splits" title="Permanent link"></a></h3>
 <p>Select island edges that belong to the same mesh edge and split the island by itself.</p>
 <table>
@@ -739,8 +779,8 @@ The operator consists of two buttons. Where the first is the main operator and t
 </div>
 <ul>
 <li><strong>Mode</strong> - The area of what should be obtained? Islands or faces.<ul>
-<li><em>Island</em> - Island selection mode</li>
-<li><em>Faces</em> - Faces selection mode</li>
+<li><em>Island</em> - Island selection mode.</li>
+<li><em>Faces</em> - Faces selection mode.</li>
 </ul>
 </li>
 <li><strong>Average</strong> - Averaging.</li>
@@ -749,8 +789,47 @@ The operator consists of two buttons. Where the first is the main operator and t
 <li><strong>Multiplied Area</strong> - The same value as the Real Area, but multiplied for easier use.</li>
 </ul>
 <hr />
+<h3 id="select-zero-area-faces">Select Zero Area Faces<a class="headerlink" href="#select-zero-area-faces" title="Permanent link"></a></h3>
+<p>Selects islands with zero area.</p>
+<p>This is the <a href="#select-by-uv-area">Select by UV Area</a> operator with <strong>Condition - Zero Area</strong> and <strong>Threshold - 0.0 (zero)</strong> activated. You can adjust its settings after execution through the operator properties.</p>
+<table>
+<thead>
+<tr>
+<th><a class="glightbox" href="../img/screen/select/sel_by_uv_area_zero_preset.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Select Zero Area Faces" src="../img/screen/select/sel_by_uv_area_zero_preset.png" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Activated preset &ldquo;select zero area faces&rdquo; with zero threshold.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="select-faces-less-than-pixel">Select Faces Less than Pixel<a class="headerlink" href="#select-faces-less-than-pixel" title="Permanent link"></a></h3>
+<p>Selects faces with an area less than the specified number of pixels.</p>
+<div class="admonition properties">
+<p class="admonition-title">Properties</p>
+<p><a class="glightbox" href="../img/screen/select/sel_faces_less_than_pixel_op_prop.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Select Zero Area Faces" src="../img/screen/select/sel_faces_less_than_pixel_op_prop.png" /></a></p>
+</div>
+<ul>
+<li><strong>Clear Selection</strong> - Clear initial selection.</li>
+<li><strong>Pixel Count</strong> - Number of pixels for the calculation.</li>
+<li><strong>Area Threshold</strong> - Tolerance level for face area selection.</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This operator works only in the UV Editor context and requires an active texture in the UV Editor.</p>
+</div>
+<hr />
 <h3 id="convert-face-to-loops">Convert Face to Loops<a class="headerlink" href="#convert-face-to-loops" title="Permanent link"></a></h3>
 <p>Convert selected mesh faces to UV loops.</p>
+<div class="admonition properties">
+<p class="admonition-title">Properties</p>
+<p><a class="glightbox" href="../img/screen/select/sel_faces_to_loops_op_prop.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Convert Face To Loops" src="../img/screen/select/sel_faces_to_loops_op_prop.png" /></a></p>
+</div>
+<ul>
+<li><strong>Toggle UV Sync</strong> - Toggle UV Sync Selection</li>
+</ul>
 <table>
 <thead>
 <tr>
@@ -766,6 +845,13 @@ The operator consists of two buttons. Where the first is the main operator and t
 <hr />
 <h3 id="convert-edges-to-loops">Convert Edges to Loops<a class="headerlink" href="#convert-edges-to-loops" title="Permanent link"></a></h3>
 <p>Convert selected mesh edges to UV loops.</p>
+<div class="admonition properties">
+<p class="admonition-title">Properties</p>
+<p><a class="glightbox" href="../img/screen/select/sel_edges_to_loops_op_prop.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Convert Face To Loops" src="../img/screen/select/sel_edges_to_loops_op_prop.png" /></a></p>
+</div>
+<ul>
+<li><strong>Toggle UV Sync</strong> - Toggle UV Sync Selection</li>
+</ul>
 <table>
 <thead>
 <tr>
@@ -781,6 +867,13 @@ The operator consists of two buttons. Where the first is the main operator and t
 <hr />
 <h3 id="convert-loops-to-face">Convert Loops to Face<a class="headerlink" href="#convert-loops-to-face" title="Permanent link"></a></h3>
 <p>Only for UV Sync Selection - off. Convert selected UV loops to mesh face selection.</p>
+<div class="admonition properties">
+<p class="admonition-title">Properties</p>
+<p><a class="glightbox" href="../img/screen/select/sel_faces_to_loops_op_prop.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Convert Face To Loops" src="../img/screen/select/sel_faces_to_loops_op_prop.png" /></a></p>
+</div>
+<ul>
+<li><strong>Toggle UV Sync</strong> - Toggle UV Sync Selection</li>
+</ul>
 <table>
 <thead>
 <tr>
@@ -796,6 +889,13 @@ The operator consists of two buttons. Where the first is the main operator and t
 <hr />
 <h3 id="convert-loop-to-edge">Convert Loop to Edge<a class="headerlink" href="#convert-loop-to-edge" title="Permanent link"></a></h3>
 <p>Only for UV Sync Selection - off. Convert selected UV loop to mesh edge selection.</p>
+<div class="admonition properties">
+<p class="admonition-title">Properties</p>
+<p><a class="glightbox" href="../img/screen/select/sel_edges_to_loops_op_prop.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Convert Face To Loops" src="../img/screen/select/sel_edges_to_loops_op_prop.png" /></a></p>
+</div>
+<ul>
+<li><strong>Toggle UV Sync</strong> - Toggle UV Sync Selection</li>
+</ul>
 <table>
 <thead>
 <tr>

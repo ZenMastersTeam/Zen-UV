@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>Advanced UV Maps - Zen UV 4.5.1 for Blender</title>
+    <title>Advanced UV Maps - Zen UV 4.5.2 for Blender</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
@@ -43,7 +43,7 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
-          <a href=".." class="icon icon-home"> Zen UV 4.5.1 for Blender
+          <a href=".." class="icon icon-home"> Zen UV 4.5.2 for Blender
         </a><div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
       <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
@@ -89,9 +89,13 @@
         <ul>
     <li class="toctree-l3"><a class="reference internal" href="#uv-maps-status-detection">UV Maps Status Detection</a>
     </li>
+    <li class="toctree-l3"><a class="reference internal" href="#set-active-uv-map">Set Active UV Map</a>
+    </li>
         </ul>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#duplicate-active-uv-map">Duplicate active UV Map</a>
+    <li class="toctree-l2"><a class="reference internal" href="#sync-seams-by-uv-islands">Sync Seams by UV Islands</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#duplicate-active-uv-map">Duplicate Active UV Map</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#remove-active-uv-map">Remove active UV Map</a>
     </li>
@@ -203,7 +207,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
       <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="..">Zen UV 4.5.1 for Blender</a>
+          <a href="..">Zen UV 4.5.2 for Blender</a>
         
       </nav>
       <div class="wy-nav-content">
@@ -236,7 +240,7 @@ It allows to select the active, add, remove, and rename UV Maps from the list.</
 <tbody>
 <tr>
 <td><a class="glightbox" href="../img/screen/adv_uv_map/adv_uv_map.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/adv_uv_map/adv_uv_map.png" /></a></td>
-<td><a class="glightbox" href="../img/screen/adv_uv_map/adv_uv_map__obj.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/adv_uv_map/adv_uv_map__obj.png" /></a></td>
+<td><a class="glightbox" href="../img/screen/adv_uv_map/adv_uv_map_obj.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/adv_uv_map/adv_uv_map_obj.png" /></a></td>
 </tr>
 </tbody>
 </table>
@@ -370,8 +374,38 @@ It allows to select the active, add, remove, and rename UV Maps from the list.</
 </tr>
 </tbody>
 </table>
+<h3 id="set-active-uv-map">Set Active UV Map<a class="headerlink" href="#set-active-uv-map" title="Permanent link"></a></h3>
+<p>Active UV Map can be changed either by clicking in the <a href="#advanced-uv-maps-list">list</a> or by assigning hotkey which will change active UV Map according to its index in the <a href="#advanced-uv-maps-list">list</a>.</p>
+<div class="admonition notice">
+<p class="admonition-title">Notice</p>
+<p>It is recommended to <a href="#sync-uv-maps">synchronize</a> all UV Maps in all objects if you are planning to switch advanced UV Maps by hotkeys</p>
+</div>
+<table>
+<thead>
+<tr>
+<th><a class="glightbox" href="../img/screen/adv_uv_map/set_adv_maps_index.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/adv_uv_map/set_adv_maps_index.gif" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Setting active UV Map by hotkey</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Operator property flag <strong>Used in UI</strong> must be unset in keymap properties</p>
+<p><a class="glightbox" href="../img/screen/adv_uv_map/hotkey_flag_used_in_ui.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/adv_uv_map/hotkey_flag_used_in_ui.png" /></a></p>
+</div>
 <hr />
-<h2 id="duplicate-active-uv-map">Duplicate active UV Map<a class="headerlink" href="#duplicate-active-uv-map" title="Permanent link"></a></h2>
+<h2 id="sync-seams-by-uv-islands">Sync Seams by UV Islands<a class="headerlink" href="#sync-seams-by-uv-islands" title="Permanent link"></a></h2>
+<p>When changing the UV Map, seams are updated according to the UV islands present in the map.</p>
+<div class="admonition panel">
+<p class="admonition-title">Panel</p>
+<p><a class="glightbox" href="../img/screen/adv_uv_map/sync_seam_button.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Sync Seams" src="../img/screen/adv_uv_map/sync_seam_button.png" /></a></p>
+</div>
+<hr />
+<h2 id="duplicate-active-uv-map">Duplicate Active UV Map<a class="headerlink" href="#duplicate-active-uv-map" title="Permanent link"></a></h2>
 <div class="admonition button">
 <p class="admonition-title">Button</p>
 <p><a class="glightbox" href="../img/icons/plus.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Add Button" src="../img/icons/plus.png" /></a></p>
@@ -401,7 +435,7 @@ It allows to select the active, add, remove, and rename UV Maps from the list.</
 <li><em>All</em> - Operates on all UV Map items in the list</li>
 </ul>
 </li>
-<li><em>Find</em> - The text to search for in names<ul>
+<li><strong>Find</strong> - The text to search for in names<ul>
 <li><em>1) if text is empty then all name will be renamed</em></li>
 <li><em>2) if &lsquo;Use Regex&rsquo; is set then text must be a valid regular expression</em></li>
 </ul>
@@ -432,17 +466,17 @@ It allows to select the active, add, remove, and rename UV Maps from the list.</
 <table>
 <thead>
 <tr>
-<th>UV Map naming preset</th>
+<th><a class="glightbox" href="../img/screen/adv_uv_map/rename_template.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/adv_uv_map/rename_template.gif" /></a></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><a class="glightbox" href="../img/screen/adv_uv_map/rename_template.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/adv_uv_map/rename_template.gif" /></a></td>
+<td>UV Map naming preset</td>
 </tr>
 </tbody>
 </table>
 <hr />
-<h2 id="sync-uv-maps">Sync UV Maps <a class="glightbox" href="../img/icons/adv_uv_sync.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Sync Button" src="../img/icons/adv_uv_sync.png" /></a><a class="headerlink" href="#sync-uv-maps" title="Permanent link"></a></h2>
+<h2 id="sync-uv-maps">Sync UV Maps<a class="headerlink" href="#sync-uv-maps" title="Permanent link"></a></h2>
 <p>If your model requires UV Maps to have the same postion, name, active or render status you can synchronize them</p>
 <p><a class="glightbox" href="../img/screen/adv_uv_map/uvmaps_sync.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/adv_uv_map/uvmaps_sync.png" /></a></p>
 <hr />
@@ -460,7 +494,7 @@ It allows to select the active, add, remove, and rename UV Maps from the list.</
 </thead>
 <tbody>
 <tr>
-<td></td>
+<td>Example showing how to copy and paste UVs</td>
 </tr>
 </tbody>
 </table>
@@ -472,11 +506,33 @@ It allows to select the active, add, remove, and rename UV Maps from the list.</
 <h2 id="adv-uv-maps-tools">Adv UV Maps Tools<a class="headerlink" href="#adv-uv-maps-tools" title="Permanent link"></a></h2>
 <h4 id="clean-uv-maps">Clean UV Maps<a class="headerlink" href="#clean-uv-maps" title="Permanent link"></a></h4>
 <p>Remove all inactive UV Maps.</p>
-<p><a class="glightbox" href="../img/screen/adv_uv_map/adv_uv_map_clean_inactive.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/adv_uv_map/adv_uv_map_clean_inactive.gif" /></a></p>
+<table>
+<thead>
+<tr>
+<th><a class="glightbox" href="../img/screen/adv_uv_map/adv_uv_map_clean_inactive.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/adv_uv_map/adv_uv_map_clean_inactive.gif" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Clean UV Maps</td>
+</tr>
+</tbody>
+</table>
 <hr />
 <h4 id="set-uv-map-name-by-index">Set UV Map Name by Index<a class="headerlink" href="#set-uv-map-name-by-index" title="Permanent link"></a></h4>
 <p>Set UV Map name by its Index in the list.</p>
-<p><a class="glightbox" href="../img/screen/adv_uv_map/adv_uv_map_rename_by_index.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/adv_uv_map/adv_uv_map_rename_by_index.gif" /></a></p>
+<table>
+<thead>
+<tr>
+<th><a class="glightbox" href="../img/screen/adv_uv_map/adv_uv_map_rename_by_index.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/adv_uv_map/adv_uv_map_rename_by_index.gif" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Set UV Map name by index</td>
+</tr>
+</tbody>
+</table>
 <hr />
 <h2 id="transfer-uv">Transfer UV<a class="headerlink" href="#transfer-uv" title="Permanent link"></a></h2>
 <table>
@@ -487,11 +543,22 @@ It allows to select the active, add, remove, and rename UV Maps from the list.</
 </thead>
 <tbody>
 <tr>
-<td></td>
+<td>Transfer UV panel</td>
 </tr>
 </tbody>
 </table>
-<p><a class="glightbox" href="../img/screen/adv_uv_map/transfer_uv_maps.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/adv_uv_map/transfer_uv_maps.gif" /></a></p>
+<table>
+<thead>
+<tr>
+<th><a class="glightbox" href="../img/screen/adv_uv_map/transfer_uv_maps.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/adv_uv_map/transfer_uv_maps.gif" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Example showing how to transfer UVs</td>
+</tr>
+</tbody>
+</table>
 <table>
 <thead>
 <tr>

@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>Pack - Zen UV 4.5.1 for Blender</title>
+    <title>Pack - Zen UV 4.5.2 for Blender</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
@@ -43,7 +43,7 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
-          <a href=".." class="icon icon-home"> Zen UV 4.5.1 for Blender
+          <a href=".." class="icon icon-home"> Zen UV 4.5.2 for Blender
         </a><div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
       <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
@@ -104,6 +104,8 @@
     <li class="toctree-l2"><a class="reference internal" href="#pack-islands">Pack Islands</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#margin">Margin</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#calculate-recommended-margin">Calculate Recommended Margin</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#uv-coverage">UV Coverage</a>
         <ul>
@@ -211,7 +213,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
       <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="..">Zen UV 4.5.1 for Blender</a>
+          <a href="..">Zen UV 4.5.2 for Blender</a>
         
       </nav>
       <div class="wy-nav-content">
@@ -234,8 +236,10 @@
 <p class="admonition-title">Panel</p>
 <p><a class="glightbox" href="../img/screen/pack/pack_main_panel.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Pack" src="../img/screen/pack/pack_main_panel.png" /></a></p>
 </div>
+<hr />
 <h3 id="pack-islands">Pack Islands<a class="headerlink" href="#pack-islands" title="Permanent link"></a></h3>
 <p>Pack all Islands using selected <a href="./#pack-engine"><strong>Pack Engine</strong></a>.</p>
+<hr />
 <h3 id="margin">Margin<a class="headerlink" href="#margin" title="Permanent link"></a></h3>
 <p>Set space between Islands for Pack Islands operation.
 If you want to display Margin in UV Editor use <strong>Display UV Borders</strong> operator. </p>
@@ -253,6 +257,25 @@ If you want to display Margin in UV Editor use <strong>Display UV Borders</stron
 <li>8192 - 64px</li>
 </ul>
 </div>
+<hr />
+<h3 id="calculate-recommended-margin">Calculate Recommended Margin<a class="headerlink" href="#calculate-recommended-margin" title="Permanent link"></a></h3>
+<p>Calculates suggested margin based on the image size.</p>
+<div class="admonition properties">
+<p class="admonition-title">Properties</p>
+<p><a class="glightbox" href="../img/screen/pack/calc_margin_op_prop.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Calc Margin" src="../img/screen/pack/calc_margin_op_prop.png" /></a></p>
+</div>
+<ul>
+<li><strong>Image Source</strong> - Choose the source for image dimensions.<ul>
+<li><em>Custom Image Size</em> - Use custom width and height.</li>
+<li><em>Active Image in UV Editor</em> - Use active image in the UV Editor.</li>
+</ul>
+</li>
+<li><strong>Custom Width</strong> - Width of the custom image in pixels.</li>
+<li><strong>Custom Height</strong> - Height of the custom image in pixels.</li>
+<li><strong>Recommended Margin (Pixels)</strong> - Suggested UV margin based on the image size.</li>
+<li><strong>Recommended Margin (Units)</strong> - Suggested UV margin in UV units based on the image size.</li>
+</ul>
+<hr />
 <h3 id="uv-coverage">UV Coverage<a class="headerlink" href="#uv-coverage" title="Permanent link"></a></h3>
 <p>Calculate Islands UV Coverage and Empty space for active UV map. Increasing UV Coverage value leads to the increasing <a href="../texel_density/">Texel Density</a> value, this in turn leads to the more efficient UV space usage and you can see more pixels on your model using the same texture.</p>
 <div class="admonition subpanel">
@@ -311,6 +334,11 @@ If you want to display Margin in UV Editor use <strong>Display UV Borders</stron
 <p><a class="glightbox" href="../img/screen/pack/pack_sync.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/pack/pack_sync.png" /></a></p>
 <p>Then you can open <strong>UV Packmaster</strong> interface and complete the setup.</p>
 </div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Due to changes starting with Blender 4.1, the native Pack operator may not perform any action when called from a script. Therefore, a pre-check for action execution has been introduced. If no action was executed, the Pack operator will be called using the Invoke dialog, which unlocks further operation. So, if you see a packing settings window, simply confirm by clicking the <strong>Pack</strong> button.</p>
+</div>
+<hr />
 <h3 id="pack-engine-preferences">Pack Engine Preferences<a class="headerlink" href="#pack-engine-preferences" title="Permanent link"></a></h3>
 <p>The main preferences of each Pack Engine are placed in Zen UV interface. To use all the preferences please go to the main interface of the engine (UV Packer, UV Packmaster). </p>
 <p>Below listed preferences from all Pack Engines. If you want to obtain information about Specific preferences for some engine, please refer to the documentation of the corresponding engine.</p>
@@ -415,6 +443,7 @@ More information you can find <a href="https://uvpackmaster.com/doc3/blender/3.2
 <p class="admonition-title">Note</p>
 <p>Available only for UVPackmaster Pack Engine.</p>
 </div>
+<hr />
 <h4 id="pack-in-trim">Pack in Trim<a class="headerlink" href="#pack-in-trim" title="Permanent link"></a></h4>
 <p>Pack Islands into Trim.</p>
 <div class="admonition note">
@@ -422,6 +451,7 @@ More information you can find <a href="https://uvpackmaster.com/doc3/blender/3.2
 <p>Available only for Blender and UVPackmaster Pack Engine.</p>
 </div>
 <p><a class="glightbox" href="../img/screen/pack/pack_in_trim.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Pack_In_Trim" src="../img/screen/pack/pack_in_trim.gif" /></a></p>
+<hr />
 <h4 id="margin-method">Margin Method<a class="headerlink" href="#margin-method" title="Permanent link"></a></h4>
 <p>Choose method to process Margin if UV Islands are scaled.</p>
 <div class="admonition note">

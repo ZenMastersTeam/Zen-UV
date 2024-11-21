@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../../../img/favicon.ico" />
-    <title>Emergency Light (EN) - Zen UV 4.5.1 for Blender</title>
+    <title>Emergency Light (EN) - Zen UV 4.5.2 for Blender</title>
     <link rel="stylesheet" href="../../../css/theme.css" />
     <link rel="stylesheet" href="../../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
@@ -43,7 +43,7 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
-          <a href="../../.." class="icon icon-home"> Zen UV 4.5.1 for Blender
+          <a href="../../.." class="icon icon-home"> Zen UV 4.5.2 for Blender
         </a><div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
       <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
@@ -185,7 +185,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
       <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../..">Zen UV 4.5.1 for Blender</a>
+          <a href="../../..">Zen UV 4.5.2 for Blender</a>
         
       </nav>
       <div class="wy-nav-content">
@@ -733,7 +733,7 @@ It is convenient to divide this process into steps. Our model consists of severa
 <li>
 <p>Correctly set sharp edges are not only a guarantee of a good appearance of the model, but also a guarantee of baking <strong>normal map</strong> without errors.</p>
 <ul>
-<li>Use the <a href="../../../unwrap/#sharp-by-uv-borders"><strong>Sharp by UV Borders</strong></a> operator. This operator marks the edges that are the boundary edges of the islands as <strong>sharp</strong>.</li>
+<li>Use the <a href="../../../unwrap/#conversion-system"><strong>Sharp by UV Borders</strong></a> operator. This operator marks the edges that are the boundary edges of the islands as <strong>sharp</strong>.</li>
 </ul>
 <p><a class="glightbox" href="../../../img/tutorial/emergency_light/sharp_by_uv_borders.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/sharp_by_uv_borders.gif" /></a></p>
 <ul>
@@ -756,6 +756,10 @@ Since we have already set the sharp edges as we need them using the Sharp edge p
 </li>
 </ol>
 <p>Now the <strong>Emergency light</strong> model has correct and optimized UV coordinates and is ready for texture creation and normal map baking.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>For correct baking, the UV area should not contain any stacks or overlaps. Only <a href="../../../stack/#singles">Singles</a> and <a href="../../../stack/#primaries">Primaries</a> should remain. All <a href="../../../stack/#replicas">Replicas</a> should be offset by 1.0. The <a href="../../../stack/#unstack-operator">Unstack</a> operator is a convenient way to do this. However, this process is not part of this tutorial, and this notice is simply a reminder.</p>
+</div>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>You can manually adjust the correct display of <strong>Sharp Edges</strong>. To do this, follow the steps described below.</p>

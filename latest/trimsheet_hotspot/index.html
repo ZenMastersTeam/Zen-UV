@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>Hotspot Mapping - Zen UV 4.5.1 for Blender</title>
+    <title>Hotspot Mapping - Zen UV 4.5.2 for Blender</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
@@ -43,7 +43,7 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
-          <a href=".." class="icon icon-home"> Zen UV 4.5.1 for Blender
+          <a href=".." class="icon icon-home"> Zen UV 4.5.2 for Blender
         </a><div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
       <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
@@ -120,35 +120,15 @@
                   </li>
                   <li class="toctree-l1 current"><a class="reference internal current" href="#">Hotspot Mapping</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#hotspot-mapping-settings-panel">Hotspot Mapping Settings Panel</a>
+    <li class="toctree-l2"><a class="reference internal" href="#hotspot-mapping-operator">Hotspot Mapping Operator</a>
         <ul>
     <li class="toctree-l3"><a class="reference internal" href="#preprocess">Preprocess</a>
-        <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#mode">Mode</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#orient">Orient</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#priority">Priority</a>
-    </li>
-        </ul>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#settings">Settings</a>
-        <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#allow-rotation">Allow Rotation</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#keep-proportions">Keep Proportions</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#fit-axis">Fit Axis</a>
-    </li>
-        </ul>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#area-matching">Area Matching</a>
-        <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#matching-scale">Matching Scale</a>
     </li>
-        </ul>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#allow-variability">Allow Variability</a>
+    <li class="toctree-l3"><a class="reference internal" href="#variability">Variability</a>
     </li>
         </ul>
     </li>
@@ -181,7 +161,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
       <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="..">Zen UV 4.5.1 for Blender</a>
+          <a href="..">Zen UV 4.5.2 for Blender</a>
         
       </nav>
       <div class="wy-nav-content">
@@ -215,100 +195,177 @@
 <p>You can test Hotspot Mapping feature here.</p>
 <p><a class="glightbox" href="../img/screen/trimsheet/hotspot_example_scene.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="example_scene" src="../img/screen/trimsheet/hotspot_example_scene.png" /></a></p>
 </div>
-<h2 id="hotspot-mapping-settings-panel">Hotspot Mapping Settings Panel<a class="headerlink" href="#hotspot-mapping-settings-panel" title="Permanent link"></a></h2>
-<div class="admonition hotspot mapping settings panel">
-<p class="admonition-title">Hotspot</p>
-<p><a class="glightbox" href="../img/screen/trimsheet/hotspot_panel.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="hotspot_panel" src="../img/screen/trimsheet/hotspot_panel.png" /></a></p>
+<hr />
+<h2 id="hotspot-mapping-operator">Hotspot Mapping Operator<a class="headerlink" href="#hotspot-mapping-operator" title="Permanent link"></a></h2>
+<div class="admonition properties">
+<p class="admonition-title">Properties</p>
+<p><a class="glightbox" href="../img/screen/trimsheet/hotspot_op_prop.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="hotspot properties" src="../img/screen/trimsheet/hotspot_op_prop.png" /></a></p>
 </div>
+<hr />
 <h3 id="preprocess">Preprocess<a class="headerlink" href="#preprocess" title="Permanent link"></a></h3>
-<h4 id="mode">Mode<a class="headerlink" href="#mode" title="Permanent link"></a></h4>
+<ul>
+<li><strong>Mode</strong> - Use all trims or selected trims to map islands.<ul>
+<li><em>All Trims</em> - Map in all trims.</li>
+<li><em>Selected Trims</em> - Map only in selected trims (Blue Frames).</li>
+</ul>
+</li>
+</ul>
 <p><a class="glightbox" href="../img/screen/trimsheet/hotspot_mode.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="hotspot_mode" src="../img/screen/trimsheet/hotspot_mode.gif" /></a></p>
 <ul>
-<li><strong>All Trims</strong>. Map in All Trims.</li>
-<li><strong>Selected Trims</strong>. Map only in selected Trims (Blue Frames).</li>
-</ul>
-<h4 id="orient">Orient<a class="headerlink" href="#orient" title="Permanent link"></a></h4>
+<li>
+<p><strong>Orient</strong> - Perform some Island rotation before Hotspotting</p>
 <ul>
-<li><strong>As is</strong>. No rotation at all. </li>
-<li><strong>Orient to World</strong>. Orient Islands to World.</li>
-<li><strong>Orient to axis</strong>. Orient Islands to nearest axis.</li>
+<li><em>As is</em> - No rotation at all. </li>
+<li><em>Orient to World</em> - Orient islands to world.</li>
+<li><em>Orient to Axis</em> - Orient islands to nearest axis.</li>
 </ul>
-<h4 id="priority">Priority<a class="headerlink" href="#priority" title="Permanent link"></a></h4>
+</li>
+<li>
+<p><strong>Priority</strong> - Prioritizing the similarities between the Trim and the Island.
+Determines the criterion that takes effect first.</p>
 <ul>
-<li><strong>Aspect</strong>. Priority to Aspect Ratio (Height to Width) matching. Good option if you don&rsquo;t care about different TD between Islands.</li>
+<li><em>Aspect</em> - Priority to Aspect Ratio (Height to Width) matching. Good option if you don&rsquo;t care about different TD between Islands.</li>
+<li><em>Area</em> - Priority to Area matching, good for saving approximate TD.</li>
+<li><em>World Size</em> - Based on the <strong>World Size</strong> trim property.</li>
 </ul>
-<p><a class="glightbox" href="../img/screen/trimsheet/hotspot_priority_aspect.png.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="hotspot_priority_aspect.png" src="../img/screen/trimsheet/hotspot_priority_aspect.png.png" /></a></p>
-<ul>
-<li><strong>Area</strong>. Priority to Area matching, good for saving approximate TD.</li>
+</li>
 </ul>
-<p><a class="glightbox" href="../img/screen/trimsheet/hotspot_priority_area.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="hotspot_priority_area" src="../img/screen/trimsheet/hotspot_priority_area.png" /></a></p>
+<table>
+<thead>
+<tr>
+<th><a class="glightbox" href="../img/screen/trimsheet/hotspot_priority_aspect.png.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="hotspot_priority_aspect.png" src="../img/screen/trimsheet/hotspot_priority_aspect.png.png" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hotspot Priority <strong>Aspect</strong></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><a class="glightbox" href="../img/screen/trimsheet/hotspot_priority_area.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="hotspot_priority_area" src="../img/screen/trimsheet/hotspot_priority_area.png" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hotspot Priority <strong>Area</strong></td>
+</tr>
+</tbody>
+</table>
 <hr />
 <h3 id="settings">Settings<a class="headerlink" href="#settings" title="Permanent link"></a></h3>
-<h4 id="allow-rotation">Allow Rotation<a class="headerlink" href="#allow-rotation" title="Permanent link"></a></h4>
-<p>Allow Islands rotation 90&rsquo; to achieve the best results.</p>
-<h4 id="keep-proportions">Keep Proportions<a class="headerlink" href="#keep-proportions" title="Permanent link"></a></h4>
-<p><a class="glightbox" href="../img/screen/trimsheet/hotspot_proportions.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="hotspot_proportions" src="../img/screen/trimsheet/hotspot_proportions.gif" /></a></p>
 <ul>
-<li><strong>Yes</strong>. Keep Islands Proportions.</li>
-<li>
-<p><strong>No</strong>. Don&rsquo;t keep Islands Proportions.</p>
-</li>
-<li>
-<p><strong>Trim Settings</strong>. Use particular Trim properties from <strong>Trim Settings - Advanced Settings</strong> panel.</p>
+<li><strong>Allow Rotation</strong> - Allow Islands rotation 90&rsquo; to achieve the best results.</li>
+<li><strong>Keep Proportions</strong> - Ensures that the proportions of the UV island remain unchanged when it is moved into a trim.<ul>
+<li><em>Yes</em> - Keep Islands Proportions.</li>
+<li><em>No</em> - Don&rsquo;t keep Islands Proportions.</li>
+<li><em>Trim Settings</em> - Use particular trim properties from <strong>Trim Settings - Advanced Settings</strong> panel.</li>
+</ul>
 </li>
 </ul>
-<h4 id="fit-axis">Fit Axis<a class="headerlink" href="#fit-axis" title="Permanent link"></a></h4>
-<p><a class="glightbox" href="../img/screen/trimsheet/hotspot_fit_trim.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="hotspot_fit_trim" src="../img/screen/trimsheet/hotspot_fit_trim.gif" /></a></p>
+<table>
+<thead>
+<tr>
+<th><a class="glightbox" href="../img/screen/trimsheet/hotspot_proportions.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="hotspot_proportions" src="../img/screen/trimsheet/hotspot_proportions.gif" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hotspot <strong>Keep Proportions</strong></td>
+</tr>
+</tbody>
+</table>
 <ul>
-<li><strong>Automatic</strong>. Automatically detect axis.</li>
-<li>
-<p><strong>Trim Settings</strong>. Use particular Trim properties from <strong>Trim Settings - Advanced Settings</strong> panel.</p>
+<li><strong>Fit Axis</strong> - Where to get the Fit Axis parameter.<ul>
+<li><em>Automatic</em> - Automatically detect axis.</li>
+<li><em>Trim Settings</em> - Use particular Trim properties from <strong>Trim Settings - Advanced Settings</strong> panel.</li>
+</ul>
+</li>
+</ul>
+<p><a class="glightbox" href="../img/screen/trimsheet/hotspot_fit_trim.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="hotspot_fit_trim" src="../img/screen/trimsheet/hotspot_fit_trim.gif" /></a></p>
 <div class="admonition trim settings for the example above">
 <p class="admonition-title">Trim</p>
 <p><a class="glightbox" href="../img/screen/trimsheet/hotspot_fit_trim_example.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="hotspot_fit_trim_example" src="../img/screen/trimsheet/hotspot_fit_trim_example.png" /></a></p>
 </div>
-</li>
-</ul>
 <hr />
 <h3 id="area-matching">Area Matching<a class="headerlink" href="#area-matching" title="Permanent link"></a></h3>
+<ul>
+<li><strong>Area Matching</strong> - How to match Trim area with Island area.<ul>
+<li><em>As is</em> - Islands will be located in Trim with the closest area. </li>
+<li><strong>Max</strong> - Islands will be located in Trim with the largest area. The highest possible TD.</li>
+<li><strong>Min</strong> - Islands will be located in Trim with the lowest area. The lowest possible TD.</li>
+<li><strong>Manual</strong> - Custom Scale.</li>
+</ul>
+</li>
+</ul>
 <p><a class="glightbox" href="../img/screen/trimsheet/hotspot_area_matching.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="hotspot_area_matching" src="../img/screen/trimsheet/hotspot_area_matching.gif" /></a></p>
 <ul>
-<li><strong>As is</strong>. Islands will be located in Trim with the closest area. </li>
-<li><strong>Max</strong>. Islands will be located in Trim with the largest area. The highest possible TD.</li>
-<li><strong>Min</strong>. Islands will be located in Trim with the lowest area. The lowest possible TD.</li>
-<li><strong>Manual</strong>. Custom Scale.</li>
+<li><strong>Matching Scale</strong> - The value for manually adjusting the area matching scale. Adjust Scale for <strong>Manual</strong> settings of <strong>Area Matching Conditions</strong>. Value 1 is equivalent to <strong>As is</strong> settings of <strong>Area Matching Conditions</strong>.</li>
 </ul>
-<h4 id="matching-scale">Matching Scale<a class="headerlink" href="#matching-scale" title="Permanent link"></a></h4>
-<p>Adjust Scale for <strong>Manual</strong> settings of <strong>Area Matching Conditions</strong>.
-Value 1 is equivalent to <strong>As is</strong> settings of <strong>Area Matching Conditions</strong>.</p>
 <hr />
-<h3 id="allow-variability">Allow Variability<a class="headerlink" href="#allow-variability" title="Permanent link"></a></h3>
-<p>Variability options to make mapping more unique and less repetetive.</p>
+<h3 id="variability">Variability<a class="headerlink" href="#variability" title="Permanent link"></a></h3>
 <ul>
-<li><strong>Allow Rotation Variation</strong>. Allow Islands random rotation 180&rsquo; degrees to increase Variability.</li>
-<li><strong>Allow Location Variation</strong>. Allow Islands to be placed in other Trims with similar parameters.</li>
 <li>
-<p><strong>Variation Offset</strong>. Perform Islands Offset in the Trim if it&rsquo;s possible.</p>
-<p><a class="glightbox" href="../img/screen/trimsheet/hotspot_variation_offset.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="hotspot_variation_offset" src="../img/screen/trimsheet/hotspot_variation_offset.gif" /></a></p>
+<p><strong>Allow Variability</strong> - Variability options to make mapping more unique and less repetetive.</p>
 </li>
 <li>
-<p><strong>Detect Radial</strong>. Detect Radial Islands and map them in Trims with Tag &lsquo;HOTSPOT Radial&rsquo;. Non-Radial Islands won&rsquo;t be mapped to Radial Trims.</p>
-<p><a class="glightbox" href="../img/screen/trimsheet/hotspot_radial.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="hotspot_radial" src="../img/screen/trimsheet/hotspot_radial.gif" /></a></p>
+<p><strong>Allow Rotation Variation</strong> - Allow Islands random rotation 180&rsquo; degrees to increase Variability.</p>
+</li>
+<li><strong>Allow Location Variation</strong> - Allows islands to be placed in other trims with similar parameters. Requires two or more identical trims.</li>
+<li><strong>Allow Offset Variation</strong> - Allows islands to be shifted within the trim if the trim settings permit it. This works only if the Fit Axis option is set to Trim Settings.</li>
+<li><strong>Variation Offset</strong> - The amount by which the shift will be performed, if possible.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><a class="glightbox" href="../img/screen/trimsheet/hotspot_variation_offset.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="hotspot_variation_offset" src="../img/screen/trimsheet/hotspot_variation_offset.gif" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hotspot <strong>Variation Offset</strong></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Detect Radial</strong> - Detect Radial Islands and map them in Trims with Tag &lsquo;HOTSPOT Radial&rsquo;. Non-Radial Islands won&rsquo;t be mapped to Radial Trims.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><a class="glightbox" href="../img/screen/trimsheet/hotspot_radial.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="hotspot_radial" src="../img/screen/trimsheet/hotspot_radial.gif" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hotspot <strong>Detect Radial</strong></td>
+</tr>
+</tbody>
+</table>
 <div class="admonition tag trim radial">
 <p class="admonition-title">Tag</p>
 <p><a class="glightbox" href="../img/screen/trimsheet/hotspot_tagged_radial.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="hotspot_tagged_radial" src="../img/screen/trimsheet/hotspot_tagged_radial.png" /></a></p>
 </div>
-</li>
-<li>
-<p><strong>Select Radials</strong>. Select Radial Islands.</p>
-</li>
-<li>
-<p><strong>Seed</strong>. Islands Variability Seed.</p>
-<p><a class="glightbox" href="../img/screen/trimsheet/hotspot_seed.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="hotspot_seed" src="../img/screen/trimsheet/hotspot_seed.gif" /></a></p>
-</li>
-<li>
-<p><strong>Aspect Influence</strong>. Aspect Influence for calculating the correspondence proportions between Trims and Islands.</p>
-</li>
+<ul>
+<li><strong>Select Radials</strong> - Select radial islands.</li>
+<li><strong>Seed</strong> - Islands variability seed.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><a class="glightbox" href="../img/screen/trimsheet/hotspot_seed.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="hotspot_seed" src="../img/screen/trimsheet/hotspot_seed.gif" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hotspot <strong>Seed</strong></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Aspect Influence</strong> - Aspect influence for calculating the correspondence proportions between Trims and Islands.</li>
 </ul>
               
             </div>
