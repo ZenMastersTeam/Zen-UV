@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>Transform - Zen UV 4.5.1 for Blender</title>
+    <title>Transform - Zen UV 4.5.2 for Blender</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
@@ -43,7 +43,7 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
-          <a href=".." class="icon icon-home"> Zen UV 4.5.1 for Blender
+          <a href=".." class="icon icon-home"> Zen UV 4.5.2 for Blender
         </a><div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
       <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
@@ -111,7 +111,7 @@
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#merge-uv-verts">Merge UV Verts</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#symmetrize-uv">Symmetrize UV</a>
+    <li class="toctree-l3"><a class="reference internal" href="#mirror-uv">Mirror UV</a>
     </li>
         </ul>
     </li>
@@ -269,7 +269,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
       <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="..">Zen UV 4.5.1 for Blender</a>
+          <a href="..">Zen UV 4.5.2 for Blender</a>
         
       </nav>
       <div class="wy-nav-content">
@@ -476,6 +476,10 @@
 <hr />
 <h3 id="quadrify-islands">Quadrify Islands<a class="headerlink" href="#quadrify-islands" title="Permanent link"></a></h3>
 <p><a class="glightbox" href="../img/icons/quadrify_32.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/icons/quadrify_32.png" /></a> Straighten rectangular-shaped Islands</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>This operator supports the ability to <a href="../user_interface/#save-as-default-operator-properties">save default properties</a>.</p>
+</div>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>The Quadrify operator works only with quad faces. All other types of faces are ignored.
@@ -739,12 +743,12 @@ First, Match, and if we are satisfied, then turn on Stitch. Stitch can&rsquo;t f
 </tbody>
 </table>
 <hr />
-<h3 id="symmetrize-uv">Symmetrize UV<a class="headerlink" href="#symmetrize-uv" title="Permanent link"></a></h3>
-<p>Symmetrize UV coordinates in a mirrored mesh
+<h3 id="mirror-uv">Mirror UV<a class="headerlink" href="#mirror-uv" title="Permanent link"></a></h3>
+<p>Mirroring UV coordinates in a mirrored mesh
 First, you need to select a part of the mesh with the correct coordinates. The operator will find the corresponding symmetrical part by itself</p>
 <div class="admonition properties">
 <p class="admonition-title">Properties</p>
-<p><a class="glightbox" href="../img/screen/transform/symmetrize_properties.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/transform/symmetrize_properties.png" /></a></p>
+<p><a class="glightbox" href="../img/screen/transform/mirror_uv_properties.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/transform/mirror_uv_properties.png" /></a></p>
 </div>
 <ul>
 <li><strong>Mesh Mirror Axis</strong> - How the mirroring is represented in the object</li>
@@ -766,18 +770,18 @@ First, you need to select a part of the mesh with the correct coordinates. The o
 </ul>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p><a class="glightbox" href="../img/screen/transform/symmetrize_assistant_operator.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="symmetrize uv assistant operator" src="../img/screen/transform/symmetrize_assistant_operator.png" /></a></p>
+<p><a class="glightbox" href="../img/screen/transform/mirror_uv_assistant_operator.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="mirror uv assistant operator" src="../img/screen/transform/mirror_uv_assistant_operator.png" /></a></p>
 <p>Assistant operator - <a href="../select/#select-half"><strong>Select Half</strong> - Selects a part of the model according to its location relative to the coordinate axis</a></p>
 </div>
 <table>
 <thead>
 <tr>
-<th><a class="glightbox" href="../img/gifs/trasnform_operators/symmetrize_example.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="symmetrize UV example" src="../img/gifs/trasnform_operators/symmetrize_example.gif" /></a></th>
+<th><a class="glightbox" href="../img/gifs/trasnform_operators/mirror_uv_example.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="mirror UV example" src="../img/gifs/trasnform_operators/mirror_uv_example.gif" /></a></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Symmetrize UV Example</td>
+<td>Mirroring UV Example</td>
 </tr>
 </tbody>
 </table>

@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>Trim Sheet Management - Zen UV 4.5.1 for Blender</title>
+    <title>Trim Sheet Management - Zen UV 4.5.2 for Blender</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
@@ -43,7 +43,7 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
-          <a href=".." class="icon icon-home"> Zen UV 4.5.1 for Blender
+          <a href=".." class="icon icon-home"> Zen UV 4.5.2 for Blender
         </a><div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
       <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
@@ -142,19 +142,7 @@
     </li>
     <li class="toctree-l4"><a class="reference internal" href="#select-trim-in-the-viewport">Select Trim in the Viewport</a>
     </li>
-    <li class="toctree-l4"><a class="reference internal" href="#rename">Rename</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#resize">Resize</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#filter">Filter</a>
-    </li>
         </ul>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#add">Add</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#remove">Remove</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#duplicate">Duplicate</a>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#menu">Menu</a>
         <ul>
@@ -168,6 +156,8 @@
     </li>
     <li class="toctree-l4"><a class="reference internal" href="#add-trim-udim">Add Trim UDIM</a>
     </li>
+    <li class="toctree-l4"><a class="reference internal" href="#add-trims-from-color-masks">Add Trims From Color Masks</a>
+    </li>
     <li class="toctree-l4"><a class="reference internal" href="#add-trims-from-zen-sets">Add Trims From Zen Sets</a>
     </li>
     <li class="toctree-l4"><a class="reference internal" href="#set-trim-world-size">Set Trim World Size</a>
@@ -176,11 +166,11 @@
     </li>
     <li class="toctree-l4"><a class="reference internal" href="#clear-trimshet-preview-folder">Clear Trimshet Preview Folder</a>
     </li>
+    <li class="toctree-l4"><a class="reference internal" href="#move">Move</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#delete-all">Delete All</a>
+    </li>
         </ul>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#move-updown-arrow-icon">Move (up/down arrow icon)</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#delete-all">Delete All</a>
     </li>
         </ul>
     </li>
@@ -188,9 +178,9 @@
         <ul>
     <li class="toctree-l3"><a class="reference internal" href="#preset-selector">Preset Selector</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#add_1">Add</a>
+    <li class="toctree-l3"><a class="reference internal" href="#add">Add</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#remove_1">Remove</a>
+    <li class="toctree-l3"><a class="reference internal" href="#remove">Remove</a>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#open-presets-folder">Open Presets Folder</a>
     </li>
@@ -199,14 +189,6 @@
     <li class="toctree-l2"><a class="reference internal" href="#trim-settings">Trim Settings</a>
         <ul>
     <li class="toctree-l3"><a class="reference internal" href="#trim-units">Trim Units</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#x">X</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#y">Y</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#w">W</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#h">H</a>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#fit-axis">Fit Axis</a>
     </li>
@@ -291,7 +273,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
       <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="..">Zen UV 4.5.1 for Blender</a>
+          <a href="..">Zen UV 4.5.2 for Blender</a>
         
       </nav>
       <div class="wy-nav-content">
@@ -505,52 +487,34 @@ Trim sheet data is taken either from property trimsheet image of the active mate
 <h4 id="select-trim-in-the-viewport">Select Trim in the Viewport<a class="headerlink" href="#select-trim-in-the-viewport" title="Permanent link"></a></h4>
 <p>It is also possible to select trim by <code>LMB</code> in the viewport by activating selection mode</p>
 <p><a class="glightbox" href="../img/screen/trimsheet/trim_select_mode.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/trimsheet/trim_select_mode.png" /></a></p>
-<h4 id="rename">Rename<a class="headerlink" href="#rename" title="Permanent link"></a></h4>
-<p>By double-clicking on an item, you can edit its name via a text field. This can also be achieved by pressing <code>Ctrl-LMB</code> over it.</p>
-<h4 id="resize">Resize<a class="headerlink" href="#resize" title="Permanent link"></a></h4>
-<p>The list view can be resized to show more or fewer items. Hover the mouse over the handle <code>(==)</code> then click and drag the handle to expand or shrink the list.</p>
-<h4 id="filter">Filter<a class="headerlink" href="#filter" title="Permanent link"></a></h4>
-<p>Click the Show filtering options button (+) to toggle filter option buttons.</p>
 <ul>
-<li><strong>Search</strong>: <BR>
-Type part of a list item’s name in the filter text field to filter items by part of their name.</li>
-<li><strong>Filter Include</strong>: <BR>
-When the magnifying glass icon has a + sign then only items that match the text will be displayed.</li>
-<li><strong>Filter Exclude</strong>: <BR>
-When the magnifying glass icon has a - sign then only items that do not match text will be displayed.</li>
-<li><strong>Sort</strong>: <BR>
-Sort list items.<ul>
-<li>Alphabetical: <BR>
-This button switches between alphabetical and non-alphabetical ordering.</li>
-<li>Inverse: <BR>
-Sort objects in ascending or descending order. This also applies to alphabetical sorting, if selected.</li>
+<li><strong>Rename</strong> - By double-clicking on an item, you can edit its name via a text field. This can also be achieved by pressing <code>Ctrl-LMB</code> over it.</li>
+<li><strong>Resize</strong> - The list view can be resized to show more or fewer items. Hover the mouse over the handle <code>(==)</code> then click and drag the handle to expand or shrink the list.</li>
+<li>
+<p><strong>Filter</strong> - Click the Show filtering options button (+) to toggle filter option buttons.</p>
+</li>
+<li>
+<p><strong>Search</strong> - Type part of a list item’s name in the filter text field to filter items by part of their name.</p>
+</li>
+<li><strong>Filter Include</strong> - When the magnifying glass icon has a + sign then only items that match the text will be displayed.</li>
+<li><strong>Filter Exclude</strong> - When the magnifying glass icon has a - sign then only items that do not match text will be displayed.</li>
+<li>
+<p><strong>Sort</strong> - Sort list items.</p>
+<ul>
+<li><em>Alphabetical</em> - This button switches between alphabetical and non-alphabetical ordering.</li>
+<li><em>Inverse</em> - Sort objects in ascending or descending order. This also applies to alphabetical sorting, if selected.</li>
+</ul>
+</li>
+<li>
+<p><strong>Add</strong> - Adds a new item.</p>
+</li>
+<li><strong>Remove</strong> - Removes the selected item.</li>
+<li><strong>Duplicate</strong> - Duplicates active or selected trim.<ul>
+<li><em>Ignore Color</em> - Does not duplicate trim color settings</li>
+<li><em>Clear Selection</em> - Clear selection from source trims after duplicating</li>
 </ul>
 </li>
 </ul>
-<h3 id="add">Add<a class="headerlink" href="#add" title="Permanent link"></a></h3>
-<p>Adds a new item.</p>
-<h3 id="remove">Remove<a class="headerlink" href="#remove" title="Permanent link"></a></h3>
-<p>Removes the selected item.</p>
-<h3 id="duplicate">Duplicate<a class="headerlink" href="#duplicate" title="Permanent link"></a></h3>
-<p>Duplicates active or selected trim</p>
-<table>
-<thead>
-<tr>
-<th>Option</th>
-<th>Descripton</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Ignore Color</td>
-<td>Does not duplicate trim color settings</td>
-</tr>
-<tr>
-<td>Clear Selection</td>
-<td>Clear selection from source trims after duplicating</td>
-</tr>
-</tbody>
-</table>
 <h3 id="menu">Menu<a class="headerlink" href="#menu" title="Permanent link"></a></h3>
 <p>A menu with operators e.g. copy paste, or operations on all items.</p>
 <div class="admonition menu">
@@ -559,48 +523,111 @@ Sort objects in ascending or descending order. This also applies to alphabetical
 </div>
 <h4 id="copy-trims-to-clipboard">Copy Trims to Clipboard<a class="headerlink" href="#copy-trims-to-clipboard" title="Permanent link"></a></h4>
 <p>Copy <a href="#active-trim">active</a>, <a href="#selected-trims">selected</a> or <a href="#trims-list">all trims</a> to clipboard</p>
+<div class="admonition properties">
+<p class="admonition-title">Properties</p>
+<p><a class="glightbox" href="../img/screen/trimsheet/copy_trims_op_prop.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/trimsheet/copy_trims_op_prop.png" /></a></p>
+</div>
+<ul>
+<li><em>Active</em> - Copy active trim.</li>
+<li><em>Selected</em> - Copy selected trims.</li>
+<li><em>All</em> - Copy all trims in the trimsheet.</li>
+</ul>
 <h4 id="paste-trims-from-clipboard">Paste Trims from Clipboard<a class="headerlink" href="#paste-trims-from-clipboard" title="Permanent link"></a></h4>
-<table>
-<thead>
-<tr>
-<th>Mode</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Clear</td>
-<td>Clear all trims before paste operation</td>
-</tr>
-<tr>
-<td>Add</td>
-<td>Add trims to the end of trim sheet</td>
-</tr>
-<tr>
-<td>Replace</td>
-<td>Add new trims and replace trims with the same name</td>
-</tr>
-</tbody>
-</table>
+<p>Paste copied trims from clipboard.</p>
+<div class="admonition properties">
+<p class="admonition-title">Properties</p>
+<p><a class="glightbox" href="../img/screen/trimsheet/paste_trims_op_prop.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/trimsheet/paste_trims_op_prop.png" /></a></p>
+</div>
+<ul>
+<li><em>Clear</em> - Clear all trims before paste operation</li>
+<li><em>Add</em> - Add trims to the end of trim sheet</li>
+<li><em>Replace</em> - Add new trims and replace trims with the same name</li>
+</ul>
 <h4 id="batch-rename">Batch Rename<a class="headerlink" href="#batch-rename" title="Permanent link"></a></h4>
 <p>Can rename many trims at once. This uses a pop-up dialog with operations and their options to change the name. These actions are applied in order, from first to last in a trim sheet.</p>
+<div class="admonition properties">
+<p class="admonition-title">Properties</p>
 <p><a class="glightbox" href="../img/screen/trimsheet/trim_batch_rename.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/trimsheet/trim_batch_rename.png" /></a></p>
+</div>
+<ul>
+<li><strong>Mode</strong> - Trim batch rename mode.<ul>
+<li><em>Selected</em> - Rename only selected trims.</li>
+<li><em>All</em> - Rename all trims.</li>
+</ul>
+</li>
+<li><strong>Find</strong> - The text to search for in names.</li>
+<li><strong>Replace</strong> - The text to replace for in matching names found from the Find text.</li>
+<li><strong>Match Case</strong> - Search results must exactly match the case of the Find text.</li>
+<li><strong>Use Regex</strong> - Use Replace by Regular Expression.</li>
+<li><strong>Counter</strong> - Integer value will be added to the end of the name.</li>
+<li><strong>Start from</strong> - If Counter property is used, integer value will be started from this value.</li>
+</ul>
 <h4 id="add-trim-grid">Add Trim Grid<a class="headerlink" href="#add-trim-grid" title="Permanent link"></a></h4>
-<p>Create grid of trims inside active, selected trims, from zero coordinates or 2D cursor position</p>
+<p>Create grid of trims inside active, selected trims, from zero coordinates or 2D cursor position.</p>
+<div class="admonition properties">
+<p class="admonition-title">Properties</p>
+<p><a class="glightbox" href="../img/screen/trimsheet/add_trim_grid_op_prop.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/trimsheet/add_trim_grid_op_prop.png" /></a></p>
+</div>
+<ul>
+<li><strong>Start Position</strong> - The starting position for creating trims.<ul>
+<li><em>Zero Coordinates</em> - Start from zero coordinates x=0, y=0&rdquo;),</li>
+<li><em>2D Cursor</em> - Start from 2D Cursor&rdquo;),</li>
+<li><em>Inside of active Trim</em> - Creates a grid of Trims within the active Trim&rdquo;),</li>
+<li><em>Inside of selected Trims</em> - Creates a grid of Trims within the selected Trims bounding box&rdquo;)</li>
+</ul>
+</li>
+<li><strong>Trim Count Limit</strong> - Limit the number of trims. A large number of trims may cause Blender to freeze. This sets the threshold at which processing will stop.</li>
+<li><strong>Trims Count U</strong> - Trims count Horizontal.</li>
+<li><strong>Trims Count V</strong> - Trims count Horizontal.</li>
+<li><strong>Grid Size</strong> - Size of the grid.</li>
+<li><strong>Margin</strong> - The gap between Trims.</li>
+<li><strong>Remove Template</strong> - Delete the Trim that served as a template.</li>
+</ul>
 <h4 id="add-trim-udim">Add Trim UDIM<a class="headerlink" href="#add-trim-udim" title="Permanent link"></a></h4>
-<p>Creates trims in positions and with UDIM tile sizes</p>
+<p>Creates trims in positions and with UDIM tile sizes.</p>
+<div class="admonition properties">
+<p class="admonition-title">Properties</p>
+<p><a class="glightbox" href="../img/screen/trimsheet/add_trim_udim_op_prop.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/trimsheet/add_trim_udim_op_prop.png" /></a></p>
+</div>
+<ul>
+<li><strong>Mode</strong> - Trims creation mode.<ul>
+<li><em>Single</em> - Create a single trim by number.</li>
+<li><em>Range</em> - Create multiple trims in a given range.</li>
+</ul>
+</li>
+<li><strong>Udim number</strong> - UDIM number in single creation mode.</li>
+<li><strong>Udims start</strong> - Udims range start.</li>
+<li><strong>Udims End</strong> - Udims range end.</li>
+<li><strong>Trim Count Limit</strong> - Limit the number of trims.</li>
+</ul>
+<h4 id="add-trims-from-color-masks">Add Trims From Color Masks<a class="headerlink" href="#add-trims-from-color-masks" title="Permanent link"></a></h4>
+<p>Create trims from a defined image containing color mask data.</p>
+<div class="admonition properties">
+<p class="admonition-title">Properties</p>
+<p><a class="glightbox" href="../img/screen/trimsheet/add_trims_from_color_mask_op_prop.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/trimsheet/add_trims_from_color_mask_op_prop.png" /></a></p>
+</div>
+<ul>
+<li><strong>Image Name</strong> - Source image name, which will be used for texture size.</li>
+<li><strong>Mode</strong> - Image masking mode.<ul>
+<li><em>Unique Color</em> - Image contains only one mask with given color.</li>
+<li><em>Multicolor</em> - Image contains multiple masks with the same color.</li>
+</ul>
+</li>
+<li><strong>Color Masks Limit</strong> - How many unique colors could be processed in image.</li>
+</ul>
 <h4 id="add-trims-from-zen-sets">Add Trims From Zen Sets<a class="headerlink" href="#add-trims-from-zen-sets" title="Permanent link"></a></h4>
-<p>Create trims from Zen Sets groups mesh elements with keeping its names</p>
+<p>Create trims from Zen Sets groups mesh elements with keeping its names. Available only if Zen Sets is installed.</p>
 <h4 id="set-trim-world-size">Set Trim World Size<a class="headerlink" href="#set-trim-world-size" title="Permanent link"></a></h4>
-<p>Set trim &lsquo;World Size&rsquo; property based on texture size. Works on selected trims</p>
+<p>Set trim &lsquo;World Size&rsquo; property based on texture size. Works on selected trims.</p>
 <h4 id="frame-trim">Frame Trim<a class="headerlink" href="#frame-trim" title="Permanent link"></a></h4>
-<p>Moves view to active or selected trims center in UV editor</p>
+<p>Moves view to active or selected trims center in UV editor.</p>
 <h4 id="clear-trimshet-preview-folder">Clear Trimshet Preview Folder<a class="headerlink" href="#clear-trimshet-preview-folder" title="Permanent link"></a></h4>
-<p>Clear folder where trimsheet preview temporary icons are stored</p>
-<h3 id="move-updown-arrow-icon">Move (up/down arrow icon)<a class="headerlink" href="#move-updown-arrow-icon" title="Permanent link"></a></h3>
-<p>Moves the selected item up/down one position.</p>
-<h3 id="delete-all">Delete All<a class="headerlink" href="#delete-all" title="Permanent link"></a></h3>
-<p>Deletes all trims in the trim sheet</p>
+<p>Clear folder where trimsheet preview temporary icons are stored.</p>
+<h4 id="move">Move<a class="headerlink" href="#move" title="Permanent link"></a></h4>
+<p>Moves the selected item up/down one position. (up/down arrow icon).</p>
+<h4 id="delete-all">Delete All<a class="headerlink" href="#delete-all" title="Permanent link"></a></h4>
+<p>Deletes all trims in the trim sheet.</p>
+<hr />
 <h2 id="trim-sheet-presets">Trim Sheet Presets<a class="headerlink" href="#trim-sheet-presets" title="Permanent link"></a></h2>
 <div class="admonition presets">
 <p class="admonition-title">Presets</p>
@@ -608,9 +635,13 @@ Sort objects in ascending or descending order. This also applies to alphabetical
 </div>
 <h3 id="preset-selector">Preset Selector<a class="headerlink" href="#preset-selector" title="Permanent link"></a></h3>
 <p>A list of available presets. A selection will override the included properties.</p>
-<h3 id="add_1">Add<a class="headerlink" href="#add_1" title="Permanent link"></a></h3>
+<div class="admonition notice">
+<p class="admonition-title">Notice</p>
+<p>If name in preset selector is marked with asterix then it shows name of category and active preset is not selected</p>
+</div>
+<h3 id="add">Add<a class="headerlink" href="#add" title="Permanent link"></a></h3>
 <p>New presets can be added based on a predefined set of properties, which will be saved for later reuse. A pop-up opens where you can set a name after which you can select it from the list and in some cases additional settings.</p>
-<h3 id="remove_1">Remove<a class="headerlink" href="#remove_1" title="Permanent link"></a></h3>
+<h3 id="remove">Remove<a class="headerlink" href="#remove" title="Permanent link"></a></h3>
 <p>Deletes the selected preset.</p>
 <h3 id="open-presets-folder">Open Presets Folder<a class="headerlink" href="#open-presets-folder" title="Permanent link"></a></h3>
 <p>You can override the default presets folder with your own path</p>
@@ -623,45 +654,20 @@ Sort objects in ascending or descending order. This also applies to alphabetical
 <h3 id="trim-units">Trim Units<a class="headerlink" href="#trim-units" title="Permanent link"></a></h3>
 <p>By default trim units are in UV points based on values from 0 to 1, but it is possible to switch to image pixels depending on image size</p>
 <p><a class="glightbox" href="../img/screen/trimsheet/trim_pixels.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/trimsheet/trim_pixels.gif" /></a></p>
-<h3 id="x">X<a class="headerlink" href="#x" title="Permanent link"></a></h3>
-<p>Trim left point</p>
-<h3 id="y">Y<a class="headerlink" href="#y" title="Permanent link"></a></h3>
-<p>Trim bottom point</p>
-<h3 id="w">W<a class="headerlink" href="#w" title="Permanent link"></a></h3>
-<p>Trim width</p>
-<h3 id="h">H<a class="headerlink" href="#h" title="Permanent link"></a></h3>
-<p>Trim height</p>
+<ul>
+<li><strong>X</strong> - Trim left point</li>
+<li><strong>Y</strong> - Trim bottom point</li>
+<li><strong>W</strong> - Trim width</li>
+<li><strong>H</strong> - Trim height</li>
+</ul>
 <h3 id="fit-axis">Fit Axis<a class="headerlink" href="#fit-axis" title="Permanent link"></a></h3>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>U</strong></td>
-<td>U axis</td>
-</tr>
-<tr>
-<td><strong>V</strong></td>
-<td>V axis</td>
-</tr>
-<tr>
-<td><strong>Min</strong></td>
-<td>The minimum length axis is automatically determined</td>
-</tr>
-<tr>
-<td><strong>Max</strong></td>
-<td>The maximum length axis is automatically determined</td>
-</tr>
-<tr>
-<td><strong>Automatic</strong></td>
-<td>Automatically detected axis for full dimensional compliance</td>
-</tr>
-</tbody>
-</table>
+<ul>
+<li><strong>U</strong> - U axis</li>
+<li><strong>V</strong> - V axis</li>
+<li><strong>Min</strong> - The minimum length axis is automatically determined</li>
+<li><strong>Max</strong> - The maximum length axis is automatically determined</li>
+<li><strong>Automatic</strong> - Automatically detected axis for full dimensional compliance</li>
+</ul>
 <h3 id="inset">Inset<a class="headerlink" href="#inset" title="Permanent link"></a></h3>
 <p>Trim inset</p>
 <h3 id="keep-proportion">Keep Proportion<a class="headerlink" href="#keep-proportion" title="Permanent link"></a></h3>

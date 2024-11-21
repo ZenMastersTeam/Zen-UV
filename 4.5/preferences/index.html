@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>Preferences - Zen UV 4.5.1 for Blender</title>
+    <title>Preferences - Zen UV 4.5.2 for Blender</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
@@ -43,7 +43,7 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
-          <a href=".." class="icon icon-home"> Zen UV 4.5.1 for Blender
+          <a href=".." class="icon icon-home"> Zen UV 4.5.2 for Blender
         </a><div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
       <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
@@ -103,51 +103,23 @@
                   </li>
                   <li class="toctree-l1 current"><a class="reference internal current" href="#">Preferences</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#zen-uv-keymaps">Zen UV Keymaps</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#reset-preferences">Reset Preferences</a>
-    </li>
     <li class="toctree-l2"><a class="reference internal" href="#panels">Panels</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#disable-docked-view3d-panel">Disable Docked View3D Panel</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#multiselect-with-shift">Multiselect With Shift</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#popup-panel-width">Popup Panel Width</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#selector-orientation">Selector Orientation</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#panels-icon-style">Panels Icon Style</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#disabling-panels">Disabling Panels</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#floating-panels">Floating Panels</a>
-    </li>
-        </ul>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#display">Display</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#-addon-n-panel-name-name-of-the-addon-tab-in-n-panel-you-can-set-it-to-zen-to-combine-all-zen-addons-in-one-tab-requires-blender-restart-more-info-in-the-article-addon-preferences">- Addon N-Panel Name - Name of the addon tab in N-Panel. You can set it to Zen to combine all Zen addons in one tab. Requires Blender restart. More info in the article Addon Preferences</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#-right-menu-assist-context-assistance-by-right-menu-click-more-info-in-the-article-user-interface">- Right Menu Assist - Context assistance by right menu click. More info in the article User Interface</a>
         <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#display-pie-assist">Display Pie Assist</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#display-progress-bar">Display Progress Bar</a>
-    </li>
     <li class="toctree-l3"><a class="reference internal" href="#hops-uv-display">HOps UV Display</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#context-sensitive">Context-sensitive</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#auto-fit-uv-view">Auto Fit UV View</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#sticky-uv-editor-button">Sticky UV Editor Button</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#show-seams">Show Seams</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#show-sharp-edges">Show Sharp Edges</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#show-bevel-weights">Show Bevel Weights</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#show-crease-edges">Show Crease Edges</a>
-    </li>
         </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#-auto-fit-uv-view-automatically-fit-and-zoom-uv-viewport">- Auto Fit UV View - Automatically Fit and Zoom UV viewport.</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#-show-annotations-show-operator-data-using-blender-annotations">- Show Annotations - Show operator data using Blender annotations.</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#favourites">Favourites</a>
     </li>
     </ul>
                   </li>
@@ -195,7 +167,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
       <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="..">Zen UV 4.5.1 for Blender</a>
+          <a href="..">Zen UV 4.5.2 for Blender</a>
         
       </nav>
       <div class="wy-nav-content">
@@ -213,69 +185,92 @@
             <div class="section" itemprop="articleBody">
               
                 <h1 id="preferences">Preferences<a class="headerlink" href="#preferences" title="Permanent link"></a></h1>
-<div class="admonition panel">
-<p class="admonition-title">Panel</p>
-<p><a class="glightbox" href="../img/screen/preferences/MainPanel.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Preferences" src="../img/screen/preferences/MainPanel.png" /></a></p>
-</div>
-<h3 id="zen-uv-keymaps"><a class="glightbox" href="../img/icons/zen-uv%402x.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/icons/zen-uv%402x.png" /></a> <strong>Zen UV Keymaps</strong><a class="headerlink" href="#zen-uv-keymaps" title="Permanent link"></a></h3>
-<p>Set Shortcuts for Zen UV menus.</p>
-<h3 id="reset-preferences"><strong>Reset Preferences</strong><a class="headerlink" href="#reset-preferences" title="Permanent link"></a></h3>
-<p>Reset Zen UV Preferences to default state.</p>
+<table>
+<thead>
+<tr>
+<th>UV Editor</th>
+<th>3D View</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="glightbox" href="../img/screen/preferences/MainPanelUv.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Preferences" src="../img/screen/preferences/MainPanelUv.png" /></a></td>
+<td><a class="glightbox" href="../img/screen/preferences/MainPanel3d.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Preferences" src="../img/screen/preferences/MainPanel3d.png" /></a></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Zen UV Keymaps</strong> - Set Shortcuts for Zen UV menus.</li>
+<li><strong>Reset Preferences</strong> - Reset Zen UV Preferences to default state.</li>
+</ul>
 <hr />
 <h2 id="panels">Panels<a class="headerlink" href="#panels" title="Permanent link"></a></h2>
 <div class="admonition subpanel">
 <p class="admonition-title">Subpanel</p>
 <p><a class="glightbox" href="../img/screen/preferences/PanelPanels.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Preferences" src="../img/screen/preferences/PanelPanels.png" /></a></p>
 </div>
-<h3 id="disable-docked-view3d-panel"><strong>Disable Docked View3D Panel</strong><a class="headerlink" href="#disable-docked-view3d-panel" title="Permanent link"></a></h3>
-<p>Disable Compact UI.</p>
+<ul>
+<li><strong>Disable Docked View3D Panel</strong> - Disable Compact UI.</li>
+</ul>
 <p><a class="glightbox" href="../img/screen/preferences/Disable_CompactUI.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Combo Panel" src="../img/screen/preferences/Disable_CompactUI.gif" /></a></p>
-<h3 id="multiselect-with-shift"><strong>Multiselect With Shift</strong><a class="headerlink" href="#multiselect-with-shift" title="Permanent link"></a></h3>
-<p>Set Active Panels with holding Shift hotkey.</p>
-<h3 id="popup-panel-width"><strong>Popup Panel Width</strong><a class="headerlink" href="#popup-panel-width" title="Permanent link"></a></h3>
-<p>Set Popup menu <code>Shift + U</code> width.</p>
-<h3 id="selector-orientation"><strong>Selector Orientation</strong><a class="headerlink" href="#selector-orientation" title="Permanent link"></a></h3>
-<p>Orient Icons vertically or horizontally. 
+<ul>
+<li><strong>Multiselect With Shift</strong> - Set Active Panels with holding Shift hotkey.</li>
+<li>
+<p><strong>Popup Panel Width</strong> - Set Popup menu <code>Shift + U</code> width.</p>
+</li>
+<li>
+<p><strong>Selector Orientation</strong> - Orient Icons vertically or horizontally. 
  <a class="glightbox" href="../img/screen/preferences/preferences_selector_orientation.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Combo Panel" src="../img/screen/preferences/preferences_selector_orientation.gif" /></a></p>
-<h3 id="panels-icon-style"><strong>Panels Icon Style</strong><a class="headerlink" href="#panels-icon-style" title="Permanent link"></a></h3>
-<p>Change Icon Style. If you don&rsquo;t see active panel icons with your current Blender color theme you can change the icon style.</p>
-<p><a class="glightbox" href="../img/gifs/user_interface/compactui_5.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Combo Panel" src="../img/gifs/user_interface/compactui_5.gif" /></a></p>
-<h3 id="disabling-panels"><strong>Disabling Panels</strong><a class="headerlink" href="#disabling-panels" title="Permanent link"></a></h3>
-<p>Enable Add-on Panels. You can use these checkboxes disable some panels if you don&rsquo;t use them.</p>
-<p><a class="glightbox" href="../img/gifs/user_interface/compactui_4.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Combo Panel" src="../img/gifs/user_interface/compactui_4.gif" /></a></p>
-<h3 id="floating-panels"><strong>Floating Panels</strong><a class="headerlink" href="#floating-panels" title="Permanent link"></a></h3>
-<p>Show Panel as a separate Panel. If you like old style menu make all the panels Floating.</p>
-<p><a class="glightbox" href="../img/gifs/user_interface/compactui_7.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Combo Panel" src="../img/gifs/user_interface/compactui_7.gif" /></a></p>
+</li>
+<li>
+<p><strong>Panels Icon Style</strong> - Change Icon Style. If you don&rsquo;t see active panel icons with your current Blender color theme you can change the icon style.
+<a class="glightbox" href="../img/gifs/user_interface/compactui_5.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Combo Panel" src="../img/gifs/user_interface/compactui_5.gif" /></a></p>
+</li>
+<li>
+<p><strong>Disabling Panels</strong> - Enable Add-on Panels. You can use these checkboxes disable some panels if you don&rsquo;t use them.
+<a class="glightbox" href="../img/gifs/user_interface/compactui_4.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Combo Panel" src="../img/gifs/user_interface/compactui_4.gif" /></a></p>
+</li>
+<li>
+<p><strong>Floating Panels</strong> - Show Panel as a separate Panel. If you like old style menu make all the panels Floating.
+<a class="glightbox" href="../img/gifs/user_interface/compactui_7.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Combo Panel" src="../img/gifs/user_interface/compactui_7.gif" /></a></p>
+</li>
+</ul>
 <hr />
 <h2 id="display">Display<a class="headerlink" href="#display" title="Permanent link"></a></h2>
+<p>The Display panel allows you to switch certain display features used across different parts of the UI.</p>
 <div class="admonition subpanel">
 <p class="admonition-title">Subpanel</p>
 <p><a class="glightbox" href="../img/screen/preferences/PanelDisplay.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Preferences" src="../img/screen/preferences/PanelDisplay.png" /></a></p>
 </div>
-<h3 id="display-pie-assist"><strong>Display Pie Assist</strong><a class="headerlink" href="#display-pie-assist" title="Permanent link"></a></h3>
-<p>Display hints for Pie menu.</p>
-<h3 id="display-progress-bar"><strong>Display Progress Bar</strong><a class="headerlink" href="#display-progress-bar" title="Permanent link"></a></h3>
-<p><a class="glightbox" href="../img/screen/preferences/ProgressBar_main.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Progress Bar" src="../img/screen/preferences/ProgressBar_main.gif" /></a></p>
-<p><strong>Progress Bar</strong> is designed to display the progress of the operator execution process. Not all operators use the <strong>Progress Bar</strong>, only those that require complex calculations.
-On some operating systems of the <strong>Linux</strong> family, the <strong>Progress Bar</strong> can cause Blender to crash. To avoid this situation, you can disable the Progress Bar in <strong>Panel - Preferences - Display Progress Bar.</strong></p>
-<p><a class="glightbox" href="../img/screen/preferences/ProgressBar_disable.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Progress Bar disable" src="../img/screen/preferences/ProgressBar_disable.png" /></a></p>
-<h3 id="hops-uv-display"><strong>HOps UV Display</strong><a class="headerlink" href="#hops-uv-display" title="Permanent link"></a></h3>
-<p>Display UV trasnforms in 3D View using Hard Ops addon.</p>
+<hr />
+<h2 id="-addon-n-panel-name-name-of-the-addon-tab-in-n-panel-you-can-set-it-to-zen-to-combine-all-zen-addons-in-one-tab-requires-blender-restart-more-info-in-the-article-addon-preferences">- <strong>Addon N-Panel Name</strong> - Name of the addon tab in N-Panel. You can set it to Zen to combine all Zen addons in one tab. Requires Blender restart. More info in the article <a href="../addon_prefs/#addon-n-panel-name">Addon Preferences</a><a class="headerlink" href="#-addon-n-panel-name-name-of-the-addon-tab-in-n-panel-you-can-set-it-to-zen-to-combine-all-zen-addons-in-one-tab-requires-blender-restart-more-info-in-the-article-addon-preferences" title="Permanent link"></a></h2>
+<ul>
+<li>
+<p><strong>Display Pie Assist</strong> - Display hints for Pie menu. More info in the article <a href="../user_interface/#pie-menu-assist">Pie Menu Assist</a></p>
+</li>
+<li>
+<p><strong>Display Progress Bar</strong> - Display the progress of the operator execution process/ More info in the article <a href="../user_interface/#progress-bar">User Interface</a>.</p>
+</li>
+<li>
+<p><strong>Sticky UV Editor Button</strong> - Enable Sticky UV Editor button. More info in the article <a href="../sticky_uv_editor/#about">Sticky UV Editor</a></p>
+</li>
+</ul>
+<h2 id="-right-menu-assist-context-assistance-by-right-menu-click-more-info-in-the-article-user-interface">- <strong>Right Menu Assist</strong> - Context assistance by right menu click. More info in the article <a href="../user_interface/#right-menu-assist">User Interface</a><a class="headerlink" href="#-right-menu-assist-context-assistance-by-right-menu-click-more-info-in-the-article-user-interface" title="Permanent link"></a></h2>
+<h3 id="hops-uv-display">HOps UV Display<a class="headerlink" href="#hops-uv-display" title="Permanent link"></a></h3>
+<ul>
+<li><strong>HOps UV Display</strong> - Display UV trasnforms in 3D View using Hard Ops addon.</li>
+<li><strong>Context-sensitive</strong> - Enable HOps UV Display only if UV Editor is open.</li>
+</ul>
 <p><a class="glightbox" href="../img/screen/preferences/HardOps_Display.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="HardOps_Displayl" src="../img/screen/preferences/HardOps_Display.gif" /></a>  </p>
-<h3 id="context-sensitive"><strong>Context-sensitive</strong><a class="headerlink" href="#context-sensitive" title="Permanent link"></a></h3>
-<p>Enable HOps UV Display if UV Editor is open.</p>
-<h3 id="auto-fit-uv-view"><strong>Auto Fit UV View</strong><a class="headerlink" href="#auto-fit-uv-view" title="Permanent link"></a></h3>
-<p>Automatically Fit and Zoom UV viewport.</p>
-<h3 id="sticky-uv-editor-button"><strong>Sticky UV Editor Button</strong><a class="headerlink" href="#sticky-uv-editor-button" title="Permanent link"></a></h3>
-<p>Enable Sticky UV Editor button.</p>
-<h3 id="show-seams"><strong>Show Seams</strong><a class="headerlink" href="#show-seams" title="Permanent link"></a></h3>
-<p>Display UV Seams in 3D Viewport.</p>
-<h3 id="show-sharp-edges"><strong>Show Sharp Edges</strong><a class="headerlink" href="#show-sharp-edges" title="Permanent link"></a></h3>
-<p>Display Sharp edges in 3D Viewport. It can be overlapped by Seams/Bevel Weights/Crease Edges display.</p>
-<h3 id="show-bevel-weights"><strong>Show Bevel Weights</strong><a class="headerlink" href="#show-bevel-weights" title="Permanent link"></a></h3>
-<p>Display Sharp edges in 3D Viewport. It can be overlapped by Seams/Bevel Weights/Crease Edges display.</p>
-<h3 id="show-crease-edges"><strong>Show Crease Edges</strong><a class="headerlink" href="#show-crease-edges" title="Permanent link"></a></h3>
-<p>Display crease edges created for the Subdivision modifier in 3D Viewport. It can be overlapped by Seams/Bevel Weights display.</p>
+<hr />
+<h2 id="-auto-fit-uv-view-automatically-fit-and-zoom-uv-viewport">- <strong>Auto Fit UV View</strong> - Automatically Fit and Zoom UV viewport.<a class="headerlink" href="#-auto-fit-uv-view-automatically-fit-and-zoom-uv-viewport" title="Permanent link"></a></h2>
+<h2 id="-show-annotations-show-operator-data-using-blender-annotations">- <strong>Show Annotations</strong> - Show operator data using Blender annotations.<a class="headerlink" href="#-show-annotations-show-operator-data-using-blender-annotations" title="Permanent link"></a></h2>
+<h2 id="favourites">Favourites<a class="headerlink" href="#favourites" title="Permanent link"></a></h2>
+<p>The Favourites panel allows you to create custom panels with toolsets that are convenient or necessary for your current tasks. The ability to quickly switch panels using the preset system and the ease of creating these panels significantly speeds up daily tasks. In the Favourites panel, you can add not only operators and properties from the addon but also any Blender operators. More info in the article <a href="../favourites/">Favourites</a>.</p>
+<div class="admonition subpanel">
+<p class="admonition-title">Subpanel</p>
+<p><a class="glightbox" href="../img/screen/preferences/PanelFavourites.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Preferences" src="../img/screen/preferences/PanelFavourites.png" /></a></p>
+</div>
               
             </div>
           </div><footer>
