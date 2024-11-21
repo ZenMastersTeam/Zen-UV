@@ -1,7 +1,7 @@
 # Favourites
 
 ## Prerequisites
-Zen UV has a lot of different operators and tools that are located in different panels. And we decided to make Favorites to collect frequently used operators in one place.
+Zen UV has a lot of different operators and tools that are located in different panels. And we decided to make Favorites to collect frequently used operators in one place. Also there is an option to build in Blender native panels: such as [UV Maps](https://docs.blender.org/manual/en/4.2/modeling/meshes/uv/uv_texture_spaces.html#uv-maps) or [Attributes](https://docs.blender.org/manual/en/4.2/modeling/meshes/properties/object_data.html#attributes).
 
 !!! Panel
     | ![](img/screen/favourites/panel_uv.png) | ![](img/screen/favourites/panel_view3d.png) |
@@ -113,7 +113,12 @@ If you want to group items in collapsible panel, you can mark them with the same
 These two options depends on each other and are the main instrument to draw favourite item in the UI.
 
 #### Mode
-- **Operator** - Displays an [operator button](https://docs.blender.org/manual/en/4.2/interface/controls/buttons/buttons.html#operator-buttons) in UI
+##### Operator
+Displays an [operator button](https://docs.blender.org/manual/en/4.2/interface/controls/buttons/buttons.html#operator-buttons) in UI
+
+| ![](img/screen/favourites/fav_operator_preview.png) |
+|---|
+| Example of embedded **Zen Unwrap** operator |
 
 !!! Command
     | ![](img/screen/favourites/fav_operator_command.png) |
@@ -122,28 +127,68 @@ These two options depends on each other and are the main instrument to draw favo
 
     **Python Command** - is a text field where operator identifier or operator identifier with properties (optionally) should be set
     
-        `uv.unwrap`
-        `uv.unwrap(fill_holes=True)`
+    | Command Example | Description |
+    |---|---|
+    | uv.unwrap | UV Unwrap with last context properties |
+    | uv.unwrap(fill_holes=True) | UV Unwrap with enable always 'Fill Holes' property |
     
-    **Operator Properties** - is a popup window to edit operator properties without necesserity to write them manually
+**Operator Properties** - is a popup window to edit operator properties without necesserity to write them manually
 
-    | ![](img/screen/favourites/fav_operator_prop_edit.png) |
-    |---|
-    | Operator properties editor |
+| ![](img/screen/favourites/fav_operator_prop_edit.png) |
+|---|
+| Operator properties editor |
 
-    **Operator Selector** - wizzard to define operator identifier in different ways
+**Operator Selector** - wizzard to define operator identifier in different ways
 
-    - **Select Operator** - Select operator which will be added to the favourites
+- **Select Operator** - Select operator which will be added to the favourites
 
-    | ![](img/screen/favourites/fav_operator_list.png) |
-    |---|
-    | Select operator from list of available operators |
-    
-    - **Select Script** - Select user script which will be loaded and executed
-    - **Select Text Block** - Select user text datablock which will be loaded and executed
+| ![](img/screen/favourites/fav_operator_list.png) |
+|---|
+| Select operator from list of available operators |
 
+- **Select Text Block** - Select user text datablock which will be loaded and executed when operator button will be clicked
 
-- **Panel** - Displays a [panel](https://docs.blender.org/manual/en/4.2/interface/window_system/tabs_panels.html#panels) in UI
-- **Property** - Displays a [property field](https://docs.blender.org/manual/en/4.2/interface/controls/buttons/fields.html#fields) in UI
+| ![](img/screen/favourites/fav_text_block.png) |
+|---|
+| Example of executing Text data-block |
+
+- **Select Script** - Select user script which will be loaded and executed when operator button will be clicked. **It works in the same way as Select Text procedure with the only difference that code will be loaded from script.**
+
+##### Panel
+Displays a [panel](https://docs.blender.org/manual/en/4.2/interface/window_system/tabs_panels.html#panels) in UI
+
+| ![](img/screen/favourites/fav_command_panel.png) |
+|---|
+| Example of Blender **UV Maps** panel embedded |
+
+!!! Command
+    **Python Command** - must be a valid python [panel](https://docs.blender.org/manual/en/4.2/interface/window_system/tabs_panels.html#panels) or [menu](https://docs.blender.org/manual/en/4.2/interface/controls/buttons/menus.html#popup-menus) identifier
+
+    | Command Example | Description |
+    |---|---|
+    | DATA_PT_uv_texture | UV Maps Panel |
+    | VIEW3D_MT_uv_map | UV Mapping Menu |
+
+- **Command Menu** - popup menu where a panel or menu could be selected from the list
+
+| ![](img/screen/favourites/fav_select_panel_menu.png) |
+|---|
+| Command Menu in 3D Viewport context |    
+
+#### Property
+Displays a [property field](https://docs.blender.org/manual/en/4.2/interface/controls/buttons/fields.html#fields) in UI
+
+| ![](img/screen/favourites/fav_property_preview.png) |
+|---|
+| Example of **UV Sync Selection** and **Auto Texture Space** properties embedded |    
+
+!!! Command
+    **Python Command** - must be a valid [context variable](https://docs.blender.org/api/current/bpy.context.html) that is available through Python API
+
+    | Command Example | Description | Preview |
+    |---|---|---|
+    | scene.tool_settings.use_uv_select_sync | UV Sync Selection | ![](img/screen/favourites/fav_uv_sync_selection.png) |
+    | active_object.data.use_auto_texspace | Auto Texture Space | ![](img/screen/favourites/fav_auto_texture_space.png) |
+
 - **Label** - Displays a text string in UI
 - **Script** - Displays a UI block defined as python script
