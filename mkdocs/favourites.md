@@ -3,11 +3,6 @@
 ## Prerequisites
 Zen UV has a lot of different operators and tools that are located in different panels. And we decided to make Favorites to collect frequently used operators in one place. Also there is an option to build in Blender native panels: such as [UV Maps](https://docs.blender.org/manual/en/4.2/modeling/meshes/uv/uv_texture_spaces.html#uv-maps) or [Attributes](https://docs.blender.org/manual/en/4.2/modeling/meshes/properties/object_data.html#attributes).
 
-!!! Panel
-    | ![](img/screen/favourites/panel_uv.png) | ![](img/screen/favourites/panel_view3d.png) |
-    |---|---|
-    | UV Editor | View 3D |
-
 !!! tip
     Watch the video explaining how to organize **Favourites**.
 
@@ -15,35 +10,43 @@ Zen UV has a lot of different operators and tools that are located in different 
     <iframe src="https://www.youtube.com/embed/W-m9hAitLQU?start=17&end=150" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen="" seamless="" frameborder="0"></iframe>
     </div>
 
-## Display Modes
+## Favourites Interface Panel
+All favourties items are displayed in interface panel which could be placed depending on [display modes](#display-modes)
+
+!!! Panel
+    | ![](img/screen/favourites/panel_uv.png) | ![](img/screen/favourites/panel_view3d.png) |
+    |---|---|
+    | UV Editor | View 3D |
+
+### Display Modes
 You can choose a combination of one or several display favourites panel options.
 
 | ![](img/screen/favourites/modes.png) |
 |---|
 | Favourites Display Modes |
 
-### Top Display Mode
+#### Top Display Mode
 Favourites will be placed at the top of N-Panel.
 
 | ![](img/screen/favourites/top_mode.png) |
 |---|
 | Top display mode |
 
-#### Show Header
+##### Show Header
 If **Show Header** option in top mode is unset than favourites header is not showing
 
 | ![](img/screen/favourites/show_top_header.png) |
 |---|
 | Show header in top mode |
 
-### Tab Display Mode
+#### Tab Display Mode
 Favourites will be represented as the tab page of N-Panel.
 
 | ![](img/screen/favourites/tab_mode.png) |
 |---|
 | Tab display mode |
 
-### Float Display Mode
+#### Float Display Mode
 Favourites will be represented as the separate floating panel.
 
 | ![](img/screen/favourites/float_mode.png) |
@@ -138,21 +141,20 @@ Displays an [operator button](https://docs.blender.org/manual/en/4.2/interface/c
 |---|
 | Operator properties editor |
 
-**Operator Selector** - wizzard to define operator identifier in different ways
+- **Operator Selector** - wizzard to define operator identifier in different ways
+    - **Select Operator** - Select operator which will be added to the favourites
 
-- **Select Operator** - Select operator which will be added to the favourites
+    | ![](img/screen/favourites/fav_operator_list.png) |
+    |---|
+    | Select operator from list of available operators |
 
-| ![](img/screen/favourites/fav_operator_list.png) |
-|---|
-| Select operator from list of available operators |
+    - **Select Text Block** - Select user text datablock which will be loaded and executed when operator button will be clicked
 
-- **Select Text Block** - Select user text datablock which will be loaded and executed when operator button will be clicked
+    | ![](img/screen/favourites/fav_text_block.png) |
+    |---|
+    | Example of executing Text data-block |
 
-| ![](img/screen/favourites/fav_text_block.png) |
-|---|
-| Example of executing Text data-block |
-
-- **Select Script** - Select user script which will be loaded and executed when operator button will be clicked. **It works in the same way as Select Text procedure with the only difference that code will be loaded from script.**
+    - **Select Script** - Select user script which will be loaded and executed when operator button will be clicked. **It works in the same way as Select Text procedure with the only difference that code will be loaded from script.**
 
 ##### Panel
 Displays a [panel](https://docs.blender.org/manual/en/4.2/interface/window_system/tabs_panels.html#panels) in UI
@@ -183,12 +185,130 @@ Displays a [property field](https://docs.blender.org/manual/en/4.2/interface/con
 | Example of **UV Sync Selection** and **Auto Texture Space** properties embedded |    
 
 !!! Command
-    **Python Command** - must be a valid [context variable](https://docs.blender.org/api/current/bpy.context.html) that is available through Python API
+    **Python Command** - must be a valid [context variable](https://docs.blender.org/api/current/bpy.context.html) that is available through [Python API](https://docs.blender.org/api/current/index.html)
 
     | Command Example | Description | Preview |
     |---|---|---|
     | scene.tool_settings.use_uv_select_sync | UV Sync Selection | ![](img/screen/favourites/fav_uv_sync_selection.png) |
     | active_object.data.use_auto_texspace | Auto Texture Space | ![](img/screen/favourites/fav_auto_texture_space.png) |
 
-- **Label** - Displays a text string in UI
-- **Script** - Displays a UI block defined as python script
+#### Label
+Displays a text string, icon or one of them in UI.
+
+| ![](img/screen/favourites/fav_label_preview.png) |
+|---|
+| Label with icon |  
+
+!!! Command
+    Is not used in this mode.
+
+#### Script
+Displays a UI block defined as python script. This mode is necessary when you would like to display difficult UI elements that are avilable through addon [Python API](https://docs.blender.org/api/current/index.html) functions
+
+
+| Embedded Texel Density Ranges | Native Texel Density Ranges  |
+|---|---|
+| ![](img/screen/favourites/fav_script_preview.png) | ![](img/screen/favourites/fav_script_preview_original.png) |
+
+!!! Command
+    **Python Command** - must be a valid [Python API](https://docs.blender.org/api/current/index.html) script line that can draw UI element in the current [UILayout](https://docs.blender.org/api/current/bpy.types.UILayout.html).
+
+    | Example | Zen UV Texel Density Ranges |
+    |---|---|
+    | Command | `from ZenUV.ops.texel_density.td_ui import draw_td_ranges;  draw_td_ranges(context, op_row)` |
+    | Preview | ![](img/screen/favourites/fav_td_ranges.png) |
+
+##### Context variables
+The context members available depend on the area of Blender which is currently being accessed.
+
+!!! Warning
+    All context values are **read-only**. Do not change them! Just use for UI display purposes.
+
+- [**context**](https://docs.blender.org/api/current/bpy.types.Context.html) - current windowmanager and data context
+    
+    **TYPE:** `bpy.types.Context`
+
+- [**layout**](https://docs.blender.org/api/current/bpy.types.UILayout.html) - current [Favourites Panel](#favourites-interface-panel) UI layout
+
+    **TYPE:** `bpy.types.UILayout`
+
+- [**op_row**](https://docs.blender.org/api/current/bpy.types.UILayout.html) - current [Favoutite Item](#favourite-item) UI layout
+
+    **TYPE:** `bpy.types.UILayout`
+
+- [**p_item**](#favourite-item) - current [Favoutite Item](#favourite-item) preferences ([mode](#mode), [name](#name), etc.)
+
+    **TYPE:** `ZUV_FavItem`
+
+- [**addon_prefs**](preferences.md) - Zen UV [preferences](preferences.md) class
+
+    **TYPE:** `ZUV_AddonPreferences`
+
+!!! Note
+    We understand that this may look very difficult so feel free to contact with us in our [**Discord channel**](https://discord.gg/wGpFeME). We will be very glad to help you!
+
+### Layout
+Defines how [favourite UI items](#favourite-item) will be placed in the [favourite UI panel](#favourites-interface-panel) organizing items in sub-layouts.
+
+- **Row** - starts a sub-layout where items are placed next to each other in a row.
+
+    | ![](img/screen/favourites/fav_layout_row.png) |
+    |---|
+    | Projection operators placed in a row |
+
+- **Column** - starts a sub-layout where items are placed under each other in a column.
+
+    | ![](img/screen/favourites/fav_layout_col.png) |
+    |---|
+    | Projection operators placed in a column |
+
+- **Flow Grid** - starts a sub-layout where items are placed in a flow grid depending on [panel](#favourites-interface-panel) width.
+
+    | ![](img/screen/favourites/fav_layout_flow_grid.png) |
+    |---|
+    | Projection operators placed in a flow grid |
+
+- **Auto** - follows the previously created sub-layout. If sub-layout was not previously defined than **Flow Grid** is set by default.
+
+!!! Note
+    Every sub-layout type except **Auto** inserts a separator before. If you want to skip separators creation group items with Layout Group property.
+
+### Layout Group
+Option to skip creation of separators betweeen sub-layouts.
+
+| ![](img/screen/favourites/fav_layout_group.png) | ![](img/screen/favourites/fav_layout_group_open.png) |
+|---|---|
+| None | Open |
+
+- **None** - Does not change anything in current [sub-layout](#layout).
+- **Open** - Opens active [sub-layout](#layout), where all elements will be placed without separators.
+- **Close** - Closes [sub-layout](#layout) without separators.
+
+### Icon
+Adds an icon to the current favourtie item element in UI.
+
+| ![](img/screen/favourites/fav_layout_icon.png) |
+|---|
+| Standard Blender Icon |
+
+### Icon Type
+Defines type of an [icon](#icon) that will be placed in UI.
+
+- **Standard** - Standard Blender icon.
+
+    | ![](img/screen/favourites/fav_icon_select_standard.png) |
+    |---|
+    | Standard Blender Icon Selector |
+
+- **Custom** - On of the ZenUV icons that are shipped with the addon.
+
+    | ![](img/screen/favourites/fav_icon_select_custom.png) |
+    |---|
+    | Custom Zen UV Icon Selector |
+
+### Icon Only
+If option is set then only [icon](#icon) will be shown in [favourite item](#favourite-item) UI element.
+
+| ![](img/screen/favourites/fav_icon_only.png) |
+|---|
+| UV Projection Operators |
