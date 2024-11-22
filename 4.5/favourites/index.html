@@ -111,17 +111,21 @@
     <ul class="current">
     <li class="toctree-l2"><a class="reference internal" href="#prerequisites">Prerequisites</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#display-modes">Display Modes</a>
+    <li class="toctree-l2"><a class="reference internal" href="#favourites-interface-panel">Favourites Interface Panel</a>
         <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#top-display-mode">Top Display Mode</a>
+    <li class="toctree-l3"><a class="reference internal" href="#display-modes">Display Modes</a>
         <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#show-header">Show Header</a>
+    <li class="toctree-l4"><a class="reference internal" href="#top-display-mode">Top Display Mode</a>
+        <ul>
+    <li class="toctree-l5"><a class="reference internal" href="#show-header">Show Header</a>
     </li>
         </ul>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#tab-display-mode">Tab Display Mode</a>
+    <li class="toctree-l4"><a class="reference internal" href="#tab-display-mode">Tab Display Mode</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#float-display-mode">Float Display Mode</a>
+    <li class="toctree-l4"><a class="reference internal" href="#float-display-mode">Float Display Mode</a>
+    </li>
+        </ul>
     </li>
         </ul>
     </li>
@@ -169,7 +173,25 @@
     </li>
     <li class="toctree-l4"><a class="reference internal" href="#property">Property</a>
     </li>
+    <li class="toctree-l4"><a class="reference internal" href="#label">Label</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#script">Script</a>
+        <ul>
+    <li class="toctree-l5"><a class="reference internal" href="#context-variables">Context variables</a>
+    </li>
         </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#layout">Layout</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#layout-group">Layout Group</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#icon">Icon</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#icon-type">Icon Type</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#icon-only">Icon Only</a>
     </li>
         </ul>
     </li>
@@ -233,6 +255,15 @@
                 <h1 id="favourites">Favourites<a class="headerlink" href="#favourites" title="Permanent link"></a></h1>
 <h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link"></a></h2>
 <p>Zen UV has a lot of different operators and tools that are located in different panels. And we decided to make Favorites to collect frequently used operators in one place. Also there is an option to build in Blender native panels: such as <a href="https://docs.blender.org/manual/en/4.2/modeling/meshes/uv/uv_texture_spaces.html#uv-maps">UV Maps</a> or <a href="https://docs.blender.org/manual/en/4.2/modeling/meshes/properties/object_data.html#attributes">Attributes</a>.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Watch the video explaining how to organize <strong>Favourites</strong>.</p>
+<p><div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%;">
+<iframe src="https://www.youtube.com/embed/W-m9hAitLQU?start=17&end=150" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen="" seamless="" frameborder="0"></iframe>
+</div></p>
+</div>
+<h2 id="favourites-interface-panel">Favourites Interface Panel<a class="headerlink" href="#favourites-interface-panel" title="Permanent link"></a></h2>
+<p>All favourties items are displayed in interface panel which could be placed depending on <a href="#display-modes">display modes</a></p>
 <div class="admonition panel">
 <p class="admonition-title">Panel</p>
 <table>
@@ -250,14 +281,7 @@
 </tbody>
 </table>
 </div>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>Watch the video explaining how to organize <strong>Favourites</strong>.</p>
-<p><div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%;">
-<iframe src="https://www.youtube.com/embed/W-m9hAitLQU?start=17&end=150" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen="" seamless="" frameborder="0"></iframe>
-</div></p>
-</div>
-<h2 id="display-modes">Display Modes<a class="headerlink" href="#display-modes" title="Permanent link"></a></h2>
+<h3 id="display-modes">Display Modes<a class="headerlink" href="#display-modes" title="Permanent link"></a></h3>
 <p>You can choose a combination of one or several display favourites panel options.</p>
 <table>
 <thead>
@@ -271,7 +295,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="top-display-mode">Top Display Mode<a class="headerlink" href="#top-display-mode" title="Permanent link"></a></h3>
+<h4 id="top-display-mode">Top Display Mode<a class="headerlink" href="#top-display-mode" title="Permanent link"></a></h4>
 <p>Favourites will be placed at the top of N-Panel.</p>
 <table>
 <thead>
@@ -285,7 +309,7 @@
 </tr>
 </tbody>
 </table>
-<h4 id="show-header">Show Header<a class="headerlink" href="#show-header" title="Permanent link"></a></h4>
+<h5 id="show-header">Show Header<a class="headerlink" href="#show-header" title="Permanent link"></a></h5>
 <p>If <strong>Show Header</strong> option in top mode is unset than favourites header is not showing</p>
 <table>
 <thead>
@@ -299,7 +323,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="tab-display-mode">Tab Display Mode<a class="headerlink" href="#tab-display-mode" title="Permanent link"></a></h3>
+<h4 id="tab-display-mode">Tab Display Mode<a class="headerlink" href="#tab-display-mode" title="Permanent link"></a></h4>
 <p>Favourites will be represented as the tab page of N-Panel.</p>
 <table>
 <thead>
@@ -313,7 +337,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="float-display-mode">Float Display Mode<a class="headerlink" href="#float-display-mode" title="Permanent link"></a></h3>
+<h4 id="float-display-mode">Float Display Mode<a class="headerlink" href="#float-display-mode" title="Permanent link"></a></h4>
 <p>Favourites will be represented as the separate floating panel.</p>
 <table>
 <thead>
@@ -473,6 +497,8 @@
 </tr>
 </tbody>
 </table>
+<ul>
+<li>
 <p><strong>Operator Selector</strong> - wizzard to define operator identifier in different ways</p>
 <ul>
 <li><strong>Select Operator</strong> - Select operator which will be added to the favourites</li>
@@ -506,6 +532,8 @@
 </table>
 <ul>
 <li><strong>Select Script</strong> - Select user script which will be loaded and executed when operator button will be clicked. <strong>It works in the same way as Select Text procedure with the only difference that code will be loaded from script.</strong></li>
+</ul>
+</li>
 </ul>
 <h5 id="panel">Panel<a class="headerlink" href="#panel" title="Permanent link"></a></h5>
 <p>Displays a <a href="https://docs.blender.org/manual/en/4.2/interface/window_system/tabs_panels.html#panels">panel</a> in UI</p>
@@ -574,7 +602,7 @@
 </table>
 <div class="admonition command">
 <p class="admonition-title">Command</p>
-<p><strong>Python Command</strong> - must be a valid <a href="https://docs.blender.org/api/current/bpy.context.html">context variable</a> that is available through Python API</p>
+<p><strong>Python Command</strong> - must be a valid <a href="https://docs.blender.org/api/current/bpy.context.html">context variable</a> that is available through <a href="https://docs.blender.org/api/current/index.html">Python API</a></p>
 <table>
 <thead>
 <tr>
@@ -597,10 +625,233 @@
 </tbody>
 </table>
 </div>
+<h4 id="label">Label<a class="headerlink" href="#label" title="Permanent link"></a></h4>
+<p>Displays a text string, icon or one of them in UI.</p>
+<table>
+<thead>
+<tr>
+<th><a class="glightbox" href="../img/screen/favourites/fav_label_preview.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/favourites/fav_label_preview.png" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Label with icon</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition command">
+<p class="admonition-title">Command</p>
+<p>Is not used in this mode.</p>
+</div>
+<h4 id="script">Script<a class="headerlink" href="#script" title="Permanent link"></a></h4>
+<p>Displays a UI block defined as python script. This mode is necessary when you would like to display difficult UI elements that are avilable through addon <a href="https://docs.blender.org/api/current/index.html">Python API</a> functions</p>
+<table>
+<thead>
+<tr>
+<th>Embedded Texel Density Ranges</th>
+<th>Native Texel Density Ranges</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="glightbox" href="../img/screen/favourites/fav_script_preview.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/favourites/fav_script_preview.png" /></a></td>
+<td><a class="glightbox" href="../img/screen/favourites/fav_script_preview_original.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/favourites/fav_script_preview_original.png" /></a></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition command">
+<p class="admonition-title">Command</p>
+<p><strong>Python Command</strong> - must be a valid <a href="https://docs.blender.org/api/current/index.html">Python API</a> script line that can draw UI element in the current <a href="https://docs.blender.org/api/current/bpy.types.UILayout.html">UILayout</a>.</p>
+<table>
+<thead>
+<tr>
+<th>Example</th>
+<th>Zen UV Texel Density Ranges</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Command</td>
+<td><code>from ZenUV.ops.texel_density.td_ui import draw_td_ranges;  draw_td_ranges(context, op_row)</code></td>
+</tr>
+<tr>
+<td>Preview</td>
+<td><a class="glightbox" href="../img/screen/favourites/fav_td_ranges.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/favourites/fav_td_ranges.png" /></a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h5 id="context-variables">Context variables<a class="headerlink" href="#context-variables" title="Permanent link"></a></h5>
+<p>The context members available depend on the area of Blender which is currently being accessed.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>All context values are <strong>read-only</strong>. Do not change them! Just use for UI display purposes.</p>
+</div>
 <ul>
-<li><strong>Label</strong> - Displays a text string in UI</li>
-<li><strong>Script</strong> - Displays a UI block defined as python script</li>
+<li>
+<p><a href="https://docs.blender.org/api/current/bpy.types.Context.html"><strong>context</strong></a> - current windowmanager and data context</p>
+<p><strong>TYPE:</strong> <code>bpy.types.Context</code></p>
+</li>
+<li>
+<p><a href="https://docs.blender.org/api/current/bpy.types.UILayout.html"><strong>layout</strong></a> - current <a href="#favourites-interface-panel">Favourites Panel</a> UI layout</p>
+<p><strong>TYPE:</strong> <code>bpy.types.UILayout</code></p>
+</li>
+<li>
+<p><a href="https://docs.blender.org/api/current/bpy.types.UILayout.html"><strong>op_row</strong></a> - current <a href="#favourite-item">Favoutite Item</a> UI layout</p>
+<p><strong>TYPE:</strong> <code>bpy.types.UILayout</code></p>
+</li>
+<li>
+<p><a href="#favourite-item"><strong>p_item</strong></a> - current <a href="#favourite-item">Favoutite Item</a> preferences (<a href="#mode">mode</a>, <a href="#name">name</a>, etc.)</p>
+<p><strong>TYPE:</strong> <code>ZUV_FavItem</code></p>
+</li>
+<li>
+<p><a href="../preferences/"><strong>addon_prefs</strong></a> - Zen UV <a href="../preferences/">preferences</a> class</p>
+<p><strong>TYPE:</strong> <code>ZUV_AddonPreferences</code></p>
+</li>
 </ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We understand that this may look very difficult so feel free to contact with us in our <a href="https://discord.gg/wGpFeME"><strong>Discord channel</strong></a>. We will be very glad to help you!</p>
+</div>
+<h3 id="layout">Layout<a class="headerlink" href="#layout" title="Permanent link"></a></h3>
+<p>Defines how <a href="#favourite-item">favourite UI items</a> will be placed in the <a href="#favourites-interface-panel">favourite UI panel</a> organizing items in sub-layouts.</p>
+<ul>
+<li>
+<p><strong>Row</strong> - starts a sub-layout where items are placed next to each other in a row.</p>
+<table>
+<thead>
+<tr>
+<th><a class="glightbox" href="../img/screen/favourites/fav_layout_row.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/favourites/fav_layout_row.png" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Projection operators placed in a row</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>Column</strong> - starts a sub-layout where items are placed under each other in a column.</p>
+<table>
+<thead>
+<tr>
+<th><a class="glightbox" href="../img/screen/favourites/fav_layout_col.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/favourites/fav_layout_col.png" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Projection operators placed in a column</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>Flow Grid</strong> - starts a sub-layout where items are placed in a flow grid depending on <a href="#favourites-interface-panel">panel</a> width.</p>
+<table>
+<thead>
+<tr>
+<th><a class="glightbox" href="../img/screen/favourites/fav_layout_flow_grid.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/favourites/fav_layout_flow_grid.png" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Projection operators placed in a flow grid</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>Auto</strong> - follows the previously created sub-layout. If sub-layout was not previously defined than <strong>Flow Grid</strong> is set by default.</p>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Every sub-layout type except <strong>Auto</strong> inserts a separator before. If you want to skip separators creation group items with Layout Group property.</p>
+</div>
+<h3 id="layout-group">Layout Group<a class="headerlink" href="#layout-group" title="Permanent link"></a></h3>
+<p>Option to skip creation of separators betweeen sub-layouts.</p>
+<table>
+<thead>
+<tr>
+<th><a class="glightbox" href="../img/screen/favourites/fav_layout_group.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/favourites/fav_layout_group.png" /></a></th>
+<th><a class="glightbox" href="../img/screen/favourites/fav_layout_group_open.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/favourites/fav_layout_group_open.png" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>None</td>
+<td>Open</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>None</strong> - Does not change anything in current <a href="#layout">sub-layout</a>.</li>
+<li><strong>Open</strong> - Opens active <a href="#layout">sub-layout</a>, where all elements will be placed without separators.</li>
+<li><strong>Close</strong> - Closes <a href="#layout">sub-layout</a> without separators.</li>
+</ul>
+<h3 id="icon">Icon<a class="headerlink" href="#icon" title="Permanent link"></a></h3>
+<p>Adds an icon to the current favourtie item element in UI.</p>
+<table>
+<thead>
+<tr>
+<th><a class="glightbox" href="../img/screen/favourites/fav_layout_icon.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/favourites/fav_layout_icon.png" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Standard Blender Icon</td>
+</tr>
+</tbody>
+</table>
+<h3 id="icon-type">Icon Type<a class="headerlink" href="#icon-type" title="Permanent link"></a></h3>
+<p>Defines type of an <a href="#icon">icon</a> that will be placed in UI.</p>
+<ul>
+<li>
+<p><strong>Standard</strong> - Standard Blender icon.</p>
+<table>
+<thead>
+<tr>
+<th><a class="glightbox" href="../img/screen/favourites/fav_icon_select_standard.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/favourites/fav_icon_select_standard.png" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Standard Blender Icon Selector</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>Custom</strong> - On of the ZenUV icons that are shipped with the addon.</p>
+<table>
+<thead>
+<tr>
+<th><a class="glightbox" href="../img/screen/favourites/fav_icon_select_custom.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/favourites/fav_icon_select_custom.png" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Custom Zen UV Icon Selector</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h3 id="icon-only">Icon Only<a class="headerlink" href="#icon-only" title="Permanent link"></a></h3>
+<p>If option is set then only <a href="#icon">icon</a> will be shown in <a href="#favourite-item">favourite item</a> UI element.</p>
+<table>
+<thead>
+<tr>
+<th><a class="glightbox" href="../img/screen/favourites/fav_icon_only.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/favourites/fav_icon_only.png" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>UV Projection Operators</td>
+</tr>
+</tbody>
+</table>
               
             </div>
           </div><footer>
