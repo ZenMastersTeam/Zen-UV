@@ -1,10 +1,9 @@
-site_name: Zen UV 4.5.2 for Blender
+site_name: Zen UV 5.0 for Blender
 site_description: Zen UV for Blender Documentation
 nav:
     - Getting Started:
         - Introduction: index.md
         - Learning Videos: youtube_videos.md
-        - Upgrade Zen UV 3 to Zen UV 4 FAQ: zenuv3_to_zenuv4.md
         - Installation and Update: installation.md
         - User Interface: user_interface.md
         - Tutorial:
