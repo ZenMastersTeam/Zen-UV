@@ -1,6 +1,8 @@
 # Changelog
 ---
-- [Version 4.5.2](changelg/release_note_4.5.2.md)
+- [Version 5.0.0](changelg/release_note_5.0.0.md)
+- [Version 4.5.4](changelg/release_note_4.5.4.md) *Feb 18, 2025*
+- [Version 4.5.2](changelg/release_note_4.5.2.md) *Nov 22, 2024*
 - [Version 4.5.1](changelg/release_note_4.5.1.md) *Oct 01, 2024*
 - [Version 4.5.0](changelg/release_note_4.5.0.md) *Sep 27, 2024*
 - [Version 4.4.2](changelg/release_note_4.4.1.md) *Jul 25, 2024*
