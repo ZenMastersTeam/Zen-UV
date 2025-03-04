@@ -156,7 +156,7 @@ Move, Rotate, Scale, Fit, Align and Flip selected Islands or Faces/Edges/Vertice
 
 **Zen Touch Tool** is a universal UV transformation tool that provides fast and intuitive control over moving, scaling, and rotating UV islands in the UV Editor. It allows for quick and easy execution of both basic and advanced transformations.
 
-[**Follow the link**](touch_tool.md#zen-toush-tool) to find more information about Transform Tool.
+[**Follow the link**](touch_tool.md#zen-touch-tool) to find more information about Transform Tool.
 
 ![touch tool overview](img/screen/zen_uv_touch_tool/touch_tool_overview.gif)
 
