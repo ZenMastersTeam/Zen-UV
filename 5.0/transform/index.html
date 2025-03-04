@@ -1,0 +1,1590 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Transform - Zen UV 5.0 for Blender</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../css/version-select.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Transform";
+        var mkdocs_page_input_path = "transform.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-7XHJ910WF8"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', "G-7XHJ910WF8");
+      </script>
+ <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }</style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Zen UV 5.0 for Blender
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../youtube_videos/">Learning Videos</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../installation/">Installation and Update</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../user_interface/">User Interface</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Tutorial</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../tutorial/">Step-by-Step Guide Examples</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >Emergency Light</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../tutorial/emergency_light/emergency_light_eng/">Emergency Light (EN)</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../tutorial/emergency_light/emergency_light_ukr/">Emergency Light (UA)</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../tutorial/emergency_light/emergency_light_rus/">Emergency Light (RU)</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Modules</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../adv_uv-maps/">Advanced UV Maps</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../seam_groups/">Seam Groups</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../unwrap/">Unwrap</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../select/">Select</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Transform</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#independent-transform-operators">Independent Transform Operators</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#relax">Relax</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#world-orient">World Orient</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#randomize">Randomize</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#quadrify-islands">Quadrify Islands</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#reshape-island">Reshape Island</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#match-and-stitch">Match and Stitch</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#split-uv">Split UV</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#merge-uv-verts">Merge UV Verts</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#mirror-uv">Mirror UV</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#unified-transform-system">Unified Transform System</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#universal-control-panel">Universal Control Panel</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#transform-space">Transform Space</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#mode">Mode</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#order">Order</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#transform-types">Transform Types</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#move">Move</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#scale">Scale</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#scale-mode">Scale Mode</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#rotate">Rotate</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#flip">Flip</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#fit">Fit</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#fit-into-region">Fit into Region</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#align">Align</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#distribute">Distribute</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#distribute-and-sort">Distribute And Sort</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#distribute-vertices">Distribute vertices</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#arrange">Arrange</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#2d-cursor">2D Cursor</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#advanced-transforms">Advanced Transforms</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#move-operators">Move operators</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#move-island">Move island</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#move-to-uv-area">Move to UV Area</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#move-2d-cursor-to">Move 2D Cursor To</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#move-to-uv-area-eyedropper">Move To UV Area (eyedropper)</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#move-to-uv-position-eyedropper">Move to UV position (eyedropper)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#scale-operators">Scale operators</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#scale-island">Scale Island</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#rotate-operators">Rotate operators</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#rotate-island">Rotate Island</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#orient-island">Orient Island</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#flip-operators">Flip operators</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#flip-island">Flip Island</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#fit-operators">Fit operators</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#fit-island">Fit Island</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#align-operators">Align operators</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#align-islands">Align Islands</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#distribute-operators">Distribute operators</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../stack/">Stack</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../texel_density/">Texel Density</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../checker/">UV Checker</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pack/">Pack</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../preferences/">Preferences</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../transform_tool/">Transform Tool</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../touch_tool/">Touch Tool</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../sticky_uv_editor/">Sticky UV Editor</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../favourites/">Favourites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Trim Sheets</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../trimsheet/">Trim Sheets</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../trimsheet_creation/">Trim Sheet Management</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../trimsheet_operators/">Trim Sheet Operators</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../trimsheet_hotspot/">Hotspot Mapping</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Additional</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../addon_prefs/">Addon Preferences</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../user_script/">User Script</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../help/">Help</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../troubleshooting/">FAQs</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../changelg/">Changelog</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../credits/">Credits</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../our_addons/">Our Add-ons</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../recommended_addons/">Recommended Add-ons</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Zen UV 5.0 for Blender</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Modules</li>
+      <li class="breadcrumb-item active">Transform</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="transform-system">Transform System<a class="headerlink" href="#transform-system" title="Permanent link"></a></h1>
+<p>This panel contains tools to transform UVs.</p>
+<div class="admonition panel">
+<p class="admonition-title">Panel</p>
+<table>
+<thead>
+<tr>
+<th>3D Viewport</th>
+<th>UV Editor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="glightbox" href="../img/screen/transform/tr_main_panel.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Transform 3d panel" src="../img/screen/transform/tr_main_panel.png" /></a></td>
+<td><a class="glightbox" href="../img/screen/transform/tr_main_panel_uv_editor.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Transform UV panel" src="../img/screen/transform/tr_main_panel_uv_editor.png" /></a></td>
+</tr>
+</tbody>
+</table>
+<p>UV Editor panel contains extra operator <a href="../operators/reshape_island/"><strong>Reshape Islands. Click to read full information</strong></a>.</p>
+</div>
+<hr />
+<h2 id="independent-transform-operators">Independent Transform Operators<a class="headerlink" href="#independent-transform-operators" title="Permanent link"></a></h2>
+<h3 id="relax">Relax<a class="headerlink" href="#relax" title="Permanent link"></a></h3>
+<p><a class="glightbox" href="../img/icons/relax-1_32.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/icons/relax-1_32.png" /></a> Allows to reduce stretching of the faces of the island. Uses three algorithms</p>
+<table>
+<thead>
+<tr>
+<th><a class="glightbox" href="../img/gifs/trasnform_operators/TrRelaxExample.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Relax" src="../img/gifs/trasnform_operators/TrRelaxExample.gif" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Relax</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition properties">
+<p class="admonition-title">Properties</p>
+<p><a class="glightbox" href="../img/screen/transform/tr_relax_properties.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/transform/tr_relax_properties.png" /></a></p>
+</div>
+<ul>
+<li><strong>Method</strong> - Unwrapping method<ul>
+<li><em>Zen Relax</em> - The algorithm is most suitable for organic objects.</li>
+<li><em>Angle Based</em> - Blender&rsquo;s native algorithm. Most suitable for hard surface objects.</li>
+<li><em>Conformal</em> - Blender&rsquo;s native algorithm. Same as <strong>Angle Based</strong>, but much faster. However, can lead to undesired results if the island is complicated.</li>
+</ul>
+</li>
+<li><strong>Select</strong> - Select relaxed island</li>
+<li><strong>Correct Aspect</strong> - Taking image aspect ratio into account</li>
+</ul>
+<div class="admonition pproperties">
+<p class="admonition-title">Pproperties</p>
+<p><a class="glightbox" href="../img/screen/transform/tr_relax_additional_options.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Relax Additional Properties" src="../img/screen/transform/tr_relax_additional_options.png" /></a></p>
+</div>
+<ul>
+<li><strong>Use <a href="https://blendermarket.com/products/zen-sets">Zen Sets</a> to Highlight Errors</strong> - Use <a href="https://blendermarket.com/products/zen-sets">Zen Sets</a> to create <a href="https://blendermarket.com/products/zen-sets">Zen Sets</a> Groups with Mesh Errors</li>
+</ul>
+<hr />
+<h3 id="world-orient">World Orient<a class="headerlink" href="#world-orient" title="Permanent link"></a></h3>
+<p>Rotate Islands the way they are oriented on the Models. Each method (Organic/Hard Surface) uses a heuristic approach and correctly orients most of the Islands in its area.</p>
+<table>
+<thead>
+<tr>
+<th><a class="glightbox" href="../img/gifs/trasnform_operators/TrWorldOrientExample.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="World Orient" src="../img/gifs/trasnform_operators/TrWorldOrientExample.gif" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>World Orient</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition properties">
+<p class="admonition-title">Properties</p>
+<p><a class="glightbox" href="../img/screen/transform/world_orient_props.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="world orient properties" src="../img/screen/transform/world_orient_props.png" /></a></p>
+</div>
+<ul>
+<li><strong>Method</strong> - The orientation method is suitable for geometry types<ul>
+<li><em>Hard Surface</em></li>
+<li><em>Organic</em></li>
+</ul>
+</li>
+<li><strong>Further orient</strong> - Additional turn. Allows you to turn the island to a horizontal or vertical if the island is located at an angle in the model.</li>
+<li><strong>Flip By Axis</strong> - Allow changing direction of the island after basic orientation. Suitable if needed change orientation from legs to head for example</li>
+<li><strong>Reverse Axis</strong> - Allows you to change the direction of the axis to the opposite</li>
+</ul>
+<hr />
+<h3 id="randomize">Randomize<a class="headerlink" href="#randomize" title="Permanent link"></a></h3>
+<p>Randomize the position, rotation, and scale of the islands or selected vertices. This operator can work in simple and advanced mode.</p>
+<div class="admonition properties">
+<p class="admonition-title">Properties</p>
+<p>Randomize <strong>Simple</strong> mode</p>
+<p><a class="glightbox" href="../img/screen/transform/tr_randomize_properties_simple_mode.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/transform/tr_randomize_properties_simple_mode.png" /></a></p>
+</div>
+<ul>
+<li><strong>Influence</strong> - Transform Influence. Affect Islands or Elements (vertices, edges, polygons)<ul>
+<li><em>Island</em></li>
+<li><em>Selection</em></li>
+</ul>
+</li>
+<li><strong>Position</strong> - Position Range<ul>
+<li><em>Limit U</em> - The range starts with a negative value U and ends with its positive value</li>
+<li><em>Limit V</em> - The range starts with a negative value V and ends with its positive value</li>
+</ul>
+</li>
+<li><strong>Lock Axes</strong> - Lock values for uniform transformation over the axes</li>
+<li><strong>Rotation</strong> - Rotation angle range<ul>
+<li><em>Angle Limit</em> - The range starts with a negative angle value and ends with its positive value</li>
+</ul>
+</li>
+<li><strong>Scale</strong> - Scale Range<ul>
+<li><em>Limit U</em> - The range starts with a negative value U and ends with its positive value</li>
+<li><em>Limit V</em> - The range starts with a negative value V and ends with its positive value</li>
+</ul>
+</li>
+<li><strong>Seed</strong> - Change transformation in the set ranges by random value</li>
+<li><strong>Use Seams</strong> - Use seams as an island separator to prevent stacked islands from self-welding</li>
+<li><strong>Randomize Mode</strong> - Sets operator mode<ul>
+<li><em>Simple</em> - Only basic functions are enabled</li>
+<li><em>Advanced</em> - Full control over the operator. You can specify the step, etc.</li>
+</ul>
+</li>
+</ul>
+<div class="admonition properties">
+<p class="admonition-title">Properties</p>
+<p>Randomize <strong>Advanced</strong> mode</p>
+<p><a class="glightbox" href="../img/screen/transform/tr_randomize_properties_advanced_mode.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/transform/tr_randomize_properties_advanced_mode.png" /></a></p>
+</div>
+<ul>
+<li><strong>Influence</strong> - Transform Influence. Affect Islands or Elements (vertices, edges, polygons)<ul>
+<li><em>Island</em></li>
+<li><em>Selection</em></li>
+</ul>
+</li>
+</ul>
+<hr />
+<ul>
+<li><strong>Position</strong> - Location transformation switch</li>
+<li><strong>As One</strong> - Move the entire selection as a single unit</li>
+<li><strong>One Direction</strong> - Turns on the mode when the beginning of the range starts from zero. All transformations will occur in the one direction</li>
+<li><strong>Limit U</strong> - The range starts with a negative value U and ends with its positive value</li>
+<li><strong>Limit V</strong> - The range starts with a negative value V and ends with its positive value</li>
+<li><strong>Lock Axes</strong> - Lock values for uniform transformation over the axes</li>
+<li><strong>Step U</strong> - The step along a U axis at which the move will be performed</li>
+<li><strong>Step V</strong> - The step along a V axis at which the move will be performed</li>
+</ul>
+<hr />
+<ul>
+<li><strong>Rotation</strong> - Rotation transformation switch</li>
+<li><strong>As One</strong> - Rotate the entire selection as a single unit</li>
+<li><strong>Positive Only</strong> - Turns on the mode when the beginning of the range starts from zero. All rotations will occur in the positive direction</li>
+<li><strong>Angle Limit</strong> - Rotation angle range</li>
+<li><strong>Step</strong> - The step with which the rotation will be performed</li>
+</ul>
+<hr />
+<ul>
+<li><strong>Scale</strong> - Location transformation switch</li>
+<li><strong>As One</strong> - Scale the entire selection as a single unit</li>
+<li><strong>Positive Only</strong> - Turns on the mode when the beginning of the range starts from 1.0. All scaling will occur in the positive values. No islands flipping</li>
+<li><strong>Limit U</strong> - The range starts with a negative value U and ends with its positive value</li>
+<li><strong>Limit V</strong> - The range starts with a negative value V and ends with its positive value</li>
+<li><strong>Lock Axes</strong> - Lock values for uniform transformation over the axes</li>
+<li><strong>Step U</strong> - The step along a U axis at which the scaling will be performed</li>
+<li><strong>Step V</strong> - The step along a V axis at which the scaling will be performed</li>
+</ul>
+<hr />
+<ul>
+<li><strong>Seed</strong> - Change transformation in the set ranges by random value</li>
+<li><strong>Use Seams</strong> - Use seams as an island separator to prevent stacked islands from self-welding</li>
+<li><strong>Randomize Mode</strong> - Sets operator mode<ul>
+<li><em>Simple</em> - Only basic functions are enabled</li>
+<li><em>Advanced</em> - Full control over the operator. It is possible to specify the step value, etc.</li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><a class="glightbox" href="../img/gifs/trasnform_operators/TrRandomizeStepExample.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Randomize Steps" src="../img/gifs/trasnform_operators/TrRandomizeStepExample.gif" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Explanation of the randomization step</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="quadrify-islands">Quadrify Islands<a class="headerlink" href="#quadrify-islands" title="Permanent link"></a></h3>
+<p><a class="glightbox" href="../img/icons/quadrify_32.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/icons/quadrify_32.png" /></a> Straighten rectangular-shaped Islands</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>This operator supports the ability to <a href="../user_interface/#save-as-default-operator-properties">save default properties</a>.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The Quadrify operator works only with quad faces. All other types of faces are ignored.
+<a class="glightbox" href="../img/screen/transform/Quad_Poly.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/transform/Quad_Poly.png" /></a></p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If you work with high-poly meshes, you can customize the operator before it is launched. Use the gear button to the right of the operator in the main panel.
+<a class="glightbox" href="../img/screen/transform/quadrify_external_properties.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="quadrify external properties" src="../img/screen/transform/quadrify_external_properties.png" /></a></p>
+</div>
+<div class="admonition properties">
+<p class="admonition-title">Properties</p>
+<p><a class="glightbox" href="../img/screen/transform/quadrify_op_props.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="quadrify_op_props" src="../img/screen/transform/quadrify_op_props.png" /></a></p>
+</div>
+<table>
+<thead>
+<tr>
+<th><a class="glightbox" href="../img/gifs/trasnform_operators/Quadrify_Example.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Quadrify Example" src="../img/gifs/trasnform_operators/Quadrify_Example.gif" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Influence</strong> - Transform Influence. Affect Islands or Selection<ul>
+<li><em>Island</em></li>
+<li><em>Selection</em></li>
+</ul>
+</li>
+<li><strong>Shape</strong> - The face shape for the Zen UV algorithm</li>
+<li><strong>Average</strong> - Averages the shape depending on the shape of the faces in the faceloop</li>
+<li><strong>Orient to</strong> - Orient Quadrified Islands<ul>
+<li><em>Skip</em> - Do not change the original orientation</li>
+<li><em>Align to Axis</em> - Align to the nearest axis</li>
+<li><em>Vertical</em> - Set orientation vertical</li>
+<li><em>Horizontal</em> - Set orientation horizontal</li>
+</ul>
+</li>
+<li><strong>Texel Density</strong> - Set texel density. Not available if Pack Quadrified is On<ul>
+<li><em>Averaged</em> - Set averaged Texel Density</li>
+<li><em>Global Preset</em> - Set value described in the Texel Density panel as Global TD Preset</li>
+<li><em>Skip</em> - Do not make any texel density corrections</li>
+</ul>
+</li>
+<li><strong>Pin</strong> - Auto Pin<ul>
+<li><em>Quads</em> - Perform pinning only faces that have been quadrified</li>
+<li><em>Island</em> - Pin the entire island or a selection, depending on the Influence mode</li>
+<li><em>Skip</em> - Do not perform Pinning</li>
+</ul>
+</li>
+<li><strong>Pack Quadrified</strong> - Pack Islands after Quadrify Islands operation</li>
+<li><strong>Tag as Finished</strong> - Tag Quadrified island as finished</li>
+</ul>
+<hr />
+<ul>
+<li><strong>Advanced</strong> - Advanced settings</li>
+<li><strong>Algorithm</strong> - Calculation algorithm<ul>
+<li><em>Zen UV</em> - Zen UV calculation algorithm</li>
+<li><em>Blender</em> - Native Blender follow active quad algorithm</li>
+</ul>
+</li>
+<li><strong>Use selected Edges</strong> - Selected Edges will be used as Seams during Quadrify Islands operation. Works only in edge selection mode</li>
+<li><strong>Limit</strong> - The maximum number of edges used to create the seam. If the number of selected edges is greater than this number, the seams will not be created</li>
+<li><strong>Mark Borders</strong> - Mark Island boundaries after Quadrify Islands operation</li>
+<li><strong>Skip Non Quads</strong> - Skip islands that contain faces other than quads</li>
+<li><strong>Correct Aspect</strong> - Map UVs taking image aspect ratio into account</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p><a class="glightbox" href="../img/screen/transform/quadrify_assistant_operator.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="quadrify assistant operator" src="../img/screen/transform/quadrify_assistant_operator.png" /></a></p>
+<p>Assistant operator - <a href="../select/#select-quaded-islands"><strong>Select Quaded Islands</strong> - Selects islands that consist only of quads</a></p>
+</div>
+<table>
+<thead>
+<tr>
+<th><a class="glightbox" href="../img/gifs/trasnform_operators/Quadrify_SelectedEdge.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Quadrify_SelectedEdge" src="../img/gifs/trasnform_operators/Quadrify_SelectedEdge.gif" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Quadrify by selected Edges</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><a class="glightbox" href="../img/gifs/trasnform_operators/Quadrify_Orient.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Quadrify_Orient" src="../img/gifs/trasnform_operators/Quadrify_Orient.gif" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Orient island</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><a class="glightbox" href="../img/gifs/trasnform_operators/Quadrify_Pack_Pin.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Quadrify_Pack_Pin" src="../img/gifs/trasnform_operators/Quadrify_Pack_Pin.gif" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Pin</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Tag Quadrified Islands as <a href="../unwrap/#finishing-system"><strong>Finished</strong></a> to preserve them from unwrapping. It&rsquo;s recommended to <a href="../unwrap/#tag-finished"><strong>Tag as Finished</strong></a> all manually changed Islands.
+<a class="glightbox" href="../img/gifs/trasnform_operators/Quadrify_Tag_Finished.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/gifs/trasnform_operators/Quadrify_Tag_Finished.gif" /></a></p>
+</div>
+<hr />
+<h3 id="reshape-island">Reshape Island<a class="headerlink" href="#reshape-island" title="Permanent link"></a></h3>
+<p>Changes the island’s shape depending on the preset. <a href="../operators/reshape_island/">Here is full information</a> about Reshape Island.</p>
+<div class="admonition properties">
+<p class="admonition-title">Properties</p>
+<p><a class="glightbox" href="../img/screen/transform/reshape_presets_collected.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Reshape Islands Presets" src="../img/screen/transform/reshape_presets_collected.png" /></a></p>
+<ul>
+<li><strong>Selected</strong>. Straighten the selected Edge Loops and relax not selected vertices.</li>
+<li><strong>U Direction / V Direction</strong>. Edges are aligned in the indicated direction.</li>
+<li><strong>Borders</strong>. Straighten the edges of the island in even lines according to the given parameters.</li>
+</ul>
+</div>
+<hr />
+<h3 id="match-and-stitch">Match and Stitch<a class="headerlink" href="#match-and-stitch" title="Permanent link"></a></h3>
+<p>Matching the position, rotation, and scale of Islands. Stitch the vertices together, if possible.</p>
+<div class="admonition properties">
+<p class="admonition-title">Properties</p>
+<p><a class="glightbox" href="../img/screen/transform/match_and_stitch_pref.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Match and Stitch properties" src="../img/screen/transform/match_and_stitch_pref.png" /></a></p>
+</div>
+<ul>
+<li><strong>Base Island</strong> - Sets which of the selected islands will be considered the base island. That is, the one that will not be changed, will remain in place, and to which other islands will be matched or stitched.</li>
+<li><strong>Match</strong> - Match Island parameters. Sets whether to perform the island matching procedure.</li>
+<li><strong>Position</strong> - Match Island position</li>
+<li><strong>Rotation</strong> - Match Island rotation</li>
+<li><strong>Scale</strong> - Match Island size</li>
+<li><strong>Reverse Base</strong> - Change the direction to the opposite direction for the base island</li>
+<li><strong>Reverse Matched</strong> - Change the direction to the opposite direction for the matched island</li>
+<li><strong>Cycled Island</strong> - Activate the option if we want to match cycled edge loops. For example a disk to a round hole</li>
+</ul>
+<hr />
+<ul>
+<li><strong>Stitch</strong> - Stitch the vertices together, if possible</li>
+<li><strong>Ignore Pin</strong> - Ignore Pinned vertices</li>
+<li><strong>Average</strong> - Average Stitching</li>
+<li><strong>Offset loop</strong> - Performs a cyclic shift of the vertices to be stitched. Use to correct if the stitching looks tangled</li>
+</ul>
+<hr />
+<ul>
+<li><strong>Postprocess</strong> - Allow Postprocess</li>
+<li><strong>Offset</strong> - Advanced Offset</li>
+<li><strong>Rotate</strong> - Advanced Rotate</li>
+<li><strong>Scale</strong> - Advanced Scale</li>
+<li><strong>Clear Pin</strong> - Clear the Pins on the Primary edge loop</li>
+<li><strong>Clear Seams</strong> - Clear the seams on the stitched edges</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p><a class="glightbox" href="../img/screen/transform/match_and_stitch_assistant_operator.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="match and stitch assistant operator" src="../img/screen/transform/match_and_stitch_assistant_operator.png" /></a></p>
+<p>Assistant operator - <a href="../select/#select-linked-loops"><strong>Select Linked Loops</strong> - Selects all loops belonging to the mesh vertex based on any already selected loop</a></p>
+</div>
+<table>
+<thead>
+<tr>
+<th>Example of usage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="glightbox" href="../img/screen/transform/match_and_stitch_example_01.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="match and stitch screen 01" src="../img/screen/transform/match_and_stitch_example_01.png" /></a></td>
+</tr>
+</tbody>
+</table>
+<p>It is recommended that we always make the settings in sequence.
+First, Match, and if we are satisfied, then turn on Stitch. Stitch can&rsquo;t fix mistakes made in Match. The algorithm works as follows:</p>
+<ul>
+<li>
+<p>First, find the endpoints of both selections. In the picture, we got 2 groups marked as green lines:</p>
+<ul>
+<li>1 (AB)</li>
+<li>2 (CD)</li>
+</ul>
+</li>
+<li>
+<p>Now we take one of the islands and move it until the ends of the found segments match. We can get two variants.</p>
+<ul>
+<li>C falls into B. D is in A. - The correct option (red arrows). We can turn on Stitch and finish the work.</li>
+<li>C falls into A. D goes to B. - Incorrect option for our particular case (blue arrows).</li>
+</ul>
+</li>
+<li>
+<p>If we have a second case, we cannot turn on Stitch at this time. It will eventually do what it can, but we will get tangled edges. We need to &ldquo;flip&rdquo; one of the islands. This can be done using the <strong>Reverse Base</strong> or <strong>Reverse Matched</strong> option. It doesn&rsquo;t make much difference. Just choose the one that suits is better visually. Also, the island will not actually be turned over. Just A and B will change places. And that&rsquo;s it.</p>
+</li>
+</ul>
+<p>We can add the case when we are not satisfied with the island that the algorithm has chosen as a base. Change the <strong>Base Island</strong> parameter. This is an infinite cyclic value. If we have 2 islands selected, it will change the <strong>Base Island</strong> in turn.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Watch the video explaining how <strong>Match and Stitch</strong> works.</p>
+<p><div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%;">
+<iframe src="https://www.youtube.com/embed/f9meGzMGx2k?start=974&end=1061" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen="" seamless="" frameborder="0"></iframe>
+</div></p>
+</div>
+<hr />
+<h3 id="split-uv">Split UV<a class="headerlink" href="#split-uv" title="Permanent link"></a></h3>
+<p>Splits selected in the UV</p>
+<div class="admonition properties">
+<p class="admonition-title">Properties</p>
+<p><a class="glightbox" href="../img/screen/transform/split_uv_properties.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="split UV properties" src="../img/screen/transform/split_uv_properties.png" /></a></p>
+</div>
+<ul>
+<li><strong>Minimum distance</strong> - Sets the smallest distance sufficient for splitting but not visible to the eye</li>
+<li><strong>Distance</strong> - The distance to which the vertices need to be moved</li>
+<li><strong>Per Vertex</strong> - Split each vertex separately</li>
+<li><strong>Split Ends</strong> - Splits the ends. The gap remains the same along the entire length</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><a class="glightbox" href="../img/gifs/trasnform_operators/split_uv_example.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="split UV properties" src="../img/gifs/trasnform_operators/split_uv_example.gif" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Split UV properties</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="merge-uv-verts">Merge UV Verts<a class="headerlink" href="#merge-uv-verts" title="Permanent link"></a></h3>
+<p>Merge UV vertices belonging to the same mesh vertex</p>
+<div class="admonition properties">
+<p class="admonition-title">Properties</p>
+<p><a class="glightbox" href="../img/screen/transform/merge_uv_properties.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="merge uv properties" src="../img/screen/transform/merge_uv_properties.png" /></a></p>
+</div>
+<ul>
+<li><strong>Threshold</strong> - Distance beyond which the merger does not take place</li>
+<li><strong>Unselected</strong> - Merge all matching vertices. Not only the selected</li>
+<li><strong>Use Pinned</strong> - Pinned vertices remain in place. The unpinned ones will be moved to the pinned ones</li>
+<li><strong>Use Seams</strong> - Edges marked as seams will be ignored</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p><a class="glightbox" href="../img/screen/transform/merge_assistant_operator.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="merge uv verts assistant operator" src="../img/screen/transform/merge_assistant_operator.png" /></a></p>
+<p>Assistant operator - <a href="../select/#select-uv-borders"><strong>Select UV Borders</strong> - Select existing UV Borders</a></p>
+</div>
+<table>
+<thead>
+<tr>
+<th><a class="glightbox" href="../img/gifs/trasnform_operators/merge_uv_example.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="merge UV properties" src="../img/gifs/trasnform_operators/merge_uv_example.gif" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Merghe UV example</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="mirror-uv">Mirror UV<a class="headerlink" href="#mirror-uv" title="Permanent link"></a></h3>
+<p>Mirroring UV coordinates in a mirrored mesh
+First, you need to select a part of the mesh with the correct coordinates. The operator will find the corresponding symmetrical part by itself</p>
+<div class="admonition properties">
+<p class="admonition-title">Properties</p>
+<p><a class="glightbox" href="../img/screen/transform/mirror_uv_properties.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/transform/mirror_uv_properties.png" /></a></p>
+</div>
+<ul>
+<li><strong>Mesh Mirror Axis</strong> - How the mirroring is represented in the object</li>
+<li><strong>UV Symmetry Axis</strong> - UV Symmetry axis</li>
+<li><strong>Folded</strong> - Creates a folded symmetry where the coordinates of one part are equal to the coordinates of the other</li>
+<li><strong>Axis Position</strong> - Base position of the symmetry axis<ul>
+<li><em>Manual</em> - Fully manual mode. The position of the symmetry axis depends only on the specified value</li>
+<li><em>2D Cursor</em> - 2D Cursor position</li>
+<li><em>UV Area Center</em> - UV Area center</li>
+<li><em>Active UDIM Center</em> - Active UDIM Tile center</li>
+<li><em>Bounding Box</em> - One side of the selection bounding box</li>
+<li><em>Active Trim Center</em> - Active trim center</li>
+</ul>
+</li>
+<li><strong>Axis Properties</strong> - The properties of the symmety axis.</li>
+<li><strong>Axis Offset</strong> - Offset of the symmetry axis. This value is added to any &ldquo;Axis Position&rdquo; type</li>
+<li><strong>Manual Axis Position</strong> - Position of the symmetry axis in manual mode. Active only if &ldquo;Axis Position&rdquo; is &ldquo;Manual&rdquo;</li>
+<li><strong>Symmetry Direction</strong> - Bounding box symmetry direction. Active only if &ldquo;Axis Position&rdquo; is &ldquo;Bounding Box&rdquo;</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p><a class="glightbox" href="../img/screen/transform/mirror_uv_assistant_operator.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="mirror uv assistant operator" src="../img/screen/transform/mirror_uv_assistant_operator.png" /></a></p>
+<p>Assistant operator - <a href="../select/#select-half"><strong>Select Half</strong> - Selects a part of the model according to its location relative to the coordinate axis</a></p>
+</div>
+<table>
+<thead>
+<tr>
+<th><a class="glightbox" href="../img/gifs/trasnform_operators/mirror_uv_example.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="mirror UV example" src="../img/gifs/trasnform_operators/mirror_uv_example.gif" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mirroring UV Example</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="unified-transform-system">Unified Transform System<a class="headerlink" href="#unified-transform-system" title="Permanent link"></a></h2>
+<div class="admonition panel">
+<p class="admonition-title">Panel</p>
+<p><a class="glightbox" href="../img/screen/transform/tr_un_tr_sys.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/transform/tr_un_tr_sys.png" /></a></p>
+</div>
+<h3 id="universal-control-panel">Universal Control Panel<a class="headerlink" href="#universal-control-panel" title="Permanent link"></a></h3>
+<div class="admonition control">
+<p class="admonition-title">Control</p>
+<p><strong>Universal Control Panel</strong></p>
+<p><a class="glightbox" href="../img/screen/transform/UniversalControl.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Transform" src="../img/screen/transform/UniversalControl.png" /></a></p>
+<p>The universal control panel has logic and different functions for different types of transformation.</p>
+</div>
+<hr />
+<h3 id="transform-space">Transform Space<a class="headerlink" href="#transform-space" title="Permanent link"></a></h3>
+<p>Switch between Islands and Texure-based transforms in 3D View.</p>
+<div class="admonition panel">
+<p class="admonition-title">Panel</p>
+<p><a class="glightbox" href="../img/screen/transform/tr_space.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/transform/tr_space.png" /></a></p>
+<ul>
+<li><strong>Island</strong>. Islands-based transforms.</li>
+<li><strong>Texture</strong>. Texure-based transforms. Works only for <strong>Move</strong> and <strong>Rotate</strong> tools.</li>
+</ul>
+</div>
+<h3 id="mode">Mode<a class="headerlink" href="#mode" title="Permanent link"></a></h3>
+<div class="admonition panel">
+<p class="admonition-title">Panel</p>
+<p><a class="glightbox" href="../img/screen/transform/tr_un_mode.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/transform/tr_un_mode.png" /></a></p>
+<ul>
+<li><strong>Islands</strong>. Transformations will affect Islands.</li>
+<li><strong>Selection</strong>. Transformation will affect Selection (Faces, Edges, Vertices).</li>
+</ul>
+</div>
+<h3 id="order">Order<a class="headerlink" href="#order" title="Permanent link"></a></h3>
+<div class="admonition panel">
+<p class="admonition-title">Panel</p>
+<p><a class="glightbox" href="../img/screen/transform/tr_un_order.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/transform/tr_un_order.png" /></a></p>
+<ul>
+<li><strong>One by one</strong>. Transformations will affect Islands.</li>
+<li><strong>Overall</strong>. Transformation will affect Selection (Faces, Edges, Vertices).</li>
+<li><strong>System Pivot</strong>. Transformations will affect Islands.</li>
+</ul>
+</div>
+<hr />
+<h2 id="transform-types">Transform Types<a class="headerlink" href="#transform-types" title="Permanent link"></a></h2>
+<h3 id="move">Move<a class="headerlink" href="#move" title="Permanent link"></a></h3>
+<p><a class="glightbox" href="../img/icons/transform-move.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/icons/transform-move.png" /></a> Move Selected Islands </p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Buttons of the <a href="#universal-control-panel"><strong>Universal Control Panel</strong></a> in the Transform type <strong>Move</strong> represent the direction of shifting.</p>
+</div>
+<p><a class="glightbox" href="../img/screen/transform/MainPanelMove.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Transform" src="../img/screen/transform/MainPanelMove.png" /></a></p>
+<ul>
+<li><strong>Move Increment</strong> - The value on which the island will be shifted</li>
+<li><strong>Grab Increment</strong> - Get the distance between two vertices or edge lengths and use it as the offset value for the move. The resulting value will be used as the <strong>Move Increment</strong> value</li>
+</ul>
+<hr />
+<h3 id="scale">Scale<a class="headerlink" href="#scale" title="Permanent link"></a></h3>
+<p><a class="glightbox" href="../img/icons/transform-scale.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/icons/transform-scale.png" /></a> Scale selected Islands </p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Buttons of the <a href="#universal-control-panel"><strong>Universal Control Panel</strong></a> in the Transform type <strong>Scale</strong> represent Points from where the island will be scaled.</p>
+</div>
+<p><a class="glightbox" href="../img/screen/transform/tr_scale.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Transform" src="../img/screen/transform/tr_scale.png" /></a></p>
+<h4 id="scale-mode">Scale Mode<a class="headerlink" href="#scale-mode" title="Permanent link"></a></h4>
+<div class="admonition axis">
+<p class="admonition-title">Axis</p>
+<p><a class="glightbox" href="../img/screen/transform/tr_scale_mode_axis.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/transform/tr_scale_mode_axis.png" /></a></p>
+<ul>
+<li><strong>Scale</strong> - The value of the scale of the island for each of the axes.</li>
+<li><strong>Tuner</strong> - System that helps change values quickly.<ul>
+<li><em>&ldquo;D&rdquo;</em> - Increase by two times.</li>
+<li><em>&ldquo;H&rdquo;</em> - Decrease two times.</li>
+<li><em>&ldquo;R&rdquo;</em> - Reset value to 1.0 .</li>
+<li><strong>Lock.</strong> - The Lock mode allows changing values as one.</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="admonition units">
+<p class="admonition-title">Units</p>
+<p><a class="glightbox" href="../img/screen/transform/tr_scale_mode_units.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/transform/tr_scale_mode_units.png" /></a></p>
+<ul>
+<li><strong>UV Size</strong> - The estimated width of the UV area.</li>
+<li><strong>Desired size</strong> - The size of which should be set for selected elements relative to UV area.</li>
+<li><strong>G</strong> - Grab the desired size from the current selection. Exist only in the 3D Viewort context. Can be used only for 2 vertices or for one edge selection.</li>
+<li><strong>Horizontal / Vertical</strong> - What mean the desired size.</li>
+</ul>
+</div>
+<hr />
+<h3 id="rotate">Rotate<a class="headerlink" href="#rotate" title="Permanent link"></a></h3>
+<p><a class="glightbox" href="../img/icons/transform-rotate.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/icons/transform-rotate.png" /></a> Rotate selected Islands </p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Buttons of the <a href="#universal-control-panel"><strong>Universal Control Panel</strong></a> in the Transform type <strong>Rotate</strong> works as described below.</p>
+<ul>
+<li>Buttons located in the corners rotate the island in the specified direction.</li>
+<li>The central button performs the automatic aligning of the island horizontally or vertically.</li>
+<li>The buttons at the top and bottom align the island vertically.</li>
+<li>Buttons on the left and right align the island horizontally.</li>
+</ul>
+</div>
+<p><a class="glightbox" href="../img/screen/transform/Rotate.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Transform" src="../img/screen/transform/Rotate.png" /></a></p>
+<ul>
+<li><strong>Rotate Increment</strong> - The value on which the island will be rotated</li>
+<li><strong>Select Island by Direction</strong> - Select island by direction (Horizontal, Vertical, Radial, Not Aligned). <a href="../select/#select-islands-by-direction">Here is a full description of the operator</a></li>
+<li><strong>Orient by selected</strong> - Reorient the island by selected elements (vertices, edges, faces)</li>
+</ul>
+<hr />
+<h3 id="flip">Flip<a class="headerlink" href="#flip" title="Permanent link"></a></h3>
+<p><a class="glightbox" href="../img/icons/transform-flip.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/icons/transform-flip.png" /></a> Flip Selected Islands</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Buttons of the <a href="#universal-control-panel"><strong>Universal Control Panel</strong></a> in the Transform type <strong>Flip</strong> represent flip direction.</p>
+</div>
+<p><a class="glightbox" href="../img/screen/transform/Flip.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Transform" src="../img/screen/transform/Flip.png" /></a></p>
+<ul>
+<li><strong>Always Center</strong> - Always use the center of the island as a flipping pivot</li>
+</ul>
+<hr />
+<h3 id="fit">Fit<a class="headerlink" href="#fit" title="Permanent link"></a></h3>
+<p><a class="glightbox" href="../img/icons/transform-fit.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/icons/transform-fit.png" /></a> Fit Island to UV Square</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Buttons of the <a href="#universal-control-panel"><strong>Universal Control Panel</strong></a> in the Transform type <strong>Fit</strong> represent origins from where <strong>Fit</strong> will be performed</p>
+</div>
+<p><a class="glightbox" href="../img/screen/transform/Fit.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Transform" src="../img/screen/transform/Fit.png" /></a></p>
+<ul>
+<li><strong>Face by Face</strong> - Fit Face by Face</li>
+<li><strong>Padding</strong> - Clearance between island and UV Square bounds</li>
+<li><strong>Bounds</strong> - It makes it possible to fill out not UV Square but any other area</li>
+<li><strong>Fill Islands</strong> - Fit Islands from the center without keeping proportions</li>
+</ul>
+<h3 id="fit-into-region">Fit into Region<a class="headerlink" href="#fit-into-region" title="Permanent link"></a></h3>
+<div class="admonition properties">
+<p class="admonition-title">Properties</p>
+<p><a class="glightbox" href="../img/screen/transform/fit_into_region.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/transform/fit_into_region.png" /></a></p>
+</div>
+<ul>
+<li><strong>Grab Region: Selection / Island</strong> - Allow to grab Region size in different manners</li>
+<li><strong>Bottom Left: Top Right:</strong> - The bounding box of the region</li>
+<li><strong>Show Region</strong> - Show region using Annotations</li>
+<li><strong>Hide Region</strong> - Hide Fit region</li>
+<li><strong>Fit into Region</strong> - Fit the selected island into the Region described in the bounding box</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><a class="glightbox" href="../img/gifs/trasnform_operators/fit_region_example.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="fit region example" src="../img/gifs/trasnform_operators/fit_region_example.gif" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Using fit region</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="align">Align<a class="headerlink" href="#align" title="Permanent link"></a></h3>
+<p><a class="glightbox" href="../img/icons/transform-orient.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/icons/transform-orient.png" /></a> Align selected Islands</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Buttons of the <a href="#universal-control-panel"><strong>Universal Control Panel</strong></a> in the Transform type <strong>Align</strong> represent the side by which the islands will be aligned.</p>
+</div>
+<p><a class="glightbox" href="../img/screen/transform/Align.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Transform" src="../img/screen/transform/Align.png" /></a></p>
+<ul>
+<li><strong>Vertex by Vertex</strong> - Mode for vertex alignment. Aligns vertex by vertex. Transform selection mode only</li>
+<li><strong>Center by Axis</strong> - Align selected islands horizontally or vertically in the center</li>
+<li><strong>Align to</strong> - Relative to what to perform the alignment<ul>
+<li><em>Selection Bounding Box</em></li>
+<li><em>UV Area Bounds</em></li>
+<li><em>Position</em></li>
+<li><em>2D Cursor</em></li>
+<li><em>To Active Component</em></li>
+<li><em>Active UDIM tile</em> - To active UDIM tile</li>
+<li><em>Tile Number</em> - To UDIM tile with the specified number</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h3 id="distribute">Distribute<a class="headerlink" href="#distribute" title="Permanent link"></a></h3>
+<p><a class="glightbox" href="../img/icons/transform-distribute.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/icons/transform-distribute.png" /></a> Distribute, Sort and Arrange selected Islands</p>
+<table>
+<thead>
+<tr>
+<th><a class="glightbox" href="../img/screen/transform/Distribute_Island.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Transform" src="../img/screen/transform/Distribute_Island.png" /></a></th>
+<th><a class="glightbox" href="../img/screen/transform/Distribute_Elements.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Transform" src="../img/screen/transform/Distribute_Elements.png" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Islands mode</td>
+<td>Selection mode</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p><strong>Islands Mode</strong>:</p>
+<ul>
+<li><strong>Distribute &amp; Sort</strong> - Distributes and Sorts selected Islands</li>
+<li><strong>Arrange</strong> - Arrange selected Islands</li>
+</ul>
+</li>
+<li>
+<p><strong>Selection Mode</strong>:</p>
+<ul>
+<li><strong>Distribute</strong> - Distribute vertices along the line</li>
+</ul>
+</li>
+</ul>
+<h4 id="distribute-and-sort">Distribute And Sort<a class="headerlink" href="#distribute-and-sort" title="Permanent link"></a></h4>
+<p>Distributes and sorts selected islands</p>
+<div class="admonition properties">
+<p class="admonition-title">Properties</p>
+<p><a class="glightbox" href="../img/screen/transform/distribute_and_sort_properties.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="distribute and sort properties" src="../img/screen/transform/distribute_and_sort_properties.png" /></a></p>
+</div>
+<ul>
+<li><strong>Direction Axis</strong> - The axis along which distribution will take place</li>
+<li><strong>Start Point Offset</strong> - Islands location start point</li>
+<li><strong>Sort by</strong> - Sorting condition<ul>
+<li><em>UV Position</em></li>
+<li><em>UV Area</em></li>
+<li><em>Mesh Area</em></li>
+<li><em>Texel Density</em></li>
+<li><em>UV Coverage</em></li>
+<li><em>Island Mesh Position X</em></li>
+<li><em>Island Mesh Position Y</em></li>
+<li><em>Island Mesh Position Z</em></li>
+</ul>
+</li>
+<li><strong>Reverse</strong> - Change the sorting direction to reverse</li>
+<li><strong>Margin</strong> - Distance between distributed Islands</li>
+<li><strong>In Place</strong> - Leave not active axis as is</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><a class="glightbox" href="../img/gifs/trasnform_operators/distribute_islands_example.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="distribute and sort example" src="../img/gifs/trasnform_operators/distribute_islands_example.gif" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Distribute And Sort example</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="distribute-vertices">Distribute vertices<a class="headerlink" href="#distribute-vertices" title="Permanent link"></a></h4>
+<p>Distribute vertices along the line</p>
+<div class="admonition properties">
+<p class="admonition-title">Properties</p>
+<p><a class="glightbox" href="../img/screen/transform/distribute_vertices_properties.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="distribute vertices properties" src="../img/screen/transform/distribute_vertices_properties.png" /></a></p>
+</div>
+<ul>
+<li><strong>Orient Loop Along</strong> - Alignment options<ul>
+<li><em>In Place</em> - The beginning and end of the loop remain in place</li>
+<li><em>U Axis</em> - Along U axis</li>
+<li><em>V Axis</em> - Along V axis</li>
+<li><em>Auto</em> - Will be aligned to the closer axis</li>
+</ul>
+</li>
+<li><strong>Reverse Direction</strong> - Change the direction of the aligned line</li>
+<li><strong>Spacing</strong> - How to create spaces between points<ul>
+<li><em>UV</em> - Like in the current uv positions</li>
+<li><em>Geometry</em> - Like in the mesh</li>
+<li><em>Evenly</em> - Spread evenly</li>
+</ul>
+</li>
+<li><strong>Start Positions</strong> - Position of starts of loops<ul>
+<li><em>As Is</em></li>
+<li><em>Max</em></li>
+<li><em>Averaged</em></li>
+<li><em>Min</em></li>
+</ul>
+</li>
+<li><strong>Lock</strong> - Locks start and end positions</li>
+<li><strong>End Positions</strong> - Position of ends of loops<ul>
+<li><em>As Is</em></li>
+<li><em>Max</em></li>
+<li><em>Averaged</em></li>
+<li><em>Min</em></li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><a class="glightbox" href="../img/gifs/trasnform_operators/distribute_verts_example.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="distribute vertices" src="../img/gifs/trasnform_operators/distribute_verts_example.gif" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Distribute Verts example</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="arrange">Arrange<a class="headerlink" href="#arrange" title="Permanent link"></a></h4>
+<p>Arrange selected islands</p>
+<div class="admonition properties">
+<p class="admonition-title">Properties</p>
+<p><a class="glightbox" href="../img/screen/transform/arrange_properties.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/transform/arrange_properties.png" /></a></p>
+</div>
+<ul>
+<li><strong>Mode</strong> - Input mode<ul>
+<li><em>Advanced</em></li>
+<li><em>Simplified</em></li>
+</ul>
+</li>
+<li><strong>Quant U</strong> - Divider for UV Area in U direction</li>
+<li><strong>Quant V</strong> - Divider for UV Area in V direction</li>
+<li><strong>Limit</strong> - Distribution limit</li>
+<li><strong>Position</strong> - Offset for current position</li>
+<li><strong>Randomize</strong> - Change transformation in the set ranges by random value</li>
+<li><strong>Scale</strong> - Changes the scale of each island separately</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><a class="glightbox" href="../img/gifs/trasnform_operators/arange_islands_example.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="arrange example" src="../img/gifs/trasnform_operators/arange_islands_example.gif" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Arrange Islands example</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="2d-cursor">2D Cursor<a class="headerlink" href="#2d-cursor" title="Permanent link"></a></h3>
+<p><a class="glightbox" href="../img/icons/transform-cursor.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/icons/transform-cursor.png" /></a> Align 2D Cursor over the selected island</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Buttons of the <a href="#universal-control-panel"><strong>Universal Control Panel</strong></a> in the Transform type <strong>2D Cursor</strong> represent sides of the island or selected elements.</p>
+</div>
+<p><a class="glightbox" href="../img/screen/transform/2dCursor.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Transform" src="../img/screen/transform/2dCursor.png" /></a></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Don&rsquo;t forget to drink some good beer today!</p>
+</div>
+<hr />
+<h2 id="advanced-transforms">Advanced Transforms<a class="headerlink" href="#advanced-transforms" title="Permanent link"></a></h2>
+<p>Advanced Transforms panel represents transforms without <strong>Universal Control Panel</strong>.
+Recommended to use if you want to add shortcuts for transform operations. </p>
+<div class="admonition panel">
+<p class="admonition-title">Panel</p>
+<p><a class="glightbox" href="../img/screen/transform/tr_advanced_transforms.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Advanced Transforms" src="../img/screen/transform/tr_advanced_transforms.png" /></a></p>
+</div>
+<h3 id="move-operators">Move operators<a class="headerlink" href="#move-operators" title="Permanent link"></a></h3>
+<p><a class="glightbox" href="../img/icons/transform-move.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/icons/transform-move.png" /></a></p>
+<ul>
+<li><strong>By Increment</strong> - Move Islands by Increment.</li>
+<li><strong>To the Active Trim</strong> - Move islands to the active trim.</li>
+<li><strong>To Position</strong> - Move islands to position</li>
+<li><strong>To 2D Cursor</strong> - Move islands to 2D Cursor</li>
+<li><strong>To Mouse Cursor</strong> - Move islands to the mouse cursor</li>
+<li><strong>To UV Area</strong> - Move the center of the selected Islands to the UV Area</li>
+<li><strong>Move 2D Cursor To</strong> - Move 2D Cursor to selection</li>
+<li><strong>Move To UV Area</strong> - Move the center of the selected islands to the UV Area using the mouse position</li>
+<li><strong>Move To UV Position</strong> - Move the center of the selected islands to the UV coordinates defined by the mouse</li>
+</ul>
+<hr />
+<h4 id="move-island">Move island<a class="headerlink" href="#move-island" title="Permanent link"></a></h4>
+<p>Move island to the defined position</p>
+<div class="admonition properties">
+<p class="admonition-title">Properties</p>
+<p><a class="glightbox" href="../img/screen/transform/move_properties.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="move island properties" src="../img/screen/transform/move_properties.png" /></a></p>
+</div>
+<ul>
+<li><strong>Mode</strong> - Transform Mode<ul>
+<li><em>Islands</em> - Transform islands</li>
+<li><em>Selection</em> - Transform selection</li>
+</ul>
+</li>
+<li><strong>Order</strong> - Processing order<ul>
+<li><em>Overall</em> - Handle everything as one</li>
+<li><em>One by One</em> - Handle one by one</li>
+</ul>
+</li>
+<li><strong>Move</strong> - Transform Mode<ul>
+<li><em>By Increment</em> - Move the island by a specified amount</li>
+<li><em>To Position</em> - Move the island to the specified position</li>
+<li><em>To 2D Cursor</em> - Move the island to the 2D Cursor position</li>
+<li><em>To Active Trim Center</em> - Move the island to the position of the active trim center</li>
+<li><em>To Mouse Cursor</em> - Move the island to the position of the mouse cursor</li>
+</ul>
+</li>
+<li><strong>Position</strong> - Position specified by coordinates to which the movement will be performed</li>
+<li><strong>Island Pivot</strong> - The pivot of the transformed unit</li>
+</ul>
+<hr />
+<h4 id="move-to-uv-area">Move to UV Area<a class="headerlink" href="#move-to-uv-area" title="Permanent link"></a></h4>
+<p>Move islands to UV area, active UDIM tile, or UDIM tile defined by number</p>
+<div class="admonition properties">
+<p class="admonition-title">Properties</p>
+<p><a class="glightbox" href="../img/screen/adv_uv_map/udim_move_to_uv_area.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="move to uv area" src="../img/screen/adv_uv_map/udim_move_to_uv_area.png" /></a></p>
+</div>
+<ul>
+<li><strong>Move to</strong> - Transform Mode<ul>
+<li><em>UV Area</em> - Move selection to the UV Area</li>
+<li><em>Active UDIM Tile</em> - Move selection to the active UDIM tile</li>
+<li><em>Tile Number</em> - Move selection to the tile with the specified number</li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><a class="glightbox" href="../img/screen/adv_uv_map/adv_uv_map_udim_move_active.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/adv_uv_map/adv_uv_map_udim_move_active.gif" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Move to active UDIM tile</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="move-2d-cursor-to">Move 2D Cursor To<a class="headerlink" href="#move-2d-cursor-to" title="Permanent link"></a></h4>
+<p>Move 2D cursor to the defined position</p>
+<div class="admonition properties">
+<p class="admonition-title">Properties</p>
+<p><a class="glightbox" href="../img/screen/transform/move_2d_cursot_to_properties.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="move 2d cursor to properties" src="../img/screen/transform/move_2d_cursot_to_properties.png" /></a></p>
+</div>
+<ul>
+<li><strong>Influence</strong> - How to set the 2D Cursor position<ul>
+<li><em>Selection</em> - By selection</li>
+<li><em>Islands</em> - By islands</li>
+<li><em>UV Area</em> - By UV Area</li>
+<li><em>Active UDIM tile</em> - To active UDIM tile</li>
+<li><em>Tile Number</em> - To UDIM tile with the specified number</li>
+</ul>
+</li>
+<li><strong>Island Pivot</strong> - Selection pivot</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><a class="glightbox" href="../img/gifs/trasnform_operators/Move2dCursorTo_Example.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="move 2d cursor to" src="../img/gifs/trasnform_operators/Move2dCursorTo_Example.gif" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&ldquo;<strong>Move 2D Cursor to</strong>&rdquo; running from main panel</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><a class="glightbox" href="../img/gifs/trasnform_operators/Move2dCursorTo_Example_02.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="move 2d cursor to" src="../img/gifs/trasnform_operators/Move2dCursorTo_Example_02.gif" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&ldquo;<strong>Move 2D Cursor to</strong>&rdquo; running from RMB menu</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="move-to-uv-area-eyedropper">Move To UV Area (eyedropper)<a class="headerlink" href="#move-to-uv-area-eyedropper" title="Permanent link"></a></h4>
+<p>Move center of the selected Islands to the UV Area using mouse position</p>
+<div class="admonition properties">
+<p class="admonition-title">Properties</p>
+<p>This operator has no properties</p>
+</div>
+<p>The islands are moved to the same coordinates, only to the specified tile. So the texture on your object will not be changed</p>
+<table>
+<thead>
+<tr>
+<th><a class="glightbox" href="../img/gifs/trasnform_operators/MoveIslandsToUVarea_Example.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="move islands to the uv area" src="../img/gifs/trasnform_operators/MoveIslandsToUVarea_Example.gif" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Move to UV area example</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="move-to-uv-position-eyedropper">Move to UV position (eyedropper)<a class="headerlink" href="#move-to-uv-position-eyedropper" title="Permanent link"></a></h4>
+<p>Move center of the selected Islands to the UV coordinates defined by mouse</p>
+<div class="admonition properties">
+<p class="admonition-title">Properties</p>
+<p>This operator has no properties</p>
+</div>
+<table>
+<thead>
+<tr>
+<th><a class="glightbox" href="../img/gifs/trasnform_operators/MoveIslandsToPosition_Example.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="move islands to the position" src="../img/gifs/trasnform_operators/MoveIslandsToPosition_Example.gif" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Move the islands to the position. Example</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="scale-operators">Scale operators<a class="headerlink" href="#scale-operators" title="Permanent link"></a></h3>
+<p><a class="glightbox" href="../img/icons/transform-scale.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/icons/transform-scale.png" /></a></p>
+<ul>
+<li><strong>By Axis</strong> - Scale Islands by Axis</li>
+<li><strong>By Units</strong> - Scale Islands by Units</li>
+</ul>
+<h4 id="scale-island">Scale Island<a class="headerlink" href="#scale-island" title="Permanent link"></a></h4>
+<div class="admonition properties in axis mode">
+<p class="admonition-title">Properties</p>
+<p><a class="glightbox" href="../img/screen/transform/scale_island_properties.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="scale island properties" src="../img/screen/transform/scale_island_properties.png" /></a></p>
+</div>
+<ul>
+<li><strong>Mode</strong> - Transform Mode<ul>
+<li><em>Islands</em> - Transform islands</li>
+<li><em>Selection</em> - Transform selection</li>
+</ul>
+</li>
+<li><strong>Order</strong> - Processing order<ul>
+<li><em>Overall</em> - Handle everything as one</li>
+<li><em>One by One</em> - Handle one by one</li>
+</ul>
+</li>
+<li><strong>Mode</strong> - Transform Mode<ul>
+<li><em>By Axis</em> - The mode in which scaling is indicated by the scaling factor for each of the axes</li>
+<li><em>By Units</em> - The mode in which the size is specified relative to the size of the UV Area</li>
+</ul>
+</li>
+<li><strong>X</strong> - X axis scaling size</li>
+<li><strong>Y</strong> - Y axis scaling size</li>
+<li><strong>Island Pivot</strong> - Transformation pivot</li>
+<li><strong>2D Cursor as Pivot</strong> - Use 2D cursor as island pivot</li>
+</ul>
+<div class="admonition properties in units mode">
+<p class="admonition-title">Properties</p>
+<p><a class="glightbox" href="../img/screen/transform/scale_island_units_mode_properties.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="scale island properties" src="../img/screen/transform/scale_island_units_mode_properties.png" /></a></p>
+</div>
+<ul>
+<li><strong>Mode</strong> - Transform Mode<ul>
+<li><em>Islands</em> - Transform islands</li>
+<li><em>Selection</em> - Transform selection</li>
+</ul>
+</li>
+<li><strong>Order</strong> - Processing order<ul>
+<li><em>Overall</em> - Handle everything as one</li>
+<li><em>One by One</em> - Handle one by one</li>
+</ul>
+</li>
+<li><strong>Mode</strong> - Transform Mode<ul>
+<li><em>By Axis</em> - The mode in which scaling is indicated by the scaling factor for each of the axes</li>
+<li><em>By Units</em> - The mode in which the size is specified relative to the size of the UV Area</li>
+</ul>
+</li>
+<li><strong>UV size</strong> - The estimated width of the UV area</li>
+<li><strong>Desired size</strong> - The size of which should be set for selected elements relative to UV area</li>
+<li><strong>Calcutate</strong> - What mean the <strong>Desired Size</strong></li>
+<li><strong>Island Pivot</strong> - Transformation pivot</li>
+<li><strong>2D Cursor as Pivot</strong> - Use 2D cursor as island pivot</li>
+</ul>
+<hr />
+<h3 id="rotate-operators">Rotate operators<a class="headerlink" href="#rotate-operators" title="Permanent link"></a></h3>
+<p><a class="glightbox" href="../img/icons/transform-rotate.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/icons/transform-rotate.png" /></a></p>
+<ul>
+<li><strong>By Angle</strong> - Rotate Islands by Angle</li>
+<li><strong>By Increment</strong> - Rotate Islands by Increment</li>
+<li><strong>Orient by Bounding Box</strong> - Orient Islands to Bounding Box</li>
+<li><strong>Orient by Selection</strong> - Orient Islands by Selection</li>
+</ul>
+<h4 id="rotate-island">Rotate Island<a class="headerlink" href="#rotate-island" title="Permanent link"></a></h4>
+<p>Rotate selected islands or selection</p>
+<div class="admonition properties">
+<p class="admonition-title">Properties</p>
+<p><a class="glightbox" href="../img/screen/transform/rotate_island_properties.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="rotate island properties" src="../img/screen/transform/rotate_island_properties.png" /></a></p>
+</div>
+<ul>
+<li><strong>Mode</strong> - Transform Mode<ul>
+<li><em>Islands</em> - Transform islands</li>
+<li><em>Selection</em> - Transform selection</li>
+</ul>
+</li>
+<li><strong>Order</strong> - Processing order<ul>
+<li><em>Overall</em> - Handle everything as one</li>
+<li><em>One by One</em> - Handle one by one</li>
+</ul>
+</li>
+<li><strong>Mode</strong> - Rotation mode<ul>
+<li><em>By Angle</em> - Turn to the specified angle</li>
+<li><em>By Direction</em> - Rotate by a specified angle in a specified direction</li>
+</ul>
+</li>
+<li><strong>Direction</strong> - Direction of rotation</li>
+<li><strong>Rotation Increment</strong> - Island rotation angle</li>
+<li><strong>Island Pivot</strong> - The pivot of the transformed unit</li>
+</ul>
+<h4 id="orient-island">Orient Island<a class="headerlink" href="#orient-island" title="Permanent link"></a></h4>
+<p>Orient Island</p>
+<div class="admonition properties">
+<p class="admonition-title">Properties</p>
+<p><a class="glightbox" href="../img/screen/transform/orient_island_properties.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="orient island properties" src="../img/screen/transform/orient_island_properties.png" /></a></p>
+</div>
+<ul>
+<li><strong>Order</strong> - Processing order<ul>
+<li><em>Overall</em> - Handle everything as one</li>
+<li><em>One by One</em> - Handle one by one</li>
+</ul>
+</li>
+<li><strong>Orient by</strong> - Orient Mode<ul>
+<li><em>Bounding Box</em> - Orient by bounding box</li>
+<li><em>Selection</em> - Orient by selection</li>
+</ul>
+</li>
+<li><strong>Direction</strong> - Orientation in the direction of<ul>
+<li><em>Horizontal</em> - Horizontal orientation</li>
+<li><em>Vertical</em> - Vertical orientation</li>
+<li><em>Auto</em> - Auto detect orientation</li>
+</ul>
+</li>
+<li><strong>Rotation</strong> - Direction of rotation</li>
+</ul>
+<hr />
+<h3 id="flip-operators">Flip operators<a class="headerlink" href="#flip-operators" title="Permanent link"></a></h3>
+<p><a class="glightbox" href="../img/icons/transform-flip.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/icons/transform-flip.png" /></a></p>
+<ul>
+<li><strong>Horizontal</strong> - Flip Islands Horizontally</li>
+<li><strong>Vertical</strong> - Flip Islands Vertically</li>
+</ul>
+<h4 id="flip-island">Flip Island<a class="headerlink" href="#flip-island" title="Permanent link"></a></h4>
+<p>Flip selected Islands or Selection</p>
+<div class="admonition properties">
+<p class="admonition-title">Properties</p>
+<p><a class="glightbox" href="../img/screen/transform/flip_island_properties.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="flip island properties" src="../img/screen/transform/flip_island_properties.png" /></a></p>
+</div>
+<ul>
+<li><strong>Mode</strong> - Transform Mode<ul>
+<li><em>Islands</em> - Transform islands</li>
+<li><em>Selection</em> - Transform selection</li>
+</ul>
+</li>
+<li><strong>Order</strong> - Processing order<ul>
+<li><em>Overall</em> - Handle everything as one</li>
+<li><em>One by One</em> - Handle one by one</li>
+</ul>
+</li>
+<li><strong>Direction</strong> - Direction of flipping<ul>
+<li><em>Horizontal</em> - Horizontal</li>
+<li><em>Vertical</em> - Vertical</li>
+<li><em>Island Pivot</em> - By pivot of the island</li>
+</ul>
+</li>
+<li><strong>Island Pivot</strong> - The pivot of the transformed unit</li>
+</ul>
+<hr />
+<h3 id="fit-operators">Fit operators<a class="headerlink" href="#fit-operators" title="Permanent link"></a></h3>
+<p><a class="glightbox" href="../img/icons/transform-fit.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/icons/transform-fit.png" /></a></p>
+<ul>
+<li><strong>To UV Area</strong> - Fit Islands to UV Area</li>
+<li><strong>To Region</strong> - Fit Islands to Region</li>
+<li><strong>Active UDIM tile</strong> - To active UDIM tile</li>
+<li><strong>Tile Number</strong> - To UDIM tile with the specified number</li>
+</ul>
+<h4 id="fit-island">Fit Island<a class="headerlink" href="#fit-island" title="Permanent link"></a></h4>
+<p>Fit island into defined region</p>
+<div class="admonition properties">
+<p class="admonition-title">Properties</p>
+<p><a class="glightbox" href="../img/screen/transform/fit_island_properties.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="fit island properties" src="../img/screen/transform/fit_island_properties.png" /></a></p>
+</div>
+<ul>
+<li><strong>Mode</strong> - Transform Mode<ul>
+<li><em>Islands</em></li>
+<li><em>Selection</em></li>
+<li><em>Faces</em></li>
+</ul>
+</li>
+<li><strong>Order</strong> - Processing order<ul>
+<li><em>Overall</em> - Handle everything as one</li>
+<li><em>One by One</em> - Handle one by one</li>
+</ul>
+</li>
+<li><strong>Fit</strong> - Transform Mode<ul>
+<li><em>To UV Area</em> - Fit selection to the UV Area bounds</li>
+<li><em>To Region</em> - Fit selection to the defined region</li>
+<li><em>Active UDIM tile</em> - To active UDIM tile</li>
+<li><em>Tile Number</em> - To UDIM tile with the specified number</li>
+<li><em>Fill Islands</em> - Fit islands to the UV Area, but not keep the proportions</li>
+</ul>
+</li>
+<li><strong>Fit Axis</strong> - Active Axis<ul>
+<li><em>U</em> - U axis</li>
+<li><em>V</em> - V axis</li>
+<li><em>Min</em> - The minimum length axis is automatically determined</li>
+<li><em>Max</em> - The maximum length axis is automatically determined</li>
+<li><em>Automatic</em> - Automatically detected axis for full dimensional compliance</li>
+</ul>
+</li>
+<li><strong>Inset</strong> - The amount by which the islands should be reduced relative to the edges of the region</li>
+<li><strong>Keep proportion</strong> - Do not change the proportions of the selected island</li>
+<li><strong>Match Rotation</strong> - Match the rotation of the island to the rotation of the region (for rectangular regions)</li>
+<li><strong>Region</strong> - Region in which the selected island will be fitted</li>
+<li><strong>Align To</strong> - The region point to which the island will be adjusted</li>
+</ul>
+<hr />
+<h3 id="align-operators">Align operators<a class="headerlink" href="#align-operators" title="Permanent link"></a></h3>
+<p><a class="glightbox" href="../img/icons/transform-orient.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/icons/transform-orient.png" /></a></p>
+<ul>
+<li><strong>To Selected BBox</strong> - Align Islands to Selected BBox</li>
+<li><strong>To Position</strong> - Align Islands to Position</li>
+<li><strong>To 2D Cursor</strong> - Align Islands to 2D Cursor</li>
+<li><strong>To UV Area</strong> - Align Islands to UV Area</li>
+<li><strong>To Active Component</strong> - Align Islands to Active Component</li>
+<li><strong>Active UDIM tile</strong> - To active UDIM tile</li>
+<li><strong>Tile Number</strong> - To UDIM tile with the specified number</li>
+</ul>
+<h4 id="align-islands">Align Islands<a class="headerlink" href="#align-islands" title="Permanent link"></a></h4>
+<p>Align selected islands or selection</p>
+<div class="admonition properties">
+<p class="admonition-title">Properties</p>
+<p><a class="glightbox" href="../img/screen/transform/align_properties.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="align island properties" src="../img/screen/transform/align_properties.png" /></a></p>
+</div>
+<ul>
+<li><strong>Mode</strong> - Transform Mode<ul>
+<li><em>Islands</em></li>
+<li><em>Selection</em></li>
+<li><em>Vertices</em></li>
+</ul>
+</li>
+<li><strong>Order</strong> - Processing order<ul>
+<li><em>Overall</em> - Handle everything as one</li>
+<li><em>One by One</em> - Handle one by one</li>
+</ul>
+</li>
+<li><strong>Align</strong> - Transform Mode<ul>
+<li><em>To Selection Bounding Box</em> - To the bounding box of the selection</li>
+<li><em>To Position</em> - To the defined position</li>
+<li><em>To 2D Cursor</em> - To the 2D cursor</li>
+<li><em>To UV Area Bounding Box</em> - To the bounding box of the UV Area</li>
+<li><em>To Active Component</em> - To the active component (vertex, edge, face)</li>
+<li><em>Active UDIM tile</em> - To active UDIM tile</li>
+<li><em>Tile Number</em> - To UDIM tile with the specified number</li>
+</ul>
+</li>
+<li><strong>Position</strong> - Position specified by coordinates to which the alignment will be performed</li>
+<li><strong>Align Direction</strong> - The point of the bounding box to which align will be performed</li>
+<li><strong>As Direction</strong> - Set the island pivot to be the same as the alignment direction</li>
+<li><strong>Island Pivot</strong> - The point of the island which will be aligned</li>
+</ul>
+<hr />
+<h3 id="distribute-operators">Distribute operators<a class="headerlink" href="#distribute-operators" title="Permanent link"></a></h3>
+<p><a class="glightbox" href="../img/icons/transform-distribute.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/icons/transform-distribute.png" /></a></p>
+<ul>
+<li><a href="#distribute-and-sort"><strong>Distribute and Sort</strong></a> - Distributes and sorts selected islands</li>
+<li><a href="#arrange"><strong>Arrange</strong></a> - Arrange selected islands</li>
+<li><a href="#distribute-vertices"><strong>Distribute Vertices</strong></a> - Distribute vertices along the line</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../select/" class="btn btn-neutral float-left" title="Select"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../stack/" class="btn btn-neutral float-right" title="Stack">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p><p>Copyright &copy; 2024 <a href="https://zenmasters.team/">Zen Masters</a></p></p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../select/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../stack/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+      <script src="../js/version-select.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+</script></body>
+</html>

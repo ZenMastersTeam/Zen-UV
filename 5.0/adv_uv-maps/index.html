@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Advanced UV Maps - Zen UV 5.0 for Blender</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../css/version-select.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Advanced UV Maps";
+        var mkdocs_page_input_path = "adv_uv-maps.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-7XHJ910WF8"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', "G-7XHJ910WF8");
+      </script>
+ <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }</style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Zen UV 5.0 for Blender
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../youtube_videos/">Learning Videos</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../installation/">Installation and Update</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../user_interface/">User Interface</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Tutorial</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../tutorial/">Step-by-Step Guide Examples</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >Emergency Light</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../tutorial/emergency_light/emergency_light_eng/">Emergency Light (EN)</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../tutorial/emergency_light/emergency_light_ukr/">Emergency Light (UA)</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../tutorial/emergency_light/emergency_light_rus/">Emergency Light (RU)</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Modules</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Advanced UV Maps</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#advanced-uv-maps-list">Advanced UV Maps List</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#uv-maps-status-detection">UV Maps Status Detection</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#set-active-uv-map">Set Active UV Map</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#sync-seams-by-uv-islands">Sync Seams by UV Islands</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#duplicate-active-uv-map">Duplicate Active UV Map</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#remove-active-uv-map">Remove active UV Map</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#rename-uv-maps">Rename UV Maps</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#generate-uv-map-names-from-template">Generate UV Map names from template</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#sync-uv-maps">Sync UV Maps</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#copy-uv-paste-uv">Copy UV / Paste UV</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#copy-uv">Copy UV</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#paste-uv">Paste UV</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#adv-uv-maps-tools">Adv UV Maps Tools</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#clean-uv-maps">Clean UV Maps</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#set-uv-map-name-by-index">Set UV Map Name by Index</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#transfer-uv">Transfer UV</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#udim-tools">UDIM tools</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#fill-tile">Fill Tile</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#add-missed">Add Missed</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#set-active">Set Active</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#remove-active">Remove Active</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#select-in-active">Select in Active</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#move-to-active">Move to active</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#set-active-eyedropper">Set Active (eyedropper)</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../seam_groups/">Seam Groups</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../unwrap/">Unwrap</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../select/">Select</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../transform/">Transform</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../stack/">Stack</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../texel_density/">Texel Density</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../checker/">UV Checker</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pack/">Pack</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../preferences/">Preferences</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../transform_tool/">Transform Tool</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../touch_tool/">Touch Tool</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../sticky_uv_editor/">Sticky UV Editor</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../favourites/">Favourites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Trim Sheets</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../trimsheet/">Trim Sheets</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../trimsheet_creation/">Trim Sheet Management</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../trimsheet_operators/">Trim Sheet Operators</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../trimsheet_hotspot/">Hotspot Mapping</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Additional</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../addon_prefs/">Addon Preferences</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../user_script/">User Script</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../help/">Help</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../troubleshooting/">FAQs</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../changelg/">Changelog</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../credits/">Credits</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../our_addons/">Our Add-ons</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../recommended_addons/">Recommended Add-ons</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Zen UV 5.0 for Blender</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Modules</li>
+      <li class="breadcrumb-item active">Advanced UV Maps</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="advanced-uv-maps">Advanced UV Maps<a class="headerlink" href="#advanced-uv-maps" title="Permanent link"></a></h1>
+<p>Advanced UV Maps section created to have quick access to Object Data Properties — UV Maps.
+It allows to select the active, add, remove, and rename UV Maps from the list.</p>
+<p>If more than one object is selected, you can synchronously work with UV maps of the selected objects.</p>
+<div class="admonition panel">
+<p class="admonition-title">Panel</p>
+<table>
+<thead>
+<tr>
+<th>Edit Mode</th>
+<th>Object Mode</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="glightbox" href="../img/screen/adv_uv_map/adv_uv_map.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/adv_uv_map/adv_uv_map.png" /></a></td>
+<td><a class="glightbox" href="../img/screen/adv_uv_map/adv_uv_map_obj.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/adv_uv_map/adv_uv_map_obj.png" /></a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- !!! tip
+    Watch the video explaining how **Advanced UV Maps** works.
+
+    <div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%;">
+    <iframe src="https://www.youtube.com/embed/Y7dG2i-FASs?start=541&end=619" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen="" seamless="" frameborder="0"></iframe>
+    </div> -->
+
+<h2 id="advanced-uv-maps-list">Advanced UV Maps List<a class="headerlink" href="#advanced-uv-maps-list" title="Permanent link"></a></h2>
+<p>The list can work in two modes:</p>
+<ul>
+<li>Multi object mode</li>
+<li>Single object mode</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>List Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="glightbox" href="../img/screen/adv_uv_map/multi_preview.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/adv_uv_map/multi_preview.png" /></a></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>List Color</th>
+<th>Individual for every column</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Default color</td>
+<td>All selectected objects has the same active UV Map, render, same position in the list</td>
+</tr>
+<tr>
+<td>Red color</td>
+<td>At least one object differs with one of the UV Map parameters</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>1. Active UV Map status</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="glightbox" href="../img/screen/adv_uv_map/uvmaps_active.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/adv_uv_map/uvmaps_active.png" /></a></td>
+<td>UV Map is active</td>
+</tr>
+<tr>
+<td><a class="glightbox" href="../img/screen/adv_uv_map/uvmaps_inactive.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/adv_uv_map/uvmaps_inactive.png" /></a></td>
+<td>UV Map is not active</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>2. UV Map name</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Name is highlighted</td>
+<td>All selected objects have UV Map with the name</td>
+</tr>
+<tr>
+<td>Name is grayed out</td>
+<td>At least one object from selection does not have UV Map with the name</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>3. UV Map count and position status</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>First or single digit</td>
+<td>Number of objects that have UV Map with the selected name</td>
+</tr>
+<tr>
+<td>Second digit</td>
+<td>Selected objects count</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>4. Active Render UV Map status</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="glightbox" href="../img/screen/adv_uv_map/uvmap_active_render.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/adv_uv_map/uvmap_active_render.png" /></a></td>
+<td>UV Map is active for render</td>
+</tr>
+<tr>
+<td><a class="glightbox" href="../img/screen/adv_uv_map/uvmaps_render_not_active.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/adv_uv_map/uvmaps_render_not_active.png" /></a></td>
+<td>UV Map is not active for render</td>
+</tr>
+</tbody>
+</table>
+<h3 id="uv-maps-status-detection">UV Maps Status Detection<a class="headerlink" href="#uv-maps-status-detection" title="Permanent link"></a></h3>
+<p>Advanced Maps system detects synchronization status of all UV Maps in the selected objects. It is possible to disable some parameters which are not neccessary for you to detect.</p>
+<table>
+<thead>
+<tr>
+<th><a class="glightbox" href="../img/screen/adv_uv_map/uvmaps_status_detection.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/adv_uv_map/uvmaps_status_detection.png" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="set-active-uv-map">Set Active UV Map<a class="headerlink" href="#set-active-uv-map" title="Permanent link"></a></h3>
+<p>Active UV Map can be changed either by clicking in the <a href="#advanced-uv-maps-list">list</a> or by assigning hotkey which will change active UV Map according to its index in the <a href="#advanced-uv-maps-list">list</a>.</p>
+<div class="admonition notice">
+<p class="admonition-title">Notice</p>
+<p>It is recommended to <a href="#sync-uv-maps">synchronize</a> all UV Maps in all objects if you are planning to switch advanced UV Maps by hotkeys</p>
+</div>
+<table>
+<thead>
+<tr>
+<th><a class="glightbox" href="../img/screen/adv_uv_map/set_adv_maps_index.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/adv_uv_map/set_adv_maps_index.gif" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Setting active UV Map by hotkey</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Operator property flag <strong>Used in UI</strong> must be unset in keymap properties</p>
+<p><a class="glightbox" href="../img/screen/adv_uv_map/hotkey_flag_used_in_ui.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/adv_uv_map/hotkey_flag_used_in_ui.png" /></a></p>
+</div>
+<hr />
+<h2 id="sync-seams-by-uv-islands">Sync Seams by UV Islands<a class="headerlink" href="#sync-seams-by-uv-islands" title="Permanent link"></a></h2>
+<p>When changing the UV Map, seams are updated according to the UV islands present in the map.</p>
+<div class="admonition panel">
+<p class="admonition-title">Panel</p>
+<p><a class="glightbox" href="../img/screen/adv_uv_map/sync_seam_button.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Sync Seams" src="../img/screen/adv_uv_map/sync_seam_button.png" /></a></p>
+</div>
+<hr />
+<h2 id="duplicate-active-uv-map">Duplicate Active UV Map<a class="headerlink" href="#duplicate-active-uv-map" title="Permanent link"></a></h2>
+<div class="admonition button">
+<p class="admonition-title">Button</p>
+<p><a class="glightbox" href="../img/icons/plus.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Add Button" src="../img/icons/plus.png" /></a></p>
+</div>
+<p>Duplicate the active UV Map or create a new one depending on the operator&rsquo;s properties.</p>
+<p><a class="glightbox" href="../img/screen/adv_uv_map/duplicate_active_map.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/adv_uv_map/duplicate_active_map.png" /></a></p>
+<h2 id="remove-active-uv-map">Remove active UV Map<a class="headerlink" href="#remove-active-uv-map" title="Permanent link"></a></h2>
+<div class="admonition button">
+<p class="admonition-title">Button</p>
+<p><a class="glightbox" href="../img/icons/minus.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Remove Button" src="../img/icons/minus.png" /></a></p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Zen UV monitors the state of objects. If you delete all UV maps, all <a href="../unwrap/#finishing-system">Finished</a> and <a href="../pack/#excluded-system">Excluded</a> tags will also be removed.</p>
+</div>
+<p><a class="glightbox" href="../img/screen/adv_uv_map/uvmaps_remove.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/adv_uv_map/uvmaps_remove.gif" /></a></p>
+<hr />
+<h2 id="rename-uv-maps">Rename UV Maps<a class="headerlink" href="#rename-uv-maps" title="Permanent link"></a></h2>
+<p>Rename UV maps of selected objects</p>
+<div class="admonition properties">
+<p class="admonition-title">Properties</p>
+<p><a class="glightbox" href="../img/screen/adv_uv_map/uvmaps_rename_preview.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/adv_uv_map/uvmaps_rename_preview.png" /></a></p>
+</div>
+<ul>
+<li><strong>UV Maps source</strong> - Rename UV maps mode<ul>
+<li><em>Selected</em> - Operates on the currently selected UV Map items in the list</li>
+<li><em>All</em> - Operates on all UV Map items in the list</li>
+</ul>
+</li>
+<li><strong>Find</strong> - The text to search for in names<ul>
+<li><em>1) if text is empty then all name will be renamed</em></li>
+<li><em>2) if &lsquo;Use Regex&rsquo; is set then text must be a valid regular expression</em></li>
+</ul>
+</li>
+<li><strong>Replace</strong> - The text to replace for in matching names found from the &lsquo;Find&rsquo; text</li>
+<li><strong>Show Replace Templates Settings</strong> - Show list of template names to rename UV maps</li>
+<li><strong>Match Case</strong> - Search results must exactly match the case of the &lsquo;Find&rsquo; text</li>
+<li><strong>Use Regex</strong> - Replace by regular expression in the &lsquo;Find&rsquo; text</li>
+<li><strong>Generate Template Names</strong> - Rename UV maps from replace preset templates</li>
+<li><strong>Counter</strong> - Integer value will be added to the end of the name</li>
+<li><strong>Start from</strong> - If Counter property is used, integer value will be started from this value</li>
+<li><strong>Preview</strong> - Preview the generated name</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><a class="glightbox" href="../img/screen/adv_uv_map/rename_bake.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/adv_uv_map/rename_bake.gif" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Rename UV Maps</td>
+</tr>
+</tbody>
+</table>
+<h3 id="generate-uv-map-names-from-template">Generate UV Map names from template<a class="headerlink" href="#generate-uv-map-names-from-template" title="Permanent link"></a></h3>
+<p>If you have naming convension for UV Maps in your projects, you can create template preset and quickly rename all UV Maps in one click</p>
+<table>
+<thead>
+<tr>
+<th><a class="glightbox" href="../img/screen/adv_uv_map/rename_template.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/adv_uv_map/rename_template.gif" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>UV Map naming preset</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="sync-uv-maps">Sync UV Maps<a class="headerlink" href="#sync-uv-maps" title="Permanent link"></a></h2>
+<p>If your model requires UV Maps to have the same postion, name, active or render status you can synchronize them</p>
+<p><a class="glightbox" href="../img/screen/adv_uv_map/uvmaps_sync.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/adv_uv_map/uvmaps_sync.png" /></a></p>
+<hr />
+<h2 id="copy-uv-paste-uv">Copy UV / Paste UV<a class="headerlink" href="#copy-uv-paste-uv" title="Permanent link"></a></h2>
+<p>Allows transferring the UV coordinates between UV Maps.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Available in Edit Mesh mode if geometry of selected objects is the same.</p>
+</div>
+<table>
+<thead>
+<tr>
+<th><a class="glightbox" href="../img/screen/adv_uv_map/copy_paste_UV.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/adv_uv_map/copy_paste_UV.gif" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Example showing how to copy and paste UVs</td>
+</tr>
+</tbody>
+</table>
+<h4 id="copy-uv">Copy UV<a class="headerlink" href="#copy-uv" title="Permanent link"></a></h4>
+<p>Copy the UV coordinates of the selection.</p>
+<h4 id="paste-uv">Paste UV<a class="headerlink" href="#paste-uv" title="Permanent link"></a></h4>
+<p>Paste the UV coordinates.</p>
+<hr />
+<h2 id="adv-uv-maps-tools">Adv UV Maps Tools<a class="headerlink" href="#adv-uv-maps-tools" title="Permanent link"></a></h2>
+<h4 id="clean-uv-maps">Clean UV Maps<a class="headerlink" href="#clean-uv-maps" title="Permanent link"></a></h4>
+<p>Remove all inactive UV Maps.</p>
+<table>
+<thead>
+<tr>
+<th><a class="glightbox" href="../img/screen/adv_uv_map/adv_uv_map_clean_inactive.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/adv_uv_map/adv_uv_map_clean_inactive.gif" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Clean UV Maps</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="set-uv-map-name-by-index">Set UV Map Name by Index<a class="headerlink" href="#set-uv-map-name-by-index" title="Permanent link"></a></h4>
+<p>Set UV Map name by its Index in the list.</p>
+<table>
+<thead>
+<tr>
+<th><a class="glightbox" href="../img/screen/adv_uv_map/adv_uv_map_rename_by_index.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/adv_uv_map/adv_uv_map_rename_by_index.gif" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Set UV Map name by index</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="transfer-uv">Transfer UV<a class="headerlink" href="#transfer-uv" title="Permanent link"></a></h2>
+<table>
+<thead>
+<tr>
+<th><a class="glightbox" href="../img/screen/adv_uv_map/transfer_uv_maps.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/adv_uv_map/transfer_uv_maps.png" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Transfer UV panel</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><a class="glightbox" href="../img/screen/adv_uv_map/transfer_uv_maps.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/adv_uv_map/transfer_uv_maps.gif" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Example showing how to transfer UVs</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Transfer Modes</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Matching geometry</td>
+<td>Objects must be of type mesh and must have a matching topology</td>
+</tr>
+<tr>
+<td>Advanced</td>
+<td>Transfer UV maps by generating an interpolated mapping between source and target mesh elements</td>
+</tr>
+<tr>
+<td>Layout</td>
+<td>Transfer layout of UV maps from active to selected meshes</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Using the eyedropper tool assigns multi-user data to the object. You can disable this functionality in the <a href="../addon_prefs/#adv-uv-maps">Addon Preferences</a></p>
+</div>
+<hr />
+<h2 id="udim-tools">UDIM tools<a class="headerlink" href="#udim-tools" title="Permanent link"></a></h2>
+<p><a href="https://docs.blender.org/manual/en/latest/modeling/meshes/uv/workflows/udims.html"><strong>UDIM workflow</strong></a> is a special workflow that allow to spread UV islands across several different textures of the model.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Available only in UV Editor context in Edit Mode.
+The image Source must be set to &lsquo;UDIM Tiles&rsquo;.</p>
+</div>
+<p><a class="glightbox" href="../img/screen/adv_uv_map/adv_uv_map_udim.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/adv_uv_map/adv_uv_map_udim.png" /></a></p>
+<hr />
+<h4 id="fill-tile">Fill Tile<a class="headerlink" href="#fill-tile" title="Permanent link"></a></h4>
+<p>Fill active UDIM tile with a generated image</p>
+<div class="admonition properties">
+<p class="admonition-title">Properties</p>
+<p><a class="glightbox" href="../img/screen/adv_uv_map/udm_fill_tile_properties.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="fill udim tile properties" src="../img/screen/adv_uv_map/udm_fill_tile_properties.png" /></a></p>
+</div>
+<ul>
+<li><strong>Color</strong> - Default fill color</li>
+<li><strong>Width</strong> - Image width</li>
+<li><strong>Height</strong> - Image height</li>
+<li><strong>Alpha</strong> - Create an image with an alpha channel</li>
+<li><strong>Generated Type</strong> - Fill the image with a grid for UV map testing<ul>
+<li><em>Blank</em> - Generate a blank image</li>
+<li><em>UV Grid</em> - Generated grid to test UV mappings</li>
+<li><em>Color Grid</em> - Generated Improved UV grid to test UV mappings</li>
+</ul>
+</li>
+<li><strong>32-bit Float</strong> - Create image with 32-bit floating-point bit depth</li>
+</ul>
+<hr />
+<h4 id="add-missed">Add Missed<a class="headerlink" href="#add-missed" title="Permanent link"></a></h4>
+<p>Create the missing UDIM Tile at the Island location. </p>
+<div class="admonition properties">
+<p class="admonition-title">Properties</p>
+<p><a class="glightbox" href="../img/screen/adv_uv_map/adv_uv_map_udim_add_missed.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/adv_uv_map/adv_uv_map_udim_add_missed.png" /></a></p>
+</div>
+<ul>
+<li><strong>By Selection</strong> - Use selection to determine where where UDIM tile will be created</li>
+<li><strong>In order</strong> - Create all the missing tiles in order until it reaches the last missed tile with the selection</li>
+<li>
+<p><strong>Fill</strong> - Fill tile with settings below</p>
+</li>
+<li>
+<p><strong>Color</strong> - New tile color</p>
+</li>
+<li><strong>Width</strong> - Tile width</li>
+<li><strong>Height</strong> - tile height</li>
+<li><strong>Alpha</strong> - Create an image with an alpha channel</li>
+<li><strong>Generated Type</strong> - Fill the image with a grid for UV map testing<ul>
+<li><em>Blank</em> - Generate a blank image</li>
+<li><em>UV Grid</em> - Generated grid to test UV mappings</li>
+<li><em>Color Grid</em> - Generated Improved UV grid to test UV mappings</li>
+</ul>
+</li>
+<li><strong>32-bit Float</strong> - Create image with 32-bit floating-point bit depth</li>
+</ul>
+<hr />
+<h4 id="set-active">Set Active<a class="headerlink" href="#set-active" title="Permanent link"></a></h4>
+<p>Set the active UDIM Tile based on the selection.</p>
+<div class="admonition properties">
+<p class="admonition-title">Properties</p>
+<p>This operator has no properties</p>
+</div>
+<p><a class="glightbox" href="../img/screen/adv_uv_map/adv_uv_map_udim_set_active.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/adv_uv_map/adv_uv_map_udim_set_active.gif" /></a>  </p>
+<hr />
+<h4 id="remove-active">Remove Active<a class="headerlink" href="#remove-active" title="Permanent link"></a></h4>
+<p>Remove the active UDIM Tile</p>
+<div class="admonition properties">
+<p class="admonition-title">Properties</p>
+<p>This operator has no properties</p>
+</div>
+<p><a class="glightbox" href="../img/screen/adv_uv_map/adv_uv_map_udim_remove_active.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/adv_uv_map/adv_uv_map_udim_remove_active.gif" /></a></p>
+<hr />
+<h4 id="select-in-active">Select in Active<a class="headerlink" href="#select-in-active" title="Permanent link"></a></h4>
+<p>Select Islands in bounding box of active UDIM Tile or UV Area</p>
+<div class="admonition properties">
+<p class="admonition-title">Properties</p>
+<p>This operator has no properties</p>
+</div>
+<p><a class="glightbox" href="../img/screen/adv_uv_map/adv_uv_map_udim_select_active.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/adv_uv_map/adv_uv_map_udim_select_active.gif" /></a></p>
+<hr />
+<h4 id="move-to-active">Move to active<a class="headerlink" href="#move-to-active" title="Permanent link"></a></h4>
+<p>Move islands to active, or UDIM Tile defined by number</p>
+<p><a href="../transform/#move-to-uv-area">Read the full description of the operator in the Transform article</a></p>
+<table>
+<thead>
+<tr>
+<th><a class="glightbox" href="../img/screen/adv_uv_map/adv_uv_map_udim_move_active.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/adv_uv_map/adv_uv_map_udim_move_active.gif" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Move to active UDIM tile</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="set-active-eyedropper">Set Active (eyedropper)<a class="headerlink" href="#set-active-eyedropper" title="Permanent link"></a></h4>
+<p>Set active UDIM Tile by eyedropper</p>
+<div class="admonition properties">
+<p class="admonition-title">Properties</p>
+<p>This operator has no properties</p>
+</div>
+<p><a class="glightbox" href="../img/screen/adv_uv_map/adv_uv_map_udim_set_active_eyedropper.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/adv_uv_map/adv_uv_map_udim_set_active_eyedropper.gif" /></a></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../tutorial/emergency_light/emergency_light_rus/" class="btn btn-neutral float-left" title="Emergency Light (RU)"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../seam_groups/" class="btn btn-neutral float-right" title="Seam Groups">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p><p>Copyright &copy; 2024 <a href="https://zenmasters.team/">Zen Masters</a></p></p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../tutorial/emergency_light/emergency_light_rus/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../seam_groups/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+      <script src="../js/version-select.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+</script></body>
+</html>
