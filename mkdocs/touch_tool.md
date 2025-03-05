@@ -19,18 +19,18 @@ The Zen UV gizmo supports both basic transformations and advanced features such 
 
 The gizmo consists of two main points, which are generally equivalent in effect, and a line.
 
-- **Pivot-handle (p-handle)** — The primary transformation point.
-- **Angle-handle (a-handle)** — The orientation and alignment point.
-- **Line-handle (l-handle)** — The movement line. This handle has two states, each with a distinct appearance:
+- **Pivot-handle (P-handle)** — The primary transformation point.
+- **Angle-handle (A-handle)** — The orientation and alignment point.
+- **Line-handle (L-handle)** — The movement line. This handle has two states, each with a distinct appearance:
     - **Free movement** — A solid line. In this state, movement is unrestricted in any direction.
     - **Movement along the line only** — A dashed line. In this case, movement is constrained to the direction of the **Line-handle**.
 
 Additionally, there are extra handles, most of which appear only in **Transform** mode:
 
 - **Align-handles** — Represented by eight handles that allow alignment and transformation at specific angles based on their individual positions.
-- **Rotate-handle (r-handle)** — Rotates around the **p-handle**.
-- **Scale-handle (s-handle)** — Performs proportional scaling.
-- **Non-uniform-handle (nu-handle)** — Scales along the **line-handle** axis.
+- **Rotate-handle (R-handle)** — Rotates around the **P-handle**.
+- **Scale-handle (S-handle)** — Performs proportional scaling.
+- **Non-uniform-handle (NU-handle)** — Scales along the **Line-handle** axis.
 
 !!! Tip
     You can enable handle names in the gizmo properties.
@@ -49,7 +49,7 @@ This mode is used to position the gizmo relative to the geometry before performi
 **Key Functions:**
 - Positioning the gizmo for convenience.
 - Setting its orientation.
-- Defining the pivot point (**pivot-handle**).
+- Defining the pivot point (**Pivot-handle**).
 
 ### Transform Mode
 
@@ -58,9 +58,9 @@ This mode is used to position the gizmo relative to the geometry before performi
 In this mode, the gizmo performs transformations on UV islands or selected elements (**Selection**).
 
 Special **handles** are available in this mode:
-- **Rotate-handle** (*r-handle*) — Rotates around the **p-handle**.
-- **Scale-handle** (*s-handle*) — Performs proportional scaling.
-- **Non-uniform-handle** (*nu-handle*) — Scales along the **line-handle** axis.
+- **Rotate-handle** (*R-handle*) — Rotates around the **P-handle**.
+- **Scale-handle** (*S-handle*) — Performs proportional scaling.
+- **Non-uniform-handle** (*NU-handle*) — Scales along the **Line-handle** axis.
 
 
 ---
@@ -76,13 +76,13 @@ Use **double-click** and **modifier keys** for quick alignment, scaling, snappin
 
 In **Setup Mode**, these actions adjust the gizmo without affecting the UV islands.
 
-- **p-handle (Double Click)** — Align the gizmo to the island **along** its direction.  
+- **P-handle (Double Click)** — Align the gizmo to the island **along** its direction.  
   - If the gizmo is already aligned, it will switch to **across** the island.
-- **p-handle (Ctrl + Double Click)** — Align the gizmo to the island **along** its direction and set the **p-handle** to the **center** of the island.
-- **a-handle (Double Click)** — Align the gizmo to the **selection**.  
+- **P-handle (Ctrl + Double Click)** — Align the gizmo to the island **along** its direction and set the **P-handle** to the **center** of the island.
+- **A-handle (Double Click)** — Align the gizmo to the **selection**.  
   - If already aligned, it will switch to **across** the selection.
-- **a-handle (Ctrl + Double Click)** — Align the gizmo to the **selection** and set the **p-handle** at the **center** of the selection.
-- **l-handle (Double Click)** — Toggle the **movement constraint mode** to move only **along the l-handle**.  
+- **A-handle (Ctrl + Double Click)** — Align the gizmo to the **selection** and set the **P-handle** at the **center** of the selection.
+- **L-handle (Double Click)** — Toggle the **movement constraint mode** to move only **along the L-handle**.  
   *(Movement along the line does not work in Setup Mode, but you can enable it before switching to Transform Mode.)*
 
 ---
@@ -91,15 +91,15 @@ In **Setup Mode**, these actions adjust the gizmo without affecting the UV islan
 
 In **Transform Mode**, these actions directly affect the UV islands.
 
-- **p-handle (Double Click)** — Align the island based on **3D world orientation** (**World Align**).
-- **a-handle (Double Click)** — Apply **Texel Density (Set TD)**.
-- **a-handle (Ctrl + Double Click)** — Sample **Texel Density (Get TD)** from the selection.
-- **l-handle (Double Click)** — Toggle **movement constraint mode** to move only **along the l-handle**.
-- **r-handle (Double Click)** — Rotate the island **clockwise** by the **Snap Angle** value.
-- **r-handle (Ctrl + Double Click)** — Rotate the island **counterclockwise** by the **Snap Angle** value.
-- **nu-handle (Double Click)** — Scale the island **down by 50%**.
-- **nu-handle (Ctrl + Double Click)** — **Scale the island to zero**.
-- **s-handle (Double Click)** — Scale the island **up by 200%**.
+- **P-handle (Double Click)** — Align the island based on **3D world orientation** (**World Align**).
+- **A-handle (Double Click)** — Apply **Texel Density (Set TD)**.
+- **A-handle (Ctrl + Double Click)** — Sample **Texel Density (Get TD)** from the selection.
+- **L-handle (Double Click)** — Toggle **movement constraint mode** to move only **along the L-handle**.
+- **R-handle (Double Click)** — Rotate the island **clockwise** by the **Snap Angle** value.
+- **R-handle (Ctrl + Double Click)** — Rotate the island **counterclockwise** by the **Snap Angle** value.
+- **NU-handle (Double Click)** — Scale the island **down by 50%**.
+- **NU-handle (Ctrl + Double Click)** — **Scale the island to zero**.
+- **S-handle (Double Click)** — Scale the island **up by 200%**.
 
 ---
 
@@ -111,11 +111,11 @@ For quick reference, here’s the same information in a compact **table format**
 
 | **Action** | **Effect** |
 |------------|-----------|
-| **p-handle (Double Click)** | Aligns the gizmo to the island **along** its direction. If already aligned, switches to **across**. |
-| **p-handle (Ctrl + Double Click)** | Aligns the gizmo **along** the island and places the **p-handle** in the island **center**. |
-| **a-handle (Double Click)** | Aligns the gizmo to the **selection**. If already aligned, switches to **across**. |
-| **a-handle (Ctrl + Double Click)** | Aligns the gizmo to the **selection** and places the **p-handle** in the selection **center**. |
-| **l-handle (Double Click)** | Toggles **movement constraint mode** (along the l-handle). *(Takes effect in Transform Mode.)* |
+| **P-handle (Double Click)** | Aligns the gizmo to the island **along** its direction. If already aligned, switches to **across**. |
+| **P-handle (Ctrl + Double Click)** | Aligns the gizmo **along** the island and places the **P-handle** in the island **center**. |
+| **A-handle (Double Click)** | Aligns the gizmo to the **selection**. If already aligned, switches to **across**. |
+| **A-handle (Ctrl + Double Click)** | Aligns the gizmo to the **selection** and places the **P-handle** in the selection **center**. |
+| **L-handle (Double Click)** | Toggles **movement constraint mode** (along the L-handle). *(Takes effect in Transform Mode.)* |
 
 ---
 
@@ -123,15 +123,15 @@ For quick reference, here’s the same information in a compact **table format**
 
 | **Action** | **Effect** |
 |------------|-----------|
-| **p-handle (Double Click)** | Aligns the island based on **3D world orientation (World Align)**. |
-| **a-handle (Double Click)** | Apply **Texel Density (Set TD)**. |
-| **a-handle (Ctrl + Double Click)** | Sample **Texel Density (Get TD)** from the selection. |
-| **l-handle (Double Click)** | Toggles **movement constraint mode** (along the l-handle). |
-| **r-handle (Double Click)** | Rotates the island **clockwise** by the **Snap Angle** value. |
-| **r-handle (Ctrl + Double Click)** | Rotates the island **counterclockwise** by the **Snap Angle** value. |
-| **nu-handle (Double Click)** | Scales the island **down by 50%**. |
-| **nu-handle (Ctrl + Double Click)** | **Scales the island to zero**. |
-| **s-handle (Double Click)** | Scales the island **up by 200%**. |
+| **P-handle (Double Click)** | Aligns the island based on **3D world orientation (World Align)**. |
+| **A-handle (Double Click)** | Apply **Texel Density (Set TD)**. |
+| **A-handle (Ctrl + Double Click)** | Sample **Texel Density (Get TD)** from the selection. |
+| **L-handle (Double Click)** | Toggles **movement constraint mode** (along the L-handle). |
+| **R-handle (Double Click)** | Rotates the island **clockwise** by the **Snap Angle** value. |
+| **R-handle (Ctrl + Double Click)** | Rotates the island **counterclockwise** by the **Snap Angle** value. |
+| **NU-handle (Double Click)** | Scales the island **down by 50%**. |
+| **NU-handle (Ctrl + Double Click)** | **Scales the island to zero**. |
+| **S-handle (Double Click)** | Scales the island **up by 200%**. |
 
 ---
 
@@ -141,7 +141,7 @@ These **quick actions** significantly improve workflow efficiency by allowing **
 
 Zen Touch Gizmo supports a wide range of operations:
 
-- **[Move](#move)** — Free movement, along the **l-handle**, or constrained to coordinate axes.
+- **[Move](#move)** — Free movement, along the **L-handle**, or constrained to coordinate axes.
 - **[Scale](#scale)** — Uniform scaling or scaling along a single axis.
 - **[Rotate](#rotate)** — Free rotation or angle-snapped rotation.
 - **[Alignment by Rotation](#alignment-by-rotation)** — Align by UV axes, by an edge, or using a custom orientation.
@@ -311,7 +311,7 @@ In the **Status Bar**, you can find hints about hotkeys for working with the giz
 - **Enter** — Confirm. You don’t necessarily need to use this shortcut, as transformations are confirmed automatically when you release the mouse button.
 - **Esc** — Cancel transformation. You can always use *Undo*, but if you realize mid-transformation that it's not what you need, use this shortcut to revert both the geometry and gizmo to their initial state.
 - **X, Y** — Lock X, Lock Y. Standard axis locks for transformations.
-- **Z** — Lock Z. The UV Editor does not have a Z-axis, but for convenience, this shortcut constrains transformations **along the line-handle**.
+- **Z** — Lock Z. The UV Editor does not have a Z-axis, but for convenience, this shortcut constrains transformations **along the Line-handle**.
 - **A** — Enable/Disable Angle Step. Turns off angle snapping if it interferes with your workflow.
 - **Shift** — Standard shortcut for more precise positioning.
 
@@ -367,7 +367,7 @@ They indicate the direction of transformation when an axis lock is used. Each gu
 
 - **Red** — X axis
 - **Green** — Y axis
-- **Blue** — Since the UV Editor does not have a Z axis, this color represents movement along the **line-handle** axis.
+- **Blue** — Since the UV Editor does not have a Z axis, this color represents movement along the **Line-handle** axis.
 
 #### Disableable Guidelines
 This group includes guidelines that display the island’s bounding box or highlight the snapping reference point.  
@@ -411,15 +411,15 @@ However, the actual transformation of the geometry will strictly follow the lock
 
 #### Move
 
-Movement is primarily performed by dragging the **line-handle**.  
-Additionally, movement can be **complex**, involving sequential adjustments of both the **a-handle** and **p-handle**.
+Movement is primarily performed by dragging the **Line-handle**.  
+Additionally, movement can be **complex**, involving sequential adjustments of both the **A-handle** and **P-handle**.
 
 ![tr move](img/screen/zen_uv_touch_tool/tr_move.gif)
 
 #### Scale
 
 Scaling can be **proportional** or **non-proportional**.  
-Non-proportional scaling is always performed along the **line-handle**.
+Non-proportional scaling is always performed along the **Line-handle**.
 
 ![tr scale](img/screen/zen_uv_touch_tool/tr_scale.gif)
 
@@ -487,7 +487,7 @@ Aligns selected vertices into a straight line, regardless of the line’s orient
 
 Aligns the UV orientation based on **3D space**.
 
-**Double-clicking** the **pivot-handle** executes the **World Align** operator.
+**Double-clicking** the **Pivot-handle** executes the **World Align** operator.
 
 ![tr world align](img/screen/zen_uv_touch_tool/tr_world_align.gif)
 
@@ -505,9 +505,9 @@ Transformation with gradual attenuation.
 
 There are two **Falloff** modes:
 
-- **Linear** — Controls attenuation starting from the **pivot-handle**.  
-  Vertices on the opposite side of the **line-handle** will remain unaffected.  
-  Once in **Transform Mode**, the **pivot-handle** becomes fixed and cannot be moved.  
+- **Linear** — Controls attenuation starting from the **Pivot-handle**.  
+  Vertices on the opposite side of the **Line-handle** will remain unaffected.  
+  Once in **Transform Mode**, the **Pivot-handle** becomes fixed and cannot be moved.  
 
   This type of falloff has the following properties:
 
@@ -521,12 +521,12 @@ There are two **Falloff** modes:
         - *Rotation* - Use rotation transformation
         - *Translation* - Use translation transformation
 
-    - **Linear Falloff Type** — Determines which transformation will be applied when using the **angle-handle**.  
+    - **Linear Falloff Type** — Determines which transformation will be applied when using the **Angle-handle**.  
     You can choose either one or both transformation types.
 
-- **Radial** — Controls attenuation starting from the **pivot-handle**.  
+- **Radial** — Controls attenuation starting from the **Pivot-handle**.  
   Affects all vertices within the **falloff gizmo’s circular area**.  
-  Once in **Transform Mode**, the **pivot-handle** becomes fixed and cannot be moved.  
+  Once in **Transform Mode**, the **Pivot-handle** becomes fixed and cannot be moved.  
 
   This type of falloff has the following properties:
 
@@ -601,9 +601,9 @@ This can be especially useful when working with circular islands.
 
 #### Swap Handles
 
-Swaps the **pivot-handle (p-handle)** and **angle-handle (a-handle)**.
+Swaps the **Pivot-handle (P-handle)** and **Angle-handle (A-handle)**.
 
-This operator has no additional settings — it simply switches the positions of the **p-handle** and **a-handle**.  
+This operator has no additional settings — it simply switches the positions of the **P-handle** and **A-handle**.  
 This can be useful if you decide to rotate or scale the island from the opposite reference point.
 
 ![swap handles](img/screen/zen_uv_touch_tool/tr_swap_handles.gif)
@@ -615,7 +615,7 @@ This can be useful if you decide to rotate or scale the island from the opposite
 
 Sets the gizmo **perpendicular** to its current orientation while preserving its length.
 
-This is a **specialized operator** designed to allow transformations **perpendicular to the line-handle direction**.
+This is a **specialized operator** designed to allow transformations **perpendicular to the Line-handle direction**.
 This is especially useful when flattening an selection along a single axis.
 
 ![set perpendicular](img/screen/zen_uv_touch_tool/tr_orient_align_perpendicular.gif)

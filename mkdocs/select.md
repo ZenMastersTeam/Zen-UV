@@ -13,52 +13,84 @@
 </tr>
 </thead>
 <tbody>
-<tr>
-<td style="text-align: center;"><a href="#select-islands">Islands</a></td>
-<td style="text-align: center;"><a href="#select-int-loop">Int. Loop</a></td>
-<td style="text-align: center;"><a href="#select-cylinder-edges-splits">Cylinder Edges (Splits)</a></td>
-<td style="text-align: center;"><a href="#convert-face-to-loops">Face To Loops</a></td>
 
+<!-- Islands -->
+<tr>
+<th colspan="4" style="text-align: center;">Islands</th>
 </tr>
 <tr>
+<td style="text-align: center;"><a href="#select-islands">Islands</a></td>
 <td style="text-align: center;"><a href="#select-overlapped">Overlapped</a></td>
 <td style="text-align: center;"><a href="#select-flipped">Flipped</a></td>
-<td style="text-align: center;"><a href="#select-edges-by-condition">Edges by Condition</a></td>
-<td style="text-align: center;"><a href="#convert-edges-to-loops">Edges To Loops</a></td>
+<td style="text-align: center;"><a href="#select-quaded-islands">Quaded Islands</a></td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="#select-holed-islands">Holed Islands</a></td>
+<td style="text-align: center;"><a href="#select-similar">Similar</a></td>
+<td style="text-align: center;"><a href="#select-in-tile">Select in Tile</a></td>
+<td style="text-align: center;"><a href="#select-islands-by-direction">Island by Direction</a></td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="#filter-islands-by-property">Filter Islands by Property</a></td>
+<td colspan="3"></td>
+</tr>
+
+<!-- Faces -->
+<tr>
+<th colspan="4" style="text-align: center;">Faces</th>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="#select-stretched-faces">Stretched Faces</a></td>
+<td style="text-align: center;"><a href="#select-self-intersecting-faces">Self-Intersecting Faces</a></td>
+<td style="text-align: center;"><a href="#select-by-uv-area">Select by UV Area</a></td>
+<td style="text-align: center;"><a href="#select-zero-area-faces">Zero Area Faces</a></td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="#select-faces-less-than-one-pixel">Faces Less than Pixel</a></td>
+<td style="text-align: center;"><a href="#select-faces-by-normal">Faces by Normal</a></td>
+<td colspan="2"></td>
+</tr>
+
+<!-- Edges -->
+<tr>
+<th colspan="4" style="text-align: center;">Edges</th>
 </tr>
 <tr>
 <td style="text-align: center;"><a href="#select-seam">Seam</a></td>
 <td style="text-align: center;"><a href="#select-sharp">Sharp</a></td>
-<td style="text-align: center;"><a href="#select-edges-by-direction">Edges by Direction</a></td>
-<td style="text-align: center;"><a href="#convert-loops-to-face">Loop to Face</a></td>
-</tr>
-<tr>
 <td style="text-align: center;"><a href="#select-uv-borders">Borders</a></td>
 <td style="text-align: center;"><a href="#select-open-edges">Open Edges</a></td>
-<td style="text-align: center;"><a href="#select-islands-by-direction">Island by Direction</a></td>
-<td style="text-align: center;"><a href="#convert-loop-to-edge">Loop to Edge</a></td>
 </tr>
 <tr>
-<td style="text-align: center;"><a href="#select-similar">Similar</a></td>
-<td style="text-align: center;"><a href="#select-in-tile">Select in Tile</a></td>
-<td style="text-align: center;"><a href="#select-by-uv-area">Select by UV Area</a></td>
+<td style="text-align: center;"><a href="#select-cylinder-edges-splits">Cylinder Edges (Splits)</a></td>
+<td style="text-align: center;"><a href="#select-edges-by-condition">Edges by Condition</a></td>
+<td style="text-align: center;"><a href="#select-edges-by-direction">Edges by Direction</a></td>
+<td colspan="1"></td>
+</tr>
+
+<!-- Loops -->
+<tr>
+<th colspan="4" style="text-align: center;">Loops</th>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="#zen-sync">Zen Sync</a></td>
 <td style="text-align: center;"><a href="#select-linked-loops">Select Linked Loops</a></td>
+<td colspan="2"></td>
+</tr>
+
+<!-- Misc -->
+<tr>
+<th colspan="4" style="text-align: center;">Misc</th>
 </tr>
 <tr>
+<td style="text-align: center;"><a href="#select-int-loop">Int. Loop</a></td>
 <td style="text-align: center;"><a href="#select-half">Half</a></td>
-<td style="text-align: center;"><a href="#select-quaded-islands">Quaded Islands</a></td>
-<td style="text-align: center;"><a href="#get-selected-area">Get Selected Area</a></td>
 <td style="text-align: center;"><a href="#isolate-islands-toggle">Isolate Islands (Toggle)</a></td>
-</tr>
-<tr>
-<td style="text-align: center;"><a href="#select-holed-islands">Holed Islands</a></td>
-<td style="text-align: center;"><a href="#select-zero-area-faces">Zero Area Faces</a></td>
-<td style="text-align: center;"><a href="#select-faces-less-than-one-pixel">Faces Less than Pixel</a></td>
 <td style="text-align: center;"><a href="#isolate-part-toggle">Isolate Part (Toggle)</a></td>
 </tr>
+
 </tbody>
 </table>
-
 
 ---
 ### Select Islands
@@ -330,6 +362,82 @@ Select island by direction.
     - *Not Aligned* - Islands that are not aligned with the axes
 
 ---
+
+### Filter Islands by Property
+Filters islands based on specific properties.
+
+| ![Filter Islands by Property Example](img/screen/select/FilterIslands.gif) |
+| --- |
+| Filter Islands by Property |
+
+!!! Properties
+    ![Filter Islands by Property](img/screen/select/filter_islands_by_props_op_prop.png)
+
+    - **Group Method** - Method of defining groups.
+        - *Even Split* - Uniform division.
+        - *Split by Gaps* - Automatic splitting by gaps.
+        - *Auto Split by Gaps* - Automatically determines the number of groups.
+    - **Property** - The property by which islands will be grouped.
+        - *Island Height* - Grouping based on island height.
+        - *Island Width* - Grouping based on island width.
+        - *Island Aspect Ratio* - Grouping based on island aspect ratio.
+    - **Number of Groups** - Defines how many groups the islands will be divided into.
+    - **Group Index** - Specifies which group’s islands should be selected.
+    - **Threshold** - Threshold for detecting large gaps (used in **Auto Split by Gaps** mode).
+
+
+!!! Tip
+    This operator is useful when you need to divide a large number of islands into a limited number of zones (e.g., trims).
+
+---
+
+### Select Faces By Normal
+
+Select polygons by reference normal
+
+![Select Faces By Normal Example](img/screen/select/select_faces_by_normal_example.png)
+
+This way, you can select polygons that are "not visible" from the position of the reference normal. If the reference normals are arranged in a cylindrical shape, as shown in the screenshot, you will get a correct selection around the reference normals.
+
+!!! Properties
+    ![Select Faces By Normal](img/screen/select/select_faces_by_normal_op_prop.png)
+
+    - **Clear Initial Selection** - Clears the initial selection before applying the operation.
+    - **Mode** - Defines how faces are selected based on the reference normal.
+        - *Front* - Selects polygons facing the reference normal.
+        - *Back* - Selects polygons oriented away from the reference normal.
+        - *All* - Selects all polygons that match the reference normal.
+    - **Reverse Ref. Normal** - Reverses the reference normal direction.
+    - **Threshold** - Controls the accuracy of normal alignment (acts as an angular tolerance).
+
+---
+
+### Select Stretched Faces
+
+Selects faces with stretched UV coordinates
+
+Checks each polygon angle and compares it with the corresponding angle in UV space.  
+If the angle exceeds the specified threshold, the polygon will be selected.
+
+![Select Stretched Faces Example](img/screen/select/select_stretched_faces_example.png)
+
+!!! Tip  
+    This operator works using the **Overlay → UV Stretch → Angle** algorithm.  
+    This means you can easily select what you see or what you might have missed.  
+    ![Select Stretched Faces Display](img/screen/select/select_stretched_faces_display.png)
+
+!!! Properties
+    ![Select Stretched Faces](img/screen/select/select_stretched_faces_op_prop.png)
+
+- **Influence** - Defines the selection target.
+    - *Face* - Selects individual stretched faces.
+    - *Island* - Selects entire islands containing stretched faces.
+- **Clear Selection** - Clears the initial selection before applying the operation.
+- **Threshold** - Defines the minimum stretch factor required for a face to be selected.
+- **N-gons Only** - Selects only n-gons (faces with more than four edges).
+
+---
+
 ### Select by UV Area
 Select faces by their UV area.
 The operator consists of two buttons. Where the first is the main operator and the second is an auxiliary operator. You can use it to get the area of the selection.
@@ -393,56 +501,14 @@ Selects faces with an area less than the specified number of pixels.
     This operator works only in the UV Editor context and requires an active texture in the UV Editor.
 
 ---
-### Convert Face to Loops
-Convert selected mesh faces to UV loops.
+### Select Self-Intersecting Faces
 
-!!! Properties
-    ![Convert Face To Loops](img/screen/select/sel_faces_to_loops_op_prop.png)
+Select faces that have intersecting uv edges.
 
-- **Toggle UV Sync** - Toggle UV Sync Selection
+When working with **n-gons** or using third-party unwrapping software, situations may arise where polygons overlap themselves.  
+This operator allows you to select problematic polygons for further correction.
 
-| ![Select Face to Loops](img/gifs/select_operators/Select_Face_to_Loops.gif) |
-| --- |
-| Select Face to Loops |
-
----
-### Convert Edges to Loops
-Convert selected mesh edges to UV loops.
-
-!!! Properties
-    ![Convert Face To Loops](img/screen/select/sel_edges_to_loops_op_prop.png)
-
-- **Toggle UV Sync** - Toggle UV Sync Selection
-
-| ![Select Edges to Loops](img/gifs/select_operators/Select_Edges_to_Loops.gif) |
-| --- |
-| Select Edges to Loops |
-
----
-### Convert Loops to Face
-Only for UV Sync Selection - off. Convert selected UV loops to mesh face selection.
-
-!!! Properties
-    ![Convert Face To Loops](img/screen/select/sel_faces_to_loops_op_prop.png)
-
-- **Toggle UV Sync** - Toggle UV Sync Selection
-
-| ![Convert Loops to Face](img/gifs/select_operators/Select_Loops_to_Face.gif) |
-| --- |
-| Convert Loops to Face |
-
----
-### Convert Loop to Edge
-Only for UV Sync Selection - off. Convert selected UV loop to mesh edge selection.
-
-!!! Properties
-    ![Convert Face To Loops](img/screen/select/sel_edges_to_loops_op_prop.png)
-
-- **Toggle UV Sync** - Toggle UV Sync Selection
-
-| ![Convert Loop to Edge](img/gifs/select_operators/Select_Loop_to_Edge.gif) |
-| --- |
-| Convert Loop to Edge |
+![Select Self-Intersecting Faces](img/screen/select/self_intersect_example.png)
 
 ---
 ### Select Linked Loops
@@ -465,4 +531,5 @@ Isolate Part (Toggle).
 | ![Isolate Part](img/gifs/select_operators/Isolate_Part.gif) |
 | --- |
 | Isolate mesh part |
+
 ---

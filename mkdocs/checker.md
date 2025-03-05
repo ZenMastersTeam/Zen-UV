@@ -8,7 +8,7 @@ This panel contains tools to check the state of UVs on the model, visually and t
      | ![](img/screen/tex_checker/checker_main_panel.png) |![](img/screen/tex_checker/checker_main_panel_uveditor.png)| 
 
 !!! Tip
-    Display and Select **Crease**, **Sharp**, **Bevel**, **Seams**, **Stretched** and **UV No Sync** operators are absent on the panel in UV Editor. To use these operators you need to switch to 3D Viewport context.
+    Display and Select **Crease**, **Sharp**, **Bevel**, **Seams** and **UV No Sync** operators are absent on the panel in UV Editor. To use these operators you need to switch to 3D Viewport context.
 
 ### Checker Texture
 
@@ -111,6 +111,10 @@ All useful for checking UVs Draw operators and their settings.
 ---
 #### Zen UV Draw System
 
+| 3D Viewport | UV Editor|
+|---|---|  
+| ![Draw 3D Viewport](img/screen/tex_checker/zen_draw_ops_3d.png) | ![Draw UV Editor](img/screen/tex_checker/zen_draw_ops_uv.png) | 
+
 ##### Finished
 
 Display and Select Finished Islands. You can [read more about Finishing System here](unwrap.md#finishing-system).
@@ -132,15 +136,38 @@ Display an angle-based stretching map.
 
 ##### Excluded
 
-Display and Select Islands Excluded from Packing.
+Display and select islands excluded from packing.
 
 ![](img/screen/pack/pack_exluded_display.gif)
 
 ##### Overlapped
 
-Display and Select Islands Excluded from Packing.
+Display and select overlapped islands.
 
 ![](img/screen/tex_checker/checker_display_overlapped.gif)
+
+#### Self-Intersecting
+
+Detects and selects faces where UV edges intersect.
+[More info about the operator](select.md#select-self-intersecting-faces)
+
+![Self-Intersecting](img/screen/tex_checker/self_intersecting_example.gif)
+
+---
+
+#### Texel Density
+
+Показує Texel Density згідно налаштувань в панелі [TD](texel_density.md).
+![Texel Density Example](img/screen/tex_checker/draw_td_example.png)
+---
+
+#### Trim Colors
+
+Показує належність островів до трімів що створені в системі [Trimsheet](trimsheet.md)
+
+![Trim Colors Example](img/screen/tex_checker/draw_trims_example.png)
+
+---
 
 ##### UV No Sync
 
@@ -269,8 +296,9 @@ Display UVs in Object mode without entering Edit mode.
 
 Tools for analyzing and finding Mesh errors that can negatively affect UV operations.
 
-!!! SubPanel
-    ![](img/screen/tex_checker/checker_tools.png)
+| 3D Viewport | UV Editor| 
+|---|---|  
+|![3D Viewport Panel](img/screen/tex_checker/checker_tools_panel_3d.png) | ![UV Editor Panel](img/screen/tex_checker/checker_tools_panel_uv.png) | 
 
 #### Elements by Index
 Select elements by their indices.
@@ -289,6 +317,9 @@ Select objects that don't contain faces.
 
 #### Doubled Vertices
 Select vertices that have the same coordinates.
+
+#### Free Vertices
+Selects vertices that have no connected faces or edges.
 
 #### UV Islands Counter
 
@@ -333,7 +364,7 @@ Calculates the size of a specified number of pixels in UV units and as a percent
 - **UV Pixel Height (%)** - Height of the specified pixels as a percentage of the UV space.
 
 ---
-### Set Viewport Display Mode
+#### Set Viewport Display Mode
 Set viewport display mode for all selected objects.
 
 !!! Properties
@@ -351,3 +382,9 @@ Set viewport display mode for all selected objects.
 Clear mesh attributes used in Zen UV. Finished and Excluded.
 
 ![](img/screen/tex_checker/checker_tools_clear_attributes.png)
+
+---
+
+#### Correct Self-Intersecting
+
+Correct faces that [have intersecting](select.md#select-self-intersecting-faces) uv edges by re-unwrapping its island.
