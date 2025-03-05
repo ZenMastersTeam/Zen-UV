@@ -157,13 +157,14 @@ Detects and selects faces where UV edges intersect.
 
 #### Texel Density
 
-Показує Texel Density згідно налаштувань в панелі [TD](texel_density.md).
+Displays Texel Density according to the settings in the [TD](texel_density.md) panel.
+
 ![Texel Density Example](img/screen/tex_checker/draw_td_example.png)
 ---
 
 #### Trim Colors
 
-Показує належність островів до трімів що створені в системі [Trimsheet](trimsheet.md)
+Displays the association of islands with trims created in the [Trimsheet](trimsheet.md) system.
 
 ![Trim Colors Example](img/screen/tex_checker/draw_trims_example.png)
 

@@ -176,8 +176,19 @@ Panel for managing [**Zen UV Core Library**](installation.md) and **Zen UV Relax
 
 ![](img/screen/addon_prefs/addon_prefs_modules.png)
 
+### Relax application
+
 - **Call Relax Application in Shell** - Relax application is invoked via the shell and is platform-dependent
 NOTE: Use this method if application can not be started via Blender
+
+### Ministry Of Flat
+
+Ministry Of Flat is a third-party software designed for automatic UV unwrapping.
+This software is designed **exclusively for Windows**, so this operator will not be available on **Linux** or **Mac OS**.
+Here you can find information about its author, whether it is installed, and where to locate the installed module.  
+For more details, refer to [this article](unwrap.md#auto-unwrap).
+
+### User Script
 
 Also here you can set your custom [**User Script**](user_script.md).
 
