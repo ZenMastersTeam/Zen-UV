@@ -341,6 +341,7 @@ Use <strong>double-click</strong> and <strong>modifier keys</strong> for quick a
 <li><strong>NU-handle (Double Click)</strong> — Scale the island <strong>down by 50%</strong>.</li>
 <li><strong>NU-handle (Ctrl + Double Click)</strong> — <strong>Scale the island to zero</strong>.</li>
 <li><strong>S-handle (Double Click)</strong> — Scale the island <strong>up by 200%</strong>.</li>
+<li><strong>Align-handles (Ctrl + Click)</strong> - Flip islands depending on the handle direction.</li>
 </ul>
 <hr />
 <h2 id="quick-actions-table-format"><strong>Quick Actions Table Format</strong><a class="headerlink" href="#quick-actions-table-format" title="Permanent link"></a></h2>
@@ -421,6 +422,10 @@ Use <strong>double-click</strong> and <strong>modifier keys</strong> for quick a
 <tr>
 <td><strong>S-handle (Double Click)</strong></td>
 <td>Scales the island <strong>up by 200%</strong>.</td>
+</tr>
+<tr>
+<td><strong>Align-handles (Ctrl + Click)</strong></td>
+<td>Flip islands depending on the handle direction.</td>
 </tr>
 </tbody>
 </table>
@@ -666,7 +671,9 @@ By default, rotation is free. At the start of the rotation, a <strong>dial gizmo
 <p>The following example demonstrates <strong>custom alignment</strong> using snapping.</p>
 <p><a class="glightbox" href="../img/screen/zen_uv_touch_tool/tr_rotation_align_snap.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="tr rotation align snap" src="../img/screen/zen_uv_touch_tool/tr_rotation_align_snap.gif" /></a></p>
 <h4 id="flip">Flip<a class="headerlink" href="#flip" title="Permanent link"></a></h4>
-<p>Flipping can be performed along <strong>any axis</strong>, but it is achieved <strong>only through scaling along a single axis</strong>.<br />
+<p>If you need to Flip along a coordinate axis, use <strong>Align-handles</strong> (Ctrl + Click) to Flip islands based on the <strong>handle direction</strong>.</p>
+<p><a class="glightbox" href="../img/screen/zen_uv_touch_tool/tr_flip_by_axes.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="flip by axes" src="../img/screen/zen_uv_touch_tool/tr_flip_by_axes.gif" /></a></p>
+<p>Flipping can be performed along <strong>any axis</strong>, but it is achieved <strong>only through scaling along a single axis</strong>.
 Flipping is <strong>not possible</strong> when scaling along both axes simultaneously.<br />
 For this reason, Flip is always performed using the <strong>non-uniform-handle</strong>.</p>
 <p>If you require a precise <strong>Flip without distortions</strong>, use the special <strong>Flip point</strong>, marked with an <strong>F inside a circle</strong>.</p>

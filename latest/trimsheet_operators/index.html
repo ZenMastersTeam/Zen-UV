@@ -152,6 +152,14 @@
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#select-islands-by-trim">Select Islands By Trim</a>
     </li>
+    <li class="toctree-l2"><a class="reference internal" href="#directional-hotspot-mapping">Directional Hotspot Mapping</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#directional-hotspot-operator">Directional Hotspot Operator</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#normals-to-trim">Normals To Trim</a>
+    </li>
+        </ul>
+    </li>
     </ul>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../trimsheet_hotspot/">Hotspot Mapping</a>
@@ -331,6 +339,50 @@
 <p>Select and activate trim by selected face</p>
 <h2 id="select-islands-by-trim">Select Islands By Trim<a class="headerlink" href="#select-islands-by-trim" title="Permanent link"></a></h2>
 <p>Select islands inside active trim</p>
+<hr />
+<h2 id="directional-hotspot-mapping">Directional Hotspot Mapping<a class="headerlink" href="#directional-hotspot-mapping" title="Permanent link"></a></h2>
+<p><a class="glightbox" href="../img/screen/trimsheet/directional_hotspot_panel.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Directional hotspot panel" src="../img/screen/trimsheet/directional_hotspot_panel.png" /></a></p>
+<h3 id="directional-hotspot-operator">Directional Hotspot Operator<a class="headerlink" href="#directional-hotspot-operator" title="Permanent link"></a></h3>
+<p>Hotspot mapping using island normal vector.</p>
+<div class="admonition properties">
+<p class="admonition-title">Properties</p>
+<p><a class="glightbox" href="../img/screen/trimsheet/directional_hotspot_op_prop.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Directional Hotspot Operator" src="../img/screen/trimsheet/directional_hotspot_op_prop.png" /></a></p>
+<ul>
+<li><strong>Mode</strong> – Defines which trims will be used for mapping.  <ul>
+<li><em>All Trims</em> – Uses all available trims.  </li>
+<li><em>Selected Trims</em> – Uses only the selected trims.  </li>
+</ul>
+</li>
+<li><strong>Orient</strong> – Determines island rotation before mapping.  <ul>
+<li><em>As Is</em> – No rotation applied.  </li>
+<li><em>Orient to World</em> – Aligns the island to the world axis.  </li>
+<li><em>Orient to Axis</em> – Auto-orients the island to the nearest axis.  </li>
+</ul>
+</li>
+<li><strong>Threshold</strong> – Defines how precisely the island&rsquo;s normal must match the trim&rsquo;s normal for mapping.  </li>
+<li><strong>Keep Proportion</strong> – Prevents stretching or squashing by maintaining the original aspect ratio of the UV islands.  </li>
+<li><strong>Allow Location Variation</strong> – If enabled, islands may be placed in different trims that have similar size and orientation parameters. If disabled, islands are strictly mapped to their assigned trims.  </li>
+<li><strong>Allow Scaling</strong> – Automatically scales UV islands to fit the target trim while preserving proportions (unless &lsquo;Keep Proportion&rsquo; is disabled).  </li>
+<li><strong>Select Processed</strong> – After applying the mapping, this option highlights the UV islands that were successfully adjusted to trims.  </li>
+<li>
+<p><strong>Seed</strong> – Sets a seed value for the randomization algorithm, ensuring consistent placement variations of islands in similar trims.  </p>
+</li>
+<li>
+<p><strong>Orient</strong> - Perform some Island rotation before Hotspotting</p>
+</li>
+</ul>
+</div>
+<hr />
+<h3 id="normals-to-trim"><strong>Normals To Trim</strong><a class="headerlink" href="#normals-to-trim" title="Permanent link"></a></h3>
+<p>Retrieve the normal vector from the selected face and apply it to the active trim.</p>
+<div class="admonition properties">
+<p class="admonition-title">Properties</p>
+<p><a class="glightbox" href="../img/screen/trimsheet/normals_to_trim_op_prop.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Normals To Trim" src="../img/screen/trimsheet/normals_to_trim_op_prop.png" /></a>  </p>
+</div>
+<ul>
+<li><strong>Average Normal Value</strong> – If enabled, calculates the average normal when multiple faces are selected.<br />
+  If disabled, only the normal of the active face will be applied to the trim.  </li>
+</ul>
               
             </div>
           </div><footer>

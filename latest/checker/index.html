@@ -292,6 +292,11 @@
 <h3 id="checker-texture">Checker Texture<a class="headerlink" href="#checker-texture" title="Permanent link"></a></h3>
 <p>Add/Remove Checker Texture to/from the mesh. <a class="glightbox" href="../img/icons/checker_32.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Checker Texture" src="../img/icons/checker_32.png" /></a> <code>Alt+T</code></p>
 <p><a class="glightbox" href="../img/screen/tex_checker/checker_texture.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="checker texture" src="../img/screen/tex_checker/checker_texture.gif" /></a> </p>
+<p>Starting from Zen UV v5.0.0 changed operator properties. It uses keys to enable checker, disable checker and toggle checker. This does not affect the work in UI, but adds convenience when using the operator in scripts.</p>
+<pre><code class="language-python">bpy.ops.view3d.zenuv_checker_toggle(action='ON')
+bpy.ops.view3d.zenuv_checker_toggle(action='OFF')
+bpy.ops.view3d.zenuv_checker_toggle(action='TOGGLE')
+</code></pre>
 <hr />
 <h4 id="checker-preferences">Checker Preferences<a class="headerlink" href="#checker-preferences" title="Permanent link"></a></h4>
 <p><a class="glightbox" href="../img/screen/tex_checker/tex_chk_props.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Main Panel" src="../img/screen/tex_checker/tex_chk_props.png" /></a></p>
