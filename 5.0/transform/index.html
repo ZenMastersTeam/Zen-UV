@@ -327,13 +327,18 @@
 <p><a class="glightbox" href="../img/screen/transform/tr_relax_properties.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/transform/tr_relax_properties.png" /></a></p>
 </div>
 <ul>
-<li><strong>Method</strong> - Unwrapping method<ul>
+<li>
+<p><strong>Method</strong> - Unwrapping method</p>
+<ul>
 <li><em>Zen Relax</em> - The algorithm is most suitable for organic objects.</li>
 <li><em>Angle Based</em> - Blender&rsquo;s native algorithm. Most suitable for hard surface objects.</li>
 <li><em>Conformal</em> - Blender&rsquo;s native algorithm. Same as <strong>Angle Based</strong>, but much faster. However, can lead to undesired results if the island is complicated.</li>
+<li><em>Minimum Stretch</em> - Uses Scalable Locally Injective Mapping (SLIM). This tries to minimize distortion for both areas and angles.</li>
 </ul>
 </li>
-<li><strong>Select</strong> - Select relaxed island</li>
+<li>
+<p><strong>Select</strong> - Select relaxed island</p>
+</li>
 <li><strong>Correct Aspect</strong> - Taking image aspect ratio into account</li>
 </ul>
 <div class="admonition pproperties">
@@ -363,14 +368,7 @@
 <p><a class="glightbox" href="../img/screen/transform/world_orient_props.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="world orient properties" src="../img/screen/transform/world_orient_props.png" /></a></p>
 </div>
 <ul>
-<li><strong>Method</strong> - The orientation method is suitable for geometry types<ul>
-<li><em>Hard Surface</em></li>
-<li><em>Organic</em></li>
-</ul>
-</li>
 <li><strong>Further orient</strong> - Additional turn. Allows you to turn the island to a horizontal or vertical if the island is located at an angle in the model.</li>
-<li><strong>Flip By Axis</strong> - Allow changing direction of the island after basic orientation. Suitable if needed change orientation from legs to head for example</li>
-<li><strong>Reverse Axis</strong> - Allows you to change the direction of the axis to the opposite</li>
 </ul>
 <hr />
 <h3 id="randomize">Randomize<a class="headerlink" href="#randomize" title="Permanent link"></a></h3>

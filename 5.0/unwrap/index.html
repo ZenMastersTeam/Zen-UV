@@ -114,9 +114,9 @@
     <li class="toctree-l2"><a class="reference internal" href="#unwrap-constraint">Unwrap Constraint</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#unwrap-inplace">Unwrap Inplace</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#auto-unwrap">Auto Unwrap</a>
     </li>
+    <li class="toctree-l2"><a class="reference internal" href="#auto-unwrap">Auto Unwrap</a>
+        <ul>
     <li class="toctree-l3"><a class="reference internal" href="#preprocess-settings">Preprocess Settings</a>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#postprocess-settings">Postprocess Settings</a>
@@ -336,12 +336,17 @@
 <p><a class="glightbox" href="../img/screen/unwrap/zwrp_op_prop.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Zen Unwrap Settings" src="../img/screen/unwrap/zwrp_op_prop.png" /></a></p>
 </div>
 <ul>
-<li><strong>Unwrap Method</strong> - Unwrapping method.<ul>
+<li>
+<p><strong>Unwrap Method</strong> - Unwrapping method.</p>
+<ul>
 <li><em>Conformal</em> - Fast algorithm that gives good results.</li>
 <li><em>Angle-Based</em> - More accurate algorithm, but a bit slower.</li>
+<li><em>Minimum Stretch</em> - Uses Scalable Locally Injective Mapping (SLIM). This tries to minimize distortion for both areas and angles.</li>
 </ul>
 </li>
-<li><strong>Mark Settings</strong> - Operator settings to enable automatic seam marking. See <a href="#mark-by-angle">Mark Settings (Global Mode)</a> for details.</li>
+<li>
+<p><strong>Mark Settings</strong> - Operator settings to enable automatic seam marking. See <a href="#mark-by-angle">Mark Settings (Global Mode)</a> for details.</p>
+</li>
 <li><strong>Fill Holes</strong> - Virtual fill holes in mesh before unwrapping, to avoid overlaps and preserve symmetry.</li>
 <li><strong>Texel Density</strong> - Sets Texel Density. Works only if Pack Unwrapped option is disabled.<ul>
 <li><em>Skip</em> - Do not make any texel density corrections.</li>
@@ -416,7 +421,7 @@
 <p>Available only in UV Editor.</p>
 </div>
 <hr />
-<h3 id="auto-unwrap">Auto Unwrap<a class="headerlink" href="#auto-unwrap" title="Permanent link"></a></h3>
+<h2 id="auto-unwrap">Auto Unwrap<a class="headerlink" href="#auto-unwrap" title="Permanent link"></a></h2>
 <p>Automated UV unwrapper based on a utility written by Eskil Steenberg www.ministryofflat.com.</p>
 <p>This operator is essentially a bridge for working with <strong>MinistryOfFlat</strong>.<br />
 This software is designed <strong>exclusively for Windows</strong>, so this operator will not be available on <strong>Linux</strong> or <strong>Mac OS</strong>.</p>
