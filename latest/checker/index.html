@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>UV Checker - Zen UV 4.5.2 for Blender</title>
+    <title>UV Checker - Zen UV 5.0 for Blender</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
@@ -43,7 +43,7 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
-          <a href=".." class="icon icon-home"> Zen UV 4.5.2 for Blender
+          <a href=".." class="icon icon-home"> Zen UV 5.0 for Blender
         </a><div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
       <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
@@ -57,8 +57,6 @@
                   <li class="toctree-l1"><a class="reference internal" href="..">Introduction</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../youtube_videos/">Learning Videos</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../zenuv3_to_zenuv4/">Upgrade Zen UV 3 to Zen UV 4 FAQ</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../installation/">Installation and Update</a>
                   </li>
@@ -137,6 +135,18 @@
     </li>
     <li class="toctree-l4"><a class="reference internal" href="#overlapped">Overlapped</a>
     </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#self-intersecting">Self-Intersecting</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#texel-density">Texel Density</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_1"></a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#trim-colors">Trim Colors</a>
+        <ul>
     <li class="toctree-l4"><a class="reference internal" href="#uv-no-sync">UV No Sync</a>
     </li>
     <li class="toctree-l4"><a class="reference internal" href="#seams">Seams</a>
@@ -153,35 +163,37 @@
     </li>
         </ul>
     </li>
-        </ul>
+    <li class="toctree-l3"><a class="reference internal" href="#how-to-set-hotkey-to-specific-draw-mode">How to set hotkey to specific draw mode</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#how-to-set-hotkey-to-specific-draw-mode">How to set hotkey to specific draw mode</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#tools">Tools</a>
+    <li class="toctree-l3"><a class="reference internal" href="#tools">Tools</a>
         <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#elements-by-index">Elements by Index</a>
+    <li class="toctree-l4"><a class="reference internal" href="#elements-by-index">Elements by Index</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#zero-area-faces">Zero Area Faces</a>
+    <li class="toctree-l4"><a class="reference internal" href="#zero-area-faces">Zero Area Faces</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#edges-without-faces">Edges Without Faces</a>
+    <li class="toctree-l4"><a class="reference internal" href="#edges-without-faces">Edges Without Faces</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#edges-with-multiple-loops">Edges with multiple loops</a>
+    <li class="toctree-l4"><a class="reference internal" href="#edges-with-multiple-loops">Edges with multiple loops</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#empty-objects">Empty objects</a>
+    <li class="toctree-l4"><a class="reference internal" href="#empty-objects">Empty objects</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#doubled-vertices">Doubled Vertices</a>
+    <li class="toctree-l4"><a class="reference internal" href="#doubled-vertices">Doubled Vertices</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#uv-islands-counter">UV Islands Counter</a>
+    <li class="toctree-l4"><a class="reference internal" href="#free-vertices">Free Vertices</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#calc-uv-edges-length">Calc UV Edges Length</a>
+    <li class="toctree-l4"><a class="reference internal" href="#uv-islands-counter">UV Islands Counter</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#calculate-uv-pixel-size">Calculate UV Pixel Size</a>
+    <li class="toctree-l4"><a class="reference internal" href="#calc-uv-edges-length">Calc UV Edges Length</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#calculate-uv-pixel-size">Calculate UV Pixel Size</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#set-viewport-display-mode">Set Viewport Display Mode</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#clear-attributes">Clear Attributes</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#correct-self-intersecting">Correct Self-Intersecting</a>
     </li>
         </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#set-viewport-display-mode">Set Viewport Display Mode</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#clear-attributes">Clear Attributes</a>
     </li>
         </ul>
     </li>
@@ -192,6 +204,8 @@
                   <li class="toctree-l1"><a class="reference internal" href="../preferences/">Preferences</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../transform_tool/">Transform Tool</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../touch_tool/">Touch Tool</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../sticky_uv_editor/">Sticky UV Editor</a>
                   </li>
@@ -235,7 +249,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
       <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="..">Zen UV 4.5.2 for Blender</a>
+          <a href="..">Zen UV 5.0 for Blender</a>
         
       </nav>
       <div class="wy-nav-content">
@@ -273,7 +287,7 @@
 </div>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>Display and Select <strong>Crease</strong>, <strong>Sharp</strong>, <strong>Bevel</strong>, <strong>Seams</strong>, <strong>Stretched</strong> and <strong>UV No Sync</strong> operators are absent on the panel in UV Editor. To use these operators you need to switch to 3D Viewport context.</p>
+<p>Display and Select <strong>Crease</strong>, <strong>Sharp</strong>, <strong>Bevel</strong>, <strong>Seams</strong> and <strong>UV No Sync</strong> operators are absent on the panel in UV Editor. To use these operators you need to switch to 3D Viewport context.</p>
 </div>
 <h3 id="checker-texture">Checker Texture<a class="headerlink" href="#checker-texture" title="Permanent link"></a></h3>
 <p>Add/Remove Checker Texture to/from the mesh. <a class="glightbox" href="../img/icons/checker_32.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Checker Texture" src="../img/icons/checker_32.png" /></a> <code>Alt+T</code></p>
@@ -342,6 +356,20 @@ Screenshot when Orient filtering is on.</p>
 </div>
 <hr />
 <h4 id="zen-uv-draw-system">Zen UV Draw System<a class="headerlink" href="#zen-uv-draw-system" title="Permanent link"></a></h4>
+<table>
+<thead>
+<tr>
+<th>3D Viewport</th>
+<th>UV Editor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="glightbox" href="../img/screen/tex_checker/zen_draw_ops_3d.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Draw 3D Viewport" src="../img/screen/tex_checker/zen_draw_ops_3d.png" /></a></td>
+<td><a class="glightbox" href="../img/screen/tex_checker/zen_draw_ops_uv.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Draw UV Editor" src="../img/screen/tex_checker/zen_draw_ops_uv.png" /></a></td>
+</tr>
+</tbody>
+</table>
 <h5 id="finished">Finished<a class="headerlink" href="#finished" title="Permanent link"></a></h5>
 <p>Display and Select Finished Islands. You can <a href="../unwrap/#finishing-system">read more about Finishing System here</a>.</p>
 <h5 id="flipped">Flipped<a class="headerlink" href="#flipped" title="Permanent link"></a></h5>
@@ -355,11 +383,23 @@ Screenshot when Orient filtering is on.</p>
 <p>To have the display in real time mode (as on the gif) activate <strong>Stretched Dynamic</strong> in Zen UV Draw System Preferences.</p>
 </div>
 <h5 id="excluded">Excluded<a class="headerlink" href="#excluded" title="Permanent link"></a></h5>
-<p>Display and Select Islands Excluded from Packing.</p>
+<p>Display and select islands excluded from packing.</p>
 <p><a class="glightbox" href="../img/screen/pack/pack_exluded_display.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/pack/pack_exluded_display.gif" /></a></p>
 <h5 id="overlapped">Overlapped<a class="headerlink" href="#overlapped" title="Permanent link"></a></h5>
-<p>Display and Select Islands Excluded from Packing.</p>
+<p>Display and select overlapped islands.</p>
 <p><a class="glightbox" href="../img/screen/tex_checker/checker_display_overlapped.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/tex_checker/checker_display_overlapped.gif" /></a></p>
+<h4 id="self-intersecting">Self-Intersecting<a class="headerlink" href="#self-intersecting" title="Permanent link"></a></h4>
+<p>Detects and selects faces where UV edges intersect.
+<a href="../select/#select-self-intersecting-faces">More info about the operator</a></p>
+<p><a class="glightbox" href="../img/screen/tex_checker/self_intersecting_example.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Self-Intersecting" src="../img/screen/tex_checker/self_intersecting_example.gif" /></a></p>
+<hr />
+<h4 id="texel-density">Texel Density<a class="headerlink" href="#texel-density" title="Permanent link"></a></h4>
+<p>Displays Texel Density according to the settings in the <a href="../texel_density/">TD</a> panel.</p>
+<h2 id="_1"><a class="glightbox" href="../img/screen/tex_checker/draw_td_example.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Texel Density Example" src="../img/screen/tex_checker/draw_td_example.png" /></a><a class="headerlink" href="#_1" title="Permanent link"></a></h2>
+<h4 id="trim-colors">Trim Colors<a class="headerlink" href="#trim-colors" title="Permanent link"></a></h4>
+<p>Displays the association of islands with trims created in the <a href="../trimsheet/">Trimsheet</a> system.</p>
+<p><a class="glightbox" href="../img/screen/tex_checker/draw_trims_example.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Trim Colors Example" src="../img/screen/tex_checker/draw_trims_example.png" /></a></p>
+<hr />
 <h5 id="uv-no-sync">UV No Sync<a class="headerlink" href="#uv-no-sync" title="Permanent link"></a></h5>
 <p>Display in 3D Viewport faces selected in UV Editor when UV Sync is Off. </p>
 <p><a class="glightbox" href="../img/screen/tex_checker/checker_display_nosync.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/tex_checker/checker_display_nosync.gif" /></a></p>
@@ -500,10 +540,20 @@ You can read full information about <a href="../stack/#stacks-display-and-select
 <hr />
 <h3 id="tools">Tools<a class="headerlink" href="#tools" title="Permanent link"></a></h3>
 <p>Tools for analyzing and finding Mesh errors that can negatively affect UV operations.</p>
-<div class="admonition subpanel">
-<p class="admonition-title">Subpanel</p>
-<p><a class="glightbox" href="../img/screen/tex_checker/checker_tools.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/tex_checker/checker_tools.png" /></a></p>
-</div>
+<table>
+<thead>
+<tr>
+<th>3D Viewport</th>
+<th>UV Editor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="glightbox" href="../img/screen/tex_checker/checker_tools_panel_3d.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="3D Viewport Panel" src="../img/screen/tex_checker/checker_tools_panel_3d.png" /></a></td>
+<td><a class="glightbox" href="../img/screen/tex_checker/checker_tools_panel_uv.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="UV Editor Panel" src="../img/screen/tex_checker/checker_tools_panel_uv.png" /></a></td>
+</tr>
+</tbody>
+</table>
 <h4 id="elements-by-index">Elements by Index<a class="headerlink" href="#elements-by-index" title="Permanent link"></a></h4>
 <p>Select elements by their indices.</p>
 <h4 id="zero-area-faces">Zero Area Faces<a class="headerlink" href="#zero-area-faces" title="Permanent link"></a></h4>
@@ -516,6 +566,8 @@ You can read full information about <a href="../stack/#stacks-display-and-select
 <p>Select objects that don&rsquo;t contain faces.</p>
 <h4 id="doubled-vertices">Doubled Vertices<a class="headerlink" href="#doubled-vertices" title="Permanent link"></a></h4>
 <p>Select vertices that have the same coordinates.</p>
+<h4 id="free-vertices">Free Vertices<a class="headerlink" href="#free-vertices" title="Permanent link"></a></h4>
+<p>Selects vertices that have no connected faces or edges.</p>
 <h4 id="uv-islands-counter">UV Islands Counter<a class="headerlink" href="#uv-islands-counter" title="Permanent link"></a></h4>
 <p>Count UV Islands of selected objects and display the result.</p>
 <p><a class="glightbox" href="../img/screen/tex_checker/tools_islands_counter.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Islands counter" src="../img/screen/tex_checker/tools_islands_counter.png" /></a></p>
@@ -561,7 +613,7 @@ You can read full information about <a href="../stack/#stacks-display-and-select
 <li><strong>UV Pixel Height (%)</strong> - Height of the specified pixels as a percentage of the UV space.</li>
 </ul>
 <hr />
-<h3 id="set-viewport-display-mode">Set Viewport Display Mode<a class="headerlink" href="#set-viewport-display-mode" title="Permanent link"></a></h3>
+<h4 id="set-viewport-display-mode">Set Viewport Display Mode<a class="headerlink" href="#set-viewport-display-mode" title="Permanent link"></a></h4>
 <p>Set viewport display mode for all selected objects.</p>
 <div class="admonition properties">
 <p class="admonition-title">Properties</p>
@@ -580,6 +632,9 @@ You can read full information about <a href="../stack/#stacks-display-and-select
 <h4 id="clear-attributes">Clear Attributes<a class="headerlink" href="#clear-attributes" title="Permanent link"></a></h4>
 <p>Clear mesh attributes used in Zen UV. Finished and Excluded.</p>
 <p><a class="glightbox" href="../img/screen/tex_checker/checker_tools_clear_attributes.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/tex_checker/checker_tools_clear_attributes.png" /></a></p>
+<hr />
+<h4 id="correct-self-intersecting">Correct Self-Intersecting<a class="headerlink" href="#correct-self-intersecting" title="Permanent link"></a></h4>
+<p>Correct faces that <a href="../select/#select-self-intersecting-faces">have intersecting</a> uv edges by re-unwrapping its island.</p>
               
             </div>
           </div><footer>
