@@ -18,6 +18,7 @@
 - [**Zen Gizmo.**](transform_tool.md) Move, Rotate, Scale, Fit, Align and Flip UV Islands in 3D View and UV Editor using Zen Gizmo.
 - [**Zen Relax.**](transform.md#relax) Unique Unwrapping algorithm for Organic models.
 - [**Trimsheet System.**](trimsheet_creation.md#creating-your-trim-sheet-with-zen-uv) Create/Display Trims and Map UV Islands on them using Transform operators.
+- [**Touch Tool.**](touch_tool.md) Universal UV transformation tool that provides fast and intuitive control over moving, scaling, and rotating UV islands in the UV Editor. 
 - [**Hotspot Mapping.**](trimsheet_hotspot.md) Map UV Islands on Trims by matching them by Area, Aspect, World Size and Tags.
 - [**Stack System.**](stack.md) Stack/Unstack similar/non-similar UV Islands on top of each other.
 - [**Zen Unwrap.**](unwrap.md#zen-unwrap) Context-sensitive Unwrap with control over Seams and Sharp Edges.
