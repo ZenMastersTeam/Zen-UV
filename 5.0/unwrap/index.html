@@ -114,6 +114,20 @@
     <li class="toctree-l2"><a class="reference internal" href="#unwrap-constraint">Unwrap Constraint</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#unwrap-inplace">Unwrap Inplace</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#auto-unwrap">Auto Unwrap</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#preprocess-settings">Preprocess Settings</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#postprocess-settings">Postprocess Settings</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#texel-density-settings">Texel Density Settings</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#unwrap-settings-mof-core">Unwrap Settings (MOF Core)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#advanced-settings">Advanced Settings</a>
+    </li>
+        </ul>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#mark-system">Mark System</a>
         <ul>
@@ -246,8 +260,8 @@
 </thead>
 <tbody>
 <tr>
-<td><a class="glightbox" href="../img/screen/unwrap/unwrapMainPanel.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/unwrap/unwrapMainPanel.png" /></a></td>
-<td><a class="glightbox" href="../img/screen/unwrap/unwrapMainPanel_uvedtior.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/unwrap/unwrapMainPanel_uvedtior.png" /></a></td>
+<td><a class="glightbox" href="../img/screen/unwrap/unwrap_panel_3d.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="3D Viewport Panel" src="../img/screen/unwrap/unwrap_panel_3d.png" /></a></td>
+<td><a class="glightbox" href="../img/screen/unwrap/unwrap_panel_uv.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="UV Editor Panel" src="../img/screen/unwrap/unwrap_panel_uv.png" /></a></td>
 </tr>
 </tbody>
 </table>
@@ -401,6 +415,126 @@
 <p class="admonition-title">Note</p>
 <p>Available only in UV Editor.</p>
 </div>
+<hr />
+<h3 id="auto-unwrap">Auto Unwrap<a class="headerlink" href="#auto-unwrap" title="Permanent link"></a></h3>
+<p>Automated UV unwrapper based on a utility written by Eskil Steenberg www.ministryofflat.com.</p>
+<p>This operator is essentially a bridge for working with <strong>MinistryOfFlat</strong>.<br />
+This software is designed <strong>exclusively for Windows</strong>, so this operator will not be available on <strong>Linux</strong> or <strong>Mac OS</strong>.</p>
+<p><a href="https://www.quelsolaar.com/ministry_of_flat/">https://www.quelsolaar.com/ministry_of_flat/</a></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The <strong>Auto Unwrap</strong> operator utilizes a third-party application, which has its own license terms.<br />
+Please review the license agreement of the external software before use and determine whether you can legally use it.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Since this software is third-party, it is not distributed with <strong>Zen UV</strong>.<br />
+Therefore, we will outline the full activation process, starting from the first click on the <strong>Auto Unwrap</strong> button.</p>
+</div>
+<p>If you have just installed the add-on, go to the <strong>Unwrap</strong> tab in the <strong>Zen UV</strong> panel in any context (<strong>UV Editor</strong> or <strong>3D View</strong>).<br />
+Find and click the <strong>Auto Unwrap</strong> button. You will see a popup like the one shown in the screenshot below.</p>
+<p><a class="glightbox" href="../img/screen/unwrap/MOF_License_Screen.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="MOF License" src="../img/screen/unwrap/MOF_License_Screen.png" /></a></p>
+<p>The message displayed will be:</p>
+<pre><code>'You are about to download "UV Automated Unwrapper" from the Ministry of Flat.',
+'Please note that by pressing the "OK" button, you acknowledge that you have read and agree',
+'to the terms and conditions of the free license associated with this tool.',
+'We recommend reviewing these terms carefully to understand your rights and responsibilities.'
+</code></pre>
+<p>If you agree with the stated terms, press the <strong>OK</strong> button.<br />
+The software will be automatically downloaded and installed into the Blender settings folder:<br />
+<code>scripts\presets\zen_uv\auto_uv_unwrap\MinistryOfFlat_Release</code>.<br />
+For more details, refer to the <strong>Modules</strong> section in <a href="../addon_prefs/#modules">Addon Preferences</a>.</p>
+<p>The download time depends on your internet speed, but in general, it happens quite quickly.<br />
+This software <strong>does not require installation</strong> and runs in the console, so <strong>no special permissions</strong> are typically needed.<br />
+However, if any issues arise, ensure that <strong>Blender has permission to write to disk</strong>.<br />
+Once the download is complete, the unwrapping process will start immediately using the parameters specified in the operator settings.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>You can configure the operator&rsquo;s properties before running it.<br />
+You can also save your own presets using Blender&rsquo;s standard preset system.<br />
+<a class="glightbox" href="../img/screen/unwrap/auto_unwrap_op_prop_01.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Auto Unwrap" src="../img/screen/unwrap/auto_unwrap_op_prop_01.png" /></a></p>
+</div>
+<p>This utility is universal, so we have already set up some <strong>default configurations</strong> for better results.<br />
+However, you can <strong>create and save your own presets</strong> for any specific needs.<br />
+If you want to return to the default settings, use the <strong>Restore Operator Defaults</strong> function.</p>
+<p><a class="glightbox" href="../img/screen/unwrap/MOF_restore_defailts.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Restore Operator Defaults" src="../img/screen/unwrap/MOF_restore_defailts.png" /></a></p>
+<p>Below, we provide some explanations about <strong>why there are so many settings</strong> and <strong>what to expect when changing them</strong>.<br />
+First of all, it’s important to understand that <strong>we do not modify your geometry</strong>, only the <strong>current UV map</strong>.<br />
+Thus, <strong>geometry attributes</strong> (such as <strong>Vertex Maps</strong>, <strong>Vertex Colors</strong>) will remain <strong>unchanged</strong>.<br />
+Inactive <strong>UV Maps</strong> will also stay the same.</p>
+<p><a class="glightbox" href="../img/screen/unwrap/MOF_properties_blocks.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="MOF properties blocks" src="../img/screen/unwrap/MOF_properties_blocks.png" /></a></p>
+<ol>
+<li><strong>Preprocess</strong> - These settings activate processes <strong>before</strong> sending data to MOF.</li>
+<li><strong>Postprocess</strong> - These settings activate processes <strong>after</strong> the UV map is returned from MOF.</li>
+<li><strong>Texel Density</strong> - Allows you to set TD for automatic unwrapping. This process is controlled <strong>directly by MOF</strong>.</li>
+<li><strong>Unwrap Settings</strong> - These settings configure <strong>MOF’s core behavior</strong>.</li>
+<li><strong>Advanced Settings</strong> - These settings provide additional controls inside <strong>MOF</strong> and are marked as <strong>&ldquo;Advanced&rdquo;</strong>.<br />
+   Let&rsquo;s quote the original developer:</li>
+</ol>
+<blockquote>
+<p><strong>&ldquo;All following settings are for debugging purposes only.<br />
+Making any change to these settings is likely to result in worse UV mapping and/or longer processing time.&rdquo;</strong><br />
+— Ministry of Flat</p>
+</blockquote>
+<hr />
+<h3 id="preprocess-settings"><strong>Preprocess Settings</strong><a class="headerlink" href="#preprocess-settings" title="Permanent link"></a></h3>
+<p><a class="glightbox" href="../img/screen/unwrap/MOF_preprocess.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Preprocess" src="../img/screen/unwrap/MOF_preprocess.png" /></a></p>
+<ul>
+<li><strong>Force Hard Surface</strong> - Forces the algorithm to treat the surface as a <strong>hard surface</strong>, ensuring precise handling of <strong>sharp edges</strong> and <strong>rigid structures</strong>.</li>
+<li><strong>Separate By Material</strong> - Splits the <strong>mesh by materials</strong> before unwrapping.</li>
+<li><strong>Separate By Sharp Edges</strong> - Splits the <strong>mesh by sharp edges</strong> before unwrapping.</li>
+<li><strong>Triangulate Mesh</strong> - Converts <strong>n-gons</strong> (faces with 4+ vertices) into triangles.<br />
+  If the mesh contains complex <strong>n-gons</strong>, they may be <strong>internally split</strong> within <strong>MOF</strong>,<br />
+  while still being treated as a <strong>single structure</strong> in the mesh.<br />
+  This can result in <strong>gaps</strong> in what should remain unified, appearing as <strong>stretched polygons</strong>.<br />
+<strong>This issue must be corrected manually.</strong></li>
+</ul>
+<hr />
+<h3 id="postprocess-settings"><strong>Postprocess Settings</strong><a class="headerlink" href="#postprocess-settings" title="Permanent link"></a></h3>
+<p><a class="glightbox" href="../img/screen/unwrap/MOF_postprocess.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Postprocess" src="../img/screen/unwrap/MOF_postprocess.png" /></a></p>
+<ul>
+<li><strong>Mark Seams</strong> - Automatically assigns <strong>seams</strong>.</li>
+<li><strong>Correct Self-Intersecting</strong> - Fixes <strong>UV faces</strong> that have <strong>self-intersecting UV edges</strong>.</li>
+</ul>
+<hr />
+<h3 id="texel-density-settings"><strong>Texel Density Settings</strong><a class="headerlink" href="#texel-density-settings" title="Permanent link"></a></h3>
+<p><a class="glightbox" href="../img/screen/unwrap/MOF_TD.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Texel Density" src="../img/screen/unwrap/MOF_TD.png" /></a></p>
+<ul>
+<li><strong>Use Texel Density</strong> - Scales the UVs to match the <strong>specified texel density value</strong>.</li>
+<li><strong>Texture Size</strong> - Image size preset.</li>
+<li><strong>Texel Density</strong> - The texel density value.</li>
+</ul>
+<hr />
+<h3 id="unwrap-settings-mof-core"><strong>Unwrap Settings (MOF Core)</strong><a class="headerlink" href="#unwrap-settings-mof-core" title="Permanent link"></a></h3>
+<p>The following settings were created by the <strong>MOF developer</strong>, so we present them <strong>as they are</strong>.</p>
+<p><a class="glightbox" href="../img/screen/unwrap/MOF_unwrap_settings.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Unwrap Settings" src="../img/screen/unwrap/MOF_unwrap_settings.png" /></a></p>
+<ul>
+<li><strong>Auto Detect Hard Edges</strong> - The UV unwrapper will try to <strong>separate all hard edges</strong>.<br />
+  Useful for <strong>lightmapping</strong> and <strong>normal mapping</strong>.</li>
+<li><strong>Use Normal</strong> - Uses the <strong>model&rsquo;s normals</strong> to help classify polygons.</li>
+<li><strong>Overlap Identical Parts</strong> - Overlaps <strong>identical parts</strong> to save <strong>texture space</strong>.</li>
+<li><strong>Overlap Mirrored Parts</strong> - Overlaps <strong>mirrored parts</strong> to save <strong>texture space</strong>.</li>
+<li><strong>Scale UV to Worldspace</strong> - Scales the UVs to match their <strong>real-world scale</strong>, extending <strong>beyond the 0-1 UV space</strong>.</li>
+</ul>
+<hr />
+<h3 id="advanced-settings"><strong>Advanced Settings</strong><a class="headerlink" href="#advanced-settings" title="Permanent link"></a></h3>
+<p><a class="glightbox" href="../img/screen/unwrap/MOF_advanced_settings.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Advanced Settings" src="../img/screen/unwrap/MOF_advanced_settings.png" /></a></p>
+<ul>
+<li><strong>Stretch</strong> - Stretches islands <strong>too wide</strong> to fit within the texture.</li>
+<li><strong>Packing</strong> - Packs <strong>UV islands</strong> into a <strong>rectangular layout</strong>.</li>
+<li><strong>Cut</strong> - Cuts <strong>awkward shapes</strong> to <strong>optimize layout coverage</strong>.</li>
+<li><strong>Squares</strong> - Identifies <strong>individual polygons</strong> with right angles.</li>
+<li><strong>Vertex Weld</strong> - Merges <strong>duplicate vertices</strong>.<br />
+<strong>Does not affect</strong> the <strong>output polygon</strong> or <strong>vertex data</strong>.</li>
+<li><strong>Quads</strong> - Detects <strong>triangle pairs</strong> that can form <strong>quads</strong>, improving <strong>patch distribution</strong>.</li>
+</ul>
+<p>The <strong>Advanced Settings</strong> list is much larger.<br />
+We have highlighted only a few <strong>useful options</strong>.<br />
+You can manually enable <strong>other options</strong> using <strong>Extra Arguments</strong>.</p>
+<ul>
+<li><strong>Extra Arguments</strong> - Allows <strong>additional command-line arguments</strong> to be passed to the <strong>UV unwrapping application</strong>.</li>
+</ul>
+<p>For the <strong>full list of arguments</strong>, refer to: <a href="../MOF_Arguments/">MOF Arguments</a>.</p>
 <hr />
 <h2 id="mark-system">Mark System<a class="headerlink" href="#mark-system" title="Permanent link"></a></h2>
 <div class="admonition panel">
