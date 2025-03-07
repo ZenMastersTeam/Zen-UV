@@ -27,6 +27,8 @@ This panel contains tools to transform UVs.
     - *Zen Relax* - The algorithm is most suitable for organic objects.
     - *Angle Based* - Blender's native algorithm. Most suitable for hard surface objects.
     - *Conformal* - Blender's native algorithm. Same as **Angle Based**, but much faster. However, can lead to undesired results if the island is complicated.
+    - *Minimum Stretch* - Uses Scalable Locally Injective Mapping (SLIM). This tries to minimize distortion for both areas and angles.
+
 - **Select** - Select relaxed island
 - **Correct Aspect** - Taking image aspect ratio into account
 
@@ -46,13 +48,7 @@ Rotate Islands the way they are oriented on the Models. Each method (Organic/Har
 
 !!! Properties
      ![world orient properties](img/screen/transform/world_orient_props.png)
-
-- **Method** - The orientation method is suitable for geometry types
-    - *Hard Surface*
-    - *Organic*
 - **Further orient** - Additional turn. Allows you to turn the island to a horizontal or vertical if the island is located at an angle in the model.
-- **Flip By Axis** - Allow changing direction of the island after basic orientation. Suitable if needed change orientation from legs to head for example
-- **Reverse Axis** - Allows you to change the direction of the axis to the opposite
 
 ---
 ### Randomize

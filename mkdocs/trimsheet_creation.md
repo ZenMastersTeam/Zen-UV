@@ -300,6 +300,10 @@ Match trim rotation
 ### Align To
 Align to remembered directions in Fit, Align operations
 
+### Normal
+
+An imaginary normal representing Trim's orientation if it were in 3D space
+
 ### World Size
 Width and height of trim in [UV world size calculation units](#units)
 

@@ -100,6 +100,7 @@ In **Transform Mode**, these actions directly affect the UV islands.
 - **NU-handle (Double Click)** — Scale the island **down by 50%**.
 - **NU-handle (Ctrl + Double Click)** — **Scale the island to zero**.
 - **S-handle (Double Click)** — Scale the island **up by 200%**.
+- **Align-handles (Ctrl + Click)** - Flip islands depending on the handle direction.
 
 ---
 
@@ -132,6 +133,7 @@ For quick reference, here’s the same information in a compact **table format**
 | **NU-handle (Double Click)** | Scales the island **down by 50%**. |
 | **NU-handle (Ctrl + Double Click)** | **Scales the island to zero**. |
 | **S-handle (Double Click)** | Scales the island **up by 200%**. |
+| **Align-handles (Ctrl + Click)** | Flip islands depending on the handle direction. |
 
 ---
 
@@ -444,7 +446,11 @@ The following example demonstrates **custom alignment** using snapping.
 
 #### Flip
 
-Flipping can be performed along **any axis**, but it is achieved **only through scaling along a single axis**.  
+If you need to Flip along a coordinate axis, use **Align-handles** (Ctrl + Click) to Flip islands based on the **handle direction**.
+
+![flip by axes](img/screen/zen_uv_touch_tool/tr_flip_by_axes.gif)
+
+Flipping can be performed along **any axis**, but it is achieved **only through scaling along a single axis**.
 Flipping is **not possible** when scaling along both axes simultaneously.  
 For this reason, Flip is always performed using the **non-uniform-handle**.
 

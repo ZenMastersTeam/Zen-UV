@@ -200,6 +200,10 @@ Set TD from active Preset to selected Islands.
 
 ![](img/screen/texel_density/texel_density_preset_set.gif)
 
+Each preset has its own button for setting texel density for quick access.
+
+![set preset](img/screen/texel_density/set_op_in_presets.png)
+
 ### Clear
 
 Clear Presets list.

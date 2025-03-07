@@ -5,6 +5,7 @@
 - Added **Zen UV Touch Tool** for performing basic transformations in UV Editor.
 - Added **Auto Unwrap Operator** operator that represents a bridge for the Ministry of flat Auto unwrap application.
 - Added **Zen Sync** operator for switching UV Sync Selection while keeping the selection between modes.
+- **Blender 4.4** support.
 
 ## **Operators**
 

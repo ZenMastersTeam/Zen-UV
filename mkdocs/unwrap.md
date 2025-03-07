@@ -94,6 +94,8 @@ Working in **Face** or **Edge** mode makes changes to the selected islands anywa
 - **Unwrap Method** - Unwrapping method.
     - *Conformal* - Fast algorithm that gives good results.
     - *Angle-Based* - More accurate algorithm, but a bit slower.
+    - *Minimum Stretch* - Uses Scalable Locally Injective Mapping (SLIM). This tries to minimize distortion for both areas and angles.
+
 - **Mark Settings** - Operator settings to enable automatic seam marking. See [Mark Settings (Global Mode)](#mark-by-angle) for details.
 - **Fill Holes** - Virtual fill holes in mesh before unwrapping, to avoid overlaps and preserve symmetry.
 - **Texel Density** - Sets Texel Density. Works only if Pack Unwrapped option is disabled.
@@ -169,7 +171,7 @@ Unwrap Islands and Faces keeping their Size, Orientation and Location in UV Spac
 
 ---
 
-### Auto Unwrap
+## Auto Unwrap
 
 Automated UV unwrapper based on a utility written by Eskil Steenberg www.ministryofflat.com.
 

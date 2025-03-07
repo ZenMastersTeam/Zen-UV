@@ -16,6 +16,14 @@ Add/Remove Checker Texture to/from the mesh. ![Checker Texture](img/icons/checke
 
 ![checker texture](img/screen/tex_checker/checker_texture.gif) 
 
+Starting from Zen UV v5.0.0 changed operator properties. It uses keys to enable checker, disable checker and toggle checker. This does not affect the work in UI, but adds convenience when using the operator in scripts.
+
+``` python
+bpy.ops.view3d.zenuv_checker_toggle(action='ON')
+bpy.ops.view3d.zenuv_checker_toggle(action='OFF')
+bpy.ops.view3d.zenuv_checker_toggle(action='TOGGLE')
+```
+
 ---
 #### Checker Preferences
 
