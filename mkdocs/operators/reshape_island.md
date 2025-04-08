@@ -8,7 +8,7 @@ Changes the island’s shape depending on the preset.
   
   ![](../img/screen/transform/reshape_preset_selected.png)
 
-
+- **Use Pinned** - Take into account pinned vertices. Not used in other presets.
 - **Orient loop along** - How to orient the selected loops.
     - *Auto* - Automatic finding loop orientation.
     - *U Axis* - Along the U axis.
