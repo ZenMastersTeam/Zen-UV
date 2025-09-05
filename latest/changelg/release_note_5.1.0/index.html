@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../../img/favicon.ico" />
-    <title>Version 3.1.0.4 - Zen UV 5.1 for Blender</title>
+    <title>Version 5.1.0 - Zen UV 5.1 for Blender</title>
     <link rel="stylesheet" href="../../css/theme.css" />
     <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
@@ -13,8 +13,8 @@
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Version 3.1.0.4";
-        var mkdocs_page_input_path = "changelg\\release_note_3.1.1.0.md";
+        var mkdocs_page_name = "Version 5.1.0";
+        var mkdocs_page_input_path = "changelg\\release_note_5.1.0.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -154,7 +154,7 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
-      <li class="breadcrumb-item active">Version 3.1.0.4</li>
+      <li class="breadcrumb-item active">Version 5.1.0</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -163,20 +163,39 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="version-3104">Version 3.1.0.4<a class="headerlink" href="#version-3104" title="Permanent link"></a></h1>
-<h2 id="fixes">Fixes<a class="headerlink" href="#fixes" title="Permanent link"></a></h2>
+                <h1 id="version-510">Version 5.1.0<a class="headerlink" href="#version-510" title="Permanent link"></a></h1>
+<h2 id="general"><strong>General</strong><a class="headerlink" href="#general" title="Permanent link"></a></h2>
 <ul>
-<li>Error when adding <strong>UV Maps</strong> more than 8.</li>
-<li>Error in <strong>Zen Unwrap</strong> when working with low-polygonal models (polycount &lt; 6).</li>
-<li>Error in <strong>Sort Finished</strong> operator if there are no <strong>Finished</strong> islands.</li>
-<li>Incorrect behavior in <strong>Stack System</strong> - <strong>Selected Mode</strong> in the context of <strong>UV Editor</strong> - <strong>Sync UV</strong> - <strong>Off</strong>. Stacking was performed like in <strong>Global Mode</strong>.</li>
-<li>Error in the system of receiving islands when hidden islands were not ignored.</li>
-<li>Error in the <strong>Excluded</strong> system when islands tagged as <strong>Excluded</strong> hide in <strong>UV Editor</strong>.</li>
-<li>Error <strong>Transform System</strong> in <strong>Pivot - Individual Origins</strong>. The transformation was performed in <strong>Pivot - Median Point</strong> mode.</li>
+<li><strong>IMPORTANT</strong>: Zen UV add-on has changed from <a href="https://docs.blender.org/manual/en/latest/advanced/extensions/addons.html#legacy-vs-extension-add-ons">Legacy add-on to Extension</a>.</li>
+<li>Added Unwrella Connect support.</li>
+<li>Added Rectify and Circular Transform operators.</li>
+<li>Hotfixes.</li>
 </ul>
-<h2 id="added">Added<a class="headerlink" href="#added" title="Permanent link"></a></h2>
+<h2 id="adv-uv-maps"><strong>Adv UV Maps</strong><a class="headerlink" href="#adv-uv-maps" title="Permanent link"></a></h2>
 <ul>
-<li>Links to documentation for the operator <strong>Select by UV Area</strong> and <strong>Excluded System</strong>.</li>
+<li>Fixed <strong>Copy / Paste</strong> system where copied islands reverted to their previous state.</li>
+</ul>
+<h2 id="transform"><strong>Transform</strong><a class="headerlink" href="#transform" title="Permanent link"></a></h2>
+<ul>
+<li>Added <strong>Rectify</strong> operator for transforming selection into a rectangle.</li>
+<li>Added <strong>Circular</strong> operator for transforming selection into a circle.</li>
+<li>Added operator for rounding UV coordinate values.</li>
+<li>Fixed an issue when <strong>Zen Sync</strong> switched to <em>Face</em> mode after toggling.</li>
+</ul>
+<h2 id="trimsheet"><strong>Trimsheet</strong><a class="headerlink" href="#trimsheet" title="Permanent link"></a></h2>
+<ul>
+<li>Added support for simple SVG files with limited trims attributes.</li>
+</ul>
+<h2 id="system"><strong>System</strong><a class="headerlink" href="#system" title="Permanent link"></a></h2>
+<ul>
+<li>Added support for Blender Extensions.</li>
+<li>Added a tracking and warning system for multiple installed copies of the add-on.</li>
+<li>Improved <strong>Update Zen UV</strong> procedure.</li>
+<li>Improved saving process of the <strong>Core Library</strong> during update.</li>
+<li>Fixed an issue with Core Library registration when it was already in the correct folder.</li>
+<li>Fixed an update issue when Zen UV was installed outside the default folder.</li>
+<li>Fixed a startup error of Zen UV in <strong>Blender Background Mode</strong>.</li>
+<li>Fixed <strong>Sticky UV Editor</strong> to support Blender 4.5 and above.</li>
 </ul>
               
             </div>
