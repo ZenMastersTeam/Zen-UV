@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>Emergency Light (EN) - Zen UV 5.1 for Blender</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../../css/version-select.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Emergency Light (EN)";
+        var mkdocs_page_input_path = "tutorial\\emergency_light\\emergency_light_eng.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-7XHJ910WF8"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', "G-7XHJ910WF8");
+      </script>
+ <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> Zen UV 5.1 for Blender
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../../..">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../youtube_videos/">Learning Videos</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../installation/">Installation and Update</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../user_interface/">User Interface</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" >Tutorial</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../../">Step-by-Step Guide Examples</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" >Emergency Light</a>
+    <ul class="current">
+                <li class="toctree-l3 current"><a class="reference internal current" href="#">Emergency Light (EN)</a>
+    <ul class="current">
+    <li class="toctree-l4"><a class="reference internal" href="#prepare-scene">Prepare scene</a>
+        <ul>
+    <li class="toctree-l5"><a class="reference internal" href="#download-example">Download example</a>
+    </li>
+    <li class="toctree-l5"><a class="reference internal" href="#prepare-model">Prepare model</a>
+    </li>
+    <li class="toctree-l5"><a class="reference internal" href="#initial-unwrap">Initial unwrap</a>
+    </li>
+    <li class="toctree-l5"><a class="reference internal" href="#switch-on-checker-texture">Switch on checker texture</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#unwrap">Unwrap</a>
+        <ul>
+    <li class="toctree-l5"><a class="reference internal" href="#unwrap-internal-cylindrical-part">Unwrap internal cylindrical part</a>
+    </li>
+    <li class="toctree-l5"><a class="reference internal" href="#unwrap-external-part">Unwrap external part</a>
+    </li>
+    <li class="toctree-l5"><a class="reference internal" href="#unwrap-small-details">Unwrap small details</a>
+    </li>
+    <li class="toctree-l5"><a class="reference internal" href="#unwrap-wires">Unwrap wires</a>
+    </li>
+    <li class="toctree-l5"><a class="reference internal" href="#unwrap-handle">Unwrap handle</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#pack">Pack</a>
+        <ul>
+    <li class="toctree-l5"><a class="reference internal" href="#final-pack">Final pack</a>
+    </li>
+    <li class="toctree-l5"><a class="reference internal" href="#reduce-empty-uv-space-by-stacking">Reduce empty UV space by stacking</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#set-sharp-edges">Set sharp edges</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../emergency_light_ukr/">Emergency Light (UA)</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../emergency_light_rus/">Emergency Light (RU)</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Modules</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../adv_uv-maps/">Advanced UV Maps</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../seam_groups/">Seam Groups</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../unwrap/">Unwrap</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../select/">Select</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../transform/">Transform</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../stack/">Stack</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../texel_density/">Texel Density</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../checker/">UV Checker</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../pack/">Pack</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../preferences/">Preferences</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../transform_tool/">Transform Tool</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../touch_tool/">Touch Tool</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../sticky_uv_editor/">Sticky UV Editor</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../favourites/">Favourites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Trim Sheets</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../trimsheet/">Trim Sheets</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../trimsheet_creation/">Trim Sheet Management</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../trimsheet_operators/">Trim Sheet Operators</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../trimsheet_hotspot/">Hotspot Mapping</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Additional</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../addon_prefs/">Addon Preferences</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../user_script/">User Script</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../help/">Help</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/">FAQs</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../changelg/">Changelog</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../credits/">Credits</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../our_addons/">Our Add-ons</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../recommended_addons/">Recommended Add-ons</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">Zen UV 5.1 for Blender</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Getting Started</li>
+          <li class="breadcrumb-item">Tutorial</li>
+          <li class="breadcrumb-item">Emergency Light</li>
+      <li class="breadcrumb-item active">Emergency Light (EN)</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <table>
+<tr>
+    <td><strong>EN</strong></td>
+    <td><a href="../emergency_light_ukr/">UA</a></td>
+    <td><a href="../emergency_light_rus/">RU</a></td>
+</tr>
+</table>
+
+<h1 id="emergency-light">Emergency Light<a class="headerlink" href="#emergency-light" title="Permanent link"></a></h1>
+<p><a class="glightbox" href="../../../img/tutorial/emergency_light/preview.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/preview.jpg" /></a></p>
+<p>A step-by-step beginner tutorial designed to learn the basics of creating UV coordinates using the Zen UV addon. In this tutorial, you will learn the basic rules of creating UV unwraps and how to use the Zen UV tools for quick and comfortable work. You will receive basic information about the rules and recommendations for creating UV coordinates for game engines.</p>
+<p>The tutorial covers the main stages that are optimal steps for processing any model:</p>
+<ul>
+<li>Model preparation</li>
+<li>Initial unwrap</li>
+<li>Analyze the initial unwrap</li>
+<li>Step-by-step unwrapping of parts</li>
+<li>Packing</li>
+<li>Optimization</li>
+</ul>
+<h2 id="prepare-scene">Prepare scene<a class="headerlink" href="#prepare-scene" title="Permanent link"></a></h2>
+<h3 id="download-example">Download example<a class="headerlink" href="#download-example" title="Permanent link"></a></h3>
+<ol>
+<li>
+<p>Check that internet connection is enabled in Blender (this option is available since Blender 4.2).</p>
+<ul>
+<li>Click on &ldquo;Internet Connection&rdquo; icon.</li>
+<li>Enable internet access.</li>
+</ul>
+<p><a class="glightbox" href="../../../img/tutorial/emergency_light/check_internet_connection.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/check_internet_connection.gif" /></a></p>
+</li>
+<li>
+<p>Using the <a href="../../../help/#examples">examples panel</a>, select and download the example called &ldquo;Emergency Light Tutorial&rdquo; by clicking on the &ldquo;Download&rdquo; button to the right of the title.</p>
+<p><a class="glightbox" href="../../../img/tutorial/emergency_light/download_example.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/download_example.gif" /></a></p>
+</li>
+<li>
+<p>When the scene is downloaded, click the &ldquo;Open&rdquo; button that appears in place of the &ldquo;Download&rdquo; button.</p>
+<p><a class="glightbox" href="../../../img/tutorial/emergency_light/load_example.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/load_example.gif" /></a></p>
+</li>
+<li>
+<p>Select &ldquo;Emergency Light&rdquo; object and switch to Edit Mesh mode.</p>
+<p><a class="glightbox" href="../../../img/tutorial/emergency_light/select_and_switch_to_edit.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/select_and_switch_to_edit.gif" /></a></p>
+</li>
+</ol>
+<h3 id="prepare-model">Prepare model<a class="headerlink" href="#prepare-model" title="Permanent link"></a></h3>
+<ol>
+<li>
+<p>Zen UV uses <a href="../../../unwrap/#mark-by-angle"><strong>global mark system</strong></a> by default. Let&rsquo;s change mark settings to mark Seam and Sharp at the same time.</p>
+<ul>
+<li>Select <a href="../../../unwrap/"><strong>Unwrap</strong></a> tab and find &ldquo;Properties&rdquo; button placed to the right of &ldquo;Mark by Angle&rdquo; button.</li>
+<li>Press it and in popup menu enable &ldquo;Mark Sharp Edges&rdquo; option.</li>
+</ul>
+<p><a class="glightbox" href="../../../img/tutorial/emergency_light/mark_settings_sharp.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/mark_settings_sharp.gif" /></a></p>
+</li>
+<li>
+<p>Press <a href="../../../unwrap/#unmark-all"><strong>Unmark all</strong></a> button in <a href="../../../unwrap/"><strong>Unwrap</strong></a> tab to clear all existing Seams and Sharp edges.</p>
+<p><a class="glightbox" href="../../../img/tutorial/emergency_light/unmark_all.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/unmark_all.gif" /></a></p>
+</li>
+<li>
+<p>Let&rsquo;s check than there are no islands marked as <a href="../../../unwrap/#finishing-system"><strong>Finished</strong></a>. <a href="../../../unwrap/#finishing-system"><strong>Finished</strong></a> tags helps to visually control islands state (finished/not finished) and prevents Zen Unwrap operator to re-unwrap <a href="../../../unwrap/#tag-finished"><strong>Finished</strong></a> islands.</p>
+<ul>
+<li>Select all polygons.</li>
+<li>Expand <a href="../../../unwrap/#finishing-system"><strong>Finished</strong></a> panel in <a href="../../../unwrap/"><strong>Unwrap</strong></a> tab and press <a href="../../../unwrap/#tag-unfinished"><strong>Tag Unfinished</strong></a>.</li>
+</ul>
+<p><a class="glightbox" href="../../../img/tutorial/emergency_light/unfinished_all.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/unfinished_all.gif" /></a></p>
+</li>
+<li>
+<p>Delete all UV Maps.</p>
+<ul>
+<li>Switch to <a href="../../../adv_uv-maps/"><strong>Advanced UV Maps</strong></a> tab.</li>
+<li>Select all UV Maps.</li>
+<li>Press &ldquo;-&rdquo; (delete) button.</li>
+</ul>
+<p><a class="glightbox" href="../../../img/tutorial/emergency_light/delete_all_uv_maps.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/delete_all_uv_maps.gif" /></a></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Zen UV automatically control UV Maps and will create new one if there are no, so there is no necesserity to create UV Map manually.</p>
+</div>
+</li>
+<li>
+<p>An important part of the prepare is to check the scale of the objects for which UV coordinates will be created. The scale of each object should be equal to (1.00, 1.00, 1.00), as it can affect the work of the unwrap operators. Also, an incorrect scale can affect the relative size of islands when <a href="../../../pack/">packing</a> and when setting <a href="../../../texel_density/">textel density</a>. Editing the scale of objects is performed in Object Mode.</p>
+<ul>
+<li>Turn on Object Mode.</li>
+<li>In the 3D View main menu, click <strong>Object - Apply - Apply Object Transform</strong>.</li>
+<li>Make sure that the object scale is (1.00, 1.00, 1.00).</li>
+</ul>
+<p><a class="glightbox" href="../../../img/tutorial/emergency_light/check_scale.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/check_scale.gif" /></a></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Scaling and other object transformations are used primarily for animation and other purposes. If you&rsquo;re working with objects that have animations or form a hierarchy, performing <strong>Object - Apply - Apply Object Transform</strong> is dangerous because it will distort the animation and destroy the hierarchy.</p>
+</div>
+</li>
+</ol>
+<h3 id="initial-unwrap">Initial unwrap<a class="headerlink" href="#initial-unwrap" title="Permanent link"></a></h3>
+<ol>
+<li>
+<p>Now when everything is ready, we can start unwrapping. The first step is to split the model into UV islands. At this stage, it doesn&rsquo;t matter how well these islands are unwrapped. We just separate them. We will mark the seams depending on the edge angle. Sharper edges will be marked as seams and thus define the places where the model will be split.</p>
+<ul>
+<li>Turn on Edit Mode</li>
+<li>Press &ldquo;Mark By Angle&rdquo; in <a href="../../../unwrap/"><strong>Unwrap</strong></a> tab.</li>
+</ul>
+<p><a class="glightbox" href="../../../img/tutorial/emergency_light/mark_by_angle.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/mark_by_angle.gif" /></a></p>
+</li>
+<li>
+<p>Almost all <strong>Zen UV</strong> operations could be executed in <strong>3D View</strong>, but it is more comfortable to visually control them in <strong>UV Editor</strong>. There is a special <strong>UV Editor</strong> gizmo widget in <strong>3D View</strong>.</p>
+<ul>
+<li>Press <a href="../../../sticky_uv_editor/#sticky-uv-editor"><strong>Open UV Editor</strong></a> button placed at the left center part of <strong>3D View</strong> viewport. The button works as toggle, so if <strong>UV Editor</strong> is open it will be closed.</li>
+</ul>
+<p><a class="glightbox" href="../../../img/tutorial/emergency_light/uv_editor.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/uv_editor.gif" /></a></p>
+</li>
+<li>
+<p>We have created seams depending on the edge angle, but have not yet divided the model into islands. To do this, we will use the <a href="../../../unwrap/#zen-unwrap">Zen Unwrap</a> operator, which works depending on what is selected. So at this stage, make sure that nothing is selected. In the mode when nothing is selected, <a href="../../../unwrap/#zen-unwrap">Zen Unwrap</a> simply splits the model into UV islands along the existing seams. If something is selected, the result will be different.</p>
+<ul>
+<li>Deselect all.</li>
+<li>Press <a href="../../../unwrap/#zen-unwrap"><strong>Zen Unwrap</strong></a> button from <a href="../../../unwrap/"><strong>Unwrap</strong></a> tab.</li>
+</ul>
+<p><a class="glightbox" href="../../../img/tutorial/emergency_light/initial_unwrap.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/initial_unwrap.gif" /></a></p>
+</li>
+</ol>
+<p>Other modes of <a href="../../../unwrap/#zen-unwrap"><strong>Zen Unwrap</strong></a> operator will be demonstrated later in this tutorial.</p>
+<h3 id="switch-on-checker-texture">Switch on checker texture<a class="headerlink" href="#switch-on-checker-texture" title="Permanent link"></a></h3>
+<ol>
+<li>
+<p>At this stage, we have a basic division of the model into islands, but this is not enough. We need to visually check the model, create additional islands, and in the process straighten the existing islands if necessary. At this stage, it is important to improve the perception of artifacts in order to complete the work as quickly as possible. One of the most effective methods is to assign a special texture consisting of squares.If you see on the model that the squares are distorted or have a shape that is far from square, this means that the mapping in this place is incorrect. We are applying the special checking texture using <a href="../../../checker/"><strong>Zen UV Checker</strong></a> module.</p>
+<ul>
+<li>Press &ldquo;Checker Texture&rdquo; button in <a href="../../../checker/"><strong>UV Checker</strong></a> tab.</li>
+</ul>
+<p><a class="glightbox" href="../../../img/tutorial/emergency_light/press_checker.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/press_checker.gif" /></a></p>
+</li>
+<li>
+<p>Colored textures are also created to determine the location of the island on the texture. But in our case, it doesn&rsquo;t matter. So let&rsquo;s switch the texture to monochrome. This will reduce the amount of information to be perceived and therefore reduce tiredness from work.</p>
+<ul>
+<li>Open drop-down menu below &ldquo;Checker Texture&rdquo; button and select texture <a href="../../../checker/#checker-textures-selector"><strong>zen-mono-2048x2048</strong></a>.</li>
+</ul>
+<p><a class="glightbox" href="../../../img/tutorial/emergency_light/zen_mono_texture.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/zen_mono_texture.gif" /></a></p>
+</li>
+<li>
+<p>The next step is not important for this model, but you may need it in the future. Let&rsquo;s disable the display of all types of edges except seam. These properties duplicate the native display system options, but now they are in close access in the UV Checker panel. Remember about the tiredness of information overload.</p>
+<ul>
+<li>Disable &ldquo;Crease&rdquo;, &ldquo;Sharp&rdquo;, &ldquo;Bevel&rdquo; in <a href="../../../checker/#blender-draw-system"><strong>Blender draw system panel</strong></a>. Check that only &ldquo;Seams&rdquo; are left.</li>
+</ul>
+<p><a class="glightbox" href="../../../img/tutorial/emergency_light/disable_crease_sharp_bevel.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/disable_crease_sharp_bevel.gif" /></a></p>
+</li>
+<li>
+<p>Textures for checking usually have a rather aggressive look and interfere with the perception of islands in <strong>UV Editor</strong>. <strong>Zen UV</strong> has the ability to darken the current texture for comfortable perception. </p>
+<ul>
+<li>Use the <a href="../../../checker/#darken-image">Darken Image</a> operator located in the <a href="../../../checker/">UV Checker</a> panel of the main addon panel in <strong>UV Editor</strong>.</li>
+</ul>
+<p><a class="glightbox" href="../../../img/tutorial/emergency_light/darken_image.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/darken_image.gif" /></a></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p><a href="../../../checker/#darken-image"><strong>Darken Image</strong></a> could be also found in UV Editor overlay properties.</p>
+</div>
+</li>
+<li>
+<p>Also we can simply delete texture in <strong>UV Editor</strong> because in this tutorial we will not use it for analysis in this context. </p>
+<ul>
+<li>Find active image property in the top of <strong>UV Editor</strong> and delete it.</li>
+</ul>
+<p><a class="glightbox" href="../../../img/tutorial/emergency_light/delete_image.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/delete_image.gif" /></a></p>
+</li>
+</ol>
+<h2 id="unwrap">Unwrap<a class="headerlink" href="#unwrap" title="Permanent link"></a></h2>
+<p>Preparation is completed. Let&rsquo;s continue with model unwrapping.
+It is convenient to divide this process into steps. Our model consists of several parts. So let&rsquo;s conditionally divide it into stages corresponding to each part separately.</p>
+<h3 id="unwrap-internal-cylindrical-part">Unwrap internal cylindrical part<a class="headerlink" href="#unwrap-internal-cylindrical-part" title="Permanent link"></a></h3>
+<ol>
+<li>
+<p>Let&rsquo;s start from cylindrical part. </p>
+<ul>
+<li>Select it in &ldquo;UV Editor&rdquo;.</li>
+<li>Press <a href="../../../select/#isolate-islands-toggle"><strong>Isolate Island</strong></a> button in <a href="../../../select/"><strong>Select</strong></a> tab.</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>This operator works like a toggle. This means that if you press it again now, everything that is hidden will appear again. It works in the same way as for 3D View and UV Editor.</p>
+</div>
+<p><a class="glightbox" href="../../../img/tutorial/emergency_light/isolate_cylinder.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/isolate_cylinder.gif" /></a></p>
+<p>The main operator for creating islands in the Zen UV addon is <a href="../../../unwrap/#zen-unwrap">Zen Unwrap</a>. This is a multifunctional context operator. It performs different tasks depending on the following:</p>
+<ul>
+<li>Which selection mode is currently active.</li>
+<li>What exactly is selected at the time of its start.</li>
+<li>What additional properties are enabled.</li>
+</ul>
+<p>Zen Unwrap tracks three main selection modes.</p>
+<ul>
+<li>Faces</li>
+<li>Edges</li>
+<li>Verices</li>
+</ul>
+<p>If <strong>Blender</strong> is in <strong>Faces</strong> selection mode, a new island will be created from the selected polygons, and the edges along the border of the selected polygons will be marked as <strong>seams</strong>. Let&rsquo;s use this to create the first island.</p>
+<ul>
+<li>Select cap and press <a href="../../../unwrap/#zen-unwrap"><strong>Zen Unwrap</strong></a> in <a href="../../../unwrap/"><strong>Unwrap</strong></a> tab</li>
+</ul>
+<p><a class="glightbox" href="../../../img/tutorial/emergency_light/unwrap_cap_1.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/unwrap_cap_1.gif" /></a></p>
+<p>Several more islands will be created in the process. They may be incorrect or not the same as in the video, but it doesn&rsquo;t matter now.</p>
+</li>
+<li>
+<p>Let&rsquo;s use the <strong>Edges</strong> selection mode to unwrap the next island.</p>
+<ul>
+<li>Switch <strong>Blender</strong> to <strong>Edges</strong> selection mode. In this mode, <a href="../../../unwrap/#zen-unwrap"><strong>Zen Unwrap</strong></a> will create <strong>seams</strong> for the selected edges and perform the unwrap.</li>
+<li>Select one edge on the longest cylinder and click <a href="../../../unwrap/#zen-unwrap"><strong>Zen Unwrap</strong></a>.</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The places where <strong>seams</strong> will be created can usually be too visible on the texture and will require additional masking. In order not to waste time on this, try to create gaps in places that are not very visible. So, in our case, it is recommended to select one of the lower edges because it will definitely be covered by the outer part of the model.</p>
+</div>
+<p><a class="glightbox" href="../../../img/tutorial/emergency_light/unwrap_tube.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/unwrap_tube.gif" /></a></p>
+<p>As you can see, <a href="../../../unwrap/#zen-unwrap"><strong>Zen Unwrap</strong></a> follows your instructions exactly and unwraps the islands despite the fact that we change the selection type. You don&rsquo;t even need to open its settings to do this. As a result, we got the largest island of this part correctly unwrapped.</p>
+</li>
+<li>
+<p>Unwrap the second cap. </p>
+<ul>
+<li>Switch <strong>Blender</strong> selection into <strong>Faces</strong> mode.</li>
+<li>Select cap.</li>
+<li>Press <a href="../../../unwrap/#zen-unwrap"><strong>Zen Unwrap</strong></a>.</li>
+</ul>
+<p><a class="glightbox" href="../../../img/tutorial/emergency_light/cylindrical_second_cap.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/cylindrical_second_cap.gif" /></a></p>
+</li>
+<li>
+<p>When using <strong>Mark by Angle</strong>, unwanted <strong>seams</strong> were created, which divided the model into more islands than necessary. To fix this, use the <a href="../../../unwrap/#zen-unwrap"><strong>Zen Unwrap</strong></a> operator again.</p>
+<ul>
+<li>Select all the polygons of the largest cylinder and press <a href="../../../unwrap/#zen-unwrap"><strong>Zen Unwrap</strong></a>. As a result, all the selected islands are merged into one, and the edge of the selected polygons are marked as <strong>seams</strong>.</li>
+</ul>
+<p><a class="glightbox" href="../../../img/tutorial/emergency_light/merge_islands.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/merge_islands.gif" /></a></p>
+</li>
+<li>
+<p>At this point, we&rsquo;ve finished creating the islands, but many of the islands are still deformed. You can switch to <strong>edges</strong> selection mode and follow the same steps as for the largest cylinder, but the islands that have a slightly more complex shape will not be aligned sufficiently. Let&rsquo;s use the <a href="../../../transform/#quadrify-islands"><strong>Quadrify</strong></a> operator, which aligns the islands created from quads into a square grid.</p>
+<ul>
+<li>Switch to <strong>edges</strong> selection mode.</li>
+<li>Select one lengthwise edge, and click the <a href="../../../transform/#quadrify-islands"><strong>Quadrify</strong></a> button in the <a href="../../../transform/"><strong>Transform</strong></a> panel.</li>
+</ul>
+<p><a class="glightbox" href="../../../img/tutorial/emergency_light/cylindrical_quadrify_vert.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/cylindrical_quadrify_vert.gif" /></a></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Such usage of the Quadrify operator is fast but not always optimal. If you do not specify to the operator where you want to make a break, the island break will be created automatically and may not be in the optimal location. For full control over the creation of the gap, use the <strong>Use Selected Edges</strong> option. You can also create a gap before using Quadrify using other methods.</p>
+</div>
+</li>
+<li>
+<p>Let&rsquo;s change some operator properties.</p>
+<ul>
+<li>Open the operator properties panel.</li>
+<li>Activate the <strong>Use Selected Edges</strong> option. This will tell the operator to split the island along the selected edge.</li>
+</ul>
+<p><a class="glightbox" href="../../../img/tutorial/emergency_light/cylindrical_use_selected_edges.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/cylindrical_use_selected_edges.gif" /></a></p>
+<ul>
+<li>Do the same for all remaining islands.</li>
+</ul>
+<p><a class="glightbox" href="../../../img/tutorial/emergency_light/cylindrical_other_islands.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/cylindrical_other_islands.gif" /></a></p>
+</li>
+<li>
+<p>Now some islands in the UV Editor may overlap others. In order to make sure that each island is unwrapped correctly, we will perform a packing. This will improve the visual perception of all the islands.</p>
+<ul>
+<li>Click the <a href="../../../pack/#pack-islands"><strong>Pack Islands</strong></a> button from the <a href="../../../pack/#pack"><strong>Pack</strong></a> panel.</li>
+</ul>
+<p><a class="glightbox" href="../../../img/tutorial/emergency_light/cylindrical_pack_islands.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/cylindrical_pack_islands.gif" /></a></p>
+</li>
+<li>
+<p>We will continue working on other details soon, but first we will use the <a href="../../../unwrap/#finishing-system"><strong>Finished</strong></a> system. This will make it possible to visually control which islands have already been unwrapped and protect finished islands from being unwrapped again.</p>
+<ul>
+<li>Go to the <a href="../../../unwrap/"><strong>Unwrap</strong></a> tab.</li>
+<li>Expand the panel called Finished. </li>
+<li>Select all the islands.</li>
+<li>Click the <a href="../../../unwrap/#tag-finished"><strong>Tag Finished</strong></a> button from the <a href="../../../unwrap/#finishing-system"><strong>Finished</strong></a> panel.</li>
+</ul>
+<p><a class="glightbox" href="../../../img/tutorial/emergency_light/cylindrical_tag_finished.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/cylindrical_tag_finished.gif" /></a></p>
+</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Islands that are tagged <strong>Finished</strong> are sorted and moved to the right of the <strong>UV Area</strong>. This is the default behavior, but it can be disabled by switching off the <strong>Auto Sort Islands</strong> option to the right of the <strong>Sort Islands by Tags</strong> operator in the <a href="../../../unwrap/#finished-preferences"><strong>gear button</strong></a> dialog.</p>
+</div>
+<h3 id="unwrap-external-part">Unwrap external part<a class="headerlink" href="#unwrap-external-part" title="Permanent link"></a></h3>
+<ol>
+<li>
+<p>Go to the next detail. To do this, we need to unhide all the parts of the model.</p>
+<ul>
+<li>Click <a href="../../../select/#isolate-islands-toggle"><strong>Isolate Island</strong></a> from the <a href="../../../select/"><strong>Select</strong></a> panel to unhide all hidden islands.</li>
+</ul>
+<p><a class="glightbox" href="../../../img/tutorial/emergency_light/external_isolate.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/external_isolate.gif" /></a></p>
+<ul>
+<li>Select the part of the model that looks like the outer shell.</li>
+</ul>
+<p><a class="glightbox" href="../../../img/tutorial/emergency_light/external_select_linked.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/external_select_linked.gif" /></a></p>
+<ul>
+<li>Click <a href="../../../select/#isolate-islands-toggle"><strong>Isolate Island</strong></a> again. Now we have only the part we need visible. The other parts are hidden and will not get in the way.</li>
+</ul>
+<p><a class="glightbox" href="../../../img/tutorial/emergency_light/external_isolate_final.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/external_isolate_final.gif" /></a></p>
+</li>
+<li>
+<p>This part has clear contours, correct seams, but some islands could be improved. The inner part is a cylinder that can be represented by one island instead of several. Let&rsquo;s create one island from the interior.</p>
+<ul>
+<li>Select the entire interior except for the island, which is a polygon.</li>
+<li>Click <a href="../../../unwrap/#zen-unwrap"><strong>Zen Unwrap</strong></a>.</li>
+</ul>
+<p><a class="glightbox" href="../../../img/tutorial/emergency_light/external_select_internal_part.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/external_select_internal_part.gif" /></a></p>
+</li>
+<li>
+<p>The created island may look better if you align it into a square grid. Use the <a href="../../../transform/#quadrify-islands"><strong>Quadrify</strong></a> operator. Please note. If you have the <strong>Use Selected Edges</strong> option activated, then you&rsquo;d better switch to the faces selection mode. Because in the edges selection mode, the <a href="../../../transform/#quadrify-islands"><strong>Quadrify</strong></a> operator will break the island along the selected edges. Also, note that <strong>Zen UV</strong> is always trying to help you, and in order to tell the operator which island you want to work with, you do not need to select the entire island. It is enough to select one or more polygons.</p>
+<ul>
+<li>Select one or more polygons in the island inside the current part, and then click <a href="../../../transform/#quadrify-islands"><strong>Quadrify</strong></a>.</li>
+</ul>
+<p><a class="glightbox" href="../../../img/tutorial/emergency_light/external_cover_quadrify.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/external_cover_quadrify.gif" /></a></p>
+</li>
+<li>
+<p>The next island is too large, cyclic, and inverted. To get rid of these problems, divide it into several smaller islands.</p>
+<ul>
+<li>Select the side edges.</li>
+<li>Click <a href="../../../unwrap/#zen-unwrap"><strong>Zen Unwrap</strong></a>.</li>
+</ul>
+<p><a class="glightbox" href="../../../img/tutorial/emergency_light/unwrap_by_side_cuts.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/unwrap_by_side_cuts.gif" /></a></p>
+</li>
+<li>
+<p>The island representing the upper end is correctly unwrapped, but we can make it more compact. Also, we need to make sure that the boundary edges of any island are aligned along the axes as much as possible. This will make gaps in the texture much less obvious.</p>
+<ul>
+<li>Select one or more faces of the top island.</li>
+<li>Click <a href="../../../select/#select-islands"><strong>Select Island</strong></a> from the <a href="../../../select/"><strong>Select</strong></a> panel.</li>
+<li>Switch to the top view and use the <strong>Project From View</strong> operator to create a flat island from the selected polygons.</li>
+</ul>
+<p><a class="glightbox" href="../../../img/tutorial/emergency_light/project_from_view.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/project_from_view.gif" /></a></p>
+</li>
+<li>
+<p>Splitting into islands is done. Make <a href="../../../pack/#pack"><strong>Pack</strong></a> and <a href="../../../unwrap/#tag-finished"><strong>Tag Finished</strong></a> in the same way as previous parts.</p>
+<p><a class="glightbox" href="../../../img/tutorial/emergency_light/external_cover_tag_as_finished.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/external_cover_tag_as_finished.gif" /></a></p>
+</li>
+<li>
+<p>Click <a href="../../../select/#isolate-islands-toggle"><strong>Isolate Island</strong></a> to show all other parts and be ready for the next step of the tutorial.</p>
+</li>
+</ol>
+<h3 id="unwrap-small-details">Unwrap small details<a class="headerlink" href="#unwrap-small-details" title="Permanent link"></a></h3>
+<ol>
+<li>
+<p>Isolate small details for more comfortable work.</p>
+<ul>
+<li>Select all small details.</li>
+<li>Click <a href="../../../select/#isolate-islands-toggle"><strong>Isolate Island</strong></a></li>
+</ul>
+<p><a class="glightbox" href="../../../img/tutorial/emergency_light/small_parts_isolate.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/small_parts_isolate.gif" /></a></p>
+</li>
+<li>
+<p>The <a href="../../../unwrap/#mark-by-angle"><strong>Mark by Ange</strong></a> operator worked correctly on all small parts except for cylindrical parts. Let&rsquo;s fix it.</p>
+<ul>
+<li>Select one edge on each of the cylinders and click <a href="../../../unwrap/#zen-unwrap"><strong>Zen Unwrap</strong></a>.</li>
+</ul>
+<p><a class="glightbox" href="../../../img/tutorial/emergency_light/small_parts_unwrap_cuts.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/small_parts_unwrap_cuts.gif" /></a></p>
+</li>
+<li>
+<p>Go to the part that holds the wires together. It has been divided into several parts, which is not the optimal shape. It is enough to separate the ends and leave the rest as one island.</p>
+<ul>
+<li>Select the entire part.</li>
+<li>Deselect the ends.</li>
+<li>Run <a href="../../../unwrap/#zen-unwrap"><strong>Zen Unwrap</strong></a>.</li>
+</ul>
+<p><a class="glightbox" href="../../../img/tutorial/emergency_light/small_parts_unwrap_by_polygons.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/small_parts_unwrap_by_polygons.gif" /></a></p>
+</li>
+<li>
+<p>We have created one island, but its mapping is still incorrect (Rectangles are distorted on Checker texture). We need to break and flatten the radial island.</p>
+<ul>
+<li>Select the pair of edges where you want to split.</li>
+<li>Run <a href="../../../unwrap/#zen-unwrap"><strong>Zen Unwrap</strong></a>.</li>
+</ul>
+<p><a class="glightbox" href="../../../img/tutorial/emergency_light/small_parts_unwrap_to_get_quad.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/small_parts_unwrap_to_get_quad.gif" /></a></p>
+</li>
+<li>
+<p>At this stage, we have the correct split into islands, but some islands have stretches. Some other islands are not optimally shaped. We need to select and align all the islands that consist of quads.</p>
+<ul>
+<li>Use the <a href="../../../select/#select-quaded-islands"><strong>Select Quaded Islands</strong></a> operator from the <a href="../../../select/"><strong>Select</strong></a> panel.</li>
+</ul>
+<p><a class="glightbox" href="../../../img/tutorial/emergency_light/small_parts_quaded_islands.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/small_parts_quaded_islands.gif" /></a></p>
+<ul>
+<li>Use the <a href="../../../transform/#quadrify-islands"><strong>Quadrify</strong></a> operator to align all the selected islands into a square grid.</li>
+</ul>
+<p><a class="glightbox" href="../../../img/tutorial/emergency_light/small_parts_quadrify_2.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/small_parts_quadrify_2.gif" /></a></p>
+</li>
+<li>
+<p>Make <a href="../../../pack/#pack"><strong>Pack</strong></a> and <a href="../../../unwrap/#tag-finished"><strong>Tag Finished</strong></a> to finalize unwrapping small details.</p>
+<p><a class="glightbox" href="../../../img/tutorial/emergency_light/small_parts_pack_and_finished.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/small_parts_pack_and_finished.gif" /></a></p>
+</li>
+<li>
+<p>Click <a href="../../../select/#isolate-islands-toggle"><strong>Isolate Island</strong></a> to show all other parts and be ready for the next step of the tutorial.</p>
+</li>
+</ol>
+<h3 id="unwrap-wires">Unwrap wires<a class="headerlink" href="#unwrap-wires" title="Permanent link"></a></h3>
+<ol>
+<li>
+<p>Isolate the wires for more comfortable work.</p>
+<ul>
+<li>Select all the wires.</li>
+<li>Click <a href="../../../select/#isolate-islands-toggle"><strong>Isolate Island</strong></a> to hide all unnecessary parts.</li>
+</ul>
+<p><a class="glightbox" href="../../../img/tutorial/emergency_light/wires_isolate.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/wires_isolate.gif" /></a></p>
+</li>
+<li>
+<p>You can see that each wire is currently divided into several islands. Let&rsquo;s make sure that each wire is represented by a single island. Select all the polygons and click <a href="../../../unwrap/#zen-unwrap"><strong>Zen Unwrap</strong></a>.</p>
+<p><a class="glightbox" href="../../../img/tutorial/emergency_light/wires_unwrap.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/wires_unwrap.gif" /></a></p>
+</li>
+<li>
+<p>We have a split where each wire represents one island, but the unwrapping is incorrect. Let&rsquo;s unwrap the wires in the fastest way.</p>
+<ul>
+<li>Make sure that all islands are selected.</li>
+<li>Use the <a href="../../../transform/#quadrify-islands"><strong>Quadrify</strong></a> operator to align each island into an even grid.</li>
+</ul>
+<p><a class="glightbox" href="../../../img/tutorial/emergency_light/wires_quadrify.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/wires_quadrify.gif" /></a></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>In the case of unwrapping wires or other similar models, it is very convenient to use the <strong>Use Selected Edges</strong> option of the <strong>Quadrify</strong> operator, which we have reviewed earlier. This way we will get the breaks exactly where we need them on the first try.</p>
+</div>
+</li>
+<li>
+<p>Finally, we will pack for better visual control and mark the islands as finished.</p>
+<ul>
+<li>Run <a href="../../../pack/#pack"><strong>Pack</strong></a>.</li>
+<li>Execute <a href="../../../unwrap/#tag-finished"><strong>Tag Finished</strong></a> to complete the wire unwrap.</li>
+</ul>
+<p><a class="glightbox" href="../../../img/tutorial/emergency_light/wires_pack.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/wires_pack.gif" /></a></p>
+</li>
+<li>
+<p>Click <a href="../../../select/#isolate-islands-toggle"><strong>Isolate Island</strong></a> to show all other parts and be ready for the next step of the tutorial.</p>
+</li>
+</ol>
+<h3 id="unwrap-handle">Unwrap handle<a class="headerlink" href="#unwrap-handle" title="Permanent link"></a></h3>
+<ol>
+<li>
+<p>Isolate handle for more comfortable work. Let&rsquo;s use something from the <a href="../../../unwrap/#finishing-system">Finished</a> system.</p>
+<ul>
+<li>Click <a href="../../../select/#isolate-islands-toggle"><strong>Isolate Island</strong></a> to display all the parts.</li>
+<li>Click <a href="../../../unwrap/#select-finished">Select</a> in the <a href="../../../unwrap/#finishing-system">Finished</a> panel.</li>
+<li>Click <a href="../../../unwrap/#hide">Hide</a> in the <a href="../../../unwrap/#finishing-system">Finished</a> panel.</li>
+</ul>
+<p><a class="glightbox" href="../../../img/tutorial/emergency_light/handle_isolate.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/handle_isolate.gif" /></a></p>
+</li>
+<li>
+<p>This part consists of several islands, which is not an optimal solution. Let&rsquo;s create a single island instead of multiple islands.</p>
+<ul>
+<li>Select all the islands that belong to the handle.</li>
+<li>Deselect the ends that look like hexagons.</li>
+<li>Click <a href="../../../unwrap/#zen-unwrap"><strong>Zen Unwrap</strong></a>.</li>
+</ul>
+<p><a class="glightbox" href="../../../img/tutorial/emergency_light/handle_create_one_island.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/handle_create_one_island.gif" /></a></p>
+</li>
+<li>
+<p>The island that was created as a result of the latter actions has an incorrect shape. Let&rsquo;s fix it.</p>
+<ul>
+<li>Select the edges belonging to the hole and the edges belonging to the inner edge of the handle.</li>
+<li>Click <a href="../../../unwrap/#zen-unwrap"><strong>Zen Unwrap</strong></a></li>
+</ul>
+<p><a class="glightbox" href="../../../img/tutorial/emergency_light/handle_create_cuts.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/handle_create_cuts.gif" /></a></p>
+</li>
+<li>
+<p>Now we have an unwrapped island. The presence of triangular faces in it does not allow to use the <a href="../../../transform/#quadrify-islands"><strong>Quadrify</strong></a> operator for maximum smoothing. Let&rsquo;s take this island as an example of how the <a href="../../../transform/#reshape-island"><strong>Reshape Island</strong></a> operator works. The essence of <a href="../../../transform/#reshape-island"><strong>Reshape Island</strong></a> is that it aligns the selected edge loops into a straight line and relaxes the remaining vertices.</p>
+<ul>
+<li>Select all the edges that run lengthwise through the center of the island.</li>
+<li>Click <a href="../../../transform/#reshape-island"><strong>Reshape Island</strong></a> to align the island.</li>
+</ul>
+<p><a class="glightbox" href="../../../img/tutorial/emergency_light/reshape_island.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/reshape_island.gif" /></a></p>
+</li>
+<li>
+<p>The island unwrapping can be considered complete. Let&rsquo;s mark it as finished. </p>
+<ul>
+<li>Run the <a href="../../../pack/#pack"><strong>Pack</strong></a> operator.</li>
+<li>Select all the islands.</li>
+<li>Tag them with <a href="../../../unwrap/#tag-finished"><strong>Tag Finished</strong></a> to complete the unwrapping of the handle.</li>
+</ul>
+<p><a class="glightbox" href="../../../img/tutorial/emergency_light/handle_tag_finished.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/handle_tag_finished.gif" /></a></p>
+</li>
+<li>
+<p>Click <a href="../../../select/#isolate-islands-toggle"><strong>Isolate Island</strong></a> to show all other parts and be ready for the next step of the tutorial.</p>
+</li>
+</ol>
+<h2 id="pack">Pack<a class="headerlink" href="#pack" title="Permanent link"></a></h2>
+<p>The previous stage of island creation and unwrapping is completed. Now it&rsquo;s time to place the islands on the texture in such a way as to reduce the amount of free space. All free space on the texture is a waste of resources.</p>
+<h3 id="final-pack">Final pack<a class="headerlink" href="#final-pack" title="Permanent link"></a></h3>
+<ol>
+<li>
+<p>Make sure there are no hidden parts. And then pack it up.</p>
+<ul>
+<li>In the <strong>3D View</strong> in the main menu, click <strong>Mesh - Show/Hide - Reveal Hidden</strong>.</li>
+<li>Use the <a href="../../../pack/#pack-islands"><strong>Pack</strong></a> operator to pack the islands.</li>
+</ul>
+<p><a class="glightbox" href="../../../img/tutorial/emergency_light/final_pack.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/final_pack.gif" /></a></p>
+</li>
+</ol>
+<h3 id="reduce-empty-uv-space-by-stacking">Reduce empty UV space by stacking<a class="headerlink" href="#reduce-empty-uv-space-by-stacking" title="Permanent link"></a></h3>
+<ol>
+<li>
+<p>At this stage, we have tightly packed parts and the work can be considered complete. But if you analyze the construction of the model, you will notice that some islands look similar and are even copies of each other. For example, the cutouts for bolts, the bolts themselves, some small details, etc. To save space on the texture, identical islands can be stacked on top of each other. In terms of creating UV coordinates, this process is called <strong>Stacking</strong>.</p>
+<ul>
+<li>Open the <a href="../../../stack/"><strong>Stack</strong></a> tab.</li>
+<li>Click the <a href="../../../stack/#replicas"><strong>Replicas</strong></a> button. Now we have selected islands that have copies. These islands are called <strong>Replicas</strong>. And their prototypes remain unselected.</li>
+</ul>
+<p><a class="glightbox" href="../../../img/tutorial/emergency_light/stack_replicas_select.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/stack_replicas_select.gif" /></a></p>
+<ul>
+<li>Move the selected islands away from the <strong>UV Area</strong>. Now only unique islands that do not have copies (<strong>Singles</strong>) and islands that are prototypes (<strong>Primaries</strong>) remain in the <strong>UV Area</strong>.</li>
+</ul>
+<p><a class="glightbox" href="../../../img/tutorial/emergency_light/stack_move_replicas.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/stack_move_replicas.gif" /></a></p>
+</li>
+<li>
+<p>In this tutorial, we are using the <a href="../../../pack/#pack-engine"><strong>Blender Pack Engine</strong></a>. The following steps for packing will be described for this engine.</p>
+<ul>
+<li>Hide the islands that have been moved to the side.</li>
+</ul>
+<p><a class="glightbox" href="../../../img/tutorial/emergency_light/stack_hide_replicas.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/stack_hide_replicas.gif" /></a></p>
+<ul>
+<li>Set the correct (desired) <a href="../../../pack/#texture-size"><strong>Texture Size</strong></a> in the <a href="../../../pack/"><strong>Pack</strong></a> panel. For this particular tutorial, the texture size does not matter, but you may plan to create a texture by another tutorial.</li>
+</ul>
+<p><a class="glightbox" href="../../../img/tutorial/emergency_light/stack_set_texture.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/stack_set_texture.gif" /></a></p>
+<ul>
+<li>Set the required value to <a href="../../../pack/#margin"><strong>Margin</strong></a>, which will ensure the correct appearance of the texture when the camera is moved away.</li>
+</ul>
+<p><a class="glightbox" href="../../../img/tutorial/emergency_light/stack_set_margin.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/stack_set_margin.gif" /></a></p>
+<ul>
+<li>Repack using the <a href="../../../pack/#pack-islands"><strong>Pack</strong></a> button.</li>
+</ul>
+<p><a class="glightbox" href="../../../img/tutorial/emergency_light/stack_pack_islands.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/stack_pack_islands.gif" /></a></p>
+<ul>
+<li>In the <a href="../../../stack/"><strong>Stack</strong></a> panel, switch the system to <strong>Selected</strong> mode.</li>
+<li>In order to show hidden <strong>Replicas</strong> in the <strong>3D View</strong> in the main menu, click <strong>Mesh - Show/Hide - Reveal Hidden</strong>.</li>
+<li>Select everything except <strong>Replicas</strong>.</li>
+<li>Click <a href="../../../stack/#stack"><strong>Stack</strong></a> to stack the unselected <strong>Replicas</strong> in place of the selected <strong>Primaries</strong>.</li>
+</ul>
+<p><a class="glightbox" href="../../../img/tutorial/emergency_light/stack_do_stack.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/stack_do_stack.gif" /></a></p>
+</li>
+</ol>
+<p>The packing and stacking is completed. There are only a few final steps left to complete the model.</p>
+<h2 id="set-sharp-edges">Set sharp edges<a class="headerlink" href="#set-sharp-edges" title="Permanent link"></a></h2>
+<ol>
+<li>
+<p>Correctly set sharp edges are not only a guarantee of a good appearance of the model, but also a guarantee of baking <strong>normal map</strong> without errors.</p>
+<ul>
+<li>Use the <a href="../../../unwrap/#conversion-system"><strong>Sharp by UV Borders</strong></a> operator. This operator marks the edges that are the boundary edges of the islands as <strong>sharp</strong>.</li>
+</ul>
+<p><a class="glightbox" href="../../../img/tutorial/emergency_light/sharp_by_uv_borders.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/sharp_by_uv_borders.gif" /></a></p>
+<ul>
+<li>In the operator settings, turn on the <strong>Unmark sharp</strong> option. This will erase any sharp edges that have been previously set.</li>
+</ul>
+<p><a class="glightbox" href="../../../img/tutorial/emergency_light/sharp_by_uv_borders_unmark.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/sharp_by_uv_borders_unmark.gif" /></a></p>
+</li>
+<li>
+<p>There are two ways to set the edge sharpness in Blender.</p>
+<ul>
+<li>By setting the polygon property to Shade Smooth / Shade Sharp.</li>
+<li>By using the Sharp edge property.</li>
+</ul>
+<p>Both methods can work simultaneously, which often leads to artifacts when using the normal map.
+Since we have already set the sharp edges as we need them using the Sharp edge property, let&rsquo;s exclude the possibility of the Smooth/Sharp polygon property affecting the sharpness of the edges. In Zen UV, there is a <a href="../../../unwrap/#smooth-by-sharp">Smooth by Sharp</a> operator.</p>
+<ul>
+<li>Click the <a href="../../../unwrap/#smooth-by-sharp">Smooth by Sharp</a> button. This will set all polygon smoothing to match sharp edges.</li>
+</ul>
+<p><a class="glightbox" href="../../../img/tutorial/emergency_light/smooth_by_sharp.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../img/tutorial/emergency_light/smooth_by_sharp.gif" /></a></p>
+</li>
+</ol>
+<p>Now the <strong>Emergency light</strong> model has correct and optimized UV coordinates and is ready for texture creation and normal map baking.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>For correct baking, the UV area should not contain any stacks or overlaps. Only <a href="../../../stack/#singles">Singles</a> and <a href="../../../stack/#primaries">Primaries</a> should remain. All <a href="../../../stack/#replicas">Replicas</a> should be offset by 1.0. The <a href="../../../stack/#unstack-operator">Unstack</a> operator is a convenient way to do this. However, this process is not part of this tutorial, and this notice is simply a reminder.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>You can manually adjust the correct display of <strong>Sharp Edges</strong>. To do this, follow the steps described below.</p>
+<ul>
+<li>
+<p>In Blender since version 4.1:</p>
+<ul>
+<li>Switch to Object Mode.</li>
+<li>From the 3D View main menu, select <strong>Object - Shade Smooth</strong>.</li>
+</ul>
+</li>
+<li>
+<p>In Blender versions before 4.1:</p>
+<ul>
+<li>Switch to Object Mode.</li>
+<li>From the 3D View main menu, select <strong>Object - Shade Auto Smooth</strong>.</li>
+<li>In the operator settings, turn on the “Auto Smooth” option.</li>
+<li>Set the Angle parameter to 180 degrees.</li>
+</ul>
+</li>
+</ul>
+</div>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../../" class="btn btn-neutral float-left" title="Step-by-Step Guide Examples"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../emergency_light_ukr/" class="btn btn-neutral float-right" title="Emergency Light (UA)">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p><p>Copyright &copy; 2024 <a href="https://zenmasters.team/">Zen Masters</a></p></p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../../" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../emergency_light_ukr/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../search/main.js"></script>
+      <script src="../../../js/version-select.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+</script></body>
+</html>
