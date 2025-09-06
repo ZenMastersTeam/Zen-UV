@@ -61,6 +61,20 @@
                   <li class="toctree-l1 current"><a class="reference internal current" href="#">Installation and Update</a>
     <ul class="current">
     <li class="toctree-l2"><a class="reference internal" href="#installation">Installation</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#installing-via-drag-and-drop">Installing via Drag-and-Drop</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#requirements">✅ Requirements</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#how-to-use-drag-and-drop-installation">📦 How to Use Drag-and-Drop Installation</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#where-to-find-it">📍 Where to Find It</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#troubleshooting">🛠 Troubleshooting</a>
+    </li>
+        </ul>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#zen-uv-core-library-installation">Zen UV Core Library Installation</a>
         <ul>
@@ -70,6 +84,10 @@
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#update">Update</a>
         <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#updating-via-drag-and-drop">🔄 Updating via Drag-and-Drop</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#updating-via-preferences">⚙️ Updating via Preferences</a>
+    </li>
     <li class="toctree-l3"><a class="reference internal" href="#manual-update">Manual Update</a>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#still-have-problems-with-update">Still have problems with update?</a>
@@ -190,17 +208,60 @@
               
                 <h1 id="installation-and-update">Installation and update<a class="headerlink" href="#installation-and-update" title="Permanent link"></a></h1>
 <h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link"></a></h2>
+<p>Starting with <a href="../changelg/release_note_5.1.0/">ZenUV 5.1</a>, your favorite add-on has been upgraded to a Blender Extension - bringing smoother installation, and better integration with Blender’s official extension system.</p>
+<h3 id="installing-via-drag-and-drop">Installing via Drag-and-Drop<a class="headerlink" href="#installing-via-drag-and-drop" title="Permanent link"></a></h3>
+<p>Blender supports a streamlined method for installing add-ons: simply dragging and dropping the <code>.zip</code> file directly into the interface. This approach is ideal for users who want a quick, no-menu setup.</p>
+<p><a class="glightbox" href="../img/screen/installation/install_drag_n_drop.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/installation/install_drag_n_drop.gif" /></a></p>
+<h4 id="requirements">✅ Requirements<a class="headerlink" href="#requirements" title="Permanent link"></a></h4>
+<ul>
+<li>Blender 4.1 or newer (older versions may not support drag-and-drop installation natively)</li>
+<li>Add-on packaged as a <code>.zip</code> file (<strong>not extracted</strong>)</li>
+</ul>
+<h4 id="how-to-use-drag-and-drop-installation">📦 How to Use Drag-and-Drop Installation<a class="headerlink" href="#how-to-use-drag-and-drop-installation" title="Permanent link"></a></h4>
 <ol>
-<li>Go to <strong>Edit</strong> -&gt; <strong>Preferences</strong>.</li>
-<li>Go to <strong>Add-ons</strong>.</li>
-<li>Press <strong>Install</strong>.</li>
-<li>Select Zen UV.zip.</li>
-<li>Press <strong>Install Add-on</strong>.</li>
-<li>Enable Zen UV add-on using checkbox and restart Blender. </li>
-<li>Done! Let&rsquo;s go further and <a href="./#zen-uv-core-library-installation"><strong>install Zen UV Core Library</strong></a> to enable <a href="../stack/#stack"><strong>Stack</strong></a> feature!  </li>
+<li>
+<p><strong>Locate the Add-on File</strong><br />
+   Find the <code>.zip</code> file of the add-on on your computer. <strong>Make sure it’s not unzipped (Blender expects the compressed format).</strong></p>
+</li>
+<li>
+<p><strong>Open Blender</strong><br />
+   Launch Blender and navigate to any editor window (e.g., 3D Viewport, Outliner, or Preferences). As of recent updates, drag-and-drop works across all editors.</p>
+</li>
+<li>
+<p><strong>Drag the File into Blender</strong><br />
+   Click and drag the <code>.zip</code> file from your file explorer and drop it into the Blender window.</p>
+</li>
+<li>
+<p><strong>Confirm Installation</strong><br />
+   Blender will automatically process the file and install the add-on. You’ll see a confirmation message, and the add-on will appear in the <code>Preferences &gt; Add-ons</code> list.</p>
+</li>
+<li>
+<p><strong>Enable the Add-on</strong>
+   Go to <code>Edit &gt; Preferences &gt; Add-ons</code>, search for the newly installed add-on, and check the box to enable it.</p>
+</li>
 </ol>
-<p><a class="glightbox" href="../img/screen/installation/installation.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/installation/installation.png" /></a>
-<a class="glightbox" href="../img/screen/installation/installation_enable.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/installation/installation_enable.png" /></a></p>
+<h3 id="where-to-find-it">📍 Where to Find It<a class="headerlink" href="#where-to-find-it" title="Permanent link"></a></h3>
+<p>During installation, the extension will appear in the <strong>selected repository</strong> - either the default Blender Extensions repository or any custom repository you&rsquo;ve configured in Preferences.</p>
+<ol>
+<li>
+<p><strong>Open Preferences</strong><br />
+   Go to <code>Edit &gt; Preferences</code>, then switch to the <strong>Extensions</strong> tab.</p>
+</li>
+<li>
+<p><strong>Select Repository</strong><br />
+   Choose the repository where the extension is hosted. If you&rsquo;re using a custom repository, make sure the name matches the name that was set during installation.</p>
+</li>
+<li>
+<p><strong>Search for the Extension</strong><br />
+   Use the search bar to find the extension by name.</p>
+</li>
+</ol>
+<h3 id="troubleshooting">🛠 Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link"></a></h3>
+<ul>
+<li>If the add-on doesn’t appear after dropping, check the Console for errors.</li>
+<li>Ensure the file is a valid Blender add-on <code>.zip</code> and not a nested archive.</li>
+<li>Restart Blender after installation if it was previously installed (addon preferences were registered previously).</li>
+</ul>
 <h2 id="zen-uv-core-library-installation">Zen UV Core Library Installation<a class="headerlink" href="#zen-uv-core-library-installation" title="Permanent link"></a></h2>
 <div class="admonition library">
 <p class="admonition-title">Library</p>
@@ -253,6 +314,13 @@
 </ol>
 <hr />
 <h2 id="update">Update<a class="headerlink" href="#update" title="Permanent link"></a></h2>
+<h3 id="updating-via-drag-and-drop">🔄 Updating via Drag-and-Drop<a class="headerlink" href="#updating-via-drag-and-drop" title="Permanent link"></a></h3>
+<p>If you drop a newer version of an add-on you already have installed, Blender will overwrite the old version automatically. No need to uninstall manually.</p>
+<ol>
+<li>Do the same steps as in <a href="#installing-via-drag-and-drop">drag-and-drop</a></li>
+<li>Restart Blender</li>
+</ol>
+<h3 id="updating-via-preferences">⚙️ Updating via Preferences<a class="headerlink" href="#updating-via-preferences" title="Permanent link"></a></h3>
 <ol>
 <li>Go to <strong>Preferences</strong> -&gt; <strong>Add-ons</strong>.</li>
 <li>Find installed and enabled Zen UV add-on.</li>
