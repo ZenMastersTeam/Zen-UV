@@ -76,8 +76,12 @@
     </li>
         </ul>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#zen-uv-core-library-installation">Zen UV Core Library Installation</a>
+    <li class="toctree-l2"><a class="reference internal" href="#zen-uv-core-library">Zen UV Core Library</a>
         <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#when-to-use-core-library">When to Use Core Library</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#zen-uv-core-library-installation">Zen UV Core Library Installation</a>
+    </li>
     <li class="toctree-l3"><a class="reference internal" href="#zen-uv-core-library-installation-for-mac-m1-m2-silicon-app">Zen UV Core Library installation for Mac M1-M2 (Silicon App)</a>
     </li>
         </ul>
@@ -262,11 +266,41 @@
 <li>Ensure the file is a valid Blender add-on <code>.zip</code> and not a nested archive.</li>
 <li>Restart Blender after installation if it was previously installed (addon preferences were registered previously).</li>
 </ul>
-<h2 id="zen-uv-core-library-installation">Zen UV Core Library Installation<a class="headerlink" href="#zen-uv-core-library-installation" title="Permanent link"></a></h2>
-<div class="admonition library">
-<p class="admonition-title">Library</p>
-<p>Zen UV Core library is an additional library of the Zen UV add-on to get the fastest computations (<a href="../stack/#stack">Stack</a> algorithm) in C++ which is impossible to be implemented in Python. It is distributed separately from the add-on as it is licensed differently from the GPL (Apache License 2.0). Zen UV Core library does not collect or send any data. It does not use any network connections: either internet or local. It is supported on Windows, Mac OS 11 (M1 CPU Universal app only), and Linux platforms.</p>
+<h2 id="zen-uv-core-library">Zen UV Core Library<a class="headerlink" href="#zen-uv-core-library" title="Permanent link"></a></h2>
+<p>The <strong>Zen UV Core Library</strong> is an optional utility module bundled with the addon. It provides enhanced functionality specifically for the <a href="../stack/#stack"><strong>Stack module</strong></a> to get the fastest computations in C++ which is impossible to be implemented in Python, including:</p>
+<ul>
+<li>🧩 <strong>Island stacking operations</strong>: Efficient handling of geometry islands during stacking workflows.</li>
+<li>⏳ <strong>Progress bar with cancel support</strong>: Displays a responsive progress bar during long operations, allowing users to cancel if needed.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It is distributed separately from the add-on as it is licensed differently from the GPL (Apache License 2.0). Zen UV Core library does not collect or send any data. It does not use any network connections: either internet or local. It is supported on Windows, Mac OS 11 (M1 CPU Universal app only), and Linux platforms. <strong>This library is not required for other addon features and can be excluded if the Stack module is not in use.</strong></p>
 </div>
+<h3 id="when-to-use-core-library">When to Use Core Library<a class="headerlink" href="#when-to-use-core-library" title="Permanent link"></a></h3>
+<p>You’ll need the Core Library only if you plan to use:</p>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Requires Core Library?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Stack module (island stacking)</td>
+<td>✅ Yes</td>
+</tr>
+<tr>
+<td>Progress bar with cancel</td>
+<td>✅ Yes</td>
+</tr>
+<tr>
+<td>General addon functionality</td>
+<td>❌ No</td>
+</tr>
+</tbody>
+</table>
+<h3 id="zen-uv-core-library-installation">Zen UV Core Library Installation<a class="headerlink" href="#zen-uv-core-library-installation" title="Permanent link"></a></h3>
 <ol>
 <li>Go to <strong>Preferences</strong> -&gt; <strong>Add-ons</strong>.</li>
 <li>Find installed and enabled Zen UV add-on.</li>
