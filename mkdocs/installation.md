@@ -46,11 +46,26 @@ During installation, the extension will appear in the **selected repository** - 
 - Ensure the file is a valid Blender add-on `.zip` and not a nested archive.
 - Restart Blender after installation if it was previously installed (addon preferences were registered previously).
 
-## Zen UV Core Library Installation
+## Zen UV Core Library
+The **Zen UV Core Library** is an optional utility module bundled with the addon. It provides enhanced functionality specifically for the [**Stack module**](stack.md#stack) to get the fastest computations in C++ which is impossible to be implemented in Python, including:
 
-!!! Library
-    Zen UV Core library is an additional library of the Zen UV add-on to get the fastest computations ([Stack](stack.md#stack) algorithm) in C++ which is impossible to be implemented in Python. It is distributed separately from the add-on as it is licensed differently from the GPL (Apache License 2.0). Zen UV Core library does not collect or send any data. It does not use any network connections: either internet or local. It is supported on Windows, Mac OS 11 (M1 CPU Universal app only), and Linux platforms.
+- 🧩 **Island stacking operations**: Efficient handling of geometry islands during stacking workflows.
+- ⏳ **Progress bar with cancel support**: Displays a responsive progress bar during long operations, allowing users to cancel if needed.
 
+!!! Note
+	It is distributed separately from the add-on as it is licensed differently from the GPL (Apache License 2.0). Zen UV Core library does not collect or send any data. It does not use any network connections: either internet or local. It is supported on Windows, Mac OS 11 (M1 CPU Universal app only), and Linux platforms. **This library is not required for other addon features and can be excluded if the Stack module is not in use.**
+
+### When to Use Core Library
+
+You’ll need the Core Library only if you plan to use:
+
+| Feature                        | Requires Core Library? |
+|-------------------------------|------------------------|
+| Stack module (island stacking) | ✅ Yes                 |
+| Progress bar with cancel       | ✅ Yes                 |
+| General addon functionality    | ❌ No                  |
+
+### Zen UV Core Library Installation
 1. Go to **Preferences** -> **Add-ons**.
 2. Find installed and enabled Zen UV add-on.
 3. Go to **Modules**.
