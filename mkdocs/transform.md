@@ -351,6 +351,78 @@ First, you need to select a part of the mesh with the correct coordinates. The o
 
 ---
 
+### Round UV Coordinates
+
+Rounds the value of each UV coordinate to the specified value.
+
+!!! Properties
+    ![Round UV Coordinates](img/screen/transform/round_uv_coordinates_prop.png)
+
+- **Axis** - Influence axis selection
+    - *X* - Axis X
+    - *Y* - Axis Y
+- **Rounding Step X** - Step to which the value will be rounded along X axis
+- **Rounding Step Y** - Step to which the value will be rounded along Y axis
+- **Lock Step Values** - Lock Step Values
+
+|![Round UV Coordinates](img/screen/transform/RoundUvCoordinatesExample.gif)|
+|-|
+|Round UV Coordinates Example|
+
+---
+
+### Circular
+
+Transform selection to the circular shape.
+
+!!! Properties
+    ![Circular panel](img/screen/transform/circolar_op_prop.png)
+
+- **Evenly** - Arrange the vertices evenly
+- **Amount** - Position along the vector from start to end, in percent (0-100)
+- **Radius mode** - Determines how to set the radius of a circle
+    - *Automatically* - Calculate radius automatically
+    - *Custom* - Use manually entered radius
+- **Radius** - Circle radius
+
+|![Circular Example](img/screen/transform/op_circular_example.gif)|
+|-|
+|Circular Example|
+
+---
+
+### Rectify
+
+Transforms the selected island into a rectangular shape
+
+!!! Properties
+    ![Rectify Properties](img/screen/transform/rectify_op_prop.png)
+
+- **Reference** - Defines what the transformation is based on
+    - *Island Bounds* - Use island bounds as reference
+    - *Selection* - Use user selection as reference
+- **Orient To Axis** - Auto-orient island to nearest axis
+- **Spacing** - How to create spaces between points
+    - *UV* - From current UV positions
+    - *Geometry* - As it is in geometry
+    - *Evenly* - Evenly
+- **Amount** - Position along the vector from start to end, in percent (0-100)
+- **Relax** - Enable relaxation of adjacent vertices
+- **Relax Method** - Method of Relaxation
+    - *Angle Based* - Uses Angle Based Flattening (ABF). This method gives a good 2D representation of a mesh
+    - *Conformal* - Uses Least Squares Conformal Mapping (LSCM). This usually results in a less accurate UV mapping than Angle Based, but performs better on simpler objects
+    - *Minimum Stretch* - Uses Scalable Locally Injective Mapping (SLIM). This tries to minimize distortion for both areas and angles
+- **Pin** - Set the pin to the vertices to be processed
+- **Select Mode** - Select vertices based on their position relative to the bounding box
+    - *Skip* - Do not select vertices
+    - *Border* - Select vertices on the border of the bounding box
+    - *Inside* - Select vertices strictly inside the bounding box
+    - *Outside* - Select vertices outside the bounding box
+
+|![Rectify Example](img/screen/transform/op_rectify_example.gif)|
+|-|
+|Rectify Example|
+
 ## Unified Transform System
 
 !!! Panel

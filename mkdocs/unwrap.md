@@ -72,7 +72,15 @@ The main modes of operation are **Face** and **Edge**. Vertex mode is used as an
 
 This mode will create seams around the selected polygons. The entire mesh will be unwrapped based on the existing (and newly added) seams, depending on the **Processing Mode**. In fact, you will create a new island from the selected polygons.
 
-#### Edge Selection Mode.
+In case the object has no open edges (for example, a sphere), and you select all polygons before running the **Zen Unwrap** operator, the following situation may occur:  
+the operator first removes all seams (since all polygons are selected) and cannot create new ones, because there are no borders available.  
+
+As a result, you will receive a warning in the form of a popup message.
+
+![no open edges popup](img/screen/unwrap/zwrp_nothing_produced_popup.png)
+
+
+#### Edge selection mode.
 
 In this mode, all selected edges will be marked as seams and then the mesh will be unwrapped.
 

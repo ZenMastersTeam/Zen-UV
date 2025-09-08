@@ -396,6 +396,12 @@ The previous stage of island creation and unwrapping is completed. Now it's time
 
 ### Reduce empty UV space by stacking
 
+!!! Warning
+    Before proceeding, make sure that the **Zen UV Core Library** is installed.  
+    Without this library, you will get a simplified stacking result.  
+    Instructions for installation can be found here:  
+    [Zen UV Core Library installation](https://zenmastersteam.github.io/Zen-UV/latest/installation/#zen-uv-core-library)
+
 1. At this stage, we have tightly packed parts and the work can be considered complete. But if you analyze the construction of the model, you will notice that some islands look similar and are even copies of each other. For example, the cutouts for bolts, the bolts themselves, some small details, etc. To save space on the texture, identical islands can be stacked on top of each other. In terms of creating UV coordinates, this process is called **Stacking**.
     - Open the [**Stack**](../../stack.md) tab.
     - Click the [**Replicas**](../../stack.md#replicas) button. Now we have selected islands that have copies. These islands are called **Replicas**. And their prototypes remain unselected.
