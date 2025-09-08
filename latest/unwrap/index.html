@@ -99,7 +99,7 @@
         <ul>
     <li class="toctree-l4"><a class="reference internal" href="#face-selection-mode">Face selection mode.</a>
     </li>
-    <li class="toctree-l4"><a class="reference internal" href="#edge-selection-mode">Edge Selection Mode.</a>
+    <li class="toctree-l4"><a class="reference internal" href="#edge-selection-mode">Edge selection mode.</a>
     </li>
     <li class="toctree-l4"><a class="reference internal" href="#vertex-selection-mode">Vertex selection mode.</a>
     </li>
@@ -323,7 +323,11 @@
 <h4 id="face-selection-mode">Face selection mode.<a class="headerlink" href="#face-selection-mode" title="Permanent link"></a></h4>
 <p><a class="glightbox" href="../img/gifs/zuwrp_operator/zwrp_faces_mode.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Zen Unwrap Face Mode" src="../img/gifs/zuwrp_operator/zwrp_faces_mode.gif" /></a></p>
 <p>This mode will create seams around the selected polygons. The entire mesh will be unwrapped based on the existing (and newly added) seams, depending on the <strong>Processing Mode</strong>. In fact, you will create a new island from the selected polygons.</p>
-<h4 id="edge-selection-mode">Edge Selection Mode.<a class="headerlink" href="#edge-selection-mode" title="Permanent link"></a></h4>
+<p>In case the object has no open edges (for example, a sphere), and you select all polygons before running the <strong>Zen Unwrap</strong> operator, the following situation may occur:<br />
+the operator first removes all seams (since all polygons are selected) and cannot create new ones, because there are no borders available.  </p>
+<p>As a result, you will receive a warning in the form of a popup message.</p>
+<p><a class="glightbox" href="../img/screen/unwrap/zwrp_nothing_produced_popup.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="no open edges popup" src="../img/screen/unwrap/zwrp_nothing_produced_popup.png" /></a></p>
+<h4 id="edge-selection-mode">Edge selection mode.<a class="headerlink" href="#edge-selection-mode" title="Permanent link"></a></h4>
 <p>In this mode, all selected edges will be marked as seams and then the mesh will be unwrapped.</p>
 <p><a class="glightbox" href="../img/gifs/zuwrp_operator/zwrp_edges_mode.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Zen Unwrap Edge Mode" src="../img/gifs/zuwrp_operator/zwrp_edges_mode.gif" /></a></p>
 <h4 id="vertex-selection-mode">Vertex selection mode.<a class="headerlink" href="#vertex-selection-mode" title="Permanent link"></a></h4>

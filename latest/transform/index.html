@@ -111,6 +111,12 @@
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#mirror-uv">Mirror UV</a>
     </li>
+    <li class="toctree-l3"><a class="reference internal" href="#round-uv-coordinates">Round UV Coordinates</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#circular">Circular</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#rectify">Rectify</a>
+    </li>
         </ul>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#unified-transform-system">Unified Transform System</a>
@@ -784,6 +790,112 @@ First, you need to select a part of the mesh with the correct coordinates. The o
 </tbody>
 </table>
 <hr />
+<h3 id="round-uv-coordinates">Round UV Coordinates<a class="headerlink" href="#round-uv-coordinates" title="Permanent link"></a></h3>
+<p>Rounds the value of each UV coordinate to the specified value.</p>
+<div class="admonition properties">
+<p class="admonition-title">Properties</p>
+<p><a class="glightbox" href="../img/screen/transform/round_uv_coordinates_prop.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Round UV Coordinates" src="../img/screen/transform/round_uv_coordinates_prop.png" /></a></p>
+</div>
+<ul>
+<li><strong>Axis</strong> - Influence axis selection<ul>
+<li><em>X</em> - Axis X</li>
+<li><em>Y</em> - Axis Y</li>
+</ul>
+</li>
+<li><strong>Rounding Step X</strong> - Step to which the value will be rounded along X axis</li>
+<li><strong>Rounding Step Y</strong> - Step to which the value will be rounded along Y axis</li>
+<li><strong>Lock Step Values</strong> - Lock Step Values</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><a class="glightbox" href="../img/screen/transform/RoundUvCoordinatesExample.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Round UV Coordinates" src="../img/screen/transform/RoundUvCoordinatesExample.gif" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Round UV Coordinates Example</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="circular">Circular<a class="headerlink" href="#circular" title="Permanent link"></a></h3>
+<p>Transform selection to the circular shape.</p>
+<div class="admonition properties">
+<p class="admonition-title">Properties</p>
+<p><a class="glightbox" href="../img/screen/transform/circolar_op_prop.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Circular panel" src="../img/screen/transform/circolar_op_prop.png" /></a></p>
+</div>
+<ul>
+<li><strong>Evenly</strong> - Arrange the vertices evenly</li>
+<li><strong>Amount</strong> - Position along the vector from start to end, in percent (0-100)</li>
+<li><strong>Radius mode</strong> - Determines how to set the radius of a circle<ul>
+<li><em>Automatically</em> - Calculate radius automatically</li>
+<li><em>Custom</em> - Use manually entered radius</li>
+</ul>
+</li>
+<li><strong>Radius</strong> - Circle radius</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><a class="glightbox" href="../img/screen/transform/op_circular_example.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Circular Example" src="../img/screen/transform/op_circular_example.gif" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Circular Example</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="rectify">Rectify<a class="headerlink" href="#rectify" title="Permanent link"></a></h3>
+<p>Transforms the selected island into a rectangular shape</p>
+<div class="admonition properties">
+<p class="admonition-title">Properties</p>
+<p><a class="glightbox" href="../img/screen/transform/rectify_op_prop.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Rectify Properties" src="../img/screen/transform/rectify_op_prop.png" /></a></p>
+</div>
+<ul>
+<li><strong>Reference</strong> - Defines what the transformation is based on<ul>
+<li><em>Island Bounds</em> - Use island bounds as reference</li>
+<li><em>Selection</em> - Use user selection as reference</li>
+</ul>
+</li>
+<li><strong>Orient To Axis</strong> - Auto-orient island to nearest axis</li>
+<li><strong>Spacing</strong> - How to create spaces between points<ul>
+<li><em>UV</em> - From current UV positions</li>
+<li><em>Geometry</em> - As it is in geometry</li>
+<li><em>Evenly</em> - Evenly</li>
+</ul>
+</li>
+<li><strong>Amount</strong> - Position along the vector from start to end, in percent (0-100)</li>
+<li><strong>Relax</strong> - Enable relaxation of adjacent vertices</li>
+<li><strong>Relax Method</strong> - Method of Relaxation<ul>
+<li><em>Angle Based</em> - Uses Angle Based Flattening (ABF). This method gives a good 2D representation of a mesh</li>
+<li><em>Conformal</em> - Uses Least Squares Conformal Mapping (LSCM). This usually results in a less accurate UV mapping than Angle Based, but performs better on simpler objects</li>
+<li><em>Minimum Stretch</em> - Uses Scalable Locally Injective Mapping (SLIM). This tries to minimize distortion for both areas and angles</li>
+</ul>
+</li>
+<li><strong>Pin</strong> - Set the pin to the vertices to be processed</li>
+<li><strong>Select Mode</strong> - Select vertices based on their position relative to the bounding box<ul>
+<li><em>Skip</em> - Do not select vertices</li>
+<li><em>Border</em> - Select vertices on the border of the bounding box</li>
+<li><em>Inside</em> - Select vertices strictly inside the bounding box</li>
+<li><em>Outside</em> - Select vertices outside the bounding box</li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><a class="glightbox" href="../img/screen/transform/op_rectify_example.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Rectify Example" src="../img/screen/transform/op_rectify_example.gif" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Rectify Example</td>
+</tr>
+</tbody>
+</table>
 <h2 id="unified-transform-system">Unified Transform System<a class="headerlink" href="#unified-transform-system" title="Permanent link"></a></h2>
 <div class="admonition panel">
 <p class="admonition-title">Panel</p>
