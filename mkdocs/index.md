@@ -63,5 +63,6 @@ Currently we support Blender 3.6 LTS version and higher official versions.
 
 | Blender Version | Release Date | End of support |
 |---|---|---|
-| 3.6 LTS | June 27, 2023 | June 27, 2025 |
+| 3.6 LTS | June 27, 2023 | June 27, 2025 (expired) |
 | 4.2 LTS | July 16, 2024 | July 16, 2026 |
+| 4.5 LTS | July 16, 2024 | July 14, 2027 |

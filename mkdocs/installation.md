@@ -1,23 +1,71 @@
 # Installation and update
 
 ## Installation
+Starting with [ZenUV 5.1](changelg/release_note_5.1.0.md), your favorite add-on has been upgraded to a Blender Extension - bringing smoother installation, and better integration with Blender’s official extension system.
 
-1. Go to **Edit** -> **Preferences**.
-2. Go to **Add-ons**.
-3. Press **Install**.
-4. Select Zen UV.zip.
-5. Press **Install Add-on**.
-6. Enable Zen UV add-on using checkbox and restart Blender. 
-7. Done! Let's go further and [**install Zen UV Core Library**](installation.md#zen-uv-core-library-installation) to enable [**Stack**](stack.md#stack) feature!  
+### Installing via Drag-and-Drop
+Blender supports a streamlined method for installing add-ons: simply dragging and dropping the `.zip` file directly into the interface. This approach is ideal for users who want a quick, no-menu setup.
 
-![](img/screen/installation/installation.png)
-![](img/screen/installation/installation_enable.png)
+![](img/screen/installation/install_drag_n_drop.gif)
 
-## Zen UV Core Library Installation
+#### ✅ Requirements
+- Blender 4.1 or newer (older versions may not support drag-and-drop installation natively)
+- Add-on packaged as a `.zip` file (**not extracted**)
 
-!!! Library
-    Zen UV Core library is an additional library of the Zen UV add-on to get the fastest computations ([Stack](stack.md#stack) algorithm) in C++ which is impossible to be implemented in Python. It is distributed separately from the add-on as it is licensed differently from the GPL (Apache License 2.0). Zen UV Core library does not collect or send any data. It does not use any network connections: either internet or local. It is supported on Windows, Mac OS 11 (M1 CPU Universal app only), and Linux platforms.
+#### 📦 How to Use Drag-and-Drop Installation
 
+1. **Locate the Add-on File**  
+   Find the `.zip` file of the add-on on your computer. **Make sure it’s not unzipped (Blender expects the compressed format).**
+
+2. **Open Blender**  
+   Launch Blender and navigate to any editor window (e.g., 3D Viewport, Outliner, or Preferences). As of recent updates, drag-and-drop works across all editors.
+
+3. **Drag the File into Blender**  
+   Click and drag the `.zip` file from your file explorer and drop it into the Blender window.
+
+4. **Confirm Installation**  
+   Blender will automatically process the file and install the add-on. You’ll see a confirmation message, and the add-on will appear in the `Preferences > Add-ons` list.
+
+5. **Enable the Add-on**
+   Go to `Edit > Preferences > Add-ons`, search for the newly installed add-on, and check the box to enable it.
+
+### 📍 Where to Find It
+During installation, the extension will appear in the **selected repository** - either the default Blender Extensions repository or any custom repository you've configured in Preferences.
+
+1. **Open Preferences**  
+   Go to `Edit > Preferences`, then switch to the **Extensions** tab.
+
+2. **Select Repository**  
+   Choose the repository where the extension is hosted. If you're using a custom repository, make sure the name matches the name that was set during installation.
+
+3. **Search for the Extension**  
+   Use the search bar to find the extension by name.
+
+### 🛠 Troubleshooting
+- If the add-on doesn’t appear after dropping, check the Console for errors.
+- Ensure the file is a valid Blender add-on `.zip` and not a nested archive.
+- Restart Blender after installation if it was previously installed (addon preferences were registered previously).
+
+## Zen UV Core Library
+The **Zen UV Core Library** is an optional utility module bundled with the addon. It provides enhanced functionality specifically for the [**Stack module**](stack.md#stack) to get the fastest computations in C++ which is impossible to be implemented in Python, including:
+
+- 🧩 **Island stacking operations**: Efficient handling of geometry islands during stacking workflows.
+- ⏳ **Progress bar with cancel support**: Displays a responsive progress bar during long operations, allowing users to cancel if needed.
+
+!!! Note
+	It is distributed separately from the add-on as it is licensed differently from the GPL (Apache License 2.0). Zen UV Core library does not collect or send any data. It does not use any network connections: either internet or local. It is supported on Windows, Mac OS 11 (M1 CPU Universal app only), and Linux platforms. **This library is not required for other addon features and can be excluded if the Stack module is not in use.**
+
+### When to Use Core Library
+
+You’ll need the Core Library only if you plan to use:
+
+| Feature                        | Requires Core Library? |
+|-------------------------------|------------------------|
+| Stack module (island stacking) | ✅ Yes                 |
+| Progress bar with cancel       | ✅ Yes                 |
+| General addon functionality    | ❌ No                  |
+
+### Zen UV Core Library Installation
 1. Go to **Preferences** -> **Add-ons**.
 2. Find installed and enabled Zen UV add-on.
 3. Go to **Modules**.
@@ -66,6 +114,13 @@
 
 ## Update
 
+### 🔄 Updating via Drag-and-Drop
+If you drop a newer version of an add-on you already have installed, Blender will overwrite the old version automatically. No need to uninstall manually.
+
+1. Do the same steps as in [drag-and-drop](#installing-via-drag-and-drop)
+2. Restart Blender
+
+### ⚙️ Updating via Preferences
 1. Go to **Preferences** -> **Add-ons**.
 2. Find installed and enabled Zen UV add-on.
 3. Press **Update Zen UV**.
