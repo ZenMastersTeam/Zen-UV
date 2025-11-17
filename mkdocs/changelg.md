@@ -1,5 +1,6 @@
 # Changelog
 ---
+- [Version 5.2.0](changelg/release_note_5.2.0.md) *Nov 17, 2025*
 - [Version 5.1.0](changelg/release_note_5.1.0.md) *Sep 05, 2025*
 - [Version 5.0.3](changelg/release_note_5.0.3.md) *Jun 17, 2025*
 - [Version 5.0.2](changelg/release_note_5.0.2.md) *Jun 12, 2025*
