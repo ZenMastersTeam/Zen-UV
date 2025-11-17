@@ -27,6 +27,8 @@
     - [Select Zero Area Faces](#select-zero-area-faces)
     - [Select Faces Less than Pixel](#select-faces-less-than-pixel)
     - [Select Faces By Normal](#select-faces-by-normal)
+    - [Select Cylinder Faces](#select-cylinder-faces)
+    - [Select Cylinder Cap](#select-cylinder-cap)        
 
 - [<u>**Edges**</u>](#edges)
     - [Select Seam](#select-seam)
@@ -36,6 +38,7 @@
     - [Select Cylinder Edges (Splits)](#select-cylinder-edges-splits)
     - [Select Edges by Condition](#select-edges-by-condition)
     - [Select Edges By Direction](#select-edges-by-direction)
+    - [Select Material Boundary Edges](#select-material-boundary-edges)
 
 - [<u>**Loops**</u>](#loops)
     - [Zen Sync](#zen-sync)
@@ -312,6 +315,14 @@ This way, you can select polygons that are "not visible" from the position of th
     - **Threshold** - Controls the accuracy of normal alignment (acts as an angular tolerance).
 
 ---
+### Select Cylinder Faces
+Select connected quad faces that form a cylindrical surface. Useful for detecting cylindrical geometry in meshes. Selects faces or boundary edges depending on mesh selection mode
+
+---
+### Select Cylinder Cap
+Select the caps of cylinder meshes. Selects faces or boundary edges depending on mesh selection mode
+
+---
 
 ## Edges
 
@@ -435,6 +446,10 @@ Select edges by direction along U or V axis.
 | ![Select_Edges_by_Direction](img/gifs/select_operators/Select_Edges_by_Direction.gif) |
 | --- |
 | Select edges by direction |
+
+---
+### Select Material Boundary Edges
+Selects all edges where the adjacent faces have different material assignments
 
 ---
 
