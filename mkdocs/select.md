@@ -459,7 +459,7 @@ Selects all edges where the adjacent faces have different material assignments
 
 Keep UV and edit mode mesh selection in sync, showing all islands of unhided mesh elements.
 
-** Edges and Faces - only supported!*
+**Edges and Faces - only supported!**
 
 |![Zen Sync](img/screen/select/zen_sync_example.gif) |
 |---|
