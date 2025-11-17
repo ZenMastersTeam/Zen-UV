@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>UV Checker - Zen UV 5.2 for Blender</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../css/version-select.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "UV Checker";
+        var mkdocs_page_input_path = "checker.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-7XHJ910WF8"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', "G-7XHJ910WF8");
+      </script>
+ <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }</style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Zen UV 5.2 for Blender
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../youtube_videos/">Learning Videos</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../installation/">Installation and Update</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../user_interface/">User Interface</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Tutorial</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../tutorial/">Step-by-Step Guide Examples</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >Emergency Light</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../tutorial/emergency_light/emergency_light_eng/">Emergency Light (EN)</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../tutorial/emergency_light/emergency_light_ukr/">Emergency Light (UA)</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../tutorial/emergency_light/emergency_light_rus/">Emergency Light (RU)</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Modules</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../adv_uv-maps/">Advanced UV Maps</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../seam_groups/">Seam Groups</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../unwrap/">Unwrap</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../select/">Select</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../transform/">Transform</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../stack/">Stack</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../texel_density/">Texel Density</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">UV Checker</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#checker-texture">Checker Texture</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#checker-preferences">Checker Preferences</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#operator-mechanism">Operator mechanism</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#remove-checker-nodes">Remove Checker Nodes</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#checker-textures-selector">Checker Textures Selector</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#1-interpolation">1. Interpolation</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#2-checker-textures">2. Checker Textures</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#3-filter">3. Filter</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#darken-image">Darken Image</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#display">Display</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#blender-draw-system">Blender Draw System</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#zen-uv-draw-system">Zen UV Draw System</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#finished">Finished</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#flipped">Flipped</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#stretched">Stretched</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#excluded">Excluded</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#overlapped">Overlapped</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#self-intersecting">Self-Intersecting</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#texel-density">Texel Density</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_1"></a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#trim-colors">Trim Colors</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#uv-no-sync">UV No Sync</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#seams">Seams</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#uv-borders">UV Borders</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#uv-object">UV Object</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#stacks">Stacks</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#zen-uv-draw-system-preferences-edit-mode">Zen UV Draw System Preferences (Edit Mode)</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#zen-uv-draw-system-preferences-object-mode">Zen UV Draw System Preferences (Object Mode)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#how-to-set-hotkey-to-specific-draw-mode">How to set hotkey to specific draw mode</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#tools">Tools</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#elements-by-index">Elements by Index</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#zero-area-faces">Zero Area Faces</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#edges-without-faces">Edges Without Faces</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#edges-with-multiple-loops">Edges with multiple loops</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#empty-objects">Empty objects</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#doubled-vertices">Doubled Vertices</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#free-vertices">Free Vertices</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#uv-islands-counter">UV Islands Counter</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#calc-uv-edges-length">Calc UV Edges Length</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#calculate-uv-pixel-size">Calculate UV Pixel Size</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#set-viewport-display-mode">Set Viewport Display Mode</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#clear-attributes">Clear Attributes</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#correct-self-intersecting">Correct Self-Intersecting</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pack/">Pack</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../preferences/">Preferences</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../transform_tool/">Transform Tool</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../touch_tool/">Touch Tool</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../sticky_uv_editor/">Sticky UV Editor</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../favourites/">Favourites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Trim Sheets</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../trimsheet/">Trim Sheets</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../trimsheet_creation/">Trim Sheet Management</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../trimsheet_operators/">Trim Sheet Operators</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../trimsheet_hotspot/">Hotspot Mapping</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Additional</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../addon_prefs/">Addon Preferences</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../user_script/">User Script</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../help/">Help</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../troubleshooting/">FAQs</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../changelg/">Changelog</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../credits/">Credits</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../our_addons/">Our Add-ons</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../recommended_addons/">Recommended Add-ons</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Zen UV 5.2 for Blender</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Modules</li>
+      <li class="breadcrumb-item active">UV Checker</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="uv-checker">UV Checker<a class="headerlink" href="#uv-checker" title="Permanent link"></a></h1>
+<p>This panel contains tools to check the state of UVs on the model, visually and technically.</p>
+<div class="admonition panel">
+<p class="admonition-title">Panel</p>
+<table>
+<thead>
+<tr>
+<th>3D Viewport</th>
+<th>UV Editor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="glightbox" href="../img/screen/tex_checker/checker_main_panel.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/tex_checker/checker_main_panel.png" /></a></td>
+<td><a class="glightbox" href="../img/screen/tex_checker/checker_main_panel_uveditor.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/tex_checker/checker_main_panel_uveditor.png" /></a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Display and Select <strong>Crease</strong>, <strong>Sharp</strong>, <strong>Bevel</strong>, <strong>Seams</strong> and <strong>UV No Sync</strong> operators are absent on the panel in UV Editor. To use these operators you need to switch to 3D Viewport context.</p>
+</div>
+<h3 id="checker-texture">Checker Texture<a class="headerlink" href="#checker-texture" title="Permanent link"></a></h3>
+<p>Add/Remove Checker Texture to/from the mesh. <a class="glightbox" href="../img/icons/checker_32.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Checker Texture" src="../img/icons/checker_32.png" /></a> <code>Alt+T</code></p>
+<p><a class="glightbox" href="../img/screen/tex_checker/checker_texture.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="checker texture" src="../img/screen/tex_checker/checker_texture.gif" /></a> </p>
+<p>Starting from Zen UV v5.0.0 changed operator properties. It uses keys to enable checker, disable checker and toggle checker. This does not affect the work in UI, but adds convenience when using the operator in scripts.</p>
+<pre><code class="language-python">bpy.ops.view3d.zenuv_checker_toggle(action='ON')
+bpy.ops.view3d.zenuv_checker_toggle(action='OFF')
+bpy.ops.view3d.zenuv_checker_toggle(action='TOGGLE')
+</code></pre>
+<hr />
+<h4 id="checker-preferences">Checker Preferences<a class="headerlink" href="#checker-preferences" title="Permanent link"></a></h4>
+<p><a class="glightbox" href="../img/screen/tex_checker/tex_chk_props.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Main Panel" src="../img/screen/tex_checker/tex_chk_props.png" /></a></p>
+<ul>
+<li><strong>Checker Library Folder</strong> - Checker Library Folder indicates the folder with which Zen UV Checker will work. All textures in * .JPG, * .PNG formats that are inside this folder will be collected in Checker Textures list and can be used to display on selected models.</li>
+<li><strong>Reset Folder</strong> - Reset Checker Library path to Default State.</li>
+<li><strong>Load Your Texture</strong> - Open File Browser and add the selected texture to the Checker Library.</li>
+<li><strong>Refresh Texture Library</strong> - Refresh Textures from Checker Library Folder.</li>
+<li><strong>Auto Sync Checker</strong> - Automatically sync selected Checker Texture with Viewport.</li>
+<li><strong>Open Shader Editor</strong> - Open Shader Editor with Zen UV Checker Node.</li>
+<li><strong>Reset Checker</strong> - Reset Zen UV Checker to Default state.</li>
+</ul>
+<hr />
+<h4 id="operator-mechanism">Operator mechanism<a class="headerlink" href="#operator-mechanism" title="Permanent link"></a></h4>
+<p>Checker Texture Toggle is adding/removing Zen UV Checker Node on/from top of your materials in Shader Editor. Your materials are safe!</p>
+<p><a class="glightbox" href="../img/screen/tex_checker/checker_texture_node.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="checker texture" src="../img/screen/tex_checker/checker_texture_node.gif" /></a></p>
+<hr />
+<h3 id="remove-checker-nodes">Remove Checker Nodes<a class="headerlink" href="#remove-checker-nodes" title="Permanent link"></a></h3>
+<p>Remove Zen UV Checker Nodes from all the scene materials.</p>
+<h3 id="checker-textures-selector">Checker Textures Selector<a class="headerlink" href="#checker-textures-selector" title="Permanent link"></a></h3>
+<p><a class="glightbox" href="../img/screen/tex_checker/chk_filter_interpolation.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/tex_checker/chk_filter_interpolation.png" /></a></p>
+<h4 id="1-interpolation">1. Interpolation <a class="glightbox" href="../img/screen/tex_checker/ico_interpolation.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/tex_checker/ico_interpolation.png" /></a><a class="headerlink" href="#1-interpolation" title="Permanent link"></a></h4>
+<p>Switch texture interpolation in the Checker Node between Linear and Closest.</p>
+<p><a class="glightbox" href="../img/screen/tex_checker/interp_differences.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/tex_checker/interp_differences.png" /></a></p>
+<h4 id="2-checker-textures">2. Checker Textures<a class="headerlink" href="#2-checker-textures" title="Permanent link"></a></h4>
+<p>The Checker Textures field is used to select the checker texture that will be displayed on the selected models. It contains full list of default textures.</p>
+<p><a class="glightbox" href="../img/screen/tex_checker/chk_textures_full_list.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/tex_checker/chk_textures_full_list.png" /></a></p>
+<p>Any texture can be tiled or offset but only in the Material Preview or Rendered modes.</p>
+<p><a class="glightbox" href="../img/screen/tex_checker/m_prev_offset_modes.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/tex_checker/m_prev_offset_modes.png" /></a></p>
+<p><a class="glightbox" href="../img/screen/tex_checker/chk_tiling_offset.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/tex_checker/chk_tiling_offset.png" /></a></p>
+<p>Every texture has an bright green pixel in U = 0, V = 0 coordinates.
+If you see green faces - keep in mind that they do not have UV coordinates.</p>
+<p><a class="glightbox" href="../img/screen/tex_checker/magic_pixel.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/tex_checker/magic_pixel.png" /></a></p>
+<h4 id="3-filter">3. Filter <a class="glightbox" href="../img/icons/checker-Filter_32.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/icons/checker-Filter_32.png" /></a><a class="headerlink" href="#3-filter" title="Permanent link"></a></h4>
+<p>Enable resolution fields to filter existing textures by X or/and Y resolutions.
+Includes a Lock button for filtering square format textures.</p>
+<p><a class="glightbox" href="../img/screen/tex_checker/filter_is_on.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/tex_checker/filter_is_on.png" /></a></p>
+<p>Includes an &ldquo;O&rdquo; button for activating Orient Checker texture.
+Screenshot when Orient filtering is on.</p>
+<p><a class="glightbox" href="../img/screen/tex_checker/filter_orient_is_on.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/tex_checker/filter_orient_is_on.png" /></a></p>
+<hr />
+<h3 id="darken-image">Darken Image<a class="headerlink" href="#darken-image" title="Permanent link"></a></h3>
+<p>UV Editor panel contains an extra Display operator designed to adjust the darkening of an Image in the context of the UV Editor. More info in the <a href="../user_interface/#darken-image"><strong>Darken Image</strong></a> article.</p>
+<hr />
+<h3 id="display">Display<a class="headerlink" href="#display" title="Permanent link"></a></h3>
+<p>All useful for checking UVs Draw operators and their settings.</p>
+<hr />
+<h4 id="blender-draw-system">Blender Draw System<a class="headerlink" href="#blender-draw-system" title="Permanent link"></a></h4>
+<div class="admonition subpanel">
+<p class="admonition-title">Subpanel</p>
+<p><a class="glightbox" href="../img/screen/tex_checker/checker_display_top.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/tex_checker/checker_display_top.png" /></a></p>
+</div>
+<ul>
+<li><strong>Crease</strong> - Display Creases created for Subdivision Surface modifier.</li>
+<li><strong>Sharp</strong> - Display Sharp Edges.</li>
+<li><strong>Bevel</strong> - Display Weights created for Bevel modifier.</li>
+<li><strong>Seams</strong> - Display Seams.</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Blender Draw System visually overlap each other that&rsquo;s why it&rsquo;s recommended to use only Display Seams for UV process.</p>
+</div>
+<hr />
+<h4 id="zen-uv-draw-system">Zen UV Draw System<a class="headerlink" href="#zen-uv-draw-system" title="Permanent link"></a></h4>
+<table>
+<thead>
+<tr>
+<th>3D Viewport</th>
+<th>UV Editor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="glightbox" href="../img/screen/tex_checker/zen_draw_ops_3d.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Draw 3D Viewport" src="../img/screen/tex_checker/zen_draw_ops_3d.png" /></a></td>
+<td><a class="glightbox" href="../img/screen/tex_checker/zen_draw_ops_uv.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Draw UV Editor" src="../img/screen/tex_checker/zen_draw_ops_uv.png" /></a></td>
+</tr>
+</tbody>
+</table>
+<h5 id="finished">Finished<a class="headerlink" href="#finished" title="Permanent link"></a></h5>
+<p>Display and Select Finished Islands. You can <a href="../unwrap/#finishing-system">read more about Finishing System here</a>.</p>
+<h5 id="flipped">Flipped<a class="headerlink" href="#flipped" title="Permanent link"></a></h5>
+<p>Display and Select Flipped Islands.</p>
+<p><a class="glightbox" href="../img/screen/tex_checker/checker_display_flipped.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/tex_checker/checker_display_flipped.gif" /></a></p>
+<h5 id="stretched">Stretched<a class="headerlink" href="#stretched" title="Permanent link"></a></h5>
+<p>Display an angle-based stretching map.</p>
+<p><a class="glightbox" href="../img/screen/tex_checker/checker_display_stretched.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/tex_checker/checker_display_stretched.gif" /></a></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>To have the display in real time mode (as on the gif) activate <strong>Stretched Dynamic</strong> in Zen UV Draw System Preferences.</p>
+</div>
+<h5 id="excluded">Excluded<a class="headerlink" href="#excluded" title="Permanent link"></a></h5>
+<p>Display and select islands excluded from packing.</p>
+<p><a class="glightbox" href="../img/screen/pack/pack_exluded_display.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/pack/pack_exluded_display.gif" /></a></p>
+<h5 id="overlapped">Overlapped<a class="headerlink" href="#overlapped" title="Permanent link"></a></h5>
+<p>Display and select overlapped islands.</p>
+<p><a class="glightbox" href="../img/screen/tex_checker/checker_display_overlapped.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/tex_checker/checker_display_overlapped.gif" /></a></p>
+<h4 id="self-intersecting">Self-Intersecting<a class="headerlink" href="#self-intersecting" title="Permanent link"></a></h4>
+<p>Detects and selects faces where UV edges intersect.
+<a href="../select/#select-self-intersecting-faces">More info about the operator</a></p>
+<p><a class="glightbox" href="../img/screen/tex_checker/self_intersecting_example.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Self-Intersecting" src="../img/screen/tex_checker/self_intersecting_example.gif" /></a></p>
+<hr />
+<h4 id="texel-density">Texel Density<a class="headerlink" href="#texel-density" title="Permanent link"></a></h4>
+<p>Displays Texel Density according to the settings in the <a href="../texel_density/">TD</a> panel.</p>
+<h2 id="_1"><a class="glightbox" href="../img/screen/tex_checker/draw_td_example.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Texel Density Example" src="../img/screen/tex_checker/draw_td_example.png" /></a><a class="headerlink" href="#_1" title="Permanent link"></a></h2>
+<h4 id="trim-colors">Trim Colors<a class="headerlink" href="#trim-colors" title="Permanent link"></a></h4>
+<p>Displays the association of islands with trims created in the <a href="../trimsheet/">Trimsheet</a> system.</p>
+<p><a class="glightbox" href="../img/screen/tex_checker/draw_trims_example.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Trim Colors Example" src="../img/screen/tex_checker/draw_trims_example.png" /></a></p>
+<hr />
+<h5 id="uv-no-sync">UV No Sync<a class="headerlink" href="#uv-no-sync" title="Permanent link"></a></h5>
+<p>Display in 3D Viewport faces selected in UV Editor when UV Sync is Off. </p>
+<p><a class="glightbox" href="../img/screen/tex_checker/checker_display_nosync.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/tex_checker/checker_display_nosync.gif" /></a></p>
+<h5 id="seams">Seams<a class="headerlink" href="#seams" title="Permanent link"></a></h5>
+<p>Display Seams in UV Editor.</p>
+<p><a class="glightbox" href="../img/screen/tex_checker/checker_display_seams.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/tex_checker/checker_display_seams.gif" /></a></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Available only in UV Editor.</p>
+</div>
+<h5 id="uv-borders">UV Borders<a class="headerlink" href="#uv-borders" title="Permanent link"></a></h5>
+<p>Display UV Borders (Margin) in UV Editor and 3D Viewport.
+Line width depends on <a href="../pack/#margin"><strong>Margin</strong></a> and <a href="../pack/#texture-size"><strong>Texture Size</strong></a> from Pack panel. </p>
+<p><a class="glightbox" href="../img/screen/tex_checker/checker_display_uvborders.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/tex_checker/checker_display_uvborders.gif" /></a></p>
+<h5 id="uv-object">UV Object<a class="headerlink" href="#uv-object" title="Permanent link"></a></h5>
+<p>Display UVs in Object mode without entering Edit mode.</p>
+<p><a class="glightbox" href="../img/screen/tex_checker/checker_display_uvobject.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/tex_checker/checker_display_uvobject.gif" /></a></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Available only in UV Editor and Object mode.</p>
+</div>
+<h5 id="stacks">Stacks<a class="headerlink" href="#stacks" title="Permanent link"></a></h5>
+<div class="admonition panel">
+<p class="admonition-title">Panel</p>
+<p><a class="glightbox" href="../img/screen/tex_checker/checker_display_zenuv_stacks.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/tex_checker/checker_display_zenuv_stacks.png" /></a></p>
+<p>Display and Select <strong>Similar</strong>, <strong>Similar of Selection</strong>, <strong>Stacked</strong>, <strong>Manual Stacks</strong>. 
+You can read full information about <a href="../stack/#stacks-display-and-select">Stacks Display and its settings here</a>.</p>
+</div>
+<h5 id="zen-uv-draw-system-preferences-edit-mode">Zen UV Draw System Preferences (Edit Mode)<a class="headerlink" href="#zen-uv-draw-system-preferences-edit-mode" title="Permanent link"></a></h5>
+<div class="admonition panel">
+<p class="admonition-title">Panel</p>
+<p><a class="glightbox" href="../img/screen/tex_checker/checker_display_zenuv_pref.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/tex_checker/checker_display_zenuv_pref.png" /></a></p>
+</div>
+<ul>
+<li><strong>Overlay Sync</strong> - Draw is synchronised with Overlay On-Off settings.</li>
+<li><strong>Auto Update Draw</strong> - Update draw cache every time when mesh is changed.</li>
+<li><strong>Auto Disable Draw</strong> - Switch draw system off when object mode (Edit, Object) is changed.</li>
+<li><strong>Scale Points on Zoom</strong> - Scale Points when zoom is changed.
+<br></li>
+<li><strong>Scale Points Ratio</strong> - Scale ratio when Point size is changed in UV Area.</li>
+<li><strong>Finished Color</strong> - Finished Islands Viewport Display color.</li>
+<li><strong>Unfinished Color</strong> - Unfinished Islands Viewport Display color.</li>
+<li><strong>Flipped Color</strong> - Flipped Islands Display color.</li>
+<li><strong>Excluded Color</strong> - Excluded Islands Display color.</li>
+<li><strong>Overlapped Color</strong> - Overlapped Islands Display color.</li>
+<li><strong>UV No Sync Color</strong> - Display color for selected Islands in UV No Sync mode.</li>
+<li><strong>Font Size</strong> - Font size for Drawing labels.</li>
+<li><strong>Font Color</strong> - Font color for Drawing labels.
+<br></li>
+<li><strong>TD Gradient Width</strong> - TD Gradient widget Width.</li>
+<li><strong>TD Gradient Height</strong> - TD Gradient widget Height.</li>
+<li><strong>TD Color Alpha</strong> - TD Color widget Alpha.</li>
+<li>
+<p><strong>Draw TD Mode</strong> - Draw TD Mode, combination of gradient and viewport.</p>
+</li>
+<li>
+<p><strong>UV Borders Color</strong> - UV Borders Display color.</p>
+</li>
+<li><strong>UV Borders Mode</strong> - Modes of UV Borders Display color.</li>
+</ul>
+<hr />
+<h5 id="zen-uv-draw-system-preferences-object-mode">Zen UV Draw System Preferences (Object Mode)<a class="headerlink" href="#zen-uv-draw-system-preferences-object-mode" title="Permanent link"></a></h5>
+<div class="admonition panel">
+<p class="admonition-title">Panel</p>
+<p><a class="glightbox" href="../img/screen/tex_checker/checker_display_zenuv_pref_object.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/tex_checker/checker_display_zenuv_pref_object.png" /></a></p>
+</div>
+<ul>
+<li><strong>Overlay Sync</strong> - Draw is synchronised with Overlay On-Off settings.</li>
+<li><strong>Auto Update Draw</strong> - Update draw cache every time when mesh is changed.</li>
+<li><strong>Auto Disable Draw</strong> - Switch draw system off when object mode (Edit, Object) is changed.</li>
+<li><strong>Scale Points on Zoom</strong> - Scale Points when zoom is changed.</li>
+<li><strong>Scale Points Ratio</strong> - Scale ratio when Point size is changed in UV Area.</li>
+<li><strong>Display UV Object Vertices</strong> - Show vertices in UV Object mode.</li>
+</ul>
+<p><strong>UV Object Active</strong></p>
+<ul>
+<li><strong>Fill Color</strong> - Active object UVs fill color.</li>
+<li><strong>Vertex Color</strong> - Active object UVs vertex color.</li>
+</ul>
+<p><strong>UV Object Inctive</strong></p>
+<ul>
+<li><strong>Fill Color</strong> - Selected object UVs fill color.</li>
+<li><strong>Vertex Color</strong> - Selected object UVs vertex color.</li>
+<li><strong>Font Size</strong> - Font size for Drawing labels.</li>
+<li><strong>Font Color</strong> - Font color for Drawing labels.</li>
+</ul>
+<hr />
+<h3 id="how-to-set-hotkey-to-specific-draw-mode">How to set hotkey to specific draw mode<a class="headerlink" href="#how-to-set-hotkey-to-specific-draw-mode" title="Permanent link"></a></h3>
+<ol>
+<li>Right click on desired draw mode</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th><a class="glightbox" href="../img/screen/tex_checker/RightClick.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/tex_checker/RightClick.png" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>Assign hotkey</li>
+<li>Find hotkey in the list of hotkeys</li>
+<li>Copy context attribute path to the clipboard</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th><a class="glightbox" href="../img/screen/tex_checker/hotkey_path_copy.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/tex_checker/hotkey_path_copy.png" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>Change operator name to <code>wm.context_toggle_enum</code></li>
+<li>Paste context attribute from the clipboard</li>
+<li>Set 1 enum value to desired mode and set 2 enum value to <code>NONE</code>.</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th><a class="glightbox" href="../img/screen/tex_checker/change_op_name.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/tex_checker/change_op_name.png" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="tools">Tools<a class="headerlink" href="#tools" title="Permanent link"></a></h3>
+<p>Tools for analyzing and finding Mesh errors that can negatively affect UV operations.</p>
+<table>
+<thead>
+<tr>
+<th>3D Viewport</th>
+<th>UV Editor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="glightbox" href="../img/screen/tex_checker/checker_tools_panel_3d.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="3D Viewport Panel" src="../img/screen/tex_checker/checker_tools_panel_3d.png" /></a></td>
+<td><a class="glightbox" href="../img/screen/tex_checker/checker_tools_panel_uv.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="UV Editor Panel" src="../img/screen/tex_checker/checker_tools_panel_uv.png" /></a></td>
+</tr>
+</tbody>
+</table>
+<h4 id="elements-by-index">Elements by Index<a class="headerlink" href="#elements-by-index" title="Permanent link"></a></h4>
+<p>Select elements by their indices.</p>
+<h4 id="zero-area-faces">Zero Area Faces<a class="headerlink" href="#zero-area-faces" title="Permanent link"></a></h4>
+<p>Select faces with Zero UV area.</p>
+<h4 id="edges-without-faces">Edges Without Faces<a class="headerlink" href="#edges-without-faces" title="Permanent link"></a></h4>
+<p>Select edges without faces.</p>
+<h4 id="edges-with-multiple-loops">Edges with multiple loops<a class="headerlink" href="#edges-with-multiple-loops" title="Permanent link"></a></h4>
+<p>Select edges with Multiple Loops.</p>
+<h4 id="empty-objects">Empty objects<a class="headerlink" href="#empty-objects" title="Permanent link"></a></h4>
+<p>Select objects that don&rsquo;t contain faces.</p>
+<h4 id="doubled-vertices">Doubled Vertices<a class="headerlink" href="#doubled-vertices" title="Permanent link"></a></h4>
+<p>Select vertices that have the same coordinates.</p>
+<h4 id="free-vertices">Free Vertices<a class="headerlink" href="#free-vertices" title="Permanent link"></a></h4>
+<p>Selects vertices that have no connected faces or edges.</p>
+<h4 id="uv-islands-counter">UV Islands Counter<a class="headerlink" href="#uv-islands-counter" title="Permanent link"></a></h4>
+<p>Count UV Islands of selected objects and display the result.</p>
+<p><a class="glightbox" href="../img/screen/tex_checker/tools_islands_counter.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Islands counter" src="../img/screen/tex_checker/tools_islands_counter.png" /></a></p>
+<p>More detailed information can be obtained by opening the system console. For Windows, go to the main menu of the Blender <strong>Window</strong> -&gt; <strong>Toggle System Console</strong>.</p>
+<p>In the example below, you can see information on all selected objects.</p>
+<p>Object name | total UV islands in the object | number of visible islands | number of selected islands | number of hidden islands.</p>
+<p><a class="glightbox" href="../img/screen/tex_checker/tools_islands_counter_full_info.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="island counter console" src="../img/screen/tex_checker/tools_islands_counter_full_info.png" /></a></p>
+<h4 id="calc-uv-edges-length">Calc UV Edges Length<a class="headerlink" href="#calc-uv-edges-length" title="Permanent link"></a></h4>
+<p>Calculates the lengths of the selected edges.</p>
+<p>The operator has no properties. Instead, it displays information in the status bar, popup window, and system console. The pixels size calculates from the active image in the UV Editor.
+<a class="glightbox" href="../img/screen/tex_checker/calc_uv_edges_length.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Calc UV Edges Length" src="../img/screen/tex_checker/calc_uv_edges_length.png" /></a></p>
+<table>
+<thead>
+<tr>
+<th><a class="glightbox" href="../img/screen/tex_checker/calc_uv_edges_length_console.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/tex_checker/calc_uv_edges_length_console.png" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>Calc UV Edges Length</em> console output example</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="calculate-uv-pixel-size">Calculate UV Pixel Size<a class="headerlink" href="#calculate-uv-pixel-size" title="Permanent link"></a></h4>
+<p>Calculates the size of a specified number of pixels in UV units and as a percentage.</p>
+<div class="admonition properties">
+<p class="admonition-title">Properties</p>
+<p><a class="glightbox" href="../img/screen/tex_checker/calc_pixel_size_op_prop.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Calculate UV Pixel Size" src="../img/screen/tex_checker/calc_pixel_size_op_prop.png" /></a></p>
+</div>
+<ul>
+<li><strong>Pixel Count</strong> - Number of pixels for the calculation.</li>
+<li><strong>Image Source</strong> - Choose the source for image dimensions.<ul>
+<li><em>Custom Image Size</em> - Use custom width and height.</li>
+<li><em>Active Image in UV Editor</em> - Use active image in the UV Editor.</li>
+</ul>
+</li>
+<li><strong>Custom Width</strong> - Width of the custom image in pixels.</li>
+<li><strong>Custom Height</strong> - Height of the custom image in pixels.</li>
+<li><strong>UV Pixel Width (Units)</strong> - Width of the specified pixels in UV space.</li>
+<li><strong>UV Pixel Height (Units)</strong> - Height of the specified pixels in UV space.</li>
+<li><strong>UV Pixel Width (%)</strong> - Width of the specified pixels as a percentage of the UV space.</li>
+<li><strong>UV Pixel Height (%)</strong> - Height of the specified pixels as a percentage of the UV space.</li>
+</ul>
+<hr />
+<h4 id="set-viewport-display-mode">Set Viewport Display Mode<a class="headerlink" href="#set-viewport-display-mode" title="Permanent link"></a></h4>
+<p>Set viewport display mode for all selected objects.</p>
+<div class="admonition properties">
+<p class="admonition-title">Properties</p>
+<p><a class="glightbox" href="../img/screen/tex_checker/set_wiewport_display_mode_op_prop.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Set Viewport Display Mode" src="../img/screen/tex_checker/set_wiewport_display_mode_op_prop.png" /></a></p>
+</div>
+<ul>
+<li><strong>Display as</strong> - Selection of the display type to be set.<ul>
+<li><em>Bounds</em> - Display the bounds of the object</li>
+<li><em>Wire</em> - Display the object as a wireframe</li>
+<li><em>Solid</em> - Display the object as a solid (if solid drawing is enabled in the viewport)</li>
+<li><em>Textured</em> - Display the object with textures (if textures are enabled in the viewport)</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h4 id="clear-attributes">Clear Attributes<a class="headerlink" href="#clear-attributes" title="Permanent link"></a></h4>
+<p>Clear mesh attributes used in Zen UV. Finished and Excluded.</p>
+<p><a class="glightbox" href="../img/screen/tex_checker/checker_tools_clear_attributes.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/tex_checker/checker_tools_clear_attributes.png" /></a></p>
+<hr />
+<h4 id="correct-self-intersecting">Correct Self-Intersecting<a class="headerlink" href="#correct-self-intersecting" title="Permanent link"></a></h4>
+<p>Correct faces that <a href="../select/#select-self-intersecting-faces">have intersecting</a> uv edges by re-unwrapping its island.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../texel_density/" class="btn btn-neutral float-left" title="Texel Density"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../pack/" class="btn btn-neutral float-right" title="Pack">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p><p>Copyright &copy; 2024 <a href="https://zenmasters.team/">Zen Masters</a></p></p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../texel_density/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../pack/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+      <script src="../js/version-select.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+</script></body>
+</html>
