@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>Select - Zen UV 5.1 for Blender</title>
+    <title>Select - Zen UV 5.2 for Blender</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
@@ -43,7 +43,7 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
-          <a href=".." class="icon icon-home"> Zen UV 5.1 for Blender
+          <a href=".." class="icon icon-home"> Zen UV 5.2 for Blender
         </a><div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
       <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
@@ -129,6 +129,10 @@
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#select-faces-by-normal">Select Faces By Normal</a>
     </li>
+    <li class="toctree-l3"><a class="reference internal" href="#select-cylinder-faces">Select Cylinder Faces</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#select-cylinder-cap">Select Cylinder Cap</a>
+    </li>
         </ul>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#edges">Edges</a>
@@ -146,6 +150,8 @@
     <li class="toctree-l3"><a class="reference internal" href="#select-edges-by-condition">Select Edges by Condition</a>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#select-edges-by-direction">Select Edges By Direction</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#select-material-boundary-edges">Select Material Boundary Edges</a>
     </li>
         </ul>
     </li>
@@ -229,7 +235,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
       <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="..">Zen UV 5.1 for Blender</a>
+          <a href="..">Zen UV 5.2 for Blender</a>
         
       </nav>
       <div class="wy-nav-content">
@@ -291,6 +297,8 @@
 <li><a href="#select-zero-area-faces">Select Zero Area Faces</a></li>
 <li><a href="#select-faces-less-than-pixel">Select Faces Less than Pixel</a></li>
 <li><a href="#select-faces-by-normal">Select Faces By Normal</a></li>
+<li><a href="#select-cylinder-faces">Select Cylinder Faces</a></li>
+<li><a href="#select-cylinder-cap">Select Cylinder Cap</a>        </li>
 </ul>
 </li>
 <li>
@@ -303,6 +311,7 @@
 <li><a href="#select-cylinder-edges-splits">Select Cylinder Edges (Splits)</a></li>
 <li><a href="#select-edges-by-condition">Select Edges by Condition</a></li>
 <li><a href="#select-edges-by-direction">Select Edges By Direction</a></li>
+<li><a href="#select-material-boundary-edges">Select Material Boundary Edges</a></li>
 </ul>
 </li>
 <li>
@@ -684,6 +693,12 @@ The operator consists of two buttons. Where the first is the main operator and t
 </ul>
 </div>
 <hr />
+<h3 id="select-cylinder-faces">Select Cylinder Faces<a class="headerlink" href="#select-cylinder-faces" title="Permanent link"></a></h3>
+<p>Select connected quad faces that form a cylindrical surface. Useful for detecting cylindrical geometry in meshes. Selects faces or boundary edges depending on mesh selection mode</p>
+<hr />
+<h3 id="select-cylinder-cap">Select Cylinder Cap<a class="headerlink" href="#select-cylinder-cap" title="Permanent link"></a></h3>
+<p>Select the caps of cylinder meshes. Selects faces or boundary edges depending on mesh selection mode</p>
+<hr />
 <h2 id="edges">Edges<a class="headerlink" href="#edges" title="Permanent link"></a></h2>
 <h3 id="select-seam">Select Seam<a class="headerlink" href="#select-seam" title="Permanent link"></a></h3>
 <p>Select Edges Marked as Seams.</p>
@@ -883,10 +898,13 @@ The operator consists of two buttons. Where the first is the main operator and t
 </tbody>
 </table>
 <hr />
+<h3 id="select-material-boundary-edges">Select Material Boundary Edges<a class="headerlink" href="#select-material-boundary-edges" title="Permanent link"></a></h3>
+<p>Selects all edges where the adjacent faces have different material assignments</p>
+<hr />
 <h2 id="loops">Loops<a class="headerlink" href="#loops" title="Permanent link"></a></h2>
 <h3 id="zen-sync">Zen Sync<a class="headerlink" href="#zen-sync" title="Permanent link"></a></h3>
 <p>Keep UV and edit mode mesh selection in sync, showing all islands of unhided mesh elements.</p>
-<p>** Edges and Faces - only supported!*</p>
+<p><strong>Edges and Faces - only supported!</strong></p>
 <table>
 <thead>
 <tr>

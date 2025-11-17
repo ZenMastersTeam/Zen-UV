@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../../img/favicon.ico" />
-    <title>Version 4.0.1 - Zen UV 5.2 for Blender</title>
+    <title>Version 5.2.0 - Zen UV 5.2 for Blender</title>
     <link rel="stylesheet" href="../../css/theme.css" />
     <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
@@ -13,8 +13,8 @@
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Version 4.0.1";
-        var mkdocs_page_input_path = "changelg\\release_note_4.0.1.md";
+        var mkdocs_page_name = "Version 5.2.0";
+        var mkdocs_page_input_path = "changelg\\release_note_5.2.0.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -154,7 +154,7 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
-      <li class="breadcrumb-item active">Version 4.0.1</li>
+      <li class="breadcrumb-item active">Version 5.2.0</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -163,28 +163,37 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="version-401">Version 4.0.1<a class="headerlink" href="#version-401" title="Permanent link"></a></h1>
-<h2 id="general">General<a class="headerlink" href="#general" title="Permanent link"></a></h2>
-<p>Hot Fixes</p>
-<h2 id="operators">Operators<a class="headerlink" href="#operators" title="Permanent link"></a></h2>
-<h3 id="unwrap">Unwrap<a class="headerlink" href="#unwrap" title="Permanent link"></a></h3>
+                <h1 id="version-520">Version 5.2.0<a class="headerlink" href="#version-520" title="Permanent link"></a></h1>
+<h2 id="general"><strong>General</strong><a class="headerlink" href="#general" title="Permanent link"></a></h2>
 <ul>
-<li>Added the ability to change some properties before running for <strong>Zen Unwrap</strong> operator. </li>
+<li>Added support for <a href="https://developer.blender.org/docs/release_notes/5.0/"><strong>Blender v5.0</strong></a></li>
+<li>New operators  </li>
+<li>Fixes  </li>
 </ul>
-<h3 id="transform">Transform<a class="headerlink" href="#transform" title="Permanent link"></a></h3>
+<h2 id="pack"><strong>Pack</strong><a class="headerlink" href="#pack" title="Permanent link"></a></h2>
 <ul>
-<li>Added Align to Active Component option for <strong>Align</strong> operator.</li>
-<li>Added center alignment buttons for <strong>Align</strong> operator.</li>
+<li>Optimized the <strong>Pack</strong> operator.</li>
 </ul>
-<h3 id="trimsheet">Trimsheet<a class="headerlink" href="#trimsheet" title="Permanent link"></a></h3>
+<h2 id="unwrap"><strong>Unwrap</strong><a class="headerlink" href="#unwrap" title="Permanent link"></a></h2>
 <ul>
-<li>Added <strong>Single Axis</strong> option to align to only one axis for <strong>Align to Trim</strong> operator.</li>
-<li>Fixed a bug when managing <strong>Align to Trim</strong> operator through Zen UV Transform Tool.</li>
+<li>Added the ability to create default settings in the <strong>Auto Unwrap</strong> operator.  </li>
+<li>Disabled <strong>Auto Unwrap</strong> functionality when UV Sync Selection is Off.  </li>
+<li>Added the ability to <strong>Copy/Paste UV Maps</strong> in Object Mode.</li>
 </ul>
-<h3 id="other">Other<a class="headerlink" href="#other" title="Permanent link"></a></h3>
+<h2 id="select"><strong>Select</strong><a class="headerlink" href="#select" title="Permanent link"></a></h2>
 <ul>
-<li>Fixed Installation error for Mac OS and Blender 3.5.1</li>
-<li>Fixed a bug related to modifiers panel.</li>
+<li>Added the <strong>Select Cylinder Cap</strong> operator for selecting caps of cylindrical mesh parts.  </li>
+<li>Added the <strong>Select Cylinder Faces</strong> operator for selecting sides of cylindrical mesh parts.  </li>
+<li>Added an operator for selecting edges between different materials.  </li>
+<li>In the <strong>Zen Sync</strong> operator for <a href="https://developer.blender.org/docs/release_notes/5.0/"><strong>Blender v5.0</strong></a>, added the ability to synchronize in any selection mode (Vert, Edge, Face).</li>
+</ul>
+<h2 id="uv-checker"><strong>UV Checker</strong><a class="headerlink" href="#uv-checker" title="Permanent link"></a></h2>
+<ul>
+<li>Optimized the filter when selecting a texture for orientation checking.</li>
+</ul>
+<h2 id="trimsheet"><strong>Trimsheet</strong><a class="headerlink" href="#trimsheet" title="Permanent link"></a></h2>
+<ul>
+<li>Disabled the ability to delete <strong>Trims</strong> in <strong>Trim Transform</strong> mode.</li>
 </ul>
               
             </div>
