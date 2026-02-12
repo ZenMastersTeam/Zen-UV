@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Transform Tool - Zen UV 5.3 for Blender</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../css/version-select.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Transform Tool";
+        var mkdocs_page_input_path = "transform_tool.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-7XHJ910WF8"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', "G-7XHJ910WF8");
+      </script>
+ <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }</style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Zen UV 5.3 for Blender
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../youtube_videos/">Learning Videos</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../installation/">Installation and Update</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../user_interface/">User Interface</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Tutorial</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../tutorial/">Step-by-Step Guide Examples</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >Emergency Light</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../tutorial/emergency_light/emergency_light_eng/">Emergency Light (EN)</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../tutorial/emergency_light/emergency_light_ukr/">Emergency Light (UA)</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../tutorial/emergency_light/emergency_light_rus/">Emergency Light (RU)</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Modules</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../adv_uv-maps/">Advanced UV Maps</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../seam_groups/">Seam Groups</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../unwrap/">Unwrap</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../select/">Select</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../transform/">Transform</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../stack/">Stack</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../texel_density/">Texel Density</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../checker/">UV Checker</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pack/">Pack</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../preferences/">Preferences</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Transform Tool</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#transform-tool-panel">Transform Tool Panel</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#tool-modes">Tool Modes</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#move-g">Move G</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#rotate-r">Rotate R</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#scale-s">Scale S</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#display-trims-d">Display Trims D</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#trim-select-f">Trim Select F</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#display-trims-settings">Display Trims Settings</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#main">Main</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#automatic-settings">Automatic Settings</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#style-settings">Style Settings</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#transform-handles">Transform Handles</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#transform-handles-tools">Transform Handles Tools</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#align-default">Align Default</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#rotate-90-and-orient-ctrl">Rotate 90' and Orient Ctrl</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#fit-shift">Fit Shift</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#move-and-fit-ctrl-shift-scroll">Move and Fit Ctrl + Shift + Scroll</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#flip-ctrl-shift">Flip Ctrl + Shift</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#set-pivot-double-click">Set Pivot Double Click</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#extra-tools">Extra Tools</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#trimsheet-data-storage">Trimsheet Data Storage</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#transform-mode">Transform Mode</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#lock-in-trim">Lock in Trim</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#drag">Drag</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#viewport-screen-selector">Viewport Screen Selector</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#uv-editor-tool-category">UV Editor Tool Category</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../touch_tool/">Touch Tool</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../sticky_uv_editor/">Sticky UV Editor</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../favourites/">Favourites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Trim Sheets</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../trimsheet/">Trim Sheets</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../trimsheet_creation/">Trim Sheet Management</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../trimsheet_operators/">Trim Sheet Operators</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../trimsheet_hotspot/">Hotspot Mapping</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Additional</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../addon_prefs/">Addon Preferences</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../user_script/">User Script</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../help/">Help</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../troubleshooting/">FAQs</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../changelg/">Changelog</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../credits/">Credits</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../our_addons/">Our Add-ons</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../recommended_addons/">Recommended Add-ons</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Zen UV 5.3 for Blender</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Modules</li>
+      <li class="breadcrumb-item active">Transform Tool</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="transform-tool">Transform Tool<a class="headerlink" href="#transform-tool" title="Permanent link"></a></h1>
+<p>Move, Rotate, Orient, Scale, Fit, Align and Flip selected Islands or Faces/Edges/Vertices in 3D Viewport and UV Editor using Zen UV Gizmo.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Watch the video explaining how <strong>Transform Tool</strong> works.</p>
+<p><div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%;">
+<iframe src="https://www.youtube.com/embed/f9meGzMGx2k?start=275&end=580" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen="" seamless="" frameborder="0"></iframe>
+</div></p>
+</div>
+<p>You can activate it on the left bottom corner of the Tool panel.</p>
+<p><a class="glightbox" href="../img/screen/transform_tool/tt_icon.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Zen Transform Tool" src="../img/screen/transform_tool/tt_icon.gif" /></a></p>
+<p>Or from Pie Menu <code>Shift+U</code> on the <strong>Sector 2</strong> with holding <code>Shift</code></p>
+<p><a class="glightbox" href="../img/screen/transform_tool/tt_pie_menu.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Tool Pie" src="../img/screen/transform_tool/tt_pie_menu.png" /></a></p>
+<h2 id="transform-tool-panel">Transform Tool Panel<a class="headerlink" href="#transform-tool-panel" title="Permanent link"></a></h2>
+<p><a class="glightbox" href="../img/screen/transform_tool/tt_panel.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Tool Pie" src="../img/screen/transform_tool/tt_panel.png" /></a></p>
+<h3 id="tool-modes">Tool Modes<a class="headerlink" href="#tool-modes" title="Permanent link"></a></h3>
+<p>Using different modes you can <strong>Move, Rotate, Scale</strong> selected Islands or Faces/Edges/Vertices in 3D Viewport and UV Editor.</p>
+<h4 id="move-g">Move <code>G</code><a class="headerlink" href="#move-g" title="Permanent link"></a></h4>
+<p>Move Mode is representing <a href="../trimsheet_operators/#move-in-trim"><strong>Move in Trim</strong></a> operator and moves selected Islands or Faces/Edges/Vertices.</p>
+<p><a class="glightbox" href="../img/screen/transform_tool/tt_move.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Mode Move" src="../img/screen/transform_tool/tt_move.gif" /></a></p>
+<h4 id="rotate-r">Rotate <code>R</code><a class="headerlink" href="#rotate-r" title="Permanent link"></a></h4>
+<p>Rotate Mode is representing <a href="../trimsheet_operators/#rotate-in-trim"><strong>Rotate in Trim</strong></a> operator and rotates selected Islands or Faces/Edges/Vertices.</p>
+<p><a class="glightbox" href="../img/screen/transform_tool/tt_rotate.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Mode Rotate" src="../img/screen/transform_tool/tt_rotate.gif" /></a></p>
+<h4 id="scale-s">Scale <code>S</code><a class="headerlink" href="#scale-s" title="Permanent link"></a></h4>
+<p>Scale Mode is representing <a href="../trimsheet_operators/#scale-in-trim"><strong>Scale in Trim</strong></a> operator and scales selected Islands or Faces/Edges/Vertices.</p>
+<p><a class="glightbox" href="../img/screen/transform_tool/tt_scale.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Mode Scale" src="../img/screen/transform_tool/tt_scale.gif" /></a></p>
+<h3 id="display-trims-d">Display Trims <code>D</code><a class="headerlink" href="#display-trims-d" title="Permanent link"></a></h3>
+<p>Activating Display Trip option in the Top part you activate Trims visibility.
+If you don&rsquo;t have any Trims the UV Space will be counted as one Trim.</p>
+<p>Frame around Gizmo marks the boundary of the Trim and helps to determine the location of Islands or selected faces on UVs.</p>
+<p><a class="glightbox" href="../img/screen/transform_tool/tt_display_without_trims.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Display Trims Without Trims" src="../img/screen/transform_tool/tt_display_without_trims.gif" /></a></p>
+<p>If you have Trims you&rsquo;ll see the Trim list as well as texture assigned to the Trim.</p>
+<p><a class="glightbox" href="../img/screen/transform_tool/tt_display_trims.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Display Trims" src="../img/screen/transform_tool/tt_display_trims.gif" /></a></p>
+<h3 id="trim-select-f">Trim Select <code>F</code><a class="headerlink" href="#trim-select-f" title="Permanent link"></a></h3>
+<p>When Trim Select is active you can choose active Trim.</p>
+<p><a class="glightbox" href="../img/screen/transform_tool/tt_select_trims.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Trim Select" src="../img/screen/transform_tool/tt_select_trims.gif" /></a></p>
+<h3 id="display-trims-settings">Display Trims Settings<a class="headerlink" href="#display-trims-settings" title="Permanent link"></a></h3>
+<div class="admonition panel">
+<p class="admonition-title">Panel</p>
+<p><a class="glightbox" href="../img/screen/transform_tool/tt_display_settings.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Display Settings Panel" src="../img/screen/transform_tool/tt_display_settings.png" /></a></p>
+</div>
+<h4 id="main">Main<a class="headerlink" href="#main" title="Permanent link"></a></h4>
+<p><a class="glightbox" href="../img/screen/transform_tool/tt_display_settings.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Trim Display Settings" src="../img/screen/transform_tool/tt_display_settings.gif" /></a></p>
+<ul>
+<li><strong>Display All Trims</strong>. Display All Trims or only active one.</li>
+<li><strong>Texture Preview</strong>. Display Trimsheet texture.</li>
+<li><strong>Display Name</strong>. Display Trim names.</li>
+</ul>
+<h4 id="automatic-settings">Automatic Settings<a class="headerlink" href="#automatic-settings" title="Permanent link"></a></h4>
+<ul>
+<li><strong>Auto Highlight</strong>. Enable Display Trim settings by <strong>Default</strong> or use custom behavior with <strong>Manual</strong> settings when activating Transform Tool.</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>It&rsquo;s recommended to use <strong>Manual</strong> if you don&rsquo;t want to see <strong>Display Trims</strong> each time when you activate the tool.</p>
+</div>
+<ul>
+<li><strong>Auto Disable Overlay</strong>. Auto Disable <strong>Blender</strong> or/and <strong>Trims</strong> overlay when activating Transform Tool.</li>
+</ul>
+<h4 id="style-settings">Style Settings<a class="headerlink" href="#style-settings" title="Permanent link"></a></h4>
+<p>Trim display settings in 3D Viewport and UV Editor, including <strong>Fill</strong>, <strong>Transparency</strong>, <strong>Font Size</strong>.</p>
+<h3 id="transform-handles">Transform Handles<a class="headerlink" href="#transform-handles" title="Permanent link"></a></h3>
+<p>Transform Handles provides access to such operators as <strong>Align</strong>, <strong>Rotate</strong>, <strong>Orient</strong>, <strong>Fit</strong>, <strong>Flip</strong>, <strong>Set Pivot</strong> and others. </p>
+<p><a class="glightbox" href="../img/screen/transform_tool/tt_transform_handles.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Transform Handles" src="../img/screen/transform_tool/tt_transform_handles.gif" /></a></p>
+<ul>
+<li><strong>Off</strong>. Disable Transform handles.</li>
+<li><strong>Trim</strong>. Transform Handles Frame attached to the active Trim.</li>
+<li><strong>Gizmo</strong>. Transform Handles Frame attached to Gizmo.</li>
+</ul>
+<h3 id="transform-handles-tools">Transform Handles Tools<a class="headerlink" href="#transform-handles-tools" title="Permanent link"></a></h3>
+<h4 id="align-default">Align <code>Default</code><a class="headerlink" href="#align-default" title="Permanent link"></a></h4>
+<p>Align tool is representing <a href="../trimsheet_operators/#align-to-trim"><strong>Align to Trim</strong></a> operator and align selected Islands or Faces/Edges/Vertices to active Trim.</p>
+<p><a class="glightbox" href="../img/screen/transform_tool/tt_transform_handles_align.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Transform Handles Align" src="../img/screen/transform_tool/tt_transform_handles_align.gif" /></a></p>
+<h4 id="rotate-90-and-orient-ctrl">Rotate 90&rsquo; and Orient <code>Ctrl</code><a class="headerlink" href="#rotate-90-and-orient-ctrl" title="Permanent link"></a></h4>
+<p>Corner Point rotates Islands + 90&rsquo;(CW). The green corner Point - 90&rsquo;(CCW).</p>
+<p><a class="glightbox" href="../img/screen/transform_tool/tt_transform_handles_rotate.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Transform Handles Rotate" src="../img/screen/transform_tool/tt_transform_handles_rotate.gif" /></a></p>
+<p>Other Points Orients Islands Horizontally, Vertically, Automatically (Central Point).</p>
+<p><a class="glightbox" href="../img/screen/transform_tool/tt_transform_handles_orient.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Transform Handles Orient" src="../img/screen/transform_tool/tt_transform_handles_orient.gif" /></a></p>
+<h4 id="fit-shift">Fit <code>Shift</code><a class="headerlink" href="#fit-shift" title="Permanent link"></a></h4>
+<p>Fit tool is representing <a href="../trimsheet_operators/#fit-to-trim"><strong>Fit to Trim</strong></a> operator and fits selected Islands or Faces/Edges/Vertices into active Trim.</p>
+<p><a class="glightbox" href="../img/screen/transform_tool/tt_transform_handles_fit.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Transform Handles Fit" src="../img/screen/transform_tool/tt_transform_handles_fit.gif" /></a></p>
+<h4 id="move-and-fit-ctrl-shift-scroll">Move and Fit <code>Ctrl + Shift + Scroll</code><a class="headerlink" href="#move-and-fit-ctrl-shift-scroll" title="Permanent link"></a></h4>
+<p>Using this tool you can Scroll between Trims and Fit your Islands in the same moment.</p>
+<p><a class="glightbox" href="../img/screen/transform_tool/tt_transform_handles_fit_scroll.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Transform Handles Fit Scroll" src="../img/screen/transform_tool/tt_transform_handles_fit_scroll.gif" /></a></p>
+<p>If you use names that divide trims into categories, you can enable an option that will limit trim changes to the selected category only.</p>
+<p><a class="glightbox" href="../img/screen/trimsheet/scroll_fit_to_trim_categories.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="scroll in categories" src="../img/screen/trimsheet/scroll_fit_to_trim_categories.png" /></a></p>
+<h4 id="flip-ctrl-shift">Flip <code>Ctrl + Shift</code><a class="headerlink" href="#flip-ctrl-shift" title="Permanent link"></a></h4>
+<p>Flip tool is representing <a href="../trimsheet_operators/#flip-in-trim"><strong>Flip in Trim</strong></a> operator and flips selected Islands or Faces/Edges/Vertices.</p>
+<p><a class="glightbox" href="../img/screen/transform_tool/tt_transform_handles_flip.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Transform Handles Flip" src="../img/screen/transform_tool/tt_transform_handles_flip.gif" /></a></p>
+<h4 id="set-pivot-double-click">Set Pivot <code>Double Click</code><a class="headerlink" href="#set-pivot-double-click" title="Permanent link"></a></h4>
+<p>Double click on Transform Handle Point sets Pivot for Transform operations. </p>
+<p><a class="glightbox" href="../img/screen/transform_tool/tt_transform_handles_pivot.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Transform Handles Pivot" src="../img/screen/transform_tool/tt_transform_handles_pivot.gif" /></a></p>
+<h4 id="extra-tools">Extra Tools<a class="headerlink" href="#extra-tools" title="Permanent link"></a></h4>
+<p>Central Transform Handles Point has some extra tools.</p>
+<ul>
+<li><strong>Unwrap</strong>. <code>Double Click + Ctrl</code></li>
+<li><strong>World Orient</strong>. <code>Double Click + Shift</code></li>
+<li><strong>Trim by Face</strong>. <code>Double Click + Ctrl + Shift</code></li>
+</ul>
+<h3 id="trimsheet-data-storage">Trimsheet Data Storage<a class="headerlink" href="#trimsheet-data-storage" title="Permanent link"></a></h3>
+<ul>
+<li><strong>Scene</strong>. Trim sheet is stored in a scene data-block.</li>
+<li><strong>Image</strong>. Trim sheet is stored in an image data-block.</li>
+</ul>
+<h3 id="transform-mode">Transform Mode<a class="headerlink" href="#transform-mode" title="Permanent link"></a></h3>
+<ul>
+<li><strong>Islands</strong>. Selected Islands are transformed.</li>
+<li><strong>Selection</strong>. Selected Mesh Elements are transformed.</li>
+</ul>
+<h3 id="lock-in-trim">Lock in Trim<a class="headerlink" href="#lock-in-trim" title="Permanent link"></a></h3>
+<p>Limit transforms by active Trim.</p>
+<p><a class="glightbox" href="../img/screen/transform_tool/tt_transform_lock.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Transform Lock" src="../img/screen/transform_tool/tt_transform_lock.gif" /></a></p>
+<h3 id="drag">Drag<a class="headerlink" href="#drag" title="Permanent link"></a></h3>
+<p>Choose the tool when Drag.</p>
+<ul>
+<li><strong>Active Tool</strong>. Use Active tool.</li>
+<li><strong>Tweak</strong>. Use Tweak tool.</li>
+<li><strong>Select Box</strong>. Use Select Box tool.</li>
+<li><strong>Select Circle</strong>. Use Select Circle tool.</li>
+<li><strong>Select Lasso</strong>. Use Select Lasso tool.</li>
+</ul>
+<h2 id="viewport-screen-selector">Viewport Screen Selector<a class="headerlink" href="#viewport-screen-selector" title="Permanent link"></a></h2>
+<p>This widget represents one more way about how to choose active Trim in 3D Viewport.
+Viewport Screen Selector will be always on top of your scene in 2D form.</p>
+<p>You can enable it using widget button on the right top corner in 3D Viewport or press <code>Shift + F</code>.</p>
+<p><a class="glightbox" href="../img/screen/transform_tool/tt_selector_select.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Selector_Select" src="../img/screen/transform_tool/tt_selector_select.gif" /></a></p>
+<p>You can change widget <strong>Size</strong> <code>Scroll</code> and <strong>Position</strong> <code>Shift + MMB + Drug</code> in 3D Viewport. </p>
+<p><a class="glightbox" href="../img/screen/transform_tool/tt_selector_size.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Selector_Size" src="../img/screen/transform_tool/tt_selector_size.gif" /></a></p>
+<p>You can <strong>Screen Lock</strong> the <strong>Position</strong> you like clicking with <code>Shift</code> on the widget button (it will change the color from Blue to Turquoise). When <strong>Screen Lock</strong> is active you can&rsquo;t change widget <strong>Size</strong> and <strong>Position</strong> using mouse. </p>
+<p>Also, <strong>Position</strong> can be <strong>Screen Locked</strong> and adjusted in <strong>Display Trim Settings</strong> when widget is active.</p>
+<p><a class="glightbox" href="../img/screen/transform_tool/tt_selector_lock.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Selector_Lock" src="../img/screen/transform_tool/tt_selector_lock.gif" /></a></p>
+<h2 id="uv-editor-tool-category">UV Editor Tool Category<a class="headerlink" href="#uv-editor-tool-category" title="Permanent link"></a></h2>
+<p>In UV Editor context you can switch from <strong>Transforms</strong> to <strong>Trims</strong> category where you can <strong>Create</strong> and <strong>Resize</strong> Trims.</p>
+<p><a class="glightbox" href="../img/screen/transform_tool/tt_category.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Category" src="../img/screen/transform_tool/tt_category.gif" /></a></p>
+<p>More about the process of <a href="../trimsheet_creation/"><strong>Trim Creation you can read here</strong></a>.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../preferences/" class="btn btn-neutral float-left" title="Preferences"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../touch_tool/" class="btn btn-neutral float-right" title="Touch Tool">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p><p>Copyright &copy; 2024-2025 <a href="https://zenmasters.team/">Zen Masters</a></p></p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../preferences/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../touch_tool/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+      <script src="../js/version-select.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+</script></body>
+</html>

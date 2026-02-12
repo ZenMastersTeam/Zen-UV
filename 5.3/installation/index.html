@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Installation and Update - Zen UV 5.3 for Blender</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../css/version-select.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Installation and Update";
+        var mkdocs_page_input_path = "installation.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-7XHJ910WF8"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', "G-7XHJ910WF8");
+      </script>
+ <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }</style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Zen UV 5.3 for Blender
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="..">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../youtube_videos/">Learning Videos</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Installation and Update</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#installation">Installation</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#installing-via-drag-and-drop">Installing via Drag-and-Drop</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#requirements">✅ Requirements</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#how-to-use-drag-and-drop-installation">📦 How to Use Drag-and-Drop Installation</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#where-to-find-it">📍 Where to Find It</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#troubleshooting">🛠 Troubleshooting</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#zen-uv-core-library">Zen UV Core Library</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#when-to-use-core-library">When to Use Core Library</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#zen-uv-core-library-installation">Zen UV Core Library Installation</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#zen-uv-core-library-installation-for-mac-m1-m2-silicon-app">Zen UV Core Library installation for Mac M1-M2 (Silicon App)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#update">Update</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#updating-via-drag-and-drop">🔄 Updating via Drag-and-Drop</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#updating-via-preferences">⚙️ Updating via Preferences</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#manual-update">Manual Update</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#still-have-problems-with-update">Still have problems with update?</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#zen-relax-application-validity-check">Zen Relax Application Validity Check</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#validation-check-windows">Validation Check (Windows)</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../user_interface/">User Interface</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Tutorial</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../tutorial/">Step-by-Step Guide Examples</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >Emergency Light</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../tutorial/emergency_light/emergency_light_eng/">Emergency Light (EN)</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../tutorial/emergency_light/emergency_light_ukr/">Emergency Light (UA)</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../tutorial/emergency_light/emergency_light_rus/">Emergency Light (RU)</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Modules</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../adv_uv-maps/">Advanced UV Maps</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../seam_groups/">Seam Groups</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../unwrap/">Unwrap</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../select/">Select</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../transform/">Transform</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../stack/">Stack</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../texel_density/">Texel Density</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../checker/">UV Checker</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pack/">Pack</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../preferences/">Preferences</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../transform_tool/">Transform Tool</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../touch_tool/">Touch Tool</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../sticky_uv_editor/">Sticky UV Editor</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../favourites/">Favourites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Trim Sheets</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../trimsheet/">Trim Sheets</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../trimsheet_creation/">Trim Sheet Management</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../trimsheet_operators/">Trim Sheet Operators</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../trimsheet_hotspot/">Hotspot Mapping</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Additional</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../addon_prefs/">Addon Preferences</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../user_script/">User Script</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../help/">Help</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../troubleshooting/">FAQs</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../changelg/">Changelog</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../credits/">Credits</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../our_addons/">Our Add-ons</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../recommended_addons/">Recommended Add-ons</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Zen UV 5.3 for Blender</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Getting Started</li>
+      <li class="breadcrumb-item active">Installation and Update</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="installation-and-update">Installation and update<a class="headerlink" href="#installation-and-update" title="Permanent link"></a></h1>
+<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link"></a></h2>
+<p>Starting with <a href="../changelg/release_note_5.1.0/">ZenUV 5.1</a>, your favorite add-on has been upgraded to a Blender Extension - bringing smoother installation, and better integration with Blender’s official extension system.</p>
+<h3 id="installing-via-drag-and-drop">Installing via Drag-and-Drop<a class="headerlink" href="#installing-via-drag-and-drop" title="Permanent link"></a></h3>
+<p>Blender supports a streamlined method for installing add-ons: simply dragging and dropping the <code>.zip</code> file directly into the interface. This approach is ideal for users who want a quick, no-menu setup.</p>
+<p><a class="glightbox" href="../img/screen/installation/install_drag_n_drop.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/installation/install_drag_n_drop.gif" /></a></p>
+<h4 id="requirements">✅ Requirements<a class="headerlink" href="#requirements" title="Permanent link"></a></h4>
+<ul>
+<li>Blender 4.1 or newer (older versions may not support drag-and-drop installation natively)</li>
+<li>Add-on packaged as a <code>.zip</code> file (<strong>not extracted</strong>)</li>
+</ul>
+<h4 id="how-to-use-drag-and-drop-installation">📦 How to Use Drag-and-Drop Installation<a class="headerlink" href="#how-to-use-drag-and-drop-installation" title="Permanent link"></a></h4>
+<ol>
+<li>
+<p><strong>Locate the Add-on File</strong><br />
+   Find the <code>.zip</code> file of the add-on on your computer. <strong>Make sure it’s not unzipped (Blender expects the compressed format).</strong></p>
+</li>
+<li>
+<p><strong>Open Blender</strong><br />
+   Launch Blender and navigate to any editor window (e.g., 3D Viewport, Outliner, or Preferences). As of recent updates, drag-and-drop works across all editors.</p>
+</li>
+<li>
+<p><strong>Drag the File into Blender</strong><br />
+   Click and drag the <code>.zip</code> file from your file explorer and drop it into the Blender window.</p>
+</li>
+<li>
+<p><strong>Confirm Installation</strong><br />
+   Blender will automatically process the file and install the add-on. You’ll see a confirmation message, and the add-on will appear in the <code>Preferences &gt; Add-ons</code> list.</p>
+</li>
+<li>
+<p><strong>Enable the Add-on</strong>
+   Go to <code>Edit &gt; Preferences &gt; Add-ons</code>, search for the newly installed add-on, and check the box to enable it.</p>
+</li>
+</ol>
+<h3 id="where-to-find-it">📍 Where to Find It<a class="headerlink" href="#where-to-find-it" title="Permanent link"></a></h3>
+<p>During installation, the extension will appear in the <strong>selected repository</strong> - either the default Blender Extensions repository or any custom repository you&rsquo;ve configured in Preferences.</p>
+<ol>
+<li>
+<p><strong>Open Preferences</strong><br />
+   Go to <code>Edit &gt; Preferences</code>, then switch to the <strong>Extensions</strong> tab.</p>
+</li>
+<li>
+<p><strong>Select Repository</strong><br />
+   Choose the repository where the extension is hosted. If you&rsquo;re using a custom repository, make sure the name matches the name that was set during installation.</p>
+</li>
+<li>
+<p><strong>Search for the Extension</strong><br />
+   Use the search bar to find the extension by name.</p>
+</li>
+</ol>
+<h3 id="troubleshooting">🛠 Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link"></a></h3>
+<ul>
+<li>If the add-on doesn’t appear after dropping, check the Console for errors.</li>
+<li>Ensure the file is a valid Blender add-on <code>.zip</code> and not a nested archive.</li>
+<li>Restart Blender after installation if it was previously installed (addon preferences were registered previously).</li>
+</ul>
+<h2 id="zen-uv-core-library">Zen UV Core Library<a class="headerlink" href="#zen-uv-core-library" title="Permanent link"></a></h2>
+<p>The <strong>Zen UV Core Library</strong> is an optional utility module bundled with the addon. It provides enhanced functionality specifically for the <a href="../stack/#stack"><strong>Stack module</strong></a> to get the fastest computations in C++ which is impossible to be implemented in Python, including:</p>
+<ul>
+<li>🧩 <strong>Island stacking operations</strong>: Efficient handling of geometry islands during stacking workflows.</li>
+<li>⏳ <strong>Progress bar with cancel support</strong>: Displays a responsive progress bar during long operations, allowing users to cancel if needed.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It is distributed separately from the add-on as it is licensed differently from the GPL (Apache License 2.0). Zen UV Core library does not collect or send any data. It does not use any network connections: either internet or local. It is supported on Windows, Mac OS 11 (M1 CPU Universal app only), and Linux platforms. <strong>This library is not required for other addon features and can be excluded if the Stack module is not in use.</strong></p>
+</div>
+<h3 id="when-to-use-core-library">When to Use Core Library<a class="headerlink" href="#when-to-use-core-library" title="Permanent link"></a></h3>
+<p>You’ll need the Core Library only if you plan to use:</p>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Requires Core Library?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Stack module (island stacking)</td>
+<td>✅ Yes</td>
+</tr>
+<tr>
+<td>Progress bar with cancel</td>
+<td>✅ Yes</td>
+</tr>
+<tr>
+<td>General addon functionality</td>
+<td>❌ No</td>
+</tr>
+</tbody>
+</table>
+<h3 id="zen-uv-core-library-installation">Zen UV Core Library Installation<a class="headerlink" href="#zen-uv-core-library-installation" title="Permanent link"></a></h3>
+<ol>
+<li>Go to <strong>Preferences</strong> -&gt; <strong>Add-ons</strong>.</li>
+<li>Find installed and enabled Zen UV add-on.</li>
+<li>Go to <strong>Modules</strong>.</li>
+<li>Press <a href="https://gumroad.com/l/ZenUVCore"><strong>Download Zen UV Core Library (FREE)</strong></a> if you don&rsquo;t have it.
+<a class="glightbox" href="../img/screen/installation/gumroad_page.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="gumroad" src="../img/screen/installation/gumroad_page.png" /></a></li>
+<li>Register on the <strong>gumroad.com</strong> website</li>
+<li>Enter the amount in the price field:</li>
+<li>0 - if you want to get it completely free</li>
+<li>1+ - if you want to donate to the development of ZenUV</li>
+<li>Press <strong>I want this!</strong> button</li>
+<li>Unpack downloaded archive in any location on your drive</li>
+<li>Press <strong>Install Zen UV Core Library</strong>.</li>
+<li>Select Zen UV Core Library file.</li>
+<li>Press <strong>Install Zen UV Core Library</strong>.</li>
+<li>Done! Now the add-on is fully installed and you can use all the features!</li>
+</ol>
+<p><a class="glightbox" href="../img/screen/installation/installation_zen_core.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/installation/installation_zen_core.png" /></a>
+<a class="glightbox" href="../img/screen/installation/installation_zen_core_done.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/installation/installation_zen_core_done.png" /></a></p>
+<hr />
+<h3 id="zen-uv-core-library-installation-for-mac-m1-m2-silicon-app">Zen UV Core Library installation for Mac M1-M2 (Silicon App)<a class="headerlink" href="#zen-uv-core-library-installation-for-mac-m1-m2-silicon-app" title="Permanent link"></a></h3>
+<div class="admonition library">
+<p class="admonition-title">Library</p>
+<p>The new macOS M1-M2 has increased security checks that necessitates users to perform a security override for Zen UV Core to work. Specifically, Zen UV uses dynamic &ldquo;zen_uv_core* .dylib&rdquo; libraries that need to have its security allowed. Therefore, their installation will require additional steps described below.</p>
+</div>
+<div class="admonition certificate">
+<p class="admonition-title">Certificate</p>
+<p>You can make sure that the library is legal and has a valid certificate using this command.
+<code>codesign -d --verbose=2 --extract-certificates &lt;path/to/zen_uv_lib_mac_silicon_64_v1_0_0.dylib&gt;</code></p>
+</div>
+<ol>
+<li>Go to <strong>Preferences</strong> -&gt; <strong>Add-ons</strong>.</li>
+<li>Find installed and enabled Zen UV add-on.</li>
+<li>Go to <strong>Modules</strong>.</li>
+<li>Press <a href="https://gumroad.com/l/ZenUVCore"><strong>Download Zen UV Core Library (FREE)</strong></a> if you don&rsquo;t have it.</li>
+<li>Open <strong>zen_uv_lib_mac_silicon_64_v1_0_0.dylib</strong> library file folowing <a href="https://support.apple.com/guide/mac-help/open-a-mac-app-from-an-unidentified-developer-mh40616/mac">instruction from Apple</a> or images below.
+<a class="glightbox" href="../img/screen/installation/InstallationSilicon_1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/installation/InstallationSilicon_1.png" /></a>
+<a class="glightbox" href="../img/screen/installation/InstallationSilicon_2.png.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/installation/InstallationSilicon_2.png.png" /></a></li>
+<li>Go to Blender and Select <strong>zen_uv_lib_mac_silicon_64_v1_0_0.dylib</strong>. </li>
+<li>Press <strong>Install Zen UV Core Library</strong>.
+<a class="glightbox" href="../img/screen/installation/InstallationSilicon_3.png.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/installation/InstallationSilicon_3.png.png" /></a></li>
+<li>Press <strong>Open</strong> in a popup window.
+<a class="glightbox" href="../img/screen/installation/InstallationSilicon_5.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/installation/InstallationSilicon_5.jpg" /></a></li>
+<li>Done! Now the add-on is fully installed and you can use all the features!</li>
+</ol>
+<hr />
+<h2 id="update">Update<a class="headerlink" href="#update" title="Permanent link"></a></h2>
+<h3 id="updating-via-drag-and-drop">🔄 Updating via Drag-and-Drop<a class="headerlink" href="#updating-via-drag-and-drop" title="Permanent link"></a></h3>
+<p>If you drop a newer version of an add-on you already have installed, Blender will overwrite the old version automatically. No need to uninstall manually.</p>
+<ol>
+<li>Do the same steps as in <a href="#installing-via-drag-and-drop">drag-and-drop</a></li>
+<li>Restart Blender</li>
+</ol>
+<h3 id="updating-via-preferences">⚙️ Updating via Preferences<a class="headerlink" href="#updating-via-preferences" title="Permanent link"></a></h3>
+<ol>
+<li>Go to <strong>Preferences</strong> -&gt; <strong>Add-ons</strong>.</li>
+<li>Find installed and enabled Zen UV add-on.</li>
+<li>Press <strong>Update Zen UV</strong>.</li>
+<li>Select new version Zen UV.zip.</li>
+<li>Press <strong>Update Zen UV</strong> and restart Blender.</li>
+<li><a href="./#zen-uv-core-library-installation"><strong>Install Zen UV Core Library</strong></a>.</li>
+<li>Done!</li>
+</ol>
+<p><a class="glightbox" href="../img/screen/installation/installation_update.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/installation/installation_update.png" /></a></p>
+<h3 id="manual-update">Manual Update<a class="headerlink" href="#manual-update" title="Permanent link"></a></h3>
+<div class="admonition manual">
+<p class="admonition-title">Manual</p>
+<p>Use this update method if for some reason you need to update the add-on using Blender&rsquo;s standard method. In all other cases, we recommend using <a href="./#update"><strong>Zen UV Update</strong></a>. </p>
+</div>
+<ol>
+<li>Go to <strong>Preferences</strong> -&gt; <strong>Add-ons</strong>.</li>
+<li>Find installed and enabled Zen UV add-on.</li>
+<li>Go to <strong>Modules</strong>.</li>
+<li>Press <strong>Unregister Zen UV Core Libary</strong>.</li>
+<li>Press <strong>Install</strong>.</li>
+<li>Select new version Zen UV.zip.</li>
+<li>Press <strong>Install Add-on</strong> and restart Blender.</li>
+<li><a href="./#zen-uv-core-library-installation"><strong>Install Zen UV Core Library</strong></a>.</li>
+<li>Done!</li>
+</ol>
+<p><a class="glightbox" href="../img/screen/installation/installation_manual_update_1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/installation/installation_manual_update_1.png" /></a>
+<a class="glightbox" href="../img/screen/installation/installation_manual_update_2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/installation/installation_manual_update_2.png" /></a></p>
+<h3 id="still-have-problems-with-update">Still have problems with update?<a class="headerlink" href="#still-have-problems-with-update" title="Permanent link"></a></h3>
+<ol>
+<li>Go to Blender add-ons folder. (C:\Users\Sergey\AppData\Roaming\Blender Foundation\Blender\3.2\scripts\addons).</li>
+<li>Delete Zen UV folder manually.</li>
+<li><a href="./#installation"><strong>Install Zen UV add-on</strong></a>.</li>
+<li>Done!</li>
+</ol>
+<h2 id="zen-relax-application-validity-check"><a href="../transform/#relax">Zen Relax Application</a> Validity Check<a class="headerlink" href="#zen-relax-application-validity-check" title="Permanent link"></a></h2>
+<p>The validity and correctness of Zen Relax application data file is essential to be working without errors.</p>
+<ol>
+<li>
+<p>Open file <code>crc.md5</code> with any text editor
+<a class="glightbox" href="../img/screen/installation/relax_crc.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/installation/relax_crc.png" /></a></p>
+</li>
+<li>
+<p>Pay attention to the present checksum values
+<strong>Example:</strong></p>
+</li>
+</ol>
+<pre><code>950a6ed131b4cc48a8978a451a09e13d *ZenRelax_linux_64_v1_0_0
+a3aa5cd73d4f1f7fcd1c62ec9147dc2c *ZenRelax_mac_intel_64_v1_0_0
+f5c0c064ba189f02a05ea62c7e3c04f4 *ZenRelax_mac_silicon_64_v1_0_0
+a195e82d9dbebefa5193d3409ed61cd4 *ZenRelax_win_64_v1_0_0.exe
+</code></pre>
+<ol>
+<li>Compare the checksum of Relax application on your system with the checksum given in <code>crc.md5</code> file</li>
+</ol>
+<h3 id="validation-check-windows">Validation Check (Windows)<a class="headerlink" href="#validation-check-windows" title="Permanent link"></a></h3>
+<p>Validate checksum with <code>certutil</code> command</p>
+<pre><code class="language-batch">certutil -hashfile &quot;c:\Users\&lt;UserName&gt;\AppData\Roaming\Blender Foundation\Blender\3.3\scripts\addons\ZenUV\utils\clib\ZenRelax_win_64_v1_0_0.exe&quot; MD5
+</code></pre>
+<p><a class="glightbox" href="../img/screen/installation/crc_check.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/installation/crc_check.png" /></a></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../youtube_videos/" class="btn btn-neutral float-left" title="Learning Videos"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../user_interface/" class="btn btn-neutral float-right" title="User Interface">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p><p>Copyright &copy; 2024-2025 <a href="https://zenmasters.team/">Zen Masters</a></p></p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../youtube_videos/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../user_interface/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+      <script src="../js/version-select.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+</script></body>
+</html>

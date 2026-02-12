@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Touch Tool - Zen UV 5.3 for Blender</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../css/version-select.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Touch Tool";
+        var mkdocs_page_input_path = "touch_tool.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-7XHJ910WF8"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', "G-7XHJ910WF8");
+      </script>
+ <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }</style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Zen UV 5.3 for Blender
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../youtube_videos/">Learning Videos</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../installation/">Installation and Update</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../user_interface/">User Interface</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Tutorial</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../tutorial/">Step-by-Step Guide Examples</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >Emergency Light</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../tutorial/emergency_light/emergency_light_eng/">Emergency Light (EN)</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../tutorial/emergency_light/emergency_light_ukr/">Emergency Light (UA)</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../tutorial/emergency_light/emergency_light_rus/">Emergency Light (RU)</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Modules</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../adv_uv-maps/">Advanced UV Maps</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../seam_groups/">Seam Groups</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../unwrap/">Unwrap</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../select/">Select</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../transform/">Transform</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../stack/">Stack</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../texel_density/">Texel Density</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../checker/">UV Checker</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pack/">Pack</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../preferences/">Preferences</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../transform_tool/">Transform Tool</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Touch Tool</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#description">Description</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#gizmo-interaction">Gizmo Interaction</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#operation-modes">Operation Modes</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#setup-mode">Setup Mode</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#transform-mode">Transform Mode</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#quick-actions-double-click-shortcuts">Quick Actions (Double Click &amp; Shortcuts)</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#setup-mode-detailed-list">Setup Mode (Detailed List)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#transform-mode-detailed-list">Transform Mode (Detailed List)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#quick-actions-table-format">Quick Actions Table Format</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#setup-mode-table-format">Setup Mode (Table Format)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#transform-mode-table-format">Transform Mode (Table Format)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#core-transformations">Core Transformations</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#tool-properties">Tool Properties</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#scale-input-behavior">Scale Input Behavior</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#n-panel-tool-properties">N-Panel Tool Properties</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#shortcuts-status-bar-and-axis-lock">Shortcuts, Status Bar, and Axis Lock</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#additional-hotkeys">Additional Hotkeys</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#working-with-snapping">Working with Snapping</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#transformation-history">Transformation History</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#guidelines">Guidelines</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#non-disableable-guidelines">Non-Disableable Guidelines</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#disableable-guidelines">Disableable Guidelines</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#gizmo-status-button">Gizmo Status Button</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#transformations">Transformations</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#move">Move</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#scale">Scale</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#rotate">Rotate</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#alignment-by-rotation">Alignment by Rotation</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#flip">Flip</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#fit">Fit</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#match-size">Match Size</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#align">Align</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#verts-align">Verts Align</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#world-orient">World Orient</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#texel-density">Texel Density</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#falloff">Falloff</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#island-draw">Island Draw</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#orient-operators">Orient Operators</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#fit-transform-gizmo">Fit Transform Gizmo</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#swap-handles">Swap Handles</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#set-perpendicular">Set Perpendicular</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#conclusion">Conclusion</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../sticky_uv_editor/">Sticky UV Editor</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../favourites/">Favourites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Trim Sheets</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../trimsheet/">Trim Sheets</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../trimsheet_creation/">Trim Sheet Management</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../trimsheet_operators/">Trim Sheet Operators</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../trimsheet_hotspot/">Hotspot Mapping</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Additional</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../addon_prefs/">Addon Preferences</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../user_script/">User Script</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../help/">Help</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../troubleshooting/">FAQs</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../changelg/">Changelog</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../credits/">Credits</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../our_addons/">Our Add-ons</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../recommended_addons/">Recommended Add-ons</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Zen UV 5.3 for Blender</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Modules</li>
+      <li class="breadcrumb-item active">Touch Tool</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="zen-touch-tool">Zen Touch Tool<a class="headerlink" href="#zen-touch-tool" title="Permanent link"></a></h1>
+<h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link"></a></h2>
+<p><a class="glightbox" href="../img/screen/zen_uv_touch_tool/uv_transform_gizmo_tool.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="zen uv transform gizmo" src="../img/screen/zen_uv_touch_tool/uv_transform_gizmo_tool.png" /></a></p>
+<p><strong>Zen Touch Tool</strong> is a universal UV transformation tool that provides fast and intuitive control over moving, scaling, and rotating UV islands in the <strong>UV Editor</strong>. It allows for quick and easy execution of both basic and advanced transformations.</p>
+<p><em>&ldquo;No advanced mode. Just pure magic straight from you.&rdquo;</em></p>
+<p>The Zen UV gizmo supports both basic transformations and advanced features such as alignment, proportional and non-uniform scaling, <strong>Texel Density</strong> adjustment, <strong>Flip</strong>, working with guidelines, and more.</p>
+<hr />
+<h2 id="gizmo-interaction">Gizmo Interaction<a class="headerlink" href="#gizmo-interaction" title="Permanent link"></a></h2>
+<p><a class="glightbox" href="../img/screen/zen_uv_touch_tool/handle_names.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="handle names" src="../img/screen/zen_uv_touch_tool/handle_names.png" /></a></p>
+<p>The gizmo consists of two main points, which are generally equivalent in effect, and a line.</p>
+<ul>
+<li><strong>Pivot-handle (P-handle)</strong> — The primary transformation point.</li>
+<li><strong>Angle-handle (A-handle)</strong> — The orientation and alignment point.</li>
+<li><strong>Line-handle (L-handle)</strong> — The movement line. This handle has two states, each with a distinct appearance:<ul>
+<li><strong>Free movement</strong> — A solid line. In this state, movement is unrestricted in any direction.</li>
+<li><strong>Movement along the line only</strong> — A dashed line. In this case, movement is constrained to the direction of the <strong>Line-handle</strong>.</li>
+</ul>
+</li>
+</ul>
+<p>Additionally, there are extra handles, most of which appear only in <strong>Transform</strong> mode:</p>
+<ul>
+<li><strong>Align-handles</strong> — Represented by eight handles that allow alignment and transformation at specific angles based on their individual positions.</li>
+<li><strong>Rotate-handle (R-handle)</strong> — Rotates around the <strong>P-handle</strong>.</li>
+<li><strong>Scale-handle (S-handle)</strong> — Performs proportional scaling.</li>
+<li><strong>Non-uniform-handle (NU-handle)</strong> — Scales along the <strong>Line-handle</strong> axis.</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>You can enable handle names in the gizmo properties.
+In <em>Tool Properties</em>, find the <strong>Display Transform Handles</strong> setting and activate <strong>Handle Tooltip</strong>.</p>
+</div>
+<hr />
+<h2 id="operation-modes">Operation Modes<a class="headerlink" href="#operation-modes" title="Permanent link"></a></h2>
+<h3 id="setup-mode">Setup Mode<a class="headerlink" href="#setup-mode" title="Permanent link"></a></h3>
+<p><a class="glightbox" href="../img/screen/zen_uv_touch_tool/setup_mode.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Setup Mode" src="../img/screen/zen_uv_touch_tool/setup_mode.gif" /></a></p>
+<p>This mode is used to position the gizmo relative to the geometry before performing transformations. In <strong>Setup Mode</strong>, moving the gizmo does not affect UV islands.</p>
+<p><strong>Key Functions:</strong>
+- Positioning the gizmo for convenience.
+- Setting its orientation.
+- Defining the pivot point (<strong>Pivot-handle</strong>).</p>
+<h3 id="transform-mode">Transform Mode<a class="headerlink" href="#transform-mode" title="Permanent link"></a></h3>
+<p><a class="glightbox" href="../img/screen/zen_uv_touch_tool/transform_mode.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Setup Mode" src="../img/screen/zen_uv_touch_tool/transform_mode.gif" /></a></p>
+<p>In this mode, the gizmo performs transformations on UV islands or selected elements (<strong>Selection</strong>).</p>
+<p>Special <strong>handles</strong> are available in this mode:
+- <strong>Rotate-handle</strong> (<em>R-handle</em>) — Rotates around the <strong>P-handle</strong>.
+- <strong>Scale-handle</strong> (<em>S-handle</em>) — Performs proportional scaling.
+- <strong>Non-uniform-handle</strong> (<em>NU-handle</em>) — Scales along the <strong>Line-handle</strong> axis.</p>
+<hr />
+<h2 id="quick-actions-double-click-shortcuts">Quick Actions (Double Click &amp; Shortcuts)<a class="headerlink" href="#quick-actions-double-click-shortcuts" title="Permanent link"></a></h2>
+<p>Zen Touch Tool provides <strong>quick actions</strong> for fast gizmo setup and transformation.<br />
+Use <strong>double-click</strong> and <strong>modifier keys</strong> for quick alignment, scaling, snapping, and transformations.</p>
+<hr />
+<h3 id="setup-mode-detailed-list"><strong>Setup Mode (Detailed List)</strong><a class="headerlink" href="#setup-mode-detailed-list" title="Permanent link"></a></h3>
+<p>In <strong>Setup Mode</strong>, these actions adjust the gizmo without affecting the UV islands.</p>
+<ul>
+<li><strong>P-handle (Double Click)</strong> — Align the gizmo to the island <strong>along</strong> its direction.  </li>
+<li>If the gizmo is already aligned, it will switch to <strong>across</strong> the island.</li>
+<li><strong>P-handle (Ctrl + Double Click)</strong> — Align the gizmo to the island <strong>along</strong> its direction and set the <strong>P-handle</strong> to the <strong>center</strong> of the island.</li>
+<li><strong>A-handle (Double Click)</strong> — Align the gizmo to the <strong>selection</strong>.  </li>
+<li>If already aligned, it will switch to <strong>across</strong> the selection.</li>
+<li><strong>A-handle (Ctrl + Double Click)</strong> — Align the gizmo to the <strong>selection</strong> and set the <strong>P-handle</strong> at the <strong>center</strong> of the selection.</li>
+<li><strong>L-handle (Double Click)</strong> — Toggle the <strong>movement constraint mode</strong> to move only <strong>along the L-handle</strong>.<br />
+<em>(Movement along the line does not work in Setup Mode, but you can enable it before switching to Transform Mode.)</em></li>
+</ul>
+<hr />
+<h3 id="transform-mode-detailed-list"><strong>Transform Mode (Detailed List)</strong><a class="headerlink" href="#transform-mode-detailed-list" title="Permanent link"></a></h3>
+<p>In <strong>Transform Mode</strong>, these actions directly affect the UV islands.</p>
+<ul>
+<li><strong>P-handle (Double Click)</strong> — Align the island based on <strong>3D world orientation</strong> (<strong>World Align</strong>).</li>
+<li><strong>A-handle (Double Click)</strong> — Apply <strong>Texel Density (Set TD)</strong>.</li>
+<li><strong>A-handle (Ctrl + Double Click)</strong> — Sample <strong>Texel Density (Get TD)</strong> from the selection.</li>
+<li><strong>L-handle (Double Click)</strong> — Toggle <strong>movement constraint mode</strong> to move only <strong>along the L-handle</strong>.</li>
+<li><strong>R-handle (Double Click)</strong> — Rotate the island <strong>clockwise</strong> by the <strong>Snap Angle</strong> value.</li>
+<li><strong>R-handle (Ctrl + Double Click)</strong> — Rotate the island <strong>counterclockwise</strong> by the <strong>Snap Angle</strong> value.</li>
+<li><strong>NU-handle (Double Click)</strong> — Scale the island <strong>down by 50%</strong>.</li>
+<li><strong>NU-handle (Ctrl + Double Click)</strong> — <strong>Scale the island to zero</strong>.</li>
+<li><strong>S-handle (Double Click)</strong> — Scale the island <strong>up by 200%</strong>.</li>
+<li><strong>Align-handles (Ctrl + Click)</strong> - Flip islands depending on the handle direction.</li>
+</ul>
+<hr />
+<h2 id="quick-actions-table-format"><strong>Quick Actions Table Format</strong><a class="headerlink" href="#quick-actions-table-format" title="Permanent link"></a></h2>
+<p>For quick reference, here’s the same information in a compact <strong>table format</strong>.</p>
+<h3 id="setup-mode-table-format"><strong>Setup Mode (Table Format)</strong><a class="headerlink" href="#setup-mode-table-format" title="Permanent link"></a></h3>
+<table>
+<thead>
+<tr>
+<th><strong>Action</strong></th>
+<th><strong>Effect</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>P-handle (Double Click)</strong></td>
+<td>Aligns the gizmo to the island <strong>along</strong> its direction. If already aligned, switches to <strong>across</strong>.</td>
+</tr>
+<tr>
+<td><strong>P-handle (Ctrl + Double Click)</strong></td>
+<td>Aligns the gizmo <strong>along</strong> the island and places the <strong>P-handle</strong> in the island <strong>center</strong>.</td>
+</tr>
+<tr>
+<td><strong>A-handle (Double Click)</strong></td>
+<td>Aligns the gizmo to the <strong>selection</strong>. If already aligned, switches to <strong>across</strong>.</td>
+</tr>
+<tr>
+<td><strong>A-handle (Ctrl + Double Click)</strong></td>
+<td>Aligns the gizmo to the <strong>selection</strong> and places the <strong>P-handle</strong> in the selection <strong>center</strong>.</td>
+</tr>
+<tr>
+<td><strong>L-handle (Double Click)</strong></td>
+<td>Toggles <strong>movement constraint mode</strong> (along the L-handle). <em>(Takes effect in Transform Mode.)</em></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="transform-mode-table-format"><strong>Transform Mode (Table Format)</strong><a class="headerlink" href="#transform-mode-table-format" title="Permanent link"></a></h3>
+<table>
+<thead>
+<tr>
+<th><strong>Action</strong></th>
+<th><strong>Effect</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>P-handle (Double Click)</strong></td>
+<td>Aligns the island based on <strong>3D world orientation (World Align)</strong>.</td>
+</tr>
+<tr>
+<td><strong>A-handle (Double Click)</strong></td>
+<td>Apply <strong>Texel Density (Set TD)</strong>.</td>
+</tr>
+<tr>
+<td><strong>A-handle (Ctrl + Double Click)</strong></td>
+<td>Sample <strong>Texel Density (Get TD)</strong> from the selection.</td>
+</tr>
+<tr>
+<td><strong>L-handle (Double Click)</strong></td>
+<td>Toggles <strong>movement constraint mode</strong> (along the L-handle).</td>
+</tr>
+<tr>
+<td><strong>R-handle (Double Click)</strong></td>
+<td>Rotates the island <strong>clockwise</strong> by the <strong>Snap Angle</strong> value.</td>
+</tr>
+<tr>
+<td><strong>R-handle (Ctrl + Double Click)</strong></td>
+<td>Rotates the island <strong>counterclockwise</strong> by the <strong>Snap Angle</strong> value.</td>
+</tr>
+<tr>
+<td><strong>NU-handle (Double Click)</strong></td>
+<td>Scales the island <strong>down by 50%</strong>.</td>
+</tr>
+<tr>
+<td><strong>NU-handle (Ctrl + Double Click)</strong></td>
+<td><strong>Scales the island to zero</strong>.</td>
+</tr>
+<tr>
+<td><strong>S-handle (Double Click)</strong></td>
+<td>Scales the island <strong>up by 200%</strong>.</td>
+</tr>
+<tr>
+<td><strong>Align-handles (Ctrl + Click)</strong></td>
+<td>Flip islands depending on the handle direction.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p>These <strong>quick actions</strong> significantly improve workflow efficiency by allowing <strong>faster and more precise</strong> UV transformations.</p>
+<h2 id="core-transformations">Core Transformations<a class="headerlink" href="#core-transformations" title="Permanent link"></a></h2>
+<p>Zen Touch Gizmo supports a wide range of operations:</p>
+<ul>
+<li><strong><a href="#move">Move</a></strong> — Free movement, along the <strong>L-handle</strong>, or constrained to coordinate axes.</li>
+<li><strong><a href="#scale">Scale</a></strong> — Uniform scaling or scaling along a single axis.</li>
+<li><strong><a href="#rotate">Rotate</a></strong> — Free rotation or angle-snapped rotation.</li>
+<li><strong><a href="#alignment-by-rotation">Alignment by Rotation</a></strong> — Align by UV axes, by an edge, or using a custom orientation.</li>
+<li><strong><a href="#flip">Flip</a></strong> — Mirroring along any axis.</li>
+<li><strong><a href="#fit">Fit</a></strong> — Adjust the island size.</li>
+<li><strong><a href="#match-size">Match Size</a></strong> — Resize the island based on the size of its individual elements.</li>
+<li><strong><a href="#align">Align</a></strong> — Position the island based on any existing point in the UV Editor or align it to a grid guide.</li>
+<li><strong><a href="#verts-align">Verts Align</a></strong> — Align selected vertices into a straight line, regardless of the line&rsquo;s orientation.</li>
+<li><strong><a href="#world-orient">World Orient</a></strong> — Orient based on 3D space.</li>
+<li><strong><a href="#falloff">Falloff</a></strong> — Transformation with gradual attenuation.</li>
+<li><strong><a href="#texel-density">Texel Density</a></strong> — Set UV scale in terms of texel density.</li>
+<li><strong><a href="#island-draw">Island Draw</a></strong> — &ldquo;Draw&rdquo; the island for quick manual adjustments or to fit it into predefined boundaries.</li>
+</ul>
+<hr />
+<h2 id="tool-properties">Tool Properties<a class="headerlink" href="#tool-properties" title="Permanent link"></a></h2>
+<p>The properties and operators of the gizmo are listed in the <em>View → Tool Settings</em> panel in the order they appear in the interface.</p>
+<p><a class="glightbox" href="../img/screen/zen_uv_touch_tool/tool_properties.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="tool properties" src="../img/screen/zen_uv_touch_tool/tool_properties.png" /></a></p>
+<hr />
+<p><strong>Property:</strong></p>
+<p><a class="glightbox" href="../img/screen/zen_uv_touch_tool/prop_gizmo_modes.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="gizmo mode" src="../img/screen/zen_uv_touch_tool/prop_gizmo_modes.png" /></a></p>
+<ul>
+<li><strong>Gizmo Mode</strong> - Defines what type of operation is performed by gizmo<ul>
+<li><em>Setup</em> - Setting up gizmo position</li>
+<li><em>Transform</em> - Transforming UVs</li>
+</ul>
+</li>
+</ul>
+<hr />
+<p><strong>Operator:</strong></p>
+<p><a class="glightbox" href="../img/screen/zen_uv_touch_tool/op_auto_setup.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="auto setup" src="../img/screen/zen_uv_touch_tool/op_auto_setup.png" /></a></p>
+<ul>
+<li><strong>Auto Setup By Selection</strong> - Gizmo handles automatically set up by selection depending on island or selection influence<ul>
+<li><em>Pivot in Center</em> - Set pivot in the selection center.</li>
+<li><em>Direction</em> - Specifies how to place the gizmo. Along the selection or across it.<ul>
+<li><em>Along</em> - Along the selection</li>
+<li><em>Across</em> - Across the selection</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr />
+<p><strong>Property:</strong></p>
+<p><a class="glightbox" href="../img/screen/zen_uv_touch_tool/prop_influence.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="influense" src="../img/screen/zen_uv_touch_tool/prop_influence.png" /></a></p>
+<ul>
+<li><strong>Influence</strong> - Transform Influence. Affect Islands or Elements (vertices, edges, polygons)<ul>
+<li><em>Island</em> - Process islands</li>
+<li><em>Selection</em> - Process selected mesh elements (vertices, edges, faces)</li>
+</ul>
+</li>
+</ul>
+<hr />
+<p><strong>Property:</strong></p>
+<p><a class="glightbox" href="../img/screen/zen_uv_touch_tool/prop_falloff.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="falloff" src="../img/screen/zen_uv_touch_tool/prop_falloff.png" /></a></p>
+<ul>
+<li><strong>Editing Mode</strong> - Defines how UV editing behaves in Transform Gizmo mode.<ul>
+<li><em>Default</em></li>
+<li><em>Radial Falloff</em><ul>
+<li><em>Invert Falloff</em> - Invert the falloff effect.</li>
+<li><em>Falloff Exponent</em> - Controls the strength of the falloff effect.</li>
+</ul>
+</li>
+<li><em>Linear Falloff</em><ul>
+<li><em>Invert Falloff</em> - Invert the falloff effect.</li>
+<li><em>Falloff Exponent</em> - Controls the strength of the falloff effect.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr />
+<p><strong>Property:</strong></p>
+<p><a class="glightbox" href="../img/screen/zen_uv_touch_tool/prop_display_gizmo_parts.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="display gizmo state" src="../img/screen/zen_uv_touch_tool/prop_display_gizmo_parts.png" /></a></p>
+<ul>
+<li>Display Gizmo State - Defines what parts of available transform gizmos should be displayed<ul>
+<li><strong>Align Handles</strong> - Align handles around pivot.</li>
+<li><strong>Scale Handle</strong> - Uniform scale handle.</li>
+<li><strong>Scale Non-Uniform</strong> - Non-uniform scale handle.</li>
+<li><strong>Rotation Handle</strong> - Dedicated rotation handle.</li>
+<li><strong>Guidelines</strong> - Enable dynamic guidelines for uv transform operations.</li>
+<li><strong>Bounding Box</strong> - Enable bounding box for UV transform operations.</li>
+<li><strong>Handle Name</strong> - Display handle name in viewport.</li>
+<li><strong>Handle Tooltip</strong> - Display handle tooltip in viewport.</li>
+</ul>
+</li>
+</ul>
+<hr />
+<p><strong>Operator:</strong></p>
+<p><a class="glightbox" href="../img/screen/zen_uv_touch_tool/op_draw_transform_gizmo.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Draw Transform Gizmo" src="../img/screen/zen_uv_touch_tool/op_draw_transform_gizmo.png" /></a></p>
+<ul>
+<li><strong>Draw Transform Gizmo</strong> - Draw UV transform gizmo using mouse.<ul>
+<li><strong>Allow Merge In Draw</strong> - Snapped UV vertices are welded together during mouse draw.</li>
+<li><strong>Snap Margin In Draw</strong> - UV vertices are drawn with an offset relative to snapped points.</li>
+</ul>
+</li>
+</ul>
+<hr />
+<p><strong>Operators group:</strong></p>
+<p><a class="glightbox" href="../img/screen/zen_uv_touch_tool/op_group_orient.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="orient group" src="../img/screen/zen_uv_touch_tool/op_group_orient.png" /></a></p>
+<ul>
+<li><strong>Fit Transform Gizmo</strong> - Fit UV transform gizmo to islands or selection along the island.</li>
+<li><strong>Fit Transform Gizmo</strong> - Fit UV transform gizmo to islands or selection along the island with pivot in the island center.</li>
+<li><strong>Swap Handles</strong> - Swap transform gizmo pivot and angle handles</li>
+<li><strong>Set Perpendicular</strong> - Set the gizmo perpendicular to the existing setup with the defined gizmo length.</li>
+</ul>
+<hr />
+<p><strong>Property:</strong></p>
+<p><a class="glightbox" href="../img/screen/zen_uv_touch_tool/prop_drag.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Drag" src="../img/screen/zen_uv_touch_tool/prop_drag.png" /></a></p>
+<ul>
+<li><strong>Drag</strong> — A standard property of all gizmos in Blender that defines behavior when dragging in the viewport. This does not refer to interacting with gizmo handles but rather to moving across empty space or over geometry.</li>
+</ul>
+<hr />
+<p><strong>Property group:</strong></p>
+<p><a class="glightbox" href="../img/screen/zen_uv_touch_tool/prop_user_values.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Draw Transform Gizmo" src="../img/screen/zen_uv_touch_tool/prop_user_values.png" /></a></p>
+<p><strong>User Values</strong> display numerical transformation data for more precise gizmo adjustments
+    - <strong>Move</strong> - Adjust value of moved UV islands (selection).
+    - <strong>Rotation Angle</strong> - Adjust value of rotated UV islands (selection).
+    - <strong>Scale</strong> - Adjust value of scaled (resized) UV islands (selection).</p>
+<p><a class="glightbox" href="../img/screen/zen_uv_touch_tool/tr_user_values.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="user values" src="../img/screen/zen_uv_touch_tool/tr_user_values.gif" /></a></p>
+<h3 id="scale-input-behavior">Scale Input Behavior<a class="headerlink" href="#scale-input-behavior" title="Permanent link"></a></h3>
+<p>There is a specific behavior associated with the <strong>Scale</strong> input field. Since negative scaling on both axes simultaneously is not possible (<a href="#flip">learn more here</a>), this field does not accept negative values. Entering a negative value will automatically convert it to a positive value while adding a <strong>180-degree rotation</strong>.</p>
+<p>However, for better clarity when transitioning through zero, the negative value remains visible during input. Once the input is confirmed, the value will revert to positive.</p>
+<h3 id="n-panel-tool-properties">N-Panel Tool Properties<a class="headerlink" href="#n-panel-tool-properties" title="Permanent link"></a></h3>
+<p>Gizmo properties in the UV Editor (<em>N-Panel → Tool</em>).</p>
+<p><a class="glightbox" href="../img/screen/zen_uv_touch_tool/tool_props_n_panel.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="n-panel" src="../img/screen/zen_uv_touch_tool/tool_props_n_panel.png" /></a></p>
+<p>This panel contains the same properties as in <em>View → Tool Settings</em>, but after the <strong>Orient</strong> operator group, the following additional properties are available:</p>
+<ul>
+<li><strong>Dial Step Angle</strong> — Step increment for the dial angle (in degrees) in the transformation gizmo.</li>
+<li><strong>Texel Density</strong> — Texel density value.</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p><strong>Transformation properties visibility in the N-Panel - Tool.</strong><br />
+If the gizmo is in <strong>Setup Mode</strong>, <strong>User Values</strong> will not be displayed.<br />
+If the gizmo is in <strong>Transform Mode</strong>, these properties will appear after activating the gizmo, as they reflect only the current transformation.<br />
+They display adjustable parameters for the last performed transformation and cannot be shown if no transformation has occurred yet.</p>
+</div>
+<hr />
+<h3 id="shortcuts-status-bar-and-axis-lock">Shortcuts, Status Bar, and Axis Lock<a class="headerlink" href="#shortcuts-status-bar-and-axis-lock" title="Permanent link"></a></h3>
+<p><a class="glightbox" href="../img/screen/zen_uv_touch_tool/tool_status_bar.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="status bar" src="../img/screen/zen_uv_touch_tool/tool_status_bar.png" /></a></p>
+<p>We have already assigned essential hotkeys, but you can add your own as needed.<br />
+One of the most important and frequently used shortcuts is for switching the gizmo mode.</p>
+<ul>
+<li><strong>Space</strong> — Toggles the gizmo mode between <strong>Transform</strong> and <strong>Setup</strong>.</li>
+<li><strong>Ctrl</strong> — Temporarily enables snapping while held down.</li>
+</ul>
+<p>In the <strong>Status Bar</strong>, you can find hints about hotkeys for working with the gizmo during transformations. The available shortcuts may change depending on the transformation being performed.</p>
+<ul>
+<li><strong>Enter</strong> — Confirm. You don’t necessarily need to use this shortcut, as transformations are confirmed automatically when you release the mouse button.</li>
+<li><strong>Esc</strong> — Cancel transformation. You can always use <em>Undo</em>, but if you realize mid-transformation that it&rsquo;s not what you need, use this shortcut to revert both the geometry and gizmo to their initial state.</li>
+<li><strong>X, Y</strong> — Lock X, Lock Y. Standard axis locks for transformations.</li>
+<li><strong>Z</strong> — Lock Z. The UV Editor does not have a Z-axis, but for convenience, this shortcut constrains transformations <strong>along the Line-handle</strong>.</li>
+<li><strong>A</strong> — Enable/Disable Angle Step. Turns off angle snapping if it interferes with your workflow.</li>
+<li><strong>Shift</strong> — Standard shortcut for more precise positioning.</li>
+</ul>
+<h3 id="additional-hotkeys">Additional Hotkeys<a class="headerlink" href="#additional-hotkeys" title="Permanent link"></a></h3>
+<p>In addition to the shortcuts displayed in the <strong>Status Bar</strong>, there are extra hotkeys for quickly executing specific transformations:</p>
+<ul>
+<li><strong>G</strong> — Move</li>
+<li><strong>S</strong> — Scale</li>
+<li><strong>R</strong> — Rotate</li>
+</ul>
+<p>These hotkeys allow transformations without needing to click on the corresponding handles.<br />
+Simply hold the desired key, press the left mouse button anywhere on the screen, and drag.<br />
+The transformation will behave as if you were dragging a handle.</p>
+<hr />
+<h3 id="working-with-snapping">Working with Snapping<a class="headerlink" href="#working-with-snapping" title="Permanent link"></a></h3>
+<p>Snapping in <strong>Zen Touch Tool</strong> is activated and configured the same way as in Blender.</p>
+<p><a class="glightbox" href="../img/screen/zen_uv_touch_tool/blender_snap_properties.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="snap" src="../img/screen/zen_uv_touch_tool/blender_snap_properties.png" /></a></p>
+<p>One of the most useful features is the <strong>temporary activation</strong> of snapping by holding <strong>Ctrl</strong>.<br />
+This allows you to enable snapping on the fly during a transformation, which is especially helpful in <strong>Setup Mode</strong> when positioning the gizmo in preparation for a transformation.</p>
+<p>In addition to the snap points defined in Blender’s snapping properties, we have added <strong><a href="#transformation-history">Transformation History</a> points</strong>.<br />
+These points will also be considered for snapping, regardless of the main snapping settings.</p>
+<hr />
+<h3 id="transformation-history">Transformation History<a class="headerlink" href="#transformation-history" title="Permanent link"></a></h3>
+<p><a class="glightbox" href="../img/screen/zen_uv_touch_tool/transform_history.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="transform history" src="../img/screen/zen_uv_touch_tool/transform_history.png" /></a></p>
+<p>During transformations, you may notice numbered points appearing after each movement.<br />
+These are <strong>Transformation History</strong> points.<br />
+By using them with <a href="#working-with-snapping">snapping</a>, you can revert geometry to one of its previous states.</p>
+<hr />
+<h3 id="guidelines">Guidelines<a class="headerlink" href="#guidelines" title="Permanent link"></a></h3>
+<p>Transformations performed with the tool can often be complex, especially when aligning with other islands.<br />
+To simplify this process, we have introduced <strong>guidelines</strong>.</p>
+<p>In general, guidelines fall into two categories:</p>
+<h4 id="non-disableable-guidelines">Non-Disableable Guidelines<a class="headerlink" href="#non-disableable-guidelines" title="Permanent link"></a></h4>
+<p>Following Blender’s approach to guidelines, these are always visible once a transformation begins.<br />
+They indicate the direction of transformation when an axis lock is used. Each guideline follows the standard axis color scheme:</p>
+<ul>
+<li><strong>Red</strong> — X axis</li>
+<li><strong>Green</strong> — Y axis</li>
+<li><strong>Blue</strong> — Since the UV Editor does not have a Z axis, this color represents movement along the <strong>Line-handle</strong> axis.</li>
+</ul>
+<h4 id="disableable-guidelines">Disableable Guidelines<a class="headerlink" href="#disableable-guidelines" title="Permanent link"></a></h4>
+<p>This group includes guidelines that display the island’s bounding box or highlight the snapping reference point.<br />
+These guidelines are colored <strong>gray</strong>.</p>
+<p><a class="glightbox" href="../img/screen/zen_uv_touch_tool/guides_01.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="guidelines" src="../img/screen/zen_uv_touch_tool/guides_01.png" /></a></p>
+<p><a class="glightbox" href="../img/screen/zen_uv_touch_tool/rotation_guides.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="rotation guides" src="../img/screen/zen_uv_touch_tool/rotation_guides.png" /></a></p>
+<p><a class="glightbox" href="../img/screen/zen_uv_touch_tool/guide_lock_x_axis.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="lock x axis guide" src="../img/screen/zen_uv_touch_tool/guide_lock_x_axis.png" /></a></p>
+<hr />
+<h3 id="gizmo-status-button">Gizmo Status Button<a class="headerlink" href="#gizmo-status-button" title="Permanent link"></a></h3>
+<p><a class="glightbox" href="../img/screen/zen_uv_touch_tool/gizmo_mode_button.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="gizmo mode button" src="../img/screen/zen_uv_touch_tool/gizmo_mode_button.png" /></a></p>
+<p>While editing geometry, there may be cases where the gizmo is out of view, but you still need to know its mode.<br />
+To address this, a <strong>standard Blender gizmo button</strong> is located near the <strong>N-Panel</strong>, displaying the current gizmo mode.</p>
+<p>Additionally, you can use this button to switch between <strong>Setup</strong> and <strong>Transform</strong> modes.  </p>
+<ul>
+<li>In <strong>Setup Mode</strong>, the button is <strong>gray</strong> with a <strong>wrench icon</strong>.  </li>
+<li>In <strong>Transform Mode</strong>, the button is <strong>dark red</strong> with an <strong>icon representing movement</strong>.  </li>
+</ul>
+<p>The visibility of this button can be toggled in the <strong><a href="../addon_prefs/">Addon Preferences</a></strong>.</p>
+<hr />
+<h3 id="transformations">Transformations<a class="headerlink" href="#transformations" title="Permanent link"></a></h3>
+<p>All transformations can be performed either freely or with high precision, depending on the initial positioning of the gizmo in <strong>Setup Mode</strong>.<br />
+The examples below demonstrate both methods. However, rest assured that you can achieve <strong>precise transformations</strong> in any of these cases if needed.</p>
+<p>When using <strong><a href="#shortcuts-status-bar-and-axis-lock">axis locks</a></strong> or <strong><a href="#working-with-snapping">snapping</a></strong>, the gizmo operates in a <strong>&ldquo;detached state&rdquo;</strong>.<br />
+This means the gizmo itself can move freely, regardless of axis constraints.<br />
+This allows you to clearly see where the snapping is leading or visually assess the alignment of the island.<br />
+However, the actual transformation of the geometry will strictly follow the locking settings.</p>
+<h4 id="move">Move<a class="headerlink" href="#move" title="Permanent link"></a></h4>
+<p>Movement is primarily performed by dragging the <strong>Line-handle</strong>.<br />
+Additionally, movement can be <strong>complex</strong>, involving sequential adjustments of both the <strong>A-handle</strong> and <strong>P-handle</strong>.</p>
+<p><a class="glightbox" href="../img/screen/zen_uv_touch_tool/tr_move.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="tr move" src="../img/screen/zen_uv_touch_tool/tr_move.gif" /></a></p>
+<h4 id="scale">Scale<a class="headerlink" href="#scale" title="Permanent link"></a></h4>
+<p>Scaling can be <strong>proportional</strong> or <strong>non-proportional</strong>.<br />
+Non-proportional scaling is always performed along the <strong>Line-handle</strong>.</p>
+<p><a class="glightbox" href="../img/screen/zen_uv_touch_tool/tr_scale.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="tr scale" src="../img/screen/zen_uv_touch_tool/tr_scale.gif" /></a></p>
+<h4 id="rotate">Rotate<a class="headerlink" href="#rotate" title="Permanent link"></a></h4>
+<p>Rotation can be <strong>free</strong> or <strong>angle-snapped</strong>.<br />
+By default, rotation is free. At the start of the rotation, a <strong>dial gizmo</strong> appears on the screen, visually indicating the current angle by filling marker segments.</p>
+<p>To activate <strong>angle snapping</strong>, press <strong>&ldquo;A&rdquo;</strong> during rotation.</p>
+<p><a class="glightbox" href="../img/screen/zen_uv_touch_tool/tr_rotate.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="tr rotate" src="../img/screen/zen_uv_touch_tool/tr_rotate.gif" /></a></p>
+<h4 id="alignment-by-rotation">Alignment by Rotation<a class="headerlink" href="#alignment-by-rotation" title="Permanent link"></a></h4>
+<p>Alignment can be performed <strong>by UV axes, by an edge, or using a custom reference</strong>.</p>
+<p><a class="glightbox" href="../img/screen/zen_uv_touch_tool/tr_rotation_align.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="tr rotation align" src="../img/screen/zen_uv_touch_tool/tr_rotation_align.gif" /></a></p>
+<p>The following example demonstrates <strong>custom alignment</strong> using snapping.</p>
+<p><a class="glightbox" href="../img/screen/zen_uv_touch_tool/tr_rotation_align_snap.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="tr rotation align snap" src="../img/screen/zen_uv_touch_tool/tr_rotation_align_snap.gif" /></a></p>
+<h4 id="flip">Flip<a class="headerlink" href="#flip" title="Permanent link"></a></h4>
+<p>If you need to Flip along a coordinate axis, use <strong>Align-handles</strong> (Ctrl + Click) to Flip islands based on the <strong>handle direction</strong>.</p>
+<p><a class="glightbox" href="../img/screen/zen_uv_touch_tool/tr_flip_by_axes.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="flip by axes" src="../img/screen/zen_uv_touch_tool/tr_flip_by_axes.gif" /></a></p>
+<p>Flipping can be performed along <strong>any axis</strong>, but it is achieved <strong>only through scaling along a single axis</strong>.
+Flipping is <strong>not possible</strong> when scaling along both axes simultaneously.<br />
+For this reason, Flip is always performed using the <strong>non-uniform-handle</strong>.</p>
+<p>If you require a precise <strong>Flip without distortions</strong>, use the special <strong>Flip point</strong>, marked with an <strong>F inside a circle</strong>.</p>
+<p><a class="glightbox" href="../img/screen/zen_uv_touch_tool/tr_flip.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="tr flip" src="../img/screen/zen_uv_touch_tool/tr_flip.gif" /></a></p>
+<p>The example below demonstrates an attempt to flip along <strong>both axes</strong> using standard Blender tools.<br />
+Due to the way transformations work technically, such an operation results in a <strong>180-degree rotation</strong> instead.</p>
+<p><a class="glightbox" href="../img/screen/zen_uv_touch_tool/two_axis_impossible_flip.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="flip double axes" src="../img/screen/zen_uv_touch_tool/two_axis_impossible_flip.gif" /></a></p>
+<h4 id="fit">Fit<a class="headerlink" href="#fit" title="Permanent link"></a></h4>
+<p>Adjusts the island size to fit within the desired bounds.</p>
+<p><a class="glightbox" href="../img/screen/zen_uv_touch_tool/tr_fit.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="tr fit" src="../img/screen/zen_uv_touch_tool/tr_fit.gif" /></a></p>
+<h4 id="match-size">Match Size<a class="headerlink" href="#match-size" title="Permanent link"></a></h4>
+<p>Resizes the island based on the size of its individual elements.</p>
+<p><a class="glightbox" href="../img/screen/zen_uv_touch_tool/tr_match.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="tr match" src="../img/screen/zen_uv_touch_tool/tr_match.gif" /></a></p>
+<h4 id="align">Align<a class="headerlink" href="#align" title="Permanent link"></a></h4>
+<p>Aligns the island to any existing point in the <strong>UV Editor</strong> or to the grid guide.</p>
+<p><a class="glightbox" href="../img/screen/zen_uv_touch_tool/tr_align_01.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="tr grid align" src="../img/screen/zen_uv_touch_tool/tr_align_01.gif" /></a></p>
+<p><a class="glightbox" href="../img/screen/zen_uv_touch_tool/tr_align_02.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="tr vertex align" src="../img/screen/zen_uv_touch_tool/tr_align_02.gif" /></a></p>
+<h4 id="verts-align">Verts Align<a class="headerlink" href="#verts-align" title="Permanent link"></a></h4>
+<p>Aligns selected vertices into a straight line, regardless of the line’s orientation.</p>
+<p><a class="glightbox" href="../img/screen/zen_uv_touch_tool/tr_align_in_line.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="tr align in line" src="../img/screen/zen_uv_touch_tool/tr_align_in_line.gif" /></a></p>
+<h4 id="world-orient">World Orient<a class="headerlink" href="#world-orient" title="Permanent link"></a></h4>
+<p>Aligns the UV orientation based on <strong>3D space</strong>.</p>
+<p><strong>Double-clicking</strong> the <strong>Pivot-handle</strong> executes the <strong>World Align</strong> operator.</p>
+<p><a class="glightbox" href="../img/screen/zen_uv_touch_tool/tr_world_align.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="tr world align" src="../img/screen/zen_uv_touch_tool/tr_world_align.gif" /></a></p>
+<h4 id="texel-density">Texel Density<a class="headerlink" href="#texel-density" title="Permanent link"></a></h4>
+<p>Sets the UV scale based on <strong>texel density</strong> values.</p>
+<p><a class="glightbox" href="../img/screen/zen_uv_touch_tool/tr_set_td.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="get set texel density" src="../img/screen/zen_uv_touch_tool/tr_set_td.gif" /></a></p>
+<h4 id="falloff">Falloff<a class="headerlink" href="#falloff" title="Permanent link"></a></h4>
+<p>Transformation with gradual attenuation.</p>
+<p><a class="glightbox" href="../img/screen/zen_uv_touch_tool/tr_falloff.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="tr falloff" src="../img/screen/zen_uv_touch_tool/tr_falloff.gif" /></a></p>
+<p>There are two <strong>Falloff</strong> modes:</p>
+<ul>
+<li><strong>Linear</strong> — Controls attenuation starting from the <strong>Pivot-handle</strong>.<br />
+  Vertices on the opposite side of the <strong>Line-handle</strong> will remain unaffected.<br />
+  Once in <strong>Transform Mode</strong>, the <strong>Pivot-handle</strong> becomes fixed and cannot be moved.  </li>
+</ul>
+<p>This type of falloff has the following properties:</p>
+<div class="admonition properties">
+<p class="admonition-title">Properties</p>
+<p><a class="glightbox" href="../img/screen/zen_uv_touch_tool/linear_falloff_settings.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="linear falloff props" src="../img/screen/zen_uv_touch_tool/linear_falloff_settings.png" /></a></p>
+<ul>
+<li><strong>Invert Falloff</strong> - Invert the falloff effect</li>
+<li><strong>Falloff Exponent</strong> - Controls the strength of the falloff effect</li>
+<li>
+<p><strong>Linear falloff type</strong> - Select the transformation used in linear falloff mode for the angle handle</p>
+<ul>
+<li><em>Rotation</em> - Use rotation transformation</li>
+<li><em>Translation</em> - Use translation transformation</li>
+</ul>
+</li>
+<li>
+<p><strong>Linear Falloff Type</strong> — Determines which transformation will be applied when using the <strong>Angle-handle</strong>.<br />
+You can choose either one or both transformation types.</p>
+</li>
+</ul>
+</div>
+<ul>
+<li><strong>Radial</strong> — Controls attenuation starting from the <strong>Pivot-handle</strong>.<br />
+  Affects all vertices within the <strong>falloff gizmo’s circular area</strong>.<br />
+  Once in <strong>Transform Mode</strong>, the <strong>Pivot-handle</strong> becomes fixed and cannot be moved.  </li>
+</ul>
+<p>This type of falloff has the following properties:</p>
+<div class="admonition properties">
+<p class="admonition-title">Properties</p>
+<p><a class="glightbox" href="../img/screen/zen_uv_touch_tool/radial_falloff_settings.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="radial falloff props" src="../img/screen/zen_uv_touch_tool/radial_falloff_settings.png" /></a></p>
+<ul>
+<li><strong>Invert Falloff</strong> - Invert the falloff effect</li>
+<li><strong>Falloff Exponent</strong> - Controls the strength of the falloff effect</li>
+</ul>
+</div>
+<h4 id="island-draw">Island Draw<a class="headerlink" href="#island-draw" title="Permanent link"></a></h4>
+<p>&ldquo;Drawing&rdquo; an island for quick manual adjustments or fitting it into predefined boundaries.</p>
+<p><a class="glightbox" href="../img/screen/zen_uv_touch_tool/tr_draw.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="tr draw gizmo" src="../img/screen/zen_uv_touch_tool/tr_draw.gif" /></a></p>
+<p>You can also &ldquo;draw&rdquo; the gizmo in <strong>Setup Mode</strong>, which is especially convenient when snapping is enabled.</p>
+<p><a class="glightbox" href="../img/screen/zen_uv_touch_tool/tr_draw_in_setup.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="draw gizmo in setup mode" src="../img/screen/zen_uv_touch_tool/tr_draw_in_setup.gif" /></a></p>
+<hr />
+<h3 id="orient-operators">Orient Operators<a class="headerlink" href="#orient-operators" title="Permanent link"></a></h3>
+<p>For a successful transformation, it is crucial to set up the tool correctly.<br />
+To simplify and speed up this process, we have developed a set of <strong>Orient Operators</strong>.  </p>
+<p>These operators work in both <strong>Setup</strong> and <strong>Transform</strong> modes but never affect the selected geometry — <strong>only the gizmo</strong>.</p>
+<p><a class="glightbox" href="../img/screen/zen_uv_touch_tool/orient_operators.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="orient operators" src="../img/screen/zen_uv_touch_tool/orient_operators.png" /></a></p>
+<hr />
+<h4 id="fit-transform-gizmo">Fit Transform Gizmo<a class="headerlink" href="#fit-transform-gizmo" title="Permanent link"></a></h4>
+<p>Fits the UV transform gizmo to <strong>islands</strong> or <strong>selection</strong>.<br />
+This operator is designed so that if the gizmo is already placed across the island, it will automatically switch to an along placement.<br />
+This behavior can be disabled using the <strong>Toggle Direction</strong> setting.</p>
+<p><a class="glightbox" href="../img/screen/zen_uv_touch_tool/tr_fit_gizmo.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Fit Transform Gizmo" src="../img/screen/zen_uv_touch_tool/tr_fit_gizmo.gif" /></a></p>
+<p><a class="glightbox" href="../img/screen/zen_uv_touch_tool/fit_transform_gizmo_op_prop.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Fit Transform Gizmo" src="../img/screen/zen_uv_touch_tool/fit_transform_gizmo_op_prop.png" /></a></p>
+<ul>
+<li><strong>Influence</strong> — Determines what the gizmo affects: Islands or Selection.<ul>
+<li><em>Island</em> — Affects entire islands.</li>
+<li><em>Selection</em> — Affects only the selected elements.</li>
+</ul>
+</li>
+<li><strong>Direction</strong> — Specifies how to align the gizmo with the selection.<ul>
+<li><em>Along</em> — Aligns the gizmo along the selection.</li>
+<li><em>Across</em> — Aligns the gizmo across the selection.</li>
+</ul>
+</li>
+<li><strong>Pivot in Center</strong> — Sets the pivot at the center of the selection.</li>
+<li><strong>Toggle Direction</strong> — Enables toggling the gizmo direction between <strong>along</strong> and <strong>across</strong> the island.</li>
+</ul>
+<p>This operator is also used for <strong>automatic gizmo setup</strong> when changing the selection.<br />
+The button for enabling auto-positioning is located next to the gizmo mode switch.</p>
+<p><a class="glightbox" href="../img/screen/zen_uv_touch_tool/auto_setup.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="auto setup" src="../img/screen/zen_uv_touch_tool/auto_setup.png" /></a></p>
+<p><a class="glightbox" href="../img/screen/zen_uv_touch_tool/auto_setup.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="auto setup dynamic" src="../img/screen/zen_uv_touch_tool/auto_setup.gif" /></a></p>
+<hr />
+<p>This is also <strong>Fit Transform Gizmo</strong>, but configured to place the <strong>pivot at the center</strong> of the island.<br />
+This can be especially useful when working with circular islands.</p>
+<p><a class="glightbox" href="../img/screen/zen_uv_touch_tool/tr_fit_gizmo_in_center.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Fit Transform Gizmo in center" src="../img/screen/zen_uv_touch_tool/tr_fit_gizmo_in_center.gif" /></a></p>
+<hr />
+<h4 id="swap-handles">Swap Handles<a class="headerlink" href="#swap-handles" title="Permanent link"></a></h4>
+<p>Swaps the <strong>Pivot-handle (P-handle)</strong> and <strong>Angle-handle (A-handle)</strong>.</p>
+<p>This operator has no additional settings — it simply switches the positions of the <strong>P-handle</strong> and <strong>A-handle</strong>.<br />
+This can be useful if you decide to rotate or scale the island from the opposite reference point.</p>
+<p><a class="glightbox" href="../img/screen/zen_uv_touch_tool/tr_swap_handles.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="swap handles" src="../img/screen/zen_uv_touch_tool/tr_swap_handles.gif" /></a></p>
+<hr />
+<h4 id="set-perpendicular">Set Perpendicular<a class="headerlink" href="#set-perpendicular" title="Permanent link"></a></h4>
+<p>Sets the gizmo <strong>perpendicular</strong> to its current orientation while preserving its length.</p>
+<p>This is a <strong>specialized operator</strong> designed to allow transformations <strong>perpendicular to the Line-handle direction</strong>.
+This is especially useful when flattening an selection along a single axis.</p>
+<p><a class="glightbox" href="../img/screen/zen_uv_touch_tool/tr_orient_align_perpendicular.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="set perpendicular" src="../img/screen/zen_uv_touch_tool/tr_orient_align_perpendicular.gif" /></a></p>
+<p><a class="glightbox" href="../img/screen/zen_uv_touch_tool/set_perpendicular_op_prop.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="set perpendicular op prop" src="../img/screen/zen_uv_touch_tool/set_perpendicular_op_prop.png" /></a></p>
+<ul>
+<li><strong>Gizmo Length</strong> — Adjusts the gizmo length as a percentage, where <strong>1</strong> represents the original length.</li>
+</ul>
+<hr />
+<h2 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link"></a></h2>
+<p><strong>Zen Touch Tool</strong> provides a <strong>powerful</strong> and <strong>intuitive</strong> way to work with UVs.<br />
+Whether you use a <strong>mouse, stylus, or even a lightsaber</strong> — all transformations remain under your control.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../transform_tool/" class="btn btn-neutral float-left" title="Transform Tool"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../sticky_uv_editor/" class="btn btn-neutral float-right" title="Sticky UV Editor">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p><p>Copyright &copy; 2024-2025 <a href="https://zenmasters.team/">Zen Masters</a></p></p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../transform_tool/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../sticky_uv_editor/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+      <script src="../js/version-select.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+</script></body>
+</html>

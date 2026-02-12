@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Preferences - Zen UV 5.3 for Blender</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../css/version-select.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Preferences";
+        var mkdocs_page_input_path = "preferences.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-7XHJ910WF8"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', "G-7XHJ910WF8");
+      </script>
+ <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }</style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Zen UV 5.3 for Blender
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../youtube_videos/">Learning Videos</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../installation/">Installation and Update</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../user_interface/">User Interface</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Tutorial</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../tutorial/">Step-by-Step Guide Examples</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >Emergency Light</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../tutorial/emergency_light/emergency_light_eng/">Emergency Light (EN)</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../tutorial/emergency_light/emergency_light_ukr/">Emergency Light (UA)</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../tutorial/emergency_light/emergency_light_rus/">Emergency Light (RU)</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Modules</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../adv_uv-maps/">Advanced UV Maps</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../seam_groups/">Seam Groups</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../unwrap/">Unwrap</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../select/">Select</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../transform/">Transform</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../stack/">Stack</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../texel_density/">Texel Density</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../checker/">UV Checker</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pack/">Pack</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Preferences</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#operators">Operators</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#zen-uv-keymaps">Zen UV Keymaps</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#reset-preferences">Reset Preferences</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#reload-icons">Reload Icons</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#panels">Panels</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#display">Display</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#hops-uv-display">HOps UV Display</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#favourites">Favourites</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../transform_tool/">Transform Tool</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../touch_tool/">Touch Tool</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../sticky_uv_editor/">Sticky UV Editor</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../favourites/">Favourites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Trim Sheets</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../trimsheet/">Trim Sheets</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../trimsheet_creation/">Trim Sheet Management</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../trimsheet_operators/">Trim Sheet Operators</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../trimsheet_hotspot/">Hotspot Mapping</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Additional</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../addon_prefs/">Addon Preferences</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../user_script/">User Script</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../help/">Help</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../troubleshooting/">FAQs</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../changelg/">Changelog</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../credits/">Credits</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../our_addons/">Our Add-ons</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../recommended_addons/">Recommended Add-ons</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Zen UV 5.3 for Blender</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Modules</li>
+      <li class="breadcrumb-item active">Preferences</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="preferences">Preferences<a class="headerlink" href="#preferences" title="Permanent link"></a></h1>
+<table>
+<thead>
+<tr>
+<th>UV Editor</th>
+<th>3D View</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="glightbox" href="../img/screen/preferences/MainPanelUv.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Preferences" src="../img/screen/preferences/MainPanelUv.png" /></a></td>
+<td><a class="glightbox" href="../img/screen/preferences/MainPanel3d.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Preferences" src="../img/screen/preferences/MainPanel3d.png" /></a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="operators">Operators<a class="headerlink" href="#operators" title="Permanent link"></a></h2>
+<h3 id="zen-uv-keymaps">Zen UV Keymaps<a class="headerlink" href="#zen-uv-keymaps" title="Permanent link"></a></h3>
+<p>When activated, it opens the Blender Preferences window with the <a href="../addon_prefs/#keymap"><strong>Keymap</strong></a> section pre-selected, allowing users to view or customize shortcut bindings immediately.</p>
+<h3 id="reset-preferences">Reset Preferences<a class="headerlink" href="#reset-preferences" title="Permanent link"></a></h3>
+<p>Reset Zen UV Preferences to default state.</p>
+<h3 id="reload-icons">Reload Icons<a class="headerlink" href="#reload-icons" title="Permanent link"></a></h3>
+<p>The <strong>Reload Icons</strong> operator restores all custom addon icons that may have disappeared or become corrupted—typically due to interference from third-party addons or Blender’s internal icon caching issues.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul>
+<li>This operator does not permanently fix Blender’s icon caching bug, but provides a fast workaround</li>
+<li>If icons still fail to reload, try restarting Blender or checking for conflicting addons</li>
+</ul>
+</div>
+<hr />
+<h2 id="panels">Panels<a class="headerlink" href="#panels" title="Permanent link"></a></h2>
+<div class="admonition subpanel">
+<p class="admonition-title">Subpanel</p>
+<p><a class="glightbox" href="../img/screen/preferences/PanelPanels.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Preferences" src="../img/screen/preferences/PanelPanels.png" /></a></p>
+</div>
+<ul>
+<li>
+<p><strong>Disable Docked View3D Panel</strong> - Disable Compact UI.</p>
+<p><a class="glightbox" href="../img/screen/preferences/Disable_CompactUI.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Combo Panel" src="../img/screen/preferences/Disable_CompactUI.gif" /></a></p>
+</li>
+<li>
+<p><strong>Multiselect With Shift</strong> - Set Active Panels with holding Shift hotkey.</p>
+</li>
+<li>
+<p><strong>Popup Panel Width</strong> - Set Popup menu <code>Shift + U</code> width.</p>
+</li>
+<li>
+<p><strong>Selector Orientation</strong> - Orient Icons vertically or horizontally. 
+    <a class="glightbox" href="../img/screen/preferences/preferences_selector_orientation.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Combo Panel" src="../img/screen/preferences/preferences_selector_orientation.gif" /></a></p>
+</li>
+<li>
+<p><strong>Panels Icon Style</strong> - Change Icon Style. If you don&rsquo;t see active panel icons with your current Blender color theme you can change the icon style.</p>
+<p><a class="glightbox" href="../img/gifs/user_interface/compactui_5.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Combo Panel" src="../img/gifs/user_interface/compactui_5.gif" /></a></p>
+</li>
+<li>
+<p><strong>Disabling Panels</strong> - Enable Add-on Panels. You can use these checkboxes disable some panels if you don&rsquo;t use them.</p>
+<p><a class="glightbox" href="../img/gifs/user_interface/compactui_4.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Combo Panel" src="../img/gifs/user_interface/compactui_4.gif" /></a></p>
+</li>
+<li>
+<p><strong>Floating Panels</strong> - Show Panel as a separate Panel. If you like old style menu make all the panels Floating.</p>
+<p><a class="glightbox" href="../img/gifs/user_interface/compactui_7.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Combo Panel" src="../img/gifs/user_interface/compactui_7.gif" /></a></p>
+</li>
+</ul>
+<hr />
+<h2 id="display">Display<a class="headerlink" href="#display" title="Permanent link"></a></h2>
+<p>The Display panel allows you to switch certain display features used across different parts of the UI.</p>
+<div class="admonition subpanel">
+<p class="admonition-title">Subpanel</p>
+<p><a class="glightbox" href="../img/screen/preferences/PanelDisplay.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Preferences" src="../img/screen/preferences/PanelDisplay.png" /></a></p>
+</div>
+<hr />
+<ul>
+<li><strong>Addon N-Panel Name</strong> - Name of the addon tab in N-Panel. You can set it to Zen to combine all Zen addons in one tab. Requires Blender restart. More info in the article <a href="../addon_prefs/#addon-n-panel-name">Addon Preferences</a></li>
+</ul>
+<hr />
+<ul>
+<li>
+<p><strong>Display Pie Assist</strong> - Display hints for Pie menu. More info in the article <a href="../user_interface/#pie-menu-assist">Pie Menu Assist</a></p>
+</li>
+<li>
+<p><strong>Display Progress Bar</strong> - Display the progress of the operator execution process/ More info in the article <a href="../user_interface/#progress-bar">User Interface</a>.</p>
+</li>
+<li>
+<p><strong>Sticky UV Editor Button</strong> - Enable Sticky UV Editor button. More info in the article <a href="../sticky_uv_editor/#about">Sticky UV Editor</a></p>
+</li>
+<li>
+<p><strong>Right Menu Assist</strong> - Context assistance by right menu click. More info in the article <a href="../user_interface/#right-menu-assist">User Interface</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="hops-uv-display">HOps UV Display<a class="headerlink" href="#hops-uv-display" title="Permanent link"></a></h3>
+<p><a class="glightbox" href="../img/screen/preferences/HardOps_Display.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="HardOps_Displayl" src="../img/screen/preferences/HardOps_Display.gif" /></a>  </p>
+<ul>
+<li><strong>HOps UV Display</strong> - Display UV trasnforms in 3D View using Hard Ops addon.</li>
+<li><strong>Context-sensitive</strong> - Enable HOps UV Display only if UV Editor is open.</li>
+<li><strong>Auto Fit UV View</strong> - Automatically Fit and Zoom UV viewport.</li>
+<li><strong>Show Annotations</strong> - Show operator data using Blender annotations.</li>
+</ul>
+<hr />
+<h2 id="favourites">Favourites<a class="headerlink" href="#favourites" title="Permanent link"></a></h2>
+<p>The <a href="../favourites/">Favourites</a> panel allows you to create custom panels with toolsets that are convenient or necessary for your current tasks. The ability to quickly switch panels using the preset system and the ease of creating these panels significantly speeds up daily tasks. In the Favourites panel, you can add not only operators and properties from the addon but also any Blender operators. More info in the article <a href="../favourites/">Favourites</a>.</p>
+<div class="admonition subpanel">
+<p class="admonition-title">Subpanel</p>
+<p><a class="glightbox" href="../img/screen/preferences/PanelFavourites.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Preferences" src="../img/screen/preferences/PanelFavourites.png" /></a></p>
+</div>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../pack/" class="btn btn-neutral float-left" title="Pack"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../transform_tool/" class="btn btn-neutral float-right" title="Transform Tool">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p><p>Copyright &copy; 2024-2025 <a href="https://zenmasters.team/">Zen Masters</a></p></p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../pack/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../transform_tool/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+      <script src="../js/version-select.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+</script></body>
+</html>

@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>User Interface - Zen UV 5.3 for Blender</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../css/version-select.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "User Interface";
+        var mkdocs_page_input_path = "user_interface.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-7XHJ910WF8"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', "G-7XHJ910WF8");
+      </script>
+ <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }</style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Zen UV 5.3 for Blender
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="..">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../youtube_videos/">Learning Videos</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../installation/">Installation and Update</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">User Interface</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#multiple-panels">Multiple Panels</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#panels-pinning">Panels Pinning</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#combo-panel-in-properties">Combo Panel in Properties</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#popup-combo-panel">Popup Combo Panel</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#update-reminder">Update reminder</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Tutorial</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../tutorial/">Step-by-Step Guide Examples</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >Emergency Light</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../tutorial/emergency_light/emergency_light_eng/">Emergency Light (EN)</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../tutorial/emergency_light/emergency_light_ukr/">Emergency Light (UA)</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../tutorial/emergency_light/emergency_light_rus/">Emergency Light (RU)</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Modules</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../adv_uv-maps/">Advanced UV Maps</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../seam_groups/">Seam Groups</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../unwrap/">Unwrap</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../select/">Select</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../transform/">Transform</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../stack/">Stack</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../texel_density/">Texel Density</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../checker/">UV Checker</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pack/">Pack</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../preferences/">Preferences</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../transform_tool/">Transform Tool</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../touch_tool/">Touch Tool</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../sticky_uv_editor/">Sticky UV Editor</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../favourites/">Favourites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Trim Sheets</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../trimsheet/">Trim Sheets</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../trimsheet_creation/">Trim Sheet Management</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../trimsheet_operators/">Trim Sheet Operators</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../trimsheet_hotspot/">Hotspot Mapping</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Additional</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../addon_prefs/">Addon Preferences</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../user_script/">User Script</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../help/">Help</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../troubleshooting/">FAQs</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../changelg/">Changelog</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../credits/">Credits</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../our_addons/">Our Add-ons</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../recommended_addons/">Recommended Add-ons</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Zen UV 5.3 for Blender</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Getting Started</li>
+      <li class="breadcrumb-item active">User Interface</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="combo-panel">Combo Panel<a class="headerlink" href="#combo-panel" title="Permanent link"></a></h1>
+<p>Combo Panel is a place where you can find all Zen UV operators.
+Operators are divided into thematic sections on the left side.</p>
+<p>The set of operators in the Combo Panel may vary depending on the context. 
+Some operators do not work in UV Editor and present in 3D Viewport only.</p>
+<p>It&rsquo;s on the N-Panel and you can <a href="../preferences/#panels"><strong>customize the appearance of panels in Preferences</strong></a>.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Watch the video explaining how <strong>Combo Panels</strong> works.</p>
+<p><div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%;">
+<iframe src="https://www.youtube.com/embed/f9meGzMGx2k?start=26&end=142" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen="" seamless="" frameborder="0"></iframe>
+</div></p>
+</div>
+<p><a class="glightbox" href="../img/gifs/user_interface/compactui_1.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Combo Panel" src="../img/gifs/user_interface/compactui_1.gif" /></a></p>
+<h2 id="multiple-panels">Multiple Panels<a class="headerlink" href="#multiple-panels" title="Permanent link"></a></h2>
+<p>Open multiple panels with <code>SHIFT + LMB</code>.</p>
+<p><a class="glightbox" href="../img/gifs/user_interface/compactui_2.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Combo Panel" src="../img/gifs/user_interface/compactui_2.gif" /></a></p>
+<h2 id="panels-pinning">Panels Pinning<a class="headerlink" href="#panels-pinning" title="Permanent link"></a></h2>
+<p>Pin some panels with <code>CTRL + LMB</code></p>
+<p><a class="glightbox" href="../img/gifs/user_interface/compactui_3.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Combo Panel" src="../img/gifs/user_interface/compactui_3.gif" /></a></p>
+<h2 id="combo-panel-in-properties">Combo Panel in Properties<a class="headerlink" href="#combo-panel-in-properties" title="Permanent link"></a></h2>
+<p>When Zen UV Transform Tool is active you can find Combo Panel in Properties.</p>
+<p><a class="glightbox" href="../img/gifs/user_interface/compactui_6.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Combo Panel" src="../img/gifs/user_interface/compactui_6.gif" /></a></p>
+<h2 id="popup-combo-panel">Popup Combo Panel<a class="headerlink" href="#popup-combo-panel" title="Permanent link"></a></h2>
+<p>Combo Panel is the same in N-Panel and Pop-up menu  <code>Shift + U</code>.
+You can call this menu anywhere.</p>
+<p><a class="glightbox" href="../img/gifs/user_interface/compactui_8.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Combo Panel" src="../img/gifs/user_interface/compactui_8.gif" /></a></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Don&rsquo;t forget to drink some good beer today!</p>
+</div>
+<hr />
+<h2 id="update-reminder">Update reminder<a class="headerlink" href="#update-reminder" title="Permanent link"></a></h2>
+<p>Reminds you that a new version has been released and you can update the addon.</p>
+<p><a class="glightbox" href="../img/screen/user_interface/update_reminder.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="update reminder" src="../img/screen/user_interface/update_reminder.png" /></a></p>
+<hr />
+<h1 id="pie-menu">Pie Menu<a class="headerlink" href="#pie-menu" title="Permanent link"></a></h1>
+<p><a class="glightbox" href="../img/gifs/user_interface/pie_menu.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Pie Menu" src="../img/gifs/user_interface/pie_menu.gif" /></a></p>
+<h2 id="pie-menu-interaction">Pie Menu interaction<a class="headerlink" href="#pie-menu-interaction" title="Permanent link"></a></h2>
+<p>To use alternative commands in the Pie Menu, use a quick keypress. Avoid holding the Pie Menu hotkey for too long. Follow these steps:</p>
+<p>Quick keypress:</p>
+<ul>
+<li>Press and immediately release the hotkey to open the Pie Menu.</li>
+<li>The Pie Menu will stay on the screen, and you can perform alternate actions using modifier keys (Ctrl, Alt, Shift).</li>
+<li>To do this, press a modifier key and then click the desired option in the Pie Menu.</li>
+</ul>
+<p>If you press and hold the hotkey for just over 1 second, the Pie Menu will automatically close once you release it, unless you hover over a section.</p>
+<h2 id="operators">Operators<a class="headerlink" href="#operators" title="Permanent link"></a></h2>
+<h3 id="quadrify-relax">Quadrify | Relax <a class="glightbox" href="../img/icons/quadrify_32.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Quadrify Islands" src="../img/icons/quadrify_32.png" /></a><a class="headerlink" href="#quadrify-relax" title="Permanent link"></a></h3>
+<ul>
+<li><code>Default</code> — <a href="../transform/#quadrify-islands"><strong>Quadrify Islands</strong></a>. Straighten rectangular-shaped Islands.</li>
+<li><code>CTRL</code> — <a href="../transform/#relax"><strong>Relax</strong></a>. Relax Selected Islands.</li>
+<li><code>SHIFT</code> — <a href=""><strong>Hotspot Mapping</strong></a>. Map Islands by matching Islands to predefined Trims from Trimsheet.</li>
+</ul>
+<h3 id="zen-unwrap-pack">Zen Unwrap | Pack <a class="glightbox" href="../img/icons/zen-unwrap%402x.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Zen Unwrap" src="../img/icons/zen-unwrap%402x.png" /></a><a class="headerlink" href="#zen-unwrap-pack" title="Permanent link"></a></h3>
+<ul>
+<li><code>Default</code> — <a href="../unwrap/#zen-unwrap"><strong>Zen Unwrap</strong></a>. Unwrap by Marked edges. If you have selected edges or faces they will be Marked as Seams and/or Sharp Edges and Unwrapped after.</li>
+<li><code>ALT</code> — <a href="../pack/#pack-islands"><strong>Pack Islands</strong></a>. Pack Islands by chosen Pack Engine.</li>
+<li><code>SHIFT</code> — <a href=""><strong>Zen UV Transform Tool</strong></a>. Move, Rotate, Scale, Fit, Align and Flip Islands in 3D View and UV Editor using Zen UV Gizmo.</li>
+</ul>
+<h3 id="checker-finished">Checker | Finished <a class="glightbox" href="../img/icons/checker_32.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Checker Texture" src="../img/icons/checker_32.png" /></a><a class="headerlink" href="#checker-finished" title="Permanent link"></a></h3>
+<ul>
+<li><code>Default</code> — <a href="../checker/#checker-texture"><strong>Checker Texture (Toggle)</strong></a>. Add/Remove Checker Texture to/from the mesh.</li>
+<li><code>CTRL</code> — <a href="../unwrap/#display-finished-toggle"><strong>Display Finished</strong></a>. Display Finished Islands (Toggle).</li>
+<li><code>ALT</code> — <a href="../checker/#stretched"><strong>Display Stretch Map</strong></a>. Display an angle-based stretching map.</li>
+</ul>
+<h3 id="unmark-tag-unfinished">Unmark | Tag Unfinished <a class="glightbox" href="../img/icons/unmark-seams%402x.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Unmark Seams" src="../img/icons/unmark-seams%402x.png" /></a><a class="headerlink" href="#unmark-tag-unfinished" title="Permanent link"></a></h3>
+<ul>
+<li><code>Default</code> — <a href="../unwrap/#unmark"><strong>Unmark</strong></a>. Unmark selected edges or face borders as Seams and/or Sharp edges.</li>
+<li><code>CTRL</code> — <a href="../unwrap/#tag-unfinished"><strong>Tag Unfinished</strong></a>. Tag selected Islands as Unfinished.</li>
+<li><code>ALT</code> — <a href="../unwrap/#unmark-all"><strong>Unmark All</strong></a>. Remove all Seams and/or Sharp edges from the mesh.</li>
+</ul>
+<h3 id="mark-tag-finished">Mark | Tag Finished <a class="glightbox" href="../img/icons/mark-seams%402x.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Mark Seams" src="../img/icons/mark-seams%402x.png" /></a><a class="headerlink" href="#mark-tag-finished" title="Permanent link"></a></h3>
+<ul>
+<li><code>Default</code> — <a href="../unwrap/#mark"><strong>Mark</strong></a>. Mark selected edges or face borders as Seams and/or Sharp edges.</li>
+<li><code>CTRL</code> — <a href="../unwrap/#tag-finished"><strong>Tag Finished</strong></a>. Tag selected Islands as Finished. Islands Taged as Finished won&rsquo;t be unwrapped, recommended to Tag manually changed Islands (e.g. Quadrified Islands).</li>
+</ul>
+<h3 id="select-islands-overlapped">Select: Islands | Overlapped <a class="glightbox" href="../img/icons/select.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/icons/select.png" /></a><a class="headerlink" href="#select-islands-overlapped" title="Permanent link"></a></h3>
+<ul>
+<li><code>Default</code> — <a href="../select/#select-islands"><strong>Select Islands</strong></a>. Select Islands by selected edge/face of the Islands.</li>
+<li><code>CTRL</code> — <a href="../select/#select-flipped"><strong>Select Flipped Islands</strong></a>.</li>
+<li><code>ALT</code> — <a href="../select/#select-overlapped"><strong>Select Overlapped Islands</strong></a>.</li>
+<li><code>SHIFT</code> — <a href="../select/#select-similar"><strong>Select Similar Islands</strong></a>.</li>
+</ul>
+<h3 id="isolate-islands-toggle">Isolate Islands (Toggle)<a class="headerlink" href="#isolate-islands-toggle" title="Permanent link"></a></h3>
+<ul>
+<li><code>Default</code> — <a href="../select/#isolate-islands-toggle"><strong>Isolate Island (Toggle)</strong></a>. Isolate Islands by selected edge/face of the Islands.</li>
+<li><code>CTRL</code> - <a href="../select/#isolate-part-toggle"><strong>Isolate Part (Toggle)</strong></a>. Isolate mesh part by selected edge/face of the mesh.</li>
+</ul>
+<h3 id="mark-by-angle">Mark by Angle<a class="headerlink" href="#mark-by-angle" title="Permanent link"></a></h3>
+<ul>
+<li><code>Default</code> — <a href="../unwrap/#mark-by-angle"><strong>Mark by Angle</strong></a>. Mark edges as Seams and/or Sharp edges by Angle.</li>
+</ul>
+<hr />
+<h2 id="pie-menu-assist">Pie Menu Assist<a class="headerlink" href="#pie-menu-assist" title="Permanent link"></a></h2>
+<p><a class="glightbox" href="../img/screen/pie_menu/pie_menu_assitant.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Pie Menu Assist" src="../img/screen/pie_menu/pie_menu_assitant.png" /></a></p>
+<p>Pie Menu Assist is special help window, which is located below the Pie Menu. There you can find, highlight and execute all the alternative <code>ALT</code>, <code>CTRL</code>, <code>SHIFT</code> Pie Menu commands.</p>
+<div class="admonition assist">
+<p class="admonition-title">Assist</p>
+<p>If you want to disable Pie Menu Assist, you can do it here <strong>N-Panel</strong> -&gt; <strong>Zen UV</strong> -&gt; <strong>Preferences</strong> -&gt; <strong>Display</strong> -&gt; <strong>Display Pie Assist</strong>.
+Or in the <strong>Addon Preferences</strong> -&gt; <strong>UI tab</strong>.</p>
+</div>
+<hr />
+<h2 id="default-shortcut">Default Shortcut<a class="headerlink" href="#default-shortcut" title="Permanent link"></a></h2>
+<p>Zen UV Pie Menu <a class="glightbox" href="../img/icons/zen-uv%402x.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Zen UV Pie Menu" src="../img/icons/zen-uv%402x.png" /></a> &mdash; <code>Alt + U</code></p>
+<div class="admonition shortcut">
+<p class="admonition-title">Shortcut</p>
+<p>If you don&rsquo;t like default Pie Menu Shortcut, it can be changed here <strong>Edit</strong> -&gt; <strong>Preferences</strong> -&gt; <strong>Add-ons</strong> -&gt; <strong>Zen UV</strong> -&gt; <strong>Keymap</strong>. Don&rsquo;t forget to change Shortcut for both contexts Mesh and UV Editor.</p>
+</div>
+<hr />
+<h1 id="progress-bar">Progress Bar<a class="headerlink" href="#progress-bar" title="Permanent link"></a></h1>
+<p><strong>Progress Bar</strong> is designed to display the progress of the operator execution process. Not all operators use the <strong>Progress Bar</strong>, only those that require complex calculations. On some operating systems of the <strong>Linux</strong> family, the <strong>Progress Bar</strong> can cause Blender to crash. To avoid this situation, you can disable the Progress Bar in <a href="../preferences/#display"><strong>Panel - Preferences - Display Progress Bar.</strong></a></p>
+<p><a class="glightbox" href="../img/screen/preferences/ProgressBar_main.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Progress Bar" src="../img/screen/preferences/ProgressBar_main.gif" /></a></p>
+<hr />
+<h1 id="transform-tool">Transform Tool<a class="headerlink" href="#transform-tool" title="Permanent link"></a></h1>
+<p>Move, Rotate, Scale, Fit, Align and Flip selected Islands or Faces/Edges/Vertices in 3D Viewport and UV Editor using Zen UV Gizmo.</p>
+<p><a href="../transform_tool/#transform-tool"><strong>Follow the link</strong></a> to find more information about Transform Tool.</p>
+<p><a class="glightbox" href="../img/gifs/user_interface/ZenTransformTool_main.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Zen Transform Tool" src="../img/gifs/user_interface/ZenTransformTool_main.gif" /></a></p>
+<hr />
+<h1 id="touch-tool">Touch Tool<a class="headerlink" href="#touch-tool" title="Permanent link"></a></h1>
+<p><strong>Zen Touch Tool</strong> is a universal UV transformation tool that provides fast and intuitive control over moving, scaling, and rotating UV islands in the UV Editor. It allows for quick and easy execution of both basic and advanced transformations.</p>
+<p><a href="../touch_tool/#zen-touch-tool"><strong>Follow the link</strong></a> to find more information about Transform Tool.</p>
+<p><a class="glightbox" href="../img/screen/zen_uv_touch_tool/touch_tool_overview.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="touch tool overview" src="../img/screen/zen_uv_touch_tool/touch_tool_overview.gif" /></a></p>
+<hr />
+<h1 id="darken-image">Darken Image<a class="headerlink" href="#darken-image" title="Permanent link"></a></h1>
+<p><strong>Darken Image</strong> operator is designed to adjust the darkening of an Image in the context of the UV Editor. It does not change the texture but uses color management curve to darken it.</p>
+<p><a class="glightbox" href="../img/gifs/user_interface/DarkenImage_main.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Darken Image" src="../img/gifs/user_interface/DarkenImage_main.gif" /></a></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Watch the video explaining how <strong>Darken Image</strong> works.</p>
+<p><div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%;">
+<iframe src="https://www.youtube.com/embed/f9meGzMGx2k?start=156&end=180" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen="" seamless="" frameborder="0"></iframe>
+</div></p>
+</div>
+<p>You can find this operator in UV Editor Overlay.</p>
+<p><a class="glightbox" href="../img/screen/user_interface/DarkenImage.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Darken Image In UI" src="../img/screen/user_interface/DarkenImage.png" /></a></p>
+<p><a class="glightbox" href="../img/screen/user_interface/color_curve.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/user_interface/color_curve.png" /></a></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This option affects on current render settings. Do not forget to switch it off before rendering.</p>
+</div>
+<hr />
+<h3 id="right-menu-assist">Right menu assist<a class="headerlink" href="#right-menu-assist" title="Permanent link"></a></h3>
+<ul>
+<li><strong>Right Menu Assist</strong> - Enables or disables the &lsquo;Add to ZenUV Favorites&rsquo; option in the right-click menu.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><a class="glightbox" href="../img/screen/addon_prefs/addon_prefs_right_menu_assist.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="right menu" src="../img/screen/addon_prefs/addon_prefs_right_menu_assist.png" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Right Menu Assist</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="save-as-default-operator-properties">Save As Default Operator Properties<a class="headerlink" href="#save-as-default-operator-properties" title="Permanent link"></a></h3>
+<p>Starting from <strong>Zen UV 4.5.2</strong>, the ability to save default properties for certain operators has been introduced. This feature allows you to customize operators to your preferences and eliminates the need to adjust them every time you restart <strong>Blender</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>Operators that support saving default properties</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../unwrap/#zen-unwrap">Zen Unwrap</a></td>
+</tr>
+<tr>
+<td><a href="../transform/#quadrify-islands">Quadrify</a></td>
+</tr>
+</tbody>
+</table>
+<p><strong>How to Set Default Properties</strong></p>
+<ol>
+<li>Run the operator normally.</li>
+<li>Locate the property you want to save as default.</li>
+<li>Adjust the property to the desired value.</li>
+<li>Hover the mouse over the property.</li>
+<li>Right-click on the property.</li>
+<li>From the context menu, select <strong>Save As Default</strong>.<br />
+<a class="glightbox" href="../img/screen/user_interface/save_default_op_prop_rkm_menu.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Save As Default" src="../img/screen/user_interface/save_default_op_prop_rkm_menu.png" /></a></li>
+<li>In the confirmation dialog that appears, click <strong>OK</strong>.</li>
+<li>Restart Blender to apply the saved default settings.</li>
+</ol>
+<div class="admonition properties">
+<p class="admonition-title">Properties</p>
+<p><a class="glightbox" href="../img/screen/user_interface/save_default_prop_op_prop.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Save As Deafault Properties" src="../img/screen/user_interface/save_default_prop_op_prop.png" /></a></p>
+</div>
+<ul>
+<li><strong>Mode</strong> - Defines what to save.<ul>
+<li><strong>Property</strong> - Save only active property.</li>
+<li><strong>Active Operator</strong> - Save all properties of the active operator.</li>
+<li><strong>All Operators</strong> - Save default values of all available operators.</li>
+</ul>
+</li>
+<li><strong>Revert</strong> - Revert to the initial state as it was deployed with the addon.</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../installation/" class="btn btn-neutral float-left" title="Installation and Update"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../tutorial/" class="btn btn-neutral float-right" title="Step-by-Step Guide Examples">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p><p>Copyright &copy; 2024-2025 <a href="https://zenmasters.team/">Zen Masters</a></p></p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../installation/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../tutorial/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+      <script src="../js/version-select.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+</script></body>
+</html>
