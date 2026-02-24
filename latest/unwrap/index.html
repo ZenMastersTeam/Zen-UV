@@ -111,8 +111,6 @@
     </li>
         </ul>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#unwrap-constraint">Unwrap Constraint</a>
-    </li>
     <li class="toctree-l2"><a class="reference internal" href="#unwrap-inplace">Unwrap Inplace</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#auto-unwrap">Auto Unwrap</a>
@@ -128,6 +126,8 @@
     <li class="toctree-l3"><a class="reference internal" href="#advanced-settings">Advanced Settings</a>
     </li>
         </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#prepare-unwrap">Prepare Unwrap</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#mark-system">Mark System</a>
         <ul>
@@ -354,7 +354,7 @@ the operator first removes all seams (since all polygons are selected) and canno
 <li><strong>Fill Holes</strong> - Virtual fill holes in mesh before unwrapping, to avoid overlaps and preserve symmetry.</li>
 <li><strong>Texel Density</strong> - Sets Texel Density. Works only if Pack Unwrapped option is disabled.<ul>
 <li><em>Skip</em> - Do not make any texel density corrections.</li>
-<li><em>Global Preset</em> - Set value described in Texel Density panel as Global TD Preset. </li>
+<li><em>Global Preset</em> - Set value described in Texel Density panel as <a href="../texel_density/#global-td-preset">Global TD Preset</a>. </li>
 <li><em>Averaged</em> - Sets the averaged Texel Density for newly created islands. This keeps all islands about the same size as you work. </li>
 </ul>
 </li>
@@ -374,31 +374,6 @@ the operator first removes all seams (since all polygons are selected) and canno
 </ul>
 </div>
 <hr />
-<h2 id="unwrap-constraint">Unwrap Constraint<a class="headerlink" href="#unwrap-constraint" title="Permanent link"></a></h2>
-<p>This operator unwraps Islands and Faces along selected axis.</p>
-<div class="admonition properties">
-<p class="admonition-title">Properties</p>
-<p><a class="glightbox" href="../img/screen/unwrap/unwrap_constraint_settings.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/unwrap/unwrap_constraint_settings.png" /></a></p>
-</div>
-<ul>
-<li><strong>Mode</strong> - Choose what to unwrap Islands or Faces.
-        - <em>Islands</em> - Affect selected Islands.
-        - <em>Faces</em> - Affect selected Faces only.</li>
-<li><strong>Method</strong>. Unwrap method.
-        - <em>Full Unwrap</em> - Unwrap Islands but keep it in BBox boundaries.
-        - <em>Along Axis</em> - Unwrap Islands along Axis.</li>
-<li><strong>Fit Axis</strong>
-        - <em>U</em> - Unwrap / Fit along U axis.
-        - <em>V</em> - Unwrap / Fit along V axis.
-        - <em>Min</em> - The minimum length axis will be automatically determined.
-        - <em>Max</em> - The maximum length axis will be automatically determined.</li>
-<li><strong>Current Axis</strong> - Current Axis.</li>
-<li><strong>Mark Settings</strong> - Mark Settings (Global and Local modes) to Mark Seams and Sharp Edges.</li>
-<li><strong>Fill Holes</strong> - Virtual fill holes in meshes before unwrapping.</li>
-<li><strong>Correct Aspect</strong> - Map UVs taking image aspect ratio into account.</li>
-<li><strong>Use Subsurf Modifier</strong> - Map UVs taking vertex position after subsurf into account.</li>
-</ul>
-<hr />
 <h2 id="unwrap-inplace">Unwrap Inplace<a class="headerlink" href="#unwrap-inplace" title="Permanent link"></a></h2>
 <p>Unwrap Islands and Faces keeping their Size, Orientation and Location in UV Space.</p>
 <div class="admonition properties">
@@ -406,15 +381,24 @@ the operator first removes all seams (since all polygons are selected) and canno
 <p><a class="glightbox" href="../img/screen/unwrap/unwrap_inplace_settings.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/unwrap/unwrap_inplace_settings.png" /></a></p>
 </div>
 <ul>
-<li><strong>Mode</strong> - Choose what to unwrap Islands or Faces.
-        - <em>Islands</em> - Affect selected Islands.
-        - <em>Faces</em> - Affect selected Faces only.</li>
+<li><strong>Mode</strong> - Choose what to unwrap Islands or Faces.<ul>
+<li><em>Islands</em> - Affect selected Islands.</li>
+<li><em>Faces</em> - Affect selected Faces only.</li>
+</ul>
+</li>
 <li><strong>Location</strong> - Restore Islands Location and gabarit.</li>
-<li><strong>Orientation</strong> - What Orientation to use after unwrapping.
-        - <em>Keep</em> - Use Initial Orientation. 
-        - <em>World Orient</em> - Use World Orientation for the Islands.
-        - <em>Skip</em> - Skip Orientation adjustments.</li>
-<li><strong>Size</strong> - Restore Islands Size.</li>
+<li><strong>Orientation</strong> - What Orientation to use after unwrapping.<ul>
+<li><em>Keep</em> - Preserve initial orientation. </li>
+<li><em>World Orient</em> - Aligns UV to match their world orientation.</li>
+<li><em>Skip</em> - Leaves the orientation of UV unchanged, without any adjustment after Unwrap.</li>
+</ul>
+</li>
+<li><strong>Size</strong> - Preserve initial size.<ul>
+<li><em>Keep</em> - UV Island size will be adjusted by initial width or height depending with the Orientation results.</li>
+<li><em>Global Preset</em> - Set value described in the Texel Density panel as <a href="../texel_density/#global-td-preset">Global TD Preset</a>.</li>
+<li><em>Skip</em> - Leaves the size of UV unchanged, without any adjustment after Unwrap.</li>
+</ul>
+</li>
 <li><strong>Ignore Pins</strong> - Ignore Pins.</li>
 <li><strong>Fill Holes</strong> - Virtual fill holes in meshes before unwrapping.</li>
 <li><strong>Correct Aspect</strong> - Map UVs taking image aspect ratio into account.</li>
@@ -545,6 +529,42 @@ You can manually enable <strong>other options</strong> using <strong>Extra Argum
 </ul>
 <p>For the <strong>full list of arguments</strong>, refer to: <a href="../MOF_Arguments/">MOF Arguments</a>.</p>
 <hr />
+<h2 id="prepare-unwrap">Prepare Unwrap<a class="headerlink" href="#prepare-unwrap" title="Permanent link"></a></h2>
+<p>Prepares the object for unwrapping. Remove all UV maps, seams, sharp edges, and finished UV marks.
+Apply all geometry modifications before resetting for a clean unwrap</p>
+<p><a class="glightbox" href="../img/screen/unwrap/prepare_unwrap_op_prop.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Prepare Unwrap operator properties" src="../img/screen/unwrap/prepare_unwrap_op_prop.png" /></a></p>
+<ul>
+<li><strong>UV Maps</strong> - Choose how to prepare the UV maps.<ul>
+<li><em>Remove All</em> - Remove all existing UV maps from the mesh before preparing for a new unwrap.</li>
+<li><em>Iso Projection</em> - Create a default UV isometric unwrap projection for the active mesh.</li>
+<li><em>Skip</em> - Skip editing UV maps.</li>
+</ul>
+</li>
+<li><strong>Clear Seams</strong> - Remove all marked UV seams from mesh edges before preparing for a new unwrap.</li>
+<li><strong>Clear Sharps</strong> - Remove all sharp edge markings from the mesh before preparing for a new unwrap.</li>
+<li><strong>Tag Unfinished</strong> - Remove all finished island marks and tag the mesh as unfinished for a fresh unwrap</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <strong>Apply Scale</strong> and <strong>Apply Modifiers</strong> options may destroy animation data. A warning is shown in the operator properties.</p>
+</div>
+<hr />
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Applying Geometry options (Scale / Modifiers)
+may break rigs, constraints, or animations.</p>
+</div>
+<ul>
+<li><strong>Apply Scale</strong> - Apply object scale transformations before preparing the mesh for UV unwrapping.</li>
+<li><strong>Apply Modifiers</strong> - Apply all geometry modifiers to the mesh before preparing for UV unwrapping.</li>
+</ul>
+<hr />
+<ul>
+<li><strong>Display Seams</strong> - Display UV unwrapping seams and switch off all other overlays (Crease, Sharp, Bevel).</li>
+<li><strong>UV Checker</strong> - Enable a UV checker texture overlay to visually inspect UV layout quality during unwrapping.</li>
+<li><strong>Darken Image</strong> - Darken the UV checker or background image overlay to improve contrast during inspection.</li>
+</ul>
+<hr />
 <h2 id="mark-system">Mark System<a class="headerlink" href="#mark-system" title="Permanent link"></a></h2>
 <div class="admonition panel">
 <p class="admonition-title">Panel</p>
@@ -561,6 +581,10 @@ You can manually enable <strong>other options</strong> using <strong>Extra Argum
 <li><strong>Mark Seams</strong>. Automatically assign Seams</li>
 <li><strong>Mark Sharp Edges</strong>. Automatically assign Sharp edges</li>
 </ul>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>This operator supports the ability to <a href="../user_interface/#save-as-default-operator-properties">save default properties</a>.</p>
 </div>
 <div class="admonition properties">
 <p class="admonition-title">Properties</p>

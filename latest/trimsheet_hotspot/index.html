@@ -314,7 +314,11 @@ Determines the criterion that takes effect first.</p>
 <p><strong>Allow Rotation Variation</strong> - Allow Islands random rotation 180&rsquo; degrees to increase Variability.</p>
 </li>
 <li><strong>Allow Location Variation</strong> - Allows islands to be placed in other trims with similar parameters. Requires two or more identical trims.</li>
-<li><strong>Allow Offset Variation</strong> - Allows islands to be shifted within the trim if the trim settings permit it. This works only if the Fit Axis option is set to Trim Settings.</li>
+<li><strong>Allow Offset Variation</strong> - Allows islands to be shifted within the trim if the trim settings permit it. This works only if the <strong>Fit Axis</strong> operator option is set to <strong>Trim Settings</strong> and <strong>Fit Axis</strong> in the trim Advanced Settings is set to <strong>Min</strong>. These constraints exist because, in other modes, the operator tries to fit the island entirely inside the trim, effectively locking it within the trim bounds. However, in <strong>Min</strong> mode, where the island is aligned to the minimal dimension (e.g., height), the other side may extend beyond the trim boundaries.</li>
+</ul>
+<p>The image shows how the operator should be configured to enable this option.</p>
+<p><a class="glightbox" href="../img/screen/trimsheet/hotspot_offset_var_conditions.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="allow offset variation condition" src="../img/screen/trimsheet/hotspot_offset_var_conditions.png" /></a></p>
+<ul>
 <li><strong>Variation Offset</strong> - The amount by which the shift will be performed, if possible.</li>
 </ul>
 <table>

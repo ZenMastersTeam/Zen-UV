@@ -103,6 +103,8 @@
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#reshape-island">Reshape Island</a>
     </li>
+    <li class="toctree-l3"><a class="reference internal" href="#relax-along-axis">Relax Along Axis</a>
+    </li>
     <li class="toctree-l3"><a class="reference internal" href="#match-and-stitch">Match and Stitch</a>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#split-uv">Split UV</a>
@@ -527,7 +529,7 @@
 </li>
 <li><strong>Texel Density</strong> - Set texel density. Not available if Pack Quadrified is On<ul>
 <li><em>Averaged</em> - Set averaged Texel Density</li>
-<li><em>Global Preset</em> - Set value described in the Texel Density panel as Global TD Preset</li>
+<li><em>Global Preset</em> - Set value described in the Texel Density panel as <a href="../texel_density/#global-td-preset">Global TD Preset</a></li>
 <li><em>Skip</em> - Do not make any texel density corrections</li>
 </ul>
 </li>
@@ -612,6 +614,60 @@
 <li><strong>Borders</strong>. Straighten the edges of the island in even lines according to the given parameters.</li>
 </ul>
 </div>
+<hr />
+<h3 id="relax-along-axis">Relax Along Axis<a class="headerlink" href="#relax-along-axis" title="Permanent link"></a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This operator is only available in the UV Editor because it is not possible to define the relaxation axis in the 3D View.</p>
+</div>
+<p>Relaxes the selected vertices using an axis-constrained method. The best result is achieved when the selected vertices are relaxed relative to the unselected ones.</p>
+<p>In the add-on panel, the operator is represented by a main execution button and additional buttons that allow you to immediately set the axis along which the relaxation will be performed.</p>
+<p><a class="glightbox" href="../img/screen/transform/relax_along_axis_ui_button.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Relax Along Axis" src="../img/screen/transform/relax_along_axis_ui_button.png" /></a></p>
+<div class="admonition properties">
+<p class="admonition-title">Properties</p>
+<p><a class="glightbox" href="../img/screen/transform/relax_along_axis_op_props.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Relax Along Axis operator properties" src="../img/screen/transform/relax_along_axis_op_props.png" /></a></p>
+</div>
+<ul>
+<li><strong>Axis</strong> - Active Axis.<ul>
+<li><em>U</em> - Relax along axis U.</li>
+<li><em>V</em> - Relax along axis V.</li>
+<li><em>Touch Tool</em> - Use <a href="../touch_tool/">Zen Touch tool</a> as a direction axis.</li>
+</ul>
+</li>
+<li><strong>Amount</strong> - Position along the direction vector from start to end, in percent (0-100)</li>
+<li><strong>Relax Method</strong> - Method of Relaxation<ul>
+<li><em>Angle Based</em> - Uses Angle Based Flattening (ABF). This method gives a good 2D representation of a mesh.</li>
+<li><em>Conformal</em> - Uses Least Squares Conformal Mapping (LSCM). This usually results in a less accurate UV mapping than Angle Based, but performs better on simpler objects.</li>
+<li><em>Minimum Stretch</em> - Uses Scalable Locally Injective Mapping (SLIM). This tries to minimize distortion for both areas and angles.</li>
+</ul>
+</li>
+<li><strong>Ignore Pins</strong> - Ignore Pins.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Relaxation along U axis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="glightbox" href="../img/screen/transform/relax_along_axis.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Relaxation Along Axis" src="../img/screen/transform/relax_along_axis.gif" /></a></td>
+</tr>
+</tbody>
+</table>
+<p>If you need to relax the vertices in any custom direction, use the option <a href="../touch_tool/">Along Touch Tool</a> axis.</p>
+<table>
+<thead>
+<tr>
+<th>Relaxation along the Touch Tool axis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="glightbox" href="../img/screen/transform/relax_along_axis_touch_tool.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Relax Along Touch Tool Axis" src="../img/screen/transform/relax_along_axis_touch_tool.gif" /></a></td>
+</tr>
+</tbody>
+</table>
 <hr />
 <h3 id="match-and-stitch">Match and Stitch<a class="headerlink" href="#match-and-stitch" title="Permanent link"></a></h3>
 <p>Matching the position, rotation, and scale of Islands. Stitch the vertices together, if possible.</p>

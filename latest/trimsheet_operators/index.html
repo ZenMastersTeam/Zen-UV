@@ -148,6 +148,8 @@
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#hotspot-mapping">Hotspot Mapping</a>
     </li>
+    <li class="toctree-l2"><a class="reference internal" href="#quick-hotspot">Quick Hotspot</a>
+    </li>
     <li class="toctree-l2"><a class="reference internal" href="#select-trim-by-face">Select Trim By Face</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#select-islands-by-trim">Select Islands By Trim</a>
@@ -273,11 +275,74 @@
 </tbody>
 </table>
 <h2 id="move-in-trim">Move In Trim<a class="headerlink" href="#move-in-trim" title="Permanent link"></a></h2>
-<p>Move islands inside active trim. Islands outside active trim will be ignored if <strong>Lock in Trim</strong> option is set</p>
+<p>Move islands inside active trim. Islands outside active trim will be ignored if <strong>Lock in Trim</strong> option is set.</p>
+<ul>
+<li>
+<p><strong>Mode</strong> - Transform Mode.</p>
+<ul>
+<li><em>Islands</em> - Transform islands mode.</li>
+<li><em>Selection</em> - Transform selection (uv, mesh) mode.</li>
+</ul>
+</li>
+<li>
+<p><strong>Order</strong> - Processing order.</p>
+<ul>
+<li><em>One by one</em> - Processing islands one by one.</li>
+<li><em>Overall</em> - Processing whole selection.</li>
+</ul>
+</li>
+<li>
+<p><strong>Lock in Trim</strong> - Perform transform operations only inside of trim.</p>
+</li>
+<li><strong>Move</strong> - The offset values by axis.</li>
+</ul>
 <h2 id="rotate-in-trim">Rotate In Trim<a class="headerlink" href="#rotate-in-trim" title="Permanent link"></a></h2>
-<p>Rotate islands inside active trim</p>
+<p>Rotate islands inside active trim.</p>
+<ul>
+<li>
+<p><strong>Mode</strong> - Transform Mode.</p>
+<ul>
+<li><em>Islands</em> - Transform islands mode.</li>
+<li><em>Selection</em> - Transform selection (uv, mesh) mode.</li>
+</ul>
+</li>
+<li>
+<p><strong>Order</strong> - Processing order.</p>
+<ul>
+<li><em>One by one</em> - Processing islands one by one.</li>
+<li><em>Overall</em> - Processing whole selection.</li>
+</ul>
+</li>
+<li>
+<p><strong>Lock in Trim</strong> - Perform transform operations only inside of trim.</p>
+</li>
+<li><strong>Randomize</strong> - Randomize rotation angle.</li>
+<li><strong>Rotate</strong> - Island rotation angle.</li>
+<li><strong>Island Pivot</strong> - Describes a center of transformation.</li>
+</ul>
 <h2 id="flip-in-trim">Flip In Trim<a class="headerlink" href="#flip-in-trim" title="Permanent link"></a></h2>
 <p>Flip islands relative to the center of active trim</p>
+<ul>
+<li>
+<p><strong>Mode</strong> - Transform Mode.</p>
+<ul>
+<li><em>Islands</em> - Transform islands mode.</li>
+<li><em>Selection</em> - Transform selection (uv, mesh) mode.</li>
+</ul>
+</li>
+<li>
+<p><strong>Order</strong> - Processing order.</p>
+<ul>
+<li><em>One by one</em> - Processing islands one by one.</li>
+<li><em>Overall</em> - Processing whole selection.</li>
+</ul>
+</li>
+<li>
+<p><strong>Direction</strong> - Describes the side of the trim on which the alignment will take place.</p>
+</li>
+<li><strong>Trim Center as Pivot</strong> - Use center of Trim as transformation Pivot.</li>
+<li><strong>Direction</strong> - To align along one axis, select horizontal or vertical. Otherwise, select both.</li>
+</ul>
 <table>
 <thead>
 <tr>
@@ -292,6 +357,49 @@
 </table>
 <h2 id="fit-to-trim">Fit To Trim<a class="headerlink" href="#fit-to-trim" title="Permanent link"></a></h2>
 <p>Fit islands into active trim</p>
+<ul>
+<li><strong>Transform Faces</strong> - Treat the selected faces as if each of them were a separate island.</li>
+<li>
+<p><strong>Mode</strong> - Transform Mode.</p>
+<ul>
+<li><em>Islands</em> - Transform islands mode.</li>
+<li><em>Selection</em> - Transform selection (uv, mesh) mode.</li>
+</ul>
+</li>
+<li>
+<p><strong>Order</strong> - Processing order.</p>
+<ul>
+<li><em>One by one</em> - Processing islands one by one.</li>
+<li><em>Overall</em> - Processing whole selection.</li>
+</ul>
+</li>
+<li>
+<p><strong>Fit</strong> - Transform Mode.</p>
+<ul>
+<li><em>To Active Trim (Exact)</em> - Place the island in the trim exactly as described by the trim properties.</li>
+<li><em>To Active Trim (Tweak)</em> - Place the island in the trim as described by the trim properties, but with the option to configure it in the operator.</li>
+</ul>
+</li>
+<li>
+<p><strong>Automatic Unwrap</strong> - Perform Unwrap Island before Fit to Active Trim.</p>
+</li>
+<li>
+<p><strong>Fit Axis</strong> - Active Axis</p>
+<ul>
+<li><em>U</em> - U axis.</li>
+<li><em>V</em> - V axis.</li>
+<li><em>Min</em> - The minimum length axis is automatically determined.</li>
+<li><em>Max</em> - The maximum length axis is automatically determined.</li>
+<li><em>Automatic</em> - Automatically detected axis for full dimensional compliance.</li>
+</ul>
+</li>
+<li>
+<p><strong>Inset</strong> - Inset value.</p>
+</li>
+<li><strong>Keep proportion</strong> - Do not change the proportions of the processed island.</li>
+<li><strong>Match Rotation</strong> - Rotate the island being processed so that its orientation matches the orientation of the trim.</li>
+<li><strong>Island Pivot</strong> - The pivot of the transformed island.</li>
+</ul>
 <table>
 <thead>
 <tr>
@@ -306,6 +414,27 @@
 </table>
 <h2 id="align-to-trim">Align To Trim<a class="headerlink" href="#align-to-trim" title="Permanent link"></a></h2>
 <p>Align islands to active trim</p>
+<ul>
+<li><strong>Transform Vertices</strong> - Align each selected vertex separately.</li>
+<li>
+<p><strong>Mode</strong> - Transform Mode.</p>
+<ul>
+<li><em>Islands</em> - Transform islands mode.</li>
+<li><em>Selection</em> - Transform selection (uv, mesh) mode.</li>
+</ul>
+</li>
+<li>
+<p><strong>Order</strong> - Processing order.</p>
+<ul>
+<li><em>One by one</em> - Processing islands one by one.</li>
+<li><em>Overall</em> - Processing whole selection.</li>
+</ul>
+</li>
+<li><strong>Single Axis</strong> - Align only along one axis. Works only for Top, Bottom, Left, Right</li>
+<li><strong>Align Diresction</strong> - Describes the side of the trim on which the alignment will take place.</li>
+<li><strong>Use Trim Settings</strong> - Use Active Trim settings &ldquo;Align to&rdquo; instead of operator settings.</li>
+<li><strong>Island Pivot</strong> - The pivot of the transformed island.</li>
+</ul>
 <table>
 <thead>
 <tr>
@@ -320,6 +449,27 @@
 </table>
 <h2 id="scale-in-trim">Scale In Trim<a class="headerlink" href="#scale-in-trim" title="Permanent link"></a></h2>
 <p>Scale in active trim. Islands outside active trim will be ignored if <strong>Lock in Trim</strong> option is set</p>
+<ul>
+<li>
+<p><strong>Mode</strong> - Transform Mode.</p>
+<ul>
+<li><em>Islands</em> - Transform islands mode.</li>
+<li><em>Selection</em> - Transform selection (uv, mesh) mode.</li>
+</ul>
+</li>
+<li>
+<p><strong>Order</strong> - Processing order.</p>
+<ul>
+<li><em>One by one</em> - Processing islands one by one.</li>
+<li><em>Overall</em> - Processing whole selection.</li>
+</ul>
+</li>
+<li>
+<p><strong>Lock in Trim</strong> - Perform transform operations only inside of trim.</p>
+</li>
+<li><strong>Scale</strong> - The scale value by axes.</li>
+<li><strong>Island Pivot</strong> - The pivot of the transformed island.</li>
+</ul>
 <table>
 <thead>
 <tr>
@@ -335,6 +485,25 @@
 <h2 id="hotspot-mapping">Hotspot Mapping<a class="headerlink" href="#hotspot-mapping" title="Permanent link"></a></h2>
 <p>Hotspot Mapping is a UV mapping method that compares the parameters of Islands and Trims and makes automatic mapping based on the given settings.</p>
 <p><a href="../trimsheet_hotspot/"><strong>Follow the link</strong></a> to find more information about Hotspot Mapping.</p>
+<hr />
+<h2 id="quick-hotspot">Quick Hotspot<a class="headerlink" href="#quick-hotspot" title="Permanent link"></a></h2>
+<p>The classic way to use Hotspot technology, which includes unwrap and several preprocessing steps to obtain fast results.
+This operator can work with existing islands or create them based on the selected polygons.
+The Quick Hotspot operator is available only in the 3D View context, since the UV Editor lacks sharp edge information, making it impossible to generate predictable islands.</p>
+<p><a class="glightbox" href="../img/screen/unwrap/quick_hotspot_op_prop.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Quick Hotspot operator properties" src="../img/screen/unwrap/quick_hotspot_op_prop.png" /></a></p>
+<ul>
+<li><strong>UV Mode</strong> - How to process the selected faces.<ul>
+<li><em>Create</em> - Create UV islands based on the current selection and existing seams. Islands will be transformed into rectangles when possible.</li>
+<li><em>Use Existing</em> - Use the current UV islands without modifying their shape.</li>
+</ul>
+</li>
+<li><strong>World Orient</strong> - Orient to World.</li>
+<li><strong>Allow Flip</strong> - Allow flipping variation.</li>
+<li><strong>Inset</strong> - Trim Inset.</li>
+<li><strong>Matching Scale</strong> - The value for manually adjusting the area matching scale. As a result, the islands are shifted to larger or smaller trims depending on the Matching Scale value. Visually, this appears as an improvement or degradation of texture quality, while technically it corresponds to an increase or decrease in Texel Density, respectively.</li>
+<li><strong>Seed</strong> - Seed of variable island distribution in similar trims.</li>
+</ul>
+<hr />
 <h2 id="select-trim-by-face">Select Trim By Face<a class="headerlink" href="#select-trim-by-face" title="Permanent link"></a></h2>
 <p>Select and activate trim by selected face</p>
 <h2 id="select-islands-by-trim">Select Islands By Trim<a class="headerlink" href="#select-islands-by-trim" title="Permanent link"></a></h2>
