@@ -22,7 +22,7 @@
 - [<u>**Faces**</u>](#faces)
     - [Select Stretched Faces](#select-stretched-faces)
     - [Select Self-Intersecting Faces](#select-self-intersecting-faces)
-    - [Select by UV Value](#select-by-uv-area)
+    - [Select by UV Value](#select-by-uv-value)
     - [Get Selected Area](#get-selected-area)
     - [Select Zero Area Faces](#select-zero-area-faces)
     - [Select Faces Less than Pixel](#select-faces-less-than-pixel)
@@ -272,7 +272,7 @@ After you run this operator, the Multiplied Area value goes into the Select by U
 ### Select Zero Area Faces
 Selects islands with zero area.
 
-This is the [Select by UV Value](#select-by-uv-area) operator with **Condition - Zero Area** and **Threshold - 0.0 (zero)** activated. You can adjust its settings after execution through the operator properties.
+This is the [Select by UV Value](#select-by-uv-value) operator with **Condition - Zero Area** and **Threshold - 0.0 (zero)** activated. You can adjust its settings after execution through the operator properties.
 
 | ![Select Zero Area Faces](img/screen/select/sel_by_uv_area_zero_preset.png) |
 | --- |
