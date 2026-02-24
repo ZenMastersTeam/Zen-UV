@@ -156,7 +156,7 @@ Rotate Islands the way they are oriented on the Models. Each method (Organic/Har
     - *Horizontal* - Set orientation horizontal
 - **Texel Density** - Set texel density. Not available if Pack Quadrified is On
     - *Averaged* - Set averaged Texel Density
-    - *Global Preset* - Set value described in the Texel Density panel as Global TD Preset
+    - *Global Preset* - Set value described in the Texel Density panel as [Global TD Preset](texel_density.md/#global-td-preset)
     - *Skip* - Do not make any texel density corrections
 - **Pin** - Auto Pin
     - *Quads* - Perform pinning only faces that have been quadrified
@@ -213,6 +213,45 @@ Changes the island’s shape depending on the preset. [Here is full information]
     - **Borders**. Straighten the edges of the island in even lines according to the given parameters.
 
 ---
+
+### Relax Along Axis
+
+!!! Note
+    This operator is only available in the UV Editor because it is not possible to define the relaxation axis in the 3D View.
+
+Relaxes the selected vertices using an axis-constrained method. The best result is achieved when the selected vertices are relaxed relative to the unselected ones.
+
+In the add-on panel, the operator is represented by a main execution button and additional buttons that allow you to immediately set the axis along which the relaxation will be performed.
+
+![Relax Along Axis](img/screen/transform/relax_along_axis_ui_button.png)
+
+!!! Properties
+    ![Relax Along Axis operator properties](img/screen/transform/relax_along_axis_op_props.png)
+
+- **Axis** - Active Axis.
+    - *U* - Relax along axis U.
+    - *V* - Relax along axis V.
+    - *Touch Tool* - Use [Zen Touch tool](touch_tool.md) as a direction axis.
+- **Amount** - Position along the direction vector from start to end, in percent (0-100)
+- **Relax Method** - Method of Relaxation
+    - *Angle Based* - Uses Angle Based Flattening (ABF). This method gives a good 2D representation of a mesh.
+    - *Conformal* - Uses Least Squares Conformal Mapping (LSCM). This usually results in a less accurate UV mapping than Angle Based, but performs better on simpler objects.
+    - *Minimum Stretch* - Uses Scalable Locally Injective Mapping (SLIM). This tries to minimize distortion for both areas and angles.
+- **Ignore Pins** - Ignore Pins.
+
+
+|Relaxation along U axis|
+|---|
+|![Relaxation Along Axis](img/screen/transform/relax_along_axis.gif)|
+
+If you need to relax the vertices in any custom direction, use the option [Along Touch Tool](touch_tool.md) axis.
+
+|Relaxation along the Touch Tool axis|
+|---|
+|![Relax Along Touch Tool Axis](img/screen/transform/relax_along_axis_touch_tool.gif)|
+
+---
+
 
 ### Match and Stitch
 

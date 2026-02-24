@@ -22,7 +22,7 @@
 - [<u>**Faces**</u>](#faces)
     - [Select Stretched Faces](#select-stretched-faces)
     - [Select Self-Intersecting Faces](#select-self-intersecting-faces)
-    - [Select by UV Area](#select-by-uv-area)
+    - [Select by UV Value](#select-by-uv-area)
     - [Get Selected Area](#get-selected-area)
     - [Select Zero Area Faces](#select-zero-area-faces)
     - [Select Faces Less than Pixel](#select-faces-less-than-pixel)
@@ -201,13 +201,11 @@ Filters islands based on specific properties.
 
 Selects faces with stretched UV coordinates
 
-Checks each polygon angle and compares it with the corresponding angle in UV space.  
-If the angle exceeds the specified threshold, the polygon will be selected.
-
-![Select Stretched Faces Example](img/screen/select/select_stretched_faces_example.png)
+Checks each polygon area and compares it with the corresponding area in UV space.  
+If the area exceeds the specified threshold, the polygon will be selected.
 
 !!! Tip  
-    This operator works using the **Overlay → UV Stretch → Angle** algorithm.  
+    This operator works using the **Overlay → UV Stretch → Area** algorithm.  
     This means you can easily select what you see or what you might have missed.  
     ![Select Stretched Faces Display](img/screen/select/select_stretched_faces_display.png)
 
@@ -232,8 +230,8 @@ This operator allows you to select problematic polygons for further correction.
 ![Select Self-Intersecting Faces](img/screen/select/self_intersect_example.png)
 
 ---
-### Select by UV Area
-Select faces by their UV area.
+### Select by UV Value
+Select faces by their UV values.
 The operator consists of two buttons. Where the first is the main operator and the second is an auxiliary operator. You can use it to get the area of the selection.
 
 !!! Panel
@@ -256,7 +254,7 @@ The operator consists of two buttons. Where the first is the main operator and t
 
 ---
 ### Get Selected Area
-After you run this operator, the Multiplied Area value goes into the Select by UV Area operator.
+After you run this operator, the Multiplied Area value goes into the Select by UV Value operator.
 
 !!! Properties
     ![](img/screen/select/get_selected_area_op_prop.png)
@@ -274,7 +272,7 @@ After you run this operator, the Multiplied Area value goes into the Select by U
 ### Select Zero Area Faces
 Selects islands with zero area.
 
-This is the [Select by UV Area](#select-by-uv-area) operator with **Condition - Zero Area** and **Threshold - 0.0 (zero)** activated. You can adjust its settings after execution through the operator properties.
+This is the [Select by UV Value](#select-by-uv-area) operator with **Condition - Zero Area** and **Threshold - 0.0 (zero)** activated. You can adjust its settings after execution through the operator properties.
 
 | ![Select Zero Area Faces](img/screen/select/sel_by_uv_area_zero_preset.png) |
 | --- |

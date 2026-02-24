@@ -81,6 +81,13 @@ This control is useful to manage lists of trims. In the center of its area you c
 
 ![](img/screen/trimsheet/trimlist.png)
 
+#### Trims Sorting
+Sorting by standard Blender methods can be enabled in the trim list. It is also possible to sort trims by width and height. Enable the corresponding button in the list sorting dialog.
+
+| ![Trimsheet sorting](img/screen/trimsheet/trimsheet_sorting_by_size.png) |
+|---|
+| |
+
 ### Active Trim
 There is exactly one active trim in the curent trim sheet. It is highlighted in trim sheet UI list and surrounded with handles in trim editor
 
@@ -271,7 +278,11 @@ Trim settings property inspector shows settings of the active trim
     ![](img/screen/trimsheet/trim_axis.png)
 
 ### Trim Units
-By default trim units are in UV points based on values from 0 to 1, but it is possible to switch to image pixels depending on image size
+By default trim units are in UV points based on values from 0 to 1, but it is possible to switch to image pixels depending on image size.
+
+!!! Note
+    The "px" button is only available when you are working in **Image** mode, as this is the only mode in which pixel information can be obtained.
+    For more details, see the section [Trim sheet data storage in blend file.](#trim-sheet-data-storage-in-blend-file)
 
 ![](img/screen/trimsheet/trim_pixels.gif)
 

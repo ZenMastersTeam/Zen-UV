@@ -10,7 +10,7 @@ This panel contains tools to check the state of UVs on the model, visually and t
 !!! Tip
     Display and Select **Crease**, **Sharp**, **Bevel**, **Seams** and **UV No Sync** operators are absent on the panel in UV Editor. To use these operators you need to switch to 3D Viewport context.
 
-### Checker Texture
+## Checker Texture
 
 Add/Remove Checker Texture to/from the mesh. ![Checker Texture](img/icons/checker_32.png) `Alt+T`
 
@@ -25,7 +25,7 @@ bpy.ops.view3d.zenuv_checker_toggle(action='TOGGLE')
 ```
 
 ---
-#### Checker Preferences
+### Checker Preferences
 
 ![Main Panel](img/screen/tex_checker/tex_chk_props.png)
 
@@ -38,7 +38,7 @@ bpy.ops.view3d.zenuv_checker_toggle(action='TOGGLE')
 - **Reset Checker** - Reset Zen UV Checker to Default state.
 
 ---
-#### Operator mechanism
+### Operator mechanism
 
 Checker Texture Toggle is adding/removing Zen UV Checker Node on/from top of your materials in Shader Editor. Your materials are safe!
 
@@ -91,18 +91,16 @@ Screenshot when Orient filtering is on.
 
 ---
 
+## Display
+
+All useful for checking UVs Draw operators and their settings.
+
 ### Darken Image
 
 UV Editor panel contains an extra Display operator designed to adjust the darkening of an Image in the context of the UV Editor. More info in the [**Darken Image**](user_interface.md#darken-image) article.
 
 ---
-
-### Display
-
-All useful for checking UVs Draw operators and their settings.
-
----
-#### Blender Draw System
+### Blender Draw System
 
 !!! SubPanel 
     ![](img/screen/tex_checker/checker_display_top.png)
@@ -117,24 +115,30 @@ All useful for checking UVs Draw operators and their settings.
     Blender Draw System visually overlap each other that's why it's recommended to use only Display Seams for UV process.
 
 ---
-#### Zen UV Draw System
+### Zen UV Draw System
+
+**Draw System** is a visualization framework in **Zen UV** that displays various UV and geometry states directly in the **3D Viewport** and **UV Editor**.
+It allows you to toggle overlays (Seams, Sharp, Flipped, Overlapped, etc.) to analyze UV layout quality and mesh properties.
+All display elements are controlled via the Display panel, providing quick inspection and debugging of UVs.
+To the right of the display toggles, there are auxiliary operators shown as arrow icons.
+These operators help select the corresponding elements when possible.
 
 | 3D Viewport | UV Editor|
 |---|---|  
 | ![Draw 3D Viewport](img/screen/tex_checker/zen_draw_ops_3d.png) | ![Draw UV Editor](img/screen/tex_checker/zen_draw_ops_uv.png) | 
 
-##### Finished
+### Finished
 
 Display and Select Finished Islands. You can [read more about Finishing System here](unwrap.md#finishing-system).
 
 
-##### Flipped
+### Flipped
 
 Display and Select Flipped Islands.
 
 ![](img/screen/tex_checker/checker_display_flipped.gif)
 
-##### Stretched
+### Stretched
 Display an angle-based stretching map.
 
 ![](img/screen/tex_checker/checker_display_stretched.gif)
@@ -142,19 +146,19 @@ Display an angle-based stretching map.
 !!! Tip
     To have the display in real time mode (as on the gif) activate **Stretched Dynamic** in Zen UV Draw System Preferences.
 
-##### Excluded
+### Excluded
 
 Display and select islands excluded from packing.
 
 ![](img/screen/pack/pack_exluded_display.gif)
 
-##### Overlapped
+### Overlapped
 
 Display and select overlapped islands.
 
 ![](img/screen/tex_checker/checker_display_overlapped.gif)
 
-#### Self-Intersecting
+### Self-Intersecting
 
 Detects and selects faces where UV edges intersect.
 [More info about the operator](select.md#select-self-intersecting-faces)
@@ -162,29 +166,23 @@ Detects and selects faces where UV edges intersect.
 ![Self-Intersecting](img/screen/tex_checker/self_intersecting_example.gif)
 
 ---
+### UV Borders
 
-#### Texel Density
+Display UV Borders (Margin) in UV Editor and 3D Viewport.
+Line width depends on [**Margin**](pack.md#margin) and [**Texture Size**](pack.md#texture-size) from Pack panel. 
 
-Displays Texel Density according to the settings in the [TD](texel_density.md) panel.
-
-![Texel Density Example](img/screen/tex_checker/draw_td_example.png)
----
-
-#### Trim Colors
-
-Displays the association of islands with trims created in the [Trimsheet](trimsheet.md) system.
-
-![Trim Colors Example](img/screen/tex_checker/draw_trims_example.png)
+![](img/screen/tex_checker/checker_display_uvborders.gif)
 
 ---
 
-##### UV No Sync
+### Background Mask
 
-Display in 3D Viewport faces selected in UV Editor when UV Sync is Off. 
+Shades the UV editor background to visually distinguish areas outside UV islands.
 
-![](img/screen/tex_checker/checker_display_nosync.gif)
+![Background Mask](img/screen/tex_checker/draw_uv_background_mask.gif)
 
-##### Seams
+---
+### Seams
 
 Display Seams in UV Editor.
 
@@ -193,14 +191,45 @@ Display Seams in UV Editor.
 !!! Note
     Available only in UV Editor.
 
-##### UV Borders
+### Sharps
 
-Display UV Borders (Margin) in UV Editor and 3D Viewport.
-Line width depends on [**Margin**](pack.md#margin) and [**Texture Size**](pack.md#texture-size) from Pack panel. 
+Display Sharps in UV Editor.
 
-![](img/screen/tex_checker/checker_display_uvborders.gif)
+![display Sharps](img/screen/tex_checker/draw_uv_sharps.gif)
 
-##### UV Object
+!!! Note
+    Available only in UV Editor.
+
+---
+### Texel Density
+
+Displays Texel Density according to the settings in the [TD](texel_density.md) panel.
+
+![Texel Density Example](img/screen/tex_checker/draw_td_example.png)
+
+### Colored Islands
+
+Display assigned colors to each UV island for easier visual distinction in the UV/Image Editor.
+
+![Colored Islands](img/screen/tex_checker/draw_uv_colored_islands.gif)
+
+---
+### UV No Sync
+
+Display in 3D Viewport faces selected in UV Editor when UV Sync is Off. 
+
+![](img/screen/tex_checker/checker_display_nosync.gif)
+
+---
+### Trim Colors
+
+Displays the association of islands with trims created in the [Trimsheet](trimsheet.md) system.
+
+![Trim Colors Example](img/screen/tex_checker/draw_trims_example.png)
+
+---
+
+### UV Object
 
 Display UVs in Object mode without entering Edit mode.
 
@@ -209,7 +238,7 @@ Display UVs in Object mode without entering Edit mode.
 !!! Note
     Available only in UV Editor and Object mode.
 
-##### Stacks
+### Stacks
 
 !!! Panel 
     ![](img/screen/tex_checker/checker_display_zenuv_stacks.png)
@@ -217,15 +246,30 @@ Display UVs in Object mode without entering Edit mode.
     Display and Select **Similar**, **Similar of Selection**, **Stacked**, **Manual Stacks**. 
     You can read full information about [Stacks Display and its settings here](stack.md#stacks-display-and-select).
 
+### Export To Image
+
+Creates a Blender Image from the active Zen UV overlay.
+
+![Export To Image](img/screen/tex_checker/op_export_overlay_to_image.gif)
 
 
-##### Zen UV Draw System Preferences (Edit Mode)
+### Zen UV Draw System Preferences (Edit Mode)
 
 !!! Panel 
     ![](img/screen/tex_checker/checker_display_zenuv_pref.png)
 
-- **Overlay Sync** - Draw is synchronised with Overlay On-Off settings.
-- **Auto Update Draw** - Update draw cache every time when mesh is changed.
+- **Display Linked** - Enable the display option in both the UV Editor and 3D Viewport.
+
+![Display Link Button](img/screen/tex_checker/checker_link_display_button.png)
+
+- **Overlay Sync** - Draw is synchronized with the Overlay On/Off settings. If this option is enabled, the Zen UV Overlay will be disabled when Blender’s Show Overlays option is turned off, and vice versa.
+
+![Overlay Sync Property](img/screen/tex_checker/draw_overlay_sync_prop.png)
+
+- **Auto Update Draw** - Updates the draw cache every time the mesh changes. When turned off, all add-on background tasks are disabled for maximum Blender performance. In this state, draw updates must be refreshed manually. You can use the on-screen widget or the button with the same icon on the left in the options panel.
+
+![Auto Update Widget](img/screen/tex_checker/draw_auto_update_widget.png)
+
 - **Auto Disable Draw** - Switch draw system off when object mode (Edit, Object) is changed.
 - **Scale Points on Zoom** - Scale Points when zoom is changed.
 <br>
@@ -248,7 +292,7 @@ Display UVs in Object mode without entering Edit mode.
 - **UV Borders Mode** - Modes of UV Borders Display color.
 
 ---
-##### Zen UV Draw System Preferences (Object Mode)
+### Zen UV Draw System Preferences (Object Mode)
 
 !!! Panel 
     ![](img/screen/tex_checker/checker_display_zenuv_pref_object.png)
@@ -301,7 +345,7 @@ Display UVs in Object mode without entering Edit mode.
 
 ---
 
-### Tools
+## Tools
 
 Tools for analyzing and finding Mesh errors that can negatively affect UV operations.
 
@@ -309,28 +353,34 @@ Tools for analyzing and finding Mesh errors that can negatively affect UV operat
 |---|---|  
 |![3D Viewport Panel](img/screen/tex_checker/checker_tools_panel_3d.png) | ![UV Editor Panel](img/screen/tex_checker/checker_tools_panel_uv.png) | 
 
-#### Elements by Index
+### Elements by Index
 Select elements by their indices.
 
-#### Zero Area Faces
+### Zero Area Faces
 Select faces with Zero UV area.
 
-#### Edges Without Faces
+### Edges Without Faces
 Select edges without faces.
 
-#### Edges with multiple loops
+### Edges with multiple loops
 Select edges with Multiple Loops.
 
-#### Empty objects
+Edges with Multiple Loops — edges that are shared by more than two polygons.
+Such edges are non-manifold and may cause incorrect UV island generation or transformation, so they are handled separately or ignored by the addon.
+The selected edge in the image is an example of an edge with multiple loops.
+
+![Multiple Loops Example](img/screen/tex_checker/multiple_loops_example.png)
+
+### Empty objects
 Select objects that don't contain faces.
 
-#### Doubled Vertices
+### Doubled Vertices
 Select vertices that have the same coordinates.
 
-#### Free Vertices
+### Free Vertices
 Selects vertices that have no connected faces or edges.
 
-#### UV Islands Counter
+### UV Islands Counter
 
 Count UV Islands of selected objects and display the result.
 
@@ -344,7 +394,7 @@ Object name | total UV islands in the object | number of visible islands | numbe
 
 ![island counter console](img/screen/tex_checker/tools_islands_counter_full_info.png)
 
-#### Calc UV Edges Length
+### Calc UV Edges Length
 Calculates the lengths of the selected edges.
 
 The operator has no properties. Instead, it displays information in the status bar, popup window, and system console. The pixels size calculates from the active image in the UV Editor.
@@ -355,7 +405,7 @@ The operator has no properties. Instead, it displays information in the status b
 |*Calc UV Edges Length* console output example|
 
 ---
-#### Calculate UV Pixel Size
+### Calculate UV Pixel Size
 Calculates the size of a specified number of pixels in UV units and as a percentage.
 
 !!! Properties
@@ -373,7 +423,7 @@ Calculates the size of a specified number of pixels in UV units and as a percent
 - **UV Pixel Height (%)** - Height of the specified pixels as a percentage of the UV space.
 
 ---
-#### Set Viewport Display Mode
+### Set Viewport Display Mode
 Set viewport display mode for all selected objects.
 
 !!! Properties
@@ -386,7 +436,7 @@ Set viewport display mode for all selected objects.
     - *Textured* - Display the object with textures (if textures are enabled in the viewport)
 
 ---
-#### Clear Attributes
+### Clear Attributes
 
 Clear mesh attributes used in Zen UV. Finished and Excluded.
 
@@ -394,6 +444,6 @@ Clear mesh attributes used in Zen UV. Finished and Excluded.
 
 ---
 
-#### Correct Self-Intersecting
+### Correct Self-Intersecting
 
 Correct faces that [have intersecting](select.md#select-self-intersecting-faces) uv edges by re-unwrapping its island.

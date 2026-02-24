@@ -108,7 +108,7 @@ Working in **Face** or **Edge** mode makes changes to the selected islands anywa
 - **Fill Holes** - Virtual fill holes in mesh before unwrapping, to avoid overlaps and preserve symmetry.
 - **Texel Density** - Sets Texel Density. Works only if Pack Unwrapped option is disabled.
     - *Skip* - Do not make any texel density corrections.
-    - *Global Preset* - Set value described in Texel Density panel as Global TD Preset. 
+    - *Global Preset* - Set value described in Texel Density panel as [Global TD Preset](texel_density.md/#global-td-preset). 
     - *Averaged* - Sets the averaged Texel Density for newly created islands. This keeps all islands about the same size as you work. 
 - **Pack Unwrapped** - After the islands have been created, this option will start the **Packing** process of the islands. The [**Pack Engine**](pack.md/#pack-engine) specified in the **Pack System** will be used.
 - **Sort Unwrapped** - After the islands have been created, this option will start the process of **Sorting** the islands by [**Finished**](#finishing-system) tag.
@@ -126,33 +126,6 @@ You can change main Zen Unwrap settings before running the operator.
     - **Sort Unwrapped**. After the islands have been created, this option will start the process of **Sorting** the islands by [**Finished**](#finishing-system) tag.
 ---
 
-
-## Unwrap Constraint
-
-This operator unwraps Islands and Faces along selected axis.
-
-!!! Properties
-    ![](img/screen/unwrap/unwrap_constraint_settings.png)
-
-- **Mode** - Choose what to unwrap Islands or Faces.
-        - *Islands* - Affect selected Islands.
-        - *Faces* - Affect selected Faces only.
-- **Method**. Unwrap method.
-        - *Full Unwrap* - Unwrap Islands but keep it in BBox boundaries.
-        - *Along Axis* - Unwrap Islands along Axis.
-- **Fit Axis**
-        - *U* - Unwrap / Fit along U axis.
-        - *V* - Unwrap / Fit along V axis.
-        - *Min* - The minimum length axis will be automatically determined.
-        - *Max* - The maximum length axis will be automatically determined.
-- **Current Axis** - Current Axis.
-- **Mark Settings** - Mark Settings (Global and Local modes) to Mark Seams and Sharp Edges.
-- **Fill Holes** - Virtual fill holes in meshes before unwrapping.
-- **Correct Aspect** - Map UVs taking image aspect ratio into account.
-- **Use Subsurf Modifier** - Map UVs taking vertex position after subsurf into account.
-
----
-
 ## Unwrap Inplace
 
 Unwrap Islands and Faces keeping their Size, Orientation and Location in UV Space.
@@ -161,14 +134,17 @@ Unwrap Islands and Faces keeping their Size, Orientation and Location in UV Spac
     ![](img/screen/unwrap/unwrap_inplace_settings.png)
 
 - **Mode** - Choose what to unwrap Islands or Faces.
-        - *Islands* - Affect selected Islands.
-        - *Faces* - Affect selected Faces only.
+    - *Islands* - Affect selected Islands.
+    - *Faces* - Affect selected Faces only.
 - **Location** - Restore Islands Location and gabarit.
 - **Orientation** - What Orientation to use after unwrapping.
-        - *Keep* - Use Initial Orientation. 
-        - *World Orient* - Use World Orientation for the Islands.
-        - *Skip* - Skip Orientation adjustments.
-- **Size** - Restore Islands Size.
+    - *Keep* - Preserve initial orientation. 
+    - *World Orient* - Aligns UV to match their world orientation.
+    - *Skip* - Leaves the orientation of UV unchanged, without any adjustment after Unwrap.
+- **Size** - Preserve initial size.
+    - *Keep* - UV Island size will be adjusted by initial width or height depending with the Orientation results.
+    - *Global Preset* - Set value described in the Texel Density panel as [Global TD Preset](texel_density.md/#global-td-preset).
+    - *Skip* - Leaves the size of UV unchanged, without any adjustment after Unwrap.
 - **Ignore Pins** - Ignore Pins.
 - **Fill Holes** - Virtual fill holes in meshes before unwrapping.
 - **Correct Aspect** - Map UVs taking image aspect ratio into account.
@@ -314,6 +290,41 @@ You can manually enable **other options** using **Extra Arguments**.
 For the **full list of arguments**, refer to: [MOF Arguments](MOF_Arguments.md).
 
 ---
+
+## Prepare Unwrap
+
+Prepares the object for unwrapping. Remove all UV maps, seams, sharp edges, and finished UV marks.
+Apply all geometry modifications before resetting for a clean unwrap
+
+![Prepare Unwrap operator properties](img/screen/unwrap/prepare_unwrap_op_prop.png)
+
+- **UV Maps** - Choose how to prepare the UV maps.
+    - *Remove All* - Remove all existing UV maps from the mesh before preparing for a new unwrap.
+    - *Iso Projection* - Create a default UV isometric unwrap projection for the active mesh.
+    - *Skip* - Skip editing UV maps.
+- **Clear Seams** - Remove all marked UV seams from mesh edges before preparing for a new unwrap.
+- **Clear Sharps** - Remove all sharp edge markings from the mesh before preparing for a new unwrap.
+- **Tag Unfinished** - Remove all finished island marks and tag the mesh as unfinished for a fresh unwrap
+
+!!! Note
+    The **Apply Scale** and **Apply Modifiers** options may destroy animation data. A warning is shown in the operator properties.
+
+---
+
+!!! Warning
+    Applying Geometry options (Scale / Modifiers)
+    may break rigs, constraints, or animations.
+
+- **Apply Scale** - Apply object scale transformations before preparing the mesh for UV unwrapping.
+- **Apply Modifiers** - Apply all geometry modifiers to the mesh before preparing for UV unwrapping.
+---
+
+- **Display Seams** - Display UV unwrapping seams and switch off all other overlays (Crease, Sharp, Bevel).
+- **UV Checker** - Enable a UV checker texture overlay to visually inspect UV layout quality during unwrapping.
+- **Darken Image** - Darken the UV checker or background image overlay to improve contrast during inspection.
+
+
+---
 ## Mark System
 !!! Panel
     ![](img/screen/unwrap/unwrap_mark_section.png)
@@ -329,6 +340,9 @@ Mark edges as Seams and/or Sharp edges by Angle.
     - **Use Global Mark Settings**. In this mode, all the operators from the Mark System use the settings below. If off, every operator uses its own settings.
     - **Mark Seams**. Automatically assign Seams
     - **Mark Sharp Edges**. Automatically assign Sharp edges
+
+!!! Tip
+    This operator supports the ability to [save default properties](user_interface.md/#save-as-default-operator-properties).
 
 !!! Properties
     ![](img/screen/unwrap/mark_by_angle_settings.png)

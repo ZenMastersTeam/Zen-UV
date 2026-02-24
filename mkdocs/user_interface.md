@@ -1,4 +1,6 @@
-# Combo Panel
+# User Interface
+
+## Combo Panel
 
 Combo Panel is a place where you can find all Zen UV operators.
 Operators are divided into thematic sections on the left side.
@@ -17,25 +19,25 @@ It's on the N-Panel and you can [**customize the appearance of panels in Prefere
 
 ![Combo Panel](img/gifs/user_interface/compactui_1.gif)
 
-## Multiple Panels
+### Multiple Panels
 
 Open multiple panels with `SHIFT + LMB`.
 
 ![Combo Panel](img/gifs/user_interface/compactui_2.gif)
 
-## Panels Pinning
+### Panels Pinning
 
 Pin some panels with `CTRL + LMB`
 
 ![Combo Panel](img/gifs/user_interface/compactui_3.gif)
 
-## Combo Panel in Properties
+### Combo Panel in Properties
 
 When Zen UV Transform Tool is active you can find Combo Panel in Properties.
 
 ![Combo Panel](img/gifs/user_interface/compactui_6.gif)
 
-## Popup Combo Panel
+### Popup Combo Panel
 
 Combo Panel is the same in N-Panel and Pop-up menu  `Shift + U`.
 You can call this menu anywhere.
@@ -46,18 +48,18 @@ You can call this menu anywhere.
     Don't forget to drink some good beer today!
 
 ---
-## Update reminder
+### Update reminder
 
 Reminds you that a new version has been released and you can update the addon.
 
 ![update reminder](img/screen/user_interface/update_reminder.png)
 
 ---
-# Pie Menu
+## Pie Menu
 
 ![Pie Menu](img/gifs/user_interface/pie_menu.gif)
 
-## Pie Menu interaction
+### Pie Menu interaction
 
 To use alternative commands in the Pie Menu, use a quick keypress. Avoid holding the Pie Menu hotkey for too long. Follow these steps:
 
@@ -69,55 +71,57 @@ Quick keypress:
 
 If you press and hold the hotkey for just over 1 second, the Pie Menu will automatically close once you release it, unless you hover over a section.
 
-## Operators
+---
 
-### Quadrify | Relax ![Quadrify Islands](img/icons/quadrify_32.png)
+### Pie Menu Operators
+
+#### Quadrify | Relax ![Quadrify Islands](img/icons/quadrify_32.png)
 
 - `Default` — [**Quadrify Islands**](transform.md#quadrify-islands). Straighten rectangular-shaped Islands.
 - `CTRL` — [**Relax**](transform.md#relax). Relax Selected Islands.
 - `SHIFT` — [**Hotspot Mapping**](). Map Islands by matching Islands to predefined Trims from Trimsheet.
   
-### Zen Unwrap | Pack ![Zen Unwrap](img/icons/zen-unwrap@2x.png)
+#### Zen Unwrap | Pack ![Zen Unwrap](img/icons/zen-unwrap@2x.png)
 
 - `Default` — [**Zen Unwrap**](unwrap.md#zen-unwrap). Unwrap by Marked edges. If you have selected edges or faces they will be Marked as Seams and/or Sharp Edges and Unwrapped after.
 - `ALT` — [**Pack Islands**](pack.md#pack-islands). Pack Islands by chosen Pack Engine.
 - `SHIFT` — [**Zen UV Transform Tool**](). Move, Rotate, Scale, Fit, Align and Flip Islands in 3D View and UV Editor using Zen UV Gizmo.
 
-### Checker | Finished ![Checker Texture](img/icons/checker_32.png)
+#### Checker | Finished ![Checker Texture](img/icons/checker_32.png)
 
 - `Default` — [**Checker Texture (Toggle)**](checker.md#checker-texture). Add/Remove Checker Texture to/from the mesh.
 - `CTRL` — [**Display Finished**](unwrap.md#display-finished-toggle). Display Finished Islands (Toggle).
 - `ALT` — [**Display Stretch Map**](checker.md#stretched). Display an angle-based stretching map.
 
-### Unmark | Tag Unfinished ![Unmark Seams](img/icons/unmark-seams@2x.png)
+#### Unmark | Tag Unfinished ![Unmark Seams](img/icons/unmark-seams@2x.png)
 
 - `Default` — [**Unmark**](unwrap.md#unmark). Unmark selected edges or face borders as Seams and/or Sharp edges.
 - `CTRL` — [**Tag Unfinished**](unwrap.md#tag-unfinished). Tag selected Islands as Unfinished.
 - `ALT` — [**Unmark All**](unwrap.md#unmark-all). Remove all Seams and/or Sharp edges from the mesh.
 
-### Mark | Tag Finished ![Mark Seams](img/icons/mark-seams@2x.png)
+#### Mark | Tag Finished ![Mark Seams](img/icons/mark-seams@2x.png)
 
 - `Default` — [**Mark**](unwrap.md#mark). Mark selected edges or face borders as Seams and/or Sharp edges.
 - `CTRL` — [**Tag Finished**](unwrap.md#tag-finished). Tag selected Islands as Finished. Islands Taged as Finished won't be unwrapped, recommended to Tag manually changed Islands (e.g. Quadrified Islands).
 
-### Select: Islands | Overlapped ![](img/icons/select.png)
+#### Select: Islands | Overlapped ![](img/icons/select.png)
 
 - `Default` — [**Select Islands**](select.md#select-islands). Select Islands by selected edge/face of the Islands.
 - `CTRL` — [**Select Flipped Islands**](select.md#select-flipped).
 - `ALT` — [**Select Overlapped Islands**](select.md#select-overlapped).
 - `SHIFT` — [**Select Similar Islands**](select.md#select-similar).
 
-### Isolate Islands (Toggle)
+#### Isolate Islands (Toggle)
 
 - `Default` — [**Isolate Island (Toggle)**](select.md#isolate-islands-toggle). Isolate Islands by selected edge/face of the Islands.
 - `CTRL` - [**Isolate Part (Toggle)**](select.md#isolate-part-toggle). Isolate mesh part by selected edge/face of the mesh.
 
-### Mark by Angle
+#### Mark by Angle
 
 - `Default` — [**Mark by Angle**](unwrap.md#mark-by-angle). Mark edges as Seams and/or Sharp edges by Angle.
 
 ---
-## Pie Menu Assist
+### Pie Menu Assist
 
 ![Pie Menu Assist](img/screen/pie_menu/pie_menu_assitant.png)
 
@@ -128,21 +132,21 @@ Pie Menu Assist is special help window, which is located below the Pie Menu. The
     Or in the **Addon Preferences** -> **UI tab**.
 
 ---
-## Default Shortcut
+### Default Shortcut
   Zen UV Pie Menu ![Zen UV Pie Menu](img/icons/zen-uv@2x.png) --- `Alt + U`
 
 !!! Shortcut
     If you don't like default Pie Menu Shortcut, it can be changed here **Edit** -> **Preferences** -> **Add-ons** -> **Zen UV** -> **Keymap**. Don't forget to change Shortcut for both contexts Mesh and UV Editor.
 
 ---
-# Progress Bar
+## Progress Bar
 
 **Progress Bar** is designed to display the progress of the operator execution process. Not all operators use the **Progress Bar**, only those that require complex calculations. On some operating systems of the **Linux** family, the **Progress Bar** can cause Blender to crash. To avoid this situation, you can disable the Progress Bar in [**Panel - Preferences - Display Progress Bar.**](preferences.md/#display)
 
 ![Progress Bar](img/screen/preferences/ProgressBar_main.gif)
 
 ---
-# Transform Tool
+## Transform Tool
 
 Move, Rotate, Scale, Fit, Align and Flip selected Islands or Faces/Edges/Vertices in 3D Viewport and UV Editor using Zen UV Gizmo.
 
@@ -152,7 +156,7 @@ Move, Rotate, Scale, Fit, Align and Flip selected Islands or Faces/Edges/Vertice
 
 ---
 
-# Touch Tool
+## Touch Tool
 
 **Zen Touch Tool** is a universal UV transformation tool that provides fast and intuitive control over moving, scaling, and rotating UV islands in the UV Editor. It allows for quick and easy execution of both basic and advanced transformations.
 
@@ -162,7 +166,7 @@ Move, Rotate, Scale, Fit, Align and Flip selected Islands or Faces/Edges/Vertice
 
 ---
 
-# Darken Image
+## Darken Image
 
 **Darken Image** operator is designed to adjust the darkening of an Image in the context of the UV Editor. It does not change the texture but uses color management curve to darken it.
 
@@ -185,7 +189,7 @@ You can find this operator in UV Editor Overlay.
     This option affects on current render settings. Do not forget to switch it off before rendering.
 
 ---
-### Right menu assist
+## Right menu assist
 
 - **Right Menu Assist** - Enables or disables the 'Add to ZenUV Favorites' option in the right-click menu.
 
@@ -194,14 +198,15 @@ You can find this operator in UV Editor Overlay.
 |Right Menu Assist|
 
 ---
-### Save As Default Operator Properties
+## Save As Default Operator Properties
 
 Starting from **Zen UV 4.5.2**, the ability to save default properties for certain operators has been introduced. This feature allows you to customize operators to your preferences and eliminates the need to adjust them every time you restart **Blender**.
 
 |Operators that support saving default properties|  
 |---|  
 |[Zen Unwrap](unwrap.md/#zen-unwrap)|  
-|[Quadrify](transform.md/#quadrify-islands)|  
+|[Quadrify](transform.md/#quadrify-islands)|
+|[Mark By Angle](unwrap.md/#mark-by-angle)|
 
 **How to Set Default Properties**
 
@@ -224,6 +229,4 @@ Starting from **Zen UV 4.5.2**, the ability to save default properties for certa
     - **Active Operator** - Save all properties of the active operator.
     - **All Operators** - Save default values of all available operators.
 - **Revert** - Revert to the initial state as it was deployed with the addon.
-
-
 

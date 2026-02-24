@@ -240,7 +240,7 @@ Select Islands By Texel Density.
 
 ### Global TD Preset
 
-Global project TD Preset value used in [Zen Unwrap](unwrap.md#zen-unwrap) and other operators. You can chage the value using Settings button.
+Global project TD Preset value used in [Zen Unwrap](unwrap.md#zen-unwrap) and other operators. You can set the desired texel density once per project, and other operators will use it as needed. You can chage the value using Settings button.
 
 ![](img/screen/texel_density/texel_density_global_td.png)
 
