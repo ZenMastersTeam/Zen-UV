@@ -59,7 +59,7 @@
 ## Required Blender version
 We support Blender versions in the same way as Blender developers do whithin two-years period for LTS and major release versions.
 
-Currently we support Blender 3.6 LTS version and higher official versions.
+Currently we support Blender 4.2 LTS version and higher official versions.
 
 | Blender Version | Release Date | End of support |
 |---|---|---|
