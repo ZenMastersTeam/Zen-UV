@@ -129,6 +129,10 @@
     <li class="toctree-l3"><a class="reference internal" href="#trims-snapping-for-creation-and-resizing">Trims Snapping for Creation and Resizing</a>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#trims-list">Trims List</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#trims-sorting">Trims Sorting</a>
+    </li>
+        </ul>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#active-trim">Active Trim</a>
         <ul>
@@ -450,6 +454,20 @@ Trim sheet data is taken either from property trimsheet image of the active mate
 <h3 id="trims-list">Trims List<a class="headerlink" href="#trims-list" title="Permanent link"></a></h3>
 <p>This control is useful to manage lists of trims. In the center of its area you can select, deselect, rename trims. On the right of the list view are additional buttons and button to call the additional popup menu.</p>
 <p><a class="glightbox" href="../img/screen/trimsheet/trimlist.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/trimsheet/trimlist.png" /></a></p>
+<h4 id="trims-sorting">Trims Sorting<a class="headerlink" href="#trims-sorting" title="Permanent link"></a></h4>
+<p>Sorting by standard Blender methods can be enabled in the trim list. It is also possible to sort trims by width and height. Enable the corresponding button in the list sorting dialog.</p>
+<table>
+<thead>
+<tr>
+<th><a class="glightbox" href="../img/screen/trimsheet/trimsheet_sorting_by_size.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Trimsheet sorting" src="../img/screen/trimsheet/trimsheet_sorting_by_size.png" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
 <h3 id="active-trim">Active Trim<a class="headerlink" href="#active-trim" title="Permanent link"></a></h3>
 <p>There is exactly one active trim in the curent trim sheet. It is highlighted in trim sheet UI list and surrounded with handles in trim editor</p>
 <p><a class="glightbox" href="../img/screen/trimsheet/active_trim.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/trimsheet/active_trim.png" /></a></p>
@@ -654,7 +672,12 @@ Trim sheet data is taken either from property trimsheet image of the active mate
 <p><a class="glightbox" href="../img/screen/trimsheet/trim_axis.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/trimsheet/trim_axis.png" /></a></p>
 </div>
 <h3 id="trim-units">Trim Units<a class="headerlink" href="#trim-units" title="Permanent link"></a></h3>
-<p>By default trim units are in UV points based on values from 0 to 1, but it is possible to switch to image pixels depending on image size</p>
+<p>By default trim units are in UV points based on values from 0 to 1, but it is possible to switch to image pixels depending on image size.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The &ldquo;px&rdquo; button is only available when you are working in <strong>Image</strong> mode, as this is the only mode in which pixel information can be obtained.
+For more details, see the section <a href="#trim-sheet-data-storage-in-blend-file">Trim sheet data storage in blend file.</a></p>
+</div>
 <p><a class="glightbox" href="../img/screen/trimsheet/trim_pixels.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/trimsheet/trim_pixels.gif" /></a></p>
 <ul>
 <li><strong>X</strong> - Trim left point</li>
