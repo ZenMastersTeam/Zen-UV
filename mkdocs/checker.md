@@ -184,12 +184,19 @@ Shades the UV editor background to visually distinguish areas outside UV islands
 ---
 ### Seams
 
-Display Seams in UV Editor.
+Display Seams in Edit Mesh mode.
 
 ![](img/screen/tex_checker/checker_display_seams.gif)
 
 !!! Note
-    Available only in UV Editor.
+    In Edit Mode, UV seams are displayed via Blender's native viewport overlays in the 3D View, whereas in the UV Editor, they are rendered by the addon.
+
+Display Seams in Object mode.
+
+![](img/screen/tex_checker/object_seams.gif)
+
+!!! Note
+    For high-poly meshes where seams are difficult to see in Edit Mode, the addon provides an option to display them in Object Mode for better clarity.    
 
 ### Sharps
 
