@@ -186,7 +186,7 @@ NOTE: Use this method if application can not be started via Blender
 Ministry Of Flat is a third-party software designed for automatic UV unwrapping.
 This software is designed **exclusively for Windows**, so this operator will not be available on **Linux** or **Mac OS**.
 Here you can find information about its author, whether it is installed, and where to locate the installed module.  
-For more details, refer to [this article](unwrap.md#auto-unwrap).
+For more details, refer to [this article](unwrap/auto_unwrap.md#auto-unwrap).
 
 ### User Script
 

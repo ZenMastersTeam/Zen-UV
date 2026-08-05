@@ -302,7 +302,7 @@ Select Islands in bounding box of active UDIM Tile or UV Area
 
 Move islands to active, or UDIM Tile defined by number
 
-[Read the full description of the operator in the Transform article](transform.md#move-to-uv-area)
+[Read the full description of the operator in the Transform article](transform_sys/advanced_operators.md#move-to-uv-area)
 
 |![](img/screen/adv_uv_map/adv_uv_map_udim_move_active.gif)|
 |---|

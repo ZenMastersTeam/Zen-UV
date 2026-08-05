@@ -14,16 +14,16 @@ Zen UV is providing all the tools you need to work with Texel Density.
     ![Texel Density](img/screen/texel_density/texel_density_main_panel.png)
 
 
-### Texel Density Value
+## Texel Density Value
 Shows Texel Density value.
 
-#### **TD Calc Precision**. 
+### **TD Calc Precision**. 
 Specifies how many percents of the Island's polygon will be used to determine Texel Density.
 
 !!! Properties
     ![Texel Density](img/screen/texel_density/texel_density_options.png)
 
-### Select by TD
+## Select by TD
 Select Islands by choosen Texel Density.
 
 !!! Properties
@@ -44,12 +44,12 @@ Select Islands by choosen Texel Density.
 | **Select Overrated** | Select Islands with TD value less than the highest TD value in the presets. |
 
 
-### Get TD
+## Get TD
 Get Texel Density from selected Islands.
 
 ![Texel Density](img/screen/texel_density/texel_density_getset.gif)
 
-### Set TD
+## Set TD
 Set Texel Density to selected Islands.
 
 | Modes | |
@@ -57,7 +57,7 @@ Set Texel Density to selected Islands.
 | **Overall Mode**  |  Set Texel Density for all selected Islands together. |
 | **Island Mode**  |  Set Texel Density individually for every selected Island.|
 
-### Use Pivot
+## Use Pivot
 Use Pivot point when Setting Texel Density. 
 From Center or from other 8 directions.
 
@@ -66,15 +66,15 @@ From Center or from other 8 directions.
 
 ![Texel Density](img/screen/texel_density/texel_density_pivot.gif)
 
-### Texture Size
+## Texture Size
 Texture Size for TD calculations.
 
-### TD Range
+## TD Range
 
 !!! SubPanel
     ![Texel Density](img/screen/texel_density/texel_density_range.png)
 
-#### Get TD Range
+### Get TD Range
 Calculates current minimum, average and maximum TD values on the model. By clicking on the number fields you can choose Islands with given TD value.
 
 ![Texel Density](img/screen/texel_density/texel_density_range.gif)
@@ -85,7 +85,7 @@ Calculates current minimum, average and maximum TD values on the model. By click
 | **Scene**  |  Calculates current minimum and maximum TD values in the scene.|
     
 
-### Calculate TD
+## Calculate TD
 Calculates optimal Texture Size/TD based on given TD/Texture Size.
 
 !!! Modes
@@ -93,7 +93,7 @@ Calculates optimal Texture Size/TD based on given TD/Texture Size.
      |---|---|  
      | ![](img/screen/texel_density/texel_density_calculator_size.png) |![](img/screen/texel_density/texel_density_calculator_td.png)|
 
-### Display TD
+## Display TD
 Display Texel Density in Viewport by chosen mode and display method.
 
 ![Texel Density](img/screen/texel_density/texel_density_display.gif)
@@ -133,7 +133,7 @@ Settings depends on Display modes.
 
 
 
-### Color Scheme
+## Color Scheme
 Color Scheme used to Display TD.
 
 | Color Schemes | |
@@ -144,7 +144,7 @@ Color Scheme used to Display TD.
 | **Linear**  |  Two-color gradient. Colors match first and second color of user preferences.|
 | **Mono**  | Monochromatic Scheme.|
 
-### Colors
+## Colors
 Three colors used to Display TD values for **Three Colors** and **Linear** Color Schemes.
 
 | Colors| |
@@ -153,13 +153,13 @@ Three colors used to Display TD values for **Three Colors** and **Linear** Color
 | **Second Color "Equal"** | Viewport display color to represent Texel Density equal to TD Value.|
 | **Third Color "Over"** | Viewport display color to represent Texel Density over than TD Value.|
 
-### TD Color Alpha
+## TD Color Alpha
 TD Color overlay alpha.
 
-### Range Type
+## Range Type
 Set Range type manually or automatically. 
 
-### Presets Only
+## Presets Only
 Display only TD values that exist in Preset list. All other values will be displayed in black.
 
 !!! Note
@@ -190,11 +190,11 @@ You can Save TD Presets for your projects to and Share TD Presets with team.
 !!! Notice
     If name in preset selector is marked with asterix then it shows name of category and active preset is not selected
 
-### Get TD
+## Get TD
 
 Get TD from selected Islands to active Preset.
 
-### Set TD
+## Set TD
 
 Set TD from active Preset to selected Islands.
 
@@ -204,26 +204,26 @@ Each preset has its own button for setting texel density for quick access.
 
 ![set preset](img/screen/texel_density/set_op_in_presets.png)
 
-### Clear
+## Clear
 
 Clear Presets list.
 
-### Presets Tools
+## Presets Tools
 
-#### Create Presets
+### Create Presets
 
 Create Presets from selected Islands.
 
 ![](img/screen/texel_density/texel_density_create_presets.gif)
 
-#### Colorize Presets
+### Colorize Presets
 
 Create colors for existing Presets.
 
 ![](img/screen/texel_density/texel_density_create_presets_colorize.gif)
 
 
-### Select by TD
+## Select by TD
 
 Select Islands By Texel Density.
 
@@ -238,9 +238,9 @@ Select Islands By Texel Density.
 | **By Value** | Select by active preset value.|
 
 
-### Global TD Preset
+## Global TD Preset
 
-Global project TD Preset value used in [Zen Unwrap](unwrap.md#zen-unwrap) and other operators. You can set the desired texel density once per project, and other operators will use it as needed. You can chage the value using Settings button.
+Global project TD Preset value used in [Zen Unwrap](unwrap/zen_unwrap.md#zen-unwrap) and other operators. You can set the desired texel density once per project, and other operators will use it as needed. You can chage the value using Settings button.
 
 ![](img/screen/texel_density/texel_density_global_td.png)
 

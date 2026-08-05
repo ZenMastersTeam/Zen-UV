@@ -77,13 +77,13 @@ If you press and hold the hotkey for just over 1 second, the Pie Menu will autom
 
 #### Quadrify | Relax ![Quadrify Islands](img/icons/quadrify_32.png)
 
-- `Default` — [**Quadrify Islands**](transform.md#quadrify-islands). Straighten rectangular-shaped Islands.
-- `CTRL` — [**Relax**](transform.md#relax). Relax Selected Islands.
+- `Default` — [**Quadrify Islands**](transform_sys/independent_ops.md#quadrify-islands). Straighten rectangular-shaped Islands.
+- `CTRL` — [**Relax**](transform_sys/independent_ops.md#relax). Relax Selected Islands.
 - `SHIFT` — [**Hotspot Mapping**](). Map Islands by matching Islands to predefined Trims from Trimsheet.
   
 #### Zen Unwrap | Pack ![Zen Unwrap](img/icons/zen-unwrap@2x.png)
 
-- `Default` — [**Zen Unwrap**](unwrap.md#zen-unwrap). Unwrap by Marked edges. If you have selected edges or faces they will be Marked as Seams and/or Sharp Edges and Unwrapped after.
+- `Default` — [**Zen Unwrap**](unwrap/zen_unwrap.md#zen-unwrap). Unwrap by Marked edges. If you have selected edges or faces they will be Marked as Seams and/or Sharp Edges and Unwrapped after.
 - `ALT` — [**Pack Islands**](pack.md#pack-islands). Pack Islands by chosen Pack Engine.
 - `SHIFT` — [**Zen UV Transform Tool**](). Move, Rotate, Scale, Fit, Align and Flip Islands in 3D View and UV Editor using Zen UV Gizmo.
 
@@ -204,8 +204,8 @@ Starting from **Zen UV 4.5.2**, the ability to save default properties for certa
 
 |Operators that support saving default properties|  
 |---|  
-|[Zen Unwrap](unwrap.md/#zen-unwrap)|  
-|[Quadrify](transform.md/#quadrify-islands)|
+|[Zen Unwrap](unwrap/zen_unwrap.md#zen-unwrap)|  
+|[Quadrify](transform_sys/independent_ops.md#quadrify-islands)|
 |[Mark By Angle](unwrap.md/#mark-by-angle)|
 
 **How to Set Default Properties**

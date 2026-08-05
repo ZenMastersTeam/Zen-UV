@@ -7,7 +7,7 @@ nav:
         - Installation and Update: installation.md
         - User Interface: user_interface.md
         - Tutorial:
-            - tutorial.md
+            - Step-by-Step Guide Examples: tutorial.md
             - Emergency Light:
                 - Emergency Light (EN): tutorial/emergency_light/emergency_light_eng.md
                 - Emergency Light (UA): tutorial/emergency_light/emergency_light_ukr.md
@@ -15,9 +15,16 @@ nav:
     - Modules:
         - Advanced UV Maps: adv_uv-maps.md
         - Seam Groups: seam_groups.md
-        - Unwrap: unwrap.md
+        - Unwrap:
+            - Zen Unwrap: unwrap/zen_unwrap.md
+            - Auto Unwrap: unwrap/auto_unwrap.md
+            - Unwrap: unwrap.md
         - Select: select.md
-        - Transform: transform.md
+        - Transform:
+            - Overview: transform_sys/panels_and_description.md
+            - Independent Transform Operators: transform_sys/independent_ops.md
+            - Unified Transform System: transform_sys/unified_transform_sys.md
+            - Advanced Transform: transform_sys/advanced_operators.md
         - Stack: stack.md
         - Texel Density: texel_density.md
         - UV Checker: checker.md
@@ -28,16 +35,57 @@ nav:
         - Sticky UV Editor: sticky_uv_editor.md
         - Favourites: favourites.md
     - Trim Sheets:
-        - trimsheet.md
+        - Trim Sheets: trimsheet.md
         - Trim Sheet Management: trimsheet_creation.md
-        - trimsheet_operators.md
-        - trimsheet_hotspot.md
+        - Trimsheet Operators: trimsheet_operators.md
+        - Hotspot Mapping: trimsheet_hotspot.md
     - Additional:
         - Addon Preferences: addon_prefs.md
-        - user_script.md
+        - User Script: user_script.md
         - Help: help.md
         - FAQs: troubleshooting.md
-        - Changelog: changelg.md
+        - Changelog:
+            - Summary: changelog.md
+            - Version 5.3.3: changelog/release_note_5.3.3.md
+            - Version 5.3.2: changelog/release_note_5.3.2.md
+            - Version 5.3.1: changelog/release_note_5.3.1.md
+            - Version 5.3.0: changelog/release_note_5.3.0.md
+            - Version 5.2.1: changelog/release_note_5.2.1.md
+            - Version 5.2.0: changelog/release_note_5.2.0.md
+            - Version 5.1.0: changelog/release_note_5.1.0.md
+            - Version 5.0.3: changelog/release_note_5.0.3.md
+            - Version 5.0.2: changelog/release_note_5.0.2.md
+            - Version 5.0.1: changelog/release_note_5.0.1.md
+            - Version 5.0.0: changelog/release_note_5.0.0.md
+            - Version 4.5.4: changelog/release_note_4.5.4.md
+            - Version 4.5.2: changelog/release_note_4.5.2.md
+            - Version 4.5.1: changelog/release_note_4.5.1.md
+            - Version 4.5.0: changelog/release_note_4.5.0.md
+            - Version 4.4.2: changelog/release_note_4.4.2.md
+            - Version 4.4.1: changelog/release_note_4.4.1.md
+            - Version 4.4: changelog/release_note_4.4.0.md
+            - Version 4.3: changelog/release_note_4.3.md
+            - Version 4.2.1: changelog/release_note_4.2.1.md
+            - Version 4.2: changelog/release_note_4.2.md
+            - Version 4.1: changelog/release_note_4.1.md
+            - Version 4.0.1: changelog/release_note_4.0.1.md
+            - Version 4.0: changelog/release_note_4.0.md
+            - Version 3.1.0.4: changelog/release_note_3.1.1.0.md
+            - Version 3.1.0.2: changelog/release_note_3.1.0.2.md
+            - Version 3.0.2: changelog/release_note_3.0.2.md
+            - Version 3.0.1: changelog/release_note_3.0.1.md
+            - Version 3.0: changelog/release_note_3.0.md
+            - Version 2.2.3: changelog/release_note_2.2.3.md
+            - Version 2.2.2: changelog/release_note_2.2.2.md
+            - Version 2.2.1: changelog/release_note_2.2.1.md
+            - Version 2.2: changelog/release_note_2.2.md
+            - Version 2.1.3: changelog/release_note_2.1.3.md
+            - Version 2.1 Stacks: changelog/release_note_2.1.md
+            - Version 2.0 Transform: changelog/release_note_2.0.md
+            - Version 1.92 Texel Density: changelog/release_note_1.92.md
+            - Version 1.9 Texture Checker: changelog/release_note_1.9.md
+            - Version 1.8: changelog/release_note_1.8.md
+            - Version 1.7: changelog/release_note_1.7.md
         - Credits: credits.md
         - Our Add-ons: our_addons.md
         - Recommended Add-ons: recommended_addons.md
@@ -60,5 +108,7 @@ markdown_extensions:
     - attr_list
     - toc:
         permalink: 
+extra_css:
+  - extra.css
 
 copyright: <p>Copyright &copy; 2024-2025 <a href="https://zenmasters.team/">Zen Masters</a></p>

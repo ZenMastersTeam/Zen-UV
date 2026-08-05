@@ -55,7 +55,7 @@
 
     ![](../../img/tutorial/emergency_light/unmark_all.gif)
 
-3. Перевіримо чи немає островів що теговані як [Finished](../../unwrap.md#finishing-system). Система [Finished](../../unwrap.md#finishing-system) служить для візуального контролю за станом островів (закінчені/не закінчені) та не дозволяє оператору [Zen Unwrap](../../unwrap.md#zen-unwrap) розгортати острови якщо вони теговані як [Finished](../../unwrap.md#tag-finished).
+3. Перевіримо чи немає островів що теговані як [Finished](../../unwrap.md#finishing-system). Система [Finished](../../unwrap.md#finishing-system) служить для візуального контролю за станом островів (закінчені/не закінчені) та не дозволяє оператору [Zen Unwrap](../../unwrap/zen_unwrap.md#zen-unwrap) розгортати острови якщо вони теговані як [Finished](../../unwrap.md#tag-finished).
     - Виділіть всі полігони моделі.
     - У вкладці [Unwrap](../../unwrap.md) розгорніть панель з назвою [Finished](../../unwrap.md#finishing-system) та натисніть кнопку [Tag Unfinished](../../unwrap.md#tag-unfinished).
 
@@ -93,15 +93,15 @@
 
     ![](../../img/tutorial/emergency_light/uv_editor.gif)
 
-3. Ми створили шви в залежності від гостроти edge але ще не розділили модель на острови. Для розділення використаємо оператор [Zen Unwrap](../../unwrap.md#zen-unwrap) який працює в залежності від того, що виділено. То ж на даному етапі переконайтеся що нічого не виділено. В режимі коли нічого не виділено [Zen Unwrap](../../unwrap.md#zen-unwrap) просто розділяє модель на UV острови по існуючим seams. Якщо щось виділено, результат буде іншим.
+3. Ми створили шви в залежності від гостроти edge але ще не розділили модель на острови. Для розділення використаємо оператор [Zen Unwrap](../../unwrap/zen_unwrap.md#zen-unwrap) який працює в залежності від того, що виділено. То ж на даному етапі переконайтеся що нічого не виділено. В режимі коли нічого не виділено [Zen Unwrap](../../unwrap/zen_unwrap.md#zen-unwrap) просто розділяє модель на UV острови по існуючим seams. Якщо щось виділено, результат буде іншим.
     - Переконайтеся що нічого не виділено.
 
 
-    - Натисніть [Zen Unwrap](../../unwrap.md#zen-unwrap) з панелі [Unwrap](../../unwrap.md).
+    - Натисніть [Zen Unwrap](../../unwrap/zen_unwrap.md#zen-unwrap) з панелі [Unwrap](../../unwrap.md).
 
     ![](../../img/tutorial/emergency_light/initial_unwrap.gif)
 
-Інші режими робти [Zen Unwrap](../../unwrap.md#zen-unwrap) ми розглянемо в продовж цього туторіалу.
+Інші режими робти [Zen Unwrap](../../unwrap/zen_unwrap.md#zen-unwrap) ми розглянемо в продовж цього туторіалу.
 
 ### Вмикаємо текстуру для перевірки
 
@@ -163,7 +163,7 @@
 
     У випадку якщо Blender знаходиться в режимі виділення Faces, буде створено новий острів з виділених полігонів, а ребра по краю виділених полігонів буде марковано як seams.
 
-    - Виділіть торець та натисніть кнопку [Zen Unwrap](../../unwrap.md#zen-unwrap) з панелі [Unwrap](../../unwrap.md)
+    - Виділіть торець та натисніть кнопку [Zen Unwrap](../../unwrap/zen_unwrap.md#zen-unwrap) з панелі [Unwrap](../../unwrap.md)
 
     ![](../../img/tutorial/emergency_light/unwrap_cap_1.gif)
 
@@ -171,8 +171,8 @@
 
 2. Використаємо режим виділення Edges для розгортання наступного острова.
 
-    - Перемкніть Blender в режим виділення Edges. В цьому режмі [Zen Unwrap](../../unwrap.md#zen-unwrap) створить seams для виділених ребер та виконає розгортання.
-    - Виділіть одне ребро на найдовшому циліндрові та натисніть [Zen Unwrap](../../unwrap.md#zen-unwrap).
+    - Перемкніть Blender в режим виділення Edges. В цьому режмі [Zen Unwrap](../../unwrap/zen_unwrap.md#zen-unwrap) створить seams для виділених ребер та виконає розгортання.
+    - Виділіть одне ребро на найдовшому циліндрові та натисніть [Zen Unwrap](../../unwrap/zen_unwrap.md#zen-unwrap).
 
 
     !!! tip
@@ -180,24 +180,24 @@
 
     ![](../../img/tutorial/emergency_light/unwrap_tube.gif)
 
-    Як бачите, [Zen Unwrap](../../unwrap.md#zen-unwrap) точно виконує ваші вказівки та здійснює розгортання островів, не дивлячись на те що ми змінюємо тип виділення. При цьому навіть не потрібно відкривати його налаштування. У результаті ми отримали правильно розгорнутий найбільший острів цієї деталі.
+    Як бачите, [Zen Unwrap](../../unwrap/zen_unwrap.md#zen-unwrap) точно виконує ваші вказівки та здійснює розгортання островів, не дивлячись на те що ми змінюємо тип виділення. При цьому навіть не потрібно відкривати його налаштування. У результаті ми отримали правильно розгорнутий найбільший острів цієї деталі.
 
 3. Розгорнемо другий торець деталі. 
     - Перемкніть режим виділення Blender в faces.
     - Виділіть торець.
-    - Натисніть [Zen Unwrap](../../unwrap.md#zen-unwrap).
+    - Натисніть [Zen Unwrap](../../unwrap/zen_unwrap.md#zen-unwrap).
 
     ![](../../img/tutorial/emergency_light/cylindrical_second_cap.gif)
 
-4. При використанні Mark by Angle було створено не бажані seams що розділило модель на більшу кількість островів ніж потрібно. Щоб виправити це знову скористуємось оператором [Zen Unwrap](../../unwrap.md#zen-unwrap).
-    - Виділіть всі полігони найбільшого циліндра та натисніть [Zen Unwrap](../../unwrap.md#zen-unwrap).
+4. При використанні Mark by Angle було створено не бажані seams що розділило модель на більшу кількість островів ніж потрібно. Щоб виправити це знову скористуємось оператором [Zen Unwrap](../../unwrap/zen_unwrap.md#zen-unwrap).
+    - Виділіть всі полігони найбільшого циліндра та натисніть [Zen Unwrap](../../unwrap/zen_unwrap.md#zen-unwrap).
 Як результат всі виділені острови об'єдналися в один, і край виділених полігонів був маркований як seams.
 
     ![](../../img/tutorial/emergency_light/merge_islands.gif)
 
-5. На цьому етапі ми завершили створення островів, але багато з них залишилися деформованими. Можна перемкнутися в режим виділення edges та виконати ті самі дії, як і для найбільшого циліндра, проте острови зі складнішою формою залишаться недостатньо вирівняними. Використаємо оператор [Quadrify](../../transform.md#quadrify-islands), який вирівнює в рівну сітку острови, створені з квадів
+5. На цьому етапі ми завершили створення островів, але багато з них залишилися деформованими. Можна перемкнутися в режим виділення edges та виконати ті самі дії, як і для найбільшого циліндра, проте острови зі складнішою формою залишаться недостатньо вирівняними. Використаємо оператор [Quadrify](../../transform_sys/independent_ops.md#quadrify-islands), який вирівнює в рівну сітку острови, створені з квадів
     - Перемкніться в режим виділення edges.
-    - Виділіть один поздовжній edge, та натисніть кнопку [Quadrify](../../transform.md#quadrify-islands) в панелі [Transform](../../transform.md).
+    - Виділіть один поздовжній edge, та натисніть кнопку [Quadrify](../../transform_sys/independent_ops.md#quadrify-islands) в панелі [Transform](../../transform_sys/panels_and_description.md).
 
     ![](../../img/tutorial/emergency_light/cylindrical_quadrify_vert.gif)
 
@@ -248,18 +248,18 @@
 
 2. Ця деталь має чіткі контури, коректні seams, але деякі острови можна зробити кращими. Внутрішня частина є половиною циліндра що може бути представленим одним островом замість кількох. Створимо один острів з внутрішньої частини.
     - Виділіть всю внутрішню частину окрім острова що є полігоном.
-    - Натисніть [Zen Unwrap](../../unwrap.md#zen-unwrap).
+    - Натисніть [Zen Unwrap](../../unwrap/zen_unwrap.md#zen-unwrap).
 
     ![](../../img/tutorial/emergency_light/external_select_internal_part.gif)
 
-3. Створений острів може виглядати краще, якщо вирівняти його в рівну сітку. Для цього скористайтеся оператором [Quadrify](../../transform.md#quadrify-islands). Зверніть увагу: якщо у вас активовано опцію Use Selected Edges, краще перейти в режим виділення faces, оскільки в режимі виділення edges оператор Quadrify може розірвати острів по виділених ребрах. Також важливо зазначити, що Zen UV постійно намагається спростити роботу. Щоб вказати оператору, з яким островом ви хочете працювати, не обов'язково виділяти весь острів — достатньо обрати один або кілька полігонів.
-    - Виділіть один або декілька полігонів в острові внутрішньої частини поточної деталі, та натисніть [Quadrify](../../transform.md#quadrify-islands).
+3. Створений острів може виглядати краще, якщо вирівняти його в рівну сітку. Для цього скористайтеся оператором [Quadrify](../../transform_sys/independent_ops.md#quadrify-islands). Зверніть увагу: якщо у вас активовано опцію Use Selected Edges, краще перейти в режим виділення faces, оскільки в режимі виділення edges оператор Quadrify може розірвати острів по виділених ребрах. Також важливо зазначити, що Zen UV постійно намагається спростити роботу. Щоб вказати оператору, з яким островом ви хочете працювати, не обов'язково виділяти весь острів — достатньо обрати один або кілька полігонів.
+    - Виділіть один або декілька полігонів в острові внутрішньої частини поточної деталі, та натисніть [Quadrify](../../transform_sys/independent_ops.md#quadrify-islands).
 
     ![](../../img/tutorial/emergency_light/external_cover_quadrify.gif)
 
 4. Наступний острів занадто великий, циклічний та вивернутий. Для того, щоб позбавитися цих вад, розділіть його на декілька островів меншого розміру.
     - Виділіть бокові ребра.
-    - Натисніть [Zen Unwrap](../../unwrap.md#zen-unwrap).
+    - Натисніть [Zen Unwrap](../../unwrap/zen_unwrap.md#zen-unwrap).
 
     ![](../../img/tutorial/emergency_light/unwrap_by_side_cuts.gif)
 
@@ -285,20 +285,20 @@
     ![](../../img/tutorial/emergency_light/small_parts_isolate.gif)
 
 2. На всіх дрібних деталях, окрім циліндричних, оператор [Mark by Ange](../../unwrap.md#mark-by-angle) спрацював коректно. Давайте це виправимо.
-    - Виділіть по одному ребру на кожному з циліндрів та натисніть [Zen Unwrap](../../unwrap.md#zen-unwrap).
+    - Виділіть по одному ребру на кожному з циліндрів та натисніть [Zen Unwrap](../../unwrap/zen_unwrap.md#zen-unwrap).
 
     ![](../../img/tutorial/emergency_light/small_parts_unwrap_cuts.gif)
 
 3. Перейдіть до деталі що скріплює дроти. Вона була розділена на декілька частин що не є оптимальною розгорткою. Достатньо відокремити торці а решту лишити одним островом.
     - Виділіть всю деталь.
     - Зніміть виділення з торців.
-    - Виконайте [Zen Unwrap](../../unwrap.md#zen-unwrap).
+    - Виконайте [Zen Unwrap](../../unwrap/zen_unwrap.md#zen-unwrap).
 
     ![](../../img/tutorial/emergency_light/small_parts_unwrap_by_polygons.gif)
 
 4. Ми створили суцільний острів, але його розгортка не коректна. Потрібно розірвати та розрівняти радіальний острів.
     - Виділіть пару ребер де потрібно розділити.
-    - Виконайте [Zen Unwrap](../../unwrap.md#zen-unwrap).
+    - Виконайте [Zen Unwrap](../../unwrap/zen_unwrap.md#zen-unwrap).
 
     ![](../../img/tutorial/emergency_light/small_parts_unwrap_to_get_quad.gif)
 
@@ -307,7 +307,7 @@
 
     ![](../../img/tutorial/emergency_light/small_parts_quaded_islands.gif)
 
-    - Використайте оператор [Quadrify](../../transform.md#quadrify-islands) щоб вирівняти всі виділені острови у рівну сітку.
+    - Використайте оператор [Quadrify](../../transform_sys/independent_ops.md#quadrify-islands) щоб вирівняти всі виділені острови у рівну сітку.
 
     ![](../../img/tutorial/emergency_light/small_parts_quadrify_2.gif)
 
@@ -327,13 +327,13 @@
     ![](../../img/tutorial/emergency_light/wires_isolate.gif)
 
 2. Видно що на даний момент кожен дріт розділений на декілька островів. Зробімо так, щоб кожен дріт був представлений одним островом.
-    - Виділіть всі полігони, та натисніть [Zen Unwrap](../../unwrap.md#zen-unwrap).
+    - Виділіть всі полігони, та натисніть [Zen Unwrap](../../unwrap/zen_unwrap.md#zen-unwrap).
 
     ![](../../img/tutorial/emergency_light/wires_unwrap.gif)
 
 3. Ми отримали розділення де кожен дріт являє собою один острів, але розгортання не коректне. Давайте розгорнемо дроти найшвидшим способом.
     - Переконайтеся що виділено всі острови.
-    - Використайте оператор [Quadrify](../../transform.md#quadrify-islands) щоб вирівняти відразу всі острови.
+    - Використайте оператор [Quadrify](../../transform_sys/independent_ops.md#quadrify-islands) щоб вирівняти відразу всі острови.
 
     ![](../../img/tutorial/emergency_light/wires_quadrify.gif)
 
@@ -362,19 +362,19 @@
 2. Ця деталь складається з кількох островів, що не є оптимальним рішенням. Давайте об'єднаємо їх в один острів замість кількох.
     - Виділіть всі острови що належать ручці.
     - Зніміть виділення з торців що виглядають як шестикутники.
-    - Натисніть [Zen Unwrap](../../unwrap.md#zen-unwrap).
+    - Натисніть [Zen Unwrap](../../unwrap/zen_unwrap.md#zen-unwrap).
 
     ![](../../img/tutorial/emergency_light/handle_create_one_island.gif)
 
 3. Острів створений в результаті останніх дій має не коректну розгортку. Давйте виправимо це.
     - Виділіть edges що належать отвору та edges що належать внутрішньому краю ручки.
-    - Натисніть [Zen Unwrap](../../unwrap.md#zen-unwrap)
+    - Натисніть [Zen Unwrap](../../unwrap/zen_unwrap.md#zen-unwrap)
 
     ![](../../img/tutorial/emergency_light/handle_create_cuts.gif)
 
-4. Тепер ми маємо розгорнутий острів. Присутність в ньому трикутних граней не дозволяє використати оператор [Quadrify](../../transform.md#quadrify-islands) для вирівнювання в рівну сітку. Розглянемо на прикладі цього острова роботу оператора [Reshape Island](../../transform.md#reshape-island). Суть роботи [Reshape Island](../../transform.md#reshape-island) полягає в тому, що він розрівнює виділені лупи ребер в рівну лінію а решту вершин розслаблює.
+4. Тепер ми маємо розгорнутий острів. Присутність в ньому трикутних граней не дозволяє використати оператор [Quadrify](../../transform_sys/independent_ops.md#quadrify-islands) для вирівнювання в рівну сітку. Розглянемо на прикладі цього острова роботу оператора [Reshape Island](../../transform_sys/independent_ops.md#reshape-island). Суть роботи [Reshape Island](../../transform_sys/independent_ops.md#reshape-island) полягає в тому, що він розрівнює виділені лупи ребер в рівну лінію а решту вершин розслаблює.
     - Виділіть повністю ребра що проходять поздовжньо через центр острова.
-    - Натисніть [Reshape Island](../../transform.md#reshape-island) для вирівнювання острова.
+    - Натисніть [Reshape Island](../../transform_sys/independent_ops.md#reshape-island) для вирівнювання острова.
 
     ![](../../img/tutorial/emergency_light/reshape_island.gif)
 

@@ -16,19 +16,19 @@
 ## Main Features
 
 - [**Zen Gizmo.**](transform_tool.md) Move, Rotate, Scale, Fit, Align and Flip UV Islands in 3D View and UV Editor using Zen Gizmo.
-- [**Zen Relax.**](transform.md#relax) Unique Unwrapping algorithm for Organic models.
+- [**Zen Relax.**](transform_sys/independent_ops.md#relax) Unique Unwrapping algorithm for Organic models.
 - [**Trimsheet System.**](trimsheet_creation.md#creating-your-trim-sheet-with-zen-uv) Create/Display Trims and Map UV Islands on them using Transform operators.
 - [**Touch Tool.**](touch_tool.md) Universal UV transformation tool that provides fast and intuitive control over moving, scaling, and rotating UV islands in the UV Editor. 
 - [**Hotspot Mapping.**](trimsheet_hotspot.md) Map UV Islands on Trims by matching them by Area, Aspect, World Size and Tags.
 - [**Stack System.**](stack.md) Stack/Unstack similar/non-similar UV Islands on top of each other.
-- [**Zen Unwrap.**](unwrap.md#zen-unwrap) Context-sensitive Unwrap with control over Seams and Sharp Edges.
-- [**Transform System.**](transform.md#world-orient) Move, Rotate, Scale, Flip, Fit, Orient, Sort and Align UV Islands and Vertices.
-- [**World Orient.**](transform.md#world-orient) Rotate UV Islands according to the model's position in World Space.
-- [**Quadrify.**](transform.md#quadrify-islands) Straighten UV Islands and selected Faces consisting of quads.
-- [**Randomize.**](transform.md#randomize) Randomize Position, Rotation, Scale of UV Islands and Vertices.
-- [**Mirror.**](transform.md#mirror-uv) Mirroring UVs for mirrored models. Mirror Seams on the model.
-- [**Match and Stitch.**](transform.md#match-and-stitch) Match UV Islands Position, Rotation, Scale and Stitch Vertices if it’s possible.
-- [**Reshape Island.**](transform.md#reshape-island) Straighten selected Edge loops and relax connected Vertices.
+- [**Zen Unwrap.**](unwrap/zen_unwrap.md#zen-unwrap) Context-sensitive Unwrap with control over Seams and Sharp Edges.
+- [**Transform System.**](transform_sys/independent_ops.md#world-orient) Move, Rotate, Scale, Flip, Fit, Orient, Sort and Align UV Islands and Vertices.
+- [**World Orient.**](transform_sys/independent_ops.md#world-orient) Rotate UV Islands according to the model's position in World Space.
+- [**Quadrify.**](transform_sys/independent_ops.md#quadrify-islands) Straighten UV Islands and selected Faces consisting of quads.
+- [**Randomize.**](transform_sys/independent_ops.md#randomize) Randomize Position, Rotation, Scale of UV Islands and Vertices.
+- [**Mirror.**](transform_sys/independent_ops.md#mirror-uv) Mirroring UVs for mirrored models. Mirror Seams on the model.
+- [**Match and Stitch.**](transform_sys/independent_ops.md#match-and-stitch) Match UV Islands Position, Rotation, Scale and Stitch Vertices if it’s possible.
+- [**Reshape Island.**](transform_sys/independent_ops.md#reshape-island) Straighten selected Edge loops and relax connected Vertices.
 - [**Advanced UV Maps.**](adv_uv-maps.md) Sync, Clean and Rename UV Maps for multiple selected models.
 - [**Marking System.**](unwrap.md#mark-system) Mark Seams and/or Sharps by Angle/Sharps/Seams/Open Edges/UV Borders and manually.
 - [**Finished System.**](unwrap.md#finishing-system) Visually control the state of Unwrapping process using Finished/Unfinished tags.

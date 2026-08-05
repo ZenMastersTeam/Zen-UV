@@ -94,13 +94,13 @@ The tutorial covers the main stages that are optimal steps for processing any mo
 
     ![](../../img/tutorial/emergency_light/uv_editor.gif)
 
-3. We have created seams depending on the edge angle, but have not yet divided the model into islands. To do this, we will use the [Zen Unwrap](../../unwrap.md#zen-unwrap) operator, which works depending on what is selected. So at this stage, make sure that nothing is selected. In the mode when nothing is selected, [Zen Unwrap](../../unwrap.md#zen-unwrap) simply splits the model into UV islands along the existing seams. If something is selected, the result will be different.
+3. We have created seams depending on the edge angle, but have not yet divided the model into islands. To do this, we will use the [Zen Unwrap](../../unwrap/zen_unwrap.md#zen-unwrap) operator, which works depending on what is selected. So at this stage, make sure that nothing is selected. In the mode when nothing is selected, [Zen Unwrap](../../unwrap/zen_unwrap.md#zen-unwrap) simply splits the model into UV islands along the existing seams. If something is selected, the result will be different.
     - Deselect all.
-    - Press [**Zen Unwrap**](../../unwrap.md#zen-unwrap) button from [**Unwrap**](../../unwrap.md) tab.
+    - Press [**Zen Unwrap**](../../unwrap/zen_unwrap.md#zen-unwrap) button from [**Unwrap**](../../unwrap.md) tab.
 
     ![](../../img/tutorial/emergency_light/initial_unwrap.gif)
 
-Other modes of [**Zen Unwrap**](../../unwrap.md#zen-unwrap) operator will be demonstrated later in this tutorial.
+Other modes of [**Zen Unwrap**](../../unwrap/zen_unwrap.md#zen-unwrap) operator will be demonstrated later in this tutorial.
 
 ### Switch on checker texture
 
@@ -148,7 +148,7 @@ It is convenient to divide this process into steps. Our model consists of severa
 
     ![](../../img/tutorial/emergency_light/isolate_cylinder.gif)
 
-    The main operator for creating islands in the Zen UV addon is [Zen Unwrap](../../unwrap.md#zen-unwrap). This is a multifunctional context operator. It performs different tasks depending on the following:
+    The main operator for creating islands in the Zen UV addon is [Zen Unwrap](../../unwrap/zen_unwrap.md#zen-unwrap). This is a multifunctional context operator. It performs different tasks depending on the following:
 
     - Which selection mode is currently active.
     - What exactly is selected at the time of its start.
@@ -162,7 +162,7 @@ It is convenient to divide this process into steps. Our model consists of severa
 
     If **Blender** is in **Faces** selection mode, a new island will be created from the selected polygons, and the edges along the border of the selected polygons will be marked as **seams**. Let's use this to create the first island.
 
-    - Select cap and press [**Zen Unwrap**](../../unwrap.md#zen-unwrap) in [**Unwrap**](../../unwrap.md) tab
+    - Select cap and press [**Zen Unwrap**](../../unwrap/zen_unwrap.md#zen-unwrap) in [**Unwrap**](../../unwrap.md) tab
 
     ![](../../img/tutorial/emergency_light/unwrap_cap_1.gif)
 
@@ -170,8 +170,8 @@ It is convenient to divide this process into steps. Our model consists of severa
 
 2. Let's use the **Edges** selection mode to unwrap the next island.
 
-    - Switch **Blender** to **Edges** selection mode. In this mode, [**Zen Unwrap**](../../unwrap.md#zen-unwrap) will create **seams** for the selected edges and perform the unwrap.
-    - Select one edge on the longest cylinder and click [**Zen Unwrap**](../../unwrap.md#zen-unwrap).
+    - Switch **Blender** to **Edges** selection mode. In this mode, [**Zen Unwrap**](../../unwrap/zen_unwrap.md#zen-unwrap) will create **seams** for the selected edges and perform the unwrap.
+    - Select one edge on the longest cylinder and click [**Zen Unwrap**](../../unwrap/zen_unwrap.md#zen-unwrap).
 
 
     !!! tip
@@ -179,23 +179,23 @@ It is convenient to divide this process into steps. Our model consists of severa
 
     ![](../../img/tutorial/emergency_light/unwrap_tube.gif)
 
-    As you can see, [**Zen Unwrap**](../../unwrap.md#zen-unwrap) follows your instructions exactly and unwraps the islands despite the fact that we change the selection type. You don't even need to open its settings to do this. As a result, we got the largest island of this part correctly unwrapped.
+    As you can see, [**Zen Unwrap**](../../unwrap/zen_unwrap.md#zen-unwrap) follows your instructions exactly and unwraps the islands despite the fact that we change the selection type. You don't even need to open its settings to do this. As a result, we got the largest island of this part correctly unwrapped.
 
 3. Unwrap the second cap. 
     - Switch **Blender** selection into **Faces** mode.
     - Select cap.
-    - Press [**Zen Unwrap**](../../unwrap.md#zen-unwrap).
+    - Press [**Zen Unwrap**](../../unwrap/zen_unwrap.md#zen-unwrap).
 
     ![](../../img/tutorial/emergency_light/cylindrical_second_cap.gif)
 
-4. When using **Mark by Angle**, unwanted **seams** were created, which divided the model into more islands than necessary. To fix this, use the [**Zen Unwrap**](../../unwrap.md#zen-unwrap) operator again.
-    - Select all the polygons of the largest cylinder and press [**Zen Unwrap**](../../unwrap.md#zen-unwrap). As a result, all the selected islands are merged into one, and the edge of the selected polygons are marked as **seams**.
+4. When using **Mark by Angle**, unwanted **seams** were created, which divided the model into more islands than necessary. To fix this, use the [**Zen Unwrap**](../../unwrap/zen_unwrap.md#zen-unwrap) operator again.
+    - Select all the polygons of the largest cylinder and press [**Zen Unwrap**](../../unwrap/zen_unwrap.md#zen-unwrap). As a result, all the selected islands are merged into one, and the edge of the selected polygons are marked as **seams**.
 
     ![](../../img/tutorial/emergency_light/merge_islands.gif)
 
-5. At this point, we've finished creating the islands, but many of the islands are still deformed. You can switch to **edges** selection mode and follow the same steps as for the largest cylinder, but the islands that have a slightly more complex shape will not be aligned sufficiently. Let's use the [**Quadrify**](../../transform.md#quadrify-islands) operator, which aligns the islands created from quads into a square grid.
+5. At this point, we've finished creating the islands, but many of the islands are still deformed. You can switch to **edges** selection mode and follow the same steps as for the largest cylinder, but the islands that have a slightly more complex shape will not be aligned sufficiently. Let's use the [**Quadrify**](../../transform_sys/independent_ops.md#quadrify-islands) operator, which aligns the islands created from quads into a square grid.
     - Switch to **edges** selection mode.
-    - Select one lengthwise edge, and click the [**Quadrify**](../../transform.md#quadrify-islands) button in the [**Transform**](../../transform.md) panel.
+    - Select one lengthwise edge, and click the [**Quadrify**](../../transform_sys/independent_ops.md#quadrify-islands) button in the [**Transform**](../../transform_sys/panels_and_description.md) panel.
 
     ![](../../img/tutorial/emergency_light/cylindrical_quadrify_vert.gif)
 
@@ -246,18 +246,18 @@ It is convenient to divide this process into steps. Our model consists of severa
 
 2. This part has clear contours, correct seams, but some islands could be improved. The inner part is a cylinder that can be represented by one island instead of several. Let's create one island from the interior.
     - Select the entire interior except for the island, which is a polygon.
-    - Click [**Zen Unwrap**](../../unwrap.md#zen-unwrap).
+    - Click [**Zen Unwrap**](../../unwrap/zen_unwrap.md#zen-unwrap).
 
     ![](../../img/tutorial/emergency_light/external_select_internal_part.gif)
 
-3. The created island may look better if you align it into a square grid. Use the [**Quadrify**](../../transform.md#quadrify-islands) operator. Please note. If you have the **Use Selected Edges** option activated, then you'd better switch to the faces selection mode. Because in the edges selection mode, the [**Quadrify**](../../transform.md#quadrify-islands) operator will break the island along the selected edges. Also, note that **Zen UV** is always trying to help you, and in order to tell the operator which island you want to work with, you do not need to select the entire island. It is enough to select one or more polygons.
-    - Select one or more polygons in the island inside the current part, and then click [**Quadrify**](../../transform.md#quadrify-islands).
+3. The created island may look better if you align it into a square grid. Use the [**Quadrify**](../../transform_sys/independent_ops.md#quadrify-islands) operator. Please note. If you have the **Use Selected Edges** option activated, then you'd better switch to the faces selection mode. Because in the edges selection mode, the [**Quadrify**](../../transform_sys/independent_ops.md#quadrify-islands) operator will break the island along the selected edges. Also, note that **Zen UV** is always trying to help you, and in order to tell the operator which island you want to work with, you do not need to select the entire island. It is enough to select one or more polygons.
+    - Select one or more polygons in the island inside the current part, and then click [**Quadrify**](../../transform_sys/independent_ops.md#quadrify-islands).
 
     ![](../../img/tutorial/emergency_light/external_cover_quadrify.gif)
 
 4. The next island is too large, cyclic, and inverted. To get rid of these problems, divide it into several smaller islands.
     - Select the side edges.
-    - Click [**Zen Unwrap**](../../unwrap.md#zen-unwrap).
+    - Click [**Zen Unwrap**](../../unwrap/zen_unwrap.md#zen-unwrap).
 
     ![](../../img/tutorial/emergency_light/unwrap_by_side_cuts.gif)
 
@@ -283,20 +283,20 @@ It is convenient to divide this process into steps. Our model consists of severa
     ![](../../img/tutorial/emergency_light/small_parts_isolate.gif)
 
 2. The [**Mark by Ange**](../../unwrap.md#mark-by-angle) operator worked correctly on all small parts except for cylindrical parts. Let's fix it.
-    - Select one edge on each of the cylinders and click [**Zen Unwrap**](../../unwrap.md#zen-unwrap).
+    - Select one edge on each of the cylinders and click [**Zen Unwrap**](../../unwrap/zen_unwrap.md#zen-unwrap).
 
     ![](../../img/tutorial/emergency_light/small_parts_unwrap_cuts.gif)
 
 3. Go to the part that holds the wires together. It has been divided into several parts, which is not the optimal shape. It is enough to separate the ends and leave the rest as one island.
     - Select the entire part.
     - Deselect the ends.
-    - Run [**Zen Unwrap**](../../unwrap.md#zen-unwrap).
+    - Run [**Zen Unwrap**](../../unwrap/zen_unwrap.md#zen-unwrap).
 
     ![](../../img/tutorial/emergency_light/small_parts_unwrap_by_polygons.gif)
 
 4. We have created one island, but its mapping is still incorrect (Rectangles are distorted on Checker texture). We need to break and flatten the radial island.
     - Select the pair of edges where you want to split.
-    - Run [**Zen Unwrap**](../../unwrap.md#zen-unwrap).
+    - Run [**Zen Unwrap**](../../unwrap/zen_unwrap.md#zen-unwrap).
 
     ![](../../img/tutorial/emergency_light/small_parts_unwrap_to_get_quad.gif)
 
@@ -305,7 +305,7 @@ It is convenient to divide this process into steps. Our model consists of severa
 
     ![](../../img/tutorial/emergency_light/small_parts_quaded_islands.gif)
 
-    - Use the [**Quadrify**](../../transform.md#quadrify-islands) operator to align all the selected islands into a square grid.
+    - Use the [**Quadrify**](../../transform_sys/independent_ops.md#quadrify-islands) operator to align all the selected islands into a square grid.
 
     ![](../../img/tutorial/emergency_light/small_parts_quadrify_2.gif)
 
@@ -324,13 +324,13 @@ It is convenient to divide this process into steps. Our model consists of severa
 
     ![](../../img/tutorial/emergency_light/wires_isolate.gif)
 
-2. You can see that each wire is currently divided into several islands. Let's make sure that each wire is represented by a single island. Select all the polygons and click [**Zen Unwrap**](../../unwrap.md#zen-unwrap).
+2. You can see that each wire is currently divided into several islands. Let's make sure that each wire is represented by a single island. Select all the polygons and click [**Zen Unwrap**](../../unwrap/zen_unwrap.md#zen-unwrap).
 
     ![](../../img/tutorial/emergency_light/wires_unwrap.gif)
 
 3. We have a split where each wire represents one island, but the unwrapping is incorrect. Let's unwrap the wires in the fastest way.
     - Make sure that all islands are selected.
-    - Use the [**Quadrify**](../../transform.md#quadrify-islands) operator to align each island into an even grid.
+    - Use the [**Quadrify**](../../transform_sys/independent_ops.md#quadrify-islands) operator to align each island into an even grid.
 
     ![](../../img/tutorial/emergency_light/wires_quadrify.gif)
 
@@ -357,19 +357,19 @@ It is convenient to divide this process into steps. Our model consists of severa
 2. This part consists of several islands, which is not an optimal solution. Let's create a single island instead of multiple islands.
     - Select all the islands that belong to the handle.
     - Deselect the ends that look like hexagons.
-    - Click [**Zen Unwrap**](../../unwrap.md#zen-unwrap).
+    - Click [**Zen Unwrap**](../../unwrap/zen_unwrap.md#zen-unwrap).
 
     ![](../../img/tutorial/emergency_light/handle_create_one_island.gif)
 
 3. The island that was created as a result of the latter actions has an incorrect shape. Let's fix it.
     - Select the edges belonging to the hole and the edges belonging to the inner edge of the handle.
-    - Click [**Zen Unwrap**](../../unwrap.md#zen-unwrap)
+    - Click [**Zen Unwrap**](../../unwrap/zen_unwrap.md#zen-unwrap)
 
     ![](../../img/tutorial/emergency_light/handle_create_cuts.gif)
 
-4. Now we have an unwrapped island. The presence of triangular faces in it does not allow to use the [**Quadrify**](../../transform.md#quadrify-islands) operator for maximum smoothing. Let's take this island as an example of how the [**Reshape Island**](../../transform.md#reshape-island) operator works. The essence of [**Reshape Island**](../../transform.md#reshape-island) is that it aligns the selected edge loops into a straight line and relaxes the remaining vertices.
+4. Now we have an unwrapped island. The presence of triangular faces in it does not allow to use the [**Quadrify**](../../transform_sys/independent_ops.md#quadrify-islands) operator for maximum smoothing. Let's take this island as an example of how the [**Reshape Island**](../../transform_sys/independent_ops.md#reshape-island) operator works. The essence of [**Reshape Island**](../../transform_sys/independent_ops.md#reshape-island) is that it aligns the selected edge loops into a straight line and relaxes the remaining vertices.
     - Select all the edges that run lengthwise through the center of the island.
-    - Click [**Reshape Island**](../../transform.md#reshape-island) to align the island.
+    - Click [**Reshape Island**](../../transform_sys/independent_ops.md#reshape-island) to align the island.
 
     ![](../../img/tutorial/emergency_light/reshape_island.gif)
 

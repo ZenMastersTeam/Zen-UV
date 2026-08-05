@@ -1,7 +1,7 @@
 # Installation and update
 
 ## Installation
-Starting with [ZenUV 5.1](changelg/release_note_5.1.0.md), your favorite add-on has been upgraded to a Blender Extension - bringing smoother installation, and better integration with Blender’s official extension system.
+Starting with [ZenUV 5.1](changelog/release_note_5.1.0.md), your favorite add-on has been upgraded to a Blender Extension - bringing smoother installation, and better integration with Blender’s official extension system.
 
 ### Installing via Drag-and-Drop
 Blender supports a streamlined method for installing add-ons: simply dragging and dropping the `.zip` file directly into the interface. This approach is ideal for users who want a quick, no-menu setup.
@@ -156,7 +156,7 @@ If you drop a newer version of an add-on you already have installed, Blender wil
 3. [**Install Zen UV add-on**](installation.md#installation).
 4. Done!
 
-## [Zen Relax Application](transform.md#relax) Validity Check
+## [Zen Relax Application](transform_sys/independent_ops.md#relax) Validity Check
 The validity and correctness of Zen Relax application data file is essential to be working without errors.
 
 1. Open file `crc.md5` with any text editor
