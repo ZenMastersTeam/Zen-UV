@@ -84,9 +84,24 @@ This control is useful to manage lists of trims. In the center of its area you c
 #### Trims Sorting
 Sorting by standard Blender methods can be enabled in the trim list. It is also possible to sort trims by width and height. Enable the corresponding button in the list sorting dialog.
 
-| ![Trimsheet sorting](img/screen/trimsheet/trimsheet_sorting_by_size.png) |
-|---|
-| |
+| ![Trims sorting](img/screen/trimsheet/trimsheet_sorting_by_size.png) |
+| :---: |
+| Trims Sorting |
+
+#### Automatic Naming Patterns for Filtering
+
+As you name your trims, the addon automatically collects and generates naming prefix patterns that can be used to quickly filter the **Trim List** by category or group.
+
+| ![Auto Name Filtering](img/screen/trimsheet/trimsheet_auto_name_filtering.png) |
+| :---: |
+| *Fig. 1. Automatic naming pattern menu for filtering the Trim List* |
+
+**How It Works:**
+
+1. **Pattern Extraction:** The system automatically analyzes existing trim names in the list (e.g., `TopPart_01`, `Radial_01`, `Trim_19`) and isolates common base prefixes (`TopPart`, `Radial`, `Trim`).
+2. **Quick Filtering Menu (1):** Clicking the dropdown arrow next to the filter field opens a radio-button menu containing all detected name templates.
+3. **One-Click Filtering:** Selecting a template (such as `Radial`) instantly filters the Trim List to display only trims matching that specific naming prefix, streamlining navigation in complex trim sheets.
+
 
 ### Active Trim
 There is exactly one active trim in the curent trim sheet. It is highlighted in trim sheet UI list and surrounded with handles in trim editor
