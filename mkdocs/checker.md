@@ -352,6 +352,54 @@ Creates a Blender Image from the active Zen UV overlay.
 
 ---
 
+## Island List
+
+The **Island List** panel provides a centralized overview to inspect, locate, and manage UV islands across selected objects.
+
+| ![Island List in UI](img/screen/tex_checker/checker_island_list.png) |
+| :---: |
+| *Fig. 1. Island List panel in the UI* |
+
+### Panel Header & Refreshing
+
+- **Island Counter (`333`)** — Displays the total number of detected UV islands.
+- **Refresh List (↻)** — Manually recalculates and updates the island list entries.
+
+!!! Note
+    When the **Colored Islands** viewport overlay is enabled, the list updates automatically in real time as geometry or UVs are edited. When **Colored Islands** is turned off, click **Refresh List (↻)** to manually sync the list.
+
+---
+
+### List Entries
+
+Each entry in the list displays details for an individual UV island:
+
+- **Color Badge** — Viewport color assigned to the island, corresponding to the **Colored Islands** overlay.
+- **Island Name / Object Name** — Identification name of the island or its parent object.
+- **Area** — Calculated surface area of the island (e.g., `0.052 m²`).
+- **Polygon Count** — Total number of polygons (faces) contained within the island.
+- **Flipped Status (🦋)** — Visual indicator showing whether the UV island is inverted (flipped). This is a display-only indicator and does not trigger an action.
+
+---
+
+### Display Toggle Buttons
+
+The vertical toolbar on the right side of the list controls the visibility of data columns in the list entries (from top to bottom):
+
+1. **Toggle Polygon Count** — Show or hide the polygon count column.
+2. **Toggle Surface Area** — Show or hide the island surface area column.
+3. **Toggle Object Name** — Show or hide the name of the object to which the island belongs.
+4. **Toggle Flipped Status** — Show or hide the flipped island indicator icon (🦋).
+
+---
+
+### Operators
+
+- **Select Island** — Select the highlighted list item in the 2D/3D viewport.
+- **Deselect Island** — Deselect the highlighted island in the viewport.
+
+---
+
 ## Tools
 
 Tools for analyzing and finding Mesh errors that can negatively affect UV operations.
