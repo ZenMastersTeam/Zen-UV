@@ -464,7 +464,7 @@ The packing and stacking is completed. There are only a few final steps left to 
 Now the **Emergency light** model has correct and optimized UV coordinates and is ready for texture creation and normal map baking.
 
 !!! Warning
-    For correct baking, the UV area should not contain any stacks or overlaps. Only [Singles](../../stack.md/#singles) and [Primaries](../../stack.md/#primaries) should remain. All [Replicas](../../stack.md/#replicas) should be offset by 1.0. The [Unstack](../../stack.md/#unstack-operator) operator is a convenient way to do this. However, this process is not part of this tutorial, and this notice is simply a reminder.
+    For correct baking, the UV area should not contain any stacks or overlaps. Only [Singles](../../stack.md/#singles) and [Primaries](../../stack.md/#primaries) should remain. All [Replicas](../../stack.md/#replicas) should be offset by 1.0. The [Unstack](../../stack.md/#unstack) operator is a convenient way to do this. However, this process is not part of this tutorial, and this notice is simply a reminder.
 
 !!! tip
     You can manually adjust the correct display of **Sharp Edges**. To do this, follow the steps described below.

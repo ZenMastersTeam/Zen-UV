@@ -251,7 +251,7 @@ Display UVs in Object mode without entering Edit mode.
     ![](img/screen/tex_checker/checker_display_zenuv_stacks.png)
 
     Display and Select **Similar**, **Similar of Selection**, **Stacked**, **Manual Stacks**. 
-    You can read full information about [Stacks Display and its settings here](stack.md#stacks-display-and-select).
+    You can read full information about [Stacks Display and its settings here](stack.md#display-and-select).
 
 ### Export To Image
 
