@@ -169,7 +169,9 @@ Hotspot Mapping is a UV mapping method that compares the parameters of Islands a
 
 The classic way to use Hotspot technology, which includes unwrap and several preprocessing steps to obtain fast results.
 This operator can work with existing islands or create them based on the selected polygons.
-The Quick Hotspot operator is available only in the 3D View context, since the UV Editor lacks sharp edge information, making it impossible to generate predictable islands.
+
+!!! Note
+    The Quick Hotspot operator is available **only in the 3D View context**, since the UV Editor lacks sharp edge information, making it impossible to generate predictable islands.
 
 ![Quick Hotspot operator properties](img/screen/unwrap/quick_hotspot_op_prop.png)
 
@@ -181,6 +183,41 @@ The Quick Hotspot operator is available only in the 3D View context, since the U
 - **Inset** - Trim Inset.
 - **Matching Scale** - The value for manually adjusting the area matching scale. As a result, the islands are shifted to larger or smaller trims depending on the Matching Scale value. Visually, this appears as an improvement or degradation of texture quality, while technically it corresponds to an increase or decrease in Texel Density, respectively.
 - **Seed** - Seed of variable island distribution in similar trims.
+
+---
+
+## Fit to Selected Trims
+
+Unlike most operators in the Trim Sheet system, **Fit to Selected Trims** operates on all currently selected trims simultaneously rather than just the single active trim. 
+
+It randomly distributes all selected UV islands across the selected trims, ignoring dimensional or aspect ratio matching. You can adjust the **Seed** property to randomize the distribution pattern across the selected trims.
+
+!!! Properties
+    ![Fit to Selected Trims operator properties](img/screen/trimsheet/trim_fit_to_selected_trims_op_prop.png)
+
+- **Transform Faces** — Treat each selected face as an individual UV island.
+- **Mode** — Choose the target transformation mode:
+    - *Islands* — Transform whole UV islands.
+    - *Selection* — Transform the active mesh/UV selection.
+- **Order** — Processing sequence for selected elements:
+    - *One by one* — Process islands individually.
+    - *Overall* — Process the entire selection as a single unit.
+- **Fit** — Placement fitting behavior:
+    - *Exact* — Place islands strictly according to preset trim properties.
+    - *Tweak* — Place islands using preset trim properties while allowing override adjustments within the operator panel.
+- **Automatic Unwrap** — Unwrap target islands before fitting them to trims.
+- **Fit Axis** — Primary orientation axis used for fitting:
+    - *U* — Align along the U axis.
+    - *V* — Align along the V axis.
+    - *Min* — Automatically select the axis with the shortest length.
+    - *Max* — Automatically select the axis with the longest length.
+    - *Automatic* — Automatically detect the optimal axis for full dimensional compliance.
+- **Inset** — Margin offset applied inside trim boundaries.
+- **Keep proportion** — Maintain original aspect ratio proportions during transformation.
+- **Rotation** — Orientation alignment method:
+    - *Match Trim* — Rotate processed islands to match the orientation of the target trim.
+- **Align To** — Pivot point alignment location for transformed islands (e.g., *Center*).
+- **Seed** — Randomization seed value controlling island distribution across selected trims.
 
 ---
 
