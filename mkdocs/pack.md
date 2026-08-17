@@ -82,7 +82,7 @@ Get Islands UV Coverage by given settings.
 Zen UV supports three Pack engines:
 
 - **Blender Pack**
-- [**UV Packmaster 2, 3**](https://uvpackmaster.com)
+- [**UV Packmaster**](https://uvpackmaster.com)
 - [**UV Packer**](https://www.uv-packer.com/)
 
 !!! tip
@@ -167,11 +167,24 @@ More information you can find [**here**.](https://uvpackmaster.com/doc3/blender/
     Available only for UVPackmaster Pack Engine.
 
 ---
-#### Pack in Trim
-Pack Islands into Trim.
+#### Pack To
+
+Determines the target destination boundary where UV islands will be organized during a packing operation. 
+
+Instead of forcing all UVs into the default `0–1` UV space, **Pack To** allows you to route islands into specific sub-regions, such as inside or outside Trim Sheet frames, or into a targeted UDIM tile. This is essential for workflows that combine trim sheets with unique UVs, preventing packed geometry from overlapping dedicated trim regions or sending un-trimmed details directly into specific tile spaces.
 
 !!! Note
     Available only for Blender and UVPackmaster Pack Engine.
+
+| ![Pack To Dropdown Menu](img/screen/pack/pack_to_dropdown.png) |
+| :---: |
+| *Fig. 1. Pack To dropdown menu options* |
+
+- **Pack To** — Target region selector for UV packing operations:
+    - **Default** — Standard UV layout packing within the default `0–1` UV space.
+    - **Inside Trim** — Restricts UV islands strictly within the boundary of the active Trim.
+    - **Outside Trims** — Places UV islands into the remaining space outside active and selected Trim region(s), protecting existing trim assignments from overlaps.
+    - **Active UDIM** — Packs islands into the active UDIM image tile or the UDIM grid tile where the 2D Cursor is currently located.
 
 ![Pack_In_Trim](img/screen/pack/pack_in_trim.gif)
 
