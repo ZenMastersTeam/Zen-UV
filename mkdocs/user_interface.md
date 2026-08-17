@@ -55,6 +55,20 @@ Reminds you that a new version has been released and you can update the addon.
 ![update reminder](img/screen/user_interface/update_reminder.png)
 
 ---
+
+### Blender Version Warning
+
+Appears at the top of the panel when Zen UV detects that it is running on an untested or experimental Blender version (such as Alpha, Beta, or Daily Builds).
+
+| ![Blender Version Warning](img/screen/user_interface/ui_check_max_bl_version.png) |
+| :---: |
+| *Fig. 1. Blender Version Compatibility Warning banner* |
+
+* **Triggers:** Running Zen UV on a Blender version higher than the supported range.
+* **Reason:** Blender's Python API frequently undergoes breaking changes during pre-release stages. Official Zen UV updates supporting new Blender versions are published alongside stable Blender releases.
+* **Dismissing:** Click the close button (**✕**) in the top-right corner of the banner to dismiss the warning for the current Blender session.
+
+---
 ## Pie Menu
 
 ![Pie Menu](img/gifs/user_interface/pie_menu.gif)
