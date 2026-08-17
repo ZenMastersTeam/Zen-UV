@@ -256,22 +256,26 @@ Distribute vertices along the line
 
 ---
 
-#### Arrange
+#### Arrange Islands
 
-Arrange selected islands
+Organizes selected UV islands into a structured grid layout with precise control over row/column density, container bounds, scaling, and distribution origins.
+
+This operator is ideal for organizing repeating modular assets, atlas components, or tidying up scattered UV islands into predictable array layouts.
 
 !!! Properties
-    ![](../img/screen/transform/arrange_properties.png)
+    ![Arrange Islands Operator Properties](../img/screen/transform/arrange_islands_op_prop.png)
 
-- **Mode** - Input mode
-    - *Advanced*
-    - *Simplified*
-- **Quant U** - Divider for UV Area in U direction
-- **Quant V** - Divider for UV Area in V direction
-- **Limit** - Distribution limit
-- **Position** - Offset for current position
-- **Randomize** - Change transformation in the set ranges by random value
-- **Scale** - Changes the scale of each island separately
+- **Grid Settings (U / V)** — Sets the total number of columns (**U**) and rows (**V**) in the arrangement grid.
+- **Area Size (X / Y)** — Defines the overall width and height dimensions of the grid container (e.g., `1.0` x `1.0` corresponds to a single UV tile).
+- **Start From** — Defines the origin reference point from which the grid array is constructed:
+    - *In Place* — Builds the grid starting from the current location of the primary UV island.
+    - *UV Area* — Anchors the grid start at the `(0, 0)` origin coordinate of the UV space.
+    - *Cursor* — Places the starting origin directly at the 2D UV Cursor position.
+- **Offset (X / Y)** — Shifts the entire grid layout along the U and V axes.
+- **Scale Global** — Scales the entire grid, proportionally adjusting both island sizes and inter-island spacing.
+- **Scale Island** — Scales each island individually around its local origin without changing grid cell positions.
+- **Randomize** — Adds random positional jitter to islands within their grid placements.
+- **Seed** — Randomization seed value controlling island distribution jitter when **Randomize** is enabled.
 
 |![arrange example](../img/gifs/trasnform_operators/arange_islands_example.gif)|
 |---|
