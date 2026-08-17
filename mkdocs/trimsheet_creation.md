@@ -160,12 +160,43 @@ It is also possible to select trim by `LMB` in the viewport by activating select
     - *Ignore Color* - Does not duplicate trim color settings
     - *Clear Selection* - Clear selection from source trims after duplicating
 
-### Menu
-A menu with operators e.g. copy paste, or operations on all items.
+---
+### Trim List Utility Menu
 
-!!! Menu
-    ![](img/screen/trimsheet/trim_menu.png)
+Provides access to clipboard operations, batch renaming tools, import/export functions, and management utilities for the active Trim Sheet. Access this menu by clicking the specials drop-down arrow button located on the right toolbar of the **Trim List**.
 
+| ![Trim List Utility Menu](img/screen/trimsheet/trim_menu.png) |
+| :---: |
+| *Fig. 1. Trim List utility menu* |
+
+- **[Copy](#copy-trims-to-clipboard) / [Paste](#paste-trims-from-clipboard)** — Copy selected trim configurations to the clipboard and paste them into another Trim Sheet or session.
+- **[Batch Rename](#batch-rename)** — Rename multiple trims at once using structured naming patterns.
+- **[Add Trims](#add-trim-grid)** — Sub-menu containing automated and bulk trim creation utilities.
+      - **[Add Trim Grid](#add-trim-grid)** - Create Grid of Trims inside active, selected Trims, from Zero coordinates or 2D cursor position
+      - **[Add Trim UDIM](#add-trim-udim)** - Creates trims in positions and with UDIM tile sizes
+      - **[Add Trim By Custom Region](#add)** - Add trim by uv custom region coordinates. Requires uv custom region to be enabled and set
+      - **Add Trims From Color Masks** - Create trims from image color masks
+
+- **Select Trims** — Sub-menu with tools to select trims based on specific conditions or properties.
+    - **Select Trims** - Select, deselect all trims or invert selecton
+    - **Select Trims By Size** - Select trims by their width, height, or a combination of both
+
+- **Import / Export** — Import or export trim definitions, presets, and layout maps.
+    - **Import SVG** - Load trimsheet from SVG
+    - **Import DECALmachine Trims** - Import trims from Decalmachine trim sheet
+    
+    - **Export SVG** - Save trimsheet to SVG
+    - **Export PNG** - Save trimsheet to PNG
+    - **Export TGA** - Save trimsheet to TGA
+    - **Export BMP** - Save trimsheet to BMP
+
+- **Set Trim World Size** — Calculate and apply physical world-space scale dimensions to selected trims.
+- **Select Island by Trim Name** — Select Islands inside Trim defined by name.
+- **Trim Bounds by Custom Region / Custom Region by Trim Bounds** — Synchronize trim boundary dimensions with defined custom UV regions.
+- **Frame Active Trim / Frame Selected Trims** — Frame and focus the UV Editor viewport on the active or selected trim boundaries.
+- **Clear Trimsheet Preview Folder** — Clear cached preview thumbnail images to clean up storage or refresh broken previews.
+
+---
 #### Copy Trims to Clipboard
 
 Copy [active](#active-trim), [selected](#selected-trims) or [all trims](#trims-list) to clipboard
@@ -177,6 +208,7 @@ Copy [active](#active-trim), [selected](#selected-trims) or [all trims](#trims-l
 - *Selected* - Copy selected trims.
 - *All* - Copy all trims in the trimsheet.
 
+---
 #### Paste Trims from Clipboard
 Paste copied trims from clipboard.
 
@@ -187,6 +219,7 @@ Paste copied trims from clipboard.
 - *Add* - Add trims to the end of trim sheet
 - *Replace* - Add new trims and replace trims with the same name
 
+---
 #### Batch Rename
 Can rename many trims at once. This uses a pop-up dialog with operations and their options to change the name. These actions are applied in order, from first to last in a trim sheet.
 
@@ -203,7 +236,7 @@ Can rename many trims at once. This uses a pop-up dialog with operations and the
 - **Counter** - Integer value will be added to the end of the name.
 - **Start from** - If Counter property is used, integer value will be started from this value.
 
-
+---
 #### Add Trim Grid
 Create grid of trims inside active, selected trims, from zero coordinates or 2D cursor position.
 
@@ -222,6 +255,7 @@ Create grid of trims inside active, selected trims, from zero coordinates or 2D 
 - **Margin** - The gap between Trims.
 - **Remove Template** - Delete the Trim that served as a template.
 
+---
 #### Add Trim UDIM
 Creates trims in positions and with UDIM tile sizes.
 
@@ -236,6 +270,17 @@ Creates trims in positions and with UDIM tile sizes.
 - **Udims End** - Udims range end.
 - **Trim Count Limit** - Limit the number of trims.
 
+---
+#### Add Trim by Custom Region
+
+Creates a new trim entry using the precise coordinates and dimensions of the active UV **Custom Region**.
+
+- **Prerequisites:** Requires the **Custom Region** tool (`Ctrl + Alt + B`) to be enabled and set in the UV Editor.
+- **Workflow:** Once a custom rectangular region is drawn in the UV viewport, running this operator automatically converts its bounding box into a corresponding Trim entry in the Trim List.
+
+For more details on **Custom Regions** and how they interact with trims, see [Trim Bounds by Custom Region](#trim-bounds-by-custom-region).
+
+---
 #### Add Trims From Color Masks
 Create trims from a defined image containing color mask data.
 
@@ -248,21 +293,45 @@ Create trims from a defined image containing color mask data.
     - *Multicolor* - Image contains multiple masks with the same color.
 - **Color Masks Limit** - How many unique colors could be processed in image.
 
+---
 #### Add Trims From Zen Sets
 Create trims from Zen Sets groups mesh elements with keeping its names. Available only if Zen Sets is installed.
 
 #### Set Trim World Size
 Set trim 'World Size' property based on texture size. Works on selected trims.
 
+---
+#### Select Islands by Trim Name
+
+Select Islands inside Trim defined by name
+
+---
+#### Trim Bounds by Custom Region
+
+| ![Custom Region and Trim bounds](img/screen/trimsheet/trim_to_custom_region_screen.png) |
+| :---: |
+| *Fig. 1. Custom Region and Trim bounds* |
+
+Sets the trim size and position to match the UV Custom Region
+
+---
+#### Custom Region by Trim Bounds
+
+Sets UV Custom Region size and position to match the active trim
+
+---
 #### Frame Trim
 Moves view to active or selected trims center in UV editor.
 
+---
 #### Clear Trimshet Preview Folder
 Clear folder where trimsheet preview temporary icons are stored.
 
+---
 #### Move
 Moves the selected item up/down one position. (up/down arrow icon).
 
+---
 #### Delete All
 Deletes all trims in the trim sheet.
 
@@ -271,27 +340,33 @@ Deletes all trims in the trim sheet.
 !!! Presets
     ![](img/screen/trimsheet/trim_presets.png)
 
+---
 ### Preset Selector
 A list of available presets. A selection will override the included properties.
 
 !!! Notice
     If name in preset selector is marked with asterix then it shows name of category and active preset is not selected
 
+---
 ### Add
 New presets can be added based on a predefined set of properties, which will be saved for later reuse. A pop-up opens where you can set a name after which you can select it from the list and in some cases additional settings.
 
+---
 ### Remove
 Deletes the selected preset.
 
+---
 ### Open Presets Folder
 You can override the default presets folder with your own path
 
+---
 ## Trim Settings
 Trim settings property inspector shows settings of the active trim
 
 !!! Dimensions
     ![](img/screen/trimsheet/trim_axis.png)
 
+---
 ### Trim Units
 By default trim units are in UV points based on values from 0 to 1, but it is possible to switch to image pixels depending on image size.
 
@@ -314,31 +389,40 @@ By default trim units are in UV points based on values from 0 to 1, but it is po
 - **Max** - The maximum length axis is automatically determined
 - **Automatic** - Automatically detected axis for full dimensional compliance
 
+---
 ### Inset
 Trim inset
 
+---
 ### Keep Proportion
 Keep trim proportions while transforming
 
+---
 ### Match Rotation
 Match trim rotation
 
+---
 ### Align To
 Align to remembered directions in Fit, Align operations
 
+---
 ### Normal
 
 An imaginary normal representing Trim's orientation if it were in 3D space
 
+---
 ### World Size
 Width and height of trim in [UV world size calculation units](#units)
 
+---
 ### Units
 UV world size calculation units
 
+---
 ### Tags
 Trim tags
 
+---
 ### How to apply same settings to multiple trims?
 | ![](img/screen/trimsheet/trim_group_settings.png) |
 |---|
@@ -347,6 +431,7 @@ Trim tags
 1. Select 2 or more trims
 2. Press Apply button
 
+---
 #### Check the equality of properties in selected trims
 
 | | |
@@ -354,14 +439,17 @@ Trim tags
 | ![](img/screen/trimsheet/trim_prop_not_active.png) | Properties are not equal |
 | ![](img/screen/trimsheet/trim_prop_active.png) | Properties are equal |
 
+---
 ## Display Trims
 Trims can be displayed in viewport with special gizmo layer
 
+---
 ### Trims Display Overlay in UV Image Editor
 | ![](img/screen/trimsheet/trim_display.png) |
 |---|
 | |
 
+---
 ### Trims Display Polygon Overlay in 3D Viewport
 !!! Note
     Trims display in 3D Viewport is enabled only if Zen UV Tool is active and active object has active polygon
@@ -370,25 +458,31 @@ Trims can be displayed in viewport with special gizmo layer
 |---|
 | |
 
+---
 ### Trims Display Overlay Widget in 3D Viewport
 Trims can be displayed in overlay widget. To activate it you need to press gizmo button in the right side of 3D viewport
 
+---
 | ![](img/screen/trimsheet/trim_display_widget.png) |
 |---|
 | |
 
+---
 #### Overlay Widget Locking Options
 Trims display overlay widget can be moved by `Shift + Middle Mouse Button` and scaled by `Mouse Wheel Up|Down`. And its position can be locked in the settings
 
+---
 | ![](img/screen/trimsheet/trim_display_widget_locked.png) |
 |---|
 | |
 
+---
 ## Transform Trims
 | ![](img/screen/trimsheet/trim_transform.png) |
 |---|
 | |
 
+---
 ### Align Trims
 Determines how selected trims will be aligned.
 
@@ -398,6 +492,7 @@ Use Align to align selected trims to the top, bottom, left, or right of an activ
 |---|
 | |
 
+---
 ### Crop Trims
 Use Crop to crop selected trims or all trims by UV area bounds
 
@@ -405,6 +500,7 @@ Use Crop to crop selected trims or all trims by UV area bounds
 |---|
 | |
 
+---
 ### Adjust Trims
 Set the same width or height of the selected trim. You can select to use minimum or maximum value.
 
@@ -412,6 +508,7 @@ Set the same width or height of the selected trim. You can select to use minimum
 |---|
 | |
 
+---
 ### Distribute Trims
 Use Distribute to distribute selected trims at equal distances between each other, starting distribution as is or from active trim, or from UV area bounds
 

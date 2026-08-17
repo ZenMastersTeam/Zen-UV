@@ -333,5 +333,5 @@ Align selected islands or selection
 ![](../img/icons/transform-distribute.png)
 
 - [**Distribute and Sort**](unified_transform_sys.md#distribute-and-sort) - Distributes and sorts selected islands
-- [**Arrange**](unified_transform_sys.md#arrange) - Arrange selected islands
+- [**Arrange**](unified_transform_sys.md#arrange-islands) - Arrange selected islands
 - [**Distribute Vertices**](unified_transform_sys.md#distribute-vertices) - Distribute vertices along the line

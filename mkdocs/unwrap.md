@@ -5,6 +5,22 @@
      |---|---|  
      | ![3D Viewport Panel](img/screen/unwrap/unwrap_panel_3d.png) | ![UV Editor Panel](img/screen/unwrap/unwrap_panel_uv.png) | 
 
+---
+### Global Mark Settings
+
+Controls global edge-marking behavior across all operators in the Mark System.
+
+Enabling global settings provides centralized control over edge flags, ensuring tools throughout the Mark System apply Seams and Sharp edges consistently without needing to adjust settings on individual operators.
+
+| ![Global Mark Settings](img/screen/unwrap/unwrap_global_mark_settings.png) |
+| :---: |
+| *Fig. 1. Global Mark Settings menu* |
+
+- **Use Global Mark Settings** — Overrides individual tool settings with these global defaults. When disabled, each Mark System operator uses its own independent configuration.
+- **Mark Seams** — Automatically marks target edges as UV Seams during marking operations.
+- **Mark Sharp Edges** — Automatically marks target edges as Sharp Edges during marking operations.
+
+---
 ## Unwrap Inplace
 
 Unwrap Islands and Faces keeping their Size, Orientation and Location in UV Space.
@@ -77,13 +93,6 @@ Apply all geometry modifications before resetting for a clean unwrap
 
 Mark edges as Seams and/or Sharp edges by Angle.
 
-!!! Global Mark Settings
-    ![](img/screen/unwrap/mark_by_angle_prefs.png)
-
-    - **Use Global Mark Settings**. In this mode, all the operators from the Mark System use the settings below. If off, every operator uses its own settings.
-    - **Mark Seams**. Automatically assign Seams
-    - **Mark Sharp Edges**. Automatically assign Sharp edges
-
 !!! Tip
     This operator supports the ability to [save default properties](user_interface.md/#save-as-default-operator-properties).
 
@@ -150,6 +159,29 @@ Instead of **Replacing** existing marked Seams you can **Add** them.
 Holding `Shift` you can select both directions and flip Seams along the selected Axis and direction.
 
 ![](img/screen/unwrap/unwrap_mirror_3.gif)
+
+---
+## Auto Seams & Unwrap
+
+Partitions mesh geometry into logical topological charts based on surface planarity, automatically places UV seams along chart boundaries, and optionally unwraps the resulting UV islands in a single pass.
+
+This operator provides an automated unwrapping pipeline suitable for both organic meshes and hard-surface models, eliminating manual seam placement while minimizing UV area distortion and preventing micro-island fragmentation.
+
+!!! Properties
+    ![Auto Seams & Unwrap Operator Properties](img/screen/unwrap/auto_seams_op_prop.png)
+
+- **Mode** — Quick presets tailored for standard surface workflows:
+    - *Hard Surface* — Sets **Quality** to `0.5` and **Hard Edge Angle** to `30°` for mechanical objects and hard-surface models with bevels.
+    - *Organic* — Sets **Quality** to `0.32` and **Hard Edge Angle** to `0°` (disabled) for character models, creatures, and smooth organic surfaces.
+    - *Custom* — Switches to manual control, allowing custom property adjustments.
+- **Hard Edge Angle** — Angle threshold at which sharp edges are strictly marked as UV seams. Setting this to `0°` disables hard-edge seam splitting for organic geometry.
+- **Quality** — Controls chart merging aggressiveness:
+    - *Lower values* — Produce more UV islands with sharper, highly accurate topological boundaries.
+    - *Higher values* — Merge charts more aggressively, producing fewer total islands at the expense of higher UV stretch.
+- **Boundary Smoothing** — Aggressiveness of chart boundary contour smoothing after region merging. Helps create cleaner, less jagged UV seam lines.
+- **Min Island Faces** — Minimum face count required for an island. Smaller chart fragments are absorbed into surrounding neighbor charts before seam generation to prevent micro-islands.
+- **Unwrap** — Enables automatic execution of the standard UV Unwrap pass immediately after seams are placed.
+- **UV Unwrap Panel** — Embedded Blender UV Unwrap settings (e.g., **Method**, **Margin**, **Correct Aspect**, **Iterations**) applied when **Unwrap** is active.
 
 ---
 ## Smooth by Sharp

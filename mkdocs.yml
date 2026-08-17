@@ -16,9 +16,9 @@ nav:
         - Advanced UV Maps: adv_uv-maps.md
         - Seam Groups: seam_groups.md
         - Unwrap:
+            - Unwrap: unwrap.md
             - Zen Unwrap: unwrap/zen_unwrap.md
             - Auto Unwrap: unwrap/auto_unwrap.md
-            - Unwrap: unwrap.md
         - Select: select.md
         - Transform:
             - Overview: transform_sys/panels_and_description.md
