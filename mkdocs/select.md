@@ -8,7 +8,9 @@
 ---
 ## Table of contents
 
-- [<u>**Islands**</u>](#islands)
+- [Select](#select)
+  - [Table of contents](#table-of-contents)
+  - [Islands](#islands)
     - [Select Islands](#select-islands)
     - [Select Overlapped](#select-overlapped)
     - [Select Flipped](#select-flipped)
@@ -18,8 +20,7 @@
     - [Select in Tile](#select-in-tile)
     - [Select Islands By Direction](#select-islands-by-direction)
     - [Filter Islands by Property](#filter-islands-by-property)
-
-- [<u>**Faces**</u>](#faces)
+  - [Faces](#faces)
     - [Select Stretched Faces](#select-stretched-faces)
     - [Select Self-Intersecting Faces](#select-self-intersecting-faces)
     - [Select by UV Value](#select-by-uv-value)
@@ -28,9 +29,8 @@
     - [Select Faces Less than Pixel](#select-faces-less-than-pixel)
     - [Select Faces By Normal](#select-faces-by-normal)
     - [Select Cylinder Faces](#select-cylinder-faces)
-    - [Select Cylinder Cap](#select-cylinder-cap)        
-
-- [<u>**Edges**</u>](#edges)
+    - [Select Cylinder Cap](#select-cylinder-cap)
+  - [Edges](#edges)
     - [Select Seam](#select-seam)
     - [Select Sharp](#select-sharp)
     - [Select UV Borders](#select-uv-borders)
@@ -39,12 +39,10 @@
     - [Select Edges by Condition](#select-edges-by-condition)
     - [Select Edges By Direction](#select-edges-by-direction)
     - [Select Material Boundary Edges](#select-material-boundary-edges)
-
-- [<u>**Loops**</u>](#loops)
+  - [Loops](#loops)
     - [Zen Sync](#zen-sync)
     - [Select Linked Loops](#select-linked-loops)
-
-- [<u>**Misc**</u>](#misc)
+  - [Misc](#misc)
     - [Select Int. Loop](#select-int-loop)
     - [Select Half](#select-half)
     - [Isolate Islands (Toggle)](#isolate-islands-toggle)
@@ -199,25 +197,27 @@ Filters islands based on specific properties.
 
 ### Select Stretched Faces
 
-Selects faces with stretched UV coordinates
+Selects mesh faces or whole islands based on UV distortion metrics.
 
-Checks each polygon area and compares it with the corresponding area in UV space.  
-If the area exceeds the specified threshold, the polygon will be selected.
+The operator evaluates each polygon by comparing its 3D mesh properties (area or interior angles) against its corresponding layout in UV space. If the distortion exceeds the defined threshold, the affected elements are immediately selected, allowing you to quickly isolate problematic areas for relaxed unwrap, pin adjustments, or seamless cuts.
 
-!!! Tip  
-    This operator works using the **Overlay → UV Stretch → Area** algorithm.  
-    This means you can easily select what you see or what you might have missed.  
+!!! Tip
+    This operator seamlessly integrates with Blender's native display modes (**Overlay → UV Stretch → Area / Angle**). This means you can visually identify distorted regions directly in the UV Editor viewport and instantly select exactly what you see.
     ![Select Stretched Faces Display](img/screen/select/select_stretched_faces_display.png)
 
 !!! Properties
     ![Select Stretched Faces](img/screen/select/select_stretched_faces_op_prop.png)
 
-- **Influence** - Defines the selection target.
-    - *Face* - Selects individual stretched faces.
-    - *Island* - Selects entire islands containing stretched faces.
-- **Clear Selection** - Clears the initial selection before applying the operation.
-- **Threshold** - Defines the minimum stretch factor required for a face to be selected.
-- **N-gons Only** - Selects only n-gons (faces with more than four edges).
+- **Clear Selection** — Deselects all currently selected elements before performing the operation.
+- **Stretch Type** — Algorithm used to calculate UV distortion:
+    - *Auto* — Automatically uses the current mode active in Blender's UV Overlay settings.
+    - *Angle* — Evaluates distortion based on angular deviations between 3D space and UV space.
+    - *Area* — Evaluates distortion based on relative surface area differences between 3D faces and UV faces.
+- **Influence** — Selection scope target:
+    - *Face* — Selects only the specific individual faces exceeding the threshold.
+    - *Island* — Selects entire UV islands containing any stretched faces.
+- **Threshold** — Minimum distortion value required to trigger selection.
+- **N-gons Only** — Limits the selection exclusively to n-gons (polygons with more than 4 vertices).
 
 ---
 ### Select Self-Intersecting Faces
