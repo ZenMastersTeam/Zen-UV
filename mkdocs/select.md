@@ -19,6 +19,7 @@
     - [Select Similar](#select-similar)
     - [Select in Tile](#select-in-tile)
     - [Select Islands By Direction](#select-islands-by-direction)
+    - [Filter Islands by Geometry](#filter-islands-by-geometry)
     - [Filter Islands by Property](#filter-islands-by-property)
   - [Faces](#faces)
     - [Select Stretched Faces](#select-stretched-faces)
@@ -28,6 +29,7 @@
     - [Select Zero Area Faces](#select-zero-area-faces)
     - [Select Faces Less than Pixel](#select-faces-less-than-pixel)
     - [Select Faces By Normal](#select-faces-by-normal)
+    - [Select Non-Planar Faces](#select-non-planar-faces)
     - [Select Cylinder Faces](#select-cylinder-faces)
     - [Select Cylinder Cap](#select-cylinder-cap)
   - [Edges](#edges)
@@ -163,6 +165,27 @@ Select island by direction.
     - *Vertical* - Vertically oriented islands
     - *Radial* - Islands that are shaped like a circle
     - *Not Aligned* - Islands that are not aligned with the axes
+
+---
+
+### Filter Islands by Geometry
+
+Selects UV islands based on their topological structure, such as face count or polygon vertex counts.
+
+This operator allows you to quickly isolate specific types of geometry across your model, such as single-face triangles, quads, n-gons, or multi-face complex islands. It is particularly useful for cleanup tasks, quality control, and finding stray or unintended faces before packing or baking.
+
+!!! Properties
+    ![Filter Islands by Geometry Operator Properties](img/screen/select/filter_islands_by_geometry_op_prop.png)
+
+- **Clear Selection** — Clears the existing selection before executing the operator.
+- **Filter Mode** — Select a preset filtering configuration or switch to manual setup:
+    - *Manual* — Allows custom configuration of Face and Vertex filtering parameters.
+    - *Triangles* — Selects single-face islands composed of exactly 3 vertices (Tris).
+    - *Quads* — Selects single-face islands composed of exactly 4 vertices (Quads).
+    - *N-gons* — Selects single-face islands composed of more than 4 vertices (N-gons).
+    - *Multi-face* — Selects complex islands containing more than 1 face.
+- **Face Filter** — Comparison condition (`=`, `>`, `<`, `>=`, `<=`) and target **Face Count** to evaluate per island.
+- **Vertex Filter (for single face)** — Comparison condition (`=`, `>`, `<`, `>=`, `<=`) and target **Vert Count** used to evaluate islands that consist of a single polygon.
 
 ---
 ### Filter Islands by Property
@@ -311,6 +334,20 @@ This way, you can select polygons that are "not visible" from the position of th
         - *All* - Selects all polygons that match the reference normal.
     - **Reverse Ref. Normal** - Reverses the reference normal direction.
     - **Threshold** - Controls the accuracy of normal alignment (acts as an angular tolerance).
+
+---
+### Select Non-Planar Faces
+
+Selects mesh faces where internal tessellated triangles deviate from the overall face normal (such as bent quads or distorted n-gons).
+
+This operator helps identify non-flat geometry across the model that could cause unwanted shading artifacts, improper UV unwrapping, or distortion during baking.
+
+!!! Properties
+    ![Select Non-Planar Faces Operator Properties](img/screen/select/select_non_planar_faces_op_prop.png)
+
+- **Clear Selection** — Clears the existing selection before executing the operation.
+- **Angle Threshold** — Tolerance angle (in degrees) for the planarity check. Faces with internal triangular deviations exceeding this angle are selected.
+- **N-gons Only** — Limits the selection exclusively to n-gons (polygons with more than 4 edges).
 
 ---
 ### Select Cylinder Faces
