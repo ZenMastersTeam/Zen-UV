@@ -1,5 +1,9 @@
 # Independent Transform Operators
 
+| ![Independent Transform Operators Panel](img/screen/trimsheet/panel_independent_ops.png)|
+| :---: |
+| *Fig. 1. Independent Transform Operators Panel* |
+
 ## Relax
 ![](../img/icons/relax-1_32.png) Allows to reduce stretching of the faces of the island. Uses three algorithms
 
@@ -31,11 +35,12 @@ Rotate Islands the way they are oriented on the Models. Each method (Organic/Har
 
 | ![World Orient](../img/gifs/trasnform_operators/TrWorldOrientExample.gif) |
 | --- |
-| World Orient |
+| *World Orient* |
 
 !!! Properties
      ![world orient properties](../img/screen/transform/world_orient_props.png)
-- **Further orient** - Additional turn. Allows you to turn the island to a horizontal or vertical if the island is located at an angle in the model.
+
+- **Further orient** - Applies an additional axis alignment pass after the main rotation. This turns islands horizontally or vertically if they remain positioned at an angle relative to the model coordinate axes.
 
 ---
 ## Randomize
