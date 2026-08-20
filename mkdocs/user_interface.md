@@ -1,62 +1,80 @@
 # User Interface
 
-## Combo Panel
+## Combo Panel & Multi-Panel Interface
 
-Combo Panel is a place where you can find all Zen UV operators.
-Operators are divided into thematic sections on the left side.
+The **Combo Panel** is the central hub containing all Zen UV operators, organized into thematic sections along the left side. It is accessible from the Sidebar (N-Panel), the Properties editor (when the Zen UV Transform Tool is active), or via the global Pop-up Menu (`Shift + U`).
 
-The set of operators in the Combo Panel may vary depending on the context. 
-Some operators do not work in UV Editor and present in 3D Viewport only.
+| ![Combo Panel Overview](img/gifs/user_interface/compactui_1.gif) |
+| :---: |
+| *Fig. 1. Combo Panel Overview* |
 
-It's on the N-Panel and you can [**customize the appearance of panels in Preferences**](preferences.md#panels).
+> **Note:** The available set of operators in the Combo Panel automatically adapts based on context. Certain tools are designed exclusively for the 3D Viewport and will not appear in the UV Editor. You can further [customize panel appearances in Preferences](preferences.md#panels).
 
-!!! tip
-    Watch the video explaining how **Combo Panels** works.
+---
+
+### Multi-Panel Workflows
+
+You can open, stack, and pin multiple subpanels simultaneously to customize your workspace layout for specific UV editing tasks.
+
+| Action | Shortcut / Interaction | Description |
+| :--- | :--- | :--- |
+| **Switch Subpanel** | `LMB` on section icon | Switches the view to the selected subpanel. |
+| **Open Multiple** | `Shift + LMB` on section icons | Opens and appends multiple subpanels at the same time. |
+| **Pin Subpanel** | `Ctrl + LMB` or click **Pin** icon | Locks the selected subpanel open, keeping it visible when switching between other tabs. |
+
+| ![Open Multiply Panels](img/gifs/user_interface/compactui_2.gif) | ![Pin Some Panels](img/gifs/user_interface/compactui_3.gif) |
+| :---: | :---: |
+| *Fig. 2. Open Multiply Panels* | *Fig. 3. Pin Some Panels* |
+
+---
+
+### Panel Status Indicators
+
+The visual state of each subpanel is color-coded on its icon for quick identification:
+
+* **Pinned (Red):** The panel is locked open. The Pin icon next to its title is filled.
+* **Active (Cyan / Blue):** The panel is currently open and active, but not locked. Its Pin icon shows an unfilled outline.
+* **Inactive (Uncolored):** The panel is closed.
+
+---
+
+### Access & Interface Modes
+
+#### N-Panel & Pop-Up Menu
+The main Combo Panel resides in the Sidebar (N-Panel), but can also be summoned anywhere under the mouse cursor using the default shortcut `Shift + U`.
+
+| Pop-Up Combo Panel (`Shift + U`) |
+| :---: |
+| ![Popup Combo Panel](img/gifs/user_interface/compactui_8.gif) |
+
+#### Properties Editor Integration
+When the **Zen UV Transform Tool** is active, the Combo Panel also automatically displays inside the Blender Properties Editor.
+
+| Combo Panel in Properties |
+| :---: |
+| ![Combo Panel in Properties](img/gifs/user_interface/compactui_6.gif) |
+
+---
+
+!!! tip "Video Overview"
+    Watch a brief video explanation on how to navigate and manage **Combo Panels**:
 
     <div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%;">
     <iframe src="https://www.youtube.com/embed/f9meGzMGx2k?start=26&end=142" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen="" seamless="" frameborder="0"></iframe>
     </div>
 
-![Combo Panel](img/gifs/user_interface/compactui_1.gif)
-
-### Multiple Panels
-
-Open multiple panels with `SHIFT + LMB`.
-
-![Combo Panel](img/gifs/user_interface/compactui_2.gif)
-
-### Panels Pinning
-
-Pin some panels with `CTRL + LMB`
-
-![Combo Panel](img/gifs/user_interface/compactui_3.gif)
-
-### Combo Panel in Properties
-
-When Zen UV Transform Tool is active you can find Combo Panel in Properties.
-
-![Combo Panel](img/gifs/user_interface/compactui_6.gif)
-
-### Popup Combo Panel
-
-Combo Panel is the same in N-Panel and Pop-up menu  `Shift + U`.
-You can call this menu anywhere.
-
-![Combo Panel](img/gifs/user_interface/compactui_8.gif)
-
-!!! tip
-    Don't forget to drink some good beer today!
-
 ---
-### Update reminder
+## Update reminder
 
 Reminds you that a new version has been released and you can update the addon.
 
-![update reminder](img/screen/user_interface/update_reminder.png)
+| ![Update Reminder in the panel header](img/screen/user_interface/update_reminder.png) |
+| :---: |
+| *Fig. 1. Update Reminder in the panel header* |
 
 ---
 
-### Blender Version Warning
+## Blender Version Warning
 
 Appears at the top of the panel when Zen UV detects that it is running on an untested or experimental Blender version (such as Alpha, Beta, or Daily Builds).
 
