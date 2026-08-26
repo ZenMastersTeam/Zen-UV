@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Unified Transform System - Zen UV 5.4 for Blender</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../extra.css" rel="stylesheet" />
+        <link href="../../css/version-select.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Unified Transform System";
+        var mkdocs_page_input_path = "transform_sys\\unified_transform_sys.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-7XHJ910WF8"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', "G-7XHJ910WF8");
+      </script>
+ <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Zen UV 5.4 for Blender
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../..">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../youtube_videos/">Learning Videos</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../installation/">Installation and Update</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../user_interface/">User Interface</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Tutorial</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../tutorial/">Step-by-Step Guide Examples</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >Emergency Light</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../tutorial/emergency_light/emergency_light_eng/">Emergency Light (EN)</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../tutorial/emergency_light/emergency_light_ukr/">Emergency Light (UA)</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../tutorial/emergency_light/emergency_light_rus/">Emergency Light (RU)</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Modules</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../../adv_uv-maps/">Advanced UV Maps</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../seam_groups/">Seam Groups</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Unwrap</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../unwrap/">Unwrap</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../unwrap/zen_unwrap/">Zen Unwrap</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../unwrap/auto_unwrap/">Auto Unwrap</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../select/">Select</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" >Transform</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../panels_and_description/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../independent_ops/">Independent Transform Operators</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Unified Transform System</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#universal-control-panel">Universal Control Panel</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#transform-space">Transform Space</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#mode">Mode</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#order">Order</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#transform-types">Transform Types</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#move">Move</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#scale">Scale</a>
+        <ul>
+    <li class="toctree-l5"><a class="reference internal" href="#scale-mode">Scale Mode</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#rotate">Rotate</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#flip">Flip</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#fit">Fit</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#fit-into-region">Fit into Region</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#align">Align</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#distribute">Distribute</a>
+        <ul>
+    <li class="toctree-l5"><a class="reference internal" href="#distribute-and-sort">Distribute And Sort</a>
+    </li>
+    <li class="toctree-l5"><a class="reference internal" href="#distribute-vertices">Distribute vertices</a>
+    </li>
+    <li class="toctree-l5"><a class="reference internal" href="#arrange-islands">Arrange Islands</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#2d-cursor">2D Cursor</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../advanced_operators/">Advanced Transform</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../stack/">Stack</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../texel_density/">Texel Density</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../checker/">UV Checker</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../pack/">Pack</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../preferences/">Preferences</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../transform_tool/">Transform Tool</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../touch_tool/">Touch Tool</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../sticky_uv_editor/">Sticky UV Editor</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../favourites/">Favourites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Trim Sheets</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../trimsheet/">Trim Sheets</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../trimsheet_creation/">Trim Sheet Management</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../trimsheet_operators/">Trimsheet Operators</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../trimsheet_hotspot/">Hotspot Mapping</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Additional</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../addon_prefs/">Addon Preferences</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../user_script/">User Script</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../help/">Help</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/">FAQs</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Changelog</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/">Summary</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_5.4.0/">Version 5.4.0</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_5.3.3/">Version 5.3.3</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_5.3.2/">Version 5.3.2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_5.3.1/">Version 5.3.1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_5.3.0/">Version 5.3.0</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_5.2.1/">Version 5.2.1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_5.2.0/">Version 5.2.0</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_5.1.0/">Version 5.1.0</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_5.0.3/">Version 5.0.3</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_5.0.2/">Version 5.0.2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_5.0.1/">Version 5.0.1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_5.0.0/">Version 5.0.0</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_4.5.4/">Version 4.5.4</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_4.5.2/">Version 4.5.2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_4.5.1/">Version 4.5.1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_4.5.0/">Version 4.5.0</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_4.4.2/">Version 4.4.2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_4.4.1/">Version 4.4.1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_4.4.0/">Version 4.4</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_4.3/">Version 4.3</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_4.2.1/">Version 4.2.1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_4.2/">Version 4.2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_4.1/">Version 4.1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_4.0.1/">Version 4.0.1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_4.0/">Version 4.0</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_3.1.1.0/">Version 3.1.0.4</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_3.1.0.2/">Version 3.1.0.2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_3.0.2/">Version 3.0.2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_3.0.1/">Version 3.0.1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_3.0/">Version 3.0</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_2.2.3/">Version 2.2.3</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_2.2.2/">Version 2.2.2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_2.2.1/">Version 2.2.1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_2.2/">Version 2.2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_2.1.3/">Version 2.1.3</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_2.1/">Version 2.1 Stacks</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_2.0/">Version 2.0 Transform</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_1.92/">Version 1.92 Texel Density</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_1.9/">Version 1.9 Texture Checker</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_1.8/">Version 1.8</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_1.7/">Version 1.7</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../credits/">Credits</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../our_addons/">Our Add-ons</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../recommended_addons/">Recommended Add-ons</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Zen UV 5.4 for Blender</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Modules</li>
+          <li class="breadcrumb-item">Transform</li>
+      <li class="breadcrumb-item active">Unified Transform System</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="unified-transform-system">Unified Transform System<a class="headerlink" href="#unified-transform-system" title="Permanent link"></a></h1>
+<div class="admonition panel">
+<p class="admonition-title">Panel</p>
+<p><a class="glightbox" href="../../img/screen/transform/tr_un_tr_sys.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../img/screen/transform/tr_un_tr_sys.png" /></a></p>
+</div>
+<h2 id="universal-control-panel">Universal Control Panel<a class="headerlink" href="#universal-control-panel" title="Permanent link"></a></h2>
+<div class="admonition control">
+<p class="admonition-title">Control</p>
+<p><strong>Universal Control Panel</strong></p>
+<p><a class="glightbox" href="../../img/screen/transform/UniversalControl.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Transform" src="../../img/screen/transform/UniversalControl.png" /></a></p>
+<p>The universal control panel has logic and different functions for different types of transformation.</p>
+</div>
+<hr />
+<h2 id="transform-space">Transform Space<a class="headerlink" href="#transform-space" title="Permanent link"></a></h2>
+<p>Switch between Islands and Texure-based transforms in 3D View.</p>
+<div class="admonition panel">
+<p class="admonition-title">Panel</p>
+<p><a class="glightbox" href="../../img/screen/transform/tr_space.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../img/screen/transform/tr_space.png" /></a></p>
+<ul>
+<li><strong>Island</strong>. Islands-based transforms.</li>
+<li><strong>Texture</strong>. Texure-based transforms. Works only for <strong>Move</strong> and <strong>Rotate</strong> tools.</li>
+</ul>
+</div>
+<h2 id="mode">Mode<a class="headerlink" href="#mode" title="Permanent link"></a></h2>
+<div class="admonition panel">
+<p class="admonition-title">Panel</p>
+<p><a class="glightbox" href="../../img/screen/transform/tr_un_mode.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../img/screen/transform/tr_un_mode.png" /></a></p>
+<ul>
+<li><strong>Islands</strong>. Transformations will affect Islands.</li>
+<li><strong>Selection</strong>. Transformation will affect Selection (Faces, Edges, Vertices).</li>
+</ul>
+</div>
+<h2 id="order">Order<a class="headerlink" href="#order" title="Permanent link"></a></h2>
+<div class="admonition panel">
+<p class="admonition-title">Panel</p>
+<p><a class="glightbox" href="../../img/screen/transform/tr_un_order.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../img/screen/transform/tr_un_order.png" /></a></p>
+<ul>
+<li><strong>One by one</strong>. Transformations will affect Islands.</li>
+<li><strong>Overall</strong>. Transformation will affect Selection (Faces, Edges, Vertices).</li>
+<li><strong>System Pivot</strong>. Transformations will affect Islands.</li>
+</ul>
+</div>
+<hr />
+<h2 id="transform-types">Transform Types<a class="headerlink" href="#transform-types" title="Permanent link"></a></h2>
+<h3 id="move">Move<a class="headerlink" href="#move" title="Permanent link"></a></h3>
+<p><a class="glightbox" href="../../img/icons/transform-move.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../img/icons/transform-move.png" /></a> Move Selected Islands </p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Buttons of the <a href="#universal-control-panel"><strong>Universal Control Panel</strong></a> in the Transform type <strong>Move</strong> represent the direction of shifting.</p>
+</div>
+<p><a class="glightbox" href="../../img/screen/transform/MainPanelMove.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Transform" src="../../img/screen/transform/MainPanelMove.png" /></a></p>
+<ul>
+<li><strong>Move Increment</strong> - The value on which the island will be shifted</li>
+<li><strong>Grab Increment</strong> - Get the distance between two vertices or edge lengths and use it as the offset value for the move. The resulting value will be used as the <strong>Move Increment</strong> value</li>
+</ul>
+<hr />
+<h3 id="scale">Scale<a class="headerlink" href="#scale" title="Permanent link"></a></h3>
+<p><a class="glightbox" href="../../img/icons/transform-scale.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../img/icons/transform-scale.png" /></a> Scale selected Islands </p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Buttons of the <a href="#universal-control-panel"><strong>Universal Control Panel</strong></a> in the Transform type <strong>Scale</strong> represent Points from where the island will be scaled.</p>
+</div>
+<p><a class="glightbox" href="../../img/screen/transform/tr_scale.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Transform" src="../../img/screen/transform/tr_scale.png" /></a></p>
+<h4 id="scale-mode">Scale Mode<a class="headerlink" href="#scale-mode" title="Permanent link"></a></h4>
+<div class="admonition axis">
+<p class="admonition-title">Axis</p>
+<p><a class="glightbox" href="../../img/screen/transform/tr_scale_mode_axis.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../img/screen/transform/tr_scale_mode_axis.png" /></a></p>
+<ul>
+<li><strong>Scale</strong> - The value of the scale of the island for each of the axes.</li>
+<li><strong>Tuner</strong> - System that helps change values quickly.<ul>
+<li><em>&ldquo;D&rdquo;</em> - Increase by two times.</li>
+<li><em>&ldquo;H&rdquo;</em> - Decrease two times.</li>
+<li><em>&ldquo;R&rdquo;</em> - Reset value to 1.0 .</li>
+<li><strong>Lock.</strong> - The Lock mode allows changing values as one.</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="admonition units">
+<p class="admonition-title">Units</p>
+<p><a class="glightbox" href="../../img/screen/transform/tr_scale_mode_units.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../img/screen/transform/tr_scale_mode_units.png" /></a></p>
+<ul>
+<li><strong>UV Size</strong> - The estimated width of the UV area.</li>
+<li><strong>Desired size</strong> - The size of which should be set for selected elements relative to UV area.</li>
+<li><strong>G</strong> - Grab the desired size from the current selection. Exist only in the 3D Viewort context. Can be used only for 2 vertices or for one edge selection.</li>
+<li><strong>Horizontal / Vertical</strong> - What mean the desired size.</li>
+</ul>
+</div>
+<hr />
+<h3 id="rotate">Rotate<a class="headerlink" href="#rotate" title="Permanent link"></a></h3>
+<p><a class="glightbox" href="../../img/icons/transform-rotate.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../img/icons/transform-rotate.png" /></a> Rotate selected Islands </p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Buttons of the <a href="#universal-control-panel"><strong>Universal Control Panel</strong></a> in the Transform type <strong>Rotate</strong> works as described below.</p>
+<ul>
+<li>Buttons located in the corners rotate the island in the specified direction.</li>
+<li>The central button performs the automatic aligning of the island horizontally or vertically.</li>
+<li>The buttons at the top and bottom align the island vertically.</li>
+<li>Buttons on the left and right align the island horizontally.</li>
+</ul>
+</div>
+<p><a class="glightbox" href="../../img/screen/transform/Rotate.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Transform" src="../../img/screen/transform/Rotate.png" /></a></p>
+<ul>
+<li><strong>Rotate Increment</strong> - The value on which the island will be rotated</li>
+<li><strong>Select Island by Direction</strong> - Select island by direction (Horizontal, Vertical, Radial, Not Aligned). <a href="../../select/#select-islands-by-direction">Here is a full description of the operator</a></li>
+<li><strong>Orient by selected</strong> - Reorient the island by selected elements (vertices, edges, faces)</li>
+</ul>
+<hr />
+<h3 id="flip">Flip<a class="headerlink" href="#flip" title="Permanent link"></a></h3>
+<p><a class="glightbox" href="../../img/icons/transform-flip.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../img/icons/transform-flip.png" /></a> Flip Selected Islands</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Buttons of the <a href="#universal-control-panel"><strong>Universal Control Panel</strong></a> in the Transform type <strong>Flip</strong> represent flip direction.</p>
+</div>
+<p><a class="glightbox" href="../../img/screen/transform/Flip.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Transform" src="../../img/screen/transform/Flip.png" /></a></p>
+<ul>
+<li><strong>Always Center</strong> - Always use the center of the island as a flipping pivot</li>
+</ul>
+<hr />
+<h3 id="fit">Fit<a class="headerlink" href="#fit" title="Permanent link"></a></h3>
+<p><a class="glightbox" href="../../img/icons/transform-fit.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../img/icons/transform-fit.png" /></a> Fit Island to UV Square</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Buttons of the <a href="#universal-control-panel"><strong>Universal Control Panel</strong></a> in the Transform type <strong>Fit</strong> represent origins from where <strong>Fit</strong> will be performed</p>
+</div>
+<p><a class="glightbox" href="../../img/screen/transform/Fit.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Transform" src="../../img/screen/transform/Fit.png" /></a></p>
+<ul>
+<li><strong>Face by Face</strong> - Fit Face by Face</li>
+<li><strong>Padding</strong> - Clearance between island and UV Square bounds</li>
+<li><strong>Bounds</strong> - It makes it possible to fill out not UV Square but any other area</li>
+<li><strong>Fill Islands</strong> - Fit Islands from the center without keeping proportions</li>
+</ul>
+<h3 id="fit-into-region">Fit into Region<a class="headerlink" href="#fit-into-region" title="Permanent link"></a></h3>
+<div class="admonition properties">
+<p class="admonition-title">Properties</p>
+<p><a class="glightbox" href="../../img/screen/transform/fit_into_region.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../img/screen/transform/fit_into_region.png" /></a></p>
+</div>
+<ul>
+<li><strong>Grab Region: Selection / Island</strong> - Allow to grab Region size in different manners</li>
+<li><strong>Bottom Left: Top Right:</strong> - The bounding box of the region</li>
+<li><strong>Show Region</strong> - Show region using Annotations</li>
+<li><strong>Hide Region</strong> - Hide Fit region</li>
+<li><strong>Fit into Region</strong> - Fit the selected island into the Region described in the bounding box</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><a class="glightbox" href="../../img/gifs/trasnform_operators/fit_region_example.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="fit region example" src="../../img/gifs/trasnform_operators/fit_region_example.gif" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Using fit region</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="align">Align<a class="headerlink" href="#align" title="Permanent link"></a></h3>
+<p><a class="glightbox" href="../../img/icons/transform-orient.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../img/icons/transform-orient.png" /></a> Align selected Islands</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Buttons of the <a href="#universal-control-panel"><strong>Universal Control Panel</strong></a> in the Transform type <strong>Align</strong> represent the side by which the islands will be aligned.</p>
+</div>
+<p><a class="glightbox" href="../../img/screen/transform/Align.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Transform" src="../../img/screen/transform/Align.png" /></a></p>
+<ul>
+<li><strong>Vertex by Vertex</strong> - Mode for vertex alignment. Aligns vertex by vertex. Transform selection mode only</li>
+<li><strong>Center by Axis</strong> - Align selected islands horizontally or vertically in the center</li>
+<li><strong>Align to</strong> - Relative to what to perform the alignment<ul>
+<li><em>Selection Bounding Box</em></li>
+<li><em>UV Area Bounds</em></li>
+<li><em>Position</em></li>
+<li><em>2D Cursor</em></li>
+<li><em>To Active Component</em></li>
+<li><em>Active UDIM tile</em> - To active UDIM tile</li>
+<li><em>Tile Number</em> - To UDIM tile with the specified number</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h3 id="distribute">Distribute<a class="headerlink" href="#distribute" title="Permanent link"></a></h3>
+<p><a class="glightbox" href="../../img/icons/transform-distribute.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../img/icons/transform-distribute.png" /></a> Distribute, Sort and Arrange selected Islands</p>
+<table>
+<thead>
+<tr>
+<th><a class="glightbox" href="../../img/screen/transform/Distribute_Island.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Transform" src="../../img/screen/transform/Distribute_Island.png" /></a></th>
+<th><a class="glightbox" href="../../img/screen/transform/Distribute_Elements.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Transform" src="../../img/screen/transform/Distribute_Elements.png" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Islands mode</td>
+<td>Selection mode</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p><strong>Islands Mode</strong>:</p>
+<ul>
+<li><strong>Distribute &amp; Sort</strong> - Distributes and Sorts selected Islands</li>
+<li><strong>Arrange</strong> - Arrange selected Islands</li>
+</ul>
+</li>
+<li>
+<p><strong>Selection Mode</strong>:</p>
+<ul>
+<li><strong>Distribute</strong> - Distribute vertices along the line</li>
+</ul>
+</li>
+</ul>
+<h4 id="distribute-and-sort">Distribute And Sort<a class="headerlink" href="#distribute-and-sort" title="Permanent link"></a></h4>
+<p>Distributes and sorts selected islands</p>
+<div class="admonition properties">
+<p class="admonition-title">Properties</p>
+<p><a class="glightbox" href="../../img/screen/transform/distribute_and_sort_properties.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="distribute and sort properties" src="../../img/screen/transform/distribute_and_sort_properties.png" /></a></p>
+</div>
+<ul>
+<li><strong>Direction Axis</strong> - The axis along which distribution will take place</li>
+<li><strong>Start Point Offset</strong> - Islands location start point</li>
+<li><strong>Sort by</strong> - Sorting condition<ul>
+<li><em>UV Position</em></li>
+<li><em>UV Area</em></li>
+<li><em>Mesh Area</em></li>
+<li><em>Texel Density</em></li>
+<li><em>UV Coverage</em></li>
+<li><em>Island Mesh Position X</em></li>
+<li><em>Island Mesh Position Y</em></li>
+<li><em>Island Mesh Position Z</em></li>
+</ul>
+</li>
+<li><strong>Reverse</strong> - Change the sorting direction to reverse</li>
+<li><strong>Margin</strong> - Distance between distributed Islands</li>
+<li><strong>In Place</strong> - Leave not active axis as is</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><a class="glightbox" href="../../img/gifs/trasnform_operators/distribute_islands_example.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="distribute and sort example" src="../../img/gifs/trasnform_operators/distribute_islands_example.gif" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Distribute And Sort example</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="distribute-vertices">Distribute vertices<a class="headerlink" href="#distribute-vertices" title="Permanent link"></a></h4>
+<p>Distribute vertices along the line</p>
+<div class="admonition properties">
+<p class="admonition-title">Properties</p>
+<p><a class="glightbox" href="../../img/screen/transform/distribute_vertices_properties.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="distribute vertices properties" src="../../img/screen/transform/distribute_vertices_properties.png" /></a></p>
+</div>
+<ul>
+<li><strong>Orient Loop Along</strong> - Alignment options<ul>
+<li><em>In Place</em> - The beginning and end of the loop remain in place</li>
+<li><em>U Axis</em> - Along U axis</li>
+<li><em>V Axis</em> - Along V axis</li>
+<li><em>Auto</em> - Will be aligned to the closer axis</li>
+</ul>
+</li>
+<li><strong>Reverse Direction</strong> - Change the direction of the aligned line</li>
+<li><strong>Spacing</strong> - How to create spaces between points<ul>
+<li><em>UV</em> - Like in the current uv positions</li>
+<li><em>Geometry</em> - Like in the mesh</li>
+<li><em>Evenly</em> - Spread evenly</li>
+</ul>
+</li>
+<li><strong>Start Positions</strong> - Position of starts of loops<ul>
+<li><em>As Is</em></li>
+<li><em>Max</em></li>
+<li><em>Averaged</em></li>
+<li><em>Min</em></li>
+</ul>
+</li>
+<li><strong>Lock</strong> - Locks start and end positions</li>
+<li><strong>End Positions</strong> - Position of ends of loops<ul>
+<li><em>As Is</em></li>
+<li><em>Max</em></li>
+<li><em>Averaged</em></li>
+<li><em>Min</em></li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><a class="glightbox" href="../../img/gifs/trasnform_operators/distribute_verts_example.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="distribute vertices" src="../../img/gifs/trasnform_operators/distribute_verts_example.gif" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Distribute Verts example</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="arrange-islands">Arrange Islands<a class="headerlink" href="#arrange-islands" title="Permanent link"></a></h4>
+<p>Organizes selected UV islands into a structured grid layout with precise control over row/column density, container bounds, scaling, and distribution origins.</p>
+<p>This operator is ideal for organizing repeating modular assets, atlas components, or tidying up scattered UV islands into predictable array layouts.</p>
+<div class="admonition properties">
+<p class="admonition-title">Properties</p>
+<p><a class="glightbox" href="../../img/screen/transform/arrange_islands_op_prop.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Arrange Islands Operator Properties" src="../../img/screen/transform/arrange_islands_op_prop.png" /></a></p>
+</div>
+<ul>
+<li><strong>Grid Settings (U / V)</strong> — Sets the total number of columns (<strong>U</strong>) and rows (<strong>V</strong>) in the arrangement grid.</li>
+<li><strong>Area Size (X / Y)</strong> — Defines the overall width and height dimensions of the grid container (e.g., <code>1.0</code> x <code>1.0</code> corresponds to a single UV tile).</li>
+<li><strong>Start From</strong> — Defines the origin reference point from which the grid array is constructed:<ul>
+<li><em>In Place</em> — Builds the grid starting from the current location of the primary UV island.</li>
+<li><em>UV Area</em> — Anchors the grid start at the <code>(0, 0)</code> origin coordinate of the UV space.</li>
+<li><em>Cursor</em> — Places the starting origin directly at the 2D UV Cursor position.</li>
+</ul>
+</li>
+<li><strong>Offset (X / Y)</strong> — Shifts the entire grid layout along the U and V axes.</li>
+<li><strong>Scale Global</strong> — Scales the entire grid, proportionally adjusting both island sizes and inter-island spacing.</li>
+<li><strong>Scale Island</strong> — Scales each island individually around its local origin without changing grid cell positions.</li>
+<li><strong>Randomize</strong> — Adds random positional jitter to islands within their grid placements.</li>
+<li><strong>Seed</strong> — Randomization seed value controlling island distribution jitter when <strong>Randomize</strong> is enabled.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><a class="glightbox" href="../../img/gifs/trasnform_operators/arange_islands_example.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="arrange example" src="../../img/gifs/trasnform_operators/arange_islands_example.gif" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Arrange Islands example</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="2d-cursor">2D Cursor<a class="headerlink" href="#2d-cursor" title="Permanent link"></a></h3>
+<p><a class="glightbox" href="../../img/icons/transform-cursor.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../img/icons/transform-cursor.png" /></a> Align 2D Cursor over the selected island</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Buttons of the <a href="#universal-control-panel"><strong>Universal Control Panel</strong></a> in the Transform type <strong>2D Cursor</strong> represent sides of the island or selected elements.</p>
+</div>
+<p><a class="glightbox" href="../../img/screen/transform/2dCursor.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Transform" src="../../img/screen/transform/2dCursor.png" /></a></p>
+<hr />
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../independent_ops/" class="btn btn-neutral float-left" title="Independent Transform Operators"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../advanced_operators/" class="btn btn-neutral float-right" title="Advanced Transform">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p><p>Copyright &copy; 2024-2025 <a href="https://zenmasters.team/">Zen Masters</a></p></p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../independent_ops/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../advanced_operators/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+      <script src="../../js/version-select.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+</script></body>
+</html>

@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Unwrap - Zen UV 5.4 for Blender</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../extra.css" rel="stylesheet" />
+        <link href="../css/version-select.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Unwrap";
+        var mkdocs_page_input_path = "unwrap.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-7XHJ910WF8"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', "G-7XHJ910WF8");
+      </script>
+ <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }</style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Zen UV 5.4 for Blender
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../youtube_videos/">Learning Videos</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../installation/">Installation and Update</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../user_interface/">User Interface</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Tutorial</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../tutorial/">Step-by-Step Guide Examples</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >Emergency Light</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../tutorial/emergency_light/emergency_light_eng/">Emergency Light (EN)</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../tutorial/emergency_light/emergency_light_ukr/">Emergency Light (UA)</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../tutorial/emergency_light/emergency_light_rus/">Emergency Light (RU)</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Modules</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../adv_uv-maps/">Advanced UV Maps</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../seam_groups/">Seam Groups</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" >Unwrap</a>
+    <ul class="current">
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Unwrap</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#global-mark-settings">Global Mark Settings</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#unwrap-inplace">Unwrap Inplace</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#prepare-unwrap">Prepare Unwrap</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#mark-system">Mark System</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#mark-by-angle">Mark by Angle</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#mark">Mark</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#unmark">Unmark</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#unmark-all">Unmark All</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#conversion-system">Conversion System</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#mirror-seams">Mirror Seams</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#auto-seams-unwrap">Auto Seams &amp; Unwrap</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#smooth-by-sharp">Smooth by Sharp</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#finishing-system">Finishing System</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#sort-islands-by-tags">Sort Islands by Tags</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#tag-finished">Tag Finished</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#tag-unfinished">Tag Unfinished</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#select-finished">Select Finished</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#deselect-finished">Deselect Finished</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#hide">Hide</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#unhide">Unhide</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#display-finished-toggle">Display Finished (Toggle)</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#finished-preferences">Finished preferences</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="zen_unwrap/">Zen Unwrap</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="auto_unwrap/">Auto Unwrap</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../select/">Select</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Transform</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../transform_sys/panels_and_description/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../transform_sys/independent_ops/">Independent Transform Operators</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../transform_sys/unified_transform_sys/">Unified Transform System</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../transform_sys/advanced_operators/">Advanced Transform</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../stack/">Stack</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../texel_density/">Texel Density</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../checker/">UV Checker</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pack/">Pack</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../preferences/">Preferences</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../transform_tool/">Transform Tool</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../touch_tool/">Touch Tool</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../sticky_uv_editor/">Sticky UV Editor</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../favourites/">Favourites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Trim Sheets</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../trimsheet/">Trim Sheets</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../trimsheet_creation/">Trim Sheet Management</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../trimsheet_operators/">Trimsheet Operators</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../trimsheet_hotspot/">Hotspot Mapping</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Additional</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../addon_prefs/">Addon Preferences</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../user_script/">User Script</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../help/">Help</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../troubleshooting/">FAQs</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Changelog</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/">Summary</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_5.4.0/">Version 5.4.0</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_5.3.3/">Version 5.3.3</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_5.3.2/">Version 5.3.2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_5.3.1/">Version 5.3.1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_5.3.0/">Version 5.3.0</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_5.2.1/">Version 5.2.1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_5.2.0/">Version 5.2.0</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_5.1.0/">Version 5.1.0</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_5.0.3/">Version 5.0.3</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_5.0.2/">Version 5.0.2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_5.0.1/">Version 5.0.1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_5.0.0/">Version 5.0.0</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_4.5.4/">Version 4.5.4</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_4.5.2/">Version 4.5.2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_4.5.1/">Version 4.5.1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_4.5.0/">Version 4.5.0</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_4.4.2/">Version 4.4.2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_4.4.1/">Version 4.4.1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_4.4.0/">Version 4.4</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_4.3/">Version 4.3</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_4.2.1/">Version 4.2.1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_4.2/">Version 4.2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_4.1/">Version 4.1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_4.0.1/">Version 4.0.1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_4.0/">Version 4.0</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_3.1.1.0/">Version 3.1.0.4</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_3.1.0.2/">Version 3.1.0.2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_3.0.2/">Version 3.0.2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_3.0.1/">Version 3.0.1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_3.0/">Version 3.0</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_2.2.3/">Version 2.2.3</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_2.2.2/">Version 2.2.2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_2.2.1/">Version 2.2.1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_2.2/">Version 2.2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_2.1.3/">Version 2.1.3</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_2.1/">Version 2.1 Stacks</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_2.0/">Version 2.0 Transform</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_1.92/">Version 1.92 Texel Density</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_1.9/">Version 1.9 Texture Checker</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_1.8/">Version 1.8</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_1.7/">Version 1.7</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../credits/">Credits</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../our_addons/">Our Add-ons</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../recommended_addons/">Recommended Add-ons</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Zen UV 5.4 for Blender</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Modules</li>
+          <li class="breadcrumb-item">Unwrap</li>
+      <li class="breadcrumb-item active">Unwrap</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="unwrap">Unwrap<a class="headerlink" href="#unwrap" title="Permanent link"></a></h1>
+<div class="admonition panel">
+<p class="admonition-title">Panel</p>
+<table>
+<thead>
+<tr>
+<th>3D Viewport</th>
+<th>UV Editor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="glightbox" href="../img/screen/unwrap/unwrap_panel_3d.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="3D Viewport Panel" src="../img/screen/unwrap/unwrap_panel_3d.png" /></a></td>
+<td><a class="glightbox" href="../img/screen/unwrap/unwrap_panel_uv.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="UV Editor Panel" src="../img/screen/unwrap/unwrap_panel_uv.png" /></a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr />
+<h3 id="global-mark-settings">Global Mark Settings<a class="headerlink" href="#global-mark-settings" title="Permanent link"></a></h3>
+<p>Controls global edge-marking behavior across all operators in the Mark System.</p>
+<p>Enabling global settings provides centralized control over edge flags, ensuring tools throughout the Mark System apply Seams and Sharp edges consistently without needing to adjust settings on individual operators.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><a class="glightbox" href="../img/screen/unwrap/unwrap_global_mark_settings.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Global Mark Settings" src="../img/screen/unwrap/unwrap_global_mark_settings.png" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Fig. 1. Global Mark Settings menu</em></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Use Global Mark Settings</strong> — Overrides individual tool settings with these global defaults. When disabled, each Mark System operator uses its own independent configuration.</li>
+<li><strong>Mark Seams</strong> — Automatically marks target edges as UV Seams during marking operations.</li>
+<li><strong>Mark Sharp Edges</strong> — Automatically marks target edges as Sharp Edges during marking operations.</li>
+</ul>
+<hr />
+<h2 id="unwrap-inplace">Unwrap Inplace<a class="headerlink" href="#unwrap-inplace" title="Permanent link"></a></h2>
+<p>Unwrap Islands and Faces keeping their Size, Orientation and Location in UV Space.</p>
+<div class="admonition properties">
+<p class="admonition-title">Properties</p>
+<p><a class="glightbox" href="../img/screen/unwrap/unwrap_inplace_settings.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/unwrap/unwrap_inplace_settings.png" /></a></p>
+</div>
+<ul>
+<li><strong>Mode</strong> - Choose what to unwrap Islands or Faces.<ul>
+<li><em>Islands</em> - Affect selected Islands.</li>
+<li><em>Faces</em> - Affect selected Faces only.</li>
+</ul>
+</li>
+<li><strong>Location</strong> - Restore Islands Location and gabarit.</li>
+<li><strong>Orientation</strong> - What Orientation to use after unwrapping.<ul>
+<li><em>Keep</em> - Preserve initial orientation. </li>
+<li><em>World Orient</em> - Aligns UV to match their world orientation.</li>
+<li><em>Skip</em> - Leaves the orientation of UV unchanged, without any adjustment after Unwrap.</li>
+</ul>
+</li>
+<li><strong>Size</strong> - Preserve initial size.<ul>
+<li><em>Keep</em> - UV Island size will be adjusted by initial width or height depending with the Orientation results.</li>
+<li><em>Global Preset</em> - Set value described in the Texel Density panel as <a href="../texel_density/#global-td-preset">Global TD Preset</a>.</li>
+<li><em>Skip</em> - Leaves the size of UV unchanged, without any adjustment after Unwrap.</li>
+</ul>
+</li>
+<li><strong>Ignore Pins</strong> - Ignore Pins.</li>
+<li><strong>Fill Holes</strong> - Virtual fill holes in meshes before unwrapping.</li>
+<li><strong>Correct Aspect</strong> - Map UVs taking image aspect ratio into account.</li>
+<li><strong>Use Subsurf Modifier</strong> - Map UVs taking vertex position after subsurf into account.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Available only in UV Editor.</p>
+</div>
+<hr />
+<h2 id="prepare-unwrap">Prepare Unwrap<a class="headerlink" href="#prepare-unwrap" title="Permanent link"></a></h2>
+<p>Prepares the object for unwrapping. Remove all UV maps, seams, sharp edges, and finished UV marks.
+Apply all geometry modifications before resetting for a clean unwrap</p>
+<p><a class="glightbox" href="../img/screen/unwrap/prepare_unwrap_op_prop.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Prepare Unwrap operator properties" src="../img/screen/unwrap/prepare_unwrap_op_prop.png" /></a></p>
+<ul>
+<li><strong>UV Maps</strong> - Choose how to prepare the UV maps.<ul>
+<li><em>Remove All</em> - Remove all existing UV maps from the mesh before preparing for a new unwrap.</li>
+<li><em>Iso Projection</em> - Create a default UV isometric unwrap projection for the active mesh.</li>
+<li><em>Skip</em> - Skip editing UV maps.</li>
+</ul>
+</li>
+<li><strong>Clear Seams</strong> - Remove all marked UV seams from mesh edges before preparing for a new unwrap.</li>
+<li><strong>Clear Sharps</strong> - Remove all sharp edge markings from the mesh before preparing for a new unwrap.</li>
+<li><strong>Tag Unfinished</strong> - Remove all finished island marks and tag the mesh as unfinished for a fresh unwrap</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <strong>Apply Scale</strong> and <strong>Apply Modifiers</strong> options may destroy animation data. A warning is shown in the operator properties.</p>
+</div>
+<hr />
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Applying Geometry options (Scale / Modifiers)
+may break rigs, constraints, or animations.</p>
+</div>
+<ul>
+<li><strong>Apply Scale</strong> - Apply object scale transformations before preparing the mesh for UV unwrapping.</li>
+<li><strong>Apply Modifiers</strong> - Apply all geometry modifiers to the mesh before preparing for UV unwrapping.</li>
+</ul>
+<hr />
+<ul>
+<li><strong>Display Seams</strong> - Display UV unwrapping seams and switch off all other overlays (Crease, Sharp, Bevel).</li>
+<li><strong>UV Checker</strong> - Enable a UV checker texture overlay to visually inspect UV layout quality during unwrapping.</li>
+<li><strong>Darken Image</strong> - Darken the UV checker or background image overlay to improve contrast during inspection.</li>
+</ul>
+<hr />
+<h2 id="mark-system">Mark System<a class="headerlink" href="#mark-system" title="Permanent link"></a></h2>
+<div class="admonition panel">
+<p class="admonition-title">Panel</p>
+<p><a class="glightbox" href="../img/screen/unwrap/unwrap_mark_section.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/unwrap/unwrap_mark_section.png" /></a></p>
+</div>
+<hr />
+<h3 id="mark-by-angle">Mark by Angle<a class="headerlink" href="#mark-by-angle" title="Permanent link"></a></h3>
+<p>Mark edges as Seams and/or Sharp edges by Angle.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>This operator supports the ability to <a href="../user_interface/#save-as-default-operator-properties">save default properties</a>.</p>
+</div>
+<div class="admonition properties">
+<p class="admonition-title">Properties</p>
+<p><a class="glightbox" href="../img/screen/unwrap/mark_by_angle_settings.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/unwrap/mark_by_angle_settings.png" /></a></p>
+</div>
+<ul>
+<li><strong>Keep init marks</strong> - Keep the state of intital Seams and Sharp edges.</li>
+<li><strong>Selection Respect</strong> - Mark only within current selection.</li>
+<li><strong>Mark Settings</strong> - Mark Settings (Global and Local modes) to Mark Seams and Sharp Edges.</li>
+</ul>
+<hr />
+<h3 id="mark">Mark <a class="glightbox" href="../img/icons/mark-seams%402x.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Mark Seams" src="../img/icons/mark-seams%402x.png" /></a><a class="headerlink" href="#mark" title="Permanent link"></a></h3>
+<p>Mark selected edges or face borders as Seams and/or Sharp edges.</p>
+<div class="admonition properties">
+<p class="admonition-title">Properties</p>
+<p><a class="glightbox" href="../img/screen/unwrap/mark_mark_pref.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/unwrap/mark_mark_pref.png" /></a></p>
+</div>
+<ul>
+<li><strong>Clear</strong> - Clear marking inside of selected Faces.</li>
+<li><strong>Mark Settings</strong> - Mark Settings (Global and Local modes) to Mark Seams and Sharp Edges.</li>
+</ul>
+<hr />
+<h3 id="unmark">Unmark <a class="glightbox" href="../img/icons/unmark-seams%402x.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Unmark Seams" src="../img/icons/unmark-seams%402x.png" /></a><a class="headerlink" href="#unmark" title="Permanent link"></a></h3>
+<p>Unmark selected edges or face borders as Seams and/or Sharp edges.</p>
+<div class="admonition properties">
+<p class="admonition-title">Properties</p>
+<p><a class="glightbox" href="../img/screen/unwrap/mark_unmark_pref.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/unwrap/mark_unmark_pref.png" /></a></p>
+</div>
+<ul>
+<li><strong>Mark Settings</strong> - Mark Settings (Global and Local modes) to Mark Seams and Sharp Edges.</li>
+</ul>
+<hr />
+<h3 id="unmark-all">Unmark All<a class="headerlink" href="#unmark-all" title="Permanent link"></a></h3>
+<p>Remove all the Seams and/or Sharp edges from the mesh.</p>
+<div class="admonition properties">
+<p class="admonition-title">Properties</p>
+<p><a class="glightbox" href="../img/screen/unwrap/mark_unmark_all_pref.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/unwrap/mark_unmark_all_pref.png" /></a></p>
+</div>
+<ul>
+<li><strong>Clear Pinned</strong> - Clear all the Pins.</li>
+<li><strong>Mark Settings</strong> - Mark Settings (Global and Local modes) to Mark Seams and Sharp Edges.</li>
+</ul>
+<hr />
+<h2 id="conversion-system">Conversion System<a class="headerlink" href="#conversion-system" title="Permanent link"></a></h2>
+<div class="admonition panel">
+<p class="admonition-title">Panel</p>
+<p><a class="glightbox" href="../img/screen/unwrap/conversion_system.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/unwrap/conversion_system.png" /></a></p>
+</div>
+<ul>
+<li><strong>Seams by UV Borders</strong> - Mark Seams by existing UV Borders.</li>
+<li><strong>Sharp by UV Borders</strong> - Mark Sharp by existing UV Borders.</li>
+<li><strong>Seams by Sharp Edges</strong> - Mark Seams by existing Sharp edges.</li>
+<li><strong>Sharp Edges by Seams</strong> - Mark Sharp edges by existing Seams.</li>
+<li><strong>Seams by Open Edges</strong> - Mark Seams by Open Edges. The way that looks in the viewport.</li>
+</ul>
+<hr />
+<h2 id="mirror-seams">Mirror Seams<a class="headerlink" href="#mirror-seams" title="Permanent link"></a></h2>
+<p>Mirror Seams along selected Axis (<code>X</code>,<code>Y</code>,<code>Z</code>) in a given direction (<code>+</code> or <code>-</code>). If the source side has no seams, the operator will halt without performing any actions to prevent the loss of adjusted seams.</p>
+<p><a class="glightbox" href="../img/screen/unwrap/unwrap_mirror_1.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/unwrap/unwrap_mirror_1.gif" /></a></p>
+<p>Instead of <strong>Replacing</strong> existing marked Seams you can <strong>Add</strong> them.</p>
+<p><a class="glightbox" href="../img/screen/unwrap/unwrap_mirror_2.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/unwrap/unwrap_mirror_2.gif" /></a></p>
+<p>Holding <code>Shift</code> you can select both directions and flip Seams along the selected Axis and direction.</p>
+<p><a class="glightbox" href="../img/screen/unwrap/unwrap_mirror_3.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/unwrap/unwrap_mirror_3.gif" /></a></p>
+<hr />
+<h2 id="auto-seams-unwrap">Auto Seams &amp; Unwrap<a class="headerlink" href="#auto-seams-unwrap" title="Permanent link"></a></h2>
+<p>Partitions mesh geometry into logical topological charts based on surface planarity, automatically places UV seams along chart boundaries, and optionally unwraps the resulting UV islands in a single pass.</p>
+<p>This operator provides an automated unwrapping pipeline suitable for both organic meshes and hard-surface models, eliminating manual seam placement while minimizing UV area distortion and preventing micro-island fragmentation.</p>
+<div class="admonition properties">
+<p class="admonition-title">Properties</p>
+<p><a class="glightbox" href="../img/screen/unwrap/auto_seams_op_prop.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Auto Seams &amp; Unwrap Operator Properties" src="../img/screen/unwrap/auto_seams_op_prop.png" /></a></p>
+</div>
+<ul>
+<li><strong>Mode</strong> — Quick presets tailored for standard surface workflows:<ul>
+<li><em>Hard Surface</em> — Sets <strong>Quality</strong> to <code>0.5</code> and <strong>Hard Edge Angle</strong> to <code>30°</code> for mechanical objects and hard-surface models with bevels.</li>
+<li><em>Organic</em> — Sets <strong>Quality</strong> to <code>0.32</code> and <strong>Hard Edge Angle</strong> to <code>0°</code> (disabled) for character models, creatures, and smooth organic surfaces.</li>
+<li><em>Custom</em> — Switches to manual control, allowing custom property adjustments.</li>
+</ul>
+</li>
+<li><strong>Hard Edge Angle</strong> — Angle threshold at which sharp edges are strictly marked as UV seams. Setting this to <code>0°</code> disables hard-edge seam splitting for organic geometry.</li>
+<li><strong>Quality</strong> — Controls chart merging aggressiveness:<ul>
+<li><em>Lower values</em> — Produce more UV islands with sharper, highly accurate topological boundaries.</li>
+<li><em>Higher values</em> — Merge charts more aggressively, producing fewer total islands at the expense of higher UV stretch.</li>
+</ul>
+</li>
+<li><strong>Boundary Smoothing</strong> — Aggressiveness of chart boundary contour smoothing after region merging. Helps create cleaner, less jagged UV seam lines.</li>
+<li><strong>Min Island Faces</strong> — Minimum face count required for an island. Smaller chart fragments are absorbed into surrounding neighbor charts before seam generation to prevent micro-islands.</li>
+<li><strong>Unwrap</strong> — Enables automatic execution of the standard UV Unwrap pass immediately after seams are placed.</li>
+<li><strong>UV Unwrap Panel</strong> — Embedded Blender UV Unwrap settings (e.g., <strong>Method</strong>, <strong>Margin</strong>, <strong>Correct Aspect</strong>, <strong>Iterations</strong>) applied when <strong>Unwrap</strong> is active.</li>
+</ul>
+<hr />
+<h2 id="smooth-by-sharp">Smooth by Sharp<a class="headerlink" href="#smooth-by-sharp" title="Permanent link"></a></h2>
+<p>Before Blender v 4.1.0 - Toggle between Auto Smooth 180° (with sharp edges) and regular smooth modes</p>
+<p>Since Blender v 4.1.0: - Sets the &ldquo;Shade Smooth&rdquo; mode for all the mesh faces</p>
+<p>For more details, refer to the <a href="../tutorial/emergency_light/emergency_light_eng/#set-sharp-edges">&ldquo;Emergency Light Tutorial&rdquo;</a>.</p>
+<hr />
+<h2 id="finishing-system">Finishing System<a class="headerlink" href="#finishing-system" title="Permanent link"></a></h2>
+<p>Finishing system helps to Mark, Sort and Display Islands that you have already unwrapped. It can be used to check the progress of unwrapping as well as prevent Finished Islands from accidental Unwraping.</p>
+<div class="admonition panel">
+<p class="admonition-title">Panel</p>
+<p><a class="glightbox" href="../img/screen/unwrap/finished_system.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/unwrap/finished_system.png" /></a></p>
+</div>
+<hr />
+<h3 id="sort-islands-by-tags">Sort Islands by Tags<a class="headerlink" href="#sort-islands-by-tags" title="Permanent link"></a></h3>
+<p>Finished Islands move to the right side from Main UV Tile, Unfinished — to the left.</p>
+<div class="admonition properties">
+<p class="admonition-title">Properties</p>
+<p><a class="glightbox" href="../img/screen/unwrap/unwrap_finished_sorting_props.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="sort islands by tags properties" src="../img/screen/unwrap/unwrap_finished_sorting_props.png" /></a></p>
+</div>
+<ul>
+<li><strong>Move Finished</strong> - Determines whether to move islands marked as Finished</li>
+<li><strong>Move Unfinished</strong> - Determines whether to move islands marked as Finished</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><a class="glightbox" href="../img/screen/unwrap/unwrap_finished_sort.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/unwrap/unwrap_finished_sort.gif" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sot Islands by Tags</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="tag-finished">Tag Finished<a class="headerlink" href="#tag-finished" title="Permanent link"></a></h3>
+<p>Tag Islands as Finished and move them to the right sied from main UV Tile. These Islands won&rsquo;t be unwrapped.</p>
+<p><a class="glightbox" href="../img/screen/unwrap/unwrap_finished_tag.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/unwrap/unwrap_finished_tag.gif" /></a></p>
+<p><a class="glightbox" href="../img/screen/unwrap/unwrap_finished_display_3dview_tag.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/unwrap/unwrap_finished_display_3dview_tag.gif" /></a></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Islands tagged as Finished are locked for Unwrapping. To unlock them use <strong>Tag Unfinished</strong> operator.</p>
+</div>
+<p><a class="glightbox" href="../img/screen/unwrap/unwrap_finished_lockunwrap.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/unwrap/unwrap_finished_lockunwrap.gif" /></a></p>
+<hr />
+<h3 id="tag-unfinished">Tag Unfinished<a class="headerlink" href="#tag-unfinished" title="Permanent link"></a></h3>
+<p>Tag Islands as Unfinished and move them to the left sied from main UV Tile. </p>
+<p><a class="glightbox" href="../img/screen/unwrap/unwrap_finished_untag.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/unwrap/unwrap_finished_untag.gif" /></a></p>
+<p><a class="glightbox" href="../img/screen/unwrap/unwrap_finished_display_3dview_untag.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/unwrap/unwrap_finished_display_3dview_untag.gif" /></a></p>
+<hr />
+<h3 id="select-finished">Select Finished<a class="headerlink" href="#select-finished" title="Permanent link"></a></h3>
+<p>Select Islands tagged as Finished.</p>
+<p><a class="glightbox" href="../img/screen/unwrap/unwrap_finished_select.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/unwrap/unwrap_finished_select.gif" /></a></p>
+<p><a class="glightbox" href="../img/screen/unwrap/unwrap_finished_display_3dview_select.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/unwrap/unwrap_finished_display_3dview_select.gif" /></a></p>
+<hr />
+<h3 id="deselect-finished">Deselect Finished<a class="headerlink" href="#deselect-finished" title="Permanent link"></a></h3>
+<p>Deselect Islands tagged as Finished.</p>
+<p><a class="glightbox" href="../img/screen/unwrap/unwrap_finished_deselect.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/unwrap/unwrap_finished_deselect.gif" /></a></p>
+<p><a class="glightbox" href="../img/screen/unwrap/unwrap_finished_display_3dview_deselect.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/unwrap/unwrap_finished_display_3dview_deselect.gif" /></a></p>
+<hr />
+<h3 id="hide">Hide<a class="headerlink" href="#hide" title="Permanent link"></a></h3>
+<p>Hide Islands tagged as Finished.</p>
+<p><a class="glightbox" href="../img/screen/unwrap/unwrap_finished_hide.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/unwrap/unwrap_finished_hide.gif" /></a></p>
+<p><a class="glightbox" href="../img/screen/unwrap/unwrap_finished_display_3dview_hide.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/unwrap/unwrap_finished_display_3dview_hide.gif" /></a></p>
+<hr />
+<h3 id="unhide">Unhide<a class="headerlink" href="#unhide" title="Permanent link"></a></h3>
+<p>Unhide Islands tagged as Finished.</p>
+<hr />
+<h3 id="display-finished-toggle">Display Finished (Toggle)<a class="headerlink" href="#display-finished-toggle" title="Permanent link"></a></h3>
+<p>Display Finished/Unfinished Islands in the viewport.</p>
+<p><a class="glightbox" href="../img/screen/unwrap/unwrap_finished_display.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/unwrap/unwrap_finished_display.gif" /></a></p>
+<p><a class="glightbox" href="../img/screen/unwrap/unwrap_finished_display_3dview.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/unwrap/unwrap_finished_display_3dview.gif" /></a></p>
+<hr />
+<h3 id="finished-preferences">Finished preferences<a class="headerlink" href="#finished-preferences" title="Permanent link"></a></h3>
+<div class="admonition properties">
+<p class="admonition-title">Properties</p>
+<p><a class="glightbox" href="../img/screen/unwrap/finishing_prefs.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Unwrap" src="../img/screen/unwrap/finishing_prefs.png" /></a></p>
+</div>
+<ul>
+<li><strong>Pin Finished</strong> - Pin Islands after Tag Finished operation.</li>
+<li><strong>Auto Sort Islands</strong> - Automatically Sort Islands by Tags. Finished Islands move to the right side from Main UV Tile, Unfinished — to the left</li>
+<li><strong>Auto Update Draw</strong> - Update draw cache every time when mesh is changed.</li>
+<li><strong>Finished Color</strong> - Finished Islands viewport display color.</li>
+<li><strong>Unfinished Color</strong> - Unfinished Islands viewport display color.</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../seam_groups/" class="btn btn-neutral float-left" title="Seam Groups"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="zen_unwrap/" class="btn btn-neutral float-right" title="Zen Unwrap">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p><p>Copyright &copy; 2024-2025 <a href="https://zenmasters.team/">Zen Masters</a></p></p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../seam_groups/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="zen_unwrap/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+      <script src="../js/version-select.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+</script></body>
+</html>
