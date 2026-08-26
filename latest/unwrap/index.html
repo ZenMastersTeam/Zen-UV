@@ -5,10 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>Unwrap - Zen UV 5.3 for Blender</title>
+    <title>Unwrap - Zen UV 5.4 for Blender</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../extra.css" rel="stylesheet" />
         <link href="../css/version-select.css" rel="stylesheet" />
     
       <script>
@@ -43,7 +44,7 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
-          <a href=".." class="icon icon-home"> Zen UV 5.3 for Blender
+          <a href=".." class="icon icon-home"> Zen UV 5.4 for Blender
         </a><div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
       <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
@@ -85,95 +86,79 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../seam_groups/">Seam Groups</a>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Unwrap</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" >Unwrap</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#zen-unwrap">Zen Unwrap</a>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Unwrap</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#global-mark-settings">Global Mark Settings</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#unwrap-inplace">Unwrap Inplace</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#prepare-unwrap">Prepare Unwrap</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#mark-system">Mark System</a>
         <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#basic-rules">Basic rules:</a>
+    <li class="toctree-l4"><a class="reference internal" href="#mark-by-angle">Mark by Angle</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#processing-mode">Processing Mode</a>
+    <li class="toctree-l4"><a class="reference internal" href="#mark">Mark</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#the-behavior-of-the-operator-if-nothing-is-selected">The behavior of the operator if nothing is selected:</a>
+    <li class="toctree-l4"><a class="reference internal" href="#unmark">Unmark</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#the-behavior-of-the-operator-if-something-is-selected">The behavior of the operator if something is selected:</a>
-        <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#face-selection-mode">Face selection mode.</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#edge-selection-mode">Edge selection mode.</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#vertex-selection-mode">Vertex selection mode.</a>
+    <li class="toctree-l4"><a class="reference internal" href="#unmark-all">Unmark All</a>
     </li>
         </ul>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#settings">Settings</a>
+    <li class="toctree-l3"><a class="reference internal" href="#conversion-system">Conversion System</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#additional-options">Additional Options</a>
+    <li class="toctree-l3"><a class="reference internal" href="#mirror-seams">Mirror Seams</a>
     </li>
-        </ul>
+    <li class="toctree-l3"><a class="reference internal" href="#auto-seams-unwrap">Auto Seams &amp; Unwrap</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#unwrap-inplace">Unwrap Inplace</a>
+    <li class="toctree-l3"><a class="reference internal" href="#smooth-by-sharp">Smooth by Sharp</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#auto-unwrap">Auto Unwrap</a>
+    <li class="toctree-l3"><a class="reference internal" href="#finishing-system">Finishing System</a>
         <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#preprocess-settings">Preprocess Settings</a>
+    <li class="toctree-l4"><a class="reference internal" href="#sort-islands-by-tags">Sort Islands by Tags</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#postprocess-settings">Postprocess Settings</a>
+    <li class="toctree-l4"><a class="reference internal" href="#tag-finished">Tag Finished</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#texel-density-settings">Texel Density Settings</a>
+    <li class="toctree-l4"><a class="reference internal" href="#tag-unfinished">Tag Unfinished</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#unwrap-settings-mof-core">Unwrap Settings (MOF Core)</a>
+    <li class="toctree-l4"><a class="reference internal" href="#select-finished">Select Finished</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#advanced-settings">Advanced Settings</a>
+    <li class="toctree-l4"><a class="reference internal" href="#deselect-finished">Deselect Finished</a>
     </li>
-        </ul>
+    <li class="toctree-l4"><a class="reference internal" href="#hide">Hide</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#prepare-unwrap">Prepare Unwrap</a>
+    <li class="toctree-l4"><a class="reference internal" href="#unhide">Unhide</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#mark-system">Mark System</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#mark-by-angle">Mark by Angle</a>
+    <li class="toctree-l4"><a class="reference internal" href="#display-finished-toggle">Display Finished (Toggle)</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#mark">Mark</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#unmark">Unmark</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#unmark-all">Unmark All</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#conversion-system">Conversion System</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#mirror-seams">Mirror Seams</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#smooth-by-sharp">Smooth by Sharp</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#finishing-system">Finishing System</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#sort-islands-by-tags">Sort Islands by Tags</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#tag-finished">Tag Finished</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#tag-unfinished">Tag Unfinished</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#select-finished">Select Finished</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#deselect-finished">Deselect Finished</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#hide">Hide</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#unhide">Unhide</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#display-finished-toggle">Display Finished (Toggle)</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#finished-preferences">Finished preferences</a>
+    <li class="toctree-l4"><a class="reference internal" href="#finished-preferences">Finished preferences</a>
     </li>
         </ul>
     </li>
     </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="zen_unwrap/">Zen Unwrap</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="auto_unwrap/">Auto Unwrap</a>
+                </li>
+    </ul>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../select/">Select</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../transform/">Transform</a>
+                  <li class="toctree-l1"><a class="reference internal" >Transform</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../transform_sys/panels_and_description/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../transform_sys/independent_ops/">Independent Transform Operators</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../transform_sys/unified_transform_sys/">Unified Transform System</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../transform_sys/advanced_operators/">Advanced Transform</a>
+                </li>
+    </ul>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../stack/">Stack</a>
                   </li>
@@ -200,7 +185,7 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../trimsheet_creation/">Trim Sheet Management</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../trimsheet_operators/">Trim Sheet Operators</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../trimsheet_operators/">Trimsheet Operators</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../trimsheet_hotspot/">Hotspot Mapping</a>
                   </li>
@@ -215,7 +200,93 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../troubleshooting/">FAQs</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../changelg/">Changelog</a>
+                  <li class="toctree-l1"><a class="reference internal" >Changelog</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/">Summary</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_5.4.0/">Version 5.4.0</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_5.3.3/">Version 5.3.3</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_5.3.2/">Version 5.3.2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_5.3.1/">Version 5.3.1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_5.3.0/">Version 5.3.0</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_5.2.1/">Version 5.2.1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_5.2.0/">Version 5.2.0</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_5.1.0/">Version 5.1.0</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_5.0.3/">Version 5.0.3</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_5.0.2/">Version 5.0.2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_5.0.1/">Version 5.0.1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_5.0.0/">Version 5.0.0</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_4.5.4/">Version 4.5.4</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_4.5.2/">Version 4.5.2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_4.5.1/">Version 4.5.1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_4.5.0/">Version 4.5.0</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_4.4.2/">Version 4.4.2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_4.4.1/">Version 4.4.1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_4.4.0/">Version 4.4</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_4.3/">Version 4.3</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_4.2.1/">Version 4.2.1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_4.2/">Version 4.2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_4.1/">Version 4.1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_4.0.1/">Version 4.0.1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_4.0/">Version 4.0</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_3.1.1.0/">Version 3.1.0.4</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_3.1.0.2/">Version 3.1.0.2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_3.0.2/">Version 3.0.2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_3.0.1/">Version 3.0.1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_3.0/">Version 3.0</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_2.2.3/">Version 2.2.3</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_2.2.2/">Version 2.2.2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_2.2.1/">Version 2.2.1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_2.2/">Version 2.2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_2.1.3/">Version 2.1.3</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_2.1/">Version 2.1 Stacks</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_2.0/">Version 2.0 Transform</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_1.92/">Version 1.92 Texel Density</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_1.9/">Version 1.9 Texture Checker</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_1.8/">Version 1.8</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_1.7/">Version 1.7</a>
+                </li>
+    </ul>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../credits/">Credits</a>
                   </li>
@@ -231,7 +302,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
       <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="..">Zen UV 5.3 for Blender</a>
+          <a href="..">Zen UV 5.4 for Blender</a>
         
       </nav>
       <div class="wy-nav-content">
@@ -239,6 +310,7 @@
   <ul class="wy-breadcrumbs">
     <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
           <li class="breadcrumb-item">Modules</li>
+          <li class="breadcrumb-item">Unwrap</li>
       <li class="breadcrumb-item active">Unwrap</li>
     <li class="wy-breadcrumbs-aside">
     </li>
@@ -266,113 +338,27 @@
 </tbody>
 </table>
 </div>
-<h2 id="zen-unwrap">Zen Unwrap<a class="headerlink" href="#zen-unwrap" title="Permanent link"></a></h2>
-<p><a class="glightbox" href="../img/icons/zen-unwrap%402x.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Zen Unwrap" src="../img/icons/zen-unwrap%402x.png" /></a></p>
-<p>Magic button to Mark (Seams, Sharp), Set TD, Pack and Sort processed Islands. Zen Unwrap is a context-dependent operator and result of its operation depends on what was selected at the time it was run.</p>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>This operator supports the ability to <a href="../user_interface/#save-as-default-operator-properties">save default properties</a>.</p>
-</div>
 <hr />
-<h3 id="basic-rules">Basic rules:<a class="headerlink" href="#basic-rules" title="Permanent link"></a></h3>
+<h3 id="global-mark-settings">Global Mark Settings<a class="headerlink" href="#global-mark-settings" title="Permanent link"></a></h3>
+<p>Controls global edge-marking behavior across all operators in the Mark System.</p>
+<p>Enabling global settings provides centralized control over edge flags, ensuring tools throughout the Mark System apply Seams and Sharp edges consistently without needing to adjust settings on individual operators.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><a class="glightbox" href="../img/screen/unwrap/unwrap_global_mark_settings.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Global Mark Settings" src="../img/screen/unwrap/unwrap_global_mark_settings.png" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Fig. 1. Global Mark Settings menu</em></td>
+</tr>
+</tbody>
+</table>
 <ul>
-<li>The operator does not work in the <strong>UV Sync Selection Off</strong> mode of the <strong>UV Editor</strong>.</li>
-<li>The properties of the operator show the current selection mode. It matches Blender&rsquo;s selection mode.</li>
-<li>Use only a single mesh selection Mode (Vert, Edge or Face). Multiple Selection Modes will not work (Vert + Edge, etc.).</li>
-<li>The operator works the same way in the <strong>UV Editor</strong> and in the <strong>3D Viewport</strong>.</li>
-<li>Zen Unwrap always operates on islands in the active UV Map.</li>
-<li>If the marking is disabled in the operator, the division into islands will still occur. Seams will remain and lead to desync of what is happening in <strong>UV Editor</strong> and <strong>3D Viewport</strong>.</li>
+<li><strong>Use Global Mark Settings</strong> — Overrides individual tool settings with these global defaults. When disabled, each Mark System operator uses its own independent configuration.</li>
+<li><strong>Mark Seams</strong> — Automatically marks target edges as UV Seams during marking operations.</li>
+<li><strong>Mark Sharp Edges</strong> — Automatically marks target edges as Sharp Edges during marking operations.</li>
 </ul>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>Zen Unwrap will ignore existing UV Borders if they are not marked as Seams.</p>
-<ul>
-<li>To mark them use <a href="#conversion-system"><strong>Seams by UV Borders</strong></a> operator.</li>
-<li>To save not only UV Borders but Islands <a href="#tag-finished"><strong>Tag Finished</strong></a> operator. </li>
-</ul>
-</div>
-<hr />
-<h3 id="processing-mode">Processing Mode<a class="headerlink" href="#processing-mode" title="Permanent link"></a></h3>
-<p>The main operating mode switch.</p>
-<div class="admonition panel">
-<p class="admonition-title">Panel</p>
-<p><a class="glightbox" href="../img/screen/unwrap/zwrp_processing_mode.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Processing Mode" src="../img/screen/unwrap/zwrp_processing_mode.png" /></a></p>
-<ul>
-<li><strong>Whole Mesh</strong>. The processing will be done for the whole mesh. All already unwrapped islands will be re-unwrapped.</li>
-<li><strong>Selected Only</strong>. Processing will only be performed on the mesh selection.</li>
-<li><strong>Seam Switch</strong>. This mode will switch seams with subsequent unwrapping. Only selected edges with seams will be included in the switching process. The seams that are in the selection will be deleted (Unmarked). New seams will be assigned according to the selection mode (Face, Edge).</li>
-<li><strong>Unfold Vertices</strong>. In this case, regardless of the Select Mode, any selection will be treated as vertices. Selected vertices will be relaxed.</li>
-</ul>
-</div>
-<hr />
-<h3 id="the-behavior-of-the-operator-if-nothing-is-selected">The behavior of the operator if nothing is selected:<a class="headerlink" href="#the-behavior-of-the-operator-if-nothing-is-selected" title="Permanent link"></a></h3>
-<p>For using this just make sure you have no selection and press the Zen Unwrap button.</p>
-<ul>
-<li>If nothing is selected, the operator assumes that you want to unwrap the whole mesh. This mode can be used if you have already marked seams in some way and just want to unfold islands.</li>
-<li>When you start the operator, it may already be in <strong>Processing Mode - Selected Only</strong>. In this case, you will get a warning that the entire meshes will be unwrapped. If this suits you - confirm your action by pressing Ok.</li>
-</ul>
-<p><a class="glightbox" href="../img/screen/unwrap/zwrp_no_selection_popup.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Zen Unwrap Nothing Selected" src="../img/screen/unwrap/zwrp_no_selection_popup.png" /></a></p>
-<ul>
-<li>In case you have no marked seams and nothing selected, the operator will offer options for creating seams. Select the one you want.</li>
-</ul>
-<p><a class="glightbox" href="../img/screen/unwrap/zwrp_if_no_seams_popup.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Zen Unwrap Nothing Selected" src="../img/screen/unwrap/zwrp_if_no_seams_popup.png" /></a></p>
-<p><a class="glightbox" href="../img/gifs/zuwrp_operator/zwrp_no_sel_mode.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Zen Unwrap Nothing Selected Mode" src="../img/gifs/zuwrp_operator/zwrp_no_sel_mode.gif" /></a></p>
-<hr />
-<h3 id="the-behavior-of-the-operator-if-something-is-selected">The behavior of the operator if something is selected:<a class="headerlink" href="#the-behavior-of-the-operator-if-something-is-selected" title="Permanent link"></a></h3>
-<p>The main modes of operation are <strong>Face</strong> and <strong>Edge</strong>. Vertex mode is used as an auxiliary mode.</p>
-<h4 id="face-selection-mode">Face selection mode.<a class="headerlink" href="#face-selection-mode" title="Permanent link"></a></h4>
-<p><a class="glightbox" href="../img/gifs/zuwrp_operator/zwrp_faces_mode.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Zen Unwrap Face Mode" src="../img/gifs/zuwrp_operator/zwrp_faces_mode.gif" /></a></p>
-<p>This mode will create seams around the selected polygons. The entire mesh will be unwrapped based on the existing (and newly added) seams, depending on the <strong>Processing Mode</strong>. In fact, you will create a new island from the selected polygons.</p>
-<p>In case the object has no open edges (for example, a sphere), and you select all polygons before running the <strong>Zen Unwrap</strong> operator, the following situation may occur:<br />
-the operator first removes all seams (since all polygons are selected) and cannot create new ones, because there are no borders available.  </p>
-<p>As a result, you will receive a warning in the form of a popup message.</p>
-<p><a class="glightbox" href="../img/screen/unwrap/zwrp_nothing_produced_popup.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="no open edges popup" src="../img/screen/unwrap/zwrp_nothing_produced_popup.png" /></a></p>
-<h4 id="edge-selection-mode">Edge selection mode.<a class="headerlink" href="#edge-selection-mode" title="Permanent link"></a></h4>
-<p>In this mode, all selected edges will be marked as seams and then the mesh will be unwrapped.</p>
-<p><a class="glightbox" href="../img/gifs/zuwrp_operator/zwrp_edges_mode.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Zen Unwrap Edge Mode" src="../img/gifs/zuwrp_operator/zwrp_edges_mode.gif" /></a></p>
-<h4 id="vertex-selection-mode">Vertex selection mode.<a class="headerlink" href="#vertex-selection-mode" title="Permanent link"></a></h4>
-<p>Working in <strong>Face</strong> or <strong>Edge</strong> mode makes changes to the selected islands anyway. If you need to unwrap an island without adding seams or splittings it, use <strong>Vertex</strong> selection mode. You can select only one vertex or several. This will tell the operator which island you want to work with. It is most convenient to use this mode together with the <strong>Processing Mode - Selected Only</strong>.</p>
-<p><a class="glightbox" href="../img/gifs/zuwrp_operator/zwrp_vertex_mode.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Zen Unwrap Vertex Mode" src="../img/gifs/zuwrp_operator/zwrp_vertex_mode.gif" /></a></p>
-<hr />
-<h3 id="settings">Settings<a class="headerlink" href="#settings" title="Permanent link"></a></h3>
-<div class="admonition properties">
-<p class="admonition-title">Properties</p>
-<p><a class="glightbox" href="../img/screen/unwrap/zwrp_op_prop.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Zen Unwrap Settings" src="../img/screen/unwrap/zwrp_op_prop.png" /></a></p>
-</div>
-<ul>
-<li>
-<p><strong>Unwrap Method</strong> - Unwrapping method.</p>
-<ul>
-<li><em>Conformal</em> - Fast algorithm that gives good results.</li>
-<li><em>Angle-Based</em> - More accurate algorithm, but a bit slower.</li>
-<li><em>Minimum Stretch</em> - Uses Scalable Locally Injective Mapping (SLIM). This tries to minimize distortion for both areas and angles.</li>
-</ul>
-</li>
-<li>
-<p><strong>Mark Settings</strong> - Operator settings to enable automatic seam marking. See <a href="#mark-by-angle">Mark Settings (Global Mode)</a> for details.</p>
-</li>
-<li><strong>Fill Holes</strong> - Virtual fill holes in mesh before unwrapping, to avoid overlaps and preserve symmetry.</li>
-<li><strong>Texel Density</strong> - Sets Texel Density. Works only if Pack Unwrapped option is disabled.<ul>
-<li><em>Skip</em> - Do not make any texel density corrections.</li>
-<li><em>Global Preset</em> - Set value described in Texel Density panel as <a href="../texel_density/#global-td-preset">Global TD Preset</a>. </li>
-<li><em>Averaged</em> - Sets the averaged Texel Density for newly created islands. This keeps all islands about the same size as you work. </li>
-</ul>
-</li>
-<li><strong>Pack Unwrapped</strong> - After the islands have been created, this option will start the <strong>Packing</strong> process of the islands. The <a href="../pack/#pack-engine"><strong>Pack Engine</strong></a> specified in the <strong>Pack System</strong> will be used.</li>
-<li><strong>Sort Unwrapped</strong> - After the islands have been created, this option will start the process of <strong>Sorting</strong> the islands by <a href="#finishing-system"><strong>Finished</strong></a> tag.</li>
-</ul>
-<h3 id="additional-options">Additional Options<a class="headerlink" href="#additional-options" title="Permanent link"></a></h3>
-<p>You can change main Zen Unwrap settings before running the operator.  </p>
-<div class="admonition panel">
-<p class="admonition-title">Panel</p>
-<p><a class="glightbox" href="../img/screen/unwrap/zwrp_auto_uv_sync.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Auto UV Sync" src="../img/screen/unwrap/zwrp_auto_uv_sync.png" /></a></p>
-<ul>
-<li><strong>Auto UV Sync</strong>. Automatically enables the <strong>UV Sync Selection</strong> mode every time the operator starts.</li>
-<li><strong>Processing Mode</strong>. The main operating mode switch.</li>
-<li><strong>Pack Unwrapped</strong>. After the islands have been created, this option will start the <strong>Packing</strong> process of the islands. The <a href="../pack/#pack-engine"><strong>Pack Engine</strong></a> specified in the <strong>Pack System</strong> will be used.</li>
-<li><strong>Sort Unwrapped</strong>. After the islands have been created, this option will start the process of <strong>Sorting</strong> the islands by <a href="#finishing-system"><strong>Finished</strong></a> tag.</li>
-</ul>
-</div>
 <hr />
 <h2 id="unwrap-inplace">Unwrap Inplace<a class="headerlink" href="#unwrap-inplace" title="Permanent link"></a></h2>
 <p>Unwrap Islands and Faces keeping their Size, Orientation and Location in UV Space.</p>
@@ -408,126 +394,6 @@ the operator first removes all seams (since all polygons are selected) and canno
 <p class="admonition-title">Note</p>
 <p>Available only in UV Editor.</p>
 </div>
-<hr />
-<h2 id="auto-unwrap">Auto Unwrap<a class="headerlink" href="#auto-unwrap" title="Permanent link"></a></h2>
-<p>Automated UV unwrapper based on a utility written by Eskil Steenberg www.ministryofflat.com.</p>
-<p>This operator is essentially a bridge for working with <strong>MinistryOfFlat</strong>.<br />
-This software is designed <strong>exclusively for Windows</strong>, so this operator will not be available on <strong>Linux</strong> or <strong>Mac OS</strong>.</p>
-<p><a href="https://www.quelsolaar.com/ministry_of_flat/">https://www.quelsolaar.com/ministry_of_flat/</a></p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>The <strong>Auto Unwrap</strong> operator utilizes a third-party application, which has its own license terms.<br />
-Please review the license agreement of the external software before use and determine whether you can legally use it.</p>
-</div>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Since this software is third-party, it is not distributed with <strong>Zen UV</strong>.<br />
-Therefore, we will outline the full activation process, starting from the first click on the <strong>Auto Unwrap</strong> button.</p>
-</div>
-<p>If you have just installed the add-on, go to the <strong>Unwrap</strong> tab in the <strong>Zen UV</strong> panel in any context (<strong>UV Editor</strong> or <strong>3D View</strong>).<br />
-Find and click the <strong>Auto Unwrap</strong> button. You will see a popup like the one shown in the screenshot below.</p>
-<p><a class="glightbox" href="../img/screen/unwrap/MOF_License_Screen.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="MOF License" src="../img/screen/unwrap/MOF_License_Screen.png" /></a></p>
-<p>The message displayed will be:</p>
-<pre><code>'You are about to download "UV Automated Unwrapper" from the Ministry of Flat.',
-'Please note that by pressing the "OK" button, you acknowledge that you have read and agree',
-'to the terms and conditions of the free license associated with this tool.',
-'We recommend reviewing these terms carefully to understand your rights and responsibilities.'
-</code></pre>
-<p>If you agree with the stated terms, press the <strong>OK</strong> button.<br />
-The software will be automatically downloaded and installed into the Blender settings folder:<br />
-<code>scripts\presets\zen_uv\auto_uv_unwrap\MinistryOfFlat_Release</code>.<br />
-For more details, refer to the <strong>Modules</strong> section in <a href="../addon_prefs/#modules">Addon Preferences</a>.</p>
-<p>The download time depends on your internet speed, but in general, it happens quite quickly.<br />
-This software <strong>does not require installation</strong> and runs in the console, so <strong>no special permissions</strong> are typically needed.<br />
-However, if any issues arise, ensure that <strong>Blender has permission to write to disk</strong>.<br />
-Once the download is complete, the unwrapping process will start immediately using the parameters specified in the operator settings.</p>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>You can configure the operator&rsquo;s properties before running it.<br />
-You can also save your own presets using Blender&rsquo;s standard preset system.<br />
-<a class="glightbox" href="../img/screen/unwrap/auto_unwrap_op_prop_01.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Auto Unwrap" src="../img/screen/unwrap/auto_unwrap_op_prop_01.png" /></a></p>
-</div>
-<p>This utility is universal, so we have already set up some <strong>default configurations</strong> for better results.<br />
-However, you can <strong>create and save your own presets</strong> for any specific needs.<br />
-If you want to return to the default settings, use the <strong>Restore Operator Defaults</strong> function.</p>
-<p><a class="glightbox" href="../img/screen/unwrap/MOF_restore_defailts.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Restore Operator Defaults" src="../img/screen/unwrap/MOF_restore_defailts.png" /></a></p>
-<p>Below, we provide some explanations about <strong>why there are so many settings</strong> and <strong>what to expect when changing them</strong>.<br />
-First of all, it’s important to understand that <strong>we do not modify your geometry</strong>, only the <strong>current UV map</strong>.<br />
-Thus, <strong>geometry attributes</strong> (such as <strong>Vertex Maps</strong>, <strong>Vertex Colors</strong>) will remain <strong>unchanged</strong>.<br />
-Inactive <strong>UV Maps</strong> will also stay the same.</p>
-<p><a class="glightbox" href="../img/screen/unwrap/MOF_properties_blocks.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="MOF properties blocks" src="../img/screen/unwrap/MOF_properties_blocks.png" /></a></p>
-<ol>
-<li><strong>Preprocess</strong> - These settings activate processes <strong>before</strong> sending data to MOF.</li>
-<li><strong>Postprocess</strong> - These settings activate processes <strong>after</strong> the UV map is returned from MOF.</li>
-<li><strong>Texel Density</strong> - Allows you to set TD for automatic unwrapping. This process is controlled <strong>directly by MOF</strong>.</li>
-<li><strong>Unwrap Settings</strong> - These settings configure <strong>MOF’s core behavior</strong>.</li>
-<li><strong>Advanced Settings</strong> - These settings provide additional controls inside <strong>MOF</strong> and are marked as <strong>&ldquo;Advanced&rdquo;</strong>.<br />
-   Let&rsquo;s quote the original developer:</li>
-</ol>
-<blockquote>
-<p><strong>&ldquo;All following settings are for debugging purposes only.<br />
-Making any change to these settings is likely to result in worse UV mapping and/or longer processing time.&rdquo;</strong><br />
-— Ministry of Flat</p>
-</blockquote>
-<hr />
-<h3 id="preprocess-settings"><strong>Preprocess Settings</strong><a class="headerlink" href="#preprocess-settings" title="Permanent link"></a></h3>
-<p><a class="glightbox" href="../img/screen/unwrap/MOF_preprocess.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Preprocess" src="../img/screen/unwrap/MOF_preprocess.png" /></a></p>
-<ul>
-<li><strong>Force Hard Surface</strong> - Forces the algorithm to treat the surface as a <strong>hard surface</strong>, ensuring precise handling of <strong>sharp edges</strong> and <strong>rigid structures</strong>.</li>
-<li><strong>Separate By Material</strong> - Splits the <strong>mesh by materials</strong> before unwrapping.</li>
-<li><strong>Separate By Sharp Edges</strong> - Splits the <strong>mesh by sharp edges</strong> before unwrapping.</li>
-<li><strong>Triangulate Mesh</strong> - Converts <strong>n-gons</strong> (faces with 4+ vertices) into triangles.<br />
-  If the mesh contains complex <strong>n-gons</strong>, they may be <strong>internally split</strong> within <strong>MOF</strong>,<br />
-  while still being treated as a <strong>single structure</strong> in the mesh.<br />
-  This can result in <strong>gaps</strong> in what should remain unified, appearing as <strong>stretched polygons</strong>.<br />
-<strong>This issue must be corrected manually.</strong></li>
-</ul>
-<hr />
-<h3 id="postprocess-settings"><strong>Postprocess Settings</strong><a class="headerlink" href="#postprocess-settings" title="Permanent link"></a></h3>
-<p><a class="glightbox" href="../img/screen/unwrap/MOF_postprocess.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Postprocess" src="../img/screen/unwrap/MOF_postprocess.png" /></a></p>
-<ul>
-<li><strong>Mark Seams</strong> - Automatically assigns <strong>seams</strong>.</li>
-<li><strong>Correct Self-Intersecting</strong> - Fixes <strong>UV faces</strong> that have <strong>self-intersecting UV edges</strong>.</li>
-</ul>
-<hr />
-<h3 id="texel-density-settings"><strong>Texel Density Settings</strong><a class="headerlink" href="#texel-density-settings" title="Permanent link"></a></h3>
-<p><a class="glightbox" href="../img/screen/unwrap/MOF_TD.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Texel Density" src="../img/screen/unwrap/MOF_TD.png" /></a></p>
-<ul>
-<li><strong>Use Texel Density</strong> - Scales the UVs to match the <strong>specified texel density value</strong>.</li>
-<li><strong>Texture Size</strong> - Image size preset.</li>
-<li><strong>Texel Density</strong> - The texel density value.</li>
-</ul>
-<hr />
-<h3 id="unwrap-settings-mof-core"><strong>Unwrap Settings (MOF Core)</strong><a class="headerlink" href="#unwrap-settings-mof-core" title="Permanent link"></a></h3>
-<p>The following settings were created by the <strong>MOF developer</strong>, so we present them <strong>as they are</strong>.</p>
-<p><a class="glightbox" href="../img/screen/unwrap/MOF_unwrap_settings.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Unwrap Settings" src="../img/screen/unwrap/MOF_unwrap_settings.png" /></a></p>
-<ul>
-<li><strong>Auto Detect Hard Edges</strong> - The UV unwrapper will try to <strong>separate all hard edges</strong>.<br />
-  Useful for <strong>lightmapping</strong> and <strong>normal mapping</strong>.</li>
-<li><strong>Use Normal</strong> - Uses the <strong>model&rsquo;s normals</strong> to help classify polygons.</li>
-<li><strong>Overlap Identical Parts</strong> - Overlaps <strong>identical parts</strong> to save <strong>texture space</strong>.</li>
-<li><strong>Overlap Mirrored Parts</strong> - Overlaps <strong>mirrored parts</strong> to save <strong>texture space</strong>.</li>
-<li><strong>Scale UV to Worldspace</strong> - Scales the UVs to match their <strong>real-world scale</strong>, extending <strong>beyond the 0-1 UV space</strong>.</li>
-</ul>
-<hr />
-<h3 id="advanced-settings"><strong>Advanced Settings</strong><a class="headerlink" href="#advanced-settings" title="Permanent link"></a></h3>
-<p><a class="glightbox" href="../img/screen/unwrap/MOF_advanced_settings.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Advanced Settings" src="../img/screen/unwrap/MOF_advanced_settings.png" /></a></p>
-<ul>
-<li><strong>Stretch</strong> - Stretches islands <strong>too wide</strong> to fit within the texture.</li>
-<li><strong>Packing</strong> - Packs <strong>UV islands</strong> into a <strong>rectangular layout</strong>.</li>
-<li><strong>Cut</strong> - Cuts <strong>awkward shapes</strong> to <strong>optimize layout coverage</strong>.</li>
-<li><strong>Squares</strong> - Identifies <strong>individual polygons</strong> with right angles.</li>
-<li><strong>Vertex Weld</strong> - Merges <strong>duplicate vertices</strong>.<br />
-<strong>Does not affect</strong> the <strong>output polygon</strong> or <strong>vertex data</strong>.</li>
-<li><strong>Quads</strong> - Detects <strong>triangle pairs</strong> that can form <strong>quads</strong>, improving <strong>patch distribution</strong>.</li>
-</ul>
-<p>The <strong>Advanced Settings</strong> list is much larger.<br />
-We have highlighted only a few <strong>useful options</strong>.<br />
-You can manually enable <strong>other options</strong> using <strong>Extra Arguments</strong>.</p>
-<ul>
-<li><strong>Extra Arguments</strong> - Allows <strong>additional command-line arguments</strong> to be passed to the <strong>UV unwrapping application</strong>.</li>
-</ul>
-<p>For the <strong>full list of arguments</strong>, refer to: <a href="../MOF_Arguments/">MOF Arguments</a>.</p>
 <hr />
 <h2 id="prepare-unwrap">Prepare Unwrap<a class="headerlink" href="#prepare-unwrap" title="Permanent link"></a></h2>
 <p>Prepares the object for unwrapping. Remove all UV maps, seams, sharp edges, and finished UV marks.
@@ -573,15 +439,6 @@ may break rigs, constraints, or animations.</p>
 <hr />
 <h3 id="mark-by-angle">Mark by Angle<a class="headerlink" href="#mark-by-angle" title="Permanent link"></a></h3>
 <p>Mark edges as Seams and/or Sharp edges by Angle.</p>
-<div class="admonition global mark settings">
-<p class="admonition-title">Global</p>
-<p><a class="glightbox" href="../img/screen/unwrap/mark_by_angle_prefs.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/unwrap/mark_by_angle_prefs.png" /></a></p>
-<ul>
-<li><strong>Use Global Mark Settings</strong>. In this mode, all the operators from the Mark System use the settings below. If off, every operator uses its own settings.</li>
-<li><strong>Mark Seams</strong>. Automatically assign Seams</li>
-<li><strong>Mark Sharp Edges</strong>. Automatically assign Sharp edges</li>
-</ul>
-</div>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>This operator supports the ability to <a href="../user_interface/#save-as-default-operator-properties">save default properties</a>.</p>
@@ -648,6 +505,32 @@ may break rigs, constraints, or animations.</p>
 <p><a class="glightbox" href="../img/screen/unwrap/unwrap_mirror_2.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/unwrap/unwrap_mirror_2.gif" /></a></p>
 <p>Holding <code>Shift</code> you can select both directions and flip Seams along the selected Axis and direction.</p>
 <p><a class="glightbox" href="../img/screen/unwrap/unwrap_mirror_3.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/unwrap/unwrap_mirror_3.gif" /></a></p>
+<hr />
+<h2 id="auto-seams-unwrap">Auto Seams &amp; Unwrap<a class="headerlink" href="#auto-seams-unwrap" title="Permanent link"></a></h2>
+<p>Partitions mesh geometry into logical topological charts based on surface planarity, automatically places UV seams along chart boundaries, and optionally unwraps the resulting UV islands in a single pass.</p>
+<p>This operator provides an automated unwrapping pipeline suitable for both organic meshes and hard-surface models, eliminating manual seam placement while minimizing UV area distortion and preventing micro-island fragmentation.</p>
+<div class="admonition properties">
+<p class="admonition-title">Properties</p>
+<p><a class="glightbox" href="../img/screen/unwrap/auto_seams_op_prop.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Auto Seams &amp; Unwrap Operator Properties" src="../img/screen/unwrap/auto_seams_op_prop.png" /></a></p>
+</div>
+<ul>
+<li><strong>Mode</strong> — Quick presets tailored for standard surface workflows:<ul>
+<li><em>Hard Surface</em> — Sets <strong>Quality</strong> to <code>0.5</code> and <strong>Hard Edge Angle</strong> to <code>30°</code> for mechanical objects and hard-surface models with bevels.</li>
+<li><em>Organic</em> — Sets <strong>Quality</strong> to <code>0.32</code> and <strong>Hard Edge Angle</strong> to <code>0°</code> (disabled) for character models, creatures, and smooth organic surfaces.</li>
+<li><em>Custom</em> — Switches to manual control, allowing custom property adjustments.</li>
+</ul>
+</li>
+<li><strong>Hard Edge Angle</strong> — Angle threshold at which sharp edges are strictly marked as UV seams. Setting this to <code>0°</code> disables hard-edge seam splitting for organic geometry.</li>
+<li><strong>Quality</strong> — Controls chart merging aggressiveness:<ul>
+<li><em>Lower values</em> — Produce more UV islands with sharper, highly accurate topological boundaries.</li>
+<li><em>Higher values</em> — Merge charts more aggressively, producing fewer total islands at the expense of higher UV stretch.</li>
+</ul>
+</li>
+<li><strong>Boundary Smoothing</strong> — Aggressiveness of chart boundary contour smoothing after region merging. Helps create cleaner, less jagged UV seam lines.</li>
+<li><strong>Min Island Faces</strong> — Minimum face count required for an island. Smaller chart fragments are absorbed into surrounding neighbor charts before seam generation to prevent micro-islands.</li>
+<li><strong>Unwrap</strong> — Enables automatic execution of the standard UV Unwrap pass immediately after seams are placed.</li>
+<li><strong>UV Unwrap Panel</strong> — Embedded Blender UV Unwrap settings (e.g., <strong>Method</strong>, <strong>Margin</strong>, <strong>Correct Aspect</strong>, <strong>Iterations</strong>) applied when <strong>Unwrap</strong> is active.</li>
+</ul>
 <hr />
 <h2 id="smooth-by-sharp">Smooth by Sharp<a class="headerlink" href="#smooth-by-sharp" title="Permanent link"></a></h2>
 <p>Before Blender v 4.1.0 - Toggle between Auto Smooth 180° (with sharp edges) and regular smooth modes</p>
@@ -739,7 +622,7 @@ may break rigs, constraints, or animations.</p>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
         <a href="../seam_groups/" class="btn btn-neutral float-left" title="Seam Groups"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../select/" class="btn btn-neutral float-right" title="Select">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="zen_unwrap/" class="btn btn-neutral float-right" title="Zen Unwrap">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -766,7 +649,7 @@ may break rigs, constraints, or animations.</p>
       <span><a href="../seam_groups/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../select/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="zen_unwrap/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

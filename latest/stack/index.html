@@ -5,10 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>Stack - Zen UV 5.3 for Blender</title>
+    <title>Stack - Zen UV 5.4 for Blender</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../extra.css" rel="stylesheet" />
         <link href="../css/version-select.css" rel="stylesheet" />
     
       <script>
@@ -43,7 +44,7 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
-          <a href=".." class="icon icon-home"> Zen UV 5.3 for Blender
+          <a href=".." class="icon icon-home"> Zen UV 5.4 for Blender
         </a><div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
       <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
@@ -85,23 +86,35 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../seam_groups/">Seam Groups</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../unwrap/">Unwrap</a>
+                  <li class="toctree-l1"><a class="reference internal" >Unwrap</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../unwrap/">Unwrap</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../unwrap/zen_unwrap/">Zen Unwrap</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../unwrap/auto_unwrap/">Auto Unwrap</a>
+                </li>
+    </ul>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../select/">Select</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../transform/">Transform</a>
+                  <li class="toctree-l1"><a class="reference internal" >Transform</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../transform_sys/panels_and_description/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../transform_sys/independent_ops/">Independent Transform Operators</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../transform_sys/unified_transform_sys/">Unified Transform System</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../transform_sys/advanced_operators/">Advanced Transform</a>
+                </li>
+    </ul>
                   </li>
                   <li class="toctree-l1 current"><a class="reference internal current" href="#">Stack</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#stack-sys-properties">Stack sys properties</a>
+    <li class="toctree-l2"><a class="reference internal" href="#quick-start-workflow">Quick Start Workflow</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#stack-operator">Stack Operator</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#simple-stack-operator">Simple Stack Operator</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#simple-unstack-operator">Simple Unstack Operator</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#unstack-operator">Unstack Operator</a>
+    <li class="toctree-l2"><a class="reference internal" href="#stack-panel">Stack Panel</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#stack-components">Stack Components</a>
         <ul>
@@ -111,45 +124,105 @@
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#singles">Singles</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#select-stack-parts">Select Stack Parts</a>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#stack-global-properties">Stack Global Properties</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#matching-mode">Matching Mode</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#primary-source">Primary Source</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#ignore-pinned">Ignore Pinned</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#indication">Indication</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#operator-global-mode">Operator Global Mode</a>
     </li>
         </ul>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#stacks-display-and-select">Stacks Display and Select</a>
+    <li class="toctree-l2"><a class="reference internal" href="#stacking-operators">Stacking Operators</a>
         <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#uv-island-counter">UV Island Counter</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#copy-paste-system">Copy / Paste System</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#manual-stack">Manual Stack</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#area-matching">Area Matching</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#move-only">Move Only</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#add">Add</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#delete">Delete</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#add-islands">Add Islands</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#select-islands">Select Islands</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#analyze-stack">Analyze Stack</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#remove-all">Remove All</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#stack-all">Stack All</a>
+    <li class="toctree-l3"><a class="reference internal" href="#stack-all-exact">Stack All (Exact)</a>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#stack-selected">Stack Selected</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#unstack-all">Unstack All</a>
+    <li class="toctree-l3"><a class="reference internal" href="#stack-to-selected">Stack To Selected</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#unstack-selected">Unstack Selected</a>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#unstacking-operators">Unstacking Operators</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#unstack">Unstack</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#tools">Tools</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#copy-paste-system">Copy / Paste System</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#copy">Copy</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#paste">Paste</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage-samples">Usage Samples</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#simple-stack">Simple Stack</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#shift-islands">Shift Islands</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#uv-island-counter">UV Island Counter</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#spread-stack">Spread Stack</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#sort-stack">Sort Stack</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#convert-pinned-finished">Convert Pinned / Finished</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#display-and-select">Display and Select</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#display-properties">Display Properties</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#display-operators">Display Operators</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#select-operators">Select Operators</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#select-stack-parts">Select Stack Parts</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#select-similar-islands">Select Similar Islands</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#select-stacked">Select Stacked</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#select-overlap">Select Overlap</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#select-flipped-islands">Select Flipped Islands</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#select-stretched-faces">Select Stretched Faces</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#manual-stack">Manual Stack</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#analyze-stack">Analyze Stack</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#stack-all-selected">Stack All / Selected</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#unstack-all-selected">Unstack All / Selected</a>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#display-manual-stacks">Display Manual Stacks</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#matching-modes-comparison">Matching Modes Comparison</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#sorting-example-across-matching-modes">Sorting Example Across Matching Modes</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#why-not-use-topology-only-for-everything">Why Not Use Topology Only for Everything?</a>
     </li>
         </ul>
     </li>
@@ -178,7 +251,7 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../trimsheet_creation/">Trim Sheet Management</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../trimsheet_operators/">Trim Sheet Operators</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../trimsheet_operators/">Trimsheet Operators</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../trimsheet_hotspot/">Hotspot Mapping</a>
                   </li>
@@ -193,7 +266,93 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../troubleshooting/">FAQs</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../changelg/">Changelog</a>
+                  <li class="toctree-l1"><a class="reference internal" >Changelog</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/">Summary</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_5.4.0/">Version 5.4.0</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_5.3.3/">Version 5.3.3</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_5.3.2/">Version 5.3.2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_5.3.1/">Version 5.3.1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_5.3.0/">Version 5.3.0</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_5.2.1/">Version 5.2.1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_5.2.0/">Version 5.2.0</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_5.1.0/">Version 5.1.0</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_5.0.3/">Version 5.0.3</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_5.0.2/">Version 5.0.2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_5.0.1/">Version 5.0.1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_5.0.0/">Version 5.0.0</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_4.5.4/">Version 4.5.4</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_4.5.2/">Version 4.5.2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_4.5.1/">Version 4.5.1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_4.5.0/">Version 4.5.0</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_4.4.2/">Version 4.4.2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_4.4.1/">Version 4.4.1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_4.4.0/">Version 4.4</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_4.3/">Version 4.3</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_4.2.1/">Version 4.2.1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_4.2/">Version 4.2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_4.1/">Version 4.1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_4.0.1/">Version 4.0.1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_4.0/">Version 4.0</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_3.1.1.0/">Version 3.1.0.4</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_3.1.0.2/">Version 3.1.0.2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_3.0.2/">Version 3.0.2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_3.0.1/">Version 3.0.1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_3.0/">Version 3.0</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_2.2.3/">Version 2.2.3</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_2.2.2/">Version 2.2.2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_2.2.1/">Version 2.2.1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_2.2/">Version 2.2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_2.1.3/">Version 2.1.3</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_2.1/">Version 2.1 Stacks</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_2.0/">Version 2.0 Transform</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_1.92/">Version 1.92 Texel Density</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_1.9/">Version 1.9 Texture Checker</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_1.8/">Version 1.8</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_1.7/">Version 1.7</a>
+                </li>
+    </ul>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../credits/">Credits</a>
                   </li>
@@ -209,7 +368,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
       <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="..">Zen UV 5.3 for Blender</a>
+          <a href="..">Zen UV 5.4 for Blender</a>
         
       </nav>
       <div class="wy-nav-content">
@@ -227,201 +386,933 @@
             <div class="section" itemprop="articleBody">
               
                 <h1 id="stack">Stack<a class="headerlink" href="#stack" title="Permanent link"></a></h1>
-<p>This panel contains tools for grouping similar islands into stacks.</p>
-<div class="admonition panel">
-<p class="admonition-title">Panel</p>
-<p><a class="glightbox" href="../img/screen/stack/stack_main_panel.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Stack" src="../img/screen/stack/stack_main_panel.png" /></a></p>
-</div>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>Watch the video explaining how <strong>Stack</strong> works.</p>
-<p><div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%;">
-<iframe src="https://www.youtube.com/embed/Yj2SecY-c1Y?start=142&end=313" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen="" seamless="" frameborder="0"></iframe>
-</div></p>
-</div>
-<h2 id="stack-sys-properties">Stack sys properties<a class="headerlink" href="#stack-sys-properties" title="Permanent link"></a></h2>
-<div class="admonition properties">
-<p class="admonition-title">Properties</p>
-<p><a class="glightbox" href="../img/screen/stack/stack_options.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Stack" src="../img/screen/stack/stack_options.png" /></a></p>
-</div>
+<p>The <strong>Stack</strong> system in Zen UV provides a comprehensive suite of tools for finding, grouping, and precisely aligning topologically identical UV islands. Stacking allows multiple duplicate mesh components to share the exact same UV space, significantly optimizing texture budget and increasing overall Texel Density.</p>
+<p>With the Stack system, you can:</p>
 <ul>
-<li><strong>Move Only</strong> - Don&rsquo;t fit Islands. Just move to the same position.</li>
-<li><strong>Stack Offset</strong> - The offset value. Can be used for preventing auto merging the UV vertices.</li>
-<li><strong>Unstack Direction</strong> - The Direction where the island will be shifted.</li>
+<li><strong>Automate Baking Preparation</strong> — Instantly stack identical mesh fragments with exact vertex-to-vertex alignment.</li>
+<li><strong>Control Texel Density</strong> — Flexible matching algorithms let you enforce strict 3D dimensions or allow variable mesh scaling.</li>
+<li><strong>Identify Topological Errors</strong> — Diagnostic viewport overlays highlight flipped faces, overlaps, area distortions, and mismatched copies.</li>
+<li><strong>Handle Complex Geometry</strong> — Utilize Manual Stacks and diagnostic table metrics to group problematic islands when automated topology checks fail due to mesh inaccuracies.</li>
 </ul>
 <hr />
-<h2 id="stack-operator">Stack Operator<a class="headerlink" href="#stack-operator" title="Permanent link"></a></h2>
-<p>Collect all similar islands on stacks.</p>
-<div class="admonition properties">
-<p class="admonition-title">Properties</p>
-<p><a class="glightbox" href="../img/screen/stack/stack_op_prop.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/stack/stack_op_prop.png" /></a></p>
-</div>
-<ul>
-<li><strong>Selected Only</strong> - Collect all islands similar to the selected island and stack them at the location of the selected island.</li>
-</ul>
-<hr />
-<h2 id="simple-stack-operator">Simple Stack Operator<a class="headerlink" href="#simple-stack-operator" title="Permanent link"></a></h2>
-<p>Places the islands in the stack, with no respect for their topology.\</p>
-<div class="admonition properties">
-<p class="admonition-title">Properties</p>
-<p><a class="glightbox" href="../img/screen/stack/simple_stack_op_prop.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/stack/simple_stack_op_prop.png" /></a></p>
-</div>
-<ul>
-<li><strong>Position Type</strong> - The position type where the islands will be placed.<ul>
-<li><em>Average</em> - Averaged islands positions.</li>
-<li><em>UV Area Center</em> - The center of the UV Area.</li>
-<li><em>Custom Position</em> - Custom user defined position.</li>
-<li><em>2D Cursor</em> - The 2D Cursor location.</li>
-</ul>
+<h2 id="quick-start-workflow">Quick Start Workflow<a class="headerlink" href="#quick-start-workflow" title="Permanent link"></a></h2>
+<p>Follow this standard workflow to efficiently process and verify UV stacks on your model:</p>
+<ol>
+<li>
+<p><strong>Perform Initial Auto-Stacking:</strong>
+   Click <strong>Stack All (Exact)</strong>. This safely groups and stacks all identical UV islands that share exact 3D dimensions without risking mesh distortion.</p>
 </li>
-<li><strong>Position</strong> - The location where stack will be placed.</li>
-</ul>
-<hr />
-<h2 id="simple-unstack-operator">Simple Unstack Operator<a class="headerlink" href="#simple-unstack-operator" title="Permanent link"></a></h2>
-<div class="admonition properties">
-<p class="admonition-title">Properties</p>
-<p><a class="glightbox" href="../img/screen/stack/simple_unstack_op_prop.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Simple Unstack Operator" src="../img/screen/stack/simple_unstack_op_prop.png" /></a></p>
-</div>
-<ul>
-<li><strong>Mode</strong> - The position where the islands will be placed.<ul>
-<li><em>Expand</em> - Expand selected stack using margin. </li>
-<li><em>Offset</em> - Offset selected stack to the right side.</li>
-</ul>
+<li>
+<p><strong>Visually Inspect Results:</strong>
+   Enable the <strong>Stack Types</strong> or <strong>Similar</strong> display overlay (👁) to color-code islands in the viewport. Verify which islands were successfully assigned as Primaries, Replicas, or Singles.</p>
 </li>
-<li><strong>Offset</strong> - The amount by which all islands except the first one will be shifted.</li>
-<li><strong>Margin</strong> - Distance between the islands.</li>
-<li><strong>Use Seams</strong> - Use seams as an island separator to prevent stacked islands from self-welding.</li>
-</ul>
-<hr />
-<h2 id="unstack-operator">Unstack Operator<a class="headerlink" href="#unstack-operator" title="Permanent link"></a></h2>
-<p>Shift Islands from Stacks in a given direction.</p>
-<div class="admonition properties">
-<p class="admonition-title">Properties</p>
-<p><a class="glightbox" href="../img/screen/stack/unstack_properties.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="unstack properties" src="../img/screen/stack/unstack_properties.png" /></a></p>
-</div>
-<ul>
-<li><strong>Mode</strong> - Mode to Unstack Islands<ul>
-<li><em>Global</em> - Unstack all Similar Islands</li>
-<li><em>Stacked</em> - Unstack Stacked Islands</li>
-<li><em>Overlapped</em> - Unstack Overlapped Islands</li>
-<li><em>Selected</em> - Unstack Selected Islands</li>
-</ul>
+<li>
+<p><strong>Process Remaining Complex Islands:</strong>
+   If visually identical islands remain unstacked due to minor scale or origin variations, select them and run <strong>Stack Selected</strong> with <strong>Matching Mode</strong> set to <strong>Topology &amp; Scale</strong>.</p>
 </li>
-<li><strong>Only UV Area</strong> - Unstack islands located in the UV Area only</li>
-<li><strong>Iterative Unstack</strong> - Unstack Islands iteratively with moving in given direction</li>
-<li><strong>Use Seams</strong> - Use seams as an island separator to prevent stacked islands from self-welding</li>
-<li><strong>Direction</strong> - The unstack direction</li>
-<li><strong>Break Stacks</strong> - Shift Islands from Stacks by given increment until all of them will be individually placed</li>
-<li><strong>Unstack Increment</strong> -  Is a value that gradually separates stacked elements in incremental steps.</li>
-</ul>
+<li>
+<p><strong>Manual Grouping (Fallback):</strong>
+   For non-standard or asymmetrical topology, add the target islands to a <strong>Manual Stack</strong> group, run <strong>Analyze Stack</strong> to identify parameter mismatches, and apply manual alignment.</p>
+</li>
+</ol>
+<h2 id="stack-panel">Stack Panel<a class="headerlink" href="#stack-panel" title="Permanent link"></a></h2>
+<p>The <strong>Stack</strong> panel contains tools for grouping similar UV islands into aligned stacks.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><a class="glightbox" href="../img/screen/stack/stack_main_panel.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Stack Panel" src="../img/screen/stack/stack_main_panel.png" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Fig. 1. Stack panel</em></td>
+</tr>
+</tbody>
+</table>
 <hr />
 <h2 id="stack-components">Stack Components<a class="headerlink" href="#stack-components" title="Permanent link"></a></h2>
-<p>There are 3 different types of Stacked Islands. You can select all of them in this panel.</p>
-<p><a class="glightbox" href="../img/screen/stack/stack_types.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/stack/stack_types.png" /></a></p>
+<p>The Zen UV Stack System categorizes processed UV islands into three distinct types:</p>
 <h3 id="primaries">Primaries<a class="headerlink" href="#primaries" title="Permanent link"></a></h3>
-<p>Primaries this is islands which detected as a better instance. The position and the topology from Primaries will be translated to the Replicas. The island is defined as Primary if its position is closer to the center of coordinates, and the distortion of topology is less compared to other similar islands.</p>
-<h3 id="replicas">Replicas<a class="headerlink" href="#replicas" title="Permanent link"></a></h3>
-<p>Replicas are islands that have the same topology but were not chosen as Primary. The position and topology of the Replicas will be changed in the process of Stacking.</p>
-<h3 id="singles">Singles<a class="headerlink" href="#singles" title="Permanent link"></a></h3>
-<p>Singles this is islands that have no similar islands.</p>
-<h3 id="select-stack-parts">Select Stack Parts<a class="headerlink" href="#select-stack-parts" title="Permanent link"></a></h3>
-<p>The operator block for selecting stack components is the only operator with corresponding properties.</p>
-<div class="admonition properties">
-<p class="admonition-title">Properties</p>
-<p><a class="glightbox" href="../img/screen/stack/select_stack_components_op_prop.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Select Stack Parts" src="../img/screen/stack/select_stack_components_op_prop.png" /></a></p>
-</div>
+<p>Primary islands serve as the reference base for a stack. Their UV position and geometry layout are transferred to all matching Replicas. An island is automatically designated as Primary if it is positioned closer to the UV space origin <strong>(0,0)</strong> and exhibits minimal topological distortion compared to other matching islands.</p>
 <ul>
-<li><strong>Clear Selection</strong> - Clear initial selection.</li>
-<li><strong>Mode</strong> - Selection mode.<ul>
-<li><em>Select Primaries</em> - Selects the primary islands as the base instances for stacking.</li>
-<li><em>Select Replicas</em> - Selects the replica islands with the same topology as the primaries.</li>
-<li><em>Select Singles</em> - Selects unique islands that do not have any similar copies.</li>
+<li><strong>Viewport Color:</strong> 🟧 <strong>Orange-Red</strong></li>
 </ul>
-</li>
+<h3 id="replicas">Replicas<a class="headerlink" href="#replicas" title="Permanent link"></a></h3>
+<p>Replicas are islands that share identical topology with a Primary island but were not chosen as the base. During the stacking operation, the UV position and topology of Replicas are overwritten to match the Primary island.</p>
+<ul>
+<li><strong>Viewport Color:</strong> 🟦 <strong>Muted Blue</strong></li>
+</ul>
+<h3 id="singles">Singles<a class="headerlink" href="#singles" title="Permanent link"></a></h3>
+<p>Singles are unique UV islands that have no matching topological counterparts within the selection or object.</p>
+<ul>
+<li><strong>Viewport Color:</strong> 🟩 <strong>Emerald Green</strong></li>
 </ul>
 <hr />
-<h2 id="stacks-display-and-select">Stacks Display and Select<a class="headerlink" href="#stacks-display-and-select" title="Permanent link"></a></h2>
-<p><a class="glightbox" href="../img/screen/stack/stack_display.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/stack/stack_display.png" /></a></p>
+<h2 id="stack-global-properties">Stack Global Properties<a class="headerlink" href="#stack-global-properties" title="Permanent link"></a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><a class="glightbox" href="../img/screen/stack/stack_global_properties.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Stack Global Properties" src="../img/screen/stack/stack_global_properties.png" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Fig. 2. Stack Global Properties</em></td>
+</tr>
+</tbody>
+</table>
+<p>The Stack panel header contains a popup menu with global settings for the entire Stack System (Fig. 2).</p>
+<p><strong>Why Global Settings Matter:</strong>
+To maintain consistency across operators and display modes, the entire Stack System relies on these unified global settings. Any operator executed from the panel automatically inherits these global parameters. However, you can temporarily override these settings on a per-operator basis in the Adjust Last Operation (Redo) panel.</p>
+<h3 id="matching-mode">Matching Mode<a class="headerlink" href="#matching-mode" title="Permanent link"></a></h3>
+<p>Method to determine if UV islands are identical.</p>
 <ul>
-<li>
-<p><strong>Similar</strong> - Display all similar islands. Selecting all similar islands does not make sense, as it would select all islands with copies and their duplicates, resulting in almost every island in the mesh being selected except for the <a href="#singles">Singles</a>. To select similar islands based on a specific island, use <strong>Similar by Selection</strong>.</p>
-</li>
-<li>
-<p><strong>Similar by Selection</strong> - Display and select similar islands from selected sslands.</p>
-</li>
-<li><strong>Stacked</strong> - Display and select stacked islands.</li>
-<li><strong>Overlapped</strong> - Display and select all overlapped islands.</li>
+<li><strong>Exact Match</strong> — Matches identical islands with the same 3D size. The most precise and strict matching method. Islands are treated as identical only if both their topology and physical 3D mesh size match completely. For example, if a mesh fragment is duplicated and scaled down in 3D space, Exact Match will not group them, preventing Texel Density discrepancies after stacking.</li>
+<li><strong>Topology &amp; Scale</strong> — Matches islands with the same shape, ignores 3D size. Highly accurate algorithm that allows variations in 3D mesh scale. <em>Warning:</em> Stacking islands with different 3D sizes using this mode results in uneven Texel Density across the model. Always verify Texel Density after using this algorithm.</li>
+<li><strong>Topology Only</strong> — Matches by vertex connections only, ignores edge lengths. The most lenient method, relying strictly on vertex connectivity while ignoring edge lengths and proportions. Recommended primarily for manual stacking under visual control.</li>
 </ul>
-<div class="admonition options">
-<p class="admonition-title">Options</p>
-<p><strong>Options for Stacked Islands</strong></p>
-<p><a class="glightbox" href="../img/screen/stack/stack_display_stacked_options.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Display Stacked" src="../img/screen/stack/stack_display_stacked_options.png" /></a></p>
+<blockquote>
+<p>For a detailed comparison of these algorithms, see <a href="#matching-modes-comparison">Matching Modes Comparison</a>.</p>
+</blockquote>
+<h3 id="primary-source">Primary Source<a class="headerlink" href="#primary-source" title="Permanent link"></a></h3>
+<p>Method to determine which island acts as the main (Primary) base for the stack.</p>
+<ul>
+<li><strong>Auto</strong> — Automatically select the best island as the Primary base. Dynamic selection. Each time an operator (such as Stack or Unstack) runs, the Primary island is determined automatically based on metrics like distortion level and proximity to the UV origin.</li>
+<li><strong>Pinned</strong> — Treat pinned UV islands as the Primary source. Utilizes Blender&rsquo;s standard UV Pin feature. Pinned islands are prioritized as Primary bases. If a stack contains multiple pinned islands, the system selects one among them using the <strong>Auto</strong> criteria.</li>
+<li><strong>Finished</strong> — Use islands marked as &lsquo;Finished&rsquo; as the Primary source. Utilizes the Zen UV &lsquo;Finished&rsquo; tag system. Marked islands are prioritized as Primary bases. If a stack contains multiple Finished islands, the system selects one among them using the <strong>Auto</strong> criteria.</li>
+</ul>
+<h3 id="ignore-pinned">Ignore Pinned<a class="headerlink" href="#ignore-pinned" title="Permanent link"></a></h3>
+<p>Exclude pinned UV islands from the stacking process entirely.</p>
+<p>Allows you to lock specific islands and prevent them from being stacked. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This option is unavailable when <strong>Primary Source</strong> is set to <strong>Pinned</strong>, as an island cannot simultaneously act as both Primary and Ignored. To exclude pinned islands while manually defining Primary bases, set <strong>Primary Source</strong> to <strong>Finished</strong>.</p>
+</div>
+<h3 id="indication">Indication<a class="headerlink" href="#indication" title="Permanent link"></a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><a class="glightbox" href="../img/screen/stack/stack_global_props_indication.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Global Properties Indication" src="../img/screen/stack/stack_global_props_indication.png" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Fig. 3. Global properties header indication</em></td>
+</tr>
+</tbody>
+</table>
+<p>When collapsed, the Stack System global settings popup conceals active configurations. To provide clear visibility into current system behavior, the panel header features a dynamic visual indicator displaying active modes (Fig. 3).</p>
+<p>The default baseline configuration consists of:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Property</th>
+<th style="text-align: left;">Default Mode</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Matching Mode</strong></td>
+<td style="text-align: left;"><em>Exact Match</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Primary Source</strong></td>
+<td style="text-align: left;"><em>Auto</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Ignore Pinned</strong></td>
+<td style="text-align: left;"><em>Off</em></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Indicator Behavior:</strong></p>
+<ul>
+<li><strong>Matching Mode</strong> is always visible in the panel header.</li>
+<li><strong>Primary Source</strong> and <strong>Ignore Pinned</strong> appear in the header label only when modified from their default values (see Fig. 4 for comparison).</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><a class="glightbox" href="../img/screen/stack/stack_global_properties.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Stack Global Properties Default" src="../img/screen/stack/stack_global_properties.png" /></a></th>
+<th style="text-align: center;"><a class="glightbox" href="../img/screen/stack/stack_global_props_indication.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Global Properties Indication Modified" src="../img/screen/stack/stack_global_props_indication.png" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Fig. 4. Header display comparison: Default baseline</em></td>
+<td style="text-align: center;"><em>Modified active properties</em></td>
+</tr>
+</tbody>
+</table>
+<h3 id="operator-global-mode">Operator Global Mode<a class="headerlink" href="#operator-global-mode" title="Permanent link"></a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><a class="glightbox" href="../img/screen/stack/stack_selected_op_prop.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Operator Global Mode" src="../img/screen/stack/stack_selected_op_prop.png" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Fig. 5. Operator properties panel with Use Global Settings enabled</em></td>
+</tr>
+</tbody>
+</table>
+<p>Every Stack operator includes a <strong>Use Global Settings</strong> toggle, displayed as a wide button with a globe icon in the Adjust Last Operation (Redo) panel (Fig. 5).</p>
+<ul>
+<li><strong>Active State (Default):</strong> Highlighted in blue (or the active Blender theme accent color). The parameters <strong>Matching Mode</strong>, <strong>Primary Source</strong>, and <strong>Ignore Pinned</strong> are greyed out, dynamically reflecting the active global configuration.</li>
+<li><strong>Overriding Settings:</strong> Disabling <strong>Use Global Settings</strong> allows manual customization of parameters for that specific execution. Alternatively, modifying any greyed-out parameter directly will automatically disable <strong>Use Global Settings</strong>.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Operators executed from the UI panel automatically reset to <strong>Use Global Settings = On</strong> upon next invocation. However, operators bound to custom keymaps retain their saved local settings unless explicitly set to use global configuration.</p>
+</div>
+<h2 id="stacking-operators">Stacking Operators<a class="headerlink" href="#stacking-operators" title="Permanent link"></a></h2>
+<h3 id="stack-all-exact">Stack All (Exact)<a class="headerlink" href="#stack-all-exact" title="Permanent link"></a></h3>
+<p>Collect all similar islands into stacks.</p>
+<p>The <strong>Stack All (Exact)</strong> operator processes all visible UV islands in the active object (excluding hidden ones). Regardless of current global settings, it defaults to <strong>Matching Mode: Exact Match</strong> as a safety measure. This prevents accidental mesh or topology distortion that less strict matching modes might introduce when processing large numbers of islands. The <strong>Primary Source</strong> and <strong>Ignore Pinned</strong> options default to their values in <strong>Global Settings</strong>.</p>
+<div class="admonition properties">
+<p class="admonition-title">Properties</p>
+<p><a class="glightbox" href="../img/screen/stack/stack_all_exact_op_prop.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Stack All (Exact)" src="../img/screen/stack/stack_all_exact_op_prop.png" /></a></p>
 </div>
 <ul>
-<li><strong>Overlay Sync</strong> - Draw is sincronized with Overlay On/Off mode.</li>
-<li><strong>Stacked Color</strong> - Color for displaying Stacked Islands.</li>
-<li><strong>Only UV Area</strong> - Display Stacks only in the UV area.</li>
+<li><strong>Use Global Settings</strong> — Use the global Stacks system configuration instead of local operator settings.</li>
+<li><strong>Matching Mode</strong> — Method to determine if UV islands are identical.<ul>
+<li><em>Exact Match</em> — Matches identical islands with the same 3D size.</li>
+<li><em>Topology &amp; Scale</em> — Matches islands with the same shape, ignores 3D size.</li>
+<li><em>Topology Only</em> — Matches by vertex connections only, ignores edge lengths.</li>
+</ul>
+</li>
+<li><strong>Primary Source</strong> — Method to determine which island acts as the main (Primary) base for the stack.<ul>
+<li><em>Auto</em> — Automatically select the best island as the Primary base.</li>
+<li><em>Pinned</em> — Treat pinned UV islands as the Primary source.</li>
+<li><em>Finished</em> — Use islands marked as &lsquo;Finished&rsquo; as the Primary source.</li>
+</ul>
+</li>
+<li><strong>Ignore Pinned</strong> — Exclude pinned UV islands from the stacking process entirely.</li>
+<li><strong>Stack Offset</strong> — Offset distance for stacked islands along U and V axes. Allows stacking Replicas to a specific offset relative to the Primary island (for example, offsetting by +1.0 along the X/U axis). This eliminates the need for a subsequent <strong>Unstack</strong> operation while ensuring exact vertex-to-vertex alignment relative to the Primary base.</li>
+<li><strong>Translation Only</strong> — Stack islands by moving them to a shared position. Bypasses advanced vertex alignment and does not require the Zen UV Core C++ library.</li>
+</ul>
+<hr />
+<h3 id="stack-selected">Stack Selected<a class="headerlink" href="#stack-selected" title="Permanent link"></a></h3>
+<p>Collect all similar islands within the current selection into stacks. If the selection contains multiple distinct topology groups, each group will be stacked independently into its own stack.</p>
+<div class="admonition properties">
+<p class="admonition-title">Properties</p>
+<p><a class="glightbox" href="../img/screen/stack/stack_selected_op_prop.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Stack Selected" src="../img/screen/stack/stack_selected_op_prop.png" /></a></p>
+</div>
+<ul>
+<li><strong>Use Global Settings</strong> — Use the global Stacks system configuration instead of local operator settings.</li>
+<li><strong>Matching Mode</strong> — Method to determine if UV islands are identical.<ul>
+<li><em>Exact Match</em> — Matches identical islands with the same 3D size.</li>
+<li><em>Topology &amp; Scale</em> — Matches islands with the same shape, ignores 3D size.</li>
+<li><em>Topology Only</em> — Matches by vertex connections only, ignores edge lengths.</li>
+</ul>
+</li>
+<li><strong>Primary Source</strong> — Method to determine which island acts as the main (Primary) base for the stack.<ul>
+<li><em>Auto</em> — Automatically select the best island as the Primary base.</li>
+<li><em>Pinned</em> — Treat pinned UV islands as the Primary source.</li>
+<li><em>Finished</em> — Use islands marked as &lsquo;Finished&rsquo; as the Primary source.</li>
+</ul>
+</li>
+<li><strong>Ignore Pinned</strong> — Exclude pinned UV islands from the stacking process entirely.</li>
+<li><strong>Stack Offset</strong> — Offset distance for stacked islands along U and V axes. Allows stacking Replicas to a specific offset relative to the Primary island (for example, offsetting by $+1.0$ along the X/U axis). This eliminates the need for a subsequent <strong>Unstack</strong> operation while ensuring exact vertex-to-vertex alignment relative to the Primary base.</li>
+<li><strong>Translation Only</strong> — Stack islands by moving them to a shared position. Bypasses advanced vertex alignment and does not require the Zen UV Core C++ library.</li>
+</ul>
+<hr />
+<h3 id="stack-to-selected">Stack To Selected<a class="headerlink" href="#stack-to-selected" title="Permanent link"></a></h3>
+<p>Stack all matching unselected islands onto the currently selected islands. </p>
+<p>This operator excludes the <strong>Primary Source</strong> property because selected islands are explicitly treated as Primary bases. If the selection contains islands belonging to multiple separate topology groups, matching unselected islands will be stacked onto their respective selected Primaries.</p>
+<div class="admonition properties">
+<p class="admonition-title">Properties</p>
+<p><a class="glightbox" href="../img/screen/stack/stack_to_selected_op_prop.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Stack To Selected" src="../img/screen/stack/stack_to_selected_op_prop.png" /></a></p>
+</div>
+<ul>
+<li><strong>Use Global Settings</strong> — Use the global Stacks system configuration instead of local operator settings.</li>
+<li><strong>Matching Mode</strong> — Method to determine if UV islands are identical.<ul>
+<li><em>Exact Match</em> — Matches identical islands with the same 3D size.</li>
+<li><em>Topology &amp; Scale</em> — Matches islands with the same shape, ignores 3D size.</li>
+<li><em>Topology Only</em> — Matches by vertex connections only, ignores edge lengths.</li>
+</ul>
+</li>
+<li><strong>Ignore Pinned</strong> — Exclude pinned UV islands from the stacking process entirely.</li>
+<li><strong>Stack Offset</strong> — Offset distance for stacked islands along U and V axes. Allows stacking Replicas to a specific offset relative to the Primary island (for example, offsetting by $+1.0$ along the X/U axis). This eliminates the need for a subsequent <strong>Unstack</strong> operation while ensuring exact vertex-to-vertex alignment relative to the Primary base.</li>
+<li><strong>Translation Only</strong> — Stack islands by moving them to a shared position. Bypasses advanced vertex alignment and does not require the Zen UV Core C++ library.</li>
+</ul>
+<h2 id="unstacking-operators">Unstacking Operators<a class="headerlink" href="#unstacking-operators" title="Permanent link"></a></h2>
+<h3 id="unstack">Unstack<a class="headerlink" href="#unstack" title="Permanent link"></a></h3>
+<p>Shift islands from stacks in a specified direction.</p>
+<p>The <strong>Unstack All</strong> and <strong>Unstack Selected</strong> options on the panel trigger the same underlying <strong>Unstack</strong> operator. They are presented as two separate buttons strictly for workflow convenience and quick access.</p>
+<div class="admonition properties">
+<p class="admonition-title">Properties</p>
+<p><a class="glightbox" href="../img/screen/stack/unstack_op_prop.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Unstack Properties" src="../img/screen/stack/unstack_op_prop.png" /></a></p>
+</div>
+<ul>
+<li><strong>Use Global Settings</strong> — Use the global Stacks system configuration instead of local operator settings.</li>
+<li><strong>Primary Source</strong> — Method to determine which island acts as the main (Primary) base for the stack.<ul>
+<li><em>Auto</em> — Automatically select the best island as the Primary base.</li>
+<li><em>Pinned</em> — Treat pinned UV islands as the Primary source.</li>
+<li><em>Finished</em> — Use islands marked as &lsquo;Finished&rsquo; as the Primary source.</li>
+</ul>
+</li>
+<li><strong>Ignore Pinned</strong> — Exclude pinned UV islands from the stacking process entirely.</li>
+<li><strong>Use Selected Only</strong> — Restrict the unstacking operation strictly to selected islands.</li>
+<li><strong>Only UV Area</strong> — Unstack only islands located inside the active 0–1 UV tile space.</li>
+<li><strong>Direction</strong> — Vector defining the direction to offset stacked Replicas (for example, +1.0 along the U axis).</li>
+<li><strong>Iterative Unstack</strong> — Sequentially unstack islands step-by-step, moving each consecutive Replica further along the specified direction vector.</li>
+</ul>
+<h2 id="tools">Tools<a class="headerlink" href="#tools" title="Permanent link"></a></h2>
+<p>A collection of utility tools designed to assist in the UV stacking workflow.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><a class="glightbox" href="../img/screen/stack/stack_tools_block_ui.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Stack Tools" src="../img/screen/stack/stack_tools_block_ui.png" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Fig. 6. Tools block in the Stack panel</em></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="copy-paste-system">Copy / Paste System<a class="headerlink" href="#copy-paste-system" title="Permanent link"></a></h3>
+<p>The <strong>Copy / Paste</strong> system allows you to copy UV positional, structural, or scale parameters from source islands or faces and apply them to target selections.</p>
+<ul>
+<li><strong>Copy</strong> — Copy parameters from selected islands or faces and store them in memory.</li>
+<li><strong>Paste</strong> — Paste stored parameters onto selected targets.</li>
+</ul>
+<h4 id="copy">Copy<a class="headerlink" href="#copy" title="Permanent link"></a></h4>
+<p>Copy parameters of selected islands or faces to memory.</p>
+<div class="admonition properties">
+<p class="admonition-title">Properties</p>
+<p><a class="glightbox" href="../img/screen/stack/stack_copy_op_prefs.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Copy Operator Properties" src="../img/screen/stack/stack_copy_op_prefs.png" /></a></p>
+</div>
+<ul>
+<li><strong>Mode</strong> — Selection type to copy parameters from:<ul>
+<li><em>Island</em> — Copy parameters from the selected island.</li>
+<li><em>Faces</em> — Copy parameters from the selected faces.</li>
+</ul>
+</li>
+</ul>
+<h4 id="paste">Paste<a class="headerlink" href="#paste" title="Permanent link"></a></h4>
+<p>Paste previously copied parameters onto selected target islands or faces.</p>
+<div class="admonition properties">
+<p class="admonition-title">Properties</p>
+<p><a class="glightbox" href="../img/screen/stack/stack_paste_op_prefs.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Paste Operator Properties" src="../img/screen/stack/stack_paste_op_prefs.png" /></a></p>
+</div>
+<ul>
+<li><strong>Type</strong> — Selection mode processing type:<ul>
+<li><strong>Island</strong> — Apply parameters to selected islands.</li>
+<li><strong>Faces</strong> — Apply parameters to selected faces.</li>
+</ul>
+</li>
+<li><strong>Action</strong> — Processing method to apply:<ul>
+<li><strong>Stack</strong> — Perform alignment and stacking onto the copied source geometry.</li>
+<li><strong>Transfer</strong> — Transfer spatial and scaling parameters without stacking topology.</li>
+</ul>
+</li>
+</ul>
+<p>The available properties dynamically change based on the selected <strong>Action</strong>:</p>
+<p><strong>Action — Stack:</strong></p>
+<div class="admonition properties">
+<p class="admonition-title">Properties</p>
+<p><a class="glightbox" href="../img/screen/stack/stack_paste_mode_stack_options.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Paste Mode Stack Options" src="../img/screen/stack/stack_paste_mode_stack_options.png" /></a></p>
+</div>
+<ul>
+<li><strong>Matching Mode</strong> — Method to determine if UV islands are identical:<ul>
+<li><em>Exact Match</em> — Matches identical islands with the same 3D size.</li>
+<li><em>Topology &amp; Scale</em> — Matches islands with the same shape, ignores 3D size.</li>
+<li><em>Topology Only</em> — Matches by vertex connections only, ignores edge lengths.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Action — Transfer:</strong></p>
+<div class="admonition properties">
+<p class="admonition-title">Properties</p>
+<p><a class="glightbox" href="../img/screen/stack/stack_paste_mode_transfer_options.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Paste Mode Transfer Options" src="../img/screen/stack/stack_paste_mode_transfer_options.png" /></a></p>
+</div>
+<ul>
+<li><strong>Location</strong> — Position alignment method:<ul>
+<li><em>Position</em> — Move selected elements to the location of the copied source.</li>
+<li><em>None</em> — Retain current position.</li>
+</ul>
+</li>
+<li><strong>Scaling</strong> — Scale adjustment method:<ul>
+<li><em>Texel Density</em> — Match the Texel Density of the copied source.</li>
+<li><em>Fit to Copied</em> — Scale selection to fit source dimensions horizontally or vertically.</li>
+<li><em>None</em> — Retain current scale.</li>
+</ul>
+</li>
+<li><strong>Keep Aspect Ratio</strong> — Preserve original width/height proportions when scaling.</li>
+<li><strong>Fit Direction</strong> — Alignment orientation used when <strong>Scaling</strong> is set to <em>Fit to Copied</em>:<ul>
+<li><em>Horizontal</em> — Match the width of the copied source.</li>
+<li><em>Vertical</em> — Match the height of the copied source.</li>
+</ul>
+</li>
+</ul>
+<h4 id="usage-samples">Usage Samples<a class="headerlink" href="#usage-samples" title="Permanent link"></a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><a class="glightbox" href="../img/gifs/stack_copy_paste/stack_copy_paste_sample.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Paste: Action - Stack" src="../img/gifs/stack_copy_paste/stack_copy_paste_sample.gif" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Fig. 7. Paste: Action — Stack</em></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><a class="glightbox" href="../img/gifs/stack_copy_paste/stack_c_p_transfer_pos.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Paste: Action - Transfer - Position" src="../img/gifs/stack_copy_paste/stack_c_p_transfer_pos.gif" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Fig. 8. Paste: Action — Transfer — Position</em></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><a class="glightbox" href="../img/gifs/stack_copy_paste/stack_c_p_transfer_size_fit.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Paste: Action - Transfer - Size Fit" src="../img/gifs/stack_copy_paste/stack_c_p_transfer_size_fit.gif" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Fig. 9. Paste: Action — Transfer — Size &amp; Fit</em></td>
+</tr>
+</tbody>
+</table>
+<h3 id="simple-stack">Simple Stack<a class="headerlink" href="#simple-stack" title="Permanent link"></a></h3>
+<p>Stack islands together at a specific location without matching or modifying their topology.</p>
+<div class="admonition properties">
+<p class="admonition-title">Properties</p>
+<p><a class="glightbox" href="../img/screen/stack/simple_stack_op_prop.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Simple Stack Properties" src="../img/screen/stack/simple_stack_op_prop.png" /></a></p>
+</div>
+<ul>
+<li><strong>Position Type</strong> — The reference position where the stacked islands will be placed:<ul>
+<li><em>Average</em> — Position at the calculated average center of all selected islands.</li>
+<li><em>UV Area Center</em> — Position at the center of the active 0–1 UV tile space.</li>
+<li><em>Custom Position</em> — Position at user-defined coordinates specified in the <strong>Position</strong> field.</li>
+<li><em>2D Cursor</em> — Position at the current location of the 2D Cursor.</li>
+</ul>
+</li>
+<li><strong>Position</strong> — Custom coordinates (U, V) used when <strong>Position Type</strong> is set to <em>Custom Position</em>.</li>
+</ul>
+<hr />
+<h3 id="shift-islands">Shift Islands<a class="headerlink" href="#shift-islands" title="Permanent link"></a></h3>
+<p>Shift selected islands by a specified offset, with options to include Primary, Replica, or Single islands.</p>
+<div class="admonition properties">
+<p class="admonition-title">Properties</p>
+<p><a class="glightbox" href="../img/screen/stack/stack_shift_islands_op_prop.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Shift Islands Properties" src="../img/screen/stack/stack_shift_islands_op_prop.png" /></a></p>
+</div>
+<ul>
+<li><strong>Use Global Settings</strong> — Use the global Stacks system configuration instead of local operator settings.</li>
+<li><strong>Matching Mode</strong> — Method to determine if UV islands are identical:<ul>
+<li><em>Exact Match</em> — Matches identical islands with the same 3D size.</li>
+<li><em>Topology &amp; Scale</em> — Matches islands with the same shape, ignores 3D size.</li>
+<li><em>Topology Only</em> — Matches by vertex connections only, ignores edge lengths.</li>
+</ul>
+</li>
+<li><strong>Primary Source</strong> — Method to determine which island acts as the main (Primary) base for the stack:<ul>
+<li><em>Auto</em> — Automatically select the best island as the Primary base.</li>
+<li><em>Pinned</em> — Treat pinned UV islands as the Primary source.</li>
+<li><em>Finished</em> — Use islands marked as &lsquo;Finished&rsquo; as the Primary source.</li>
+</ul>
+</li>
+<li><strong>Ignore Pinned</strong> — Exclude pinned UV islands from the operation entirely.</li>
+<li><strong>Include Parts</strong> — Select island categories to include in the shift operation:<ul>
+<li><em>Primary</em> — Include base (Primary) islands.</li>
+<li><em>Replica</em> — Include duplicate (Replica) islands.</li>
+<li><em>Single</em> — Include unique (Single) islands without stack duplicates.</li>
+</ul>
+</li>
+<li><strong>Offset</strong> — The distance vector by which all included islands (except the base island) will be shifted.</li>
 </ul>
 <hr />
 <h3 id="uv-island-counter">UV Island Counter<a class="headerlink" href="#uv-island-counter" title="Permanent link"></a></h3>
-<p>Count UV islands in selected objects and display the result. With this operator, you can easily find out how many islands are in the stack.</p>
-<p>Here you will find <a href="../checker/#uv-islands-counter">full information</a> about this operator.</p>
+<p>Count UV islands across selected objects and display the results in a summary readout. This operator makes it easy to inspect total island counts and verify stack grouping.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><a class="glightbox" href="../img/screen/stack/stack_islands_counter.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="UV Island Counter" src="../img/screen/stack/stack_islands_counter.png" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Fig. 10. UV Island Counter readout</em></td>
+</tr>
+</tbody>
+</table>
+<p>For complete documentation on this tool, see <a href="../checker/#uv-islands-counter">UV Island Counter</a>.</p>
 <hr />
-<h2 id="copy-paste-system">Copy / Paste System<a class="headerlink" href="#copy-paste-system" title="Permanent link"></a></h2>
+<h3 id="spread-stack">Spread Stack<a class="headerlink" href="#spread-stack" title="Permanent link"></a></h3>
+<p>Scatter overlapping UV islands from stacks across a defined layout pattern for visual inspection or manual adjustments.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><a class="glightbox" href="../img/screen/stack/stack_spread_stack_in_action.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Spread Stack operator in action" src="../img/screen/stack/stack_spread_stack_in_action.gif" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Fig. 11. Spread Stack operator in action</em></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition properties">
+<p class="admonition-title">Properties</p>
+<p><a class="glightbox" href="../img/screen/stack/spread_stack_op_prop.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Spread Stack Properties" src="../img/screen/stack/spread_stack_op_prop.png" /></a></p>
+</div>
 <ul>
-<li>
-<p><strong>Copy</strong> - Copy parameters of selected Islands/Faces and save them.</p>
+<li><strong>Distribution</strong> — Pattern used to scatter the stacked islands:<ul>
+<li><em>Radial</em> — Spread islands outward in a circular layout.</li>
+<li><em>Linear</em> — Spread islands sequentially along a straight line.</li>
+</ul>
 </li>
-<li>
-<p><strong>Paste</strong> - Paste the parameters saved earlier to selected Islands/Faces.</p>
+<li><strong>Distance</strong> — Spacing interval between spread islands.</li>
+</ul>
+<hr />
+<h3 id="sort-stack">Sort Stack<a class="headerlink" href="#sort-stack" title="Permanent link"></a></h3>
+<p>Organize UV elements into a structured grid layout: places Primary islands horizontally in a row, stacks their corresponding Replicas vertically above them, and appends unique Single islands to the end of the primary row.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><a class="glightbox" href="../img/screen/stack/stack_sort_stack_in_action.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Sort Stack" src="../img/screen/stack/stack_sort_stack_in_action.gif" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Fig. 12. Sort Stack in action</em></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition properties">
+<p class="admonition-title">Properties</p>
+<p><a class="glightbox" href="../img/screen/stack/stack_sort_stack_op_prop.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Sort Stack Operator Properties" src="../img/screen/stack/stack_sort_stack_op_prop.png" /></a></p>
+</div>
+<ul>
+<li><strong>Use Global Settings</strong> — Use the global Stacks system configuration instead of local operator settings.</li>
+<li><strong>Matching Mode</strong> — Method to determine if UV islands are identical:<ul>
+<li><em>Exact Match</em> — Matches identical islands with the same 3D size.</li>
+<li><em>Topology &amp; Scale</em> — Matches islands with the same shape, ignores 3D size.</li>
+<li><em>Topology Only</em> — Matches by vertex connections only, ignores edge lengths.</li>
+</ul>
+</li>
+<li><strong>Primary Source</strong> — Method to determine which island acts as the main (Primary) base for the stack:<ul>
+<li><em>Auto</em> — Automatically select the best island as the Primary base.</li>
+<li><em>Pinned</em> — Treat pinned UV islands as the Primary source.</li>
+<li><em>Finished</em> — Use islands marked as &lsquo;Finished&rsquo; as the Primary source.</li>
+</ul>
+</li>
+<li><strong>Ignore Pinned</strong> — Exclude pinned UV islands from the process entirely.</li>
+<li><strong>Selected Only</strong> — Restrict sorting strictly to selected islands.</li>
+<li><strong>Include Parts</strong> — Island categories to include in the sorting operation:<ul>
+<li><em>Primary</em> — Include base (Primary) islands.</li>
+<li><em>Replica</em> — Include duplicate (Replica) islands.</li>
+<li><em>Single</em> — Include unique (Single) islands.</li>
+</ul>
 </li>
 </ul>
-<p><a href="../operators/stack_copy_paste/">Here is full information</a> about Copy / Paste System.</p>
+<p><strong>Arrangement &amp; Sorting:</strong></p>
+<ul>
+<li><strong>Start From</strong> — Reference point for grid placement:<ul>
+<li><em>First UV Tile (0,0)</em> — Begin grid layout at the origin of the 0–1 UV tile.</li>
+<li><em>Next UV Tile (1,0)</em> — Begin grid layout at the origin of the adjacent UV tile (1.0, 0.0).</li>
+<li><em>2D Cursor</em> — Begin grid layout at the current 2D Cursor position.</li>
+</ul>
+</li>
+<li><strong>Distance</strong> — Spacing interval between arranged islands.</li>
+<li><strong>Sort By</strong> — Criterion used to order UV islands or stacks prior to layout:<ul>
+<li><em>None</em> — Maintain original island order without sorting.</li>
+<li><em>B.Box Area</em> — Sort stacks/islands by their bounding box surface area.</li>
+<li><em>Replicas Count</em> — Sort stacks by the number of duplicate Replicas they contain.</li>
+</ul>
+</li>
+<li><strong>Reverse V Axis</strong> — Invert the vertical layout direction for stacked Replicas.</li>
+</ul>
 <hr />
-<h2 id="manual-stack">Manual Stack<a class="headerlink" href="#manual-stack" title="Permanent link"></a></h2>
-<div class="admonition panel">
-<p class="admonition-title">Panel</p>
-<p><a class="glightbox" href="../img/screen/stack/stack_manual_stack.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Panel" src="../img/screen/stack/stack_manual_stack.png" /></a></p>
+<h3 id="convert-pinned-finished">Convert Pinned / Finished<a class="headerlink" href="#convert-pinned-finished" title="Permanent link"></a></h3>
+<p>Convert Blender&rsquo;s UV Pinned status to Zen UV &lsquo;Finished&rsquo; tags, or vice versa.</p>
+<p>This operator allows seamless transitions between tagging systems when changing the <strong>Primary Source</strong> setting in <strong>Global Settings</strong> (e.g., switching primary identification from <em>Pinned</em> to <em>Finished</em>).</p>
+<div class="admonition properties">
+<p class="admonition-title">Properties</p>
+<p><a class="glightbox" href="../img/screen/stack/stack_convert_pinned_finished_op_prop.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Convert Pinned Finished Properties" src="../img/screen/stack/stack_convert_pinned_finished_op_prop.png" /></a></p>
 </div>
-<h3 id="area-matching">Area Matching<a class="headerlink" href="#area-matching" title="Permanent link"></a></h3>
-<p><a class="glightbox" href="../img/icons/a.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Area Matching" src="../img/icons/a.png" /></a></p>
-<p>Set strict requirements for Islands Area Matching when Stacking. Disable this option if the Islands have a slightly different Area.</p>
-<h3 id="move-only">Move Only<a class="headerlink" href="#move-only" title="Permanent link"></a></h3>
-<p><a class="glightbox" href="../img/icons/m.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Move Only" src="../img/icons/m.png" /></a></p>
-<p>Don&rsquo;t fit Islands. Just move to the same position.</p>
-<h3 id="add">Add<a class="headerlink" href="#add" title="Permanent link"></a></h3>
-<p><a class="glightbox" href="../img/icons/plus.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Add" src="../img/icons/plus.png" /></a></p>
-<p>Add new Stack.</p>
-<h3 id="delete">Delete<a class="headerlink" href="#delete" title="Permanent link"></a></h3>
-<p><a class="glightbox" href="../img/icons/minus.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Delete" src="../img/icons/minus.png" /></a></p>
-<p>Delete selected Stack.</p>
-<h3 id="add-islands">Add Islands<a class="headerlink" href="#add-islands" title="Permanent link"></a></h3>
-<p><a class="glightbox" href="../img/icons/download.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Add Islands" src="../img/icons/download.png" /></a></p>
-<p>Append selected Islands to the active Stack.</p>
-<h3 id="select-islands">Select Islands<a class="headerlink" href="#select-islands" title="Permanent link"></a></h3>
-<p><a class="glightbox" href="../img/icons/select_bl_ico.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Add Islands" src="../img/icons/select_bl_ico.png" /></a></p>
-<p>Select Islands in the Stack</p>
+<ul>
+<li><strong>Mode</strong> — Direction of status conversion:<ul>
+<li><em>Pinned to Finished</em> — Convert standard Blender UV Pinned status into Zen UV &lsquo;Finished&rsquo; tags.</li>
+<li><em>Finished to Pinned</em> — Convert Zen UV &lsquo;Finished&rsquo; tags into standard Blender UV Pinned status.</li>
+</ul>
+</li>
+<li><strong>Clear Pinned</strong> — Remove UV Pinned status from vertices/islands after conversion completes.</li>
+<li><strong>Clear Finished</strong> — Remove Zen UV &lsquo;Finished&rsquo; tags from islands after conversion completes.</li>
+</ul>
+<h2 id="display-and-select">Display and Select<a class="headerlink" href="#display-and-select" title="Permanent link"></a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><a class="glightbox" href="../img/screen/stack/stack_display_and_select_block_ui.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Display and Select Panel" src="../img/screen/stack/stack_display_and_select_block_ui.png" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Fig. 13. Display and Select block in the Stack panel</em></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="display-properties">Display Properties<a class="headerlink" href="#display-properties" title="Permanent link"></a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><a class="glightbox" href="../img/screen/stack/stack_display_select_props.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Stack Display System Properties" src="../img/screen/stack/stack_display_select_props.png" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Fig. 14. Stack Display System Properties</em></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Update Draw System</strong> — Manually refresh the Zen UV viewport display cache.<ul>
+<li><em>Shift + Click:</em> Toggle the <strong>Auto Update Draw</strong> option.</li>
+</ul>
+</li>
+<li><strong>Stacked Color</strong> — Viewport overlay color used to highlight currently stacked UV islands.</li>
+</ul>
+<hr />
+<h3 id="display-operators">Display Operators<a class="headerlink" href="#display-operators" title="Permanent link"></a></h3>
+<p>Display operators (indicated by the eye icon 👁) generate color-coded viewport overlays to visualize UV topological status, stack groups, and geometric errors.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Display operators do not have individual operator properties; they strictly rely on the active <a href="#stack-global-properties">Stack Global Properties</a>. Ensure global parameters (such as <strong>Matching Mode</strong>) are configured appropriately for your workflow before using these visualization tools.</p>
+</div>
+<ul>
+<li><strong>Similar</strong> — Highlight matching groups of islands. Unique random colors are assigned to each topological group, allowing quick visual identification of potential stacks.</li>
+<li><strong>Similar By Selection</strong> — Highlight islands that match the topology of the currently selected reference island(s).</li>
+<li><strong>Stacked</strong> — Highlight islands that are currently positioned in stacks.</li>
+<li><strong>Stack Types</strong> — Color-code islands based on their <a href="#stack-components">Stack Components</a> classification (Primary, Replica, or Single).</li>
+<li><strong>Overlapped</strong> — Highlight overlapping UV islands. Useful for detecting unintended overlapping geometry or verifying whether islands remain stacked within the UV tile space after an <a href="#unstack">Unstack</a> operation.</li>
+<li><strong>Flipped</strong> — Highlight flipped (inverted) UV islands. Unintended flipped islands within active UV tile bounds often lead to shading artifacts and normal map baking errors.</li>
+<li><strong>Stretched - Angle</strong> — Highlight angular polygon distortion within islands. Identifies internal topology squishing or stretching, helping evaluate if the chosen <strong>Matching Mode</strong> is suitable.</li>
+<li><strong>Stretched - Area</strong> — Highlight surface area scale distortion. Identifies islands whose UV surface area disproportionately deviates from their physical 3D mesh area, preventing unwanted Texel Density variations.</li>
+</ul>
+<blockquote>
+<p>For detailed information on distortion analysis, see <a href="../select/#select-stretched-faces">Select Stretched Faces</a>.</p>
+</blockquote>
+<h3 id="select-operators">Select Operators<a class="headerlink" href="#select-operators" title="Permanent link"></a></h3>
+<h4 id="select-stack-parts">Select Stack Parts<a class="headerlink" href="#select-stack-parts" title="Permanent link"></a></h4>
+<p>Select specific stack components: Primaries, Replicas, or Singles.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><a class="glightbox" href="../img/screen/stack/stack_select_parts_ui.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Select stack parts operators in UI" src="../img/screen/stack/stack_select_parts_ui.png" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Fig. 15. Select stack parts operators in the UI</em></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition properties">
+<p class="admonition-title">Properties</p>
+<p><a class="glightbox" href="../img/screen/stack/select_stack_components_op_prop.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Select Stack Parts Properties" src="../img/screen/stack/select_stack_components_op_prop.png" /></a></p>
+</div>
+<ul>
+<li><strong>Use Global Settings</strong> — Use the global Stacks system configuration instead of local operator settings.</li>
+<li><strong>Matching Mode</strong> — Method to determine if UV islands are identical:<ul>
+<li><em>Exact Match</em> — Matches identical islands with the same 3D size.</li>
+<li><em>Topology &amp; Scale</em> — Matches islands with the same shape, ignores 3D size.</li>
+<li><em>Topology Only</em> — Matches by vertex connections only, ignores edge lengths.</li>
+</ul>
+</li>
+<li><strong>Primary Source</strong> — Method to determine which island acts as the main (Primary) base for the stack:<ul>
+<li><em>Auto</em> — Automatically select the best island as the Primary base.</li>
+<li><em>Pinned</em> — Treat pinned UV islands as the Primary source.</li>
+<li><em>Finished</em> — Use islands marked as &lsquo;Finished&rsquo; as the Primary source.</li>
+</ul>
+</li>
+<li><strong>Ignore Pinned</strong> — Exclude pinned UV islands from the stacking process entirely.</li>
+<li><strong>Clear Selection</strong> — Clear the initial selection before applying the operation.</li>
+<li><strong>Select</strong> — Stack component category to select:<ul>
+<li><em>Primaries</em> — Select primary base islands.</li>
+<li><em>Replicas</em> — Select duplicate replica islands.</li>
+<li><em>Singles</em> — Select unique islands without matching stack copies.</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h4 id="select-similar-islands">Select Similar Islands<a class="headerlink" href="#select-similar-islands" title="Permanent link"></a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><a class="glightbox" href="../img/screen/stack/stack_select_similar_by_selection_ui.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Select Similar Islands placement" src="../img/screen/stack/stack_select_similar_by_selection_ui.png" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Fig. 16. Placement of Select Similar Islands buttons on the panel</em></td>
+</tr>
+</tbody>
+</table>
+<p>For workflow convenience, the <strong>Select Similar Islands</strong> operator is accessible from three distinct locations in the Stack panel (Fig. 16).</p>
+<p>Based on the active selection, the operator identifies all topologically matching islands belonging to the same stack group and selects specific stack components (such as Primaries or Replicas) according to operator settings.</p>
+<hr />
+<h4 id="select-stacked">Select Stacked<a class="headerlink" href="#select-stacked" title="Permanent link"></a></h4>
+<p>Select UV islands that are currently stacked together.</p>
+<div class="admonition properties">
+<p class="admonition-title">Properties</p>
+<p><a class="glightbox" href="../img/screen/stack/stack_select_stacked_islands.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Select Stacked Operator Properties" src="../img/screen/stack/stack_select_stacked_islands.png" /></a></p>
+</div>
+<ul>
+<li><strong>Clear Selection</strong> — Clear the initial selection before applying the operation.</li>
+</ul>
+<hr />
+<h4 id="select-overlap">Select Overlap<a class="headerlink" href="#select-overlap" title="Permanent link"></a></h4>
+<p>Select all overlapping UV faces within active objects. </p>
+<blockquote>
+<p><strong>Note:</strong> This is Blender&rsquo;s native <strong>Select Overlapped</strong> operator, included in the Stack panel for quick access and convenience.</p>
+</blockquote>
+<hr />
+<h4 id="select-flipped-islands">Select Flipped Islands<a class="headerlink" href="#select-flipped-islands" title="Permanent link"></a></h4>
+<p>Select inverted (flipped) UV islands or faces.</p>
+<div class="admonition properties">
+<p class="admonition-title">Properties</p>
+<p><a class="glightbox" href="../img/screen/stack/select_flipped_islands_op_prop.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Select Flipped Islands Operator Properties" src="../img/screen/stack/select_flipped_islands_op_prop.png" /></a></p>
+</div>
+<ul>
+<li><strong>Clear Selection</strong> — Clear the initial selection before applying the operation.</li>
+<li><strong>Target</strong> — Choose selection mode:<ul>
+<li><em>Island</em> — Select the entire flipped island.</li>
+<li><em>Face</em> — Select individual flipped faces.</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h4 id="select-stretched-faces">Select Stretched Faces<a class="headerlink" href="#select-stretched-faces" title="Permanent link"></a></h4>
+<p>Select faces with significant UV angular or area distortion.</p>
+<p>For complete documentation on this tool, see <a href="../select/#select-stretched-faces">Select Stretched Faces</a>.</p>
+<h2 id="manual-stack">Manual Stack<a class="headerlink" href="#manual-stack" title="Permanent link"></a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><a class="glightbox" href="../img/screen/stack/manual_stacks_ui.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Manual Stacks Panel" src="../img/screen/stack/manual_stacks_ui.png" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Fig. 17. Manual Stacks Panel</em></td>
+</tr>
+</tbody>
+</table>
+<p>The <strong>Manual Stack</strong> system provides a dedicated UI list for manually grouping UV islands. It serves as a fallback tool when automatic stacking algorithms fail to process complex topology, or when user-defined custom groupings are required.</p>
+<p>Each item in the UI list displays key group information:</p>
+<ul>
+<li><strong>Group Name</strong></li>
+<li><strong>Group Index</strong></li>
+<li><strong>Matching Mode</strong> — Override setting applied specifically to the individual group.</li>
+</ul>
+<p><strong>Control Buttons (Right Side):</strong></p>
+<ul>
+<li><strong><code>+</code> (Add):</strong> Create a new stack group.</li>
+<li><strong><code>-</code> (Remove):</strong> Delete the active stack group.</li>
+<li><strong>Down Arrow (Assign):</strong> Assign currently selected UV islands to the active group.</li>
+<li><strong>Cursor (Select):</strong> Select all UV islands assigned to the active group.</li>
+<li><strong>Flask (Analyze):</strong> Analyze topological parameters of the active group.</li>
+<li><strong>Trash Can (Clear All):</strong> Delete all stack groups.</li>
+</ul>
+<hr />
 <h3 id="analyze-stack">Analyze Stack<a class="headerlink" href="#analyze-stack" title="Permanent link"></a></h3>
-<p><a class="glightbox" href="../img/icons/analyse.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Analyse Stack" src="../img/icons/analyse.png" /></a></p>
-<p>Analyze Islands Similarities in the Stack. You can find details in the Zen UV Manual Stack Analyze document in the Text Editor.</p>
-<h3 id="remove-all">Remove All<a class="headerlink" href="#remove-all" title="Permanent link"></a></h3>
-<p><a class="glightbox" href="../img/icons/trash.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Remove All" src="../img/icons/trash.png" /></a></p>
-<p>Remove all Manual Stacks from selected Objects.</p>
-<h3 id="stack-all">Stack All<a class="headerlink" href="#stack-all" title="Permanent link"></a></h3>
-<p>Collect islands on manual stacks.</p>
-<h3 id="stack-selected">Stack Selected<a class="headerlink" href="#stack-selected" title="Permanent link"></a></h3>
-<p>Collect islands on manual mtacks using only selected manual stack.</p>
-<h3 id="unstack-all">Unstack All<a class="headerlink" href="#unstack-all" title="Permanent link"></a></h3>
-<p>Shift Islands from manual mtacks in a given direction.</p>
-<h3 id="unstack-selected">Unstack Selected<a class="headerlink" href="#unstack-selected" title="Permanent link"></a></h3>
-<p>Shift Islands from selected manual stacks in a given direction.</p>
+<p>Analyze topological similarities and parameter metrics across islands in the selected manual group.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><a class="glightbox" href="../img/screen/stack/manual_stack_analyse_result.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Manual Stack Analyze Result" src="../img/screen/stack/manual_stack_analyse_result.png" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Fig. 18. Manual stack analysis readout</em></td>
+</tr>
+</tbody>
+</table>
+<p>If islands in a manual group fail to stack automatically, add them to a Manual Stack group and run <strong>Analyze Stack</strong>. The resulting diagnostic table (Fig. 18) helps pinpoint topology or scale mismatches.</p>
+<p><strong>Troubleshooting with Analysis Data:</strong></p>
+<ul>
+<li><strong>Vertex Count Mismatch:</strong> If vertex counts differ across islands in the group, topological stacking is impossible.</li>
+<li><strong>Area Mismatch:</strong> If vertex counts match but surface area differs, stacking under <strong>Exact Match</strong> will fail. Change the group&rsquo;s <strong>Matching Mode</strong> to <strong>Topology &amp; Scale</strong>.</li>
+</ul>
+<p><strong>Table Columns:</strong></p>
+<ul>
+<li><strong>Object</strong> — Name of the object containing the island.</li>
+<li><strong>Island ID</strong> — Identification index of the island.</li>
+<li><strong>Verts</strong> — Total vertex count.</li>
+<li><strong>Edges</strong> — Total edge count.</li>
+<li><strong>Faces</strong> — Total face count.</li>
+<li><strong>Area</strong> — UV surface area.</li>
+<li><strong>Perim.</strong> — UV island perimeter length.</li>
+<li><strong>Face Index (<code>f index</code>)</strong> — Index of a representative face on the island. Useful for isolating specific islands using <a href="../checker/#elements-by-index">Select Element By Index</a>.</li>
+<li><strong>Pin</strong> — Indicates whether standard Blender UV Pinned tags exist on the island.</li>
+<li><strong>Primary</strong> — Indicates whether the island is designated as the Primary base within the active group.</li>
+<li><strong>Stacked</strong> — Indicates whether the island is currently stacked.</li>
+</ul>
+<hr />
+<h3 id="stack-all-selected">Stack All / Selected<a class="headerlink" href="#stack-all-selected" title="Permanent link"></a></h3>
+<p>Stack islands belonging to Manual Stack groups.</p>
+<div class="admonition properties">
+<p class="admonition-title">Properties</p>
+<p><a class="glightbox" href="../img/screen/stack/manual_stacks_stack_op_prop.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Manual Stack Operator Properties" src="../img/screen/stack/manual_stacks_stack_op_prop.png" /></a></p>
+</div>
+<ul>
+<li><strong>Selected Only</strong> — Process only stack groups selected in the Manual Stack list.</li>
+<li><strong>Primary Source</strong> — Method to determine which island acts as the main (Primary) base for the stack:<ul>
+<li><em>Auto</em> — Automatically select the best island as the Primary base.</li>
+<li><em>Pinned</em> — Treat pinned UV islands as the Primary source.</li>
+<li><em>Finished</em> — Use islands marked as &lsquo;Finished&rsquo; as the Primary source.</li>
+</ul>
+</li>
+<li><strong>Translation Only</strong> — Stack islands by moving them to a shared position. Bypasses advanced vertex alignment and does not require the Zen UV Core C++ library.</li>
+</ul>
+<hr />
+<h3 id="unstack-all-selected">Unstack All / Selected<a class="headerlink" href="#unstack-all-selected" title="Permanent link"></a></h3>
+<p>Unstack islands belonging to Manual Stack groups in a specified direction.</p>
+<div class="admonition properties">
+<p class="admonition-title">Properties</p>
+<p><a class="glightbox" href="../img/screen/stack/manual_stacks_unstack_op_prop.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Manual Stack Unstack Properties" src="../img/screen/stack/manual_stacks_unstack_op_prop.png" /></a></p>
+</div>
+<ul>
+<li><strong>Selected Only</strong> — Process only stack groups selected in the Manual Stack list.</li>
+<li><strong>Primary Source</strong> — Method to determine which island acts as the main (Primary) base for the stack:<ul>
+<li><em>Auto</em> — Automatically select the best island as the Primary base.</li>
+<li><em>Pinned</em> — Treat pinned UV islands as the Primary source.</li>
+<li><em>Finished</em> — Use islands marked as &lsquo;Finished&rsquo; as the Primary source.</li>
+</ul>
+</li>
+<li><strong>Direction</strong> — Vector defining the direction to spread out stacked elements (for example, +1.0 along the U axis).</li>
+<li><strong>Iterative Unstack</strong> — Sequentially unstack islands step-by-step, moving each consecutive Replica further along the specified direction vector.</li>
+</ul>
+<hr />
 <h3 id="display-manual-stacks">Display Manual Stacks<a class="headerlink" href="#display-manual-stacks" title="Permanent link"></a></h3>
-<p>Display Manual Stacks (Static)</p>
+<p>Generate a static viewport color overlay highlighting islands assigned to Manual Stack groups.</p>
+<p>Random colors are assigned per group regardless of whether the islands are currently stacked or unstacked.</p>
+<hr />
+<h2 id="matching-modes-comparison">Matching Modes Comparison<a class="headerlink" href="#matching-modes-comparison" title="Permanent link"></a></h2>
+<p>Below are practical examples demonstrating how different <strong>Matching Modes</strong> detect island similarity. These test cases are specifically designed to highlight algorithmic differences between matching methods.</p>
+<hr />
+<h3 id="sorting-example-across-matching-modes">Sorting Example Across Matching Modes<a class="headerlink" href="#sorting-example-across-matching-modes" title="Permanent link"></a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><a class="glightbox" href="../img/screen/stack/matching_modes_comparision_exact_01.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Example Exact Match method" src="../img/screen/stack/matching_modes_comparision_exact_01.png" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Fig. 19. Island grouping under the Exact Match method</em></td>
+</tr>
+</tbody>
+</table>
+<p>Figure 19 illustrates island sorting under <strong>Exact Match</strong>. The algorithm identifies seven distinct island groups (seven potential stacks). Visually, however, there appear to be only three groups because several islands look identical. </p>
+<p>To determine why <strong>Exact Match</strong> separated visually identical islands into seven stacks, we can inspect them using <a href="#analyze-stack">Analyze Stack</a>.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><a class="glightbox" href="../img/screen/stack/mmodes_compar_exact_analyse.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Analyse Stack Matching Mode Exact" src="../img/screen/stack/mmodes_compar_exact_analyse.png" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Fig. 20. Analyze Stack readout under Exact Match</em></td>
+</tr>
+</tbody>
+</table>
+<p>Assigning the visually identical islands from the middle groups to a <strong>Manual Stack</strong> and running an analysis reveals subtle differences in <strong>Area</strong> and <strong>Perimeter</strong> (Fig. 20). </p>
+<p>Even minor mathematical discrepancies cause <strong>Exact Match</strong> to treat islands as unique because it strictly enforces identical 3D mesh dimensions. Such variance frequently occurs when using mesh mirroring tools with imprecise origin placement.</p>
+<p>Let&rsquo;s switch the global <strong>Matching Mode</strong> to <strong>Topology &amp; Scale</strong>.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><a class="glightbox" href="../img/screen/stack/mmodes_compar_top_scale_01.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Stack detection in Topology and Scale method" src="../img/screen/stack/mmodes_compar_top_scale_01.png" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Fig. 21. Stack detection under Topology &amp; Scale method</em></td>
+</tr>
+</tbody>
+</table>
+<p>Comparing Fig. 21 to Fig. 19, switching to <strong>Topology &amp; Scale</strong> merges the two middle groups into a single stack group, designated by a single Primary island. <em>(Note: Grid sorting was kept unchanged in this demonstration for visual comparison).</em></p>
+<p>While <strong>Topology &amp; Scale</strong> is more permissive than <strong>Exact Match</strong>, how does <strong>Topology Only</strong> behave? </p>
+<p>Let&rsquo;s switch the global <strong>Matching Mode</strong> to <strong>Topology Only</strong>.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><a class="glightbox" href="../img/screen/stack/mmodes_compar_top_only_01.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Stack detection in Topology Only method" src="../img/screen/stack/mmodes_compar_top_only_01.png" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Fig. 22. Stack detection under Topology Only method</em></td>
+</tr>
+</tbody>
+</table>
+<p>In Fig. 22, only three Primary islands remain, perfectly matching the three visual stacks expected at first glance.</p>
+<hr />
+<h3 id="why-not-use-topology-only-for-everything">Why Not Use Topology Only for Everything?<a class="headerlink" href="#why-not-use-topology-only-for-everything" title="Permanent link"></a></h3>
+<p>If <strong>Topology Only</strong> produced the cleanest grouping in this example, why offer three distinct matching modes?</p>
+<p>Because <strong>Topology Only</strong> evaluates connectivity while ignoring edge lengths and proportions, it frequently produces false positives by grouping radically different UV shapes that share identical vertex counts and topology.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><a class="glightbox" href="../img/screen/stack/mmodes_compar_top_only_mistakes_01.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Topology Only mistake example 1" src="../img/screen/stack/mmodes_compar_top_only_mistakes_01.png" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Fig. 23. False positive: Identical topology with different proportions</em></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><a class="glightbox" href="../img/screen/stack/mmodes_compar_top_only_mistakes_02.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Topology Only mistake example 2" src="../img/screen/stack/mmodes_compar_top_only_mistakes_02.png" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Fig. 24. False positive: Identical topology with modified mesh scale</em></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><a class="glightbox" href="../img/screen/stack/mmodes_compar_top_only_mistakes_03.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Topology Only mistake example 3" src="../img/screen/stack/mmodes_compar_top_only_mistakes_03.png" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Fig. 25. False positive: Identical topology with different geometric shapes</em></td>
+</tr>
+</tbody>
+</table>
+<p>As shown in Figures 23–25, <strong>Topology Only</strong> groups islands that share identical vertex connectivity even if they differ completely in 3D scale, shape, or proportions.</p>
+<div class="admonition recommendation">
+<p class="admonition-title">Recommendation</p>
+<p>Always perform primary automated stacking using <strong>Exact Match</strong>. Afterward, run a visual inspection (e.g., using <strong>Stack Types</strong> or <strong>Similar</strong> overlays) and stack any remaining unmatched elements using <strong>Topology &amp; Scale</strong> or <strong>Topology Only</strong> under manual control.</p>
+</div>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../transform/" class="btn btn-neutral float-left" title="Transform"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../transform_sys/advanced_operators/" class="btn btn-neutral float-left" title="Advanced Transform"><span class="icon icon-circle-arrow-left"></span> Previous</a>
         <a href="../texel_density/" class="btn btn-neutral float-right" title="Texel Density">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
@@ -446,7 +1337,7 @@
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../transform/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../transform_sys/advanced_operators/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
       <span><a href="../texel_density/" style="color: #fcfcfc">Next &raquo;</a></span>

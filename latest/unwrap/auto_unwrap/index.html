@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Auto Unwrap - Zen UV 5.4 for Blender</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../extra.css" rel="stylesheet" />
+        <link href="../../css/version-select.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Auto Unwrap";
+        var mkdocs_page_input_path = "unwrap\\auto_unwrap.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-7XHJ910WF8"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', "G-7XHJ910WF8");
+      </script>
+ <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Zen UV 5.4 for Blender
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../..">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../youtube_videos/">Learning Videos</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../installation/">Installation and Update</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../user_interface/">User Interface</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Tutorial</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../tutorial/">Step-by-Step Guide Examples</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >Emergency Light</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../tutorial/emergency_light/emergency_light_eng/">Emergency Light (EN)</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../tutorial/emergency_light/emergency_light_ukr/">Emergency Light (UA)</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../tutorial/emergency_light/emergency_light_rus/">Emergency Light (RU)</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Modules</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../../adv_uv-maps/">Advanced UV Maps</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../seam_groups/">Seam Groups</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" >Unwrap</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../">Unwrap</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../zen_unwrap/">Zen Unwrap</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Auto Unwrap</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#preprocess-settings">Preprocess Settings</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#postprocess-settings">Postprocess Settings</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#texel-density-settings">Texel Density Settings</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#unwrap-settings-mof-core">Unwrap Settings (MOF Core)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#advanced-settings">Advanced Settings</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#ministry-of-flat-unwrapconsole3exe-documentation-for-version-372">Ministry OF Flat UnWrapConsole3.exe Documentation for version 3.7.2</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#ui-version">UI Version</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#contact-and-feedback">Contact and Feedback</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#settings">Settings</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#texture-resolution">Texture Resolution</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#separate-hard-edges">Separate Hard Edges</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#aspect">Aspect</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#use-normal">Use Normal</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#udims">UDIMs</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#overlap-identical-parts">Overlap Identical Parts</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#overlap-mirrored-parts">Overlap Mirrored Parts</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#scale-uv-space-to-worldspace">Scale UV Space to Worldspace</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#texture-density">Texture Density</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#seam-direction">Seam Direction</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#debugging-settings">Debugging Settings</a>
+        <ul>
+    <li class="toctree-l5"><a class="reference internal" href="#suppress-validation-errors">Suppress Validation Errors</a>
+    </li>
+    <li class="toctree-l5"><a class="reference internal" href="#quads">Quads</a>
+    </li>
+    <li class="toctree-l5"><a class="reference internal" href="#vertex-weld">Vertex Weld</a>
+    </li>
+    <li class="toctree-l5"><a class="reference internal" href="#flat-soft-surface">Flat Soft Surface</a>
+    </li>
+    <li class="toctree-l5"><a class="reference internal" href="#cones">Cones</a>
+    </li>
+    <li class="toctree-l5"><a class="reference internal" href="#cone-ratio">Cone Ratio</a>
+    </li>
+    <li class="toctree-l5"><a class="reference internal" href="#grids">Grids</a>
+    </li>
+    <li class="toctree-l5"><a class="reference internal" href="#strips">Strips</a>
+    </li>
+    <li class="toctree-l5"><a class="reference internal" href="#tubes">Tubes</a>
+    </li>
+    <li class="toctree-l5"><a class="reference internal" href="#packing">Packing</a>
+    </li>
+    <li class="toctree-l5"><a class="reference internal" href="#packing-iterations">Packing Iterations</a>
+    </li>
+    <li class="toctree-l5"><a class="reference internal" href="#validate">Validate</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../select/">Select</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Transform</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../transform_sys/panels_and_description/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../transform_sys/independent_ops/">Independent Transform Operators</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../transform_sys/unified_transform_sys/">Unified Transform System</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../transform_sys/advanced_operators/">Advanced Transform</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../stack/">Stack</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../texel_density/">Texel Density</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../checker/">UV Checker</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../pack/">Pack</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../preferences/">Preferences</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../transform_tool/">Transform Tool</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../touch_tool/">Touch Tool</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../sticky_uv_editor/">Sticky UV Editor</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../favourites/">Favourites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Trim Sheets</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../trimsheet/">Trim Sheets</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../trimsheet_creation/">Trim Sheet Management</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../trimsheet_operators/">Trimsheet Operators</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../trimsheet_hotspot/">Hotspot Mapping</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Additional</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../addon_prefs/">Addon Preferences</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../user_script/">User Script</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../help/">Help</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/">FAQs</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Changelog</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/">Summary</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_5.4.0/">Version 5.4.0</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_5.3.3/">Version 5.3.3</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_5.3.2/">Version 5.3.2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_5.3.1/">Version 5.3.1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_5.3.0/">Version 5.3.0</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_5.2.1/">Version 5.2.1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_5.2.0/">Version 5.2.0</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_5.1.0/">Version 5.1.0</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_5.0.3/">Version 5.0.3</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_5.0.2/">Version 5.0.2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_5.0.1/">Version 5.0.1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_5.0.0/">Version 5.0.0</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_4.5.4/">Version 4.5.4</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_4.5.2/">Version 4.5.2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_4.5.1/">Version 4.5.1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_4.5.0/">Version 4.5.0</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_4.4.2/">Version 4.4.2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_4.4.1/">Version 4.4.1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_4.4.0/">Version 4.4</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_4.3/">Version 4.3</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_4.2.1/">Version 4.2.1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_4.2/">Version 4.2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_4.1/">Version 4.1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_4.0.1/">Version 4.0.1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_4.0/">Version 4.0</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_3.1.1.0/">Version 3.1.0.4</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_3.1.0.2/">Version 3.1.0.2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_3.0.2/">Version 3.0.2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_3.0.1/">Version 3.0.1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_3.0/">Version 3.0</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_2.2.3/">Version 2.2.3</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_2.2.2/">Version 2.2.2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_2.2.1/">Version 2.2.1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_2.2/">Version 2.2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_2.1.3/">Version 2.1.3</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_2.1/">Version 2.1 Stacks</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_2.0/">Version 2.0 Transform</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_1.92/">Version 1.92 Texel Density</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_1.9/">Version 1.9 Texture Checker</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_1.8/">Version 1.8</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_1.7/">Version 1.7</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../credits/">Credits</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../our_addons/">Our Add-ons</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../recommended_addons/">Recommended Add-ons</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Zen UV 5.4 for Blender</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Modules</li>
+          <li class="breadcrumb-item">Unwrap</li>
+      <li class="breadcrumb-item active">Auto Unwrap</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="auto-unwrap">Auto Unwrap<a class="headerlink" href="#auto-unwrap" title="Permanent link"></a></h1>
+<p>Automated UV unwrapper based on a utility written by Eskil Steenberg www.ministryofflat.com.</p>
+<p>This operator is essentially a bridge for working with <strong>MinistryOfFlat</strong>.<br />
+This software is designed <strong>exclusively for Windows</strong>, so this operator will not be available on <strong>Linux</strong> or <strong>Mac OS</strong>.</p>
+<p><a href="https://www.quelsolaar.com/ministry_of_flat/">https://www.quelsolaar.com/ministry_of_flat/</a></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The <strong>Auto Unwrap</strong> operator utilizes a third-party application, which has its own license terms.<br />
+Please review the license agreement of the external software before use and determine whether you can legally use it.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Since this software is third-party, it is not distributed with <strong>Zen UV</strong>.<br />
+Therefore, we will outline the full activation process, starting from the first click on the <strong>Auto Unwrap</strong> button.</p>
+</div>
+<p>If you have just installed the add-on, go to the <strong>Unwrap</strong> tab in the <strong>Zen UV</strong> panel in any context (<strong>UV Editor</strong> or <strong>3D View</strong>).<br />
+Find and click the <strong>Auto Unwrap</strong> button. You will see a popup like the one shown in the screenshot below.</p>
+<p><a class="glightbox" href="../../img/screen/unwrap/MOF_License_Screen.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="MOF License" src="../../img/screen/unwrap/MOF_License_Screen.png" /></a></p>
+<p>The message displayed will be:</p>
+<pre><code>'You are about to download "UV Automated Unwrapper" from the Ministry of Flat.',
+'Please note that by pressing the "OK" button, you acknowledge that you have read and agree',
+'to the terms and conditions of the free license associated with this tool.',
+'We recommend reviewing these terms carefully to understand your rights and responsibilities.'
+</code></pre>
+<p>If you agree with the stated terms, press the <strong>OK</strong> button.<br />
+The software will be automatically downloaded and installed into the Blender settings folder:<br />
+<code>scripts\presets\zen_uv\auto_uv_unwrap\MinistryOfFlat_Release</code>.<br />
+For more details, refer to the <strong>Modules</strong> section in <a href="../../addon_prefs/#modules">Addon Preferences</a>.</p>
+<p>The download time depends on your internet speed, but in general, it happens quite quickly.<br />
+This software <strong>does not require installation</strong> and runs in the console, so <strong>no special permissions</strong> are typically needed.<br />
+However, if any issues arise, ensure that <strong>Blender has permission to write to disk</strong>.<br />
+Once the download is complete, the unwrapping process will start immediately using the parameters specified in the operator settings.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>You can configure the operator&rsquo;s properties before running it.<br />
+You can also save your own presets using Blender&rsquo;s standard preset system.<br />
+<a class="glightbox" href="../../img/screen/unwrap/auto_unwrap_op_prop_01.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Auto Unwrap" src="../../img/screen/unwrap/auto_unwrap_op_prop_01.png" /></a></p>
+</div>
+<p>This utility is universal, so we have already set up some <strong>default configurations</strong> for better results.<br />
+However, you can <strong>create and save your own presets</strong> for any specific needs.<br />
+If you want to return to the default settings, use the <strong>Restore Operator Defaults</strong> function.</p>
+<p><a class="glightbox" href="../../img/screen/unwrap/MOF_restore_defailts.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Restore Operator Defaults" src="../../img/screen/unwrap/MOF_restore_defailts.png" /></a></p>
+<p>Below, we provide some explanations about <strong>why there are so many settings</strong> and <strong>what to expect when changing them</strong>.<br />
+First of all, it’s important to understand that <strong>we do not modify your geometry</strong>, only the <strong>current UV map</strong>.<br />
+Thus, <strong>geometry attributes</strong> (such as <strong>Vertex Maps</strong>, <strong>Vertex Colors</strong>) will remain <strong>unchanged</strong>.<br />
+Inactive <strong>UV Maps</strong> will also stay the same.</p>
+<p><a class="glightbox" href="../../img/screen/unwrap/MOF_properties_blocks.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="MOF properties blocks" src="../../img/screen/unwrap/MOF_properties_blocks.png" /></a></p>
+<ol>
+<li><strong>Preprocess</strong> - These settings activate processes <strong>before</strong> sending data to MOF.</li>
+<li><strong>Postprocess</strong> - These settings activate processes <strong>after</strong> the UV map is returned from MOF.</li>
+<li><strong>Texel Density</strong> - Allows you to set TD for automatic unwrapping. This process is controlled <strong>directly by MOF</strong>.</li>
+<li><strong>Unwrap Settings</strong> - These settings configure <strong>MOF’s core behavior</strong>.</li>
+<li><strong>Advanced Settings</strong> - These settings provide additional controls inside <strong>MOF</strong> and are marked as <strong>&ldquo;Advanced&rdquo;</strong>.<br />
+   Let&rsquo;s quote the original developer:</li>
+</ol>
+<blockquote>
+<p><strong>&ldquo;All following settings are for debugging purposes only.<br />
+Making any change to these settings is likely to result in worse UV mapping and/or longer processing time.&rdquo;</strong><br />
+— Ministry of Flat</p>
+</blockquote>
+<hr />
+<h2 id="preprocess-settings"><strong>Preprocess Settings</strong><a class="headerlink" href="#preprocess-settings" title="Permanent link"></a></h2>
+<p><a class="glightbox" href="../../img/screen/unwrap/MOF_preprocess.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Preprocess" src="../../img/screen/unwrap/MOF_preprocess.png" /></a></p>
+<ul>
+<li><strong>Force Hard Surface</strong> - Forces the algorithm to treat the surface as a <strong>hard surface</strong>, ensuring precise handling of <strong>sharp edges</strong> and <strong>rigid structures</strong>.</li>
+<li><strong>Separate By Material</strong> - Splits the <strong>mesh by materials</strong> before unwrapping.</li>
+<li><strong>Separate By Sharp Edges</strong> - Splits the <strong>mesh by sharp edges</strong> before unwrapping.</li>
+<li><strong>Triangulate Mesh</strong> - Converts <strong>n-gons</strong> (faces with 4+ vertices) into triangles.<br />
+  If the mesh contains complex <strong>n-gons</strong>, they may be <strong>internally split</strong> within <strong>MOF</strong>,<br />
+  while still being treated as a <strong>single structure</strong> in the mesh.<br />
+  This can result in <strong>gaps</strong> in what should remain unified, appearing as <strong>stretched polygons</strong>.<br />
+<strong>This issue must be corrected manually.</strong></li>
+</ul>
+<hr />
+<h2 id="postprocess-settings"><strong>Postprocess Settings</strong><a class="headerlink" href="#postprocess-settings" title="Permanent link"></a></h2>
+<p><a class="glightbox" href="../../img/screen/unwrap/MOF_postprocess.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Postprocess" src="../../img/screen/unwrap/MOF_postprocess.png" /></a></p>
+<ul>
+<li><strong>Mark Seams</strong> - Automatically assigns <strong>seams</strong>.</li>
+<li><strong>Correct Self-Intersecting</strong> - Fixes <strong>UV faces</strong> that have <strong>self-intersecting UV edges</strong>.</li>
+</ul>
+<hr />
+<h2 id="texel-density-settings"><strong>Texel Density Settings</strong><a class="headerlink" href="#texel-density-settings" title="Permanent link"></a></h2>
+<p><a class="glightbox" href="../../img/screen/unwrap/MOF_TD.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Texel Density" src="../../img/screen/unwrap/MOF_TD.png" /></a></p>
+<ul>
+<li><strong>Use Texel Density</strong> - Scales the UVs to match the <strong>specified texel density value</strong>.</li>
+<li><strong>Texture Size</strong> - Image size preset.</li>
+<li><strong>Texel Density</strong> - The texel density value.</li>
+</ul>
+<hr />
+<h2 id="unwrap-settings-mof-core"><strong>Unwrap Settings (MOF Core)</strong><a class="headerlink" href="#unwrap-settings-mof-core" title="Permanent link"></a></h2>
+<p>The following settings were created by the <strong>MOF developer</strong>, so we present them <strong>as they are</strong>.</p>
+<p><a class="glightbox" href="../../img/screen/unwrap/MOF_unwrap_settings.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Unwrap Settings" src="../../img/screen/unwrap/MOF_unwrap_settings.png" /></a></p>
+<ul>
+<li><strong>Auto Detect Hard Edges</strong> - The UV unwrapper will try to <strong>separate all hard edges</strong>.<br />
+  Useful for <strong>lightmapping</strong> and <strong>normal mapping</strong>.</li>
+<li><strong>Use Normal</strong> - Uses the <strong>model&rsquo;s normals</strong> to help classify polygons.</li>
+<li><strong>Overlap Identical Parts</strong> - Overlaps <strong>identical parts</strong> to save <strong>texture space</strong>.</li>
+<li><strong>Overlap Mirrored Parts</strong> - Overlaps <strong>mirrored parts</strong> to save <strong>texture space</strong>.</li>
+<li><strong>Scale UV to Worldspace</strong> - Scales the UVs to match their <strong>real-world scale</strong>, extending <strong>beyond the 0-1 UV space</strong>.</li>
+</ul>
+<hr />
+<h2 id="advanced-settings"><strong>Advanced Settings</strong><a class="headerlink" href="#advanced-settings" title="Permanent link"></a></h2>
+<p><a class="glightbox" href="../../img/screen/unwrap/MOF_advanced_settings.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Advanced Settings" src="../../img/screen/unwrap/MOF_advanced_settings.png" /></a></p>
+<ul>
+<li><strong>Stretch</strong> - Stretches islands <strong>too wide</strong> to fit within the texture.</li>
+<li><strong>Packing</strong> - Packs <strong>UV islands</strong> into a <strong>rectangular layout</strong>.</li>
+<li><strong>Cut</strong> - Cuts <strong>awkward shapes</strong> to <strong>optimize layout coverage</strong>.</li>
+<li><strong>Squares</strong> - Identifies <strong>individual polygons</strong> with right angles.</li>
+<li><strong>Vertex Weld</strong> - Merges <strong>duplicate vertices</strong>.<br />
+<strong>Does not affect</strong> the <strong>output polygon</strong> or <strong>vertex data</strong>.</li>
+<li><strong>Quads</strong> - Detects <strong>triangle pairs</strong> that can form <strong>quads</strong>, improving <strong>patch distribution</strong>.</li>
+</ul>
+<p>The <strong>Advanced Settings</strong> list is much larger.<br />
+We have highlighted only a few <strong>useful options</strong>.<br />
+You can manually enable <strong>other options</strong> using <strong>Extra Arguments</strong>.</p>
+<ul>
+<li><strong>Extra Arguments</strong> - Allows <strong>additional command-line arguments</strong> to be passed to the <strong>UV unwrapping application</strong>.</li>
+</ul>
+<hr />
+<h2 id="ministry-of-flat-unwrapconsole3exe-documentation-for-version-372">Ministry OF Flat UnWrapConsole3.exe Documentation for version 3.7.2<a class="headerlink" href="#ministry-of-flat-unwrapconsole3exe-documentation-for-version-372" title="Permanent link"></a></h2>
+<p>It only takes .obj files, but most tools can import and export obj-files, so it should work for most usages.</p>
+<h3 id="ui-version">UI Version<a class="headerlink" href="#ui-version" title="Permanent link"></a></h3>
+<p>To change the camera, press the right mouse button. Right + Left dollys, and Right + Middle pans. Multi-touch camera controls also work (two fingers to tumble/zoom and three to pan), as well as standard Maya camera controls by pressing <strong>Alt + mouse buttons</strong>.</p>
+<p>Click in empty space to switch between 3D and UV view.</p>
+<h3 id="contact-and-feedback">Contact and Feedback<a class="headerlink" href="#contact-and-feedback" title="Permanent link"></a></h3>
+<p>If you encounter any issues, please mail me, and if possible, send me the mesh you have problems with. If you can&rsquo;t send the mesh, a screenshot will also do. If you are having problems, you can turn on the <strong>&ldquo;validate&rdquo;</strong> option in the settings. This will run a bunch of validation steps and output any errors it finds in the <code>betray_stdout.txt</code> file. It only gets better if I know what’s wrong with it!</p>
+<p>UV mapping is subjective, so if you have opinions, please let me know. If you think it sucks, <strong>LET ME KNOW</strong> and tell me why.  </p>
+<blockquote>
+<p><strong>Note:</strong> I am more focused on hand-made meshes with good topology than on scanned meshes, so that will remain my focus for now.</p>
+</blockquote>
+<p>Follow me on Twitter at <strong><a href="https://twitter.com/quelsolaar">@quelsolaar</a></strong>. I will post when I release new versions and when issues are fixed.</p>
+<p>If you are interested in <strong>Licensing the full version</strong>, contact <strong>license@ministryofflat.com</strong>.</p>
+<hr />
+<h2 id="settings">Settings<a class="headerlink" href="#settings" title="Permanent link"></a></h2>
+<h3 id="texture-resolution">Texture Resolution<a class="headerlink" href="#texture-resolution" title="Permanent link"></a></h3>
+<ul>
+<li><strong>Description:</strong> Resolution of texture, to give the right amount of island gaps to prevent bleeds.</li>
+<li><strong>Command-line usage:</strong> <code>-RESOLUTION &lt;VALUE&gt;</code></li>
+<li><strong>Default value:</strong> <code>1024</code></li>
+</ul>
+<h3 id="separate-hard-edges">Separate Hard Edges<a class="headerlink" href="#separate-hard-edges" title="Permanent link"></a></h3>
+<ul>
+<li><strong>Description:</strong> Guarantees that all hard edges are separated. Useful for lightmapping and normal mapping.</li>
+<li><strong>Command-line usage:</strong> <code>-SEPARATE &lt;TRUE/FALSE&gt;</code></li>
+<li><strong>Default value:</strong> <code>FALSE</code></li>
+</ul>
+<h3 id="aspect">Aspect<a class="headerlink" href="#aspect" title="Permanent link"></a></h3>
+<ul>
+<li><strong>Description:</strong> Aspect ratio of pixels. For non-square textures.</li>
+<li><strong>Command-line usage:</strong> <code>-ASPECT &lt;VALUE&gt;</code></li>
+<li><strong>Default value:</strong> <code>1.000000</code></li>
+</ul>
+<h3 id="use-normal">Use Normal<a class="headerlink" href="#use-normal" title="Permanent link"></a></h3>
+<ul>
+<li><strong>Description:</strong> Use the model’s normals to help classify polygons.</li>
+<li><strong>Command-line usage:</strong> <code>-NORMALS &lt;TRUE/FALSE&gt;</code></li>
+<li><strong>Default value:</strong> <code>FALSE</code></li>
+</ul>
+<h3 id="udims">UDIMs<a class="headerlink" href="#udims" title="Permanent link"></a></h3>
+<ul>
+<li><strong>Description:</strong> Split the model into multiple UDIMs.</li>
+<li><strong>Command-line usage:</strong> <code>-UDIMS &lt;VALUE&gt;</code></li>
+<li><strong>Default value:</strong> <code>1</code></li>
+</ul>
+<h3 id="overlap-identical-parts">Overlap Identical Parts<a class="headerlink" href="#overlap-identical-parts" title="Permanent link"></a></h3>
+<ul>
+<li><strong>Description:</strong> Overlap identical parts to take up the same texture space.</li>
+<li><strong>Command-line usage:</strong> <code>-OVERLAP &lt;TRUE/FALSE&gt;</code></li>
+<li><strong>Default value:</strong> <code>FALSE</code></li>
+</ul>
+<h3 id="overlap-mirrored-parts">Overlap Mirrored Parts<a class="headerlink" href="#overlap-mirrored-parts" title="Permanent link"></a></h3>
+<ul>
+<li><strong>Description:</strong> Overlap mirrored parts to take up the same texture space.</li>
+<li><strong>Command-line usage:</strong> <code>-MIRROR &lt;TRUE/FALSE&gt;</code></li>
+<li><strong>Default value:</strong> <code>FALSE</code></li>
+</ul>
+<h3 id="scale-uv-space-to-worldspace">Scale UV Space to Worldspace<a class="headerlink" href="#scale-uv-space-to-worldspace" title="Permanent link"></a></h3>
+<ul>
+<li><strong>Description:</strong> Scales the UVs to match their real-world scale, going beyond the zero-to-one range.</li>
+<li><strong>Command-line usage:</strong> <code>-WORLDSCALE &lt;TRUE/FALSE&gt;</code></li>
+<li><strong>Default value:</strong> <code>FALSE</code></li>
+</ul>
+<h3 id="texture-density">Texture Density<a class="headerlink" href="#texture-density" title="Permanent link"></a></h3>
+<ul>
+<li><strong>Description:</strong> If worldspace is enabled, this value sets the number of pixels per unit.</li>
+<li><strong>Command-line usage:</strong> <code>-DENSITY &lt;VALUE&gt;</code></li>
+<li><strong>Default value:</strong> <code>1024</code></li>
+</ul>
+<h3 id="seam-direction">Seam Direction<a class="headerlink" href="#seam-direction" title="Permanent link"></a></h3>
+<ul>
+<li><strong>Description:</strong> Sets a point in space that seams are directed toward. By default, it&rsquo;s the center of the model.</li>
+<li><strong>Command-line usage:</strong> <code>-CENTER &lt;X VALUE&gt; &lt;Y VALUE&gt; &lt;Z VALUE&gt;</code></li>
+<li><strong>Default value:</strong> <code>0.000000 0.000000 0.000000</code></li>
+</ul>
+<hr />
+<h3 id="debugging-settings">Debugging Settings<a class="headerlink" href="#debugging-settings" title="Permanent link"></a></h3>
+<blockquote>
+<p><strong>Warning:</strong><br />
+All following settings are for debugging purposes only.<br />
+Making any change to these settings is likely to result in worse UV mapping and/or longer processing time.</p>
+</blockquote>
+<h4 id="suppress-validation-errors">Suppress Validation Errors<a class="headerlink" href="#suppress-validation-errors" title="Permanent link"></a></h4>
+<ul>
+<li><strong>Description:</strong> Faulty geometry errors will not be printed to standard output.</li>
+<li><strong>Command-line usage:</strong> <code>-SUPRESS &lt;TRUE/FALSE&gt;</code></li>
+<li><strong>Default value:</strong> <code>FALSE</code></li>
+</ul>
+<h4 id="quads">Quads<a class="headerlink" href="#quads" title="Permanent link"></a></h4>
+<ul>
+<li><strong>Description:</strong> Searches the model for triangle pairs that make good quads. Improves the use of patches.</li>
+<li><strong>Command-line usage:</strong> <code>-QUAD &lt;TRUE/FALSE&gt;</code></li>
+<li><strong>Default value:</strong> <code>TRUE</code></li>
+</ul>
+<h4 id="vertex-weld">Vertex Weld<a class="headerlink" href="#vertex-weld" title="Permanent link"></a></h4>
+<ul>
+<li><strong>Description:</strong> Merges duplicate vertices. Does not affect the output polygon or vertex data.</li>
+<li><strong>Command-line usage:</strong> <code>-WELD &lt;TRUE/FALSE&gt;</code></li>
+<li><strong>Default value:</strong> <code>TRUE</code></li>
+</ul>
+<h4 id="flat-soft-surface">Flat Soft Surface<a class="headerlink" href="#flat-soft-surface" title="Permanent link"></a></h4>
+<ul>
+<li><strong>Description:</strong> Detects flat areas of soft surfaces in order to minimize distortion.</li>
+<li><strong>Command-line usage:</strong> <code>-FLAT &lt;TRUE/FALSE&gt;</code></li>
+<li><strong>Default value:</strong> <code>TRUE</code></li>
+</ul>
+<h4 id="cones">Cones<a class="headerlink" href="#cones" title="Permanent link"></a></h4>
+<ul>
+<li><strong>Description:</strong> Searches the model for sharp cones.</li>
+<li><strong>Command-line usage:</strong> <code>-CONE &lt;TRUE/FALSE&gt;</code></li>
+<li><strong>Default value:</strong> <code>TRUE</code></li>
+</ul>
+<h4 id="cone-ratio">Cone Ratio<a class="headerlink" href="#cone-ratio" title="Permanent link"></a></h4>
+<ul>
+<li><strong>Description:</strong> The minimum ratio of a triangle used in a cone.</li>
+<li><strong>Command-line usage:</strong> <code>-CONERATIO &lt;VALUE&gt;</code></li>
+<li><strong>Default value:</strong> <code>0.500000</code></li>
+</ul>
+<h4 id="grids">Grids<a class="headerlink" href="#grids" title="Permanent link"></a></h4>
+<ul>
+<li><strong>Description:</strong> Searches the model for grids of quads.</li>
+<li><strong>Command-line usage:</strong> <code>-GRIDS &lt;TRUE/FALSE&gt;</code></li>
+<li><strong>Default value:</strong> <code>TRUE</code></li>
+</ul>
+<h4 id="strips">Strips<a class="headerlink" href="#strips" title="Permanent link"></a></h4>
+<ul>
+<li><strong>Description:</strong> Searches the model for strips of quads.</li>
+<li><strong>Command-line usage:</strong> <code>-STRIP &lt;TRUE/FALSE&gt;</code></li>
+<li><strong>Default value:</strong> <code>TRUE</code></li>
+</ul>
+<h4 id="tubes">Tubes<a class="headerlink" href="#tubes" title="Permanent link"></a></h4>
+<ul>
+<li><strong>Description:</strong> Finds tube-shaped geometry and unwraps it using cylindrical projection.</li>
+<li><strong>Command-line usage:</strong> <code>-TUBES &lt;TRUE/FALSE&gt;</code></li>
+<li><strong>Default value:</strong> <code>TRUE</code></li>
+</ul>
+<h4 id="packing">Packing<a class="headerlink" href="#packing" title="Permanent link"></a></h4>
+<ul>
+<li><strong>Description:</strong> Packs islands into a rectangle.</li>
+<li><strong>Command-line usage:</strong> <code>-PACKING &lt;TRUE/FALSE&gt;</code></li>
+<li><strong>Default value:</strong> <code>TRUE</code></li>
+</ul>
+<h4 id="packing-iterations">Packing Iterations<a class="headerlink" href="#packing-iterations" title="Permanent link"></a></h4>
+<ul>
+<li><strong>Description:</strong> How many times the packer will pack the islands to find the optimal spacing.</li>
+<li><strong>Command-line usage:</strong> <code>-PACKING_ITERATIONS &lt;VALUE&gt;</code></li>
+<li><strong>Default value:</strong> <code>4</code></li>
+</ul>
+<h4 id="validate">Validate<a class="headerlink" href="#validate" title="Permanent link"></a></h4>
+<ul>
+<li><strong>Description:</strong> Validates geometry after each stage and prints out any issues found (<strong>for debugging only</strong>).</li>
+<li><strong>Command-line usage:</strong> <code>-VALIDATE &lt;TRUE/FALSE&gt;</code></li>
+<li><strong>Default value:</strong> <code>FALSE</code></li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../zen_unwrap/" class="btn btn-neutral float-left" title="Zen Unwrap"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../select/" class="btn btn-neutral float-right" title="Select">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p><p>Copyright &copy; 2024-2025 <a href="https://zenmasters.team/">Zen Masters</a></p></p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../zen_unwrap/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../../select/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+      <script src="../../js/version-select.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+</script></body>
+</html>

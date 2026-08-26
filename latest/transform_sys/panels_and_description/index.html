@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Overview - Zen UV 5.4 for Blender</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../extra.css" rel="stylesheet" />
+        <link href="../../css/version-select.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Overview";
+        var mkdocs_page_input_path = "transform_sys\\panels_and_description.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-7XHJ910WF8"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', "G-7XHJ910WF8");
+      </script>
+ <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Zen UV 5.4 for Blender
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../..">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../youtube_videos/">Learning Videos</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../installation/">Installation and Update</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../user_interface/">User Interface</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Tutorial</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../tutorial/">Step-by-Step Guide Examples</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >Emergency Light</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../tutorial/emergency_light/emergency_light_eng/">Emergency Light (EN)</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../tutorial/emergency_light/emergency_light_ukr/">Emergency Light (UA)</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../tutorial/emergency_light/emergency_light_rus/">Emergency Light (RU)</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Modules</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../../adv_uv-maps/">Advanced UV Maps</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../seam_groups/">Seam Groups</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Unwrap</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../unwrap/">Unwrap</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../unwrap/zen_unwrap/">Zen Unwrap</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../unwrap/auto_unwrap/">Auto Unwrap</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../select/">Select</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" >Transform</a>
+    <ul class="current">
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Overview</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#1-unified-transform-system">1. Unified Transform System</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#2-advanced-transforms">2. Advanced Transforms</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#3-independent-transform-operators">3. Independent Transform Operators</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../independent_ops/">Independent Transform Operators</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../unified_transform_sys/">Unified Transform System</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../advanced_operators/">Advanced Transform</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../stack/">Stack</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../texel_density/">Texel Density</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../checker/">UV Checker</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../pack/">Pack</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../preferences/">Preferences</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../transform_tool/">Transform Tool</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../touch_tool/">Touch Tool</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../sticky_uv_editor/">Sticky UV Editor</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../favourites/">Favourites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Trim Sheets</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../trimsheet/">Trim Sheets</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../trimsheet_creation/">Trim Sheet Management</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../trimsheet_operators/">Trimsheet Operators</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../trimsheet_hotspot/">Hotspot Mapping</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Additional</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../addon_prefs/">Addon Preferences</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../user_script/">User Script</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../help/">Help</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/">FAQs</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Changelog</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/">Summary</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_5.4.0/">Version 5.4.0</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_5.3.3/">Version 5.3.3</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_5.3.2/">Version 5.3.2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_5.3.1/">Version 5.3.1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_5.3.0/">Version 5.3.0</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_5.2.1/">Version 5.2.1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_5.2.0/">Version 5.2.0</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_5.1.0/">Version 5.1.0</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_5.0.3/">Version 5.0.3</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_5.0.2/">Version 5.0.2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_5.0.1/">Version 5.0.1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_5.0.0/">Version 5.0.0</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_4.5.4/">Version 4.5.4</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_4.5.2/">Version 4.5.2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_4.5.1/">Version 4.5.1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_4.5.0/">Version 4.5.0</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_4.4.2/">Version 4.4.2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_4.4.1/">Version 4.4.1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_4.4.0/">Version 4.4</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_4.3/">Version 4.3</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_4.2.1/">Version 4.2.1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_4.2/">Version 4.2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_4.1/">Version 4.1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_4.0.1/">Version 4.0.1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_4.0/">Version 4.0</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_3.1.1.0/">Version 3.1.0.4</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_3.1.0.2/">Version 3.1.0.2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_3.0.2/">Version 3.0.2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_3.0.1/">Version 3.0.1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_3.0/">Version 3.0</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_2.2.3/">Version 2.2.3</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_2.2.2/">Version 2.2.2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_2.2.1/">Version 2.2.1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_2.2/">Version 2.2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_2.1.3/">Version 2.1.3</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_2.1/">Version 2.1 Stacks</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_2.0/">Version 2.0 Transform</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_1.92/">Version 1.92 Texel Density</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_1.9/">Version 1.9 Texture Checker</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_1.8/">Version 1.8</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../changelog/release_note_1.7/">Version 1.7</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../credits/">Credits</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../our_addons/">Our Add-ons</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../recommended_addons/">Recommended Add-ons</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Zen UV 5.4 for Blender</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Modules</li>
+          <li class="breadcrumb-item">Transform</li>
+      <li class="breadcrumb-item active">Overview</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="transform-system-overview">Transform System Overview<a class="headerlink" href="#transform-system-overview" title="Permanent link"></a></h1>
+<p>This panel contains tools to transform UVs.</p>
+<div class="admonition panel">
+<p class="admonition-title">Panel</p>
+<table>
+<thead>
+<tr>
+<th>3D Viewport</th>
+<th>UV Editor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="glightbox" href="../../img/screen/transform/tr_main_panel.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Transform 3d panel" src="../../img/screen/transform/tr_main_panel.png" /></a></td>
+<td><a class="glightbox" href="../../img/screen/transform/tr_main_panel_uv_editor.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Transform UV panel" src="../../img/screen/transform/tr_main_panel_uv_editor.png" /></a></td>
+</tr>
+</tbody>
+</table>
+<p>UV Editor panel contains extra operator <a href="../independent_ops/#reshape-island"><strong>Reshape Islands. Click to read full information</strong></a>.</p>
+</div>
+<p>The Transform System is organized into three complementary subsystem tiers that cater to different interaction styles—from fast, interactive UI control to precise hotkey workflows and advanced geometric algorithms.</p>
+<hr />
+<h3 id="1-unified-transform-system">1. <a href="../unified_transform_sys/">Unified Transform System</a><a class="headerlink" href="#1-unified-transform-system" title="Permanent link"></a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><a class="glightbox" href="../../img/screen/transform/tr_un_tr_sys.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Unified Transform System Panel" src="../../img/screen/transform/tr_un_tr_sys.png" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Fig. 1. Unified Transform System Panel</em></td>
+</tr>
+</tbody>
+</table>
+<p>The <a href="../unified_transform_sys/">Unified Transform System</a> acts as the primary interactive hub, centering around the <a href="../unified_transform_sys/#universal-control-panel">Universal Control Panel</a>. It combines common spatial operations with directional controls and adaptive pivot behaviors.</p>
+<ul>
+<li><strong><a href="../unified_transform_sys/#universal-control-panel">Universal Control Panel</a></strong>: An interactive grid-based button interface whose actions dynamically update depending on the active operation type.</li>
+<li><strong>Global Scope Controls</strong>:</li>
+<li><strong><a href="../unified_transform_sys/#transform-space">Transform Space</a></strong>: Toggles between moving/scaling mesh Islands or transforming the underlying Texture directly in the 3D viewport.</li>
+<li><strong><a href="../unified_transform_sys/#mode">Mode</a></strong>: Controls whether operations affect entire Islands or fine-grained sub-element Selection (faces, edges, vertices).</li>
+<li><strong><a href="../unified_transform_sys/#order">Order</a></strong>: Dictates execution handling—processing items One by one, acting on Overall selection as a single unit, or anchoring relative to the System Pivot.</li>
+<li><strong>Integrated Operation Modes</strong>:</li>
+<li><strong><a href="../unified_transform_sys/#move">Move</a></strong> / <strong><a href="../unified_transform_sys/#rotate">Rotate</a></strong> / <strong><a href="../unified_transform_sys/#flip">Flip</a></strong>: Interactive shifting, directional alignment, and axis flipping with user-defined increments.</li>
+<li><strong><a href="../unified_transform_sys/#scale">Scale</a></strong>: Includes axis-ratio controls, Quick Tuners (<em>&ldquo;D&rdquo;</em> double, <em>&ldquo;H&rdquo;</em> half, <em>&ldquo;R&rdquo;</em> reset), and real-world Units-based scaling relative to UV tile boundaries.</li>
+<li><strong><a href="../unified_transform_sys/#fit">Fit</a></strong> / <strong><a href="../unified_transform_sys/#fit-into-region">Fit into Region</a></strong>: Scales elements to fill defined bounding areas, custom regions, or active UDIM spaces while maintaining aspect ratios or filling margins.</li>
+<li><strong><a href="../unified_transform_sys/#align">Align</a></strong> / <strong><a href="../unified_transform_sys/#distribute">Distribute</a></strong>: Aligns components against bounding boxes, 2D cursor origins, or specific UDIM tiles, with dedicated tools to distribute, sort, or <a href="../unified_transform_sys/#arrange-islands">arrange islands</a>.</li>
+</ul>
+<hr />
+<h3 id="2-advanced-transforms">2. <a href="../advanced_operators/">Advanced Transforms</a><a class="headerlink" href="#2-advanced-transforms" title="Permanent link"></a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><a class="glightbox" href="../../img/screen/transform/tr_advanced_transforms.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Advanced Transforms Panel" src="../../img/screen/transform/tr_advanced_transforms.png" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Fig. 2. Advanced Transforms Panel</em></td>
+</tr>
+</tbody>
+</table>
+<p>The <a href="../advanced_operators/">Advanced Transforms</a> suite provides individual, operator-level equivalents of the unified tools designed without reliance on the Universal Control Panel interface. These discrete operators are optimized for custom hotkey binding, macro setup, and direct numeric input.</p>
+<ul>
+<li><strong>Dedicated Operators</strong>: Standalone versions of <a href="../advanced_operators/#move-operators">Move</a>, <a href="../advanced_operators/#scale-operators">Scale</a>, <a href="../advanced_operators/#rotate-operators">Rotate</a>, <a href="../advanced_operators/#flip-operators">Flip</a>, <a href="../advanced_operators/#fit-operators">Fit</a>, <a href="../advanced_operators/#align-operators">Align</a>, and <a href="../advanced_operators/#distribute-operators">Distribute</a> that expose full property popups (<code>F9</code>) upon execution.</li>
+<li><strong>Extended Positioning &amp; UDIM Routing</strong>: Features precise target relocation operators, such as <a href="../advanced_operators/#move-island">Move Island</a>, <a href="../advanced_operators/#move-to-uv-area">Move to UV Area</a>, <a href="../advanced_operators/#move-2d-cursor-to">Move 2D Cursor To</a>, and quick eyedropper placement tools (<a href="../advanced_operators/#move-to-uv-area-eyedropper">Move To UV Area</a> / <a href="../advanced_operators/#move-to-uv-position-eyedropper">Move to UV position</a>) for instant target shifting across custom coordinates or UDIM tiles.</li>
+<li><strong>Granular Control</strong>: Every operator explicitly exposes mode parameters (Islands vs. Selection, processing order, pivot anchors, custom UV axis constraints) for specialized pipeline scripting.</li>
+</ul>
+<hr />
+<h3 id="3-independent-transform-operators">3. <a href="../independent_ops/">Independent Transform Operators</a><a class="headerlink" href="#3-independent-transform-operators" title="Permanent link"></a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><a class="glightbox" href="../img/screen/trimsheet/panel_independent_ops.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Independent Transform Operators Panel" src="../img/screen/trimsheet/panel_independent_ops.png" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Fig. 3. Independent Transform Operators Panel</em></td>
+</tr>
+</tbody>
+</table>
+<p>The <strong>Independent Transform Operators</strong> operate outside the unified panel structure to perform complex geometric reconstruction, topology straightening, relaxation, and procedural distribution.</p>
+<ul>
+<li><strong>Topology &amp; Geometry Normalization</strong>:</li>
+<li><strong><a href="../independent_ops/#quadrify-islands">Quadrify Islands</a></strong>: Converts rectangular quad meshes into perfectly straight grid UV islands.</li>
+<li><strong><a href="../independent_ops/#rectify">Rectify</a></strong>: Fits complex islands into tight rectangular layouts with built-in relaxation algorithms.</li>
+<li><strong><a href="../independent_ops/#reshape-island">Reshape Island</a></strong>: Straightens edge loops, aligns boundaries, or shapes UVs using specialized preset patterns (Selected, U/V Direction, Borders).</li>
+<li><strong><a href="../independent_ops/#circular">Circular</a></strong>: Arranges selected UV loops into uniform circular formations.</li>
+<li><strong>Relaxation &amp; Deformation Control</strong>:</li>
+<li><strong><a href="../independent_ops/#relax">Relax</a></strong> / <strong><a href="../independent_ops/#relax-along-axis">Relax Along Axis</a></strong>: Minimizes surface area and angle distortion using specialized algorithms (Zen Relax, Angle Based, Conformal, SLIM Minimum Stretch), with support for axis constraints or custom vector directions via the Touch Tool.</li>
+<li><strong>Structural Matching &amp; Placement</strong>:</li>
+<li><strong><a href="../independent_ops/#match-and-stitch">Match and Stitch</a></strong>: Matches position, rotation, and scale between corresponding islands and welds shared edges together.</li>
+<li><strong><a href="../independent_ops/#world-orient">World Orient</a></strong>: Realigns islands in 2D space according to their 3D object-space orientation using organic or hard-surface heuristics.</li>
+<li><strong><a href="../independent_ops/#randomize">Randomize</a></strong>: Applies controlled random variations to position, rotation, and scale in Simple or Advanced step modes.</li>
+<li><strong>Utility Operations</strong>: Includes <a href="../independent_ops/#split-uv">Split UV</a>, <a href="../independent_ops/#merge-uv-verts">Merge UV Verts</a>, <a href="../independent_ops/#mirror-uv">Mirror UV</a> (symmetrical UV copying), and <a href="../independent_ops/#round-uv-coordinates">Round UV Coordinates</a> for pixel-grid snapping.</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../../select/" class="btn btn-neutral float-left" title="Select"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../independent_ops/" class="btn btn-neutral float-right" title="Independent Transform Operators">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p><p>Copyright &copy; 2024-2025 <a href="https://zenmasters.team/">Zen Masters</a></p></p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../../select/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../independent_ops/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+      <script src="../../js/version-select.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+</script></body>
+</html>

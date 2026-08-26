@@ -5,10 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>UV Checker - Zen UV 5.3 for Blender</title>
+    <title>UV Checker - Zen UV 5.4 for Blender</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../extra.css" rel="stylesheet" />
         <link href="../css/version-select.css" rel="stylesheet" />
     
       <script>
@@ -43,7 +44,7 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
-          <a href=".." class="icon icon-home"> Zen UV 5.3 for Blender
+          <a href=".." class="icon icon-home"> Zen UV 5.4 for Blender
         </a><div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
       <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
@@ -85,11 +86,29 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../seam_groups/">Seam Groups</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../unwrap/">Unwrap</a>
+                  <li class="toctree-l1"><a class="reference internal" >Unwrap</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../unwrap/">Unwrap</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../unwrap/zen_unwrap/">Zen Unwrap</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../unwrap/auto_unwrap/">Auto Unwrap</a>
+                </li>
+    </ul>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../select/">Select</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../transform/">Transform</a>
+                  <li class="toctree-l1"><a class="reference internal" >Transform</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../transform_sys/panels_and_description/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../transform_sys/independent_ops/">Independent Transform Operators</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../transform_sys/unified_transform_sys/">Unified Transform System</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../transform_sys/advanced_operators/">Advanced Transform</a>
+                </li>
+    </ul>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../stack/">Stack</a>
                   </li>
@@ -167,6 +186,18 @@
     </li>
         </ul>
     </li>
+    <li class="toctree-l2"><a class="reference internal" href="#island-list">Island List</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#panel-header-refreshing">Panel Header &amp; Refreshing</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#list-entries">List Entries</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#display-toggle-buttons">Display Toggle Buttons</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#operators">Operators</a>
+    </li>
+        </ul>
+    </li>
     <li class="toctree-l2"><a class="reference internal" href="#tools">Tools</a>
         <ul>
     <li class="toctree-l3"><a class="reference internal" href="#elements-by-index">Elements by Index</a>
@@ -218,7 +249,7 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../trimsheet_creation/">Trim Sheet Management</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../trimsheet_operators/">Trim Sheet Operators</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../trimsheet_operators/">Trimsheet Operators</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../trimsheet_hotspot/">Hotspot Mapping</a>
                   </li>
@@ -233,7 +264,93 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../troubleshooting/">FAQs</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../changelg/">Changelog</a>
+                  <li class="toctree-l1"><a class="reference internal" >Changelog</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/">Summary</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_5.4.0/">Version 5.4.0</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_5.3.3/">Version 5.3.3</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_5.3.2/">Version 5.3.2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_5.3.1/">Version 5.3.1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_5.3.0/">Version 5.3.0</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_5.2.1/">Version 5.2.1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_5.2.0/">Version 5.2.0</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_5.1.0/">Version 5.1.0</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_5.0.3/">Version 5.0.3</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_5.0.2/">Version 5.0.2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_5.0.1/">Version 5.0.1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_5.0.0/">Version 5.0.0</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_4.5.4/">Version 4.5.4</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_4.5.2/">Version 4.5.2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_4.5.1/">Version 4.5.1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_4.5.0/">Version 4.5.0</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_4.4.2/">Version 4.4.2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_4.4.1/">Version 4.4.1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_4.4.0/">Version 4.4</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_4.3/">Version 4.3</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_4.2.1/">Version 4.2.1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_4.2/">Version 4.2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_4.1/">Version 4.1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_4.0.1/">Version 4.0.1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_4.0/">Version 4.0</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_3.1.1.0/">Version 3.1.0.4</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_3.1.0.2/">Version 3.1.0.2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_3.0.2/">Version 3.0.2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_3.0.1/">Version 3.0.1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_3.0/">Version 3.0</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_2.2.3/">Version 2.2.3</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_2.2.2/">Version 2.2.2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_2.2.1/">Version 2.2.1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_2.2/">Version 2.2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_2.1.3/">Version 2.1.3</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_2.1/">Version 2.1 Stacks</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_2.0/">Version 2.0 Transform</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_1.92/">Version 1.92 Texel Density</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_1.9/">Version 1.9 Texture Checker</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_1.8/">Version 1.8</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_1.7/">Version 1.7</a>
+                </li>
+    </ul>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../credits/">Credits</a>
                   </li>
@@ -249,7 +366,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
       <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="..">Zen UV 5.3 for Blender</a>
+          <a href="..">Zen UV 5.4 for Blender</a>
         
       </nav>
       <div class="wy-nav-content">
@@ -459,7 +576,7 @@ Line width depends on <a href="../pack/#margin"><strong>Margin</strong></a> and 
 <p class="admonition-title">Panel</p>
 <p><a class="glightbox" href="../img/screen/tex_checker/checker_display_zenuv_stacks.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/tex_checker/checker_display_zenuv_stacks.png" /></a></p>
 <p>Display and Select <strong>Similar</strong>, <strong>Similar of Selection</strong>, <strong>Stacked</strong>, <strong>Manual Stacks</strong>. 
-You can read full information about <a href="../stack/#stacks-display-and-select">Stacks Display and its settings here</a>.</p>
+You can read full information about <a href="../stack/#display-and-select">Stacks Display and its settings here</a>.</p>
 </div>
 <h3 id="export-to-image">Export To Image<a class="headerlink" href="#export-to-image" title="Permanent link"></a></h3>
 <p>Creates a Blender Image from the active Zen UV overlay.</p>
@@ -583,6 +700,55 @@ You can read full information about <a href="../stack/#stacks-display-and-select
 </tr>
 </tbody>
 </table>
+<hr />
+<h2 id="island-list">Island List<a class="headerlink" href="#island-list" title="Permanent link"></a></h2>
+<p>The <strong>Island List</strong> panel provides a centralized overview to inspect, locate, and manage UV islands across selected objects.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><a class="glightbox" href="../img/screen/tex_checker/checker_island_list.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Island List in UI" src="../img/screen/tex_checker/checker_island_list.png" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Fig. 1. Island List panel in the UI</em></td>
+</tr>
+</tbody>
+</table>
+<h3 id="panel-header-refreshing">Panel Header &amp; Refreshing<a class="headerlink" href="#panel-header-refreshing" title="Permanent link"></a></h3>
+<ul>
+<li><strong>Island Counter (<code>333</code>)</strong> — Displays the total number of detected UV islands.</li>
+<li><strong>Refresh List (↻)</strong> — Manually recalculates and updates the island list entries.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When the <strong>Colored Islands</strong> viewport overlay is enabled, the list updates automatically in real time as geometry or UVs are edited. When <strong>Colored Islands</strong> is turned off, click <strong>Refresh List (↻)</strong> to manually sync the list.</p>
+</div>
+<hr />
+<h3 id="list-entries">List Entries<a class="headerlink" href="#list-entries" title="Permanent link"></a></h3>
+<p>Each entry in the list displays details for an individual UV island:</p>
+<ul>
+<li><strong>Color Badge</strong> — Viewport color assigned to the island, corresponding to the <strong>Colored Islands</strong> overlay.</li>
+<li><strong>Island Name / Object Name</strong> — Identification name of the island or its parent object.</li>
+<li><strong>Area</strong> — Calculated surface area of the island (e.g., <code>0.052 m²</code>).</li>
+<li><strong>Polygon Count</strong> — Total number of polygons (faces) contained within the island.</li>
+<li><strong>Flipped Status (🦋)</strong> — Visual indicator showing whether the UV island is inverted (flipped). This is a display-only indicator and does not trigger an action.</li>
+</ul>
+<hr />
+<h3 id="display-toggle-buttons">Display Toggle Buttons<a class="headerlink" href="#display-toggle-buttons" title="Permanent link"></a></h3>
+<p>The vertical toolbar on the right side of the list controls the visibility of data columns in the list entries (from top to bottom):</p>
+<ol>
+<li><strong>Toggle Polygon Count</strong> — Show or hide the polygon count column.</li>
+<li><strong>Toggle Surface Area</strong> — Show or hide the island surface area column.</li>
+<li><strong>Toggle Object Name</strong> — Show or hide the name of the object to which the island belongs.</li>
+<li><strong>Toggle Flipped Status</strong> — Show or hide the flipped island indicator icon (🦋).</li>
+</ol>
+<hr />
+<h3 id="operators">Operators<a class="headerlink" href="#operators" title="Permanent link"></a></h3>
+<ul>
+<li><strong>Select Island</strong> — Select the highlighted list item in the 2D/3D viewport.</li>
+<li><strong>Deselect Island</strong> — Deselect the highlighted island in the viewport.</li>
+</ul>
 <hr />
 <h2 id="tools">Tools<a class="headerlink" href="#tools" title="Permanent link"></a></h2>
 <p>Tools for analyzing and finding Mesh errors that can negatively affect UV operations.</p>

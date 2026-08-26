@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Version 5.4.0 - Zen UV 5.4 for Blender</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../extra.css" rel="stylesheet" />
+        <link href="../../css/version-select.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Version 5.4.0";
+        var mkdocs_page_input_path = "changelog\\release_note_5.4.0.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-7XHJ910WF8"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', "G-7XHJ910WF8");
+      </script>
+ <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Zen UV 5.4 for Blender
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../..">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../youtube_videos/">Learning Videos</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../installation/">Installation and Update</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../user_interface/">User Interface</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Tutorial</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../tutorial/">Step-by-Step Guide Examples</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >Emergency Light</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../tutorial/emergency_light/emergency_light_eng/">Emergency Light (EN)</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../tutorial/emergency_light/emergency_light_ukr/">Emergency Light (UA)</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../tutorial/emergency_light/emergency_light_rus/">Emergency Light (RU)</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Modules</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../adv_uv-maps/">Advanced UV Maps</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../seam_groups/">Seam Groups</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Unwrap</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../unwrap/">Unwrap</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../unwrap/zen_unwrap/">Zen Unwrap</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../unwrap/auto_unwrap/">Auto Unwrap</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../select/">Select</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Transform</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../transform_sys/panels_and_description/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../transform_sys/independent_ops/">Independent Transform Operators</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../transform_sys/unified_transform_sys/">Unified Transform System</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../transform_sys/advanced_operators/">Advanced Transform</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../stack/">Stack</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../texel_density/">Texel Density</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../checker/">UV Checker</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../pack/">Pack</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../preferences/">Preferences</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../transform_tool/">Transform Tool</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../touch_tool/">Touch Tool</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../sticky_uv_editor/">Sticky UV Editor</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../favourites/">Favourites</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Trim Sheets</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../trimsheet/">Trim Sheets</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../trimsheet_creation/">Trim Sheet Management</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../trimsheet_operators/">Trimsheet Operators</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../trimsheet_hotspot/">Hotspot Mapping</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Additional</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../../addon_prefs/">Addon Preferences</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../user_script/">User Script</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../help/">Help</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/">FAQs</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" >Changelog</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../">Summary</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Version 5.4.0</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#general">General</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#user-interface">User Interface</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#zen-draw-sys">Zen Draw Sys</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#unwrap-sys">Unwrap Sys</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#sticky-uv-editor">Sticky UV Editor</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#trimsheet">Trimsheet</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#select-system">Select System</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#transform-system">Transform System</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#pack">Pack</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#stack-system">Stack System</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#zen-uv-transform-tool">Zen UV Transform Tool</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#fixed">Fixed</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../release_note_5.3.3/">Version 5.3.3</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../release_note_5.3.2/">Version 5.3.2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../release_note_5.3.1/">Version 5.3.1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../release_note_5.3.0/">Version 5.3.0</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../release_note_5.2.1/">Version 5.2.1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../release_note_5.2.0/">Version 5.2.0</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../release_note_5.1.0/">Version 5.1.0</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../release_note_5.0.3/">Version 5.0.3</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../release_note_5.0.2/">Version 5.0.2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../release_note_5.0.1/">Version 5.0.1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../release_note_5.0.0/">Version 5.0.0</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../release_note_4.5.4/">Version 4.5.4</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../release_note_4.5.2/">Version 4.5.2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../release_note_4.5.1/">Version 4.5.1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../release_note_4.5.0/">Version 4.5.0</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../release_note_4.4.2/">Version 4.4.2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../release_note_4.4.1/">Version 4.4.1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../release_note_4.4.0/">Version 4.4</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../release_note_4.3/">Version 4.3</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../release_note_4.2.1/">Version 4.2.1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../release_note_4.2/">Version 4.2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../release_note_4.1/">Version 4.1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../release_note_4.0.1/">Version 4.0.1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../release_note_4.0/">Version 4.0</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../release_note_3.1.1.0/">Version 3.1.0.4</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../release_note_3.1.0.2/">Version 3.1.0.2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../release_note_3.0.2/">Version 3.0.2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../release_note_3.0.1/">Version 3.0.1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../release_note_3.0/">Version 3.0</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../release_note_2.2.3/">Version 2.2.3</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../release_note_2.2.2/">Version 2.2.2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../release_note_2.2.1/">Version 2.2.1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../release_note_2.2/">Version 2.2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../release_note_2.1.3/">Version 2.1.3</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../release_note_2.1/">Version 2.1 Stacks</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../release_note_2.0/">Version 2.0 Transform</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../release_note_1.92/">Version 1.92 Texel Density</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../release_note_1.9/">Version 1.9 Texture Checker</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../release_note_1.8/">Version 1.8</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../release_note_1.7/">Version 1.7</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../credits/">Credits</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../our_addons/">Our Add-ons</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../recommended_addons/">Recommended Add-ons</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Zen UV 5.4 for Blender</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Additional</li>
+          <li class="breadcrumb-item">Changelog</li>
+      <li class="breadcrumb-item active">Version 5.4.0</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="version-540">Version 5.4.0<a class="headerlink" href="#version-540" title="Permanent link"></a></h1>
+<h2 id="general"><strong>General</strong><a class="headerlink" href="#general" title="Permanent link"></a></h2>
+<ul>
+<li>New Stack System.</li>
+<li>Pack Outside Trims.</li>
+<li>New selection operators.</li>
+<li>Bug fixes and improvements.</li>
+</ul>
+<h2 id="user-interface"><strong>User Interface</strong><a class="headerlink" href="#user-interface" title="Permanent link"></a></h2>
+<ul>
+<li>Added a warning to the main panel indicating that the addon has not been tested on the current Blender version.</li>
+<li>Optimized panels for better combined usage.</li>
+</ul>
+<h2 id="zen-draw-sys"><strong>Zen Draw Sys</strong><a class="headerlink" href="#zen-draw-sys" title="Permanent link"></a></h2>
+<ul>
+<li>Added <strong>Colored Islands</strong>: Display assigned colors to each UV island for easier visual distinction in the UV/Image Editor.</li>
+</ul>
+<h2 id="unwrap-sys"><strong>Unwrap Sys</strong><a class="headerlink" href="#unwrap-sys" title="Permanent link"></a></h2>
+<ul>
+<li>Added the <strong>Auto Seams and Unwrap</strong> operator for automatically creating seams and unwrapping.</li>
+</ul>
+<h2 id="sticky-uv-editor"><strong>Sticky UV Editor</strong><a class="headerlink" href="#sticky-uv-editor" title="Permanent link"></a></h2>
+<ul>
+<li>Added an option to remember the active texture.</li>
+</ul>
+<h2 id="trimsheet"><strong>Trimsheet</strong><a class="headerlink" href="#trimsheet" title="Permanent link"></a></h2>
+<ul>
+<li>Added name filter presets to the trim list.</li>
+<li>Added a warning for the trim scrolling process.</li>
+<li>Added the <strong>Fit To Selected Trims</strong> operator for randomly distributing islands across selected trims.</li>
+<li>Optimized and expanded the <strong>Import Trimsheet</strong> operator.</li>
+</ul>
+<h2 id="select-system"><strong>Select System</strong><a class="headerlink" href="#select-system" title="Permanent link"></a></h2>
+<ul>
+<li>Added the ability to select polygons using the <strong>Stretched Angle</strong> algorithm in the <strong>Select Stretched</strong> operator.</li>
+<li>Added the <strong>Filter Islands by Geometry</strong> operator to select islands based on face count and face type.</li>
+<li>Added the <strong>Select Non-Planar Faces</strong> operator to select polygons that are bent along their internal triangulation.</li>
+<li>Added <strong>Island List</strong> with island properties display and color tagging.</li>
+</ul>
+<h2 id="transform-system"><strong>Transform System</strong><a class="headerlink" href="#transform-system" title="Permanent link"></a></h2>
+<ul>
+<li>Simplified and sped up the <strong>Arrange Islands</strong> operator.</li>
+<li>Improved island position detection in <strong>World Orient</strong> mode.</li>
+</ul>
+<h2 id="pack"><strong>Pack</strong><a class="headerlink" href="#pack" title="Permanent link"></a></h2>
+<ul>
+<li>Added new packing modes: <strong>To Active UDIM</strong> and <strong>Outside Trims</strong>.</li>
+<li>Added operators to create a trim from a <strong>Blender UV Custom Region</strong> and a region from a trim.</li>
+</ul>
+<h2 id="stack-system"><strong>Stack System</strong><a class="headerlink" href="#stack-system" title="Permanent link"></a></h2>
+<ul>
+<li>Completely rewritten <strong>Stack Sys</strong>. Improved stacking algorithms and stack type display.</li>
+</ul>
+<h2 id="zen-uv-transform-tool"><strong>Zen UV Transform Tool</strong><a class="headerlink" href="#zen-uv-transform-tool" title="Permanent link"></a></h2>
+<ul>
+<li>Added <strong>snapping</strong> support for the <strong>Rotate</strong> operation.</li>
+</ul>
+<h2 id="fixed"><strong>Fixed</strong><a class="headerlink" href="#fixed" title="Permanent link"></a></h2>
+<ul>
+<li>Fixed the <strong>Pack to Trim</strong> packing mode.</li>
+<li>Fixed an issue in the <strong>Zen Unwrap</strong> operator when an object has no UV islands.</li>
+<li>Fixed selection synchronization between Mesh and UV for Blender 5.0 and higher.</li>
+<li>Fixed detection of selected islands in the 3D View in <strong>EDGE</strong> mode.</li>
+<li>Fixed an issue in <strong>Zen Relax</strong> when using the native Blender algorithm.</li>
+<li>Optimized <strong>Isolate Islands</strong> performance.</li>
+<li>Sped up addon version checking.</li>
+<li>Fixed the <strong>Show Overlapped</strong> operator for <strong>VERTEX</strong> selection mode.</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../" class="btn btn-neutral float-left" title="Summary"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../release_note_5.3.3/" class="btn btn-neutral float-right" title="Version 5.3.3">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p><p>Copyright &copy; 2024-2025 <a href="https://zenmasters.team/">Zen Masters</a></p></p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../release_note_5.3.3/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+      <script src="../../js/version-select.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+</script></body>
+</html>

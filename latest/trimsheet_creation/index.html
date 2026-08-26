@@ -5,10 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>Trim Sheet Management - Zen UV 5.3 for Blender</title>
+    <title>Trim Sheet Management - Zen UV 5.4 for Blender</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../extra.css" rel="stylesheet" />
         <link href="../css/version-select.css" rel="stylesheet" />
     
       <script>
@@ -43,7 +44,7 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
-          <a href=".." class="icon icon-home"> Zen UV 5.3 for Blender
+          <a href=".." class="icon icon-home"> Zen UV 5.4 for Blender
         </a><div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
       <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
@@ -85,11 +86,29 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../seam_groups/">Seam Groups</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../unwrap/">Unwrap</a>
+                  <li class="toctree-l1"><a class="reference internal" >Unwrap</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../unwrap/">Unwrap</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../unwrap/zen_unwrap/">Zen Unwrap</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../unwrap/auto_unwrap/">Auto Unwrap</a>
+                </li>
+    </ul>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../select/">Select</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../transform/">Transform</a>
+                  <li class="toctree-l1"><a class="reference internal" >Transform</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../transform_sys/panels_and_description/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../transform_sys/independent_ops/">Independent Transform Operators</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../transform_sys/unified_transform_sys/">Unified Transform System</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../transform_sys/advanced_operators/">Advanced Transform</a>
+                </li>
+    </ul>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../stack/">Stack</a>
                   </li>
@@ -132,6 +151,8 @@
         <ul>
     <li class="toctree-l4"><a class="reference internal" href="#trims-sorting">Trims Sorting</a>
     </li>
+    <li class="toctree-l4"><a class="reference internal" href="#automatic-naming-patterns-for-filtering">Automatic Naming Patterns for Filtering</a>
+    </li>
         </ul>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#active-trim">Active Trim</a>
@@ -148,7 +169,7 @@
     </li>
         </ul>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#menu">Menu</a>
+    <li class="toctree-l3"><a class="reference internal" href="#trim-list-utility-menu">Trim List Utility Menu</a>
         <ul>
     <li class="toctree-l4"><a class="reference internal" href="#copy-trims-to-clipboard">Copy Trims to Clipboard</a>
     </li>
@@ -160,11 +181,19 @@
     </li>
     <li class="toctree-l4"><a class="reference internal" href="#add-trim-udim">Add Trim UDIM</a>
     </li>
+    <li class="toctree-l4"><a class="reference internal" href="#add-trim-by-custom-region">Add Trim by Custom Region</a>
+    </li>
     <li class="toctree-l4"><a class="reference internal" href="#add-trims-from-color-masks">Add Trims From Color Masks</a>
     </li>
     <li class="toctree-l4"><a class="reference internal" href="#add-trims-from-zen-sets">Add Trims From Zen Sets</a>
     </li>
     <li class="toctree-l4"><a class="reference internal" href="#set-trim-world-size">Set Trim World Size</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#select-islands-by-trim-name">Select Islands by Trim Name</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#trim-bounds-by-custom-region">Trim Bounds by Custom Region</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#custom-region-by-trim-bounds">Custom Region by Trim Bounds</a>
     </li>
     <li class="toctree-l4"><a class="reference internal" href="#frame-trim">Frame Trim</a>
     </li>
@@ -248,7 +277,7 @@
     </li>
     </ul>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../trimsheet_operators/">Trim Sheet Operators</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../trimsheet_operators/">Trimsheet Operators</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../trimsheet_hotspot/">Hotspot Mapping</a>
                   </li>
@@ -263,7 +292,93 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../troubleshooting/">FAQs</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../changelg/">Changelog</a>
+                  <li class="toctree-l1"><a class="reference internal" >Changelog</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/">Summary</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_5.4.0/">Version 5.4.0</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_5.3.3/">Version 5.3.3</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_5.3.2/">Version 5.3.2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_5.3.1/">Version 5.3.1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_5.3.0/">Version 5.3.0</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_5.2.1/">Version 5.2.1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_5.2.0/">Version 5.2.0</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_5.1.0/">Version 5.1.0</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_5.0.3/">Version 5.0.3</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_5.0.2/">Version 5.0.2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_5.0.1/">Version 5.0.1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_5.0.0/">Version 5.0.0</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_4.5.4/">Version 4.5.4</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_4.5.2/">Version 4.5.2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_4.5.1/">Version 4.5.1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_4.5.0/">Version 4.5.0</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_4.4.2/">Version 4.4.2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_4.4.1/">Version 4.4.1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_4.4.0/">Version 4.4</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_4.3/">Version 4.3</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_4.2.1/">Version 4.2.1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_4.2/">Version 4.2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_4.1/">Version 4.1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_4.0.1/">Version 4.0.1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_4.0/">Version 4.0</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_3.1.1.0/">Version 3.1.0.4</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_3.1.0.2/">Version 3.1.0.2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_3.0.2/">Version 3.0.2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_3.0.1/">Version 3.0.1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_3.0/">Version 3.0</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_2.2.3/">Version 2.2.3</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_2.2.2/">Version 2.2.2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_2.2.1/">Version 2.2.1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_2.2/">Version 2.2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_2.1.3/">Version 2.1.3</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_2.1/">Version 2.1 Stacks</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_2.0/">Version 2.0 Transform</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_1.92/">Version 1.92 Texel Density</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_1.9/">Version 1.9 Texture Checker</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_1.8/">Version 1.8</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_1.7/">Version 1.7</a>
+                </li>
+    </ul>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../credits/">Credits</a>
                   </li>
@@ -279,7 +394,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
       <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="..">Zen UV 5.3 for Blender</a>
+          <a href="..">Zen UV 5.4 for Blender</a>
         
       </nav>
       <div class="wy-nav-content">
@@ -459,15 +574,35 @@ Trim sheet data is taken either from property trimsheet image of the active mate
 <table>
 <thead>
 <tr>
-<th><a class="glightbox" href="../img/screen/trimsheet/trimsheet_sorting_by_size.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Trimsheet sorting" src="../img/screen/trimsheet/trimsheet_sorting_by_size.png" /></a></th>
+<th style="text-align: center;"><a class="glightbox" href="../img/screen/trimsheet/trimsheet_sorting_by_size.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Trims sorting" src="../img/screen/trimsheet/trimsheet_sorting_by_size.png" /></a></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td></td>
+<td style="text-align: center;">Trims Sorting</td>
 </tr>
 </tbody>
 </table>
+<h4 id="automatic-naming-patterns-for-filtering">Automatic Naming Patterns for Filtering<a class="headerlink" href="#automatic-naming-patterns-for-filtering" title="Permanent link"></a></h4>
+<p>As you name your trims, the addon automatically collects and generates naming prefix patterns that can be used to quickly filter the <strong>Trim List</strong> by category or group.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><a class="glightbox" href="../img/screen/trimsheet/trimsheet_auto_name_filtering.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Auto Name Filtering" src="../img/screen/trimsheet/trimsheet_auto_name_filtering.png" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Fig. 1. Automatic naming pattern menu for filtering the Trim List</em></td>
+</tr>
+</tbody>
+</table>
+<p><strong>How It Works:</strong></p>
+<ol>
+<li><strong>Pattern Extraction:</strong> The system automatically analyzes existing trim names in the list (e.g., <code>TopPart_01</code>, <code>Radial_01</code>, <code>Trim_19</code>) and isolates common base prefixes (<code>TopPart</code>, <code>Radial</code>, <code>Trim</code>).</li>
+<li><strong>Quick Filtering Menu (1):</strong> Clicking the dropdown arrow next to the filter field opens a radio-button menu containing all detected name templates.</li>
+<li><strong>One-Click Filtering:</strong> Selecting a template (such as <code>Radial</code>) instantly filters the Trim List to display only trims matching that specific naming prefix, streamlining navigation in complex trim sheets.</li>
+</ol>
 <h3 id="active-trim">Active Trim<a class="headerlink" href="#active-trim" title="Permanent link"></a></h3>
 <p>There is exactly one active trim in the curent trim sheet. It is highlighted in trim sheet UI list and surrounded with handles in trim editor</p>
 <p><a class="glightbox" href="../img/screen/trimsheet/active_trim.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/trimsheet/active_trim.png" /></a></p>
@@ -535,12 +670,64 @@ Trim sheet data is taken either from property trimsheet image of the active mate
 </ul>
 </li>
 </ul>
-<h3 id="menu">Menu<a class="headerlink" href="#menu" title="Permanent link"></a></h3>
-<p>A menu with operators e.g. copy paste, or operations on all items.</p>
-<div class="admonition menu">
-<p class="admonition-title">Menu</p>
-<p><a class="glightbox" href="../img/screen/trimsheet/trim_menu.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/trimsheet/trim_menu.png" /></a></p>
-</div>
+<hr />
+<h3 id="trim-list-utility-menu">Trim List Utility Menu<a class="headerlink" href="#trim-list-utility-menu" title="Permanent link"></a></h3>
+<p>Provides access to clipboard operations, batch renaming tools, import/export functions, and management utilities for the active Trim Sheet. Access this menu by clicking the specials drop-down arrow button located on the right toolbar of the <strong>Trim List</strong>.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><a class="glightbox" href="../img/screen/trimsheet/trim_menu.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Trim List Utility Menu" src="../img/screen/trimsheet/trim_menu.png" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Fig. 1. Trim List utility menu</em></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong><a href="#copy-trims-to-clipboard">Copy</a> / <a href="#paste-trims-from-clipboard">Paste</a></strong> — Copy selected trim configurations to the clipboard and paste them into another Trim Sheet or session.</li>
+<li><strong><a href="#batch-rename">Batch Rename</a></strong> — Rename multiple trims at once using structured naming patterns.</li>
+<li>
+<p><strong><a href="#add-trim-grid">Add Trims</a></strong> — Sub-menu containing automated and bulk trim creation utilities.</p>
+<ul>
+<li><strong><a href="#add-trim-grid">Add Trim Grid</a></strong> - Create Grid of Trims inside active, selected Trims, from Zero coordinates or 2D cursor position</li>
+<li><strong><a href="#add-trim-udim">Add Trim UDIM</a></strong> - Creates trims in positions and with UDIM tile sizes</li>
+<li><strong><a href="#add">Add Trim By Custom Region</a></strong> - Add trim by uv custom region coordinates. Requires uv custom region to be enabled and set</li>
+<li><strong>Add Trims From Color Masks</strong> - Create trims from image color masks</li>
+</ul>
+</li>
+<li>
+<p><strong>Select Trims</strong> — Sub-menu with tools to select trims based on specific conditions or properties.</p>
+<ul>
+<li><strong>Select Trims</strong> - Select, deselect all trims or invert selecton</li>
+<li><strong>Select Trims By Size</strong> - Select trims by their width, height, or a combination of both</li>
+</ul>
+</li>
+<li>
+<p><strong>Import / Export</strong> — Import or export trim definitions, presets, and layout maps.</p>
+<ul>
+<li><strong>Import SVG</strong> - Load trimsheet from SVG</li>
+<li>
+<p><strong>Import DECALmachine Trims</strong> - Import trims from Decalmachine trim sheet</p>
+</li>
+<li>
+<p><strong>Export SVG</strong> - Save trimsheet to SVG</p>
+</li>
+<li><strong>Export PNG</strong> - Save trimsheet to PNG</li>
+<li><strong>Export TGA</strong> - Save trimsheet to TGA</li>
+<li><strong>Export BMP</strong> - Save trimsheet to BMP</li>
+</ul>
+</li>
+<li>
+<p><strong>Set Trim World Size</strong> — Calculate and apply physical world-space scale dimensions to selected trims.</p>
+</li>
+<li><strong>Select Island by Trim Name</strong> — Select Islands inside Trim defined by name.</li>
+<li><strong>Trim Bounds by Custom Region / Custom Region by Trim Bounds</strong> — Synchronize trim boundary dimensions with defined custom UV regions.</li>
+<li><strong>Frame Active Trim / Frame Selected Trims</strong> — Frame and focus the UV Editor viewport on the active or selected trim boundaries.</li>
+<li><strong>Clear Trimsheet Preview Folder</strong> — Clear cached preview thumbnail images to clean up storage or refresh broken previews.</li>
+</ul>
+<hr />
 <h4 id="copy-trims-to-clipboard">Copy Trims to Clipboard<a class="headerlink" href="#copy-trims-to-clipboard" title="Permanent link"></a></h4>
 <p>Copy <a href="#active-trim">active</a>, <a href="#selected-trims">selected</a> or <a href="#trims-list">all trims</a> to clipboard</p>
 <div class="admonition properties">
@@ -552,6 +739,7 @@ Trim sheet data is taken either from property trimsheet image of the active mate
 <li><em>Selected</em> - Copy selected trims.</li>
 <li><em>All</em> - Copy all trims in the trimsheet.</li>
 </ul>
+<hr />
 <h4 id="paste-trims-from-clipboard">Paste Trims from Clipboard<a class="headerlink" href="#paste-trims-from-clipboard" title="Permanent link"></a></h4>
 <p>Paste copied trims from clipboard.</p>
 <div class="admonition properties">
@@ -563,6 +751,7 @@ Trim sheet data is taken either from property trimsheet image of the active mate
 <li><em>Add</em> - Add trims to the end of trim sheet</li>
 <li><em>Replace</em> - Add new trims and replace trims with the same name</li>
 </ul>
+<hr />
 <h4 id="batch-rename">Batch Rename<a class="headerlink" href="#batch-rename" title="Permanent link"></a></h4>
 <p>Can rename many trims at once. This uses a pop-up dialog with operations and their options to change the name. These actions are applied in order, from first to last in a trim sheet.</p>
 <div class="admonition properties">
@@ -582,6 +771,7 @@ Trim sheet data is taken either from property trimsheet image of the active mate
 <li><strong>Counter</strong> - Integer value will be added to the end of the name.</li>
 <li><strong>Start from</strong> - If Counter property is used, integer value will be started from this value.</li>
 </ul>
+<hr />
 <h4 id="add-trim-grid">Add Trim Grid<a class="headerlink" href="#add-trim-grid" title="Permanent link"></a></h4>
 <p>Create grid of trims inside active, selected trims, from zero coordinates or 2D cursor position.</p>
 <div class="admonition properties">
@@ -603,6 +793,7 @@ Trim sheet data is taken either from property trimsheet image of the active mate
 <li><strong>Margin</strong> - The gap between Trims.</li>
 <li><strong>Remove Template</strong> - Delete the Trim that served as a template.</li>
 </ul>
+<hr />
 <h4 id="add-trim-udim">Add Trim UDIM<a class="headerlink" href="#add-trim-udim" title="Permanent link"></a></h4>
 <p>Creates trims in positions and with UDIM tile sizes.</p>
 <div class="admonition properties">
@@ -620,6 +811,15 @@ Trim sheet data is taken either from property trimsheet image of the active mate
 <li><strong>Udims End</strong> - Udims range end.</li>
 <li><strong>Trim Count Limit</strong> - Limit the number of trims.</li>
 </ul>
+<hr />
+<h4 id="add-trim-by-custom-region">Add Trim by Custom Region<a class="headerlink" href="#add-trim-by-custom-region" title="Permanent link"></a></h4>
+<p>Creates a new trim entry using the precise coordinates and dimensions of the active UV <strong>Custom Region</strong>.</p>
+<ul>
+<li><strong>Prerequisites:</strong> Requires the <strong>Custom Region</strong> tool (<code>Ctrl + Alt + B</code>) to be enabled and set in the UV Editor.</li>
+<li><strong>Workflow:</strong> Once a custom rectangular region is drawn in the UV viewport, running this operator automatically converts its bounding box into a corresponding Trim entry in the Trim List.</li>
+</ul>
+<p>For more details on <strong>Custom Regions</strong> and how they interact with trims, see <a href="#trim-bounds-by-custom-region">Trim Bounds by Custom Region</a>.</p>
+<hr />
 <h4 id="add-trims-from-color-masks">Add Trims From Color Masks<a class="headerlink" href="#add-trims-from-color-masks" title="Permanent link"></a></h4>
 <p>Create trims from a defined image containing color mask data.</p>
 <div class="admonition properties">
@@ -635,16 +835,42 @@ Trim sheet data is taken either from property trimsheet image of the active mate
 </li>
 <li><strong>Color Masks Limit</strong> - How many unique colors could be processed in image.</li>
 </ul>
+<hr />
 <h4 id="add-trims-from-zen-sets">Add Trims From Zen Sets<a class="headerlink" href="#add-trims-from-zen-sets" title="Permanent link"></a></h4>
 <p>Create trims from Zen Sets groups mesh elements with keeping its names. Available only if Zen Sets is installed.</p>
 <h4 id="set-trim-world-size">Set Trim World Size<a class="headerlink" href="#set-trim-world-size" title="Permanent link"></a></h4>
 <p>Set trim &lsquo;World Size&rsquo; property based on texture size. Works on selected trims.</p>
+<hr />
+<h4 id="select-islands-by-trim-name">Select Islands by Trim Name<a class="headerlink" href="#select-islands-by-trim-name" title="Permanent link"></a></h4>
+<p>Select Islands inside Trim defined by name</p>
+<hr />
+<h4 id="trim-bounds-by-custom-region">Trim Bounds by Custom Region<a class="headerlink" href="#trim-bounds-by-custom-region" title="Permanent link"></a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><a class="glightbox" href="../img/screen/trimsheet/trim_to_custom_region_screen.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Custom Region and Trim bounds" src="../img/screen/trimsheet/trim_to_custom_region_screen.png" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Fig. 1. Custom Region and Trim bounds</em></td>
+</tr>
+</tbody>
+</table>
+<p>Sets the trim size and position to match the UV Custom Region</p>
+<hr />
+<h4 id="custom-region-by-trim-bounds">Custom Region by Trim Bounds<a class="headerlink" href="#custom-region-by-trim-bounds" title="Permanent link"></a></h4>
+<p>Sets UV Custom Region size and position to match the active trim</p>
+<hr />
 <h4 id="frame-trim">Frame Trim<a class="headerlink" href="#frame-trim" title="Permanent link"></a></h4>
 <p>Moves view to active or selected trims center in UV editor.</p>
+<hr />
 <h4 id="clear-trimshet-preview-folder">Clear Trimshet Preview Folder<a class="headerlink" href="#clear-trimshet-preview-folder" title="Permanent link"></a></h4>
 <p>Clear folder where trimsheet preview temporary icons are stored.</p>
+<hr />
 <h4 id="move">Move<a class="headerlink" href="#move" title="Permanent link"></a></h4>
 <p>Moves the selected item up/down one position. (up/down arrow icon).</p>
+<hr />
 <h4 id="delete-all">Delete All<a class="headerlink" href="#delete-all" title="Permanent link"></a></h4>
 <p>Deletes all trims in the trim sheet.</p>
 <hr />
@@ -653,24 +879,30 @@ Trim sheet data is taken either from property trimsheet image of the active mate
 <p class="admonition-title">Presets</p>
 <p><a class="glightbox" href="../img/screen/trimsheet/trim_presets.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/trimsheet/trim_presets.png" /></a></p>
 </div>
+<hr />
 <h3 id="preset-selector">Preset Selector<a class="headerlink" href="#preset-selector" title="Permanent link"></a></h3>
 <p>A list of available presets. A selection will override the included properties.</p>
 <div class="admonition notice">
 <p class="admonition-title">Notice</p>
 <p>If name in preset selector is marked with asterix then it shows name of category and active preset is not selected</p>
 </div>
+<hr />
 <h3 id="add">Add<a class="headerlink" href="#add" title="Permanent link"></a></h3>
 <p>New presets can be added based on a predefined set of properties, which will be saved for later reuse. A pop-up opens where you can set a name after which you can select it from the list and in some cases additional settings.</p>
+<hr />
 <h3 id="remove">Remove<a class="headerlink" href="#remove" title="Permanent link"></a></h3>
 <p>Deletes the selected preset.</p>
+<hr />
 <h3 id="open-presets-folder">Open Presets Folder<a class="headerlink" href="#open-presets-folder" title="Permanent link"></a></h3>
 <p>You can override the default presets folder with your own path</p>
+<hr />
 <h2 id="trim-settings">Trim Settings<a class="headerlink" href="#trim-settings" title="Permanent link"></a></h2>
 <p>Trim settings property inspector shows settings of the active trim</p>
 <div class="admonition dimensions">
 <p class="admonition-title">Dimensions</p>
 <p><a class="glightbox" href="../img/screen/trimsheet/trim_axis.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/trimsheet/trim_axis.png" /></a></p>
 </div>
+<hr />
 <h3 id="trim-units">Trim Units<a class="headerlink" href="#trim-units" title="Permanent link"></a></h3>
 <p>By default trim units are in UV points based on values from 0 to 1, but it is possible to switch to image pixels depending on image size.</p>
 <div class="admonition note">
@@ -693,22 +925,31 @@ For more details, see the section <a href="#trim-sheet-data-storage-in-blend-fil
 <li><strong>Max</strong> - The maximum length axis is automatically determined</li>
 <li><strong>Automatic</strong> - Automatically detected axis for full dimensional compliance</li>
 </ul>
+<hr />
 <h3 id="inset">Inset<a class="headerlink" href="#inset" title="Permanent link"></a></h3>
 <p>Trim inset</p>
+<hr />
 <h3 id="keep-proportion">Keep Proportion<a class="headerlink" href="#keep-proportion" title="Permanent link"></a></h3>
 <p>Keep trim proportions while transforming</p>
+<hr />
 <h3 id="match-rotation">Match Rotation<a class="headerlink" href="#match-rotation" title="Permanent link"></a></h3>
 <p>Match trim rotation</p>
+<hr />
 <h3 id="align-to">Align To<a class="headerlink" href="#align-to" title="Permanent link"></a></h3>
 <p>Align to remembered directions in Fit, Align operations</p>
+<hr />
 <h3 id="normal">Normal<a class="headerlink" href="#normal" title="Permanent link"></a></h3>
 <p>An imaginary normal representing Trim&rsquo;s orientation if it were in 3D space</p>
+<hr />
 <h3 id="world-size">World Size<a class="headerlink" href="#world-size" title="Permanent link"></a></h3>
 <p>Width and height of trim in <a href="#units">UV world size calculation units</a></p>
+<hr />
 <h3 id="units">Units<a class="headerlink" href="#units" title="Permanent link"></a></h3>
 <p>UV world size calculation units</p>
+<hr />
 <h3 id="tags">Tags<a class="headerlink" href="#tags" title="Permanent link"></a></h3>
 <p>Trim tags</p>
+<hr />
 <h3 id="how-to-apply-same-settings-to-multiple-trims">How to apply same settings to multiple trims?<a class="headerlink" href="#how-to-apply-same-settings-to-multiple-trims" title="Permanent link"></a></h3>
 <table>
 <thead>
@@ -726,6 +967,7 @@ For more details, see the section <a href="#trim-sheet-data-storage-in-blend-fil
 <li>Select 2 or more trims</li>
 <li>Press Apply button</li>
 </ol>
+<hr />
 <h4 id="check-the-equality-of-properties-in-selected-trims">Check the equality of properties in selected trims<a class="headerlink" href="#check-the-equality-of-properties-in-selected-trims" title="Permanent link"></a></h4>
 <table>
 <thead>
@@ -745,8 +987,10 @@ For more details, see the section <a href="#trim-sheet-data-storage-in-blend-fil
 </tr>
 </tbody>
 </table>
+<hr />
 <h2 id="display-trims">Display Trims<a class="headerlink" href="#display-trims" title="Permanent link"></a></h2>
 <p>Trims can be displayed in viewport with special gizmo layer</p>
+<hr />
 <h3 id="trims-display-overlay-in-uv-image-editor">Trims Display Overlay in UV Image Editor<a class="headerlink" href="#trims-display-overlay-in-uv-image-editor" title="Permanent link"></a></h3>
 <table>
 <thead>
@@ -760,6 +1004,7 @@ For more details, see the section <a href="#trim-sheet-data-storage-in-blend-fil
 </tr>
 </tbody>
 </table>
+<hr />
 <h3 id="trims-display-polygon-overlay-in-3d-viewport">Trims Display Polygon Overlay in 3D Viewport<a class="headerlink" href="#trims-display-polygon-overlay-in-3d-viewport" title="Permanent link"></a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -777,8 +1022,10 @@ For more details, see the section <a href="#trim-sheet-data-storage-in-blend-fil
 </tr>
 </tbody>
 </table>
+<hr />
 <h3 id="trims-display-overlay-widget-in-3d-viewport">Trims Display Overlay Widget in 3D Viewport<a class="headerlink" href="#trims-display-overlay-widget-in-3d-viewport" title="Permanent link"></a></h3>
 <p>Trims can be displayed in overlay widget. To activate it you need to press gizmo button in the right side of 3D viewport</p>
+<hr />
 <table>
 <thead>
 <tr>
@@ -791,8 +1038,10 @@ For more details, see the section <a href="#trim-sheet-data-storage-in-blend-fil
 </tr>
 </tbody>
 </table>
+<hr />
 <h4 id="overlay-widget-locking-options">Overlay Widget Locking Options<a class="headerlink" href="#overlay-widget-locking-options" title="Permanent link"></a></h4>
 <p>Trims display overlay widget can be moved by <code>Shift + Middle Mouse Button</code> and scaled by <code>Mouse Wheel Up|Down</code>. And its position can be locked in the settings</p>
+<hr />
 <table>
 <thead>
 <tr>
@@ -805,6 +1054,7 @@ For more details, see the section <a href="#trim-sheet-data-storage-in-blend-fil
 </tr>
 </tbody>
 </table>
+<hr />
 <h2 id="transform-trims">Transform Trims<a class="headerlink" href="#transform-trims" title="Permanent link"></a></h2>
 <table>
 <thead>
@@ -818,6 +1068,7 @@ For more details, see the section <a href="#trim-sheet-data-storage-in-blend-fil
 </tr>
 </tbody>
 </table>
+<hr />
 <h3 id="align-trims">Align Trims<a class="headerlink" href="#align-trims" title="Permanent link"></a></h3>
 <p>Determines how selected trims will be aligned.</p>
 <p>Use Align to align selected trims to the top, bottom, left, or right of an active trim or each other, or UV area bounds.</p>
@@ -833,6 +1084,7 @@ For more details, see the section <a href="#trim-sheet-data-storage-in-blend-fil
 </tr>
 </tbody>
 </table>
+<hr />
 <h3 id="crop-trims">Crop Trims<a class="headerlink" href="#crop-trims" title="Permanent link"></a></h3>
 <p>Use Crop to crop selected trims or all trims by UV area bounds</p>
 <table>
@@ -847,6 +1099,7 @@ For more details, see the section <a href="#trim-sheet-data-storage-in-blend-fil
 </tr>
 </tbody>
 </table>
+<hr />
 <h3 id="adjust-trims">Adjust Trims<a class="headerlink" href="#adjust-trims" title="Permanent link"></a></h3>
 <p>Set the same width or height of the selected trim. You can select to use minimum or maximum value.</p>
 <table>
@@ -861,6 +1114,7 @@ For more details, see the section <a href="#trim-sheet-data-storage-in-blend-fil
 </tr>
 </tbody>
 </table>
+<hr />
 <h3 id="distribute-trims">Distribute Trims<a class="headerlink" href="#distribute-trims" title="Permanent link"></a></h3>
 <p>Use Distribute to distribute selected trims at equal distances between each other, starting distribution as is or from active trim, or from UV area bounds</p>
 <table>
@@ -880,7 +1134,7 @@ For more details, see the section <a href="#trim-sheet-data-storage-in-blend-fil
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
         <a href="../trimsheet/" class="btn btn-neutral float-left" title="Trim Sheets"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../trimsheet_operators/" class="btn btn-neutral float-right" title="Trim Sheet Operators">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../trimsheet_operators/" class="btn btn-neutral float-right" title="Trimsheet Operators">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>

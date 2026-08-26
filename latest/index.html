@@ -5,10 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="img/favicon.ico" />
-    <title>Introduction - Zen UV 5.3 for Blender</title>
+    <title>Introduction - Zen UV 5.4 for Blender</title>
     <link rel="stylesheet" href="css/theme.css" />
     <link rel="stylesheet" href="css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="extra.css" rel="stylesheet" />
         <link href="css/version-select.css" rel="stylesheet" />
     
       <script>
@@ -43,7 +44,7 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
-          <a href="." class="icon icon-home"> Zen UV 5.3 for Blender
+          <a href="." class="icon icon-home"> Zen UV 5.4 for Blender
         </a><div role="search">
   <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
       <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
@@ -95,11 +96,29 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="seam_groups/">Seam Groups</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="unwrap/">Unwrap</a>
+                  <li class="toctree-l1"><a class="reference internal" >Unwrap</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="unwrap/">Unwrap</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="unwrap/zen_unwrap/">Zen Unwrap</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="unwrap/auto_unwrap/">Auto Unwrap</a>
+                </li>
+    </ul>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="select/">Select</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="transform/">Transform</a>
+                  <li class="toctree-l1"><a class="reference internal" >Transform</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="transform_sys/panels_and_description/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="transform_sys/independent_ops/">Independent Transform Operators</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="transform_sys/unified_transform_sys/">Unified Transform System</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="transform_sys/advanced_operators/">Advanced Transform</a>
+                </li>
+    </ul>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="stack/">Stack</a>
                   </li>
@@ -126,7 +145,7 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="trimsheet_creation/">Trim Sheet Management</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="trimsheet_operators/">Trim Sheet Operators</a>
+                  <li class="toctree-l1"><a class="reference internal" href="trimsheet_operators/">Trimsheet Operators</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="trimsheet_hotspot/">Hotspot Mapping</a>
                   </li>
@@ -141,7 +160,93 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="troubleshooting/">FAQs</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="changelg/">Changelog</a>
+                  <li class="toctree-l1"><a class="reference internal" >Changelog</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="changelog/">Summary</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="changelog/release_note_5.4.0/">Version 5.4.0</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="changelog/release_note_5.3.3/">Version 5.3.3</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="changelog/release_note_5.3.2/">Version 5.3.2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="changelog/release_note_5.3.1/">Version 5.3.1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="changelog/release_note_5.3.0/">Version 5.3.0</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="changelog/release_note_5.2.1/">Version 5.2.1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="changelog/release_note_5.2.0/">Version 5.2.0</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="changelog/release_note_5.1.0/">Version 5.1.0</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="changelog/release_note_5.0.3/">Version 5.0.3</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="changelog/release_note_5.0.2/">Version 5.0.2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="changelog/release_note_5.0.1/">Version 5.0.1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="changelog/release_note_5.0.0/">Version 5.0.0</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="changelog/release_note_4.5.4/">Version 4.5.4</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="changelog/release_note_4.5.2/">Version 4.5.2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="changelog/release_note_4.5.1/">Version 4.5.1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="changelog/release_note_4.5.0/">Version 4.5.0</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="changelog/release_note_4.4.2/">Version 4.4.2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="changelog/release_note_4.4.1/">Version 4.4.1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="changelog/release_note_4.4.0/">Version 4.4</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="changelog/release_note_4.3/">Version 4.3</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="changelog/release_note_4.2.1/">Version 4.2.1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="changelog/release_note_4.2/">Version 4.2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="changelog/release_note_4.1/">Version 4.1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="changelog/release_note_4.0.1/">Version 4.0.1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="changelog/release_note_4.0/">Version 4.0</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="changelog/release_note_3.1.1.0/">Version 3.1.0.4</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="changelog/release_note_3.1.0.2/">Version 3.1.0.2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="changelog/release_note_3.0.2/">Version 3.0.2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="changelog/release_note_3.0.1/">Version 3.0.1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="changelog/release_note_3.0/">Version 3.0</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="changelog/release_note_2.2.3/">Version 2.2.3</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="changelog/release_note_2.2.2/">Version 2.2.2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="changelog/release_note_2.2.1/">Version 2.2.1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="changelog/release_note_2.2/">Version 2.2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="changelog/release_note_2.1.3/">Version 2.1.3</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="changelog/release_note_2.1/">Version 2.1 Stacks</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="changelog/release_note_2.0/">Version 2.0 Transform</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="changelog/release_note_1.92/">Version 1.92 Texel Density</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="changelog/release_note_1.9/">Version 1.9 Texture Checker</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="changelog/release_note_1.8/">Version 1.8</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="changelog/release_note_1.7/">Version 1.7</a>
+                </li>
+    </ul>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="credits/">Credits</a>
                   </li>
@@ -157,7 +262,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
       <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href=".">Zen UV 5.3 for Blender</a>
+          <a href=".">Zen UV 5.4 for Blender</a>
         
       </nav>
       <div class="wy-nav-content">
@@ -189,19 +294,19 @@
 <h2 id="main-features">Main Features<a class="headerlink" href="#main-features" title="Permanent link"></a></h2>
 <ul>
 <li><a href="transform_tool/"><strong>Zen Gizmo.</strong></a> Move, Rotate, Scale, Fit, Align and Flip UV Islands in 3D View and UV Editor using Zen Gizmo.</li>
-<li><a href="transform/#relax"><strong>Zen Relax.</strong></a> Unique Unwrapping algorithm for Organic models.</li>
+<li><a href="transform_sys/independent_ops/#relax"><strong>Zen Relax.</strong></a> Unique Unwrapping algorithm for Organic models.</li>
 <li><a href="trimsheet_creation/#creating-your-trim-sheet-with-zen-uv"><strong>Trimsheet System.</strong></a> Create/Display Trims and Map UV Islands on them using Transform operators.</li>
 <li><a href="touch_tool/"><strong>Touch Tool.</strong></a> Universal UV transformation tool that provides fast and intuitive control over moving, scaling, and rotating UV islands in the UV Editor. </li>
 <li><a href="trimsheet_hotspot/"><strong>Hotspot Mapping.</strong></a> Map UV Islands on Trims by matching them by Area, Aspect, World Size and Tags.</li>
 <li><a href="stack/"><strong>Stack System.</strong></a> Stack/Unstack similar/non-similar UV Islands on top of each other.</li>
-<li><a href="unwrap/#zen-unwrap"><strong>Zen Unwrap.</strong></a> Context-sensitive Unwrap with control over Seams and Sharp Edges.</li>
-<li><a href="transform/#world-orient"><strong>Transform System.</strong></a> Move, Rotate, Scale, Flip, Fit, Orient, Sort and Align UV Islands and Vertices.</li>
-<li><a href="transform/#world-orient"><strong>World Orient.</strong></a> Rotate UV Islands according to the model&rsquo;s position in World Space.</li>
-<li><a href="transform/#quadrify-islands"><strong>Quadrify.</strong></a> Straighten UV Islands and selected Faces consisting of quads.</li>
-<li><a href="transform/#randomize"><strong>Randomize.</strong></a> Randomize Position, Rotation, Scale of UV Islands and Vertices.</li>
-<li><a href="transform/#mirror-uv"><strong>Mirror.</strong></a> Mirroring UVs for mirrored models. Mirror Seams on the model.</li>
-<li><a href="transform/#match-and-stitch"><strong>Match and Stitch.</strong></a> Match UV Islands Position, Rotation, Scale and Stitch Vertices if it’s possible.</li>
-<li><a href="transform/#reshape-island"><strong>Reshape Island.</strong></a> Straighten selected Edge loops and relax connected Vertices.</li>
+<li><a href="unwrap/zen_unwrap/#zen-unwrap"><strong>Zen Unwrap.</strong></a> Context-sensitive Unwrap with control over Seams and Sharp Edges.</li>
+<li><a href="transform_sys/independent_ops/#world-orient"><strong>Transform System.</strong></a> Move, Rotate, Scale, Flip, Fit, Orient, Sort and Align UV Islands and Vertices.</li>
+<li><a href="transform_sys/independent_ops/#world-orient"><strong>World Orient.</strong></a> Rotate UV Islands according to the model&rsquo;s position in World Space.</li>
+<li><a href="transform_sys/independent_ops/#quadrify-islands"><strong>Quadrify.</strong></a> Straighten UV Islands and selected Faces consisting of quads.</li>
+<li><a href="transform_sys/independent_ops/#randomize"><strong>Randomize.</strong></a> Randomize Position, Rotation, Scale of UV Islands and Vertices.</li>
+<li><a href="transform_sys/independent_ops/#mirror-uv"><strong>Mirror.</strong></a> Mirroring UVs for mirrored models. Mirror Seams on the model.</li>
+<li><a href="transform_sys/independent_ops/#match-and-stitch"><strong>Match and Stitch.</strong></a> Match UV Islands Position, Rotation, Scale and Stitch Vertices if it’s possible.</li>
+<li><a href="transform_sys/independent_ops/#reshape-island"><strong>Reshape Island.</strong></a> Straighten selected Edge loops and relax connected Vertices.</li>
 <li><a href="adv_uv-maps/"><strong>Advanced UV Maps.</strong></a> Sync, Clean and Rename UV Maps for multiple selected models.</li>
 <li><a href="unwrap/#mark-system"><strong>Marking System.</strong></a> Mark Seams and/or Sharps by Angle/Sharps/Seams/Open Edges/UV Borders and manually.</li>
 <li><a href="unwrap/#finishing-system"><strong>Finished System.</strong></a> Visually control the state of Unwrapping process using Finished/Unfinished tags.</li>

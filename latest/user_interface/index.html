@@ -5,10 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>User Interface - Zen UV 5.3 for Blender</title>
+    <title>User Interface - Zen UV 5.4 for Blender</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../extra.css" rel="stylesheet" />
         <link href="../css/version-select.css" rel="stylesheet" />
     
       <script>
@@ -43,7 +44,7 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
-          <a href=".." class="icon icon-home"> Zen UV 5.3 for Blender
+          <a href=".." class="icon icon-home"> Zen UV 5.4 for Blender
         </a><div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
       <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
@@ -62,19 +63,25 @@
                   </li>
                   <li class="toctree-l1 current"><a class="reference internal current" href="#">User Interface</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#combo-panel">Combo Panel</a>
+    <li class="toctree-l2"><a class="reference internal" href="#combo-panel-multi-panel-interface">Combo Panel &amp; Multi-Panel Interface</a>
         <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#multiple-panels">Multiple Panels</a>
+    <li class="toctree-l3"><a class="reference internal" href="#multi-panel-workflows">Multi-Panel Workflows</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#panels-pinning">Panels Pinning</a>
+    <li class="toctree-l3"><a class="reference internal" href="#panel-status-indicators">Panel Status Indicators</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#combo-panel-in-properties">Combo Panel in Properties</a>
+    <li class="toctree-l3"><a class="reference internal" href="#access-interface-modes">Access &amp; Interface Modes</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#n-panel-pop-up-menu">N-Panel &amp; Pop-Up Menu</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#popup-combo-panel">Popup Combo Panel</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#update-reminder">Update reminder</a>
+    <li class="toctree-l4"><a class="reference internal" href="#properties-editor-integration">Properties Editor Integration</a>
     </li>
         </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#update-reminder">Update reminder</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#blender-version-warning">Blender Version Warning</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#pie-menu">Pie Menu</a>
         <ul>
@@ -143,11 +150,29 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../seam_groups/">Seam Groups</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../unwrap/">Unwrap</a>
+                  <li class="toctree-l1"><a class="reference internal" >Unwrap</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../unwrap/">Unwrap</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../unwrap/zen_unwrap/">Zen Unwrap</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../unwrap/auto_unwrap/">Auto Unwrap</a>
+                </li>
+    </ul>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../select/">Select</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../transform/">Transform</a>
+                  <li class="toctree-l1"><a class="reference internal" >Transform</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../transform_sys/panels_and_description/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../transform_sys/independent_ops/">Independent Transform Operators</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../transform_sys/unified_transform_sys/">Unified Transform System</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../transform_sys/advanced_operators/">Advanced Transform</a>
+                </li>
+    </ul>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../stack/">Stack</a>
                   </li>
@@ -174,7 +199,7 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../trimsheet_creation/">Trim Sheet Management</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../trimsheet_operators/">Trim Sheet Operators</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../trimsheet_operators/">Trimsheet Operators</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../trimsheet_hotspot/">Hotspot Mapping</a>
                   </li>
@@ -189,7 +214,93 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../troubleshooting/">FAQs</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../changelg/">Changelog</a>
+                  <li class="toctree-l1"><a class="reference internal" >Changelog</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/">Summary</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_5.4.0/">Version 5.4.0</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_5.3.3/">Version 5.3.3</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_5.3.2/">Version 5.3.2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_5.3.1/">Version 5.3.1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_5.3.0/">Version 5.3.0</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_5.2.1/">Version 5.2.1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_5.2.0/">Version 5.2.0</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_5.1.0/">Version 5.1.0</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_5.0.3/">Version 5.0.3</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_5.0.2/">Version 5.0.2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_5.0.1/">Version 5.0.1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_5.0.0/">Version 5.0.0</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_4.5.4/">Version 4.5.4</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_4.5.2/">Version 4.5.2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_4.5.1/">Version 4.5.1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_4.5.0/">Version 4.5.0</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_4.4.2/">Version 4.4.2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_4.4.1/">Version 4.4.1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_4.4.0/">Version 4.4</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_4.3/">Version 4.3</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_4.2.1/">Version 4.2.1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_4.2/">Version 4.2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_4.1/">Version 4.1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_4.0.1/">Version 4.0.1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_4.0/">Version 4.0</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_3.1.1.0/">Version 3.1.0.4</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_3.1.0.2/">Version 3.1.0.2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_3.0.2/">Version 3.0.2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_3.0.1/">Version 3.0.1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_3.0/">Version 3.0</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_2.2.3/">Version 2.2.3</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_2.2.2/">Version 2.2.2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_2.2.1/">Version 2.2.1</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_2.2/">Version 2.2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_2.1.3/">Version 2.1.3</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_2.1/">Version 2.1 Stacks</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_2.0/">Version 2.0 Transform</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_1.92/">Version 1.92 Texel Density</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_1.9/">Version 1.9 Texture Checker</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_1.8/">Version 1.8</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../changelog/release_note_1.7/">Version 1.7</a>
+                </li>
+    </ul>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../credits/">Credits</a>
                   </li>
@@ -205,7 +316,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
       <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="..">Zen UV 5.3 for Blender</a>
+          <a href="..">Zen UV 5.4 for Blender</a>
         
       </nav>
       <div class="wy-nav-content">
@@ -223,41 +334,147 @@
             <div class="section" itemprop="articleBody">
               
                 <h1 id="user-interface">User Interface<a class="headerlink" href="#user-interface" title="Permanent link"></a></h1>
-<h2 id="combo-panel">Combo Panel<a class="headerlink" href="#combo-panel" title="Permanent link"></a></h2>
-<p>Combo Panel is a place where you can find all Zen UV operators.
-Operators are divided into thematic sections on the left side.</p>
-<p>The set of operators in the Combo Panel may vary depending on the context. 
-Some operators do not work in UV Editor and present in 3D Viewport only.</p>
-<p>It&rsquo;s on the N-Panel and you can <a href="../preferences/#panels"><strong>customize the appearance of panels in Preferences</strong></a>.</p>
+<h2 id="combo-panel-multi-panel-interface">Combo Panel &amp; Multi-Panel Interface<a class="headerlink" href="#combo-panel-multi-panel-interface" title="Permanent link"></a></h2>
+<p>The <strong>Combo Panel</strong> is the central hub containing all Zen UV operators, organized into thematic sections along the left side. It is accessible from the Sidebar (N-Panel), the Properties editor (when the Zen UV Transform Tool is active), or via the global Pop-up Menu (<code>Shift + U</code>).</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><a class="glightbox" href="../img/gifs/user_interface/compactui_1.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Combo Panel Overview" src="../img/gifs/user_interface/compactui_1.gif" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Fig. 1. Combo Panel Overview</em></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Note:</strong> The available set of operators in the Combo Panel automatically adapts based on context. Certain tools are designed exclusively for the 3D Viewport and will not appear in the UV Editor. You can further <a href="../preferences/#panels">customize panel appearances in Preferences</a>.</p>
+</blockquote>
+<hr />
+<h3 id="multi-panel-workflows">Multi-Panel Workflows<a class="headerlink" href="#multi-panel-workflows" title="Permanent link"></a></h3>
+<p>You can open, stack, and pin multiple subpanels simultaneously to customize your workspace layout for specific UV editing tasks.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Action</th>
+<th style="text-align: left;">Shortcut / Interaction</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Switch Subpanel</strong></td>
+<td style="text-align: left;"><code>LMB</code> on section icon</td>
+<td style="text-align: left;">Switches the view to the selected subpanel.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Open Multiple</strong></td>
+<td style="text-align: left;"><code>Shift + LMB</code> on section icons</td>
+<td style="text-align: left;">Opens and appends multiple subpanels at the same time.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Pin Subpanel</strong></td>
+<td style="text-align: left;"><code>Ctrl + LMB</code> or click <strong>Pin</strong> icon</td>
+<td style="text-align: left;">Locks the selected subpanel open, keeping it visible when switching between other tabs.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><a class="glightbox" href="../img/gifs/user_interface/compactui_2.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Open Multiply Panels" src="../img/gifs/user_interface/compactui_2.gif" /></a></th>
+<th style="text-align: center;"><a class="glightbox" href="../img/gifs/user_interface/compactui_3.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Pin Some Panels" src="../img/gifs/user_interface/compactui_3.gif" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Fig. 2. Open Multiply Panels</em></td>
+<td style="text-align: center;"><em>Fig. 3. Pin Some Panels</em></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="panel-status-indicators">Panel Status Indicators<a class="headerlink" href="#panel-status-indicators" title="Permanent link"></a></h3>
+<p>The visual state of each subpanel is color-coded on its icon for quick identification:</p>
+<ul>
+<li><strong>Pinned (Red):</strong> The panel is locked open. The Pin icon next to its title is filled.</li>
+<li><strong>Active (Cyan / Blue):</strong> The panel is currently open and active, but not locked. Its Pin icon shows an unfilled outline.</li>
+<li><strong>Inactive (Uncolored):</strong> The panel is closed.</li>
+</ul>
+<hr />
+<h3 id="access-interface-modes">Access &amp; Interface Modes<a class="headerlink" href="#access-interface-modes" title="Permanent link"></a></h3>
+<h4 id="n-panel-pop-up-menu">N-Panel &amp; Pop-Up Menu<a class="headerlink" href="#n-panel-pop-up-menu" title="Permanent link"></a></h4>
+<p>The main Combo Panel resides in the Sidebar (N-Panel), but can also be summoned anywhere under the mouse cursor using the default shortcut <code>Shift + U</code>.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Pop-Up Combo Panel (<code>Shift + U</code>)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><a class="glightbox" href="../img/gifs/user_interface/compactui_8.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Popup Combo Panel" src="../img/gifs/user_interface/compactui_8.gif" /></a></td>
+</tr>
+</tbody>
+</table>
+<h4 id="properties-editor-integration">Properties Editor Integration<a class="headerlink" href="#properties-editor-integration" title="Permanent link"></a></h4>
+<p>When the <strong>Zen UV Transform Tool</strong> is active, the Combo Panel also automatically displays inside the Blender Properties Editor.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Combo Panel in Properties</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><a class="glightbox" href="../img/gifs/user_interface/compactui_6.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Combo Panel in Properties" src="../img/gifs/user_interface/compactui_6.gif" /></a></td>
+</tr>
+</tbody>
+</table>
+<hr />
 <div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>Watch the video explaining how <strong>Combo Panels</strong> works.</p>
+<p class="admonition-title">Video Overview</p>
+<p>Watch a brief video explanation on how to navigate and manage <strong>Combo Panels</strong>:</p>
 <p><div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%;">
 <iframe src="https://www.youtube.com/embed/f9meGzMGx2k?start=26&end=142" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen="" seamless="" frameborder="0"></iframe>
 </div></p>
 </div>
-<p><a class="glightbox" href="../img/gifs/user_interface/compactui_1.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Combo Panel" src="../img/gifs/user_interface/compactui_1.gif" /></a></p>
-<h3 id="multiple-panels">Multiple Panels<a class="headerlink" href="#multiple-panels" title="Permanent link"></a></h3>
-<p>Open multiple panels with <code>SHIFT + LMB</code>.</p>
-<p><a class="glightbox" href="../img/gifs/user_interface/compactui_2.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Combo Panel" src="../img/gifs/user_interface/compactui_2.gif" /></a></p>
-<h3 id="panels-pinning">Panels Pinning<a class="headerlink" href="#panels-pinning" title="Permanent link"></a></h3>
-<p>Pin some panels with <code>CTRL + LMB</code></p>
-<p><a class="glightbox" href="../img/gifs/user_interface/compactui_3.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Combo Panel" src="../img/gifs/user_interface/compactui_3.gif" /></a></p>
-<h3 id="combo-panel-in-properties">Combo Panel in Properties<a class="headerlink" href="#combo-panel-in-properties" title="Permanent link"></a></h3>
-<p>When Zen UV Transform Tool is active you can find Combo Panel in Properties.</p>
-<p><a class="glightbox" href="../img/gifs/user_interface/compactui_6.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Combo Panel" src="../img/gifs/user_interface/compactui_6.gif" /></a></p>
-<h3 id="popup-combo-panel">Popup Combo Panel<a class="headerlink" href="#popup-combo-panel" title="Permanent link"></a></h3>
-<p>Combo Panel is the same in N-Panel and Pop-up menu  <code>Shift + U</code>.
-You can call this menu anywhere.</p>
-<p><a class="glightbox" href="../img/gifs/user_interface/compactui_8.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Combo Panel" src="../img/gifs/user_interface/compactui_8.gif" /></a></p>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>Don&rsquo;t forget to drink some good beer today!</p>
-</div>
 <hr />
-<h3 id="update-reminder">Update reminder<a class="headerlink" href="#update-reminder" title="Permanent link"></a></h3>
+<h2 id="update-reminder">Update reminder<a class="headerlink" href="#update-reminder" title="Permanent link"></a></h2>
 <p>Reminds you that a new version has been released and you can update the addon.</p>
-<p><a class="glightbox" href="../img/screen/user_interface/update_reminder.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="update reminder" src="../img/screen/user_interface/update_reminder.png" /></a></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><a class="glightbox" href="../img/screen/user_interface/update_reminder.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Update Reminder in the panel header" src="../img/screen/user_interface/update_reminder.png" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Fig. 1. Update Reminder in the panel header</em></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="blender-version-warning">Blender Version Warning<a class="headerlink" href="#blender-version-warning" title="Permanent link"></a></h2>
+<p>Appears at the top of the panel when Zen UV detects that it is running on an untested or experimental Blender version (such as Alpha, Beta, or Daily Builds).</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><a class="glightbox" href="../img/screen/user_interface/ui_check_max_bl_version.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Blender Version Warning" src="../img/screen/user_interface/ui_check_max_bl_version.png" /></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Fig. 1. Blender Version Compatibility Warning banner</em></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Triggers:</strong> Running Zen UV on a Blender version higher than the supported range.</li>
+<li><strong>Reason:</strong> Blender&rsquo;s Python API frequently undergoes breaking changes during pre-release stages. Official Zen UV updates supporting new Blender versions are published alongside stable Blender releases.</li>
+<li><strong>Dismissing:</strong> Click the close button (<strong>✕</strong>) in the top-right corner of the banner to dismiss the warning for the current Blender session.</li>
+</ul>
 <hr />
 <h2 id="pie-menu">Pie Menu<a class="headerlink" href="#pie-menu" title="Permanent link"></a></h2>
 <p><a class="glightbox" href="../img/gifs/user_interface/pie_menu.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Pie Menu" src="../img/gifs/user_interface/pie_menu.gif" /></a></p>
@@ -274,13 +491,13 @@ You can call this menu anywhere.</p>
 <h3 id="pie-menu-operators">Pie Menu Operators<a class="headerlink" href="#pie-menu-operators" title="Permanent link"></a></h3>
 <h4 id="quadrify-relax">Quadrify | Relax <a class="glightbox" href="../img/icons/quadrify_32.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Quadrify Islands" src="../img/icons/quadrify_32.png" /></a><a class="headerlink" href="#quadrify-relax" title="Permanent link"></a></h4>
 <ul>
-<li><code>Default</code> — <a href="../transform/#quadrify-islands"><strong>Quadrify Islands</strong></a>. Straighten rectangular-shaped Islands.</li>
-<li><code>CTRL</code> — <a href="../transform/#relax"><strong>Relax</strong></a>. Relax Selected Islands.</li>
+<li><code>Default</code> — <a href="../transform_sys/independent_ops/#quadrify-islands"><strong>Quadrify Islands</strong></a>. Straighten rectangular-shaped Islands.</li>
+<li><code>CTRL</code> — <a href="../transform_sys/independent_ops/#relax"><strong>Relax</strong></a>. Relax Selected Islands.</li>
 <li><code>SHIFT</code> — <a href=""><strong>Hotspot Mapping</strong></a>. Map Islands by matching Islands to predefined Trims from Trimsheet.</li>
 </ul>
 <h4 id="zen-unwrap-pack">Zen Unwrap | Pack <a class="glightbox" href="../img/icons/zen-unwrap%402x.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Zen Unwrap" src="../img/icons/zen-unwrap%402x.png" /></a><a class="headerlink" href="#zen-unwrap-pack" title="Permanent link"></a></h4>
 <ul>
-<li><code>Default</code> — <a href="../unwrap/#zen-unwrap"><strong>Zen Unwrap</strong></a>. Unwrap by Marked edges. If you have selected edges or faces they will be Marked as Seams and/or Sharp Edges and Unwrapped after.</li>
+<li><code>Default</code> — <a href="../unwrap/zen_unwrap/#zen-unwrap"><strong>Zen Unwrap</strong></a>. Unwrap by Marked edges. If you have selected edges or faces they will be Marked as Seams and/or Sharp Edges and Unwrapped after.</li>
 <li><code>ALT</code> — <a href="../pack/#pack-islands"><strong>Pack Islands</strong></a>. Pack Islands by chosen Pack Engine.</li>
 <li><code>SHIFT</code> — <a href=""><strong>Zen UV Transform Tool</strong></a>. Move, Rotate, Scale, Fit, Align and Flip Islands in 3D View and UV Editor using Zen UV Gizmo.</li>
 </ul>
@@ -393,10 +610,10 @@ Or in the <strong>Addon Preferences</strong> -&gt; <strong>UI tab</strong>.</p>
 </thead>
 <tbody>
 <tr>
-<td><a href="../unwrap/#zen-unwrap">Zen Unwrap</a></td>
+<td><a href="../unwrap/zen_unwrap/#zen-unwrap">Zen Unwrap</a></td>
 </tr>
 <tr>
-<td><a href="../transform/#quadrify-islands">Quadrify</a></td>
+<td><a href="../transform_sys/independent_ops/#quadrify-islands">Quadrify</a></td>
 </tr>
 <tr>
 <td><a href="../unwrap/#mark-by-angle">Mark By Angle</a></td>
