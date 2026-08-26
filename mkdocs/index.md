@@ -1,4 +1,4 @@
-# Zen UV 5.3 for Blender
+# Zen UV 5.4 for Blender
 <!-- [![Zen UV Introduction](img/cover--eng.png)](https://www.youtube.com/watch?v=ook2eFfH724) -->
 ![stand_with_Ukraine](img/I_stand_with_Ukraine_banner.svg)
 <div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%;">
@@ -63,6 +63,6 @@ Currently we support Blender 4.2 LTS version and higher official versions.
 
 | Blender Version | Release Date | End of support |
 |---|---|---|
-| 3.6 LTS | June 27, 2023 | June 27, 2025 (expired) |
 | 4.2 LTS | July 16, 2024 | July 16, 2026 |
 | 4.5 LTS | July 16, 2024 | July 14, 2027 |
+| 5.2 LTS | July 14, 2026 | July 14, 2028 |

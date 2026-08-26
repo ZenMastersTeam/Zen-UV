@@ -2,6 +2,7 @@
 
 ---
 
+- [Version 5.4.0](changelog/release_note_5.4.0.md) *Aug 26, 2026*
 - [Version 5.3.3](changelog/release_note_5.3.3.md) *Mar 10, 2026*
 - [Version 5.3.2](changelog/release_note_5.3.2.md) *Mar 6, 2026*
 - [Version 5.3.1](changelog/release_note_5.3.1.md) *Feb 24, 2026*
