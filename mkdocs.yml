@@ -111,5 +111,8 @@ markdown_extensions:
         permalink: 
 extra_css:
   - extra.css
+  - recommended_addons.css
+extra_javascript:
+  - recommended_addons.js
 
 copyright: <p>Copyright &copy; 2024-2025 <a href="https://zenmasters.team/">Zen Masters</a></p>
