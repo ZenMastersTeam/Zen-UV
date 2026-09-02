@@ -1913,16 +1913,6 @@
       "image_source": "https://assets.superhivemarket.com/store/product/176348/image/xlarge-be3f50c2e2734a6cc059abf652e43012.jpg"
     },
     {
-      "slug": "uvfactory",
-      "title": "UV Factory: Powerful Modular UV Tools",
-      "creator": "SpaghetMeNot",
-      "group": "UV",
-      "description": "Automate projection, alignment, transforms, packing, and multi-map workflows with modifier-based UV tools that update while modeling.",
-      "affiliate_url": "https://superhivemarket.com/products/uvfactory?ref=1462",
-      "priority": 35,
-      "image_source": "https://assets.superhivemarket.com/store/product/237274/image/xlarge-9a9adefc168906d7d917e66184bdf09d.jpg"
-    },
-    {
       "slug": "uvpackmaster",
       "title": "UVPackmaster (latest)",
       "creator": "glukoz",
