@@ -357,7 +357,10 @@ Deletes the selected preset.
 
 ---
 ### Open Presets Folder
-You can override the default presets folder with your own path
+Opens the local directory where Trim Sheet presets are stored in your OS file explorer.
+
+!!! NOTE
+    If you want to store your Trim Sheet presets in a custom folder, you can create a symbolic link (symlink). This tricks Blender into reading files from your custom directory while keeping the original folder path intact.
 
 ---
 ## Trim Settings
