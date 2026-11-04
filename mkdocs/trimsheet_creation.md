@@ -361,66 +361,93 @@ You can override the default presets folder with your own path
 
 ---
 ## Trim Settings
-Trim settings property inspector shows settings of the active trim
+
+The **Trim Settings** panel displays and configures the properties of the active trim. 
+
+> **Note on Workflow Context:** 
+> While advanced projects or teams often rely on pre-configured Trim Settings managed by a lead artist, individual artists can fine-tune these properties directly for specific assets and unique placement rules.
 
 !!! Dimensions
     ![](img/screen/trimsheet/trim_axis.png)
 
 ---
+
 ### Trim Units
-By default trim units are in UV points based on values from 0 to 1, but it is possible to switch to image pixels depending on image size.
+By default, trim units are measured in UV space points (normalized values from `0` to `1`), but you can switch to image pixels depending on the image size.
 
 !!! Note
-    The "px" button is only available when you are working in **Image** mode, as this is the only mode in which pixel information can be obtained.
-    For more details, see the section [Trim sheet data storage in blend file.](#trim-sheet-data-storage-in-blend-file)
+    The "px" button is only available when working in **Image** mode, as this is the only mode where pixel information can be retrieved. For more details, see [Trim sheet data storage in the blend file](#trim-sheet-data-storage-in-blend-file).
 
 ![](img/screen/trimsheet/trim_pixels.gif)
 
-- **X** - Trim left point
-- **Y** - Trim bottom point
-- **W** - Trim width
-- **H** - Trim height
+- **X** — Trim left point coordinate.
+- **Y** — Trim bottom point coordinate.
+- **W** — Trim width.
+- **H** — Trim height.
+
+---
 
 ### Fit Axis
+Determines how an island is scaled and oriented to fit within the trim boundaries.
 
-- **U** - U axis
-- **V** - V axis
-- **Min** - The minimum length axis is automatically determined
-- **Max** - The maximum length axis is automatically determined
-- **Automatic** - Automatically detected axis for full dimensional compliance
+- **U** — Fit along the U (horizontal) axis.
+- **V** — Fit along the V (vertical) axis.
+- **Min** — Automatically selects the shortest dimension axis. Essential when you want the island to scale based on its minimum boundary, though results depend on the island's current rotation.
+- **Max** — Automatically selects the maximum length axis.
+- **Automatic** — Automatically detects the optimal axis for full dimensional compliance.
 
 ---
+
 ### Inset
-Trim inset
+Specifies how much the island should shrink inside the trim boundaries. Use this if you need to prevent the UV island from touching or bleeding past the edges of the trim.
 
 ---
+
 ### Keep Proportion
-Keep trim proportions while transforming
+Enforces the preservation of the island's native aspect ratio while transforming or fitting it into the trim.
+
+* **Tip:** Disabling this option forces the island to completely fill the trim area, which may distort its proportions.
 
 ---
+
 ### Match Rotation
-Match trim rotation
+Automatically rotates the island to align its bounding box orientation with the trim's layout orientation.
 
 ---
+
 ### Align To
-Align to remembered directions in Fit, Align operations
+Defines the alignment anchor point when an island does not fully occupy the entire trim area during **Fit** or **Align** operations.
 
 ---
+
 ### Normal
-
-An imaginary normal representing Trim's orientation if it were in 3D space
+An imaginary 3D normal vector representing the trim's orientation in 3D space. This property is primarily utilized by the [**Directional Hotspot**](trimsheet_operators.md/#directional-hotspot-operator) operator to match surface orientations correctly.
 
 ---
+
 ### World Size
-Width and height of trim in [UV world size calculation units](#units)
+Defines the real-world width and height of the trim in your scene. This is used for scaling islands relative to the texture, integrated directly into the [**UV World Size**](texel_density.md/#uv-world-size) system located under the addon's [**Texel Density**](texel_density.md) tab.
 
 ---
+
 ### Units
-UV world size calculation units
+Represents the UV world size calculation units.
 
 ---
+
 ### Tags
-Trim tags
+Assigns metadata tags to the trim.
+
+* **Note:** Currently, operators utilize the **Radial** tag, which instructs packing operators to assemble islands in a circular shape into trims marked with this tag.
+
+---
+
+### Multi-Trim Editing (Diamond Icons)
+If you select multiple trims simultaneously, you will notice **diamond icons** displayed to the right of each property.
+
+* **Purpose:** This mechanism allows you to apply a specific setting change to *all* currently selected trims at once.
+
+* **Note on UI:** Due to Blender’s internal architecture limitations, multi-property overrides are managed via this specific interface pattern.
 
 ---
 ### How to apply same settings to multiple trims?
