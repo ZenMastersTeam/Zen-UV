@@ -145,7 +145,9 @@ def card(product: dict) -> str:
     alt = f'{product["title"]} Blender preview by {product["creator"]}'
     return f'''<article class="zra-card zra-product" id="{esc(product["slug"])}" data-category="{esc(product["group"])}" data-creator="{esc(product["creator"])}">
   <div class="zra-card__media">
-    <img src="{esc(product["image_url"])}" alt="{esc(alt)}" loading="lazy" width="800" height="500">
+    <a class="zra-card__image-link" href="{esc(product["affiliate_url"])}" target="_blank" rel="sponsored noopener noreferrer" aria-label="View {esc(product["title"])} on Superhive">
+      <img src="{esc(product["image_url"])}" alt="{esc(alt)}" loading="lazy" width="800" height="500">
+    </a>
   </div>
   <div class="zra-card__body">
     <div class="zra-card__overline"><span>{esc(product["group"])}</span><span>by {esc(product["creator"])}</span></div>
@@ -231,6 +233,7 @@ title: Recommended Blender Add-ons for Artists
 description: Explore {len(products)} recommended Blender products for modeling, texturing, lighting and rendering, selected by the Zen UV team from active Superhive creators.
 image: img/recommended_addons-og.jpg
 image_alt: Recommended Blender Add-ons selected by Zenmasters
+glightbox: false
 ---
 
 <script type="application/ld+json">{json.dumps(schema, ensure_ascii=False, separators=(",", ":"))}</script>

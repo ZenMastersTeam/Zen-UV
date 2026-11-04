@@ -53,6 +53,8 @@
 .zra-card:target { border-color: var(--zra-violet); box-shadow: 0 0 0 4px rgba(101,80,216,.14), 0 16px 42px rgba(30,23,62,.12); }
 .zra-card:hover { transform: translateY(-3px); border-color: #d9d1f3; box-shadow: 0 14px 38px rgba(30,23,62,.1); }
 .zra-card__media { position: relative; aspect-ratio: 16 / 10; overflow: hidden; background: #201b36; }
+.zra-card__image-link { display: block; width: 100%; height: 100%; }
+.zra-card__image-link:focus-visible { outline: 3px solid var(--zra-violet); outline-offset: -3px; }
 .zra-card__media img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform .3s ease; }
 .zra-card:hover .zra-card__media img { transform: scale(1.025); }
 .zra-card__body { display: flex; flex: 0 0 292px; flex-direction: column; height: 292px; min-height: 292px; max-height: 292px; padding: 18px; }
