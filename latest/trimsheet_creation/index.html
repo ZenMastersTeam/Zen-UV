@@ -242,6 +242,8 @@
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#tags">Tags</a>
     </li>
+    <li class="toctree-l3"><a class="reference internal" href="#multi-trim-editing-diamond-icons">Multi-Trim Editing (Diamond Icons)</a>
+    </li>
     <li class="toctree-l3"><a class="reference internal" href="#how-to-apply-same-settings-to-multiple-trims">How to apply same settings to multiple trims?</a>
         <ul>
     <li class="toctree-l4"><a class="reference internal" href="#check-the-equality-of-properties-in-selected-trims">Check the equality of properties in selected trims</a>
@@ -902,58 +904,80 @@ Trim sheet data is taken either from property trimsheet image of the active mate
 </div>
 <hr />
 <h2 id="trim-settings">Trim Settings<a class="headerlink" href="#trim-settings" title="Permanent link"></a></h2>
-<p>Trim settings property inspector shows settings of the active trim</p>
+<p>The <strong>Trim Settings</strong> panel displays and configures the properties of the active trim. </p>
+<blockquote>
+<p><strong>Note on Workflow Context:</strong> 
+While advanced projects or teams often rely on pre-configured Trim Settings managed by a lead artist, individual artists can fine-tune these properties directly for specific assets and unique placement rules.</p>
+</blockquote>
 <div class="admonition dimensions">
 <p class="admonition-title">Dimensions</p>
 <p><a class="glightbox" href="../img/screen/trimsheet/trim_axis.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/trimsheet/trim_axis.png" /></a></p>
 </div>
 <hr />
 <h3 id="trim-units">Trim Units<a class="headerlink" href="#trim-units" title="Permanent link"></a></h3>
-<p>By default trim units are in UV points based on values from 0 to 1, but it is possible to switch to image pixels depending on image size.</p>
+<p>By default, trim units are measured in UV space points (normalized values from <code>0</code> to <code>1</code>), but you can switch to image pixels depending on the image size.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The &ldquo;px&rdquo; button is only available when you are working in <strong>Image</strong> mode, as this is the only mode in which pixel information can be obtained.
-For more details, see the section <a href="#trim-sheet-data-storage-in-blend-file">Trim sheet data storage in blend file.</a></p>
+<p>The &ldquo;px&rdquo; button is only available when working in <strong>Image</strong> mode, as this is the only mode where pixel information can be retrieved. For more details, see <a href="#trim-sheet-data-storage-in-blend-file">Trim sheet data storage in the blend file</a>.</p>
 </div>
 <p><a class="glightbox" href="../img/screen/trimsheet/trim_pixels.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/screen/trimsheet/trim_pixels.gif" /></a></p>
 <ul>
-<li><strong>X</strong> - Trim left point</li>
-<li><strong>Y</strong> - Trim bottom point</li>
-<li><strong>W</strong> - Trim width</li>
-<li><strong>H</strong> - Trim height</li>
+<li><strong>X</strong> — Trim left point coordinate.</li>
+<li><strong>Y</strong> — Trim bottom point coordinate.</li>
+<li><strong>W</strong> — Trim width.</li>
+<li><strong>H</strong> — Trim height.</li>
 </ul>
+<hr />
 <h3 id="fit-axis">Fit Axis<a class="headerlink" href="#fit-axis" title="Permanent link"></a></h3>
+<p>Determines how an island is scaled and oriented to fit within the trim boundaries.</p>
 <ul>
-<li><strong>U</strong> - U axis</li>
-<li><strong>V</strong> - V axis</li>
-<li><strong>Min</strong> - The minimum length axis is automatically determined</li>
-<li><strong>Max</strong> - The maximum length axis is automatically determined</li>
-<li><strong>Automatic</strong> - Automatically detected axis for full dimensional compliance</li>
+<li><strong>U</strong> — Fit along the U (horizontal) axis.</li>
+<li><strong>V</strong> — Fit along the V (vertical) axis.</li>
+<li><strong>Min</strong> — Automatically selects the shortest dimension axis. Essential when you want the island to scale based on its minimum boundary, though results depend on the island&rsquo;s current rotation.</li>
+<li><strong>Max</strong> — Automatically selects the maximum length axis.</li>
+<li><strong>Automatic</strong> — Automatically detects the optimal axis for full dimensional compliance.</li>
 </ul>
 <hr />
 <h3 id="inset">Inset<a class="headerlink" href="#inset" title="Permanent link"></a></h3>
-<p>Trim inset</p>
+<p>Specifies how much the island should shrink inside the trim boundaries. Use this if you need to prevent the UV island from touching or bleeding past the edges of the trim.</p>
 <hr />
 <h3 id="keep-proportion">Keep Proportion<a class="headerlink" href="#keep-proportion" title="Permanent link"></a></h3>
-<p>Keep trim proportions while transforming</p>
+<p>Enforces the preservation of the island&rsquo;s native aspect ratio while transforming or fitting it into the trim.</p>
+<ul>
+<li><strong>Tip:</strong> Disabling this option forces the island to completely fill the trim area, which may distort its proportions.</li>
+</ul>
 <hr />
 <h3 id="match-rotation">Match Rotation<a class="headerlink" href="#match-rotation" title="Permanent link"></a></h3>
-<p>Match trim rotation</p>
+<p>Automatically rotates the island to align its bounding box orientation with the trim&rsquo;s layout orientation.</p>
 <hr />
 <h3 id="align-to">Align To<a class="headerlink" href="#align-to" title="Permanent link"></a></h3>
-<p>Align to remembered directions in Fit, Align operations</p>
+<p>Defines the alignment anchor point when an island does not fully occupy the entire trim area during <strong>Fit</strong> or <strong>Align</strong> operations.</p>
 <hr />
 <h3 id="normal">Normal<a class="headerlink" href="#normal" title="Permanent link"></a></h3>
-<p>An imaginary normal representing Trim&rsquo;s orientation if it were in 3D space</p>
+<p>An imaginary 3D normal vector representing the trim&rsquo;s orientation in 3D space. This property is primarily utilized by the <a href="../trimsheet_operators/#directional-hotspot-operator"><strong>Directional Hotspot</strong></a> operator to match surface orientations correctly.</p>
 <hr />
 <h3 id="world-size">World Size<a class="headerlink" href="#world-size" title="Permanent link"></a></h3>
-<p>Width and height of trim in <a href="#units">UV world size calculation units</a></p>
+<p>Defines the real-world width and height of the trim in your scene. This is used for scaling islands relative to the texture, integrated directly into the <a href="../texel_density/#uv-world-size"><strong>UV World Size</strong></a> system located under the addon&rsquo;s <a href="../texel_density/"><strong>Texel Density</strong></a> tab.</p>
 <hr />
 <h3 id="units">Units<a class="headerlink" href="#units" title="Permanent link"></a></h3>
-<p>UV world size calculation units</p>
+<p>Represents the UV world size calculation units.</p>
 <hr />
 <h3 id="tags">Tags<a class="headerlink" href="#tags" title="Permanent link"></a></h3>
-<p>Trim tags</p>
+<p>Assigns metadata tags to the trim.</p>
+<ul>
+<li><strong>Note:</strong> Currently, operators utilize the <strong>Radial</strong> tag, which instructs packing operators to assemble islands in a circular shape into trims marked with this tag.</li>
+</ul>
+<hr />
+<h3 id="multi-trim-editing-diamond-icons">Multi-Trim Editing (Diamond Icons)<a class="headerlink" href="#multi-trim-editing-diamond-icons" title="Permanent link"></a></h3>
+<p>If you select multiple trims simultaneously, you will notice <strong>diamond icons</strong> displayed to the right of each property.</p>
+<ul>
+<li>
+<p><strong>Purpose:</strong> This mechanism allows you to apply a specific setting change to <em>all</em> currently selected trims at once.</p>
+</li>
+<li>
+<p><strong>Note on UI:</strong> Due to Blender’s internal architecture limitations, multi-property overrides are managed via this specific interface pattern.</p>
+</li>
+</ul>
 <hr />
 <h3 id="how-to-apply-same-settings-to-multiple-trims">How to apply same settings to multiple trims?<a class="headerlink" href="#how-to-apply-same-settings-to-multiple-trims" title="Permanent link"></a></h3>
 <table>
